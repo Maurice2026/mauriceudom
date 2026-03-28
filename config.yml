@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "profile"
+        label: "Profile & About"
+        file: "_data/profile.json"
+        fields:
+          - { label: "Full Name", name: "name", widget: "string", default: "Maurice Udom" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "About / Bio", name: "bio", widget: "text" }
+          - { label: "Profile Photo", name: "photo", widget: "image" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Twitter/X URL", name: "twitter", widget: "string", required: false }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+
+  - name: "books"
+    label: "Books"
+    folder: "_data/books"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Book Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Cover Image", name: "cover", widget: "image" }
+      - { label: "Book PDF (optional)", name: "pdf", widget: "file", required: false, media_folder: "/documents" }
+      - { label: "Price", name: "price", widget: "string", required: false }
+      - { label: "Purchase Link", name: "link", widget: "string", required: false }
+      - { label: "Year Published", name: "year", widget: "string" }
+
+  - name: "documents"
+    label: "Documents & Resources"
+    folder: "_data/documents"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Document Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - { label: "File (PDF, DOC, etc)", name: "file", widget: "file", media_folder: "/documents" }
+      - { label: "Category", name: "category", widget: "select", options: ["Academic Paper", "Article", "Lecture", "Other"] }
+      - { label: "Date", name: "date", widget: "date" }
+
+  - name: "announcements"
+    label: "Announcements & News"
+    folder: "_data/announcements"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Image (optional)", name: "image", widget: "image", required: false }
