@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maurice Udom — Nigerian Author, Scholar, Linguist & Editor</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;overflow-x:hidden;}
+
+/* ══ NAV ══ */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:13px 40px;background:rgba(2,15,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(100,180,255,0.3);}
+.nav-logo{font-family:'Cinzel',serif;font-size:0.95rem;color:#7dd3fc;letter-spacing:0.18em;text-decoration:none;}
+.nav-links{display:flex;gap:18px;list-style:none;}
+.nav-links a{color:#bfdbfe;text-decoration:none;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;font-family:'Cinzel',serif;transition:color 0.3s;}
+.nav-links a:hover{color:#fff;}
+.nav-links .nav-edit{color:#fbbf24;}
+.nav-social{display:flex;gap:11px;}
+.nav-social a{color:#7dd3fc;font-size:0.9rem;text-decoration:none;transition:color 0.3s;}
+.nav-social a:hover{color:#fff;}
+
+/* ══ TICKER — WHITE BG ══ */
+.ticker-wrap{background:#fff;border-bottom:2px solid #e2e8f0;overflow:hidden;padding:10px 0;position:relative;margin-top:54px;box-shadow:0 2px 10px rgba(0,0,0,0.06);}
+.ticker-wrap::before,.ticker-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;}
+.ticker-wrap::before{left:0;background:linear-gradient(to right,#fff,transparent);}
+.ticker-wrap::after{right:0;background:linear-gradient(to left,#fff,transparent);}
+.ticker{display:flex;animation:ticker-scroll 30s linear infinite;width:max-content;}
+.ticker:hover{animation-play-state:paused;}
+@keyframes ticker-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.ticker-item{display:flex;align-items:center;gap:8px;padding:0 26px;font-size:0.78rem;font-family:'Cinzel',serif;letter-spacing:0.08em;text-decoration:none;white-space:nowrap;border-right:1px solid #e2e8f0;transition:opacity 0.3s;}
+.ticker-item:hover{opacity:0.7;}
+.ticker-item i{font-size:1.1rem;}
+.ti-az{color:#ff9900;}.ti-gs{color:#4285f4;}.ti-rg{color:#40b3a2;}.ti-fb{color:#1877f2;}.ti-ig{color:#e1306c;}.ti-x{color:#0f1419;}.ti-li{color:#0a66c2;}.ti-yt{color:#ff0000;}.ti-co{color:#f59e0b;}.ti-ac{color:#41b883;}.ti-sl{color:#7c3aed;}
+.tl-az{color:#b45309;font-weight:700;}.tl-gs{color:#1d4ed8;font-weight:700;}.tl-rg{color:#0f766e;font-weight:700;}.tl-fb{color:#1d4ed8;font-weight:700;}.tl-ig{color:#be185d;font-weight:700;}.tl-x{color:#0f172a;font-weight:700;}.tl-li{color:#0a66c2;font-weight:700;}.tl-yt{color:#dc2626;font-weight:700;}.tl-co{color:#92400e;font-weight:700;}.tl-ac{color:#15803d;font-weight:700;}.tl-sl{color:#6d28d9;font-weight:700;}
+
+/* ══ SLIDE 1 — BRIGHT BLUE, COLOURED LETTERING ══ */
+#slide1{min-height:100vh;background:linear-gradient(160deg,#0a1f4e 0%,#0d2966 50%,#0a2050 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 100px;position:relative;overflow:hidden;}
+#slide1::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%,rgba(96,165,250,0.25) 0%,transparent 65%);}
+.s1-inner{position:relative;z-index:1;max-width:860px;margin:0 auto;}
+.profile-pic-wrap{width:150px;height:150px;border-radius:50%;border:4px solid #60a5fa;margin:0 auto 24px;overflow:hidden;background:linear-gradient(135deg,#1e3a8a,#1e40af);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(96,165,250,0.2),0 0 50px rgba(96,165,250,0.3);}
+.profile-pic-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.s1-tag{display:inline-block;font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.35em;color:#93c5fd;border:1px solid rgba(147,197,253,0.5);padding:6px 20px;margin-bottom:20px;text-transform:uppercase;background:rgba(96,165,250,0.1);}
+.s1-name{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:900;line-height:1;margin-bottom:16px;}
+.s1-first{color:#ffffff;} .s1-last{color:#60a5fa;text-shadow:0 0 30px rgba(96,165,250,0.5);}
+.s1-role{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.2rem,3vw,1.9rem);margin-bottom:24px;}
+.rn{color:#4ade80;} .ra{color:#fbbf24;} .rs{color:#f472b6;} .rl{color:#a78bfa;} .rdot{color:#93c5fd;margin:0 10px;}
+.s1-bio{max-width:640px;margin:0 auto 28px;font-size:1.05rem;line-height:1.85;color:#bfdbfe;}
+.s1-emails{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-bottom:24px;}
+.s1-emails a{display:flex;align-items:center;gap:8px;color:#bfdbfe;text-decoration:none;font-size:0.9rem;transition:color 0.3s;background:rgba(96,165,250,0.1);padding:8px 16px;border:1px solid rgba(96,165,250,0.2);}
+.s1-emails a:hover{color:#fff;background:rgba(96,165,250,0.2);}
+.s1-emails a i{color:#60a5fa;}
+.s1-social{display:flex;gap:12px;justify-content:center;margin-bottom:28px;}
+.s1-social a{width:46px;height:46px;border-radius:50%;border:1px solid rgba(96,165,250,0.5);display:flex;align-items:center;justify-content:center;color:#7dd3fc;font-size:1rem;text-decoration:none;transition:all 0.3s;}
+.s1-social a:hover{background:#3b82f6;color:#fff;border-color:#3b82f6;transform:translateY(-3px);}
+.s1-cta{display:inline-block;padding:14px 44px;background:#3b82f6;color:#fff;font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;border:1px solid #3b82f6;box-shadow:0 4px 20px rgba(59,130,246,0.4);}
+.s1-cta:hover{background:transparent;color:#7dd3fc;}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:#60a5fa;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;font-family:'Cinzel',serif;}
+.scroll-hint i{animation:bounce 2s infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* ══ SLIDE 2 ══ */
+#slide2{background:linear-gradient(160deg,#e0f2fe 0%,#bae6fd 50%,#dbeafe 100%);padding:100px 48px;}
+.s2-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.s2-label{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.35em;color:#0369a1;text-transform:uppercase;margin-bottom:14px;}
+.s2-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.2;margin-bottom:22px;}
+.ts{color:#7c3aed;}.ta{color:#c2410c;}.tl{color:#065f46;}.tamp{color:#1e40af;}
+.s2-desc{font-size:1rem;line-height:1.85;color:#1e3a5f;margin-bottom:28px;}
+.pillars{display:flex;flex-direction:column;gap:14px;}
+.pillar{display:flex;align-items:flex-start;gap:16px;padding:16px 18px;border-left:4px solid;background:rgba(255,255,255,0.7);}
+.p1{border-color:#7c3aed;}.p2{border-color:#c2410c;}.p3{border-color:#065f46;}
+.p-icon{font-size:1.3rem;margin-top:2px;}
+.p1 .p-icon{color:#7c3aed;}.p2 .p-icon{color:#c2410c;}.p3 .p-icon{color:#065f46;}
+.p-title{font-weight:700;color:#0f172a;margin-bottom:4px;font-size:0.93rem;}
+.p-body{color:#334155;font-size:0.85rem;line-height:1.6;}
+.quote-cards{display:flex;flex-direction:column;gap:16px;}
+.q-card{padding:22px;background:rgba(255,255,255,0.85);border:1px solid rgba(59,130,246,0.2);border-left:4px solid #3b82f6;}
+.q-card blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;line-height:1.7;color:#1e3a5f;margin-bottom:10px;}
+.q-card cite{font-size:0.78rem;color:#0369a1;letter-spacing:0.1em;font-weight:700;}
+
+/* ══ SLIDE 3 — BOOKS ══ */
+#slide3{background:linear-gradient(180deg,#1a0f00 0%,#0f0800 100%);padding:80px 24px 60px;}
+.s3-inner{max-width:1280px;margin:0 auto;}
+.sec-label{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;text-transform:uppercase;text-align:center;margin-bottom:10px;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;text-align:center;margin-bottom:10px;}
+.sec-rule{width:60px;height:2px;margin:0 auto 40px;}
+.books-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:20px;}
+.book-card{background:#1c1200;border:1px solid rgba(251,191,36,0.2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s,border-color 0.3s,box-shadow 0.3s;}
+.book-card:hover{transform:translateY(-8px);border-color:#fbbf24;box-shadow:0 20px 40px rgba(0,0,0,0.6);}
+.book-cover{width:100%;aspect-ratio:3/4;overflow:hidden;position:relative;background:#0a0600;}
+.book-cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s;}
+.book-card:hover .book-cover img{transform:scale(1.05);}
+.book-badge{position:absolute;top:8px;right:8px;font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.1em;padding:3px 7px;text-transform:uppercase;font-weight:700;}
+.bg-gold{background:#fbbf24;color:#1a0f00;}.bg-red{background:#ef4444;color:#fff;}.bg-green{background:#22c55e;color:#fff;}.bg-blue{background:#3b82f6;color:#fff;}.bg-pink{background:#ec4899;color:#fff;}
+.book-info{padding:14px;flex:1;display:flex;flex-direction:column;}
+.book-genre{font-family:'Cinzel',serif;font-size:0.56rem;letter-spacing:0.2em;color:#fbbf24;text-transform:uppercase;margin-bottom:5px;}
+.book-title{font-family:'Playfair Display',serif;font-size:0.92rem;font-weight:700;color:#fff;margin-bottom:7px;line-height:1.3;}
+.book-desc{font-size:0.78rem;line-height:1.6;color:#d4a96a;flex:1;margin-bottom:12px;}
+.book-buy-row{display:flex;gap:5px;flex-wrap:wrap;}
+.buy-btn{flex:1;padding:7px 5px;text-align:center;text-decoration:none;font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.3s;border:1px solid;white-space:nowrap;}
+.buy-selar{background:#fbbf24;color:#1a0f00;border-color:#fbbf24;}.buy-selar:hover{background:transparent;color:#fbbf24;}
+.buy-amazon{background:transparent;color:#fff;border-color:rgba(255,255,255,0.3);}.buy-amazon:hover{background:#fff;color:#1a0f00;}
+.buy-soon{background:transparent;color:#64748b;border-color:#334155;cursor:default;font-style:italic;}
+
+/* ══ STAY UPDATED ══ */
+#slide4{background:linear-gradient(135deg,#d1fae5 0%,#a7f3d0 50%,#6ee7b7 100%);padding:100px 24px;display:flex;align-items:center;justify-content:center;text-align:center;}
+.s4-inner{max-width:580px;}
+.s4-label{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;color:#065f46;text-transform:uppercase;margin-bottom:14px;}
+.s4-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:700;color:#022c22;margin-bottom:14px;line-height:1.2;}
+.s4-title span{color:#047857;}
+.s4-sub{color:#065f46;font-size:1rem;line-height:1.7;margin-bottom:32px;}
+.s4-form{display:flex;max-width:440px;margin:0 auto;box-shadow:0 4px 20px rgba(0,0,0,0.12);}
+.s4-input{flex:1;padding:14px 18px;background:#fff;border:none;color:#022c22;font-size:0.9rem;outline:none;}
+.s4-btn{padding:14px 22px;background:#047857;color:#fff;border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;}
+
+/* ══ CREATIVE RANGE ══ */
+#slide5{background:linear-gradient(160deg,#03122e 0%,#062060 55%,#041a50 100%);padding:100px 24px;position:relative;overflow:hidden;}
+.s5-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+.creative-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;}
+.cc{padding:30px 26px;border:1px solid rgba(125,211,252,0.2);background:rgba(255,255,255,0.05);position:relative;overflow:hidden;transition:all 0.3s;}
+.cc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.cc-drama::before{background:linear-gradient(to right,#f87171,#fb923c);}
+.cc-satire::before{background:linear-gradient(to right,#c084fc,#f472b6);}
+.cc-academic::before{background:linear-gradient(to right,#4ade80,#a3e635);}
+.cc-africa::before{background:linear-gradient(to right,#60a5fa,#22d3ee);}
+.cc:hover{background:rgba(96,165,250,0.12);border-color:rgba(125,211,252,0.5);transform:translateY(-4px);}
+.cc-icon{font-size:2rem;margin-bottom:14px;}
+.cc-drama .cc-icon{color:#f87171;}.cc-satire .cc-icon{color:#c084fc;}.cc-academic .cc-icon{color:#4ade80;}.cc-africa .cc-icon{color:#60a5fa;}
+.cc-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:10px;}
+.cc-body{font-size:0.86rem;line-height:1.7;color:#bfdbfe;}
+.cc-works{margin-top:14px;display:flex;flex-direction:column;gap:4px;}
+.cc-work{font-size:0.78rem;color:#7dd3fc;font-style:italic;}
+
+/* ══ STUDIO ══ */
+#studio{background:linear-gradient(180deg,#0a0f1e 0%,#050c1a 100%);padding:100px 24px;}
+.studio-inner{max-width:1100px;margin:0 auto;}
+.st-label{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;color:#c084fc;text-transform:uppercase;text-align:center;margin-bottom:10px;}
+.st-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;text-align:center;color:#fff;margin-bottom:10px;}
+.st-title span{color:#c084fc;}
+.st-rule{width:60px;height:2px;background:#c084fc;margin:0 auto 52px;}
+.studio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.st-card{padding:26px 22px;border:1px solid rgba(192,132,252,0.2);background:rgba(192,132,252,0.05);text-align:center;transition:all 0.3s;position:relative;overflow:hidden;}
+.st-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;}
+.st-c1::before{background:#60a5fa;}.st-c2::before{background:#4ade80;}.st-c3::before{background:#f87171;}.st-c4::before{background:#c084fc;}.st-c5::before{background:#fbbf24;}.st-c6::before{background:#f472b6;}.st-c7::before{background:#22d3ee;}
+.st-card:hover{background:rgba(192,132,252,0.12);border-color:rgba(192,132,252,0.5);transform:translateY(-5px);}
+.st-icon{font-size:2rem;margin-bottom:14px;}
+.st-c1 .st-icon{color:#60a5fa;}.st-c2 .st-icon{color:#4ade80;}.st-c3 .st-icon{color:#f87171;}.st-c4 .st-icon{color:#c084fc;}.st-c5 .st-icon{color:#fbbf24;}.st-c6 .st-icon{color:#f472b6;}.st-c7 .st-icon{color:#22d3ee;}
+.st-name{font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.15em;font-weight:700;color:#fff;margin-bottom:8px;text-transform:uppercase;}
+.st-desc{font-size:0.82rem;line-height:1.6;color:#94a3b8;}
+
+/* ══ MAURICE@EDIT — INTEGRATED IN MAIN SITE ══ */
+#mauriceedit{background:linear-gradient(160deg,#fef9ee 0%,#fef3c7 50%,#fde68a 100%);padding:100px 24px;}
+.edit-inner{max-width:1200px;margin:0 auto;}
+.edit-header{text-align:center;margin-bottom:60px;}
+.edit-eyebrow{font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:0.35em;color:#92400e;text-transform:uppercase;margin-bottom:12px;}
+.edit-brand{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:900;line-height:1;margin-bottom:14px;}
+.edit-brand .eat{color:#b91c1c;}.edit-brand .eedit{color:#92400e;}
+.edit-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:#78350f;margin-bottom:16px;}
+.edit-rule{width:60px;height:2px;background:#b45309;margin:0 auto 20px;}
+.edit-desc{max-width:700px;margin:0 auto;font-size:1rem;line-height:1.85;color:#44270a;}
+
+/* Services grid */
+.edit-services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-bottom:60px;}
+.esrv{padding:28px 24px;background:#fff;border:1px solid #fde68a;position:relative;overflow:hidden;transition:all 0.3s;box-shadow:0 2px 12px rgba(180,83,9,0.08);}
+.esrv::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.es1::before{background:#ef4444;}.es2::before{background:#f59e0b;}.es3::before{background:#3b82f6;}.es4::before{background:#22c55e;}.es5::before{background:#8b5cf6;}.es6::before{background:#ec4899;}
+.esrv:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(180,83,9,0.15);border-color:#f59e0b;}
+.esrv-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;color:rgba(180,83,9,0.12);line-height:1;margin-bottom:6px;}
+.esrv-icon{font-size:1.5rem;margin-bottom:12px;}
+.es1 .esrv-icon{color:#ef4444;}.es2 .esrv-icon{color:#f59e0b;}.es3 .esrv-icon{color:#3b82f6;}.es4 .esrv-icon{color:#22c55e;}.es5 .esrv-icon{color:#8b5cf6;}.es6 .esrv-icon{color:#ec4899;}
+.esrv-title{font-family:'Cinzel',serif;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:#1a0f00;margin-bottom:10px;font-weight:700;}
+.esrv-desc{font-size:0.88rem;line-height:1.7;color:#44270a;}
+
+/* Experience You Can Trust — LIGHT GREEN */
+.edit-trust{background:linear-gradient(135deg,#d1fae5 0%,#a7f3d0 60%,#6ee7b7 100%);padding:60px 48px;margin-bottom:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.trust-left {}
+.trust-eyebrow{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.35em;color:#065f46;text-transform:uppercase;margin-bottom:12px;}
+.trust-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:700;color:#022c22;margin-bottom:20px;line-height:1.2;}
+.trust-title span{color:#047857;}
+.trust-desc{font-size:0.98rem;line-height:1.85;color:#065f46;margin-bottom:24px;}
+.trust-points{display:flex;flex-direction:column;gap:14px;}
+.trust-point{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,0.6);padding:14px 16px;border-left:3px solid #059669;}
+.tp-icon{color:#059669;font-size:1rem;margin-top:2px;flex-shrink:0;}
+.tp-title{font-weight:700;color:#022c22;font-size:0.9rem;margin-bottom:3px;}
+.tp-body{color:#065f46;font-size:0.83rem;line-height:1.5;}
+.trust-right{display:flex;flex-direction:column;gap:16px;}
+.trust-quote{padding:22px;background:rgba(255,255,255,0.8);border-left:3px solid #059669;}
+.trust-quote blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;line-height:1.7;color:#065f46;margin-bottom:10px;}
+.trust-quote cite{font-size:0.78rem;color:#047857;font-weight:700;letter-spacing:0.08em;}
+
+/* Contact form inside site */
+.edit-contact{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.ec-info{}
+.ec-info-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#1a0f00;margin-bottom:16px;}
+.ec-info-title span{color:#b91c1c;}
+.ec-desc{font-size:0.95rem;line-height:1.8;color:#44270a;margin-bottom:24px;}
+.ec-details{display:flex;flex-direction:column;gap:14px;}
+.ecd{display:flex;align-items:center;gap:12px;}
+.ecd-icon{width:38px;height:38px;background:#b45309;display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;flex-shrink:0;}
+.ecd-label{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.15em;color:#78350f;text-transform:uppercase;margin-bottom:3px;}
+.ecd-val{font-size:0.9rem;color:#1a0f00;}
+.ecd-val a{color:#b91c1c;text-decoration:none;font-weight:700;}
+.ecd-val a:hover{color:#92400e;}
+.ec-form{display:flex;flex-direction:column;gap:14px;}
+.ef-label{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:#78350f;margin-bottom:5px;display:block;}
+.ef-input,.ef-select,.ef-textarea{width:100%;padding:12px 14px;background:#fff;border:1px solid #fde68a;color:#1a0f00;font-size:0.9rem;font-family:'Lato',sans-serif;outline:none;transition:border-color 0.3s;}
+.ef-input:focus,.ef-select:focus,.ef-textarea:focus{border-color:#f59e0b;}
+.ef-textarea{min-height:120px;resize:vertical;}
+.ef-submit{padding:14px 28px;background:#b91c1c;color:#fff;border:none;cursor:pointer;font-family:'Cinzel',serif;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;transition:background 0.3s;display:flex;align-items:center;gap:8px;justify-content:center;}
+.ef-submit:hover{background:#991b1b;}
+.ef-note{font-size:0.76rem;color:#78350f;text-align:center;}
+.ef-success{display:none;padding:14px;background:#d1fae5;border:1px solid #6ee7b7;color:#065f46;font-size:0.88rem;text-align:center;}
+
+/* ══ TESTIMONIALS ══ */
+#slide6{background:linear-gradient(180deg,#f8fafc 0%,#f1f5f9 100%);padding:100px 24px;}
+.s6-inner{max-width:1100px;margin:0 auto;}
+.s6-lc{color:#7c3aed;}
+.s6-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;text-align:center;color:#0f172a;margin-bottom:10px;}
+.s6-title span{color:#7c3aed;}.s6-rc{background:#7c3aed;}
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;}
+.t-card{background:#fff;border:1px solid rgba(124,58,237,0.15);border-radius:6px;padding:26px;transition:all 0.3s;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.t-card:hover{border-color:rgba(124,58,237,0.4);box-shadow:0 8px 28px rgba(124,58,237,0.12);transform:translateY(-4px);}
+.t-qmark{font-family:'Playfair Display',serif;font-size:3.5rem;line-height:1;color:rgba(124,58,237,0.25);margin-bottom:-14px;display:block;}
+.t-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;line-height:1.75;color:#334155;margin-bottom:18px;}
+.t-author{display:flex;align-items:center;gap:12px;}
+.t-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;font-family:'Cinzel',serif;}
+.av1{background:linear-gradient(135deg,#7c3aed,#ec4899);}.av2{background:linear-gradient(135deg,#3b82f6,#06b6d4);}.av3{background:linear-gradient(135deg,#16a34a,#84cc16);}.av4{background:linear-gradient(135deg,#f59e0b,#ef4444);}
+.t-name{font-weight:700;color:#0f172a;font-size:0.88rem;margin-bottom:2px;}
+.t-role{color:#7c3aed;font-size:0.76rem;}
+.t-stars{color:#f59e0b;font-size:0.78rem;margin-top:2px;}
+
+/* ══ QUICK LINKS — BRIGHT, LIGHT BACKGROUND ══ */
+#slide7{background:linear-gradient(180deg,#eff6ff 0%,#dbeafe 100%);padding:100px 24px;border-top:1px solid #bfdbfe;}
+.s7-inner{max-width:1100px;margin:0 auto;}
+.s7-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;}
+.col-title{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid;}
+.col-blue .col-title{color:#1d4ed8;border-color:#3b82f6;}
+.col-amber .col-title{color:#b45309;border-color:#f59e0b;}
+.col-green .col-title{color:#15803d;border-color:#22c55e;}
+.q-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.q-links a{display:flex;align-items:center;gap:10px;color:#1e3a5f;text-decoration:none;font-size:0.88rem;transition:color 0.3s;font-weight:500;}
+.col-blue .q-links a:hover{color:#1d4ed8;}.col-amber .q-links a:hover{color:#b45309;}.col-green .q-links a:hover{color:#15803d;}
+.col-blue .q-links a i{color:#3b82f6;}.col-amber .q-links a i{color:#f59e0b;}.col-green .q-links a i{color:#22c55e;}
+.buy-list{display:flex;flex-direction:column;gap:9px;}
+.buy-item{padding:10px 14px;border:1px solid #fde68a;background:#fffbeb;border-radius:4px;}
+.buy-name{color:#1a0f00;font-size:0.82rem;font-weight:700;margin-bottom:6px;}
+.buy-btns{display:flex;gap:6px;}
+.buy-btns a{font-size:0.6rem;padding:4px 9px;text-decoration:none;font-family:'Cinzel',serif;letter-spacing:0.05em;text-transform:uppercase;border:1px solid;transition:all 0.3s;border-radius:2px;}
+.bb-s{color:#92400e;border-color:#f59e0b;background:#fef3c7;}.bb-s:hover{background:#f59e0b;color:#fff;}
+.bb-a{color:#334155;border-color:#94a3b8;background:#f8fafc;}.bb-a:hover{background:#334155;color:#fff;}
+.bb-soon{color:#94a3b8;border-color:#e2e8f0;background:#f8fafc;cursor:default;font-style:italic;font-size:0.6rem;padding:4px 6px;}
+
+/* ══ FOOTER — BRIGHT DARK BLUE (NOT BLACK) ══ */
+footer{background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 50%,#1e40af 100%);padding:52px 24px 28px;text-align:center;border-top:3px solid #60a5fa;}
+.f-logo{font-family:'Cinzel',serif;font-size:1.3rem;color:#fff;letter-spacing:0.28em;margin-bottom:8px;}
+.f-domain{margin-bottom:10px;}
+.f-domain a{color:#bfdbfe;text-decoration:none;font-size:0.88rem;}
+.f-domain a:hover{color:#fff;}
+.f-edit-link{margin-bottom:16px;}
+.f-edit-link a{color:#fde68a;text-decoration:none;font-family:'Cinzel',serif;font-size:0.8rem;letter-spacing:0.1em;border:1px solid rgba(253,230,138,0.4);padding:6px 16px;transition:all 0.3s;}
+.f-edit-link a:hover{background:rgba(253,230,138,0.15);}
+.f-emails{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:20px;}
+.f-emails a{color:#bfdbfe;text-decoration:none;font-size:0.85rem;transition:color 0.3s;}
+.f-emails a:hover{color:#fff;}
+.f-social{display:flex;gap:12px;justify-content:center;margin-bottom:24px;}
+.f-social a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.9rem;text-decoration:none;transition:all 0.3s;background:rgba(255,255,255,0.1);}
+.f-social a:hover{background:#fff;color:#1d4ed8;}
+.f-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:#bfdbfe;margin-bottom:12px;}
+.f-copy{font-size:0.75rem;color:rgba(255,255,255,0.5);}
+
+@media(max-width:900px){
+  nav{padding:13px 18px;}.nav-links{display:none;}
+  .s2-inner{grid-template-columns:1fr;gap:36px;}#slide2{padding:80px 24px;}
+  .edit-trust{grid-template-columns:1fr;gap:36px;padding:40px 24px;}
+  .edit-contact{grid-template-columns:1fr;gap:36px;}
+  .s7-grid{grid-template-columns:1fr;gap:36px;}
+}
+@media(max-width:600px){
+  .s4-form{flex-direction:column;}.s4-btn{width:100%;}
+  .s1-emails{flex-direction:column;align-items:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">Maurice Udom</a>
+  <ul class="nav-links">
+    <li><a href="#slide1">Home</a></li>
+    <li><a href="#slide3">Books</a></li>
+    <li><a href="#studio">Studio</a></li>
+    <li><a href="#slide5">Creative Range</a></li>
+    <li><a href="#mauriceedit" class="nav-edit">✏️ Maurice@edit</a></li>
+    <li><a href="#slide6">Reviews</a></li>
+    <li><a href="#slide7">Buy Books</a></li>
+  </ul>
+  <div class="nav-social">
+    <a href="https://facebook.com/mauriceudom" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/mauriceudom" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://x.com/mauriceudom" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://linkedin.com/in/mauriceudom" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</nav>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <a href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank" class="ticker-item"><i class="fab fa-amazon ti-az"></i><span class="tl-az">Amazon</span></a>
+    <a href="https://scholar.google.com/scholar?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-graduation-cap ti-gs"></i><span class="tl-gs">Google Scholar</span></a>
+    <a href="https://www.researchgate.net/search?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-flask ti-rg"></i><span class="tl-rg">ResearchGate</span></a>
+    <a href="https://www.academia.edu/search?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-university ti-ac"></i><span class="tl-ac">Academia.edu</span></a>
+    <a href="https://facebook.com/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-facebook-f ti-fb"></i><span class="tl-fb">Facebook</span></a>
+    <a href="https://instagram.com/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-instagram ti-ig"></i><span class="tl-ig">Instagram</span></a>
+    <a href="https://x.com/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-x-twitter ti-x"></i><span class="tl-x">X / Twitter</span></a>
+    <a href="https://linkedin.com/in/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-linkedin-in ti-li"></i><span class="tl-li">LinkedIn</span></a>
+    <a href="https://www.youtube.com/@mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-youtube ti-yt"></i><span class="tl-yt">YouTube</span></a>
+    <a href="https://corpus.byu.edu" target="_blank" class="ticker-item"><i class="fas fa-book-open ti-co"></i><span class="tl-co">Corpus</span></a>
+    <a href="https://selar.com/store/mauriceudom" target="_blank" class="ticker-item"><i class="fas fa-shopping-bag ti-sl"></i><span class="tl-sl">Selar Store</span></a>
+    <a href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank" class="ticker-item"><i class="fab fa-amazon ti-az"></i><span class="tl-az">Amazon</span></a>
+    <a href="https://scholar.google.com/scholar?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-graduation-cap ti-gs"></i><span class="tl-gs">Google Scholar</span></a>
+    <a href="https://www.researchgate.net/search?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-flask ti-rg"></i><span class="tl-rg">ResearchGate</span></a>
+    <a href="https://www.academia.edu/search?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-university ti-ac"></i><span class="tl-ac">Academia.edu</span></a>
+    <a href="https://facebook.com/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-facebook-f ti-fb"></i><span class="tl-fb">Facebook</span></a>
+    <a href="https://instagram.com/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-instagram ti-ig"></i><span class="tl-ig">Instagram</span></a>
+    <a href="https://x.com/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-x-twitter ti-x"></i><span class="tl-x">X / Twitter</span></a>
+    <a href="https://linkedin.com/in/mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-linkedin-in ti-li"></i><span class="tl-li">LinkedIn</span></a>
+    <a href="https://www.youtube.com/@mauriceudom" target="_blank" class="ticker-item"><i class="fab fa-youtube ti-yt"></i><span class="tl-yt">YouTube</span></a>
+    <a href="https://corpus.byu.edu" target="_blank" class="ticker-item"><i class="fas fa-book-open ti-co"></i><span class="tl-co">Corpus</span></a>
+    <a href="https://selar.com/store/mauriceudom" target="_blank" class="ticker-item"><i class="fas fa-shopping-bag ti-sl"></i><span class="tl-sl">Selar Store</span></a>
+  </div>
+</div>
+
+<!-- SLIDE 1: BRIGHT BLUE, COLOURED LETTERING -->
+<section id="slide1">
+  <div class="s1-inner">
+    <div class="profile-pic-wrap">
+      <img src="https://i.ibb.co/pB3P7n58/Part-Time-Lovers-Cover-300x300.png" alt="Maurice Udom" onerror="this.outerHTML='<i class=\'fa fa-user\' style=\'font-size:3rem;color:#60a5fa;\'></i>'">
+    </div>
+    <div class="s1-tag">mauriceudom.org — Author · Scholar · Editor</div>
+    <h1 class="s1-name"><span class="s1-first">Maurice </span><span class="s1-last">Udom</span></h1>
+    <p class="s1-role">
+      <span class="rn">Nigerian</span><span class="rdot">·</span>
+      <span class="ra">Author</span><span class="rdot">·</span>
+      <span class="rs">Scholar</span><span class="rdot">·</span>
+      <span class="rl">Linguist</span>
+    </p>
+    <p class="s1-bio">A distinguished playwright, scholar, linguist and academic editor whose literary works explore the human condition — from tragedy and injustice to comedy and biting social satire.</p>
+    <div class="s1-emails">
+      <a href="#" class="mailme" data-n="udommaurice" data-h="gmail.com"><i class="fa fa-envelope"></i> <span class="eshow"></span></a>
+      <a href="#" class="mailme2" data-n="academicscholar24" data-h="gmail.com"><i class="fa fa-envelope"></i> <span class="eshow"></span></a>
+    </div>
+    <div class="s1-social">
+      <a href="https://facebook.com/mauriceudom" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/mauriceudom" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/mauriceudom" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://linkedin.com/in/mauriceudom" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <a href="#slide3" class="s1-cta">Explore Works</a>
+  </div>
+  <div class="scroll-hint"><span>Scroll</span><i class="fa fa-chevron-down"></i></div>
+</section>
+
+<!-- SLIDE 2: SCHOLAR, AUTHOR & LINGUIST -->
+<section id="slide2">
+  <div class="s2-inner">
+    <div>
+      <p class="s2-label">The Man Behind the Words</p>
+      <h2 class="s2-title"><span class="ts">Scholar.</span><br><span class="ta">Author.</span><br><span class="tamp">&amp; </span><span class="tl">Linguist.</span></h2>
+      <p class="s2-desc">Maurice Udom's career spans decades of literary creation, academic teaching, and scholarly research — three distinct but intertwined identities in a body of work rare in its breadth.</p>
+      <div class="pillars">
+        <div class="pillar p1"><div class="p-icon"><i class="fas fa-theater-masks"></i></div><div><div class="p-title">The Scholar</div><div class="p-body">Decades of rigorous academic work in literature, language and cultural theory across Nigerian tertiary institutions.</div></div></div>
+        <div class="pillar p2"><div class="p-icon"><i class="fas fa-pen-nib"></i></div><div><div class="p-title">The Author</div><div class="p-body">Seven published works across drama, satire, comedy and academic reference — each genre mastered with precision.</div></div></div>
+        <div class="pillar p3"><div class="p-icon"><i class="fas fa-language"></i></div><div><div class="p-title">The Linguist</div><div class="p-body">Author of landmark English language guides shaping communication for thousands of Nigerian students.</div></div></div>
+      </div>
+    </div>
+    <div class="quote-cards">
+      <div class="q-card"><blockquote>"Rather than a maverick, he is a master of each of these literary genres. He can tickle the emotions in tragedy, comedy, drama and prose."</blockquote><cite>— Literary Review</cite></div>
+      <div class="q-card"><blockquote>"A William Shakespeare in its embryo — a George Orwell of Animal Farm in the making."</blockquote><cite>— Academic Critic</cite></div>
+      <div class="q-card"><blockquote>"His dramas speak beyond the local community to any developing nation where corruption has become the architecture of daily life."</blockquote><cite>— Publisher's Note</cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE 3: BOOKS -->
+<section id="slide3">
+  <div class="s3-inner">
+    <p class="sec-label" style="color:#fbbf24;">Bibliography</p>
+    <h2 class="sec-title"><span style="color:#fff;">Books by </span><span style="color:#fbbf24;">Maurice Udom</span></h2>
+    <div class="sec-rule" style="background:#fbbf24;"></div>
+    <div class="books-grid">
+      <div class="book-card"><div class="book-cover"><img src="https://i.ibb.co/TxyPHfHM/The-blind-gods-book-cover.png" alt="The Blind Gods"><span class="book-badge bg-red">Live</span></div><div class="book-info"><p class="book-genre">Tragedy · Drama</p><h3 class="book-title">The Blind Gods</h3><p class="book-desc">A powerful tragedy exposing deep-rooted injustice against women — searing indictment of patriarchal systems.</p><div class="book-buy-row"><a href="https://selar.com/7531dn63my" target="_blank" class="buy-btn buy-selar">📦 Selar</a><a href="https://www.amazon.com/s?k=The+Blind+Gods+Maurice+Udom" target="_blank" class="buy-btn buy-amazon">🛒 Amazon</a></div></div></div>
+      <div class="book-card"><div class="book-cover"><img src="https://i.ibb.co/JWSg1H7r/broken-sceptre-300x400.png" alt="The Broken Sceptre"><span class="book-badge bg-red">Live</span></div><div class="book-info"><p class="book-genre">Play · Tragedy</p><h3 class="book-title">The Broken Sceptre</h3><p class="book-desc">Ukoama's rightful inheritance stolen by a scheming stepmother — betrayal and denied justice.</p><div class="book-buy-row"><a href="https://selar.com/3b10x45heq" target="_blank" class="buy-btn buy-selar">📦 Selar</a><a href="https://www.amazon.com/s?k=The+Broken+Sceptre+Maurice+Udom" target="_blank" class="buy-btn buy-amazon">🛒 Amazon</a></div></div></div>
+      <div class="book-card"><div class="book-cover"><img src="https://i.ibb.co/HTFb8tm7/golden-home-front-300x400.png" alt="The Golden Home"><span class="book-badge bg-gold">Comedy</span></div><div class="book-info"><p class="book-genre">Satire · Comedy</p><h3 class="book-title">The Golden Home</h3><p class="book-desc">A biting satirical comedy on corruption in Africa — Aladima the gatekeeper schemes against his corrupt employer.</p><div class="book-buy-row"><a href="https://www.amazon.com/s?k=The+Golden+Home+Maurice+Udom" target="_blank" class="buy-btn buy-amazon">🛒 Amazon</a><span class="buy-btn buy-soon">Selar Soon</span></div></div></div>
+      <div class="book-card"><div class="book-cover"><img src="https://i.ibb.co/bRHzP4bX/9780595355686.webp" alt="Gambling with Destiny"><span class="book-badge bg-blue">New</span></div><div class="book-info"><p class="book-genre">Drama</p><h3 class="book-title">Gambling with Destiny</h3><p class="book-desc">A compelling drama exploring fate, risk and the high-stakes decisions that define the human condition.</p><div class="book-buy-row"><a href="https://www.amazon.com/s?k=Gambling+with+Destiny+Maurice+Udom" target="_blank" class="buy-btn buy-amazon">🛒 Amazon</a><span class="buy-btn buy-soon">Selar Soon</span></div></div></div>
+      <div class="book-card"><div class="book-cover"><img src="https://i.ibb.co/nqYnNtkW/front-cover-An-English-course.png" alt="An English Course"><span class="book-badge bg-red">Live</span></div><div class="book-info"><p class="book-genre">Academic · Language</p><h3 class="book-title">An English Course in Written Communication</h3><p class="book-desc">A comprehensive guide to English grammar and written communication for students and educators.</p><div class="book-buy-row"><a href="https://selar.com/33pjl15x03" target="_blank" class="buy-btn buy-selar">📦 Selar</a><a href="https://www.amazon.com/s?k=English+Course+Written+Communication+Maurice+Udom" target="_blank" class="buy-btn buy-amazon">🛒 Amazon</a></div></div></div>
+      <div class="book-card"><div class="book-cover"><img src="https://i.ibb.co/7d7BpLj0/readers-companion-cover.png" alt="Reader's Companion"><span class="book-badge bg-green">2024 Ed.</span></div><div class="book-info"><p class="book-genre">Academic · Reference</p><h3 class="book-title">Reader's Companion on Use of English</h3><p class="book-desc">Sixteen chapters covering grammar, essays, punctuation and logic. TETFund sponsored (2024, Revised).</p><div class="book-buy-row"><a href="https://selar.com/fa13337579" target="_blank" class="buy-btn buy-selar">📦 Selar</a><a href="https://www.amazon.com/s?k=Readers+Companion+Use+of+English+Maurice+Udom" target="_blank" class="buy-btn buy-amazon">🛒 Amazon</a></div></div></div>
+      <div class="book-card"><div class="book-cover"><img src="https://i.ibb.co/7trK2C3m/Part-time-Lovers-by-Maurice-Udom.png" alt="Part-time Lovers"><span class="book-badge bg-pink">Live</span></div><div class="book-info"><p class="book-genre">Drama · Fiction</p><h3 class="book-title">Part-time Lovers</h3><p class="book-desc">A gripping drama exploring the complexities of love, loyalty and the fragile bonds between people.</p><div class="book-buy-row"><a href="https://selar.com/5m47d05s0j" target="_blank" class="buy-btn buy-selar">📦 Selar</a><a href="https://www.amazon.com/s?k=Part-time+Lovers+Maurice+Udom" target="_blank" class="buy-btn buy-amazon">🛒 Amazon</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STAY UPDATED -->
+<section id="slide4">
+  <div class="s4-inner">
+    <p class="s4-label">Never Miss a Release</p>
+    <h2 class="s4-title">Stay <span>Updated</span><br>with New Releases</h2>
+    <p class="s4-sub">Be the first to know when Maurice Udom's next drama, play or academic publication drops.</p>
+    <div class="s4-form"><input class="s4-input" type="email" placeholder="Enter your email address…"><button class="s4-btn">Subscribe</button></div>
+  </div>
+</section>
+
+<!-- CREATIVE RANGE -->
+<section id="slide5">
+  <div class="s5-inner">
+    <p class="sec-label" style="color:#fff;">Literary Mastery</p>
+    <h2 class="sec-title" style="color:#fff;">The <span style="color:#7dd3fc;">Creative Range</span></h2>
+    <div class="sec-rule" style="background:#60a5fa;"></div>
+    <div class="creative-grid">
+      <div class="cc cc-drama"><div class="cc-icon"><i class="fas fa-theater-masks"></i></div><h3 class="cc-title">Tragedy &amp; Drama</h3><p class="cc-body">Raw, unsparing explorations of injustice, betrayal and the abuse of power across Africa.</p><div class="cc-works"><span class="cc-work">→ The Blind Gods</span><span class="cc-work">→ The Broken Sceptre</span><span class="cc-work">→ Gambling with Destiny</span></div></div>
+      <div class="cc cc-satire"><div class="cc-icon"><i class="fas fa-masks-theater"></i></div><h3 class="cc-title">Satire, Comedy &amp; Fiction</h3><p class="cc-body">Biting social commentary and human drama — holding a mirror to corruption, greed and the complexities of love.</p><div class="cc-works"><span class="cc-work">→ The Golden Home</span><span class="cc-work">→ Part-time Lovers</span></div></div>
+      <div class="cc cc-academic"><div class="cc-icon"><i class="fas fa-book-open"></i></div><h3 class="cc-title">Academic Scholarship</h3><p class="cc-body">Landmark reference texts shaping English language education in Nigerian universities and polytechnics.</p><div class="cc-works"><span class="cc-work">→ Reader's Companion on Use of English</span><span class="cc-work">→ An English Course in Written Communication</span></div></div>
+      <div class="cc cc-africa"><div class="cc-icon"><i class="fas fa-globe-africa"></i></div><h3 class="cc-title">African Voice</h3><p class="cc-body">Works that speak to every developing nation — where resilience and the hunger for justice are universal.</p><div class="cc-works"><span class="cc-work">→ Seven published works</span><span class="cc-work">→ 30+ years of scholarship</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDIO -->
+<section id="studio">
+  <div class="studio-inner">
+    <p class="st-label">Professional Services</p>
+    <h2 class="st-title">The <span>Studio</span></h2>
+    <div class="st-rule"></div>
+    <div class="studio-grid">
+      <div class="st-card st-c1"><div class="st-icon"><i class="fas fa-microscope"></i></div><div class="st-name">Research</div><div class="st-desc">Academic and literary research services across humanities, social sciences and cultural studies.</div></div>
+      <div class="st-card st-c2"><div class="st-icon"><i class="fas fa-code"></i></div><div class="st-name">Coding</div><div class="st-desc">Web development and digital solutions for authors, scholars and academic institutions.</div></div>
+      <div class="st-card st-c3"><div class="st-icon"><i class="fas fa-project-diagram"></i></div><div class="st-name">Project</div><div class="st-desc">End-to-end project planning and delivery for literary and academic endeavours.</div></div>
+      <div class="st-card st-c4"><div class="st-icon"><i class="fas fa-feather-alt"></i></div><div class="st-name">Creative Writing</div><div class="st-desc">Guided creative writing, script development and narrative coaching for emerging authors.</div></div>
+      <div class="st-card st-c5"><div class="st-icon"><i class="fas fa-bookmark"></i></div><div class="st-name">Book Marker</div><div class="st-desc">Professional book curation, annotation and critical reading services for students and scholars.</div></div>
+      <div class="st-card st-c6"><div class="st-icon"><i class="fas fa-search"></i></div><div class="st-name">Editing &amp; Review</div><div class="st-desc">Thorough manuscript editing, proofreading and critical review for publication-ready work.</div></div>
+      <div class="st-card st-c7"><div class="st-icon"><i class="fas fa-key"></i></div><div class="st-name">Setup &amp; Key</div><div class="st-desc">Digital setup, publishing onboarding and strategic key-skills training for authors and academics.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MAURICE@EDIT — INSIDE THE MAIN WEBSITE ══ -->
+<section id="mauriceedit">
+  <div class="edit-inner">
+    <div class="edit-header">
+      <p class="edit-eyebrow">Professional Editorial Services</p>
+      <h2 class="edit-brand"><span class="eat">Maurice</span><span class="eedit">@edit</span></h2>
+      <p class="edit-tagline">Where words are sharpened, ideas refined, and scholarship elevated.</p>
+      <div class="edit-rule"></div>
+      <p class="edit-desc">A seasoned Nigerian academic, playwright and linguist offering professional editing of books, research works, scholarly publications and academic papers. Any client anywhere in the world can reach Maurice directly — click, send a message, and work begins.</p>
+    </div>
+
+    <!-- 6 Services -->
+    <div class="edit-services">
+      <div class="esrv es1"><div class="esrv-num">01</div><div class="esrv-icon"><i class="fas fa-book-open"></i></div><div class="esrv-title">Book Editing</div><div class="esrv-desc">Comprehensive developmental and line editing for fiction, drama, non-fiction and literary works — from structure to sentence-level refinement.</div></div>
+      <div class="esrv es2"><div class="esrv-num">02</div><div class="esrv-icon"><i class="fas fa-flask"></i></div><div class="esrv-title">Research Work Editing</div><div class="esrv-desc">Expert editing of academic research papers, dissertations, theses and technical reports. Clarity, argument flow and citation accuracy guaranteed.</div></div>
+      <div class="esrv es3"><div class="esrv-num">03</div><div class="esrv-icon"><i class="fas fa-university"></i></div><div class="esrv-title">Scholarly Works</div><div class="esrv-desc">Journal articles, academic monographs, conference papers and scholarly manuscripts reviewed and polished for publication.</div></div>
+      <div class="esrv es4"><div class="esrv-num">04</div><div class="esrv-icon"><i class="fas fa-spell-check"></i></div><div class="esrv-title">Proofreading</div><div class="esrv-desc">Final-stage correction of grammar, punctuation, spelling, style consistency and formatting before submission or publication.</div></div>
+      <div class="esrv es5"><div class="esrv-num">05</div><div class="esrv-icon"><i class="fas fa-comments"></i></div><div class="esrv-title">Manuscript Review</div><div class="esrv-desc">Critical reading and written feedback on narrative structure, argument strength and overall readability of your manuscript.</div></div>
+      <div class="esrv es6"><div class="esrv-num">06</div><div class="esrv-icon"><i class="fas fa-theater-masks"></i></div><div class="esrv-title">Drama &amp; Script Editing</div><div class="esrv-desc">Specialised editing of plays, screenplays and dramatic scripts — dialogue, staging notes, character voice and dramatic flow.</div></div>
+    </div>
+
+    <!-- Experience You Can Trust — LIGHT GREEN -->
+    <div class="edit-trust">
+      <div class="trust-left">
+        <p class="trust-eyebrow">Why Choose Maurice</p>
+        <h3 class="trust-title">Experience You Can <span>Trust</span></h3>
+        <p class="trust-desc">With over 30 years as an academic, playwright and published author, Maurice brings a rare combination of scholarly rigour and literary sensitivity to every editing engagement.</p>
+        <div class="trust-points">
+          <div class="trust-point"><div class="tp-icon"><i class="fas fa-check-circle"></i></div><div><div class="tp-title">Academic Authority</div><div class="tp-body">Decades of university-level scholarship in literature, linguistics and cultural studies.</div></div></div>
+          <div class="trust-point"><div class="tp-icon"><i class="fas fa-check-circle"></i></div><div><div class="tp-title">Published Author</div><div class="tp-body">Seven published works — he knows exactly what makes writing shine and sell.</div></div></div>
+          <div class="trust-point"><div class="tp-icon"><i class="fas fa-check-circle"></i></div><div><div class="tp-title">African Context</div><div class="tp-body">Deep understanding of African literature and academic standards for local and international audiences.</div></div></div>
+          <div class="trust-point"><div class="tp-icon"><i class="fas fa-check-circle"></i></div><div><div class="tp-title">Confidential &amp; Fast</div><div class="tp-body">All manuscripts treated with complete discretion. Responsive turnaround on every project.</div></div></div>
+        </div>
+      </div>
+      <div class="trust-right">
+        <div class="trust-quote"><blockquote>"His editorial eye is extraordinary. He transformed my rough dissertation into a publication-ready manuscript without losing my voice."</blockquote><cite>— PhD Candidate, University of Calabar</cite></div>
+        <div class="trust-quote"><blockquote>"Maurice edited my debut novel with sensitivity and precision. His feedback on structure and character was invaluable."</blockquote><cite>— Debut Novelist, Lagos</cite></div>
+        <div class="trust-quote"><blockquote>"A rare editor who understands both the science of language and the art of storytelling. Highly recommended."</blockquote><cite>— Research Fellow, ABU Zaria</cite></div>
+      </div>
+    </div>
+
+    <!-- Contact Form — sends directly to Maurice's email -->
+    <div class="edit-contact">
+      <div class="ec-info">
+        <h3 class="ec-info-title">Hire <span>Maurice@edit</span></h3>
+        <p class="ec-desc">Ready to elevate your manuscript? Fill in your details — the form opens your email app with everything pre-filled and sends directly to Maurice. You get a response within 48 hours.</p>
+        <div class="ec-details">
+          <div class="ecd"><div class="ecd-icon"><i class="fa fa-envelope"></i></div><div><div class="ecd-label">General</div><div class="ecd-val"><a class="EM1" href="#">udommaurice&#x40;gmail.com</a></div></div></div>
+          <div class="ecd"><div class="ecd-icon"><i class="fa fa-graduation-cap"></i></div><div><div class="ecd-label">Academic &amp; Scholarly</div><div class="ecd-val"><a class="EM2" href="#">academicscholar24&#x40;gmail.com</a></div></div></div>
+          <div class="ecd"><div class="ecd-icon"><i class="fa fa-globe"></i></div><div><div class="ecd-label">Website</div><div class="ecd-val"><a href="https://mauriceudom.org" target="_blank">mauriceudom.org</a></div></div></div>
+          <div class="ecd"><div class="ecd-icon" style="background:#1877f2;"><i class="fab fa-facebook-f"></i></div><div><div class="ecd-label">Social — share this page</div><div class="ecd-val" style="display:flex;gap:10px;margin-top:4px;">
+            <a href="https://facebook.com/mauriceudom" target="_blank" style="color:#1877f2;font-size:1.2rem;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/mauriceudom" target="_blank" style="color:#e1306c;font-size:1.2rem;"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/mauriceudom" target="_blank" style="color:#0f1419;font-size:1.2rem;"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/in/mauriceudom" target="_blank" style="color:#0a66c2;font-size:1.2rem;"><i class="fab fa-linkedin-in"></i></a>
+          </div></div></div>
+        </div>
+      </div>
+      <div>
+        <div id="efSuccess" class="ef-success">✅ Thank you! Your enquiry is ready. Please click Send in your email app to complete.</div>
+        <form class="ec-form" id="editForm">
+          <div><label class="ef-label">Your Full Name *</label><input class="ef-input" type="text" id="ef-name" placeholder="e.g. Chidi Okonkwo" required></div>
+          <div><label class="ef-label">Your Email Address *</label><input class="ef-input" type="email" id="ef-email" placeholder="yourname@email.com" required></div>
+          <div><label class="ef-label">Service Required *</label>
+            <select class="ef-select" id="ef-service" required>
+              <option value="">— Select a service —</option>
+              <option>Book Editing</option>
+              <option>Research Work Editing</option>
+              <option>Scholarly Work Editing</option>
+              <option>Proofreading</option>
+              <option>Manuscript Review</option>
+              <option>Drama &amp; Script Editing</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div><label class="ef-label">Describe Your Project *</label><textarea class="ef-textarea" id="ef-msg" placeholder="Tell Maurice about your manuscript — type, word count, deadline and any specific requirements…" required></textarea></div>
+          <button type="submit" class="ef-submit"><i class="fa fa-paper-plane"></i> Send to Maurice</button>
+          <p class="ef-note">Your enquiry opens your email app ready to send to both addresses.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="slide6">
+  <div class="s6-inner">
+    <p class="sec-label s6-lc">Testimonials</p>
+    <h2 class="s6-title">What <span>Readers Say</span></h2>
+    <div class="sec-rule s6-rc"></div>
+    <div class="t-grid">
+      <div class="t-card"><span class="t-qmark">"</span><p class="t-text">The Broken Sceptre left me breathless. The way Maurice captures betrayal within a family is both timeless and deeply Nigerian. A must-read for every student of literature.</p><div class="t-author"><div class="t-avatar av1">AE</div><div><div class="t-name">Amara Eze</div><div class="t-role">Literature Lecturer, UNILAG</div><div class="t-stars">★★★★★</div></div></div></div>
+      <div class="t-card"><span class="t-qmark">"</span><p class="t-text">The Golden Home is laugh-out-loud funny yet devastatingly accurate about corruption. Aladima the gatekeeper is one of the most memorable characters in modern Nigerian drama.</p><div class="t-author"><div class="t-avatar av2">OB</div><div><div class="t-name">Obiageli Bello</div><div class="t-role">Theatre Arts Student, UNN</div><div class="t-stars">★★★★★</div></div></div></div>
+      <div class="t-card"><span class="t-qmark">"</span><p class="t-text">The Reader's Companion transformed how I teach English to first-year students. Sixteen well-structured chapters covering everything from grammar to essay writing.</p><div class="t-author"><div class="t-avatar av3">PO</div><div><div class="t-name">Prof. P. Okonkwo</div><div class="t-role">English Department, Polytechnic</div><div class="t-stars">★★★★★</div></div></div></div>
+      <div class="t-card"><span class="t-qmark">"</span><p class="t-text">Udom's range is extraordinary — from tragedy to comedy to academic scholarship. Nigeria has produced a rare master of the literary arts in this man.</p><div class="t-author"><div class="t-avatar av4">CI</div><div><div class="t-name">Chukwudi Ike</div><div class="t-role">Book Reviewer, Lagos</div><div class="t-stars">★★★★★</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK LINKS — BRIGHT BLUE-WHITE BG -->
+<section id="slide7">
+  <div class="s7-inner">
+    <div class="s7-grid">
+      <div class="col-blue">
+        <h3 class="col-title">Quick Links</h3>
+        <ul class="q-links">
+          <li><a href="#slide1"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="#slide2"><i class="fa fa-user"></i> About the Author</a></li>
+          <li><a href="#slide3"><i class="fa fa-book"></i> All Publications</a></li>
+          <li><a href="#slide4"><i class="fa fa-bell"></i> New Releases</a></li>
+          <li><a href="#slide5"><i class="fa fa-star"></i> Creative Range</a></li>
+          <li><a href="#studio"><i class="fa fa-briefcase"></i> Studio</a></li>
+          <li><a href="#mauriceedit"><i class="fa fa-pen"></i> Maurice@edit</a></li>
+          <li><a href="#slide6"><i class="fa fa-comments"></i> Reader Reviews</a></li>
+          <li><a class="EM1" href="#"><i class="fa fa-envelope"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-amber">
+        <h3 class="col-title">Buy Books</h3>
+        <div class="buy-list">
+          <div class="buy-item"><div class="buy-name">The Blind Gods</div><div class="buy-btns"><a href="https://selar.com/7531dn63my" target="_blank" class="bb-s">Selar</a><a href="https://www.amazon.com/s?k=The+Blind+Gods+Maurice+Udom" target="_blank" class="bb-a">Amazon</a></div></div>
+          <div class="buy-item"><div class="buy-name">The Broken Sceptre</div><div class="buy-btns"><a href="https://selar.com/3b10x45heq" target="_blank" class="bb-s">Selar</a><a href="https://www.amazon.com/s?k=The+Broken+Sceptre+Maurice+Udom" target="_blank" class="bb-a">Amazon</a></div></div>
+          <div class="buy-item"><div class="buy-name">The Golden Home</div><div class="buy-btns"><span class="bb-soon">Selar Soon</span><a href="https://www.amazon.com/s?k=The+Golden+Home+Maurice+Udom" target="_blank" class="bb-a">Amazon</a></div></div>
+          <div class="buy-item"><div class="buy-name">Gambling with Destiny</div><div class="buy-btns"><span class="bb-soon">Selar Soon</span><a href="https://www.amazon.com/s?k=Gambling+Destiny+Maurice+Udom" target="_blank" class="bb-a">Amazon</a></div></div>
+          <div class="buy-item"><div class="buy-name">An English Course in Written Communication</div><div class="buy-btns"><a href="https://selar.com/33pjl15x03" target="_blank" class="bb-s">Selar</a><a href="https://www.amazon.com/s?k=English+Course+Written+Communication+Maurice+Udom" target="_blank" class="bb-a">Amazon</a></div></div>
+          <div class="buy-item"><div class="buy-name">Reader's Companion on Use of English</div><div class="buy-btns"><a href="https://selar.com/fa13337579" target="_blank" class="bb-s">Selar</a><a href="https://www.amazon.com/s?k=Readers+Companion+Use+of+English+Maurice+Udom" target="_blank" class="bb-a">Amazon</a></div></div>
+          <div class="buy-item"><div class="buy-name">Part-time Lovers</div><div class="buy-btns"><a href="https://selar.com/5m47d05s0j" target="_blank" class="bb-s">Selar</a><a href="https://www.amazon.com/s?k=Part-time+Lovers+Maurice+Udom" target="_blank" class="bb-a">Amazon</a></div></div>
+        </div>
+      </div>
+      <div class="col-green">
+        <h3 class="col-title">Connect</h3>
+        <ul class="q-links">
+          <li><a href="https://facebook.com/mauriceudom" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="https://instagram.com/mauriceudom" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://x.com/mauriceudom" target="_blank"><i class="fab fa-x-twitter"></i> X / Twitter</a></li>
+          <li><a href="https://linkedin.com/in/mauriceudom" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+          <li><a href="https://scholar.google.com/scholar?q=Maurice+Udom" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a></li>
+          <li><a href="https://www.researchgate.net/search?q=Maurice+Udom" target="_blank"><i class="fas fa-flask"></i> ResearchGate</a></li>
+          
+          
+          <li><a class="EM1" href="#"><i class="fa fa-envelope"></i> <span>udommaurice&#x40;gmail.com</span></a></li>
+          <li><a class="EM2" href="#"><i class="fa fa-envelope"></i> <span>academicscholar24&#x40;gmail.com</span></a></li>
+          <li><a href="#" class="mailme" data-n="udommaurice" data-h="gmail.com"><i class="fa fa-envelope"></i> <span class="eshow"></span></a></li>
+          <li><a href="#" class="mailme2" data-n="academicscholar24" data-h="gmail.com"><i class="fa fa-envelope"></i> <span class="eshow"></span></a></li>
+          <li><a href="https://mauriceudom.org" target="_blank"><i class="fa fa-globe"></i> mauriceudom.org</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER — BRIGHT BLUE -->
+<footer>
+  <div class="f-logo">MAURICE UDOM</div>
+  <div class="f-domain"><a href="https://mauriceudom.org" target="_blank">mauriceudom.org</a></div>
+  <div class="f-edit-link"><a href="#mauriceedit">✏️ Maurice@edit — Professional Editorial Services</a></div>
+  <div class="f-emails">
+    <a href="#" class="mailme" data-n="udommaurice" data-h="gmail.com"><i class="fa fa-envelope"></i> <span class="eshow"></span></a>
+    <a href="#" class="mailme2" data-n="academicscholar24" data-h="gmail.com"><i class="fa fa-envelope"></i> <span class="eshow"></span></a>
+  </div>
+  <div class="f-social">
+    <a href="https://facebook.com/mauriceudom" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com/mauriceudom" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://x.com/mauriceudom" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://linkedin.com/in/mauriceudom" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://scholar.google.com/schola
+<script>
+(function(){
+  /* Build emails at runtime — Cloudflare cannot detect split strings */
+  var at = String.fromCharCode(64);
+  var em1 = 'udommaurice' + at + 'gmail.com';
+  var em2 = 'academicscholar24' + at + 'gmail.com';
+
+  function applyEmail(sel, addr){
+    document.querySelectorAll(sel).forEach(function(el){
+      el.href = 'mailto:' + addr;
+      var sp = el.querySelector('.eshow');
+      if(sp) sp.textContent = addr;
+    });
+  }
+  applyEmail('.mailme',  em1);
+  applyEmail('.mailme2', em2);
+
+  /* Edit contact form */
+  var form = document.getElementById('editForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var subj = encodeURIComponent('Editorial Enquiry — ' + document.getElementById('ef-service').value + ' from ' + document.getElementById('ef-name').value);
+      var body = encodeURIComponent('Name: ' + document.getElementById('ef-name').value + '\nEmail: ' + document.getElementById('ef-email').value + '\nService: ' + document.getElementById('ef-service').value + '\n\nProject:\n' + document.getElementById('ef-msg').value + '\n\n— Sent via mauriceudom.org');
+      window.location.href = 'mailto:' + em1 + '?cc=' + em2 + '&subject=' + subj + '&body=' + body;
+      var s = document.getElementById('efSuccess');
+      if(s){ s.style.display='block'; s.scrollIntoView({behavior:'smooth'}); }
+      form.reset();
+    });
+  }
+})();
+</script>
+</body>
+</html>
