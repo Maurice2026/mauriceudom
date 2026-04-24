@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Journey to Publication — Lessons learned from publishing seven literary and academic works on Amazon and Selar. A practical guide by Maurice Udom.">
+<meta name="keywords" content="self-publishing, Amazon KDP, Selar, publishing books in Nigeria, how to publish a book, Nigerian author, Maurice Udom, book publishing guide">
+<title>The Journey to Publication — Maurice Udom</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: #fafaf7;
+    color: #1a1a1a;
+    line-height: 1.85;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Back link ── */
+  .back-bar {
+    background: #1a1a2e;
+    padding: 14px 24px;
+  }
+  .back-bar a {
+    color: #c0a36a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .back-bar a:hover { color: #e8d5a3; }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 80px 24px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c0a36a 0%, #e8d5a3 50%, #c0a36a 100%);
+  }
+  .hero-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .hero-tags span {
+    background: rgba(192, 163, 106, 0.15);
+    color: #e8d5a3;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    max-width: 780px;
+    margin: 0 auto 20px;
+  }
+  .hero .subtitle {
+    font-size: 18px;
+    color: #b0b8c8;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* ── Article body ── */
+  .article {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 50px 24px 60px;
+  }
+
+  .article p {
+    margin-bottom: 22px;
+    color: #2a2a2a;
+  }
+
+  .article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 50px 0 20px;
+    line-height: 1.3;
+  }
+
+  .article h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 36px 0 14px;
+  }
+
+  /* ── Numbered sections ── */
+  .step {
+    margin: 44px 0;
+    padding-left: 70px;
+    position: relative;
+  }
+  .step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: rgba(192, 163, 106, 0.25);
+    line-height: 1;
+  }
+  .step h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin: 0 0 12px;
+  }
+  .step p {
+    margin-bottom: 16px;
+  }
+
+  /* ── Highlight box ── */
+  .highlight-box {
+    background: #f0ece2;
+    border-left: 4px solid #c0a36a;
+    padding: 24px 28px;
+    margin: 36px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .highlight-box p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  .highlight-box p:last-child { margin-bottom: 0; }
+  .highlight-box strong { color: #1a1a2e; }
+
+  /* ── Blockquote ── */
+  blockquote {
+    border-left: 3px solid #c0a36a;
+    margin: 32px 0;
+    padding: 18px 24px;
+    background: rgba(192, 163, 106, 0.06);
+    border-radius: 0 6px 6px 0;
+  }
+  blockquote p {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  blockquote cite {
+    font-style: normal;
+    font-size: 14px;
+    color: #888;
+  }
+
+  /* ── CTA box ── */
+  .cta-box {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    padding: 40px 32px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 50px 0;
+  }
+  .cta-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #e8d5a3;
+    margin: 0 0 12px;
+  }
+  .cta-box p {
+    color: #b0b8c8;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: #c0a36a;
+    color: #1a1a2e;
+    padding: 12px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.3s;
+  }
+  .cta-btn:hover { background: #e8d5a3; }
+
+  /* ── Author card ── */
+  .author-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 50px 0;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #e8e4da;
+    border-radius: 10px;
+  }
+  .author-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    color: #c0a36a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .author-info h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+  }
+  .author-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .author-info a {
+    color: #c0a36a;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .author-info a:hover { text-decoration: underline; }
+
+  /* ── Related posts ── */
+  .related {
+    margin: 40px 0;
+  }
+  .related h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+  }
+  .related a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e4da;
+    color: #1a1a2e;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s;
+  }
+  .related a:hover { color: #c0a36a; }
+  .related a:last-child { border-bottom: none; }
+
+  /* ── Divider ── */
+  .divider {
+    border: none;
+    height: 1px;
+    background: #e0dcd2;
+    margin: 50px 0;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 13px;
+    color: #888;
+    border-top: 1px solid #e8e4da;
+  }
+  footer a { color: #c0a36a; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .step { padding-left: 54px; }
+    .step-number { font-size: 34px; }
+    .author-card { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="back-bar">
+  <a href="https://mauriceudom.org">← mauriceudom.org</a>
+</div>
+
+<div class="hero">
+  <div class="hero-tags">
+    <span>Self-Publishing</span>
+    <span>Author Guide</span>
+    <span>14 min read</span>
+  </div>
+  <h1>The Journey to Publication: From Manuscript to Global Release</h1>
+  <p class="subtitle">Lessons learned from publishing seven literary and academic works on Amazon and Selar — a practical guide for African authors.</p>
+</div>
+
+<div class="article">
+
+  <p>There is a moment every writer experiences — the moment when the final sentence is written, the last chapter is closed, and the manuscript sits on the desk complete. It is a moment of triumph. But it is also the moment when a new and entirely different challenge begins: getting the book into the hands of readers.</p>
+
+  <p>I have published seven books. Three are dramas, one is a satire, one is a work of fiction, and two are academic reference texts used in Nigerian universities and polytechnics. Each book taught me something new about the publishing process — about what works, what does not, and what every writer needs to know before they take the leap from manuscript to published author.</p>
+
+  <p>This article is not theory. It is a practical account of what I did, what I wish I had known earlier, and what you can learn from my experience if you are writing a book or sitting on a finished manuscript wondering what to do next.</p>
+
+  <h2>The Old Road and the New Road</h2>
+
+  <p>When I published my first book, self-publishing was not what it is today. The process involved finding a publisher willing to take a risk on your manuscript, negotiating terms that rarely favoured the author, waiting months — sometimes years — for the book to appear in print, and accepting whatever royalty the publisher decided was fair. For many African authors, the alternative was vanity publishing — paying a company to print your book, then spending your own money to distribute copies to bookshops that might or might not place them on their shelves.</p>
+
+  <p>That world has changed completely. Today, any author anywhere in Africa can publish a book and make it available to readers across the world — without a publisher, without a printer, and without leaving home. The two platforms that made this possible for me are Amazon Kindle Direct Publishing and Selar.</p>
+
+  <div class="step">
+    <div class="step-number">01</div>
+    <h3>Finish the Manuscript Properly</h3>
+    <p>This sounds obvious, but it is where most aspiring authors fail. A finished manuscript does not mean a first draft with the last chapter attached. It means a manuscript that has been revised, restructured where necessary, proofread line by line, and read aloud at least once to catch awkward phrasing and dialogue that does not sound natural.</p>
+    <p>For my dramas — <em>The Blind Gods</em>, <em>The Broken Sceptre</em>, and <em>Gambling with Destiny</em> — I read every line of dialogue aloud multiple times. If a line did not sound like something a real person would say on a stage, I rewrote it. For my academic texts — <em>Reader's Companion on Use of English</em> and <em>An English Course in Written Communication</em> — I checked every grammar rule, every example sentence, every exercise against multiple authoritative sources.</p>
+    <p>Do not rush to publish. A poorly edited book will damage your reputation more than no book at all.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">02</div>
+    <h3>Get the Book Professionally Edited</h3>
+    <p>No matter how many times you read your own manuscript, you will miss errors. Your brain fills in what it expects to see rather than what is actually on the page. Every one of my seven books was edited by someone other than me before publication.</p>
+    <p>There are different levels of editing. Developmental editing examines the overall structure — the argument flow of an academic text, the plot and character arcs of a drama. Line editing refines the language at the sentence level — clarity, rhythm, word choice. Proofreading catches the final errors — spelling, punctuation, formatting inconsistencies.</p>
+    <p>You do not always need all three, but you always need at least one. If your budget is limited, invest in proofreading at the very minimum. A book with typographical errors on the first page will not be taken seriously, regardless of how brilliant the content is.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">03</div>
+    <h3>Design a Professional Cover</h3>
+    <p>People judge books by their covers. This is not a metaphor — it is a publishing reality. When a reader scrolls through Amazon or Selar, your cover is the first and often only thing they see before deciding whether to click. A poorly designed cover signals an amateur book, even if the writing inside is outstanding.</p>
+    <p>For <em>The Golden Home</em>, I worked with a designer who understood the satirical tone of the book. For my academic texts, the covers needed to communicate authority and professionalism. Each genre demands a different visual language, and getting it right matters enormously.</p>
+    <p>If you cannot afford a professional designer, use tools like Canva — but study the covers of successful books in your genre first. Notice the fonts they use, the colour palettes, the composition. Your cover must look like it belongs on the same shelf as the established titles in your field.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">04</div>
+    <h3>Choose Your Platform</h3>
+    <p>This is where the modern author has an extraordinary advantage. Two platforms have transformed my publishing career.</p>
+
+    <div class="highlight-box">
+      <p><strong>Amazon Kindle Direct Publishing (KDP)</strong> gives you access to the largest bookstore in the world. Your book becomes available as a Kindle eBook and as a print-on-demand paperback. You set your own price. Amazon handles printing, shipping, and payment. Your book is discoverable by readers in over 100 countries. Royalties range from 35% to 70% depending on the pricing and distribution options you select.</p>
+      <p><strong>Selar</strong> is a Nigerian-built platform that allows you to sell digital products — including eBooks and PDFs — directly to buyers, with payment in Naira. Selar is especially powerful for reaching African readers and for selling academic texts, because you can deliver the book as an instant digital download. The buyer pays, receives the file immediately, and you receive the money in your Nigerian bank account.</p>
+    </div>
+
+    <p>I publish on both platforms simultaneously. Amazon reaches the global market — diaspora Nigerians, international readers, university libraries abroad. Selar reaches the local market — students, lecturers, book clubs, and readers who prefer to pay in Naira. The two platforms complement each other perfectly.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">05</div>
+    <h3>Format Your Manuscript for Each Platform</h3>
+    <p>Amazon and Selar have different formatting requirements. For Amazon KDP, you need your manuscript formatted as a Word document or PDF that meets their specifications for margins, fonts, page size, and bleed. Amazon provides free templates and a previewer tool that shows you exactly how your book will look in print and on Kindle.</p>
+    <p>For Selar, you typically upload a PDF. The advantage of PDF is that you control the exact appearance — fonts, layout, page breaks — and the reader sees exactly what you intended. For my academic texts, this was essential because the books contain tables, diagrams, and exercises that need precise formatting.</p>
+    <p>Take the time to get formatting right. A book that looks wrong on screen or in print — with odd page breaks, inconsistent fonts, or cramped margins — will frustrate readers and attract negative reviews.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">06</div>
+    <h3>Write a Compelling Book Description</h3>
+    <p>Your book description is your sales pitch. On Amazon, it appears on your book's product page. On Selar, it appears on your store listing. In both cases, a reader who is interested enough to click on your cover will read the description to decide whether to buy.</p>
+    <p>A good book description is not a summary of the plot. It is a hook — a reason to care. For <em>The Blind Gods</em>, the description focuses on the injustice at the heart of the story, not on a chapter-by-chapter outline. For <em>Reader's Companion on Use of English</em>, the description emphasises the practical value — sixteen chapters covering everything a student needs to master English grammar and essay writing.</p>
+    <p>Write your description in short paragraphs. Lead with the strongest hook. End with a reason to buy now.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">07</div>
+    <h3>Set the Right Price</h3>
+    <p>Pricing is a balance between accessibility and value. Price too high and you lose readers. Price too low and you devalue your work — and your royalties shrink to nothing.</p>
+    <p>For academic texts, I price higher because the books serve a professional and educational purpose. Students and lecturers expect to pay a reasonable price for a comprehensive reference work. For fiction and drama, I price more competitively because the goal is to reach the widest possible readership and build an audience.</p>
+    <p>On Selar, you have complete control over pricing in Naira. On Amazon, you choose between a 35% and 70% royalty rate, each with its own pricing band. Study what comparable books in your genre are priced at and position yourself accordingly.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">08</div>
+    <h3>Promote Relentlessly</h3>
+    <p>Publishing the book is only half the work. The other half — and arguably the harder half — is making sure people know it exists. No platform, however large, will sell your book for you. You must actively promote it.</p>
+    <p>I use a combination of social media (Facebook, Instagram, X, LinkedIn), my website and blog, direct outreach to academic colleagues and book clubs, and word of mouth. Every blog post I write on my website links back to my books. Every social media post includes a link to my Selar store or Amazon page.</p>
+    <p>Consistency matters more than intensity. A steady rhythm of weekly posts, articles, and engagement will outperform a single burst of promotion followed by silence. The authors who sell books are the authors who never stop talking about their books — not aggressively, but consistently.</p>
+  </div>
+
+  <hr class="divider">
+
+  <h2>What I Wish I Had Known Earlier</h2>
+
+  <p>If I could go back to the beginning of my publishing journey with everything I know now, three things would have changed.</p>
+
+  <p>First, I would have built my online presence earlier. A website, a blog, social media accounts — these take time to grow, and the earlier you start, the larger your audience will be when your book launches. Do not wait until the book is ready before you start building your platform.</p>
+
+  <p>Second, I would have invested more in cover design from the start. My early covers were adequate but not striking. The difference a truly professional cover makes — in clicks, in credibility, in sales — is substantial.</p>
+
+  <p>Third, I would have published on Selar sooner. For years I focused exclusively on Amazon, which meant I was largely invisible to the Nigerian domestic market. Selar changed that. The ability to sell directly to Nigerian readers in Naira, with instant delivery, opened a market that Amazon alone could never reach.</p>
+
+  <blockquote>
+    <p>The greatest obstacle to publication is not talent, funding, or connections. It is the belief that the process is too complicated for someone like you. It is not. If I can publish seven books from Nigeria and make them available to readers across the world, so can you.</p>
+    <cite>— Maurice Udom</cite>
+  </blockquote>
+
+  <h2>Your Next Step</h2>
+
+  <p>If you have a finished manuscript sitting on your computer or in a drawer, today is the day to begin the journey to publication. The platforms exist. The tools are accessible. The global audience is waiting. What is missing is only your decision to start.</p>
+
+  <p>And if your manuscript is not quite ready — if it needs editing, restructuring, or a professional eye — that is what I do. Thirty years of academic writing, seven published works, and a deep love of language have made me an editor who understands both the craft and the business of getting a book into the world.</p>
+
+  <div class="cta-box">
+    <h3>Ready to publish your book?</h3>
+    <p>Browse Maurice Udom's published works for inspiration — or hire maurice@edit for professional manuscript editing.</p>
+    <a class="cta-btn" href="https://mauriceudom.org#mauriceedit" target="_blank">Hire maurice@edit</a>
+  </div>
+
+  <div class="author-card">
+    <div class="author-avatar">MU</div>
+    <div class="author-info">
+      <h4>Maurice Udom</h4>
+      <p>Author, scholar and academic editor with over 30 years of university-level teaching and research supervision experience.</p>
+      <a href="https://mauriceudom.org">→ View all works</a>
+    </div>
+  </div>
+
+  <div class="related">
+    <h3>You May Also Enjoy</h3>
+    <a href="https://mauriceudom.org/blog-literature-review.html">How to Structure a Literature Review →</a>
+    <a href="https://mauriceudom.org/blog-nigerian-drama-evolution.html">The Evolution of Nigerian Drama →</a>
+    <a href="https://mauriceudom.org/blog2.html">The Rise of African Literature on the Global Stage →</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Maurice Udom · <a href="https://mauriceudom.org">mauriceudom.org</a> · <a href="https://mauriceudom.org/privacy-policy.html">Privacy Policy</a> · <a href="https://mauriceudom.org/terms-of-service.html">Terms of Service</a>
+</footer>
+
+</body>
+</html>
