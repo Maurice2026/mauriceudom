@@ -3,509 +3,589 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Maurice Udom | English, Writing & Literature</title>
-<meta name="description" content="Articles on English grammar, essay writing, punctuation, vocabulary building, and literature — by Maurice Udom, author, scholar and linguist.">
-<meta name="keywords" content="English grammar blog, essay writing tips, punctuation guide, vocabulary building, ESL blog, Maurice Udom blog, academic writing">
-<meta property="og:title" content="Blog — Maurice Udom">
-<meta property="og:description" content="Articles on English grammar, essay writing, punctuation, vocabulary building, and literature.">
-<meta property="og:url" content="https://mauriceudom.org/blog-index.html">
-<meta property="og:type" content="website">
-<link rel="canonical" href="https://mauriceudom.org/blog-index.html">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Blog by Maurice Udom — Articles on African literature, academic writing, English language, grammar, publishing and the craft of writing.">
+<meta name="keywords" content="Maurice Udom blog, African literature, Nigerian author, academic writing, English grammar, self-publishing, Nigerian drama, literature review, citation styles">
+<title>Blog — Maurice Udom | Nigerian Writer, Researcher, Linguist & Editor</title>
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background:#dbeafe;
-    color:#1e293b;
-    line-height: 1.8;
-    font-size: 17px;
-    font-weight: 300;
+    font-family: 'Source Sans 3', sans-serif;
+    background: #fafaf7;
+    color: #1a1a1a;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
 
-  /* ═══ HEADER ═══ */
-  header {background:#ffffff;
+  /* ── Header ── */
+  header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 48px 24px 44px;
     text-align: center;
-    padding: 50px 20px 44px;
-    border-bottom:1px solid #93c5fd;
-  }
-
-  header a.back {
-    display: inline-block;
-    color:#1d4ed8;
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    transition: color 0.3s;
-  }
-
-  header a.back:hover{color:#1e40af;}
-
-  header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(30px, 5vw, 46px);
-    color:#1e3a5f;
-    font-weight: 700;
-    margin-bottom: 14px;
-  }
-
-  header .tagline {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 18px;
-    color:#64748b;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  /* ═══ CATEGORY FILTER ═══ */
-  .filter-bar {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 28px 24px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .filter-btn {
-    background:#eff6ff;
-    border:1px solid #bfdbfe;
-    color:#64748b;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.8px;
-    padding: 8px 18px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-
-  .filter-btn:hover,
-  .filter-btn.active {
-    background: #dbeafe;
-    border-color:#1d4ed8;
-    color:#1d4ed8;
-  }
-
-  /* ═══ MAIN ═══ */
-  main {
-    max-width: 900px;
-    margin:20px auto;
-    padding: 40px 24px 80px;
-  }
-
-  .category-section {
-    margin-bottom: 50px;
-  }
-
-  .category-label {
-    font-family: 'Playfair Display', serif;
-    font-size: 13px;
-    color: #3b82f6;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom:1px solid #e2e8f0;
-  }
-
-  /* ═══ ARTICLE CARDS ═══ */
-  .article-card {
-    display: block;
-    background:#f8fafc;
-    border:1px solid #bfdbfe;
-    border-radius: 12px;
-    padding: 28px 30px;
-    margin-bottom: 16px;
-    text-decoration: none;
-    transition: all 0.35s ease;
     position: relative;
-    overflow: hidden;
   }
-
-  .article-card::before {
+  header::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: #c6a971;
-    opacity: 0;
-    transition: opacity 0.3s;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #c0a36a 0%, #e8d5a3 50%, #c0a36a 100%);
   }
-
-  .article-card:hover {
-    border-color:#93c5fd;
-    background:#f8fafc;
-    transform: translateX(4px);
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
   }
-
-  .article-card:hover::before { opacity: 1; }
-
-  .card-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
+  header p {
+    color: #b0b8c8;
+    font-size: 16px;
+    max-width: 560px;
+    margin: 0 auto;
+    font-weight: 300;
   }
-
-  .card-tag {
+  header .author-link {
     display: inline-block;
-    background:#eff6ff;
-    color:#1d4ed8;
-    font-size: 11px;
-    padding: 3px 12px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .card-read-time {
-    font-size: 13px;
-    color: #64748b;
-  }
-
-  .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 21px;
-    color:#1e3a5f;
-    font-weight: 600;
-    margin-bottom: 10px;
-    line-height: 1.35;
-    transition: color 0.3s;
-  }
-
-  .article-card:hover .card-title { color:#1d4ed8; }
-
-  .card-excerpt {
-    font-size: 15.5px;
-    color:#64748b;
-    line-height: 1.7;
-    margin-bottom: 12px;
-  }
-
-  .card-cta {
-    font-size: 14px;
-    color:#1d4ed8;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    transition: color 0.3s;
-  }
-
-  .article-card:hover .card-cta { color:#1e40af; }
-
-  /* ═══ COMING SOON ═══ */
-  .coming-soon {
-    text-align: center;
-    padding: 40px 20px;
-    color: #64748b;
-    font-style: italic;
-    font-size: 15px;
-  }
-
-  /* ═══ SUBSCRIBE BOX ═══ */
-  .subscribe-box {
-    background:#eff6ff;
-    border:1px solid #bfdbfe;
-    border-radius: 14px;
-    padding: 40px 36px;
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  .subscribe-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color:#1e3a5f;
-    margin-bottom: 10px;
-  }
-
-  .subscribe-box p {
-    font-size: 15px;
-    color:#64748b;
     margin-bottom: 20px;
-  }
-
-  .subscribe-box a.btn {
-    display: inline-block;
-    background: #c6a971;
-    color: #dbeafe;
+    color: #c0a36a;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    padding: 12px 30px;
-    border-radius: 8px;
-    transition: background 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  header .author-link:hover { color: #e8d5a3; }
+
+  /* ── Navigation ── */
+  nav {
+    background: #111;
+    text-align: center;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: #e8d5a3; }
+
+  /* ── Main container ── */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
   }
 
-  .subscribe-box a.btn:hover { background: #e2cb96; }
+  /* ── Category sections ── */
+  .category {
+    margin-bottom: 50px;
+  }
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e8e4da;
+  }
+  .category-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .cat-literature .category-icon { background: #fef3c7; }
+  .cat-academic .category-icon { background: #dbeafe; }
+  .cat-english .category-icon { background: #d1fae5; }
+  .cat-publishing .category-icon { background: #fce7f3; }
+  .cat-personal .category-icon { background: #ede9fe; }
 
-  /* ═══ FOOTER ═══ */
+  .category-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+  .category-header span.count {
+    font-size: 13px;
+    color: #888;
+    font-weight: 400;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+
+  /* ── Post cards ── */
+  .post-card {
+    background: #ffffff;
+    border: 1px solid #e8e4da;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .post-card:hover {
+    border-color: #c0a36a;
+    box-shadow: 0 4px 16px rgba(192, 163, 106, 0.12);
+  }
+  .post-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    line-height: 1.35;
+  }
+  .post-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .post-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .post-tag {
+    display: inline-block;
+    background: #f0ece2;
+    color: #8a7340;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .read-arrow {
+    font-size: 14px;
+    color: #c0a36a;
+    font-weight: 600;
+    margin-left: auto;
+  }
+
+  /* ── Stats bar ── */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #e8e4da;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 44px;
+    text-align: center;
+  }
+  .stat-item .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a2e;
+    display: block;
+  }
+  .stat-item .stat-label {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* ── CTA ── */
+  .cta-box {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #fff;
+    padding: 40px 32px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 50px 0 30px;
+  }
+  .cta-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #e8d5a3;
+    margin-bottom: 10px;
+  }
+  .cta-box p {
+    color: #b0b8c8;
+    margin-bottom: 18px;
+    font-size: 15px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: #c0a36a;
+    color: #1a1a2e;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s;
+    margin: 0 8px;
+  }
+  .cta-btn:hover { background: #e8d5a3; }
+
+  /* ── Footer ── */
   footer {
     text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid #bfdbfe;
-    font-size: 14px;
-    color: #64748b;
+    padding: 28px 24px;
+    font-size: 13px;
+    color: #888;
+    border-top: 1px solid #e8e4da;
   }
-
-  footer a { color:#1d4ed8; text-decoration: none; }
-  footer a + a { margin-left: 8px; }
+  footer a { color: #c0a36a; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
 
   @media (max-width: 600px) {
-    .article-card { padding: 22px 20px; }
-    .card-title { font-size: 19px; }
-    .subscribe-box { padding: 30px 22px; }
+    .post-card { padding: 18px 20px; }
+    .stats-bar { gap: 24px; }
   }
-
-.page-column{max-width:820px;margin:0 auto;background:#ffffff;box-shadow:0 0 40px rgba(0,0,0,0.08);min-height:100vh;}
-.footer-inner{max-width:720px;margin:0 auto;padding:30px 40px;background:#ffffff;border-radius:12px 12px 0 0;border:1px solid #e2e8f0;border-bottom:none;}.header-inner{max-width:720px;margin:0 auto;padding:50px 40px 44px;background:#ffffff;border-radius:0 0 12px 12px;box-shadow:0 4px 30px rgba(0,0,0,0.08);border:1px solid #e2e8f0;border-top:none;}</style>
+</style>
 </head>
 <body>
-<div class="page-column">
 
-<header><div class="header-inner"><a href="https://mauriceudom.org" class="back">← mauriceudom.org</a>
-  <h1>The Blog</h1>
-  <p class="tagline">Practical guides on English grammar, writing craft, vocabulary, and the art of clear communication — for students and writers worldwide.</p>
-</div></header>
+<header>
+  <a class="author-link" href="https://mauriceudom.org">← mauriceudom.org</a>
+  <h1>Blog</h1>
+  <p>Articles on African literature, academic writing, English language and the craft of publishing — by Maurice Udom</p>
+</header>
 
-<div class="filter-bar">
-  <button class="filter-btn active" onclick="filterArticles('all')">All Articles</button>
-  <button class="filter-btn" onclick="filterArticles('grammar')">Grammar & Language</button>
-  <button class="filter-btn" onclick="filterArticles('writing')">Writing Craft</button>
-  <button class="filter-btn" onclick="filterArticles('publishing')">Publishing</button>
-  <button class="filter-btn" onclick="filterArticles('literature')">Literature</button>
+<nav>
+  <a href="https://mauriceudom.org">Home</a>
+  <a href="https://mauriceudom.org/index.html#slide3">Books</a>
+  <a href="https://mauriceudom.org/blog-index.html">Blog</a>
+  <a href="https://mauriceudom.org/index.html#mauriceedit">maurice@edit</a>
+  <a href="https://selar.com/store/mauriceudom" target="_blank">Buy Books</a>
+</nav>
+
+<div class="container">
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">23</span>
+      <span class="stat-label">Articles</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Categories</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">7</span>
+      <span class="stat-label">Published Books</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">30+</span>
+      <span class="stat-label">Years of Scholarship</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CATEGORY 1: African Literature & Drama     -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="category cat-literature">
+    <div class="category-header">
+      <div class="category-icon">📚</div>
+      <div>
+        <h2>African Literature & Drama</h2>
+        <span class="count">6 articles</span>
+      </div>
+    </div>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-nigerian-drama-evolution.html">
+      <h3>The Evolution of Nigerian Drama: From Soyinka to the New Generation</h3>
+      <p>How six decades of Nigerian playwriting have produced one of the most vital dramatic traditions in the world.</p>
+      <div class="post-meta">
+        <span class="post-tag">Drama History</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog2.html">
+      <h3>The Rise of African Literature on the Global Stage</h3>
+      <p>African writers are no longer waiting for permission to tell their stories — and the world is listening.</p>
+      <div class="post-meta">
+        <span class="post-tag">African Literature</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog.html">
+      <h3>Why African Stories Matter — And Why You Should Be Reading Them Right Now</h3>
+      <p>African fiction speaks to millions who have spent years reading stories set in places they have never been, about people who look nothing like them.</p>
+      <div class="post-meta">
+        <span class="post-tag">African Fiction</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-nigerian-plays.html">
+      <h3>Nigerian Plays Every Literature Student Should Read</h3>
+      <p>A curated guide to the essential Nigerian plays that shaped a continent's dramatic voice.</p>
+      <div class="post-meta">
+        <span class="post-tag">Nigerian Theatre</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-satire-social-change.html">
+      <h3>Satire as a Tool for Social Change in African Literature</h3>
+      <p>How African writers have used comedy and satire to challenge corruption, greed and injustice.</p>
+      <div class="post-meta">
+        <span class="post-tag">Satire &amp; Society</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog3.html">
+      <h3>Storytelling and the African Imagination</h3>
+      <p>Exploring the deep oral traditions that continue to shape African literature today.</p>
+      <div class="post-meta">
+        <span class="post-tag">Storytelling</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CATEGORY 2: Academic Writing & Research     -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="category cat-academic">
+    <div class="category-header">
+      <div class="category-icon">🎓</div>
+      <div>
+        <h2>Academic Writing & Research</h2>
+        <span class="count">6 articles</span>
+      </div>
+    </div>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-literature-review.html">
+      <h3>How to Structure a Literature Review: From Reading to Writing</h3>
+      <p>A practical walkthrough for postgraduate students — from searching for sources to writing a review that demonstrates critical thinking.</p>
+      <div class="post-meta">
+        <span class="post-tag">Research</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-research-abstract.html">
+      <h3>How to Write a Research Abstract</h3>
+      <p>A step-by-step guide to writing abstracts that capture the essence of your research clearly and concisely.</p>
+      <div class="post-meta">
+        <span class="post-tag">Research</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-citation-styles.html">
+      <h3>APA vs MLA vs Chicago: Which Citation Style Should You Use?</h3>
+      <p>A clear comparison of the three major citation styles and when to use each one.</p>
+      <div class="post-meta">
+        <span class="post-tag">Citations</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-academic-writing-errors.html">
+      <h3>Common Errors in Academic Writing</h3>
+      <p>The most frequent mistakes students and researchers make in scholarly papers — and how to avoid them.</p>
+      <div class="post-meta">
+        <span class="post-tag">Academic Writing</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-essay-writing.html">
+      <h3>How to Write a Strong Academic Essay</h3>
+      <p>From introduction to conclusion — a structured approach to essay writing that earns top marks.</p>
+      <div class="post-meta">
+        <span class="post-tag">Essay Writing</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-get-published-journal.html">
+      <h3>How to Get Published in an Academic Journal</h3>
+      <p>A practical roadmap for researchers — from choosing the right journal to surviving peer review.</p>
+      <div class="post-meta">
+        <span class="post-tag">Publishing</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CATEGORY 3: English Language & Grammar      -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="category cat-english">
+    <div class="category-header">
+      <div class="category-icon">✍️</div>
+      <div>
+        <h2>English Language & Grammar</h2>
+        <span class="count">5 articles</span>
+      </div>
+    </div>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-grammar-mistakes.html">
+      <h3>Common Grammar Mistakes and How to Fix Them</h3>
+      <p>The grammar errors that appear most often in student writing — with clear corrections and explanations.</p>
+      <div class="post-meta">
+        <span class="post-tag">Grammar</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-punctuation-guide.html">
+      <h3>A Complete Guide to Punctuation</h3>
+      <p>Master commas, semicolons, colons, dashes and every punctuation mark with clear rules and examples.</p>
+      <div class="post-meta">
+        <span class="post-tag">Punctuation</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-improve-vocabulary.html">
+      <h3>How to Improve Your English Vocabulary</h3>
+      <p>Practical strategies for expanding your word power — for students, writers and professionals.</p>
+      <div class="post-meta">
+        <span class="post-tag">Vocabulary</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-british-vs-nigerian-english.html">
+      <h3>British English vs Nigerian English: Understanding the Differences</h3>
+      <p>How Nigerian English has evolved from its British roots into a distinctive and vibrant variety of the language.</p>
+      <div class="post-meta">
+        <span class="post-tag">Linguistics</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-writing-process.html">
+      <h3>The Writing Process: From Idea to Finished Manuscript</h3>
+      <p>A step-by-step look at how professional writers move from a blank page to a polished piece of work.</p>
+      <div class="post-meta">
+        <span class="post-tag">Writing</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CATEGORY 4: Publishing & The Author's Life  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="category cat-publishing">
+    <div class="category-header">
+      <div class="category-icon">📖</div>
+      <div>
+        <h2>Publishing & The Author's Life</h2>
+        <span class="count">4 articles</span>
+      </div>
+    </div>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-journey-to-publication.html">
+      <h3>The Journey to Publication: From Manuscript to Global Release</h3>
+      <p>Lessons learned from publishing seven literary and academic works on Amazon and Selar.</p>
+      <div class="post-meta">
+        <span class="post-tag">Self-Publishing</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-self-publishing.html">
+      <h3>Self-Publishing in Nigeria: A Practical Guide</h3>
+      <p>Everything you need to know about publishing your own book from Nigeria — platforms, pricing and promotion.</p>
+      <div class="post-meta">
+        <span class="post-tag">Publishing</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-author-mistakes.html">
+      <h3>Mistakes Every First-Time Author Should Avoid</h3>
+      <p>Hard-won lessons from decades of writing — the pitfalls that trip up new authors and how to sidestep them.</p>
+      <div class="post-meta">
+        <span class="post-tag">Author Advice</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-why-you-need-an-editor.html">
+      <h3>Why Every Writer Needs an Editor</h3>
+      <p>No matter how skilled you are, an editor sees what you cannot — and that makes all the difference.</p>
+      <div class="post-meta">
+        <span class="post-tag">Editing</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- CATEGORY 5: Personal & Creative Insights    -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="category cat-personal">
+    <div class="category-header">
+      <div class="category-icon">💡</div>
+      <div>
+        <h2>Personal & Creative Insights</h2>
+        <span class="count">2 articles</span>
+      </div>
+    </div>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-why-i-wrote-blind-gods.html">
+      <h3>Why I Wrote The Blind Gods</h3>
+      <p>The personal story behind the tragedy — what inspired one of the most powerful plays about injustice against women.</p>
+      <div class="post-meta">
+        <span class="post-tag">Behind the Book</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+
+    <a class="post-card" href="https://mauriceudom.org/blog-write-first-play.html">
+      <h3>How to Write Your First Play</h3>
+      <p>A playwright's guide to dramatic structure, dialogue, staging and bringing characters to life on the page.</p>
+      <div class="post-meta">
+        <span class="post-tag">Playwriting</span>
+        <span class="read-arrow">Read →</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>Explore the books behind the blog</h3>
+    <p>Seven published works across drama, satire, comedy and academic scholarship — available now.</p>
+    <a class="cta-btn" href="https://selar.com/store/mauriceudom" target="_blank">Browse on Selar</a>
+    <a class="cta-btn" href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank">Browse on Amazon</a>
+  </div>
+
 </div>
 
-<main>
+<footer>
+  &copy; 2026 Maurice Udom &middot; <a href="https://mauriceudom.org">mauriceudom.org</a> &middot;
+  <a href="https://facebook.com/mauriceudom" target="_blank">Facebook</a> &middot;
+  <a href="https://instagram.com/mauriceudom" target="_blank">Instagram</a> &middot;
+  <a href="https://x.com/mauriceudom" target="_blank">X / Twitter</a> &middot;
+  <a href="https://linkedin.com/in/mauriceudom" target="_blank">LinkedIn</a>
+  <br><br>
+  <a href="https://mauriceudom.org/privacy-policy.html">Privacy Policy</a> &middot;
+  <a href="https://mauriceudom.org/terms-of-service.html">Terms of Service</a>
+</footer>
 
-  <!-- ═══ GRAMMAR & LANGUAGE ═══ -->
-  <div class="category-section" data-category="grammar">
-    <div class="category-label">Grammar & Language</div>
-
-    <a href="blog-grammar-mistakes.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Grammar</span>
-        <span class="card-read-time">12 min read</span>
-      </div>
-      <div class="card-title">20 Common Grammar Mistakes Students Make (And How to Fix Them)</div>
-      <div class="card-excerpt">The most frequent grammar errors found in student essays worldwide — subject-verb agreement, tense confusion, preposition mistakes, and more — with clear before-and-after corrections.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-punctuation-guide.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Punctuation</span>
-        <span class="card-read-time">13 min read</span>
-      </div>
-      <div class="card-title">Punctuation Made Simple: Mastering the Comma, Semicolon and Colon</div>
-      <div class="card-excerpt">Clear rules for every major punctuation mark — with examples showing exactly when to use commas, semicolons, colons, apostrophes, and full stops. A reference guide you will return to again and again.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-british-vs-nigerian-english.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Linguistics</span>
-        <span class="card-read-time">13 min read</span>
-      </div>
-      <div class="card-title">How Local English Differs from Standard English: A Guide for ESL Learners Worldwide</div>
-      <div class="card-excerpt">How English varies across Nigeria, India, Singapore, the Philippines, and beyond — vocabulary, grammar, and idiom differences with clear guidance on when each variety is appropriate.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-improve-vocabulary.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Vocabulary</span>
-        <span class="card-read-time">12 min read</span>
-      </div>
-      <div class="card-title">How to Improve Your English Vocabulary: 10 Daily Habits That Work</div>
-      <div class="card-excerpt">Practical strategies to build a richer vocabulary — not by cramming word lists, but by changing how you interact with language every day. Includes word roots, collocations, and replacement techniques.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-  </div>
-
-  <!-- ═══ WRITING CRAFT ═══ -->
-  <div class="category-section" data-category="writing">
-    <div class="category-label">Writing Craft</div>
-
-    <a href="blog-essay-writing.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Academic Writing</span>
-        <span class="card-read-time">14 min read</span>
-      </div>
-      <div class="card-title">How to Write a Perfect Essay: A Step-by-Step Guide for University Students</div>
-      <div class="card-excerpt">Seven clear steps from understanding the question to writing a conclusion that leaves a lasting impression. Includes the PEEL paragraph method, sample outlines, and a proofreading checklist.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-<a href="blog-research-abstract.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Research</span>
-        <span class="card-read-time">11 min read</span>
-      </div>
-      <div class="card-title">How to Write a Research Abstract: A Guide for Postgraduate Students</div>
-      <div class="card-excerpt">The five essential components every research abstract must include — with a complete sample abstract, common mistakes, and a template you can follow for any discipline.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-academic-writing-errors.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Academic Writing</span>
-        <span class="card-read-time">12 min read</span>
-      </div>
-      <div class="card-title">Common Errors in Academic Writing and How to Avoid Them</div>
-      <div class="card-excerpt">Wordiness, passive voice, weak thesis statements, poor transitions, informal language, and unsupported claims — with precise corrections for each.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-literature-review.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Research</span>
-        <span class="card-read-time">13 min read</span>
-      </div>
-      <div class="card-title">How to Structure a Literature Review: From Reading to Writing</div>
-      <div class="card-excerpt">Five steps from defining scope to writing the final draft — how to organise by theme, synthesise sources, identify gaps, and build a coherent review chapter.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-citation-styles.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Citations</span>
-        <span class="card-read-time">11 min read</span>
-      </div>
-      <div class="card-title">APA vs MLA vs Chicago: Which Citation Style Should You Use?</div>
-      <div class="card-excerpt">The three most widely used citation systems compared side by side — with quick-reference examples for in-text citations and reference lists.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-
-    <a href="blog-writing-process.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Author Insights</span>
-        <span class="card-read-time">11 min read</span>
-      </div>
-      <div class="card-title">My Writing Process: How I Go from Idea to Published Book</div>
-      <div class="card-excerpt">A behind-the-scenes look at how seven books were written — from the first spark of an idea through research, drafting, revision, and publication.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-get-published-journal.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Academic Publishing</span>
-        <span class="card-read-time">13 min read</span>
-      </div>
-      <div class="card-title">How to Get Published in an Academic Journal: A Practical Guide</div>
-      <div class="card-excerpt">Choosing the right journal, preparing your manuscript, navigating peer review, handling revisions and rejections — everything researchers need to know.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-  </div>
-
-  <!-- ═══ PUBLISHING ═══ -->
-  <div class="category-section" data-category="publishing">
-    <div class="category-label">Publishing</div>
-
-    <a href="blog-self-publishing.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Self-Publishing</span>
-        <span class="card-read-time">14 min read</span>
-      </div>
-      <div class="card-title">Self-Publishing: A Complete Guide for First-Time Authors</div>
-      <div class="card-excerpt">Everything you need to know to take your manuscript from draft to published book — platforms, formatting, cover design, pricing, marketing, and distribution.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-author-mistakes.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Publishing Tips</span>
-        <span class="card-read-time">11 min read</span>
-      </div>
-      <div class="card-title">7 Mistakes First-Time Authors Make When Publishing a Book</div>
-      <div class="card-excerpt">The most common and costly mistakes first-time authors make — rushing to publish, skipping editing, bad covers, no marketing plan — and how to avoid each one.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-why-you-need-an-editor.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Editing</span>
-        <span class="card-read-time">10 min read</span>
-      </div>
-      <div class="card-title">Why Every Writer Needs a Professional Editor (And What to Expect)</div>
-      <div class="card-excerpt">Why self-editing is never enough, the four types of professional editing, and how to choose the right editor for your manuscript.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-  </div>
-
-  <!-- ═══ LITERATURE ═══ -->
-  <div class="category-section" data-category="literature">
-    <div class="category-label">Nigerian Literature</div>
-
-    <a href="blog-nigerian-plays.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Nigerian Drama</span>
-        <span class="card-read-time">14 min read</span>
-      </div>
-      <div class="card-title">10 Must-Read Nigerian Plays Every Literature Student Should Know</div>
-      <div class="card-excerpt">A curated reading list from Soyinka to contemporary playwrights — with brief reviews, themes, and reasons to read each essential work of Nigerian drama.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-
-    <a href="blog-nigerian-drama-evolution.html" class="article-card">
-      <div class="card-meta">
-        <span class="card-tag">Theatre History</span>
-        <span class="card-read-time">15 min read</span>
-      </div>
-      <div class="card-title">The Evolution of Nigerian Drama: From Soyinka to the New Generation</div>
-      <div class="card-excerpt">How Nigerian theatre has transformed across six decades — from post-independence pioneers to radical social critics to today's digital generation.</div>
-      <div class="card-cta">Read Article →</div>
-    </a>
-  </div>
-
-  <!-- ═══ SUBSCRIBE ═══ -->
-  <div class="subscribe-box">
-    <h3>Never Miss an Article</h3>
-    <p>Get notified when new guides on grammar, writing, and literature are published — straight to your inbox.</p>
-    <a href="https://mauriceudom.org#slide4" class="btn">Subscribe for Updates</a>
-  </div>
-
-</main>
-
-<footer><div class="footer-inner">
-  &copy; 2026 Maurice Udom &middot; <a href="https://mauriceudom.org">mauriceudom.org</a> &middot; <a href="privacy-policy.html">Privacy Policy</a> &middot; <a href="terms-of-service.html">Terms of Service</a>
-</div></footer>
-
-<script>
-function filterArticles(category) {
-  // Update active button
-  document.querySelectorAll('.filter-btn').forEach(function(btn) {
-    btn.classList.remove('active');
-  });
-  event.target.classList.add('active');
-
-  // Show/hide sections
-  document.querySelectorAll('.category-section').forEach(function(section) {
-    if (category === 'all') {
-      section.style.display = 'block';
-    } else if (section.getAttribute('data-category') === category) {
-      section.style.display = 'block';
-    } else {
-      section.style.display = 'none';
-    }
-  });
-}
-</script>
-
-</div>
 </body>
 </html>
