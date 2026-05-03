@@ -55,14 +55,28 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
   top: 100%;
   left: 0;
   min-width: 260px;
-  background: rgba(2, 15, 40, 0.98); 
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(100, 180, 255, 0.3); 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
- padding: 6px 0 8px 0;
-  z-index:9999;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 6px 0 8px 0;
+  z-index: 9999;
 }
 
+.dropdown-content a {
+  display: block !important;
+  padding: 12px 20px !important;
+  font-family: 'Cinzel', serif !important;
+  font-size: 0.72rem !important;
+  color: #1a1a2e !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.dropdown-content a:hover {
+  background: #f0f4ff;
+  color: #1F3864 !important;
+}
 .dropdown-content a {
   display: block !important; 
   padding: 12px 20px !important;
