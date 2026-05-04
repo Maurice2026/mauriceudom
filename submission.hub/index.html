@@ -1,5 +1,5 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -419,26 +419,7 @@
 </header>
 
 <div class="container">
-  <div class="main-content" style="padding: 20px;">
-  <h2>Submit Your Assignment</h2>
-  <form action="https://formspree.io/f/xpqbpgjq" method="POST" enctype="multipart/form-data">
-    
-    <label for="name">Student Full Name:</label><br>
-    <input type="text" name="name" id="name" style="width: 100%; margin-bottom: 15px;" required><br>
 
-    <label for="topic">Assignment Topic:</label><br>
-    <input type="text" name="topic" id="topic" placeholder="e.g. GST 111 Analysis" style="width: 100%; margin-bottom: 15px;" required><br>
-
-    <label for="upload">Upload Assignment (PDF or Word):</label><br>
-    <input type="file" name="upload" id="upload" style="margin-bottom: 15px;" required><br>
-     <input type="hidden" name="_next" value="https://maurice2026.github.io/mauriceudom/submission.hub/success.html">
-    <input type="hidden" name="_subject" value="New Submission: Lecture Series">
-
-    <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
-      Submit Assignment
-    </button>
-  </form>
-</div>
   <!-- ── Sidebar ── -->
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -575,8 +556,8 @@
           <!-- Honeypot field to block spam bots (Formspree reads this automatically) -->
           <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
 
-          <!-- Redirect back to this page after submission (Formspree uses this) -->
-          <input type="hidden" name="_next" value="https://mauriceudom.org/academic-hub/">
+          <!-- Redirect to success page after submission (Formspree uses this) -->
+          <input type="hidden" name="_next" value="https://maurice2026.github.io/mauriceudom/submission.hub/success.html">
 
           <!-- Custom subject line in your inbox -->
           <input type="hidden" name="_subject" id="email-subject" value="New Assignment Submission">
@@ -674,7 +655,7 @@
 //  code from your Formspree form URL, e.g. "xabcdefg"
 //  Full URL looks like: https://formspree.io/f/xabcdefg
 // ════════════════════════════════════════════════
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpqbpgjq';
 
 // ── File drag & drop ──
 const dropZone = document.getElementById('file-drop-zone');
