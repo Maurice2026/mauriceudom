@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -419,7 +419,26 @@
 </header>
 
 <div class="container">
+  <div class="main-content" style="padding: 20px;">
+  <h2>Submit Your Assignment</h2>
+  <form action="https://formspree.io/f/xpqbpgjq" method="POST" enctype="multipart/form-data">
+    
+    <label for="name">Student Full Name:</label><br>
+    <input type="text" name="name" id="name" style="width: 100%; margin-bottom: 15px;" required><br>
 
+    <label for="topic">Assignment Topic:</label><br>
+    <input type="text" name="topic" id="topic" placeholder="e.g. GST 111 Analysis" style="width: 100%; margin-bottom: 15px;" required><br>
+
+    <label for="upload">Upload Assignment (PDF or Word):</label><br>
+    <input type="file" name="upload" id="upload" style="margin-bottom: 15px;" required><br>
+
+    <input type="hidden" name="_subject" value="New Submission: Lecture Series">
+
+    <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
+      Submit Assignment
+    </button>
+  </form>
+</div>
   <!-- ── Sidebar ── -->
   <aside class="sidebar">
     <div class="sidebar-card">
