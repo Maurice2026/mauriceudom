@@ -534,7 +534,7 @@
         </div>
         <div class="formspree-note">
           <span class="icon">🔒</span>
-          <span>Submissions are handled securely via <strong>Formspree</strong>. Your file and details are delivered directly to your lecturer's inbox.</span>
+          <span>Submissions are handled securely via <strong>Formspree</strong>. Your file link and details are delivered directly to your lecturer's inbox.</span>
         </div>
 
         <div id="form-message"></div>
@@ -555,7 +555,7 @@
           ✓ Work 100% on GitHub Pages — no PHP or server needed
           ════════════════════════════════════════════════
         -->
-        <form id="assignment-form" enctype="multipart/form-data" novalidate>
+        <form id="assignment-form" novalidate>
 
           <!-- Honeypot field to block spam bots (Formspree reads this automatically) -->
           <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
@@ -591,14 +591,14 @@
           </div>
 
           <div class="form-group">
-            <label>Upload File * <span style="font-weight:400;color:#999;">(PDF or DOCX, max 10 MB)</span></label>
-            <div class="file-drop" id="file-drop-zone">
-              <div class="file-drop-icon">📄</div>
-              <p>Drag and drop your file here</p>
-              <span>or click to browse</span>
-              <div id="file-name"></div>
-              <input type="file" id="assignment_file" name="assignment_file" accept=".pdf,.doc,.docx" required>
-            </div>
+            <label for="assignment_link">File Link * <span style="font-weight:400;color:#999;">(Google Drive or OneDrive — set sharing to "Anyone with the link")</span></label>
+            <input type="url" id="assignment_link" name="assignment_link" placeholder="https://drive.google.com/file/d/..." required>
+            <p style="font-size:12px;color:#888;margin-top:6px;">
+              📎 Upload your PDF or DOCX to
+              <a href="https://drive.google.com" target="_blank" style="color:var(--blue);font-weight:600;">Google Drive</a> or
+              <a href="https://onedrive.live.com" target="_blank" style="color:var(--blue);font-weight:600;">OneDrive</a>,
+              set sharing to <strong>"Anyone with the link"</strong>, then paste the link above.
+            </p>
           </div>
 
           <div class="form-group">
@@ -652,25 +652,6 @@
 // ════════════════════════════════════════════════
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xpqbpgjq';
 
-// ── File drag & drop ──
-const dropZone = document.getElementById('file-drop-zone');
-const fileInput = document.getElementById('assignment_file');
-const fileNameEl = document.getElementById('file-name');
-
-fileInput.addEventListener('change', () => {
-  fileNameEl.textContent = fileInput.files[0] ? '📎 ' + fileInput.files[0].name : '';
-});
-dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
-dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
-dropZone.addEventListener('drop', e => {
-  e.preventDefault();
-  dropZone.classList.remove('dragover');
-  if (e.dataTransfer.files.length) {
-    fileInput.files = e.dataTransfer.files;
-    fileNameEl.textContent = '📎 ' + fileInput.files[0].name;
-  }
-});
-
 // ── Update subject line dynamically ──
 document.getElementById('student_name').addEventListener('input', function() {
   const name = this.value.trim();
@@ -685,19 +666,6 @@ document.getElementById('assignment-form').addEventListener('submit', async func
   const msgEl  = document.getElementById('form-message');
 
   // Client-side checks
-  const file = fileInput.files[0];
-  if (!file) { showMsg('error', 'Please select a file to upload.'); return; }
-
-  const allowedTypes = ['application/pdf',
-    'application/msword',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-  const ext = file.name.split('.').pop().toLowerCase();
-  if (!['pdf','doc','docx'].includes(ext)) {
-    showMsg('error', 'Only PDF and Word (.doc / .docx) files are allowed.'); return;
-  }
-  if (file.size > 10 * 1024 * 1024) {
-    showMsg('error', 'File exceeds the 10 MB size limit.'); return;
-  }
   if (!document.getElementById('integrity_pledge').checked) {
     showMsg('error', 'You must confirm the Academic Integrity Pledge before submitting.'); return;
   }
