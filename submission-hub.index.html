@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Hub — Assignment Submission Portal</title>
+  <meta name="description" content="Submit your academic assignments securely through our online portal. Plagiarism-free submissions with instant confirmation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:   #1a2535;
+      --navy2:  #243044;
+      --blue:   #2e6da4;
+      --blue-l: #3a82c4;
+      --gold:   #c49a2a;
+      --bg:     #f2f0eb;
+      --card:   #ffffff;
+      --text:   #2a2a2a;
+      --muted:  #6b7280;
+      --border: #ddd8ce;
+      --radius: 10px;
+      --shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--navy);
+      padding: 0 28px;
+      display: flex;
+      align-items: stretch;
+      border-bottom: 3px solid var(--gold);
+    }
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 0;
+    }
+    .header-crest {
+      width: 42px; height: 42px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .header-brand h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 21px;
+      color: #fff;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .header-brand p {
+      font-size: 12px;
+      color: rgba(255,255,255,.55);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ── Layout ── */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1120px;
+      margin: 28px auto;
+      padding: 0 16px;
+      gap: 22px;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      flex: 0 0 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .sidebar-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .sidebar-card h3 {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-card ul { list-style: none; }
+    .sidebar-card ul li a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--blue);
+      font-size: 13.5px;
+      padding: 7px 0;
+      border-bottom: 1px solid #f2f0eb;
+      transition: color .15s;
+    }
+    .sidebar-card ul li:last-child a { border-bottom: none; }
+    .sidebar-card ul li a:hover { color: var(--navy); }
+    .nav-icon { font-size: 14px; opacity: .7; }
+
+    .deadline-item {
+      padding: 9px 0;
+      border-bottom: 1px solid #f2f0eb;
+      font-size: 13px;
+    }
+    .deadline-item:last-child { border-bottom: none; }
+    .deadline-item strong { display: block; color: var(--text); font-size: 13.5px; }
+    .deadline-item span { color: var(--muted); font-size: 12px; }
+    .deadline-urgent { color: #b91c1c !important; }
+
+    .ad-box {
+      background: #fafaf8;
+      border: 1px dashed #ccc;
+      border-radius: var(--radius);
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+
+    /* ── Main ── */
+    .content {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .content-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px 34px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .content-card h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .last-updated { font-size: 12.5px; color: var(--muted); margin-bottom: 20px; }
+
+    /* ── Alerts ── */
+    .alert {
+      padding: 12px 16px;
+      border-left: 4px solid;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 13.5px;
+      margin: 14px 0;
+    }
+    .alert-warning { background: #fefce8; color: #854d0e; border-color: #eab308; }
+    .alert-success { background: #f0fdf4; color: #166534; border-color: #22c55e; }
+    .alert-error   { background: #fef2f2; color: #991b1b; border-color: #ef4444; }
+
+    /* ── Policy ── */
+    .policy-section { margin-bottom: 22px; }
+    .policy-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      color: var(--navy);
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-section p { font-size: 14px; color: #444; margin-bottom: 8px; }
+    .policy-section ul,
+    .policy-section ol { padding-left: 20px; font-size: 14px; color: #444; }
+    .policy-section li { margin-bottom: 5px; }
+
+    /* ── Ad leaderboard ── */
+    .ad-leaderboard {
+      background: #fafaf8;
+      border: 1px dashed #ccc;
+      border-radius: var(--radius);
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bbb;
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+
+    /* ── Form Section ── */
+    .submit-section {
+      padding-top: 24px;
+      margin-top: 4px;
+      border-top: 2px solid var(--bg);
+    }
+    .submit-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .submit-section p.sub {
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .form-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .form-row .form-group { flex: 1; min-width: 180px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--navy2);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 13px;
+      font-size: 14px;
+      font-family: 'Source Sans 3', sans-serif;
+      border: 1.5px solid var(--border);
+      border-radius: 7px;
+      background: #fdfcfa;
+      color: var(--text);
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(46,109,164,.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+
+    /* Hidden Formspree honeypot */
+    .hp-field { display: none !important; }
+
+    /* File drop */
+    .file-drop {
+      border: 2px dashed var(--border);
+      border-radius: 7px;
+      padding: 28px 20px;
+      text-align: center;
+      cursor: pointer;
+      background: #fdfcfa;
+      transition: border-color .2s, background .2s;
+      position: relative;
+    }
+    .file-drop:hover { border-color: var(--blue); background: #f0f6fd; }
+    .file-drop.dragover { border-color: var(--blue); background: #e8f2fb; }
+    .file-drop input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .file-drop-icon { font-size: 34px; margin-bottom: 8px; }
+    .file-drop p { font-size: 14px; color: #555; }
+    .file-drop span { font-size: 12px; color: #999; }
+    #file-name { margin-top: 8px; font-size: 13px; color: var(--blue); font-weight: 600; }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #555;
+    }
+    .checkbox-row input[type="checkbox"] {
+      margin-top: 3px;
+      width: auto;
+      flex-shrink: 0;
+      accent-color: var(--blue);
+    }
+
+    .submit-btn {
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      padding: 13px 36px;
+      border-radius: 7px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      letter-spacing: .02em;
+      transition: background .2s, transform .1s, box-shadow .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .submit-btn:hover { background: var(--navy2); box-shadow: 0 4px 14px rgba(26,37,53,.25); }
+    .submit-btn:active { transform: scale(.98); }
+    .submit-btn:disabled { background: #aaa; cursor: not-allowed; box-shadow: none; }
+
+    .spinner {
+      display: inline-block;
+      width: 15px; height: 15px;
+      border: 2px solid rgba(255,255,255,.35);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Success state */
+    .success-state {
+      text-align: center;
+      padding: 40px 20px;
+      display: none;
+    }
+    .success-state .checkmark {
+      font-size: 56px;
+      margin-bottom: 14px;
+      animation: pop .4s ease;
+    }
+    @keyframes pop {
+      0% { transform: scale(.5); opacity: 0; }
+      70% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .success-state h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .success-state p { font-size: 14px; color: var(--muted); max-width: 380px; margin: 0 auto 20px; }
+    .btn-secondary {
+      background: transparent;
+      color: var(--blue);
+      border: 1.5px solid var(--blue);
+      padding: 10px 28px;
+      border-radius: 7px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+    .btn-secondary:hover { background: var(--blue); color: #fff; }
+
+    /* Notice banner */
+    .formspree-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 7px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #1e40af;
+      margin-bottom: 20px;
+    }
+    .formspree-note .icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+    #form-message { display: none; margin-bottom: 16px; }
+
+    /* ── Footer ── */
+    .site-footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid var(--border);
+      margin-top: 10px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .container { flex-direction: column; }
+      .sidebar { flex: unset; }
+      .content-card { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="site-header">
+  <div class="header-brand">
+    <div class="header-crest">🎓</div>
+    <div>
+      <h1>Academic Hub</h1>
+      <p>Assignment Submission Portal — mauriceudom.org</p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h3>Navigation</h3>
+      <ul>
+        <li><a href="#submit"><span class="nav-icon">📤</span> Submit Assignment</a></li>
+        <li><a href="#"><span class="nav-icon">📋</span> My Submissions</a></li>
+        <li><a href="#"><span class="nav-icon">📊</span> Grading Rubric</a></li>
+        <li><a href="#"><span class="nav-icon">✍️</span> Linguistics Blog</a></li>
+        <li><a href="#"><span class="nav-icon">🎙️</span> Lecture Series</a></li>
+        <li><a href="#"><span class="nav-icon">📖</span> APA Citation Guide</a></li>
+        <li><a href="#"><span class="nav-icon">✉️</span> Contact Lecturer</a></li>
+        <li><a href="/"><span class="nav-icon">🏠</span> Back to Homepage</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-card">
+      <h3>Upcoming Deadlines</h3>
+      <div class="deadline-item">
+        <strong>Essay 2</strong>
+        <span class="deadline-urgent">May 10, 2026 — 11:59 PM</span>
+      </div>
+      <div class="deadline-item">
+        <strong>Research Paper</strong>
+        <span>May 24, 2026 — 11:59 PM</span>
+      </div>
+      <div class="deadline-item">
+        <strong>Group Presentation</strong>
+        <span>Jun 3, 2026 — 11:59 PM</span>
+      </div>
+    </div>
+
+    <!-- AdSense sidebar square -->
+    <div class="ad-box">
+      <!-- Replace with your AdSense code once approved -->
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+      Ad 250×250
+    </div>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main class="content">
+
+    <!-- Policy Card -->
+    <div class="content-card">
+      <h1>Academic Integrity &amp; Plagiarism Policy</h1>
+      <p class="last-updated">Effective: May 2026</p>
+
+      <div class="alert alert-warning">
+        ⚠️ Plagiarism is not tolerated and will result in an automatic zero for the assignment.
+      </div>
+
+      <!-- AdSense leaderboard -->
+      <div class="ad-leaderboard">
+        <!-- <ins class="adsbygoogle" ... ></ins> -->
+        Ad 728×90
+      </div>
+
+      <div class="policy-section">
+        <h3>1. Definition of Plagiarism</h3>
+        <p>Plagiarism is defined as presenting someone else's work, ideas, or language as your own without proper acknowledgment. This includes:</p>
+        <ul>
+          <li><strong>Direct Copying:</strong> Copying word-for-word from a classmate, book, or online source.</li>
+          <li><strong>Paraphrasing without Citation:</strong> Rephrasing an idea without crediting the original author.</li>
+          <li><strong>Collusion:</strong> Submitting collaborative work as your individual effort.</li>
+          <li><strong>Self-Plagiarism:</strong> Submitting the same work across multiple assignments.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h3>2. Detection Methods</h3>
+        <p>All assignments are subject to verification using:</p>
+        <ul>
+          <li><strong>Digital Comparison Tools:</strong> Cross-referenced against previous submissions and internet resources.</li>
+          <li><strong>Peer-to-Peer Checking:</strong> Compared against other students in the current session.</li>
+          <li><strong>AI Metadata Analysis:</strong> Document version history and metadata are monitored.</li>
+        </ul>
+      </div>
+
+      <!-- AdSense mid-content rectangle -->
+      <div class="ad-leaderboard" style="min-height:280px;">
+        <!-- <ins class="adsbygoogle" ... ></ins> -->
+        Ad 336×280
+      </div>
+
+      <div class="policy-section">
+        <h3>3. Consequences of Academic Dishonesty</h3>
+        <p>Students found to have plagiarised will face:</p>
+        <ol>
+          <li>An immediate score of <strong>zero</strong> for the assignment.</li>
+          <li>A formal report submitted to the department head.</li>
+          <li>Requirement to resubmit with a maximum possible grade of <strong>Pass</strong> only.</li>
+        </ol>
+      </div>
+
+      <div class="policy-section">
+        <h3>4. How to Avoid Plagiarism</h3>
+        <p>Visit the <strong>Linguistics Blog</strong> and the <strong>Lecture Series</strong> in the sidebar for guides on citing sources and summarising academic monographs.</p>
+      </div>
+    </div>
+
+    <!-- ── Submission Form Card ── -->
+    <div class="content-card" id="submit">
+      <section class="submit-section">
+        <h2>Submit Your Assignment</h2>
+        <p class="sub">Fill in all required fields and upload your file. A confirmation will be sent to your email automatically.</p>
+
+        <!-- Formspree info note -->
+        <div class="formspree-note">
+          <span class="icon">🔒</span>
+          <span>Submissions are handled securely via <strong>Formspree</strong>. Your file and details are delivered directly to your lecturer's inbox.</span>
+        </div>
+
+        <div id="form-message"></div>
+
+        <!-- 
+          ════════════════════════════════════════════════
+          FORMSPREE SETUP — 3 easy steps:
+
+          1. Go to https://formspree.io and sign up (free)
+          2. Click "New Form" → name it "Assignment Submissions"
+          3. Copy your form endpoint — it looks like:
+                https://formspree.io/f/xabcdefg
+          4. Replace YOUR_FORMSPREE_ID below with that ID (just the 8-char code)
+
+          Formspree will then:
+          ✓ Email you every submission with all the fields
+          ✓ Email the student a confirmation (enable in Formspree dashboard)
+          ✓ Work 100% on GitHub Pages — no PHP or server needed
+          ════════════════════════════════════════════════
+        -->
+        <form id="assignment-form" enctype="multipart/form-data" novalidate>
+
+          <!-- Honeypot field to block spam bots (Formspree reads this automatically) -->
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
+
+          <!-- Redirect back to this page after submission (Formspree uses this) -->
+          <input type="hidden" name="_next" value="https://mauriceudom.org/academic-hub/">
+
+          <!-- Custom subject line in your inbox -->
+          <input type="hidden" name="_subject" id="email-subject" value="New Assignment Submission">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student_name">Full Name *</label>
+              <input type="text" id="student_name" name="student_name" placeholder="e.g. Amina Yusuf" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="student_id">Student ID *</label>
+              <input type="text" id="student_id" name="student_id" placeholder="e.g. STU-2024-0042" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student_email">Email Address *</label>
+              <input type="email" id="student_email" name="email" placeholder="you@example.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="module">Course / Module *</label>
+              <select id="module" name="module" required>
+                <option value="">— Select module —</option>
+                <option>ENG 301 — Academic Writing</option>
+                <option>LIN 204 — Discourse Analysis</option>
+                <option>ENG 410 — Research Methods</option>
+                <option>LIN 310 — Sociolinguistics</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="assignment_title">Assignment Title *</label>
+            <input type="text" id="assignment_title" name="assignment_title" placeholder="e.g. The Role of Code-Switching in Nigerian English" required>
+          </div>
+
+          <div class="form-group">
+            <label>Upload File * <span style="font-weight:400;color:#999;">(PDF or DOCX, max 10 MB)</span></label>
+            <div class="file-drop" id="file-drop-zone">
+              <div class="file-drop-icon">📄</div>
+              <p>Drag and drop your file here</p>
+              <span>or click to browse</span>
+              <div id="file-name"></div>
+              <input type="file" id="assignment_file" name="assignment_file" accept=".pdf,.doc,.docx" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="comments">Additional Comments <span style="font-weight:400;color:#999;">(optional)</span></label>
+            <textarea id="comments" name="comments" placeholder="Any notes for your lecturer…"></textarea>
+          </div>
+
+          <div class="form-group">
+            <div class="checkbox-row">
+              <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
+              <label for="integrity_pledge" style="text-transform:none;letter-spacing:0;font-size:13.5px;font-weight:400;">
+                I confirm this work is entirely my own and I have read and understood the Academic Integrity Policy above.
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn">
+            <span>Submit Assignment</span>
+          </button>
+        </form>
+
+        <!-- Success state shown after submission -->
+        <div class="success-state" id="success-state">
+          <div class="checkmark">✅</div>
+          <h3>Assignment Submitted!</h3>
+          <p id="success-msg">Your assignment has been received. A confirmation will be sent to your email shortly.</p>
+          <button class="btn-secondary" onclick="resetForm()">Submit Another</button>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- AdSense end-of-page -->
+    <div class="ad-leaderboard">
+      <!-- <ins class="adsbygoogle" ... ></ins> -->
+      Ad 728×90
+    </div>
+
+  </main>
+</div>
+
+<footer class="site-footer">
+  &copy; 2026 mauriceudom.org — Academic Hub. All rights reserved.
+</footer>
+
+<script>
+// ════════════════════════════════════════════════
+//  STEP 1: Replace YOUR_FORMSPREE_ID with the 8-char
+//  code from your Formspree form URL, e.g. "xabcdefg"
+//  Full URL looks like: https://formspree.io/f/xabcdefg
+// ════════════════════════════════════════════════
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID';
+
+// ── File drag & drop ──
+const dropZone = document.getElementById('file-drop-zone');
+const fileInput = document.getElementById('assignment_file');
+const fileNameEl = document.getElementById('file-name');
+
+fileInput.addEventListener('change', () => {
+  fileNameEl.textContent = fileInput.files[0] ? '📎 ' + fileInput.files[0].name : '';
+});
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  if (e.dataTransfer.files.length) {
+    fileInput.files = e.dataTransfer.files;
+    fileNameEl.textContent = '📎 ' + fileInput.files[0].name;
+  }
+});
+
+// ── Update subject line dynamically ──
+document.getElementById('student_name').addEventListener('input', updateSubject);
+document.getElementById('module').addEventListener('change', updateSubject);
+function updateSubject() {
+  const name = document.getElementById('student_name').value.trim();
+  const mod  = document.getElementById('module').value;
+  if (name) document.getElementById('email-subject').value =
+    `[Submission] ${name}${mod ? ' — ' + mod.split('—')[0].trim() : ''}`;
+}
+
+// ── Form submission ──
+document.getElementById('assignment-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const btn    = document.getElementById('submit-btn');
+  const msgEl  = document.getElementById('form-message');
+
+  // Client-side checks
+  const file = fileInput.files[0];
+  if (!file) { showMsg('error', 'Please select a file to upload.'); return; }
+
+  const allowedTypes = ['application/pdf',
+    'application/msword',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+  const ext = file.name.split('.').pop().toLowerCase();
+  if (!['pdf','doc','docx'].includes(ext)) {
+    showMsg('error', 'Only PDF and Word (.doc / .docx) files are allowed.'); return;
+  }
+  if (file.size > 10 * 1024 * 1024) {
+    showMsg('error', 'File exceeds the 10 MB size limit.'); return;
+  }
+  if (!document.getElementById('integrity_pledge').checked) {
+    showMsg('error', 'You must confirm the Academic Integrity Pledge before submitting.'); return;
+  }
+
+  // Loading state
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Submitting…';
+  msgEl.style.display = 'none';
+
+  const formData = new FormData(this);
+
+  try {
+    const res  = await fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body:   formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    const data = await res.json();
+
+    if (res.ok && data.ok !== false) {
+      const studentEmail = document.getElementById('student_email').value;
+      document.getElementById('success-msg').textContent =
+        `Your assignment has been received. A confirmation will be sent to ${studentEmail} shortly.`;
+      document.getElementById('assignment-form').style.display = 'none';
+      document.getElementById('success-state').style.display = 'block';
+    } else {
+      const errMsg = data.errors
+        ? data.errors.map(e => e.message).join(', ')
+        : 'Submission failed. Please try again.';
+      showMsg('error', errMsg);
+      btn.disabled = false;
+      btn.innerHTML = '<span>Submit Assignment</span>';
+    }
+  } catch (err) {
+    showMsg('error', 'A network error occurred. Please check your connection and try again.');
+    btn.disabled = false;
+    btn.innerHTML = '<span>Submit Assignment</span>';
+  }
+});
+
+function showMsg(type, text) {
+  const el = document.getElementById('form-message');
+  el.className = 'alert ' + (type === 'success' ? 'alert-success' : 'alert-error');
+  el.textContent = text;
+  el.style.display = 'block';
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function resetForm() {
+  document.getElementById('assignment-form').reset();
+  document.getElementById('file-name').textContent = '';
+  document.getElementById('assignment-form').style.display = 'block';
+  document.getElementById('success-state').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
