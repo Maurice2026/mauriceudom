@@ -528,6 +528,10 @@
         <p class="sub">Fill in all required fields and upload your file. A confirmation will be sent to your email automatically.</p>
 
         <!-- Formspree info note -->
+        <div class="formspree-note" style="background:#fff7ed;border-color:#fed7aa;color:#9a3412;">
+          <span class="icon">📚</span>
+          <span>Before submitting, please <a href="https://mauriceudom.org" target="_blank" style="color:#9a3412;font-weight:700;text-decoration:underline;">visit the homepage</a> to select your course from the Lecture Series — then return here to submit your assignment.</span>
+        </div>
         <div class="formspree-note">
           <span class="icon">🔒</span>
           <span>Submissions are handled securely via <strong>Formspree</strong>. Your file and details are delivered directly to your lecturer's inbox.</span>
@@ -578,16 +582,7 @@
               <label for="student_email">Email Address *</label>
               <input type="email" id="student_email" name="email" placeholder="you@example.com" required autocomplete="email">
             </div>
-            <div class="form-group">
-              <label for="module">Course / Module *</label>
-              <select id="module" name="module" required>
-                <option value="">— Select module —</option>
-                <option>ENG 301 — Academic Writing</option>
-                <option>LIN 204 — Discourse Analysis</option>
-                <option>ENG 410 — Research Methods</option>
-                <option>LIN 310 — Sociolinguistics</option>
-              </select>
-            </div>
+
           </div>
 
           <div class="form-group">
@@ -677,14 +672,10 @@ dropZone.addEventListener('drop', e => {
 });
 
 // ── Update subject line dynamically ──
-document.getElementById('student_name').addEventListener('input', updateSubject);
-document.getElementById('module').addEventListener('change', updateSubject);
-function updateSubject() {
-  const name = document.getElementById('student_name').value.trim();
-  const mod  = document.getElementById('module').value;
-  if (name) document.getElementById('email-subject').value =
-    `[Submission] ${name}${mod ? ' — ' + mod.split('—')[0].trim() : ''}`;
-}
+document.getElementById('student_name').addEventListener('input', function() {
+  const name = this.value.trim();
+  if (name) document.getElementById('email-subject').value = `[Submission] ${name}`;
+});
 
 // ── Form submission ──
 document.getElementById('assignment-form').addEventListener('submit', async function(e) {
@@ -728,11 +719,7 @@ document.getElementById('assignment-form').addEventListener('submit', async func
     const data = await res.json();
 
     if (res.ok && data.ok !== false) {
-      const studentEmail = document.getElementById('student_email').value;
-      document.getElementById('success-msg').textContent =
-        `Your assignment has been received. A confirmation will be sent to ${studentEmail} shortly.`;
-      document.getElementById('assignment-form').style.display = 'none';
-      document.getElementById('success-state').style.display = 'block';
+      window.location.href = 'success.html';
     } else {
       const errMsg = data.errors
         ? data.errors.map(e => e.message).join(', ')
