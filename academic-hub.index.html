@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Hub — Assignment Submission Portal</title>
+  <meta name="description" content="Submit your academic assignments securely through our online portal. Plagiarism-free submissions with instant confirmation.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    /* ── Header ── */
+    .site-header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .site-header h1 { font-size: 20px; font-weight: 600; }
+    .site-header span { font-size: 14px; opacity: .7; }
+    /* ── Layout ── */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 24px auto;
+      padding: 0 12px;
+      gap: 20px;
+    }
+    /* ── Sidebar ── */
+    .sidebar {
+      flex: 1;
+      min-width: 220px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      height: fit-content;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    .sidebar h3 {
+      font-size: 12px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      margin-bottom: 10px;
+    }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #3498db;
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+    }
+    .sidebar ul li:last-child a { border-bottom: none; }
+    .deadline-item {
+      font-size: 13px;
+      color: #666;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .deadline-item strong { color: #333; display: block; }
+    .deadline-item:last-child { border-bottom: none; }
+    /* ── Main Content ── */
+    .content {
+      flex: 3;
+      min-width: 300px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    .content h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+    .last-updated { font-size: 13px; color: #888; margin-bottom: 20px; }
+    /* ── Alerts ── */
+    .alert {
+      padding: 13px 16px;
+      margin: 16px 0;
+      border-left: 5px solid;
+      border-radius: 0 6px 6px 0;
+      font-size: 14px;
+    }
+    .warning { background: #fff3cd; color: #856404; border-color: #e6a817; }
+    .success { background: #d4edda; color: #155724; border-color: #28a745; }
+    .error   { background: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+    /* ── Ad Containers ── */
+    .ad-box {
+      background: #fafafa;
+      border: 1px dashed #ccc;
+      text-align: center;
+      padding: 10px;
+      margin: 20px 0;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      color: #aaa;
+      font-size: 12px;
+    }
+    /* ── Policy ── */
+    .policy-section { margin-bottom: 22px; }
+    .policy-section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
+    }
+    .policy-section p { font-size: 14px; color: #555; margin-bottom: 8px; }
+    .policy-section ul,
+    .policy-section ol { padding-left: 20px; font-size: 14px; color: #555; }
+    .policy-section li { margin-bottom: 5px; }
+    /* ── Form ── */
+    .submit-section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 2px solid #f0f0f0;
+    }
+    .submit-section h2 { font-size: 18px; font-weight: 600; margin-bottom: 18px; color: #2c3e50; }
+    .form-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .form-row .form-group { flex: 1; min-width: 200px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fff;
+      color: #333;
+      transition: border-color .2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 0 3px rgba(52,152,219,.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .file-drop {
+      border: 2px dashed #ccc;
+      border-radius: 6px;
+      padding: 28px 20px;
+      text-align: center;
+      cursor: pointer;
+      background: #fafafa;
+      transition: border-color .2s, background .2s;
+      position: relative;
+    }
+    .file-drop:hover { border-color: #3498db; background: #f0f8ff; }
+    .file-drop input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .file-drop-icon { font-size: 32px; margin-bottom: 8px; }
+    .file-drop p { font-size: 14px; color: #555; }
+    .file-drop span { font-size: 12px; color: #888; }
+    #file-name { margin-top: 8px; font-size: 13px; color: #3498db; font-weight: 600; }
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .checkbox-row input { margin-top: 3px; width: auto; flex-shrink: 0; }
+    .submit-btn {
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background .2s, transform .1s;
+    }
+    .submit-btn:hover { background: #2980b9; }
+    .submit-btn:active { transform: scale(.98); }
+    .submit-btn:disabled { background: #aaa; cursor: not-allowed; }
+    #form-message { display: none; }
+    /* ── Spinner ── */
+    .spinner {
+      display: inline-block;
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    /* ── Mobile ── */
+    @media (max-width: 700px) {
+      .container { flex-direction: column; }
+      .sidebar { min-width: unset; }
+      .content { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>Academic Hub</h1>
+  <span>| Assignment Submission Portal</span>
+</header>
+
+<div class="container">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="#submit">Submit Assignment</a></li>
+      <li><a href="#">My Submissions</a></li>
+      <li><a href="#">Grading Rubric</a></li>
+      <li><a href="#">Linguistics Blog</a></li>
+      <li><a href="#">Lecture Series</a></li>
+      <li><a href="#">APA Citation Guide</a></li>
+      <li><a href="#">Contact Lecturer</a></li>
+    </ul>
+
+    <div style="margin-top:20px">
+      <h3>Upcoming Deadlines</h3>
+      <div class="deadline-item"><strong>Essay 2</strong>May 10, 2026 — 11:59 PM</div>
+      <div class="deadline-item"><strong>Research Paper</strong>May 24, 2026 — 11:59 PM</div>
+      <div class="deadline-item"><strong>Group Presentation</strong>Jun 3, 2026 — 11:59 PM</div>
+    </div>
+
+    <!-- AdSense sidebar square -->
+    <div class="ad-box" style="margin-top:20px; min-height:250px;">
+      <!-- Replace with your AdSense code -->
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+      Ad 250×250
+    </div>
+  </aside>
+
+  <!-- ── Main Content ── -->
+  <main class="content">
+    <h1>Academic Integrity &amp; Plagiarism Policy</h1>
+    <p class="last-updated">Effective: May 2026</p>
+
+    <div class="alert warning">
+      ⚠ Be careful — plagiarism is not allowed and will result in an automatic zero.
+    </div>
+
+    <!-- AdSense leaderboard: after intro, high CTR spot -->
+    <div class="ad-box">
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+      Ad 728×90 leaderboard
+    </div>
+
+    <div class="policy-section">
+      <h3>1. Definition of Plagiarism</h3>
+      <p>Plagiarism is defined as presenting someone else's work, ideas, or language as your own without proper acknowledgment. This includes:</p>
+      <ul>
+        <li><strong>Direct Copying:</strong> Copying word-for-word from a classmate, a book, or an online source.</li>
+        <li><strong>Paraphrasing without Citation:</strong> Rephrasing an idea without crediting the original author.</li>
+        <li><strong>Collusion:</strong> Submitting collaborative work as your individual effort.</li>
+        <li><strong>Self-Plagiarism:</strong> Submitting the same work across multiple assignments.</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <h3>2. Detection Methods</h3>
+      <p>All assignments are subject to verification using:</p>
+      <ul>
+        <li><strong>Digital Comparison Tools:</strong> Cross-referenced against previous submissions and internet resources.</li>
+        <li><strong>Peer-to-Peer Checking:</strong> Compared against other students in the current session.</li>
+        <li><strong>AI Metadata Analysis:</strong> Document version history and metadata are monitored.</li>
+      </ul>
+    </div>
+
+    <!-- AdSense mid-content rectangle: best performing placement -->
+    <div class="ad-box" style="min-height:280px;">
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto"></ins> -->
+      Ad 336×280 rectangle
+    </div>
+
+    <div class="policy-section">
+      <h3>3. Consequences of Academic Dishonesty</h3>
+      <p>Students found to have plagiarized will face:</p>
+      <ol>
+        <li>An immediate score of <strong>zero</strong> for the assignment.</li>
+        <li>A formal report submitted to the department head.</li>
+        <li>Requirement to resubmit with a maximum possible grade of <strong>Pass</strong> only.</li>
+      </ol>
+    </div>
+
+    <div class="policy-section">
+      <h3>4. How to Avoid Plagiarism</h3>
+      <p>Visit our <strong>Linguistics Blog</strong> and the <strong>Lecture Series</strong> in the sidebar for guides on citing sources and summarising academic monographs.</p>
+    </div>
+
+    <!-- ── Submission Form ── -->
+    <section class="submit-section" id="submit">
+      <h2>Submit Your Assignment</h2>
+
+      <div id="form-message"></div>
+
+      <form id="assignment-form" enctype="multipart/form-data" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student_name">Full Name *</label>
+            <input type="text" id="student_name" name="student_name" placeholder="e.g. Amina Yusuf" required>
+          </div>
+          <div class="form-group">
+            <label for="student_id">Student ID *</label>
+            <input type="text" id="student_id" name="student_id" placeholder="e.g. STU-2024-0042" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student_email">Email Address *</label>
+            <input type="email" id="student_email" name="student_email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="module">Course / Module *</label>
+            <select id="module" name="module" required>
+              <option value="">— Select module —</option>
+              <option>ENG 301 — Academic Writing</option>
+              <option>LIN 204 — Discourse Analysis</option>
+              <option>ENG 410 — Research Methods</option>
+              <option>LIN 310 — Sociolinguistics</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="assignment_title">Assignment Title *</label>
+          <input type="text" id="assignment_title" name="assignment_title" placeholder="e.g. The Role of Code-Switching in Nigerian English" required>
+        </div>
+
+        <div class="form-group">
+          <label>Upload File * (PDF or DOCX, max 10 MB)</label>
+          <div class="file-drop" id="file-drop-zone">
+            <div class="file-drop-icon">📄</div>
+            <p>Drag and drop your file here</p>
+            <span>or click to browse</span>
+            <div id="file-name"></div>
+            <input type="file" id="assignment_file" name="assignment_file" accept=".pdf,.doc,.docx" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Comments (optional)</label>
+          <textarea id="comments" name="comments" placeholder="Any notes for your lecturer..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-row">
+            <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
+            <label for="integrity_pledge">I confirm this work is entirely my own and I have read and understood the Academic Integrity Policy above.</label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">Submit Assignment</button>
+      </form>
+    </section>
+
+    <!-- AdSense end-of-page leaderboard -->
+    <div class="ad-box" style="margin-top:28px;">
+      <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="XXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+      Ad 728×90 leaderboard
+    </div>
+
+  </main>
+</div>
+
+<script>
+// Show selected filename
+document.getElementById('assignment_file').addEventListener('change', function() {
+  const name = this.files[0] ? this.files[0].name : '';
+  document.getElementById('file-name').textContent = name;
+});
+
+// Form submission via fetch (no page reload)
+document.getElementById('assignment-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const btn  = document.getElementById('submit-btn');
+  const msg  = document.getElementById('form-message');
+
+  // Basic client-side validation
+  const file = document.getElementById('assignment_file').files[0];
+  if (!file) { showMsg('error', 'Please select a file to upload.'); return; }
+  if (file.size > 10 * 1024 * 1024) { showMsg('error', 'File exceeds 10 MB limit.'); return; }
+  if (!document.getElementById('integrity_pledge').checked) {
+    showMsg('error', 'You must confirm the integrity pledge before submitting.'); return;
+  }
+
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Submitting…';
+
+  const formData = new FormData(this);
+
+  try {
+    const res  = await fetch('submit.php', { method: 'POST', body: formData });
+    const data = await res.json();
+
+    if (data.success) {
+      showMsg('success', '✓ ' + data.message);
+      this.reset();
+      document.getElementById('file-name').textContent = '';
+      document.getElementById('submit-btn').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      showMsg('error', '✗ ' + data.message);
+    }
+  } catch (err) {
+    showMsg('error', 'A network error occurred. Please try again.');
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Submit Assignment';
+});
+
+function showMsg(type, text) {
+  const el = document.getElementById('form-message');
+  el.className = 'alert ' + (type === 'success' ? 'success' : 'error');
+  el.textContent = text;
+  el.style.display = 'block';
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+
+</body>
+</html>
