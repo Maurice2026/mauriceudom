@@ -295,7 +295,7 @@
     }
     .submit-btn:hover { background: #2980b9; }
     .submit-btn:active { transform: scale(.98); }
-    .submit-btn:disabled { background: #aaa; cursor: not-allowed; }
+    .submit-btn:disabled { background: #bdc3c7; cursor: not-allowed; opacity: 0.6; }
     #form-message { display: none; }
     /* ── Spinner ── */
     .spinner {
@@ -554,14 +554,8 @@
             <input type="email" id="student_email" name="student_email" placeholder="you@example.com" required>
           </div>
           <div class="form-group">
-            <label for="module">Course / Module *</label>
-            <select id="module" name="module" required>
-              <option value="">— Select module —</option>
-              <option>ENG 301 — Academic Writing</option>
-              <option>LIN 204 — Discourse Analysis</option>
-              <option>ENG 410 — Research Methods</option>
-              <option>LIN 310 — Sociolinguistics</option>
-            </select>
+            <label for="module">Course Title & Code *</label>
+            <input type="text" id="module" name="module" placeholder="e.g., ENG 301 — Academic Writing" required>
           </div>
         </div>
 
@@ -729,8 +723,39 @@
 </div>
 
 <script>
-// ── File Upload Handler ──
-document.getElementById('assignment_file').addEventListener('change', handleFileSelect);
+// ── Form Validation Handler ──
+function validateForm() {
+  const studentName = document.getElementById('student_name').value.trim();
+  const studentId = document.getElementById('student_id').value.trim();
+  const studentEmail = document.getElementById('student_email').value.trim();
+  const module = document.getElementById('module').value.trim();
+  const assignmentTitle = document.getElementById('assignment_title').value.trim();
+  const file = document.getElementById('assignment_file').files[0];
+  const integrityPledge = document.getElementById('integrity_pledge').checked;
+  
+  const isComplete = studentName && studentId && studentEmail && module && assignmentTitle && file && integrityPledge;
+  
+  document.getElementById('submit-btn').disabled = !isComplete;
+  
+  return isComplete;
+}
+
+// Add real-time validation to all form fields
+document.getElementById('student_name').addEventListener('input', validateForm);
+document.getElementById('student_id').addEventListener('input', validateForm);
+document.getElementById('student_email').addEventListener('input', validateForm);
+document.getElementById('module').addEventListener('input', validateForm);
+document.getElementById('assignment_title').addEventListener('input', validateForm);
+document.getElementById('assignment_file').addEventListener('change', function() {
+  handleFileSelect();
+  validateForm();
+});
+document.getElementById('integrity_pledge').addEventListener('change', validateForm);
+
+// Initial button state (disabled on page load)
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('submit-btn').disabled = true;
+});
 
 function handleFileSelect() {
   const fileInput = document.getElementById('assignment_file');
@@ -851,11 +876,24 @@ document.getElementById('assignment-form').addEventListener('submit', async func
   const btn  = document.getElementById('submit-btn');
   const msg  = document.getElementById('form-message');
 
-  // Validation
+  // Complete validation
+  const studentName = document.getElementById('student_name').value.trim();
+  const studentId = document.getElementById('student_id').value.trim();
+  const studentEmail = document.getElementById('student_email').value.trim();
+  const module = document.getElementById('module').value.trim();
+  const assignmentTitle = document.getElementById('assignment_title').value.trim();
   const file = document.getElementById('assignment_file').files[0];
+  const integrityPledge = document.getElementById('integrity_pledge').checked;
+
+  // Validate each field
+  if (!studentName) { showMsg('error', 'Please enter your full name.'); return; }
+  if (!studentId) { showMsg('error', 'Please enter your student ID.'); return; }
+  if (!studentEmail) { showMsg('error', 'Please enter your email address.'); return; }
+  if (!module) { showMsg('error', 'Please enter your course title and code.'); return; }
+  if (!assignmentTitle) { showMsg('error', 'Please enter the assignment title.'); return; }
   if (!file) { showMsg('error', 'Please select a file to upload.'); return; }
   if (file.size > 10 * 1024 * 1024) { showMsg('error', 'File exceeds 10 MB limit.'); return; }
-  if (!document.getElementById('integrity_pledge').checked) {
+  if (!integrityPledge) {
     showMsg('error', 'You must confirm the integrity pledge before submitting.'); return;
   }
 
@@ -869,10 +907,10 @@ document.getElementById('assignment-form').addEventListener('submit', async func
     // Simulated submission (replace with actual endpoint)
     setTimeout(() => {
       // Show success modal with details
-      document.getElementById('confirm-name').textContent = document.getElementById('student_name').value;
+      document.getElementById('confirm-name').textContent = studentName;
       document.getElementById('confirm-time').textContent = timestamp;
       document.getElementById('confirm-file').textContent = file.name;
-      document.getElementById('confirm-email').textContent = document.getElementById('student_email').value;
+      document.getElementById('confirm-email').textContent = studentEmail;
       
       document.getElementById('successModal').classList.add('show');
       
@@ -886,14 +924,14 @@ document.getElementById('assignment-form').addEventListener('submit', async func
       document.getElementById('file-size').textContent = '';
       document.getElementById('comment-count').textContent = '0';
       
-      btn.disabled = false;
-      btn.textContent = 'Submit Assignment';
+      btn.disabled = true;
+      btn.innerHTML = 'Submit Assignment';
     }, 1500);
 
   } catch (err) {
     showMsg('error', 'A network error occurred. Please try again.');
     btn.disabled = false;
-    btn.textContent = 'Submit Assignment';
+    btn.innerHTML = 'Submit Assignment';
   }
 });
 
