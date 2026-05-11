@@ -646,6 +646,11 @@ function handleFileSelect() {
 
 // ── Drag and Drop ──
 const dropZone = document.getElementById('file-drop-zone');
+const fileInput = document.getElementById('assignment_file');
+
+// Click to open file picker
+dropZone.addEventListener('click', () => fileInput.click());
+
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
   dropZone.addEventListener(eventName, preventDefaults, false);
 });
