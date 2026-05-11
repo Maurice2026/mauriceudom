@@ -255,12 +255,7 @@
     .file-drop p { font-weight: 600; color: #3498db; margin-bottom: 4px; }
     .file-drop span { display: block; color: #999; font-size: 12px; margin-bottom: 10px; }
     #assignment_file { 
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      opacity: 0;
-      pointer-events: auto;
+      display: none;
     }
 
     /* ── File Size Indicator ── */
@@ -322,9 +317,9 @@
       <li><a href="#submit">📤 Submit Assignment</a></li>
       <li><a href="#grades" onclick="toggleGradeLookup(event)">📊 Check Status</a></li>
       <li><a href="#extension" onclick="toggleExtensionForm(event)">⏱️ Request Extension</a></li>
-      <li><a href="https://yourwebsite.com/contact">✉️ Contact Lecturer</a></li>
-      <li><a href="https://yourwebsite.com/lecture-series">🎙️ Lecture Series</a></li>
-      <li><a href="https://yourwebsite.com/blog">📝 Blogs</a></li>
+      <li><a href="https://maurice2026.github.io/">✉️ Contact Lecturer</a></li>
+      <li><a href="https://maurice2026.github.io/">🎙️ Lecture Series</a></li>
+      <li><a href="https://maurice2026.github.io/">📝 Blogs</a></li>
     </ul>
 
     <div style="margin-top:20px">
@@ -507,14 +502,14 @@
 
         <div class="form-group">
           <label>Upload Assignment File * (PDF or DOCX, max 25 MB)</label>
-          <div class="file-drop" id="file-drop-zone">
+          <label for="assignment_file" class="file-drop" id="file-drop-zone" style="cursor: pointer;">
             <div class="file-drop-icon">📄</div>
             <p>Drag and drop your file here</p>
             <span>or click to browse</span>
             <div id="file-name"></div>
             <div id="file-size" class="file-size-indicator"></div>
-            <input type="file" id="assignment_file" name="assignment_file" accept=".pdf,.doc,.docx" required onchange="handleFileSelect()">
-          </div>
+          </label>
+          <input type="file" id="assignment_file" name="assignment_file" accept=".pdf,.doc,.docx" required onchange="handleFileSelect()">
         </div>
 
         <div class="form-group">
@@ -528,7 +523,7 @@
         <div class="form-group">
           <div class="checkbox-row">
             <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
-            <label for="integrity_pledge">I confirm this work is entirely my own, original, and I have read and understood the Academic Integrity Policy above. I understand the consequences of plagiarism.</label>
+            <label for="integrity_pledge">I confirm this work is entirely my own and original. I have read the Academic Integrity Policy and understand the consequences of plagiarism.</label>
           </div>
         </div>
 
@@ -655,16 +650,7 @@ function handleFileSelect() {
 const dropZone = document.getElementById('file-drop-zone');
 const fileInput = document.getElementById('assignment_file');
 
-// Click to open file picker - improved method
-dropZone.addEventListener('click', function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  fileInput.click();
-  return false;
-});
-
-// Prevent default behavior
-dropZone.style.cursor = 'pointer';
+// Label automatically triggers file input when clicked (no extra handler needed)
 
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
   dropZone.addEventListener(eventName, preventDefaults, false);
