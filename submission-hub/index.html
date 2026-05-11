@@ -254,7 +254,14 @@
     .file-drop-icon { font-size: 32px; margin-bottom: 10px; }
     .file-drop p { font-weight: 600; color: #3498db; margin-bottom: 4px; }
     .file-drop span { display: block; color: #999; font-size: 12px; margin-bottom: 10px; }
-    #assignment_file { display: none; }
+    #assignment_file { 
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: auto;
+    }
 
     /* ── File Size Indicator ── */
     .file-size-indicator {
@@ -648,8 +655,16 @@ function handleFileSelect() {
 const dropZone = document.getElementById('file-drop-zone');
 const fileInput = document.getElementById('assignment_file');
 
-// Click to open file picker
-dropZone.addEventListener('click', () => fileInput.click());
+// Click to open file picker - improved method
+dropZone.addEventListener('click', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  fileInput.click();
+  return false;
+});
+
+// Prevent default behavior
+dropZone.style.cursor = 'pointer';
 
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
   dropZone.addEventListener(eventName, preventDefaults, false);
