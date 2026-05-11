@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Hub — Assignment Submission Portal</title>
-  <meta name="description" content="Submit your academic assignments securely through our online portal. Track grades, request extensions, manage deadlines.">
+  <title>Assignment Hub — Secure Assignment Submission Portal</title>
+  <meta name="description" content="Submit your assignments securely through Assignment Hub. Track submissions, manage deadlines, understand plagiarism policies, and submit with integrity.">
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -71,7 +71,7 @@
     .deadline-item strong { color: #333; display: block; }
     .deadline-item:last-child { border-bottom: none; }
 
-    /* ── NEW: Submission Items ── */
+    /* ── Submission Items ── */
     .submission-item {
       font-size: 12px;
       color: #666;
@@ -96,7 +96,7 @@
     .status-badge.pending { background: #fff3cd; color: #856404; }
     .status-badge.graded { background: #d1ecf1; color: #0c5460; }
 
-    /* ── NEW: Submission Success Item ── */
+    /* ── Submission Success Item ── */
     .submission-success-item {
       font-size: 13px;
       color: #666;
@@ -106,7 +106,7 @@
       border-radius: 6px;
     }
 
-    /* ── NEW: Quick Actions ── */
+    /* ── Quick Actions ── */
     .quick-action {
       margin-bottom: 8px;
     }
@@ -211,7 +211,7 @@
     }
     .form-group textarea { resize: vertical; min-height: 80px; }
 
-    /* ── NEW: Submission Checklist ── */
+    /* ── Submission Checklist ── */
     .checklist-box {
       background: #f9f9f9;
       border: 1px solid #e8e8e8;
@@ -238,165 +238,63 @@
     .checklist-item.complete { color: #27a745; font-weight: 500; }
     .checklist-item.complete input { accent-color: #27a745; }
 
-    /* ── NEW: File Size Indicator ── */
+    /* ── File Drop Zone ── */
+    .file-drop {
+      border: 2px dashed #3498db;
+      border-radius: 6px;
+      padding: 30px;
+      text-align: center;
+      background: #f0f8ff;
+      cursor: pointer;
+      transition: all .3s ease;
+      position: relative;
+    }
+    .file-drop:hover { background: #e6f2ff; border-color: #2980b9; }
+    .file-drop.dragover { background: #e6f2ff; border-color: #2980b9; box-shadow: 0 0 0 4px rgba(52,152,219,.2); }
+    .file-drop-icon { font-size: 32px; margin-bottom: 10px; }
+    .file-drop p { font-weight: 600; color: #3498db; margin-bottom: 4px; }
+    .file-drop span { display: block; color: #999; font-size: 12px; margin-bottom: 10px; }
+    #assignment_file { display: none; }
+
+    /* ── File Size Indicator ── */
     .file-size-indicator {
       font-size: 12px;
       color: #888;
       margin-top: 4px;
     }
-    .file-size-warning {
-      font-size: 12px;
-      color: #e67e22;
-      margin-top: 4px;
-      font-weight: 500;
-    }
 
-    .file-drop {
-      border: 2px dashed #ccc;
-      border-radius: 6px;
-      padding: 28px 20px;
-      text-align: center;
-      cursor: pointer;
-      background: #fafafa;
-      transition: border-color .2s, background .2s;
-      position: relative;
-    }
-    .file-drop:hover { border-color: #3498db; background: #f0f8ff; }
-    .file-drop input[type="file"] {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-    }
-    .file-drop-icon { font-size: 32px; margin-bottom: 8px; }
-    .file-drop p { font-size: 14px; color: #555; }
-    .file-drop span { font-size: 12px; color: #888; }
-    #file-name { margin-top: 8px; font-size: 13px; color: #3498db; font-weight: 600; }
+    /* ── Checkbox Row ── */
     .checkbox-row {
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      font-size: 14px;
-      color: #555;
     }
-    .checkbox-row input { margin-top: 3px; width: auto; flex-shrink: 0; }
+    .checkbox-row input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; }
+    .checkbox-row label { font-weight: 400; }
+
+    /* ── Buttons ── */
     .submit-btn {
       background: #3498db;
       color: #fff;
+      padding: 12px 28px;
       border: none;
-      padding: 12px 32px;
       border-radius: 6px;
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: background .2s, transform .1s;
-    }
-    .submit-btn:hover { background: #2980b9; }
-    .submit-btn:active { transform: scale(.98); }
-    .submit-btn:disabled { background: #bdc3c7; cursor: not-allowed; opacity: 0.6; }
-    #form-message { display: none; }
-    /* ── Spinner ── */
-    .spinner {
-      display: inline-block;
-      width: 16px; height: 16px;
-      border: 2px solid rgba(255,255,255,.4);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    /* ── NEW: Modal Styles ── */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      animation: fadeIn .3s;
-    }
-    .modal.show { display: flex; }
-    .modal-content {
-      background-color: #fff;
-      margin: auto;
-      padding: 30px;
-      border-radius: 8px;
-      max-width: 500px;
-      width: 90%;
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: 0 4px 20px rgba(0,0,0,.15);
-    }
-    .modal-header {
-      font-size: 18px;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .modal-close {
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #999;
-    }
-    .modal-close:hover { color: #333; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-    /* ── NEW: Success Modal ── */
-    .success-modal {
-      text-align: center;
-    }
-    .success-icon {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-    .success-modal h3 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #27a745;
-      margin-bottom: 8px;
-    }
-    .success-modal p {
-      color: #666;
       font-size: 14px;
-      margin-bottom: 16px;
-      line-height: 1.6;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s;
     }
-    .success-details {
-      background: #f9f9f9;
-      border: 1px solid #e8e8e8;
-      border-radius: 6px;
-      padding: 16px;
-      margin-bottom: 20px;
-      text-align: left;
-      font-size: 13px;
-    }
-    .success-detail-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 8px;
-      color: #666;
-    }
-    .success-detail-row:last-child { margin-bottom: 0; }
-    .success-detail-label { font-weight: 600; color: #333; }
+    .submit-btn:hover:not(:disabled) { background: #2980b9; }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-    /* ── Mobile ── */
-    @media (max-width: 700px) {
-      .container { flex-direction: column; }
-      .sidebar { min-width: unset; }
-      .content { padding: 20px; }
+    /* ── Modal ── */
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.4); }
+    .modal.show { display: block; }
+    .modal-content { background: #fff; margin: 5% auto; padding: 20px; width: 90%; max-width: 500px; border-radius: 8px; }
+    .modal-header { font-size: 18px; font-weight: 600; margin-bottom: 16px; }
+    .modal-close { float: right; font-size: 24px; cursor: pointer; color: #999; }
+    .modal-close:hover { color: #333; }
+    @media (max-width: 768px) {
       .modal-content { width: 95%; }
     }
   </style>
@@ -404,8 +302,8 @@
 <body>
 
 <header class="site-header">
-  <h1>Academic Hub</h1>
-  <span>| Assignment Submission Portal</span>
+  <h1>Assignment Hub</h1>
+  <span>| Secure Assignment Submission Portal</span>
 </header>
 
 <div class="container">
@@ -414,24 +312,42 @@
   <aside class="sidebar">
     <h3>Navigation</h3>
     <ul>
-      <li><a href="https://mauriceudom.org/">🏠 Home</a></li>
-      <li><a href="https://mauriceudom.org/submission-hub/">📤 Submit Assignment</a></li>
-      <li><a href="#grades" onclick="toggleGradeLookup(event)">📊 My Grades</a></li>
+      <li><a href="#submit">📤 Submit Assignment</a></li>
+      <li><a href="#grades" onclick="toggleGradeLookup(event)">📊 Check Status</a></li>
       <li><a href="#extension" onclick="toggleExtensionForm(event)">⏱️ Request Extension</a></li>
-      <li><a href="https://mauriceudom.org/blog-index.html">📝 Linguistics Blog</a></li>
-      <li><a href="https://maurice2026.github.io/organisational-communication/index.html">🎙️ Lecture Series</a></li>
-      <li><a href="https://mauriceudom.org/">📖 Grading Rubric</a></li>
-      <li><a href="https://mauriceudom.org/">✉️ Contact Lecturer</a></li>
+      <li><a href="https://yourwebsite.com/contact">✉️ Contact Lecturer</a></li>
+      <li><a href="https://yourwebsite.com/lecture-series">🎙️ Lecture Series</a></li>
+      <li><a href="https://yourwebsite.com/blog">📝 Blogs</a></li>
     </ul>
 
     <div style="margin-top:20px">
-      <h3>Upcoming Deadlines</h3>
-      <div class="deadline-item"><strong>Essay 2</strong>May 10, 2026 — 11:59 PM</div>
-      <div class="deadline-item"><strong>Research Paper</strong>May 24, 2026 — 11:59 PM</div>
-      <div class="deadline-item"><strong>Group Presentation</strong>Jun 3, 2026 — 11:59 PM</div>
+      <h3>📅 Upcoming Deadlines</h3>
+      <div class="deadline-item">
+        <strong>Assignment 1</strong>
+        <select style="width: 100%; padding: 6px; margin-top: 6px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px;">
+          <option>Select Month & Date</option>
+          <option>January 15, 2026</option>
+          <option>February 10, 2026</option>
+          <option>March 20, 2026</option>
+          <option>April 25, 2026</option>
+          <option>May 30, 2026</option>
+          <option>June 15, 2026</option>
+          <option>July 20, 2026</option>
+          <option>August 25, 2026</option>
+          <option>September 10, 2026</option>
+          <option>October 15, 2026</option>
+          <option>November 20, 2026</option>
+          <option>December 15, 2026</option>
+        </select>
+      </div>
     </div>
 
-    <!-- NEW: Submission Success Indicator -->
+    <!-- Ad Space for Upcoming Deadlines -->
+    <div class="ad-box" style="margin-top:20px; min-height:200px;">
+      Ad Space 300×200<br><small style="color: #ccc;">Your AdSense ads here</small>
+    </div>
+
+    <!-- Submission Success Indicator -->
     <div id="submission-success-box" style="display: none; margin-top: 20px;">
       <h3 style="color: #27a745;">✓ Submission Status</h3>
       <div class="submission-success-item">
@@ -441,14 +357,14 @@
         </div>
         <small style="color: #999;">Submitted: <span id="submission-time">—</span></small>
         <div style="margin-top: 8px; padding: 8px; background: #d4edda; border-radius: 4px; border-left: 3px solid #28a745;">
-          <small style="color: #155724; font-weight: 500;">Your work is in the system. Feedback will be provided within 7 days.</small>
+          <small style="color: #155724; font-weight: 500;">Your work has been received. Feedback will be provided within 7-10 business days.</small>
         </div>
       </div>
     </div>
 
     <!-- AdSense sidebar square -->
     <div class="ad-box" style="margin-top:20px; min-height:250px;">
-      Ad 250×250
+      Ad Space 250×250<br><small style="color: #ccc;">Your AdSense ads here</small>
     </div>
   </aside>
 
@@ -458,51 +374,68 @@
     <p class="last-updated">Effective: May 2026</p>
 
     <div class="alert warning">
-      ⚠ Be careful — plagiarism is not allowed and will result in an automatic zero.
+      ⚠ Important — Plagiarism is not tolerated and will result in serious academic consequences. Please read this policy carefully before submitting.
     </div>
 
     <div class="ad-box">
-      Ad 728×90 leaderboard
+      Ad Space 728×90<br><small style="color: #ccc;">Your AdSense leaderboard ads here</small>
     </div>
 
+    <!-- Definition of Plagiarism -->
     <div class="policy-section">
       <h3>1. Definition of Plagiarism</h3>
-      <p>Plagiarism is defined as presenting someone else's work, ideas, or language as your own without proper acknowledgment. This includes:</p>
+      <p>Plagiarism is presenting someone else's work, ideas, words, or language as your own without proper acknowledgment or attribution. This includes:</p>
       <ul>
-        <li><strong>Direct Copying:</strong> Copying word-for-word from a classmate, a book, or an online source.</li>
-        <li><strong>Paraphrasing without Citation:</strong> Rephrasing an idea without crediting the original author.</li>
-        <li><strong>Collusion:</strong> Submitting collaborative work as your individual effort.</li>
-        <li><strong>Self-Plagiarism:</strong> Submitting the same work across multiple assignments.</li>
+        <li><strong>Direct Copying:</strong> Copying text word-for-word from books, articles, websites, or classmates without quotation marks and citation.</li>
+        <li><strong>Paraphrasing without Citation:</strong> Rephrasing an author's ideas in your own words but failing to credit the original source.</li>
+        <li><strong>Collusion:</strong> Submitting work that was completed collaboratively as if it were entirely your individual effort.</li>
+        <li><strong>Self-Plagiarism:</strong> Resubmitting the same work (or substantially similar work) for different assignments or courses.</li>
+        <li><strong>Inadequate Citation:</strong> Using proper citation format but failing to fully document all sources used.</li>
       </ul>
     </div>
 
+    <!-- Detection Methods -->
     <div class="policy-section">
       <h3>2. Detection Methods</h3>
-      <p>All assignments are subject to verification using:</p>
+      <p>All submitted assignments are subject to rigorous verification using multiple methods:</p>
       <ul>
-        <li><strong>Digital Comparison Tools:</strong> Cross-referenced against previous submissions and internet resources.</li>
-        <li><strong>Peer-to-Peer Checking:</strong> Compared against other students in the current session.</li>
-        <li><strong>AI Metadata Analysis:</strong> Document version history and metadata are monitored.</li>
+        <li><strong>Plagiarism Detection Software:</strong> Submissions are checked against a database of previously submitted work, published materials, and online resources.</li>
+        <li><strong>Peer Comparison:</strong> Student submissions are cross-referenced against other students in the same course and previous cohorts.</li>
+        <li><strong>Manual Review:</strong> Instructors conduct detailed reviews of writing style, tone, and content consistency to identify suspicious work.</li>
+        <li><strong>Source Verification:</strong> Claims about sources are verified, and citations are checked for accuracy and completeness.</li>
+        <li><strong>Metadata Analysis:</strong> Document properties and version histories are examined for signs of plagiarized content.</li>
       </ul>
     </div>
 
     <div class="ad-box" style="min-height:280px;">
-      Ad 336×280 rectangle
+      Ad Space 336×280<br><small style="color: #ccc;">Your AdSense rectangle ads here</small>
     </div>
 
+    <!-- Consequences of Academic Dishonesty -->
     <div class="policy-section">
       <h3>3. Consequences of Academic Dishonesty</h3>
-      <p>Students found to have plagiarized will face:</p>
+      <p>Students found to have committed plagiarism or academic dishonesty will face the following consequences:</p>
       <ol>
-        <li>An immediate score of <strong>zero</strong> for the assignment.</li>
-        <li>A formal report submitted to the department head.</li>
-        <li>Requirement to resubmit with a maximum possible grade of <strong>Pass</strong> only.</li>
+        <li><strong>Immediate Zero Grade:</strong> A score of zero will be assigned for the assignment with no opportunity for resubmission.</li>
+        <li><strong>Formal Academic Report:</strong> A formal report will be filed with the appropriate academic department, creating a record in the student's academic file.</li>
+        <li><strong>Disciplinary Action:</strong> Depending on severity and frequency, additional disciplinary measures may be taken, including academic probation or dismissal.</li>
+        <li><strong>Grade Penalty:</strong> In some cases, the course grade may be reduced or the student may be required to retake the course.</li>
+        <li><strong>Legal Consequences:</strong> In cases of significant copyright infringement, legal action may be pursued.</li>
       </ol>
     </div>
 
+    <!-- How to Avoid Plagiarism -->
     <div class="policy-section">
       <h3>4. How to Avoid Plagiarism</h3>
-      <p>Visit our <strong>Linguistics Blog</strong> and the <strong>Lecture Series</strong> in the sidebar for guides on citing sources and summarising academic monographs.</p>
+      <p>To ensure your work is original and properly attributed:</p>
+      <ul>
+        <li><strong>Always Cite Sources:</strong> Use proper citation format (APA, MLA, Chicago, or as specified) for all quotes, paraphrases, and ideas from other sources.</li>
+        <li><strong>Use Quotation Marks:</strong> Place direct quotes in quotation marks and provide an in-text citation and bibliographic reference.</li>
+        <li><strong>Paraphrase Correctly:</strong> When paraphrasing, significantly rephrase the idea and still provide a citation to the original source.</li>
+        <li><strong>Common Knowledge Exception:</strong> Information that is common knowledge in your field does not require citation, but when in doubt, cite it.</li>
+        <li><strong>Plan Ahead:</strong> Start your assignment early to allow time for proper research, writing, and citation.</li>
+        <li><strong>Seek Help:</strong> Consult with your instructor, librarian, or writing center if you're unsure about citation practices.</li>
+      </ul>
     </div>
 
     <!-- ── Submission Form ── -->
@@ -511,7 +444,7 @@
 
       <div id="form-message"></div>
 
-      <!-- NEW: Submission Checklist -->
+      <!-- Submission Checklist -->
       <div class="checklist-box">
         <h4>✓ Before You Submit — Checklist</h4>
         <div class="checklist-item">
@@ -520,7 +453,7 @@
         </div>
         <div class="checklist-item">
           <input type="checkbox" id="check2" onchange="updateChecklist()">
-          <label for="check2">My file is in PDF or DOCX format (max 10 MB)</label>
+          <label for="check2">My file is in PDF or DOCX format (max 25 MB)</label>
         </div>
         <div class="checklist-item">
           <input type="checkbox" id="check3" onchange="updateChecklist()">
@@ -532,27 +465,27 @@
         </div>
         <div class="checklist-item">
           <input type="checkbox" id="check5" onchange="updateChecklist()">
-          <label for="check5">This work is entirely my own</label>
+          <label for="check5">This work is entirely my own and original</label>
         </div>
       </div>
 
-      <form id="assignment-form" action="https://formspree.io/f/xgodpjon" method="POST" enctype="multipart/form-data">
+      <form id="assignment-form" action="https://usebasin.com/f/6bf29083817a" method="POST" enctype="multipart/form-data">
 
         <div class="form-row">
           <div class="form-group">
             <label for="student_name">Full Name *</label>
-            <input type="text" id="student_name" name="student_name" placeholder="e.g. Amina Yusuf" required>
+            <input type="text" id="student_name" name="student_name" placeholder="Enter your full name" required>
           </div>
           <div class="form-group">
-            <label for="student_id">Student ID *</label>
-            <input type="text" id="student_id" name="student_id" placeholder="e.g. STU-2024-0042" required>
+            <label for="student_id">Student ID / Matric Number *</label>
+            <input type="text" id="student_id" name="student_id" placeholder="e.g., STU-2024-0042" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="student_email">Email Address *</label>
-            <input type="email" id="student_email" name="student_email" placeholder="you@example.com" required>
+            <input type="email" id="student_email" name="student_email" placeholder="your.email@example.com" required>
           </div>
           <div class="form-group">
             <label for="module">Course Title & Code *</label>
@@ -562,11 +495,11 @@
 
         <div class="form-group">
           <label for="assignment_title">Assignment Title *</label>
-          <input type="text" id="assignment_title" name="assignment_title" placeholder="e.g. The Role of Code-Switching in Nigerian English" required>
+          <input type="text" id="assignment_title" name="assignment_title" placeholder="e.g., Critical Analysis of Academic Integrity" required>
         </div>
 
         <div class="form-group">
-          <label>Upload File * (PDF or DOCX, max 10 MB)</label>
+          <label>Upload Assignment File * (PDF or DOCX, max 25 MB)</label>
           <div class="file-drop" id="file-drop-zone">
             <div class="file-drop-icon">📄</div>
             <p>Drag and drop your file here</p>
@@ -579,7 +512,7 @@
 
         <div class="form-group">
           <label for="comments">Additional Comments (optional)</label>
-          <textarea id="comments" name="comments" placeholder="Any notes for your lecturer..." maxlength="500" onchange="updateCommentCount()"></textarea>
+          <textarea id="comments" name="comments" placeholder="Any notes for your reviewer..." maxlength="500" onchange="updateCommentCount()"></textarea>
           <div style="font-size: 12px; color: #999; margin-top: 4px;">
             <span id="comment-count">0</span> / 500 characters
           </div>
@@ -588,143 +521,69 @@
         <div class="form-group">
           <div class="checkbox-row">
             <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
-            <label for="integrity_pledge">I confirm this work is entirely my own and I have read and understood the Academic Integrity Policy above.</label>
+            <label for="integrity_pledge">I confirm this work is entirely my own, original, and I have read and understood the Academic Integrity Policy above. I understand the consequences of plagiarism.</label>
           </div>
         </div>
 
         <!-- Formspree Configuration -->
-        <input type="hidden" name="_subject" value="New Assignment Submission">
-        <input type="hidden" name="_next" value="https://mauriceudom.org/submission-hub/">
+        <input type="hidden" name="_subject" value="New Assignment Submission from Assignment Hub">
+        <input type="hidden" name="_next" value="javascript:void(0)">
 
-        <button type="submit" class="submit-btn" id="submit-btn">Submit Assignment</button>
+        <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Assignment</button>
       </form>
     </section>
 
-    <div class="ad-box" style="margin-top:28px;">
-      Ad 728×90 leaderboard
+    <!-- Grade Lookup Modal -->
+    <div id="gradeLookupModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('gradeLookupModal')">&times;</span>
+        <div class="modal-header">📊 Check Submission Status</div>
+        <form>
+          <div class="form-group">
+            <label for="grade_student_id">Student ID *</label>
+            <input type="text" id="grade_student_id" placeholder="Enter your student ID" required>
+          </div>
+          <div class="form-group">
+            <label for="grade_email">Email Address *</label>
+            <input type="email" id="grade_email" placeholder="Enter your email" required>
+          </div>
+          <button type="submit" class="submit-btn" style="width: 100%;">Check Status</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Extension Request Modal -->
+    <div id="extensionModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('extensionModal')">&times;</span>
+        <div class="modal-header">⏱️ Request Assignment Extension</div>
+        <form id="extension-form" onsubmit="handleExtensionRequest(event)">
+          <div class="form-group">
+            <label for="ext_assignment">Assignment *</label>
+            <input type="text" id="ext_assignment" placeholder="Which assignment?" required>
+          </div>
+          <div class="form-group">
+            <label for="ext_days">Extension Duration *</label>
+            <select id="ext_days" required>
+              <option>Select duration</option>
+              <option>2-3 days</option>
+              <option>1 week</option>
+              <option>More than 1 week</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ext_reason">Reason for request *</label>
+            <textarea id="ext_reason" placeholder="Explain your circumstances..." required maxlength="300"></textarea>
+            <div style="font-size: 12px; color: #999; margin-top: 4px;">
+              <span id="reason-count">0</span> / 300 characters
+            </div>
+          </div>
+          <button type="submit" class="submit-btn" style="width: 100%;">Submit Extension Request</button>
+        </form>
+      </div>
     </div>
 
   </main>
-</div>
-
-<!-- ── NEW: Success Modal ── -->
-<div id="successModal" class="modal">
-  <div class="modal-content success-modal">
-    <div class="modal-header" style="justify-content: center; margin-bottom: 10px;">
-      <button class="modal-close" onclick="closeModal('successModal')">&times;</button>
-    </div>
-    <div class="success-icon">✓</div>
-    <h3>Assignment Submitted Successfully!</h3>
-    <p>Your work has been received and recorded in the system.</p>
-    
-    <div class="success-details">
-      <div class="success-detail-row">
-        <span class="success-detail-label">Student Name:</span>
-        <span id="confirm-name">—</span>
-      </div>
-      <div class="success-detail-row">
-        <span class="success-detail-label">Submission Time:</span>
-        <span id="confirm-time">—</span>
-      </div>
-      <div class="success-detail-row">
-        <span class="success-detail-label">File Submitted:</span>
-        <span id="confirm-file">—</span>
-      </div>
-      <div class="success-detail-row">
-        <span class="success-detail-label">Confirmation Email:</span>
-        <span id="confirm-email">—</span>
-      </div>
-    </div>
-    
-    <p style="font-size: 13px; color: #666; background: #f9f9f9; padding: 12px; border-radius: 6px; margin-bottom: 16px;">
-      A confirmation receipt and your submission details have been sent to your email. Your lecturer will review and provide feedback within 7 days.
-    </p>
-    
-    <button type="button" class="submit-btn" onclick="reloadPage()" style="margin-top: 0;">Submit Another Assignment</button>
-  </div>
-</div>
-
-<!-- ── NEW: Grade Lookup Modal ── -->
-<div id="gradeLookupModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span>📊 My Grades</span>
-      <button class="modal-close" onclick="closeModal('gradeLookupModal')">&times;</button>
-    </div>
-    
-    <div style="font-size: 13px; color: #666;">
-      <div style="background: #f9f9f9; border-radius: 6px; padding: 16px; margin-bottom: 12px;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e8e8e8;">
-          <strong style="color: #333;">Essay 1</strong>
-          <strong style="color: #27a745;">A-</strong>
-        </div>
-        <small style="color: #999;">Submitted May 3, 2026 | Feedback available</small>
-      </div>
-
-      <div style="background: #f9f9f9; border-radius: 6px; padding: 16px; margin-bottom: 12px;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e8e8e8;">
-          <strong style="color: #333;">Research Notes</strong>
-          <strong style="color: #856404;">⏳ Pending</strong>
-        </div>
-        <small style="color: #999;">Submitted May 5, 2026 | Under review</small>
-      </div>
-
-      <div style="background: #f9f9f9; border-radius: 6px; padding: 16px;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e8e8e8;">
-          <strong style="color: #333;">Draft Paper</strong>
-          <strong style="color: #0c5460;">B+</strong>
-        </div>
-        <small style="color: #999;">Submitted April 28, 2026 | Graded April 30</small>
-      </div>
-    </div>
-
-    <p style="margin-top: 16px; font-size: 13px; color: #666; text-align: center;">
-      For detailed feedback, <a href="#" style="color: #3498db; text-decoration: none;">click here</a> or contact your lecturer.
-    </p>
-  </div>
-</div>
-
-<!-- ── NEW: Extension Request Modal ── -->
-<div id="extensionModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span>⏱️ Request Deadline Extension</span>
-      <button class="modal-close" onclick="closeModal('extensionModal')">&times;</button>
-    </div>
-    
-    <form id="extension-form" onsubmit="handleExtensionRequest(event)">
-      <div class="form-group">
-        <label for="ext_assignment">Which assignment do you need more time for? *</label>
-        <select id="ext_assignment" name="ext_assignment" required>
-          <option value="">— Select assignment —</option>
-          <option>Essay 2 (Due May 10)</option>
-          <option>Research Paper (Due May 24)</option>
-          <option>Group Presentation (Due Jun 3)</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="ext_days">How many days do you need? *</label>
-        <select id="ext_days" name="ext_days" required>
-          <option value="">— Select duration —</option>
-          <option>1-2 days</option>
-          <option>3-5 days</option>
-          <option>1 week</option>
-          <option>More than 1 week</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="ext_reason">Reason for request *</label>
-        <textarea id="ext_reason" name="ext_reason" placeholder="Explain your circumstances..." required maxlength="300"></textarea>
-        <div style="font-size: 12px; color: #999; margin-top: 4px;">
-          <span id="reason-count">0</span> / 300 characters
-        </div>
-      </div>
-
-      <button type="submit" class="submit-btn" style="margin-top: 0;">Submit Extension Request</button>
-    </form>
-  </div>
 </div>
 
 <script>
@@ -770,14 +629,14 @@ function handleFileSelect() {
   if (fileInput.files.length > 0) {
     const file = fileInput.files[0];
     const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
-    const sizePercent = Math.round((file.size / (10 * 1024 * 1024)) * 100);
+    const sizePercent = Math.round((file.size / (25 * 1024 * 1024)) * 100);
     
     fileNameEl.textContent = file.name;
     
-    if (file.size > 10 * 1024 * 1024) {
-      fileSizeEl.innerHTML = `<span class="file-size-warning">⚠ File exceeds 10 MB limit!</span>`;
+    if (file.size > 25 * 1024 * 1024) {
+      fileSizeEl.innerHTML = `<span style="color: #d9534f; font-weight: 600;">⚠ File exceeds 25 MB limit!</span>`;
     } else {
-      fileSizeEl.innerHTML = `<span class="file-size-indicator">📊 ${sizeMB} MB (${sizePercent}% of limit)</span>`;
+      fileSizeEl.innerHTML = `<span>📊 ${sizeMB} MB (${sizePercent}% of limit)</span>`;
     }
   } else {
     fileNameEl.textContent = '';
@@ -807,11 +666,13 @@ function preventDefaults(e) {
 function highlight(e) {
   dropZone.style.borderColor = '#3498db';
   dropZone.style.background = '#f0f8ff';
+  dropZone.classList.add('dragover');
 }
 
 function unhighlight(e) {
-  dropZone.style.borderColor = '#ccc';
-  dropZone.style.background = '#fafafa';
+  dropZone.style.borderColor = '#3498db';
+  dropZone.style.background = '#f0f8ff';
+  dropZone.classList.remove('dragover');
 }
 
 dropZone.addEventListener('drop', handleDrop, false);
@@ -821,9 +682,10 @@ function handleDrop(e) {
   const files = dt.files;
   document.getElementById('assignment_file').files = files;
   handleFileSelect();
+  validateForm();
 }
 
-// ── NEW: Checklist Update ──
+// ── Checklist Update ──
 function updateChecklist() {
   const allChecked = document.getElementById('check1').checked &&
                     document.getElementById('check2').checked &&
@@ -842,7 +704,7 @@ function updateChecklist() {
   });
 }
 
-// ── NEW: Character Counter ──
+// ── Character Counter ──
 function updateCommentCount() {
   const count = document.getElementById('comments').value.length;
   document.getElementById('comment-count').textContent = count;
@@ -874,7 +736,7 @@ window.onclick = function(event) {
   }
 }
 
-// ── Form Submission with Native Formspree ──
+// ── Form Submission with Formspree ──
 document.getElementById('assignment-form').addEventListener('submit', function(e) {
   const studentName = document.getElementById('student_name').value.trim();
   const studentId = document.getElementById('student_id').value.trim();
@@ -891,7 +753,7 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
   if (!module) { showMsg('error', 'Please enter your course title and code.'); e.preventDefault(); return; }
   if (!assignmentTitle) { showMsg('error', 'Please enter the assignment title.'); e.preventDefault(); return; }
   if (!file) { showMsg('error', 'Please select a file to upload.'); e.preventDefault(); return; }
-  if (file.size > 10 * 1024 * 1024) { showMsg('error', 'File exceeds 10 MB limit.'); e.preventDefault(); return; }
+  if (file.size > 25 * 1024 * 1024) { showMsg('error', 'File exceeds 25 MB limit.'); e.preventDefault(); return; }
   if (!integrityPledge) {
     showMsg('error', 'You must confirm the integrity pledge before submitting.'); e.preventDefault(); return;
   }
@@ -901,7 +763,7 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span> Submitting…';
   
-  // Store submission data for success modal
+  // Store submission data for success display
   const timestamp = new Date().toLocaleString();
   window.submissionData = {
     name: studentName,
@@ -909,13 +771,10 @@ document.getElementById('assignment-form').addEventListener('submit', function(e
     file: file.name,
     email: studentEmail
   };
-  
-  // Allow form to submit naturally to Formspree
-  // (form's action will handle the POST)
 });
 
 // ── Extension Request Handler ──
-document.getElementById('ext_reason').addEventListener('change', updateReasonCount);
+document.getElementById('ext_reason').addEventListener('keyup', updateReasonCount);
 
 function handleExtensionRequest(e) {
   e.preventDefault();
@@ -923,13 +782,13 @@ function handleExtensionRequest(e) {
   const assignment = document.getElementById('ext_assignment').value;
   const days = document.getElementById('ext_days').value;
   
-  showAlert(`Extension request for "${assignment}" (${days}) has been submitted to your lecturer.`, 'success');
+  showAlert(`Extension request for "${assignment}" (${days}) has been submitted. Please allow 24-48 hours for a response.`, 'success');
   
   setTimeout(() => {
     closeModal('extensionModal');
     document.getElementById('extension-form').reset();
     document.getElementById('reason-count').textContent = '0';
-  }, 1500);
+  }, 2000);
 }
 
 // ── Message Display ──
@@ -949,9 +808,8 @@ function showAlert(text, type) {
   msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-function reloadPage() {
-  window.location.reload();
-}
+// Initial validation check
+validateForm();
 </script>
 
 </body>
