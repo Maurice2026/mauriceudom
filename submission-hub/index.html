@@ -1,5 +1,5 @@
 <!DOCTYPE html>  
-<html lang="en"> 
+<html lang="en">  
 <head> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -272,16 +272,15 @@
       display: flex;
       align-items: flex-start;
       gap: 10px;
-    }
+    } 
     .checkbox-row input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; }
     .checkbox-row label { font-weight: 400; }
-.checkbox-submit-row {
+.checkbox-row {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 8px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
-
 .checkbox-submit-row .checkbox-row {
   flex: 1;
   margin: 0;
@@ -507,7 +506,7 @@
             <span id="comment-count">0</span> / 500 characters
           </div>
         </div>
-<div class="form-group checkbox-submit-row">
+<div class="form-group">
   <div class="checkbox-row">
     <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
     <label for="integrity_pledge">I confirm this work is entirely my own and original.</label>
@@ -519,7 +518,7 @@
 
   <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Assignment</button>
 </div>
-        </form>
+      </form>
     </section>
 
     <!-- Grade Lookup Modal -->
