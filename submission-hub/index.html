@@ -275,7 +275,22 @@
     }
     .checkbox-row input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; }
     .checkbox-row label { font-weight: 400; }
+.checkbox-submit-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
 
+.checkbox-submit-row .checkbox-row {
+  flex: 1;
+  margin: 0;
+}
+
+.checkbox-submit-row .submit-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
     /* ── Buttons ── */
     .submit-btn {
       background: #3498db;
@@ -307,7 +322,7 @@
 
 <header class="site-header">
   <h1>Assignment Hub</h1>
-  <span>| Secure Assignment Submission Portal</span>
+  <span>| Secure Assignment Submission Portal</span> 
 </header>
 
 <div class="container">
@@ -492,20 +507,19 @@
             <span id="comment-count">0</span> / 500 characters
           </div>
         </div>
+<div class="form-group checkbox-submit-row">
+  <div class="checkbox-row">
+    <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
+    <label for="integrity_pledge">I confirm this work is entirely my own and original.</label>
+  </div>
+  
+  <!-- Formspree Configuration -->
+  <input type="hidden" name="_subject" value="New Assignment Submission from Assignment Hub">
+  <input type="hidden" name="_next" value="javascript:void(0)">
 
-        <div class="form-group">
-          <div class="checkbox-row">
-            <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
-          <label for="integrity_pledge">I understand and agree</label>  
-          </div>
-        </div>
-
-        <!-- Formspree Configuration -->
-        <input type="hidden" name="_subject" value="New Assignment Submission from Assignment Hub">
-        <input type="hidden" name="_next" value="javascript:void(0)">
-
-        <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Assignment</button>
-      </form>
+  <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Assignment</button>
+</div>
+        </form>
     </section>
 
     <!-- Grade Lookup Modal -->
