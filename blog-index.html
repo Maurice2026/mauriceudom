@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N6Z4TMFYVG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N6Z4TMFYVG');
+</script>
+
 <meta name="description" content="Blog by Maurice Udom — Articles on African literature, academic writing, English language, grammar, publishing and the craft of writing.">
 <meta name="keywords" content="Maurice Udom blog, African literature, Nigerian author, academic writing, English grammar, self-publishing, Nigerian drama, literature review, citation styles">
 <title>Blog — Maurice Udom | Nigerian Writer, Researcher, Linguist & Editor</title>
@@ -173,22 +183,39 @@
     display: block;
   }
 
-  /* ── Post cards ── */
+  /* Post cards ── */
   .post-card {
     background: #ffffff;
     border: 1px solid #e8e4da;
     border-radius: 10px;
-    padding: 24px 28px;
+    padding: 0;
     margin-bottom: 16px;
     transition: border-color 0.2s, box-shadow 0.2s;
-    display: block;
+    display: flex;
     text-decoration: none;
     color: inherit;
+    overflow: hidden;
   }
   .post-card:hover {
     border-color: #c0a36a;
     box-shadow: 0 4px 16px rgba(192, 163, 106, 0.12);
   }
+
+  .post-card-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .post-card-content {
+    padding: 24px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .post-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 19px;
@@ -427,22 +454,28 @@
       </div>
       <div class="category-posts">
         <a class="post-card" href="https://mauriceudom.org/blog-child-development.html">
-          <h3>Complete Guide to Child Development Stages (Birth to 5 Years)</h3>
-          <p>Learn developmental milestones, stages, and expert strategies for parents and educators — from newborns through early childhood.</p>
-          <div class="post-meta">
-            <span class="post-tag">Child Development</span>
-            <span class="post-tag">Week 1</span>
-            <span class="read-arrow">Read →</span>
+          <img src="https://images.unsplash.com/photo-1503454537688-e6c6ff1ee367?w=140&h=140&fit=crop" alt="Child Development" class="post-card-image">
+          <div class="post-card-content">
+            <h3>Complete Guide to Child Development Stages (Birth to 5 Years)</h3>
+            <p>Learn developmental milestones, stages, and expert strategies for parents and educators — from newborns through early childhood.</p>
+            <div class="post-meta">
+              <span class="post-tag">Child Development</span>
+              <span class="post-tag">Week 1</span>
+              <span class="read-arrow">Read →</span>
+            </div>
           </div>
         </a>
 
         <a class="post-card" href="https://mauriceudom.org/blog-child-development-week2.html">
-          <h3>Language Development in Early Childhood: From Sounds to Sentences</h3>
-          <p>From first sounds to first sentences — understand how babies learn language and what you can do to support this milestone.</p>
-          <div class="post-meta">
-            <span class="post-tag">Child Development</span>
-            <span class="post-tag">Week 2</span>
-            <span class="read-arrow">Read →</span>
+          <img src="https://images.unsplash.com/photo-1516627145497-ae3dcd1b6502?w=140&h=140&fit=crop" alt="Language Development" class="post-card-image">
+          <div class="post-card-content">
+            <h3>Language Development in Early Childhood: From Sounds to Sentences</h3>
+            <p>From first sounds to first sentences — understand how babies learn language and what you can do to support this milestone.</p>
+            <div class="post-meta">
+              <span class="post-tag">Child Development</span>
+              <span class="post-tag">Week 2</span>
+              <span class="read-arrow">Read →</span>
+            </div>
           </div>
         </a>
       </div>
@@ -713,7 +746,7 @@
       <p>Seven published works across drama, satire, comedy and academic scholarship — available now.</p>
       <a class="cta-btn" href="https://selar.com/m/maurice-udom1" target="_blank">Browse on Selar</a>
       <a class="cta-btn" href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank">Browse on Amazon</a>
-      <a class="cta-btn" href="https://www.fiverr.com/sellers/mauriceudom/edit" target="_blank" style="background: #1dbf73;">Hire on Fiverr</a>
+      <a class="cta-btn" href="https://www.fiverr.com/sellers/mauriceudom/edit?utm_source=blog&utm_medium=referral&utm_campaign=blog_fiverr&utm_content=homepage_cta" target="_blank" style="background: #1dbf73;">Hire on Fiverr</a>
     </div>
 
   </div>
@@ -728,7 +761,7 @@
     </div>
 
     &copy; 2026 Maurice Udom &middot; <a href="https://mauriceudom.org">mauriceudom.org</a> &middot;
-    <a href="https://www.fiverr.com/sellers/mauriceudom/edit" target="_blank">Fiverr</a> &middot;
+    <a href="https://www.fiverr.com/sellers/mauriceudom/edit?utm_source=blog&utm_medium=referral&utm_campaign=blog_fiverr&utm_content=footer_link" target="_blank">Fiverr</a> &middot;
     <a href="https://selar.com/m/maurice-udom1" target="_blank">Books</a> &middot;
     <a href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank">Amazon</a>
     <br><br>
