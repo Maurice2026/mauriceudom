@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">  
+<html lang="en"> 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -305,6 +305,58 @@
     transition: color 0.2s;
   }
   footer a:hover { color: #e8d5a3; }
+
+  /* ── Social Follow Links ── */
+  .social-follow {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+
+  .social-follow a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .social-follow a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .fb-follow { background: #1877f2; }
+  .ig-follow { background: #e4405f; }
+  .tw-follow { background: #000; }
+  .in-follow { background: #0a66c2; }
+
+  /* ── Fiverr Button ── */
+  .fiverr-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #1dbf73 0%, #13a450 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px 8px;
+  }
+
+  .fiverr-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(29, 191, 115, 0.3);
+  }
 </style>
 </head>
 
@@ -325,6 +377,17 @@
     <a href="https://mauriceudom.org/contact">Contact</a>
     <a href="https://selar.com/m/maurice-udom1">Books</a>
   </nav>
+
+  <!-- Social Follow Bar -->
+  <div style="background: #f5f1eb; padding: 15px 24px; text-align: center;">
+    <p style="margin-bottom: 10px; color: #666; font-size: 13px;">Follow Maurice Udom on Social Media</p>
+    <div class="social-follow">
+      <a href="https://www.facebook.com/maurice.udom.7/" target="_blank" class="fb-follow" title="Follow on Facebook">f</a>
+      <a href="https://www.instagram.com/udom731095/" target="_blank" class="ig-follow" title="Follow on Instagram">📷</a>
+      <a href="https://x.com/MauriceUdo6108" target="_blank" class="tw-follow" title="Follow on X/Twitter">𝕏</a>
+      <a href="https://www.linkedin.com/feed/" target="_blank" class="in-follow" title="Connect on LinkedIn">in</a>
+    </div>
+  </div>
 
   <!-- ══════════════════════════════════════════════════════════════ -->
   <!-- MAIN CONTENT -->
@@ -371,22 +434,10 @@
             <span class="post-tag">Week 1</span>
             <span class="read-arrow">Read →</span>
           </div>
-        </a> 
+        </a>
       </div>
     </div>
-</a>
-     
-            <a class="post-card" href="https://mauriceudom.org/blog-child-development-week2.html">
-          <h3>Child Development Week 2: Language Development in Early Childhood</h3>
-          <p>From first sounds to first sentences — understand how babies learn language and what you can do to support this milestone.</p>
-          <div class="post-meta">
-            <span class="post-tag">Child Development</span>
-            <span class="post-tag">Week 2</span>
-            <span class="read-arrow">Read →</span>
-          </div>
-        </a>
-        
-      </div>
+
     <!-- SERIES 2: African Literature & Drama -->
     <div class="category cat-literature">
       <div class="category-toggle" onclick="toggleCategory(this)">
@@ -652,16 +703,24 @@
       <p>Seven published works across drama, satire, comedy and academic scholarship — available now.</p>
       <a class="cta-btn" href="https://selar.com/m/maurice-udom1" target="_blank">Browse on Selar</a>
       <a class="cta-btn" href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank">Browse on Amazon</a>
+      <a class="cta-btn" href="https://www.fiverr.com/sellers/mauriceudom/edit" target="_blank" style="background: #1dbf73;">Hire on Fiverr</a>
     </div>
 
   </div>
 
   <footer>
+    <!-- Social Follow Links -->
+    <div class="social-follow">
+      <a href="https://www.facebook.com/maurice.udom.7/" target="_blank" class="fb-follow" title="Follow on Facebook">f</a>
+      <a href="https://www.instagram.com/udom731095/" target="_blank" class="ig-follow" title="Follow on Instagram">📷</a>
+      <a href="https://x.com/MauriceUdo6108" target="_blank" class="tw-follow" title="Follow on X/Twitter">𝕏</a>
+      <a href="https://www.linkedin.com/feed/" target="_blank" class="in-follow" title="Connect on LinkedIn">in</a>
+    </div>
+
     &copy; 2026 Maurice Udom &middot; <a href="https://mauriceudom.org">mauriceudom.org</a> &middot;
-    <a href="https://facebook.com/mauriceudom" target="_blank">Facebook</a> &middot;
-    <a href="https://instagram.com/mauriceudom" target="_blank">Instagram</a> &middot;
-    <a href="https://x.com/mauriceudom" target="_blank">X / Twitter</a> &middot;
-    <a href="https://linkedin.com/in/mauriceudom" target="_blank">LinkedIn</a>
+    <a href="https://www.fiverr.com/sellers/mauriceudom/edit" target="_blank">Fiverr</a> &middot;
+    <a href="https://selar.com/m/maurice-udom1" target="_blank">Books</a> &middot;
+    <a href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank">Amazon</a>
     <br><br>
     <a href="https://mauriceudom.org/privacy-policy.html">Privacy Policy</a> &middot;
     <a href="https://mauriceudom.org/terms-of-service.html">Terms of Service</a>
