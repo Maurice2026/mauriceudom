@@ -288,6 +288,105 @@
                 font-size: 1.3em;
             }
         }
+
+        /* ── Social Sharing Buttons ── */
+        .social-share {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+            padding: 20px;
+            background: #f5f1eb;
+            border-radius: 6px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-share-label {
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: all 0.2s;
+            border: 1px solid #ddd;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .share-facebook { background: #1877f2; color: white; border: none; }
+        .share-linkedin { background: #0a66c2; color: white; border: none; }
+        .share-twitter { background: #000; color: white; border: none; }
+        .share-whatsapp { background: #25d366; color: white; border: none; }
+        .share-email { background: #8b7355; color: white; border: none; }
+
+        /* ── Fiverr CTA ── */
+        .fiverr-cta {
+            background: linear-gradient(135deg, #1dbf73 0%, #13a450 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .fiverr-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(29, 191, 115, 0.3);
+        }
+
+        .fiverr-cta-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        /* ── Social Follow Links ── */
+        .social-follow {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .social-follow a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .social-follow a:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .fb-follow { background: #1877f2; }
+        .ig-follow { background: #e4405f; }
+        .tw-follow { background: #000; }
+        .in-follow { background: #0a66c2; }
     </style>
 </head>
 <body>
@@ -579,11 +678,41 @@
             </div>
 
         </article>
+
+        <!-- Social Share Buttons -->
+        <div class="social-share">
+            <span class="social-share-label">📤 Share this article:</span>
+            <a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://mauriceudom.org/blog-child-development.html" target="_blank">f Facebook</a>
+            <a class="share-btn share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https://mauriceudom.org/blog-child-development.html" target="_blank">in LinkedIn</a>
+            <a class="share-btn share-twitter" href="https://x.com/intent/tweet?text=Complete%20Guide%20to%20Child%20Development%20Stages&url=https://mauriceudom.org/blog-child-development.html&via=MauriceUdo6108" target="_blank">𝕏 Tweet</a>
+            <a class="share-btn share-whatsapp" href="https://wa.me/?text=Check%20this%20out:%20https://mauriceudom.org/blog-child-development.html" target="_blank">💬 WhatsApp</a>
+            <a class="share-btn share-email" href="mailto:?subject=Complete%20Guide%20to%20Child%20Development%20Stages&body=Check%20out%20this%20article:%20https://mauriceudom.org/blog-child-development.html">✉️ Email</a>
+        </div>
+
+        <!-- Fiverr CTA -->
+        <a href="https://www.fiverr.com/sellers/mauriceudom/edit" class="fiverr-cta" target="_blank">
+            <div class="fiverr-cta-icon">💼</div>
+            <strong>Need Professional Writing or Editing?</strong>
+            <p style="margin: 8px 0 0; font-size: 0.9em;">Hire me on Fiverr for academic writing, editing, content creation, and more.</p>
+        </a>
         
         <footer>
+            <!-- Social Follow Links -->
+            <div class="social-follow">
+                <a href="https://www.facebook.com/maurice.udom.7/" target="_blank" class="fb-follow" title="Follow on Facebook">f</a>
+                <a href="https://www.instagram.com/udom731095/" target="_blank" class="ig-follow" title="Follow on Instagram">📷</a>
+                <a href="https://x.com/MauriceUdo6108" target="_blank" class="tw-follow" title="Follow on X/Twitter">𝕏</a>
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="in-follow" title="Connect on LinkedIn">in</a>
+            </div>
+
             <a href="https://mauriceudom.org/blog-index.html">← Back to Blog</a>
             <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
-            <p>© 2026 Maurice Udom | <a href="https://facebook.com/mauriceudom">Facebook</a> <a href="https://instagram.com/mauriceudom">Instagram</a> <a href="https://x.com/mauriceudom">X / Twitter</a></p>
+            <p>© 2026 Maurice Udom | 
+                <a href="https://www.facebook.com/maurice.udom.7/" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/udom731095/" target="_blank">Instagram</a> | 
+                <a href="https://x.com/MauriceUdo6108" target="_blank">X / Twitter</a> |
+                <a href="https://www.fiverr.com/sellers/mauriceudom/edit" target="_blank">Fiverr</a>
+            </p>
         </footer>
     </div>
 </body>
