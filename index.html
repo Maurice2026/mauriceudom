@@ -28,7 +28,7 @@
 html{scroll-behavior:smooth;}
 body{font-family:'Lato',sans-serif;overflow-x:visible;}
 /* ══ NAV ══ */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:13px 40px;background:rgba(2,15,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(100,180,255,0.3);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:13px 40px;background:rgba(2,15,40,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(100,180,255,0.3);}
 .nav-logo{font-family:'Cinzel',serif;font-size:0.95rem;color:#7dd3fc;letter-spacing:0.18em;text-decoration:none;}
 .nav-links{display:flex;gap:18px;list-style:none;}
 .nav-links a{color:#ffffff;text-decoration:none;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;font-family:'Cinzel',serif;transition:color 0.3s;}
@@ -460,13 +460,14 @@ footer{background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 50%,#1e40af 100%);pa
     <li><a href="#mauriceedit" class="nav-edit">✏️ maurice@edit</a></li>
     <li><a href="#slide6" style="color:#ffffff;">Reviews</a></li>
     <li><a href="#slide7" style="color:#ffffff;">Buy Books</a></li>
-  https://www.patreon.com/c/MauriceUdom  
-  </ul>
+    <li><a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color:#ff424d;"><i class="fab fa-patreon"></i> Patreon</a></li>
+    </ul>
   <div class="nav-social">
     <a href="https://facebook.com/mauriceudom" target="_blank" style="color:#1877f2;"><i class="fab fa-facebook-f"></i></a>
     <a href="https://instagram.com/mauriceudom" target="_blank" style="color:#e1306c;"><i class="fab fa-instagram"></i></a>
     <a href="https://x.com/mauriceudom" target="_blank" style="color:#ffffff;"><i class="fab fa-x-twitter"></i></a>
     <a href="https://linkedin.com/in/mauriceudom" target="_blank" style="color:#0a66c2;"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color:#ff424d;"><i class="fab fa-patreon"></i></a>
   </div>
 </ul>
    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -488,7 +489,7 @@ footer{background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 50%,#1e40af 100%);pa
     <a href="https://www.pinterest.com/udommaurice" target="_blank"><i class="fab fa-pinterest ti-pinterest"></i> Pinterest</a>
     <a href="https://corpus.byu.edu" target="_blank" class="ticker-item"><i class="fas fa-book-open ti-co"></i><span class="tl-co">Corpus</span></a>
     <a href="https://selar.com/m/maurice-udom1" target="_blank" class="ticker-item"><i class="fas fa-shopping-bag ti-sl"></i><span class="tl-sl">Selar Store</span></a> 
-    https://www.patreon.com/c/MauriceUdom
+    <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" class="ticker-item" style="color:#ff424d;"><i class="fab fa-patreon" style="color:#ff424d;"></i><span style="color:#ff424d;font-weight:600;">Patreon</span></a>
     <a href="https://www.amazon.com/s?k=Maurice+Udom" target="_blank" class="ticker-item"><i class="fab fa-amazon ti-az"></i><span class="tl-az">Amazon</span></a>
     <a href="https://scholar.google.com/scholar?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-graduation-cap ti-gs"></i><span class="tl-gs">Google Scholar</span></a>
     <a href="https://www.researchgate.net/search?q=Maurice+Udom" target="_blank" class="ticker-item"><i class="fas fa-flask ti-rg"></i><span class="tl-rg">ResearchGate</span></a>
@@ -501,7 +502,7 @@ footer{background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 50%,#1e40af 100%);pa
     <a href="https://www.pinterest.com/udommaurice" target="_blank"><i class="fab fa-pinterest ti-pinterest"></i> Pinterest</a>
     <a href="https://corpus.byu.edu" target="_blank" class="ticker-item"><i class="fas fa-book-open ti-co"></i><span class="tl-co">Corpus</span></a>
     <a href="https://selar.com/m/maurice-udom1" target="_blank" class="ticker-item"><i class="fas fa-shopping-bag ti-sl"></i><span class="tl-sl">Selar Store</span></a>
-  https://www.patreon.com/c/MauriceUdom  
+    <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" class="ticker-item" style="color:#ff424d;"><i class="fab fa-patreon" style="color:#ff424d;"></i><span style="color:#ff424d;font-weight:600;">Patreon</span></a>
   </div>
 </div>
 
@@ -584,57 +585,69 @@ footer{background:linear-gradient(160deg,#1e3a8a 0%,#1d4ed8 50%,#1e40af 100%);pa
   </div>
 </section>
 
-<section id="recent-blogs" style="background: #fff; padding: 80px 24px;">
+<section id="recent-lectures" style="background: #fff; padding: 80px 24px;">
   <div style="max-width: 1200px; margin: 0 auto;">
     <div style="display: flex; justify-content: justify-between; align-items: flex-end; margin-bottom: 40px; border-bottom: 2px solid #f1f5f9; padding-bottom: 20px;">
       <div>
-        <h2 style="font-family: 'Cinzel', serif; color: #020b1c; font-size: 2rem; margin: 0;">Recent Blog Posts</h2>
+        <h2 style="font-family: 'Cinzel', serif; color: #020b1c; font-size: 2rem; margin: 0;">Recent Lectures</h2>
       </div>
-    https://www.patreon.com/c/MauriceUdom  
+      <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="background: #020b1c; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">View All Lectures</a>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
       <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
-        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;"><a href="blog-literature-review.html" style="text-decoration: none; color: #0f172a;">How to Structure a Literature Review</a></h3>
-        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Master the thematic approach to research synthesis. Stop summarizing and start analyzing.</p>
-        <a href="blog-literature-review.html" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Read Article →</a>
+        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;">The Art of Academic Writing</h3>
+        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Master the craft of scholarly excellence. Learn structure, clarity, and impact in academic discourse.</p>
+        <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Watch Lecture →</a>
       </div>
       <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
-        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;"><a href="blog-nigerian-drama-evolution.html" style="text-decoration: none; color: #0f172a;">The Evolution of Nigerian Drama</a></h3>
-        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">A comprehensive survey of a 60-year dramatic tradition from Soyinka to the new generation.</p>
-        <a href="blog-nigerian-drama-evolution.html" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Read Article →</a>
+        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;">Building Resilient Children</h3>
+        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">A parent's guide to raising confident kids. Psychological insights for emotional development and resilience.</p>
+        <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Watch Lecture →</a>
       </div>
     </div>
   </div>
 </section>
-<section id="recent-blogs" style="background: #fff; padding: 100px 24px;">
+<section id="recent-lectures-2" style="background: #fff; padding: 100px 24px;">
   <div style="max-width: 1200px; margin: 0 auto;">
     <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; border-bottom: 2px solid #f1f5f9; padding-bottom: 20px;">
       <div>
         <p class="s2-label" style="margin-bottom: 5px;">The Scholar's Desk</p>
-        <h2 class="s2-title" style="margin-bottom: 0;">Recent Blog Posts</h2>
+        <h2 class="s2-title" style="margin-bottom: 0;">Recent Lectures</h2>
       </div>
-    https://www.patreon.com/c/MauriceUdom  
+      <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" class="s1-cta" style="background: #020b1c; box-shadow: none; font-size: 0.7rem; padding: 10px 25px;">View All Lectures</a>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
       <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
         <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em;">Academic Writing</span>
-        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;"><a href="blog-literature-review.html" style="text-decoration: none; color: #0f172a;">How to Structure a Literature Review</a></h3>
-        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Master the thematic approach to research synthesis. Stop summarizing and start analyzing with this 5-step roadmap.</p>
-        <a href="blog-literature-review.html" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Read Article <i class="fas fa-arrow-right"></i></a>
+        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;">The Thesis Statement: Heart of Your Paper</h3>
+        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Learn how to craft powerful thesis statements. Master argumentation and set the direction for your entire paper.</p>
+        <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Watch Lecture <i class="fas fa-arrow-right"></i></a>
       </div>
       <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
-        <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em;">Nigerian Literature</span>
-        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;"><a href="blog-nigerian-drama-evolution.html" style="text-decoration: none; color: #0f172a;">The Evolution of Nigerian Drama</a></h3>
-        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">A comprehensive survey of a 60-year dramatic tradition. Explore how pioneering voices shaped the future of theatre.</p>
-        <a href="blog-nigerian-drama-evolution.html" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Read Article <i class="fas fa-arrow-right"></i></a>
+        <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em;">Marriage & Relationships</span>
+        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;">Communication: The Foundation of Trust</h3>
+        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Discover how communication shapes relationships. Tools and techniques for deeper connection and understanding.</p>
+        <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Watch Lecture <i class="fas fa-arrow-right"></i></a>
       </div>
       <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
-        <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em;">Self-Publishing</span>
-        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;"><a href="blog-journey-to-publication.html" style="text-decoration: none; color: #0f172a;">The Journey to Publication</a></h3>
-        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Transform your manuscript into a global release. Lessons learned from publishing seven works on Amazon and Selar.</p>
-        <a href="blog-journey-to-publication.html" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Read Article <i class="fas fa-arrow-right"></i></a>
+        <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em;">Parenting</span>
+        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;">Raising Resilient Children</h3>
+        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Build emotional resilience in your kids. Proven strategies for confident, adaptable, strong children.</p>
+        <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Watch Lecture <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
+        <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em;">Publishing</span>
+        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;">From Manuscript to Published Author</h3>
+        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Navigate the publishing journey. Learn strategies that led to multiple successful publications across platforms.</p>
+        <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Watch Lecture <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">
+        <span style="font-size: 0.7rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em;">Literature & Writing</span>
+        <h3 style="font-family: 'Playfair Display', serif; margin: 10px 0;">The Evolution of African Literature</h3>
+        <p style="color: #475569; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px;">Explore how African voices shape global literature. From tradition to contemporary innovation and impact.</p>
+        <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="color: #3b82f6; font-size: 0.8rem; font-weight: 700; text-decoration: none;">Watch Lecture <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
