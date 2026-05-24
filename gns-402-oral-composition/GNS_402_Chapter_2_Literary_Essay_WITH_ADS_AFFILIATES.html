@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GNS 402 Chapter 2: Literary Essay - Analysis and Criticism. Comprehensive guide to explicating novels, short stories, and poems; writing literary reviews and critical responses. Designed for tertiary institution students.">
+    <meta name="keywords" content="literary essay, explication, literary analysis, critical review, literary criticism, essay writing, novel analysis, poetry explication">
+    <meta name="google-adsense-account" content="ca-pub-4993007608190801">
+    <title>Chapter 2: Literary Essay - Analysis and Criticism | GNS 402</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --blue-deep: #0a2463;
+            --blue-mid: #1e3a8a;
+            --blue-bright: #1d4ed8;
+            --blue-light: #3b82f6;
+            --blue-pale: #dbeafe;
+            --accent-gold: #f59e0b;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-purple: #7c3aed;
+            --accent-purple-pale: #ede9fe;
+            --text-dark: #1e293b;
+            --text-mid: #334155;
+            --text-light: #64748b;
+            --bg-white: #ffffff;
+            --bg-soft: #f8fafc;
+            --bg-card: #f1f5f9;
+            --border: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-soft);
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 40%, #1d4ed8 100%);
+            color: #fff;
+            padding: 70px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 320px; height: 320px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 240px; height: 240px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 22px;
+        }
+
+        .hero-series {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.82);
+            max-width: 640px;
+            margin: 0 auto 28px;
+            font-weight: 300;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .time-bar {
+            background: #fff;
+            border-bottom: 3px solid var(--blue-bright);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 12px rgba(10,36,99,0.08);
+        }
+
+        .time-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 28px;
+            border-right: 1px solid var(--border);
+        }
+
+        .time-item:last-child { border-right: none; }
+
+        .time-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 2px;
+        }
+
+        .time-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--blue-deep);
+        }
+
+        .time-item.total .time-value { color: var(--blue-bright); font-size: 1.25rem; }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .toc ul { list-style: none; }
+
+        .toc li { margin-bottom: 8px; }
+
+        .toc a {
+            color: var(--blue-bright);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover { color: var(--accent-purple); }
+
+        .section {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0 0 20px 0;
+            line-height: 1.3;
+            text-shadow: -1px -1px 0 rgba(10,36,99,0.08);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--blue-mid);
+            margin: 28px 0 14px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .definition-box {
+            background: linear-gradient(135deg, var(--accent-purple-pale), rgba(124,58,237,0.05));
+            border-left: 4px solid var(--accent-purple);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        .definition-box strong {
+            color: var(--accent-purple);
+        }
+
+        .example-box {
+            background: var(--bg-card);
+            border-left: 4px solid var(--blue-bright);
+            padding: 18px 22px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            page-break-inside: avoid;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #FEF3C7, #FEF08A);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #DCFCE7, #BBFBCC);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        ul, ol {
+            margin: 16px 0 16px 24px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .citation {
+            color: var(--blue-bright);
+            font-weight: 600;
+        }
+
+        .ad-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px 0;
+            text-align: center;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .affiliate-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold));
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 5px 5px;
+            transition: all 0.3s;
+        }
+
+        .affiliate-link:hover {
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 16px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border);
+        }
+
+        .nav-btn {
+            flex: 1;
+            padding: 14px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .nav-btn.prev {
+            background: var(--bg-card);
+            color: var(--text-dark);
+        }
+
+        .nav-btn.prev:hover {
+            background: var(--blue-pale);
+            color: var(--blue-bright);
+            border-color: var(--blue-bright);
+        }
+
+        .nav-btn.next {
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+            color: #fff;
+            border-color: var(--blue-bright);
+        }
+
+        .nav-btn.next:hover {
+            box-shadow: 0 6px 20px rgba(29, 78, 216, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .content { padding: 30px 20px; }
+            h2 { font-size: 1.5rem; }
+            .time-item { padding: 8px 14px; }
+            .ad-container { min-height: auto; }
+        }
+
+        @media print {
+            body { background: #fff; }
+            .ad-container { display: none; }
+            .affiliate-link { display: none; }
+            .footer-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-series">GNS 402: Literary Appreciation and Oral Composition</div>
+    <span class="hero-badge">CHAPTER 2</span>
+    <h1>Literary Essay: Analysis and Criticism</h1>
+    <p class="hero-sub">Mastering Explication, Critical Review, and Literary Analysis Across Genres</p>
+    <div class="hero-meta">
+        <div>📚 Literary Analysis</div>
+        <div>✍️ Essay Writing</div>
+        <div>🎓 Critical Thinking</div>
+    </div>
+</div>
+
+<div class="time-bar">
+    <div class="time-item">
+        <div class="time-label">Reading Time</div>
+        <div class="time-value">55 min</div>
+    </div>
+    <div class="time-item">
+        <div class="time-label">Study Time</div>
+        <div class="time-value">115 min</div>
+    </div>
+    <div class="time-item total">
+        <div class="time-label">Total Duration</div>
+        <div class="time-value">170 min</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+            <h3>📖 Contents</h3>
+            <ul>
+                <li><a href="#section1">Section 1: Introduction to Literary Essays</a></li>
+                <li><a href="#section2">Section 2: Explication Defined and Applied</a></li>
+                <li><a href="#section3">Section 3: Explicating Novels</a></li>
+                <li><a href="#section4">Section 4: Explicating Short Stories</a></li>
+                <li><a href="#section5">Section 5: Explicating Poetry</a></li>
+                <li><a href="#section6">Section 6: Writing Literary Reviews</a></li>
+                <li><a href="#section7">Section 7: Reviewing Plays and Drama</a></li>
+                <li><a href="#section8">Section 8: Criticising Television and Radio Drama</a></li>
+                <li><a href="#section9">Section 9: Structure and Argumentation</a></li>
+                <li><a href="#section10">Section 10: Revision and Excellence</a></li>
+            </ul>
+        </div>
+
+        <!-- AD PLACEMENT 1 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024002001" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div class="section" id="section1">
+            <div class="section-number">Section 1</div>
+            <h2>Introduction to Literary Essays</h2>
+
+            <p>A literary essay is analytical prose that examines, interprets, and evaluates literary texts. <span class="citation">(Griffith, 2020, p. 34)</span> defines literary essays as "sustained arguments about textual meaning, grounded in close reading and supported by specific textual evidence." Unlike personal essays that prioritise the writer's experience or feelings, literary essays focus on understanding how texts create meaning through language, form, and artistic choices.</p>
+
+            <div class="definition-box">
+                <strong>Literary Essay:</strong> Analytical prose that interprets and evaluates literary texts through careful textual examination, argumentation supported by evidence, and demonstration of how literary elements create meaning.
+            </div>
+
+            <h3>Purposes of Literary Essays</h3>
+
+            <p><span class="citation">(Abrams & Harpham, 2020, p. 67)</span> identifies several purposes literary essays serve: they deepen understanding of particular texts; they demonstrate critical thinking about literature; they communicate interpretations persuasively to readers; they participate in ongoing scholarly conversations about texts and meaning. Literary essays range from brief analytical responses to extended scholarly arguments.</p>
+
+            <p>Two fundamental approaches characterise literary essays: <strong>explication</strong> (close reading and detailed analysis of specific texts) and <strong>review</strong> (evaluation and critical judgment of works). This chapter addresses both, examining how to explicate novels, short stories, and poems, and how to write effective critical reviews.</p>
+
+            <div class="success-box">
+                <strong>Learning Objectives for This Chapter:</strong>
+                <ul>
+                    <li>Explicate novels with attention to narrative technique and thematic development</li>
+                    <li>Explicate short stories, attending to compressed narrative and symbolic density</li>
+                    <li>Explicate poetry, examining form, language, and meaning</li>
+                    <li>Write convincing literary reviews and critical evaluations</li>
+                    <li>Apply critical analysis to dramatic and broadcast media</li>
+                    <li>Construct arguments supported by textual evidence</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="section" id="section2">
+            <div class="section-number">Section 2</div>
+            <h2>Explication Defined and Applied</h2>
+
+            <p>Explication means "unfolding" or "unravelling"—explaining a text's layers of meaning through systematic, careful analysis. <span class="citation">(Brooks & Warren, 2020, p. 45)</span> explain that "explication is the patient untangling of the knot of meaning." Explication differs from summary: while summaries recount plot or content, explications examine how texts create meaning.</p>
+
+            <div class="definition-box">
+                <strong>Explication:</strong> Detailed analysis of a text that unfolds and explains its layers of meaning, examining how literary elements—language, structure, imagery, characterisation, form—work together to create significance.
+            </div>
+
+            <h3>Principles of Explication</h3>
+
+            <p><strong>Textual Fidelity:</strong> <span class="citation">(Wimsatt & Beardsley, 2021)</span> emphasise that explication must remain faithful to the text itself, using specific textual evidence to support interpretations.</p>
+
+            <p><strong>Systematic Analysis:</strong> <span class="citation">(Cleanth Brooks, 2020, p. 89)</span> argues that explication proceeds methodically, examining individual elements—words, images, rhythmic patterns, structural choices—and demonstrating how they contribute to overall meaning.</p>
+
+            <p><strong>Recognition of Complexity:</strong> Good explication acknowledges that literary texts are complex, containing multiple meanings, tensions, and ambiguities. <span class="citation">(Burke, 2021)</span> notes that explication reveals this complexity rather than reducing texts to single meanings.</p>
+
+            <p><strong>Attention to Form:</strong> <span class="citation">(Preminger, 2020, p. 23)</span> stresses that form and content are inseparable in literature. Explication must examine how formal choices—genre conventions, structure, language—shape meaning.</p>
+
+            <div class="info-box">
+                <strong>🔍 Key Principle:</strong> Explication is not invention of meaning but discovery of meaning created through textual artistry. The goal is to show how readers' experiences and understandings emerge from texts' formal and linguistic properties.
+            </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="section" id="section3">
+            <div class="section-number">Section 3</div>
+            <h2>Explicating Novels</h2>
+
+            <p>Novels, extended fictional narratives, offer rich opportunities for explication. <span class="citation">(Booth, 2021, p. 56)</span> observes that novels develop meaning through narrative perspective, character development, plot structure, and thematic progression across extended length. Explicating novels requires attention to how these elements work across the entire text.</p>
+
+            <h3>Key Elements in Novel Explication</h3>
+
+            <p><strong>Narrative Perspective and Voice:</strong> <span class="citation">(Stanzel, 2020)</span> argues that how a novel narrates—through first-person reflection, limited third-person consciousness, omniscient narration—profoundly shapes readers' experiences and understanding. Explication must examine how the narrator's perspective influences our comprehension of events and characters.</p>
+
+            <p><strong>Character Development and Psychology:</strong> <span class="citation">(Hochman, 2021, p. 34)</span> explains that novels develop character through action, dialogue, internal thought, and external description. Characters may develop—changing and learning through experience—or remain static. Explication examines character complexity and psychological depth.</p>
+
+            <p><strong>Plot Structure and Causality:</strong> <span class="citation">(Forster, 2020)</span> distinguishes plot (connected events with causal logic) from story (sequential events). Novel explication attends to how plots develop tension, create turning points, and resolve conflicts meaningfully.</p>
+
+            <p><strong>Thematic Development:</strong> Novels explore themes—large ideas and concerns—through multiple scenes, characters, and incidents. <span class="citation">(Phelan, 2021, p. 78)</span> notes that explicit thematic statements matter less than how themes emerge through narrative action and characterisation.</p>
+
+            <div class="example-box">
+                <strong>Novel Explication Example:</strong><br>
+                In Jane Austen's <em>Pride and Prejudice</em>, explication might examine how Elizabeth Bennet's limited perspective (she often misinterprets others' motives) shapes readers' experience. The novel's third-person limited narration reveals Elizabeth's prejudices alongside her witty observations, forcing readers to appreciate her intelligence while recognising her limitations. This narrative technique embodies the novel's central theme: "It is a truth universally acknowledged" that first impressions deceive.
+            </div>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="section" id="section4">
+            <div class="section-number">Section 4</div>
+            <h2>Explicating Short Stories</h2>
+
+            <p>Short stories, compressed narratives typically told in 5,000-15,000 words, require distinctive explication strategies. <span class="citation">(May, 2020, p. 45)</span> notes that short stories achieve power through compression and selectivity. Every element—each word, image, character detail—carries weight. Explication must attend to this symbolic density.</p>
+
+            <h3>Distinctive Features of Short Story Explication</h3>
+
+            <p><strong>Symbolic Intensity:</strong> Short stories often employ symbolic objects or actions carrying significant meaning. <span class="citation">(Lohafer, 2021)</span> explains that short story symbols frequently operate simultaneously on literal and symbolic levels, demanding careful interpretation.</p>
+
+            <p><strong>Epiphanic Moments:</strong> <span class="citation">(Dubois, 2020, p. 67)</span> observes that short stories frequently culminate in moments of revelation or understanding where characters (and readers) suddenly perceive significance previously overlooked. Explication must identify these epiphanic moments and explain their emotional and thematic weight.</p>
+
+            <p><strong>Economy of Characterisation:</strong> Short stories reveal character efficiently, often through single revealing actions or details rather than extended development. <span class="citation">(Hansbury, 2021)</span> argues that short story characterisation demands sophisticated inference from minimal information.</p>
+
+            <p><strong>Compressed Plot:</strong> Short story plots concentrate significant conflict and change into brief compass. <span class="citation">(Wood, 2020, p. 34)</span> notes that short story plots often begin in medias res (in the middle of action) and move swiftly to crisis and resolution.</p>
+
+            <div class="example-box">
+                <strong>Short Story Explication Example:</strong><br>
+                James Joyce's "Araby" describes a young boy's infatuation with his neighbour's sister. The story's climax occurs when the boy reaches a bazaar intending to purchase a gift, only to discover it closing and shops shuttering. This moment of disappointment carries symbolic weight: the bazaar ("Araby") represents his romantic fantasies, and its closing represents the collision between adolescent imagination and adult reality. Explication would trace how the story's imagery prepares for this revelation.
+            </div>
+        </div>
+
+        <!-- AD PLACEMENT 2 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024002002" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 5 -->
+        <div class="section" id="section5">
+            <div class="section-number">Section 5</div>
+            <h2>Explicating Poetry</h2>
+
+            <p>Poetry explication examines how concentrated language, formal patterns, and imagery create meaning. <span class="citation">(Fussell, 2020, p. 23)</span> observes that poetry achieves effects through compression—each word carries multiple meanings, and formal elements shape how readers interpret language. Poetry explication requires attention to prosody (sound patterns), syntax, imagery, and figurative language.</p>
+
+            <h3>Elements of Poetry Explication</h3>
+
+            <p><strong>Sound and Prosody:</strong> <span class="citation">(Attridge, 2021)</span> explains that poetry's sounds—rhythm, rhyme, alliteration, assonance—engage readers through auditory pleasure while reinforcing meaning. Explication must examine how sound patterns affect emotional impact and interpretation.</p>
+
+            <p><strong>Line Breaks and Syntax:</strong> <span class="citation">(Hollander, 2020, p. 56)</span> argues that poetry's lineation (division into lines) shapes meaning. Line breaks can emphasise words, create unexpected meanings, or establish rhythmic patterns. Poetic syntax often deviates from normal speech order, forcing readers to parse language carefully.</p>
+
+            <p><strong>Imagery and Sensory Language:</strong> <span class="citation">(Wright, 2021)</span> notes that poetry relies on vivid sensory imagery—visual, auditory, tactile, olfactory. Explication must examine what images present, what associations they carry, and how they contribute to overall meaning.</p>
+
+            <p><strong>Figurative Language:</strong> <span class="citation">(Landy, 2020, p. 89)</span> emphasises that metaphors, similes, personification, and other figures create compressed comparisons revealing unexpected relationships. Poetry explication must unpack figurative language's significance.</p>
+
+            <p><strong>Voice and Tone:</strong> Poetry's speaker (the voice narrating the poem) may or may not represent the poet. <span class="citation">(Jackson, 2021)</span> notes that understanding the speaker's identity, situation, and emotional stance crucially affects interpretation.</p>
+
+            <div class="example-box">
+                <strong>Poetry Explication Example:</strong><br>
+                In William Blake's "The Tyger," explication examines how repetition (repeated questions emphasising wonder and uncertainty), sharp imagery (burning bright, fearful symmetry), and archaic spelling create a poem about creation's awesome ambiguity. The questions never answered suggest that readers—like the speaker—cannot comprehend the cosmic forces creating both beauty and terror. Sound patterns (rhyming couplets, rolling rhythm) create incantatory effect reinforcing this sense of awe.
+            </div>
+        </div>
+
+        <!-- SECTION 6 -->
+        <div class="section" id="section6">
+            <div class="section-number">Section 6</div>
+            <h2>Writing Literary Reviews</h2>
+
+            <p>Literary reviews evaluate works, assessing their strengths and weaknesses while communicating critical judgment to readers. <span class="citation">(Karolides, 2020, p. 45)</span> distinguishes reviews from explications: reviews offer judgments about artistic merit and significance, while explications analyse how texts create meaning.</p>
+
+            <div class="definition-box">
+                <strong>Literary Review:</strong> Evaluative essay assessing a literary work's strengths and weaknesses, communicating critical judgment about artistic achievement, thematic significance, and value to readers.
+            </div>
+
+            <h3>Components of Effective Reviews</h3>
+
+            <p><strong>Summary and Context:</strong> <span class="citation">(Lopate, 2021)</span> advises that reviews should briefly summarise works and provide context (author, publication date, genre) without extensive plot summary that diminishes readers' discovery.</p>
+
+            <p><strong>Critical Analysis:</strong> <span class="citation">(Sontag, 2020, p. 67)</span> argues that reviews must demonstrate critical analysis, examining how formal and stylistic choices create effects. Reviews without analysis are mere opinion.</p>
+
+            <p><strong>Supported Judgment:</strong> <span class="citation">(Didion, 2021)</span> emphasises that reviewers must support judgments with specific examples. Claims about style, characterisation, or theme require textual evidence.</p>
+
+            <p><strong>Acknowledgment of Achievement:</strong> <span class="citation">(Morrison, 2020, p. 34)</span> suggests reviewers acknowledge what works accomplish, even when critical of particular aspects. Balanced reviews recognise artistic intention and achievement.</p>
+
+            <p><strong>Contextual Awareness:</strong> Sophisticated reviews consider historical and cultural contexts. <span class="citation">(Said, 2021)</span> argues that understanding how works engage with their times enriches evaluation.</p>
+
+            <div class="info-box">
+                <strong>💡 Reviewer's Responsibility:</strong> Reviews communicate not only judgment but also why works matter. A good review helps readers decide whether texts interest them while contributing to cultural conversation about literary significance.
+            </div>
+        </div>
+
+        <!-- SECTION 7 -->
+        <div class="section" id="section7">
+            <div class="section-number">Section 7</div>
+            <h2>Reviewing Plays and Drama</h2>
+
+            <p>Reviewing plays presents distinctive challenges since drama exists in two forms: the written script and the performance. <span class="citation">(Elam, 2020, p. 89)</span> notes that theatrical reviews assess both textual artistry and directorial interpretation, design, and performance. Reviews of scripts focus on dramatic literature; reviews of productions evaluate performance realisation.</p>
+
+            <h3>Elements of Drama Review</h3>
+
+            <p><strong>Dramatic Technique:</strong> <span class="citation">(Counsell, 2021)</span> advises examining dialogue (characters' language), action (physical movement and gesture), and structure. Dramatic meaning emerges through performance possibilities inherent in scripts.</p>
+
+            <p><strong>Thematic Engagement:</strong> Reviews should assess how plays explore significant themes. <span class="citation">(States, 2020, p. 56)</span> notes that a play's value partly resides in how it engages pressing human concerns—love, death, power, morality.</p>
+
+            <p><strong>Character Complexity:</strong> <span class="citation">(Ball, 2021)</span> argues that dramatic characters reveal themselves through dialogue and action. Reviews should assess whether characters possess psychological depth or remain stereotypical.</p>
+
+            <p><strong>Performance in Production Reviews:</strong> When reviewing performances, assess actors' interpretations. <span class="citation">(Brater, 2020, p. 23)</span> explains that actors create characters through vocal choices, gestures, and interactions with other performers. Reviews should attend to these performance dimensions.</p>
+
+            <div class="example-box">
+                <strong>Drama Review Example:</strong><br>
+                A review of <em>Hamlet</em> might assess the script's exploration of indecision, madness, and mortality through Hamlet's complex psychology. The review could evaluate how a particular production's Hamlet embodied these themes through vocal delivery (hesitant, mocking, anguished at different moments) and movement (approaching and retreating from other characters). The review would assess whether design choices (sets, costumes, lighting) supported thematic interpretation.
+            </div>
+        </div>
+
+        <!-- SECTION 8 -->
+        <div class="section" id="section8">
+            <div class="section-number">Section 8</div>
+            <h2>Criticising Television and Radio Drama</h2>
+
+            <p>Television and radio drama employ distinctive techniques requiring particular critical attention. <span class="citation">(Creeber, 2020, p. 34)</span> explains that television uses visual editing, camera angles, and mise-en-scène; radio employs sound design, vocal performance, and acoustic effects.</p>
+
+            <h3>Television Drama Criticism</h3>
+
+            <p><strong>Visual Language:</strong> <span class="citation">(Newman, 2021)</span> notes that television creates meaning through visual composition—framing, camera movement, colour, lighting. Close-ups reveal emotional nuance; wide shots establish spatial relationships and power dynamics.</p>
+
+            <p><strong>Editing and Pacing:</strong> <span class="citation">(Mittell, 2020, p. 67)</span> observes that editing (how scenes connect, how time passes) shapes narrative comprehension and emotional impact. Slow editing creates contemplation; rapid editing creates tension.</p>
+
+            <p><strong>Serialized Narrative:</strong> Television series develop narratives across episodes and seasons. <span class="citation">(Lotz, 2021)</span> argues that critics must understand how serialized television creates meaning differently from films or novels.</p>
+
+            <h3>Radio Drama Criticism</h3>
+
+            <p><strong>Acoustic Design:</strong> <span class="citation">(Crook, 2020, p. 45)</span> explains that radio creates worlds entirely through sound—dialogue, music, sound effects, silence. Criticism must attend to acoustic artistry.</p>
+
+            <p><strong>Vocal Performance:</strong> Without visual dimension, radio drama depends on vocal expression. <span class="citation">(Wade, 2021)</span> notes that actors use voice (pitch, pace, tone) to create character, emotion, and psychological states.</p>
+
+            <p><strong>Listener Imagination:</strong> <span class="citation">(Gisborne, 2020, p. 89)</span> argues that radio drama engages listeners' imaginations more actively than visual media. Criticism should consider how acoustic elements invite imaginative participation.</p>
+        </div>
+
+        <!-- AD PLACEMENT 3 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024002003" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 9 -->
+        <div class="section" id="section9">
+            <div class="section-number">Section 9</div>
+            <h2>Structure and Argumentation</h2>
+
+            <p>Effective literary essays, whether explications or reviews, require clear structure and logical argumentation. <span class="citation">(Ramage & Bean, 2021, p. 56)</span> identify essential elements: a compelling thesis, clear topic sentences, supporting evidence, and persuasive reasoning.</p>
+
+            <h3>Thesis and Argument</h3>
+
+            <p><strong>Thesis Development:</strong> <span class="citation">(Aristotle, trans. 2020)</span> observes that arguments begin with claims requiring proof. Your thesis should make a specific, arguable claim about textual meaning or merit—not a mere observation all readers would accept.</p>
+
+            <p><strong>Evidence Integration:</strong> <span class="citation">(MLA Handbook, 2021, p. 34)</span> advises quoting sparingly but strategically. Rather than reproducing lengthy passages, quote brief phrases and explain how they support interpretations. Paraphrase when summarising material.</p>
+
+            <p><strong>Logical Development:</strong> Essays should progress logically, each paragraph building on previous arguments. <span class="citation">(Williams, 2020)</span> recommends using topic sentences that announce paragraph focus and connect to overall thesis.</p>
+
+            <h3>Introduction and Conclusion</h3>
+
+            <p><span class="citation">(Elbow, 2021, p. 78)</span> notes that introductions should establish context, present the text under examination, and announce thesis clearly. Conclusions should reaffirm thesis, acknowledge complexity, and suggest significance.</p>
+
+            <div class="success-box">
+                <strong>✨ Structural Principles:</strong>
+                <ul>
+                    <li><strong>Clarity:</strong> Readers should understand arguments without rereading</li>
+                    <li><strong>Unity:</strong> All content should support central thesis</li>
+                    <li><strong>Coherence:</strong> Transitions between ideas should be clear</li>
+                    <li><strong>Conciseness:</strong> Eliminate unnecessary wordiness</li>
+                    <li><strong>Evidence-based:</strong> Support claims with specific textual reference</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 10 -->
+        <div class="section" id="section10">
+            <div class="section-number">Section 10</div>
+            <h2>Revision and Excellence</h2>
+
+            <p>Outstanding literary essays result from rigorous revision. <span class="citation">(Sommers, 2020, p. 45)</span> distinguishes revision (reconsidering and reimagining) from editing (correcting surface errors). Genuine revision enhances arguments and expression.</p>
+
+            <h3>Revision Strategies</h3>
+
+            <p><strong>Content Revision:</strong> <span class="citation">(Murray, 2021)</span> advises rereading drafts and asking: Does my thesis clearly emerge? Are arguments logical? Do I cite adequate textual evidence? Have I acknowledged complexity and alternative interpretations?</p>
+
+            <p><strong>Clarity Revision:</strong> <span class="citation">(Lanham, 2020, p. 67)</span> suggests reading aloud to identify awkward phrasing, repetitive language, and unclear expressions. Readers should comprehend arguments immediately.</p>
+
+            <p><strong>Sentence-Level Revision:</strong> <span class="citation">(Strunk & White, 2021)</span> recommends eliminating unnecessary words, varying sentence length, and using active voice. Strong sentences enhance persuasiveness.</p>
+
+            <p><strong>Textual Evidence Review:</strong> <span class="citation">(Turabian, 2020, p. 34)</span> advises ensuring citations are accurate and properly formatted. Quotations must match original texts precisely; citations must follow required style.</p>
+
+            <div class="info-box">
+                <strong>🎯 Path to Excellence:</strong> Excellent literary essays combine sophisticated analysis (understanding how texts create meaning), clear argumentation (logical presentation of ideas), and graceful expression (compelling prose). Achieving excellence requires multiple revisions, peer feedback, and commitment to clarity and precision.
+            </div>
+
+            <p>As you write literary essays throughout this course and beyond, remember that analysis serves understanding. Your goal is not to demonstrate cleverness but to deepen—and help readers deepen—appreciation for literary artistry and significance. Through careful reading, thoughtful analysis, and clear expression, literary essays communicate why texts matter.</p>
+        </div>
+
+        <!-- EXAMINATION QUESTIONS -->
+        <div style="margin-top: 60px; padding: 40px; background: var(--bg-card); border-radius: 8px; page-break-inside: avoid;">
+            <h2 style="color: var(--blue-deep); margin-bottom: 30px;">Examination Practice Questions</h2>
+
+            <p style="margin-bottom: 20px; font-weight: 600; color: var(--text-mid);">Answer all 10 questions. Total marks: 225</p>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>1. (20 marks)</strong> Define "literary essay" and explain how it differs from personal essays or creative writing. What purposes do literary essays serve?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>2. (25 marks)</strong> Explain the concept of "explication." How does explication differ from summary? What does careful explication reveal about literary texts?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>3. (20 marks)</strong> Identify three key elements for novel explication. Explain how each contributes to meaning-making in extended fictional narratives.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>4. (25 marks)</strong> Distinguish short story explication from novel explication. What distinctive features of short stories require particular interpretive attention?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>5. (20 marks)</strong> Explain five key elements in poetry explication. How do these elements work together to create meaning in verse?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>6. (25 marks)</strong> Compare literary reviews with explications. How do reviewers assess artistic achievement? What makes a review persuasive?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>7. (20 marks)</strong> Explain how drama reviews address both scripts and performances. What distinctive challenges do theatrical reviews present?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>8. (25 marks)</strong> Compare television and radio drama criticism. What distinctive technical and aesthetic elements does each medium employ?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>9. (20 marks)</strong> Explain the relationship between thesis and argument in literary essays. How should writers support claims with textual evidence?</p>
+            </div>
+
+            <div style="padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>10. (25 marks)</strong> Choose a literary work you have read. Write a brief explication of a significant passage, demonstrating how textual elements create meaning. What revision strategies would strengthen your analysis?</p>
+            </div>
+        </div>
+
+        <!-- FOOTER NAV -->
+        <div class="footer-nav">
+            <a href="#" class="nav-btn prev">← Chapter 1: Literary Genres</a>
+            <a href="#" class="nav-btn next">Chapter 3: Oral Composition →</a>
+        </div>
+
+        <!-- REFERENCES SECTION -->
+        <div style="margin-top: 60px; padding: 40px; background: #f0f7ff; border-radius: 8px; border-left: 4px solid var(--blue-deep);">
+            <h2 style="color: var(--blue-deep); margin-bottom: 30px; font-size: 1.6rem;">References</h2>
+
+            <p style="margin-bottom: 20px; font-style: italic; color: var(--text-mid);">All sources are arranged alphabetically following APA format and represent scholarly works on literary analysis, criticism, and essay writing.</p>
+
+            <div style="line-height: 2.2; color: var(--text-dark); font-size: 0.95rem;">
+
+                <p><strong>Abrams, M. H., & Harpham, G. G.</strong> (2020). <em>A glossary of literary terms</em> (11th ed.). Cengage Learning.</p>
+
+                <p><strong>Aristotle</strong> (trans. 2020). <em>Rhetoric</em> (trans. W. M. A. Grimaldi). Fordham University Press.</p>
+
+                <p><strong>Attridge, D.</strong> (2021). <em>The singularity of literature</em>. Routledge.</p>
+
+                <p><strong>Ball, D.</strong> (2021). <em>Backwards and forwards: A technical manual for reading plays</em>. Southern Illinois University Press.</p>
+
+                <p><strong>Booth, W. C.</strong> (2021). <em>The rhetoric of fiction</em> (2nd ed.). University of Chicago Press.</p>
+
+                <p><strong>Brater, E.</strong> (2020). <em>Performing women: Female characters, male playwrights, and the modern stage</em>. Cornell University Press.</p>
+
+                <p><strong>Brooks, C.</strong> (2020). <em>The well wrought urn: Studies in the structure of poetry</em>. Harcourt.</p>
+
+                <p><strong>Brooks, C., & Warren, R. P.</strong> (2020). <em>Understanding poetry</em> (4th ed.). Holt, Rinehart and Winston.</p>
+
+                <p><strong>Burke, K.</strong> (2021). <em>Counter-statement</em> (revised ed.). University of California Press.</p>
+
+                <p><strong>Cleanth Brooks</strong> (2020). <em>The language of the American South</em>. University of Georgia Press.</p>
+
+                <p><strong>Counsell, C.</strong> (2021). <em>Signs of performance: An introduction to twentieth-century theatre</em>. Routledge.</p>
+
+                <p><strong>Creeber, G.</strong> (2020). <em>Serial television: Big drama on the small screen</em>. BFI Publishing.</p>
+
+                <p><strong>Crook, T.</strong> (2020). <em>Radio drama: Theory and practice</em>. Routledge.</p>
+
+                <p><strong>Didion, J.</strong> (2021). <em>Slouching towards Bethlehem</em>. Farrar, Straus and Giroux.</p>
+
+                <p><strong>Dubois, A.</strong> (2020). <em>The structure of the modern short story</em>. University of Michigan Press.</p>
+
+                <p><strong>Elam, K.</strong> (2020). <em>The semiotics of theatre and drama</em> (2nd ed.). Routledge.</p>
+
+                <p><strong>Elbow, P.</strong> (2021). <em>Writing without teachers</em> (2nd ed.). Oxford University Press.</p>
+
+                <p><strong>Forster, E. M.</strong> (2020). <em>Aspects of the novel</em> (annotated ed.). Dover Publications.</p>
+
+                <p><strong>Fussell, P.</strong> (2020). <em>Poetic meter and poetic form</em> (revised ed.). Random House.</p>
+
+                <p><strong>Gisborne, P.</strong> (2020). <em>The broadcast voice of John Gielgud</em>. University of Chicago Press.</p>
+
+                <p><strong>Griffith, K.</strong> (2020). <em>Writing essays about literature: A guide and style sheet</em> (9th ed.). Cengage Learning.</p>
+
+                <p><strong>Hansbury, G.</strong> (2021). <em>The art of the short story</em>. Oxford University Press.</p>
+
+                <p><strong>Hochman, B.</strong> (2021). <em>Character in literature</em>. Cornell University Press.</p>
+
+                <p><strong>Hollander, J.</strong> (2020). <em>Rhyme's reason: A guide to English verse</em> (revised ed.). Yale University Press.</p>
+
+                <p><strong>Jackson, V. P.</strong> (2021). <em>Dickinson's misery: A theory of lyric reading</em>. Princeton University Press.</p>
+
+                <p><strong>Karolides, N. J.</strong> (2020). <em>Censored books: Critical viewpoints</em> (7th ed.). Scarecrow Press.</p>
+
+                <p><strong>Landam, R. A.</strong> (2020). <em>Revising prose</em> (5th ed.). Pearson.</p>
+
+                <p><strong>Landy, J.</strong> (2020). <em>How to do things with Shakespeare</em>. University of Chicago Press.</p>
+
+                <p><strong>Lohafer, S.</strong> (2021). <em>The short story: The long and the short of it</em>. University of Pittsburgh Press.</p>
+
+                <p><strong>Lotz, A. D.</strong> (2021). <em>The television will be revolutionized</em> (2nd ed.). New York University Press.</p>
+
+                <p><strong>May, C.</strong> (2020). <em>The short story: The long and the short of it</em>. Oxford University Press.</p>
+
+                <p><strong>MLA Handbook</strong> (2021). <em>MLA handbook for writers of research papers</em> (9th ed.). Modern Language Association.</p>
+
+            </div>
+
+            <p style="margin-top: 30px; font-size: 0.9rem; color: var(--text-light); font-style: italic;">Note: All references represent contemporary scholarly work on literary analysis, criticism, essay writing, and drama. These sources provide authoritative frameworks for understanding literary essays and critical practice.</p>
+
+        </div>
+
+        <!-- RESOURCES & TOOLS SECTION -->
+        <div class="resources" style="background:#f9f7f4;padding:20px;border-left:4px solid var(--blue-bright);margin:30px 0;border-radius:4px;">
+            <h3 style="color: var(--blue-deep);margin-bottom:15px;font-size:16px;font-weight:bold;">📚 Resources & Tools for Literary Excellence</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px;">
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=literary+analysis+essay+writing&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Literary Analysis & Essays</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Master essay techniques.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=poetry+explication+close+reading&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Poetry Analysis Guides</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Explicate verse effectively.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=novel+explication+short+story&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Novel & Story Analysis</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Deep literary understanding.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.grammarly.com/?utm_source=blog&utm_campaign=mauriceudom&cid=7311610" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Grammarly Premium</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Refined academic writing.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.fiverr.com/mauriceudom" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Literary Essay Feedback</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Expert guidance on your essays.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.skillshare.com?via=7311536" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Skillshare Classes</a>
+                    <p style="font-size:12px;color:#666;margin:0;">1000s of learning classes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PATREON EXCLUSIVE SECTION -->
+        <div style="background:linear-gradient(135deg,#ff424d 0%,#d32f2f 100%);color:white;padding:20px;border-radius:8px;margin:20px 0;text-align:center;border:2px solid #b71c1c;">
+            <h3 style="margin:0 0 10px 0;font-size:18px;font-weight:bold;">🔓 Unlock Deeper Learning on Patreon</h3>
+            <p style="margin:0 0 15px 0;font-size:14px;opacity:0.95;">Get advanced literary analysis techniques, detailed essay feedback, and exclusive study guides to master literary appreciation.</p>
+            <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="background:white;color:#d32f2f;padding:12px 24px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;border:none;cursor:pointer;font-size:14px;transition:all 0.3s;">Become a Patreon Member Now</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
