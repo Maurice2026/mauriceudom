@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GNS 201: Communication in English - Complete online course covering registers, business correspondence, writing for publication, and report writing.">
+    <meta name="keywords" content="GNS 201, communication, English, professional writing, business correspondence, report writing">
+    <meta name="author" content="Dr. Maurice Udom">
+    <meta name="google-adsense-account" content="ca-pub-4993007608190801">
+    <title>GNS 201: Communication in English | mauriceudom.org</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --blue-deep: #0a2463;
+            --blue-mid: #1e3a8a;
+            --blue-bright: #1d4ed8;
+            --accent-gold: #f59e0b;
+            --accent-green: #10b981;
+            --text-dark: #1e293b;
+            --text-mid: #334155;
+            --text-light: #64748b;
+            --bg-white: #ffffff;
+            --bg-soft: #f8fafc;
+            --bg-card: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-soft);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 40%, var(--blue-bright) 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 800;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-sub {
+            font-size: 0.5em;
+            font-weight: 300;
+            display: block;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: opacity 0.3s;
+        }
+
+        .nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 40%, #1d4ed8 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 320px;
+            height: 320px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        }
+
+        .hero-sub {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            font-size: 1em;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--blue-deep);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 50px;
+            line-height: 1.3;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-top: 4px solid var(--blue-bright);
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .course-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .course-card h3 {
+            font-size: 1.5em;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .course-card p {
+            color: var(--text-mid);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .chapters {
+            font-size: 0.9em;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .course-link {
+            display: inline-block;
+            color: var(--blue-bright);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .course-link:hover {
+            color: var(--blue-mid);
+            text-decoration: underline;
+        }
+
+        .features-section {
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .feature h4 {
+            font-size: 1.3em;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .feature p {
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
+        .about-section {
+            background: var(--bg-card);
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            color: var(--text-mid);
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+
+        .instructor-info {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            border-left: 4px solid var(--blue-bright);
+        }
+
+        .instructor-name {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .instructor-title {
+            color: var(--blue-bright);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .affiliate-section {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+        }
+
+        .affiliate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .affiliate-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #c7d2fe;
+        }
+
+        .affiliate-card h4 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .affiliate-card p {
+            font-size: 0.9em;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .affiliate-link {
+            display: inline-block;
+            color: var(--blue-bright);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .affiliate-link:hover {
+            color: var(--blue-mid);
+        }
+
+        .patreon-section {
+            background: linear-gradient(135deg, #ff424d 0%, #d32f2f 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .patreon-content h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .patreon-content p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .patreon-btn {
+            background: white;
+            color: #d32f2f;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .patreon-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-text {
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.7);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                gap: 15px;
+                font-size: 0.9em;
+            }
+
+            .hero {
+                padding: 60px 20px 50px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero-sub {
+                font-size: 1em;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER/NAVIGATION -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                Dr. Maurice Udom
+                <span class="logo-sub">mauriceudom.org</span>
+            </a>
+            <ul class="nav">
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#patreon">Support</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Master Communication in English</h1>
+            <p class="hero-sub">Professional writing courses designed for Nigerian students</p>
+            <div class="cta-buttons">
+                <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                <a href="#patreon" class="btn btn-secondary">Get Full Access</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section class="section" id="courses">
+        <div class="container">
+            <h2 class="section-title">Complete Course Suite</h2>
+            
+            <div class="courses-grid">
+                <!-- GNS 201 Chapter 1 -->
+                <div class="course-card">
+                    <div class="course-number">1</div>
+                    <h3>Registers in Professional Communication</h3>
+                    <p>Learn how different professions use specialized vocabulary and communication styles. Master registers across 10 different fields including sports, medicine, law, agriculture, and more.</p>
+                    <div class="chapters">📚 Chapter 1 of GNS 201</div>
+                    <a href="GNS_201_Chapter_1_UPDATED_WITH_10_PROFESSIONS.html" class="course-link">Start Learning →</a>
+                </div>
+
+                <!-- GNS 201 Chapter 2 -->
+                <div class="course-card">
+                    <div class="course-number">2</div>
+                    <h3>Business Correspondence</h3>
+                    <p>Master the art of professional letter writing. Learn application letters, inquiry letters, complaint letters, and formal business communication with real examples.</p>
+                    <div class="chapters">📚 Chapter 2 of GNS 201</div>
+                    <a href="GNS_201_Chapter_2_WITH_LETTERS.html" class="course-link">Start Learning →</a>
+                </div>
+
+                <!-- GNS 201 Chapter 3 -->
+                <div class="course-card">
+                    <div class="course-number">3</div>
+                    <h3>Writing for Publication</h3>
+                    <p>Develop skills in essay writing, article writing, and journalism. Learn how to write compelling pieces for newspapers, magazines, and online publications.</p>
+                    <div class="chapters">📚 Chapter 3 of GNS 201</div>
+                    <a href="GNS_201_Chapter_3_WITH_ARTICLES.html" class="course-link">Start Learning →</a>
+                </div>
+
+                <!-- GNS 201 Chapter 4 -->
+                <div class="course-card">
+                    <div class="course-number">4</div>
+                    <h3>Report Writing</h3>
+                    <p>Learn to write professional reports, analytical reports, and proposals. Master the structure, format, and persuasive techniques needed for business documentation.</p>
+                    <div class="chapters">📚 Chapter 4 of GNS 201</div>
+                    <a href="GNS_201_Chapter_4_WITH_EXAMPLES.html" class="course-link">Start Learning →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="section features-section" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Courses</h2>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">✍️</div>
+                    <h4>Student-Focused Examples</h4>
+                    <p>Real examples written as students would write them, not overly academic or theoretical.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">📖</div>
+                    <h4>Comprehensive Content</h4>
+                    <p>Complete coverage of all topics with detailed explanations and practical applications.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">💡</div>
+                    <h4>Practical Skills</h4>
+                    <p>Learn real-world communication skills used in professional and academic settings.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h4>Exam Preparation</h4>
+                    <p>Structured content designed to help you succeed in GNS 201 examinations.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">📚</div>
+                    <h4>Multiple Resources</h4>
+                    <p>Access articles, reports, proposals, and letters as learning references.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">⭐</div>
+                    <h4>Expert Instruction</h4>
+                    <p>Content created by Dr. Maurice Udom, an experienced educator and author.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About This Course</h2>
+            
+            <div class="about-content">
+                <p>GNS 201: Communication in English is a comprehensive course designed to develop professional communication skills in Nigerian students. This course covers the fundamental principles of effective communication across different contexts, from formal business correspondence to creative writing for publication.</p>
+
+                <p>The four-chapter course systematically builds your understanding from specialized vocabulary in different professions, through business letter writing, to advanced skills in article writing and report preparation. Each chapter includes real-world examples, practical exercises, and examination-style questions to ensure your success.</p>
+
+                <div class="instructor-info">
+                    <div class="instructor-name">Dr. Maurice Udom</div>
+                    <div class="instructor-title">Course Developer & Instructor</div>
+                    <p>Dr. Maurice Udom is an experienced educator and author committed to developing high-quality educational content for Nigerian students. With expertise in communication and language studies, he has created this comprehensive course to help students master professional writing skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AFFILIATE RESOURCES SECTION -->
+    <section class="section affiliate-section">
+        <div class="container">
+            <h2 class="section-title">Enhance Your Learning</h2>
+            
+            <div class="affiliate-grid">
+                <div class="affiliate-card">
+                    <h4>📚 Amazon Books</h4>
+                    <p>Access recommended writing and communication books</p>
+                    <a href="https://www.amazon.com/s?k=professional+writing&tag=mauriceudom-20" target="_blank" class="affiliate-link">Browse Books →</a>
+                </div>
+
+                <div class="affiliate-card">
+                    <h4>✏️ Grammarly</h4>
+                    <p>Improve your writing with advanced grammar checking</p>
+                    <a href="https://grammarly.com/?utm_source=blog&utm_campaign=mauriceudom&cid=7311610" target="_blank" class="affiliate-link">Try Premium →</a>
+                </div>
+
+                <div class="affiliate-card">
+                    <h4>🎓 Skillshare</h4>
+                    <p>Learn from professional communication experts</p>
+                    <a href="https://www.skillshare.com?via=7311536" target="_blank" class="affiliate-link">Explore Courses →</a>
+                </div>
+
+                <div class="affiliate-card">
+                    <h4>🎯 Fiverr Services</h4>
+                    <p>Get professional feedback on your writing</p>
+                    <a href="https://www.fiverr.com/mauriceudom" target="_blank" class="affiliate-link">View Services →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PATREON SECTION -->
+    <section class="section patreon-section" id="patreon">
+        <div class="container">
+            <div class="patreon-content">
+                <h2>Support This Course & Get Exclusive Content</h2>
+                <p>Join our Patreon community to access exclusive resources, detailed feedback on your writing, sample exam answers, and direct support from the instructor.</p>
+                <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" class="patreon-btn">Join Patreon Community</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Dr. Maurice Udom</h3>
+            <p>Professional Communication & Writing Courses</p>
+            
+            <div class="footer-links">
+                <a href="#courses">Courses</a>
+                <a href="https://www.patreon.com/c/MauriceUdom" target="_blank">Patreon</a>
+                <a href="https://www.fiverr.com/mauriceudom" target="_blank">Fiverr</a>
+                <a href="https://www.skillshare.com?via=7311536" target="_blank">Skillshare</a>
+            </div>
+
+            <div class="footer-text">
+                <p>&copy; 2026 Dr. Maurice Udom. All rights reserved.</p>
+                <p>mauriceudom.org | Communication in English Courses</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
