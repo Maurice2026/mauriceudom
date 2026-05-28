@@ -1,802 +1,493 @@
-<!DOCTYPE html>   
-<html lang="en">   
-<head> 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Assignment Hub — Secure Assignment Submission Portal</title>
-  <meta name="description" content="Submit your assignments securely through Assignment Hub. Track submissions, manage deadlines, understand plagiarism policies, and submit with integrity.">
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic Hub - Online assignment submission portal for Maurice Udom's courses. Submit your coursework securely with academic integrity guidelines.">
+    <meta name="keywords" content="academic hub, assignment submission, coursework, academic integrity, plagiarism policy, Maurice Udom">
+    <meta name="google-adsense-account" content="ca-pub-4993007608190801">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Academic Hub - Assignment Submission Portal">
+    <meta property="og:description" content="Online platform for submitting academic assignments and coursework">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mauriceudom.org/submission-hub/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Academic Hub - Assignment Submission">
+    <meta name="twitter:description" content="Secure online submission platform for coursework">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Academic Hub - Assignment Submission Portal",
+        "description": "Secure online platform for submitting academic assignments",
+        "provider": {
+            "@type": "Person",
+            "name": "Maurice Udom",
+            "url": "https://mauriceudom.org"
+        }
     }
-    /* ── Header ── */
-    .site-header {
-      background: #2c3e50;
-      color: #fff;
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .site-header h1 { font-size: 20px; font-weight: 600; }
-    .site-header span { font-size: 14px; opacity: .7; }
-    /* ── Layout ── */
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1100px;
-      margin: 24px auto;
-      padding: 0 12px;
-      gap: 20px;
-    }
-    /* ── Sidebar ── */
-    .sidebar {
-      flex: 1;
-      min-width: 220px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      height: fit-content;
-      box-shadow: 0 1px 3px rgba(0,0,0,.08);
-    }
-    .sidebar h3 {
-      font-size: 12px;
-      font-weight: 600;
-      color: #888;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      margin-bottom: 10px;
-    }
-    .sidebar ul { list-style: none; } 
-    .sidebar ul li a {
-      text-decoration: none;
-      color: #3498db;
-      display: block;
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 14px;
-    }
-    .sidebar ul li:last-child a { border-bottom: none; }
-    .deadline-item {
-      font-size: 13px;
-      color: #666;
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .deadline-item strong { color: #333; display: block; }
-    .deadline-item:last-child { border-bottom: none; }
-
-    /* ── Submission Items ── */
-    .submission-item {
-      font-size: 12px;
-      color: #666;
-      padding: 10px 0;
-      border-bottom: 1px solid #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .submission-item strong { color: #333; font-size: 13px; }
-    .submission-item small { color: #999; font-size: 11px; }
-    .submission-item:last-child { border-bottom: none; }
-    .status-badge {
-      display: inline-block;
-      padding: 3px 8px;
-      border-radius: 3px;
-      font-size: 11px;
-      font-weight: 600;
-      width: fit-content;
-    }
-    .status-badge.success { background: #d4edda; color: #155724; }
-    .status-badge.pending { background: #fff3cd; color: #856404; }
-    .status-badge.graded { background: #d1ecf1; color: #0c5460; }
-
-    /* ── Submission Success Item ── */
-    .submission-success-item {
-      font-size: 13px;
-      color: #666;
-      padding: 12px;
-      background: #f0f9f6;
-      border: 1px solid #c3e6cb;
-      border-radius: 6px;
-    }
-
-    /* ── Quick Actions ── */
-    .quick-action {
-      margin-bottom: 8px;
-    }
-    .quick-action a {
-      text-decoration: none;
-      color: #3498db;
-      display: block;
-      padding: 8px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 13px;
-      font-weight: 500;
-    }
-    .quick-action:last-child a { border-bottom: none; }
-    .quick-action a:hover { color: #2980b9; }
-
-    /* ── Main Content ── */
-    .content {
-      flex: 3;
-      min-width: 300px;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0,0,0,.08);
-    }
-    .content h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
-    .last-updated { font-size: 13px; color: #888; margin-bottom: 20px; }
-    /* ── Alerts ── */
-    .alert {
-      padding: 13px 16px;
-      margin: 16px 0;
-      border-left: 5px solid;
-      border-radius: 0 6px 6px 0;
-      font-size: 14px;
-    }
-    .warning { background: #fff3cd; color: #856404; border-color: #e6a817; }
-    .success { background: #d4edda; color: #155724; border-color: #28a745; }
-    .error   { background: #f8d7da; color: #721c24; border-color: #f5c6cb; }
-    /* ── Ad Containers ── */
-    .ad-box {
-      background: #fafafa;
-      border: 1px dashed #ccc;
-      text-align: center;
-      padding: 10px;
-      margin: 20px 0;
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      color: #aaa;
-      font-size: 12px;
-    }
-    /* ── Policy ── */
-    .policy-section { margin-bottom: 22px; }
-    .policy-section h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #2c3e50;
-      margin-bottom: 8px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #eee;
-    }
-    .policy-section p { font-size: 14px; color: #555; margin-bottom: 8px; }
-    .policy-section ul,
-    .policy-section ol { padding-left: 20px; font-size: 14px; color: #555; }
-    .policy-section li { margin-bottom: 5px; }
-    /* ── Form ── */
-   .submit-section {
-  margin-top: 28px;
-  padding-top: 24px;
-  border-top: 2px solid #f0f0f0;
-}
-.submit-btn { margin-top: 4px; }
-    .submit-section h2 { font-size: 18px; font-weight: 600; margin-bottom: 18px; color: #2c3e50; }
-    .form-row { display: flex; gap: 16px; flex-wrap: wrap; }
-    .form-row .form-group { flex: 1; min-width: 200px; }
-    .form-group { margin-bottom: 16px; }
-.form-group:has(#integrity_pledge) { margin-bottom: 8px; margin-top: -8px; }
-    .form-group label {
-      display: block;
-      font-size: 13px;
-      font-weight: 600;
-      color: #555;
-      margin-bottom: 6px;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 10px 12px;
-      font-size: 14px;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      background: #fff;
-      color: #333;
-      transition: border-color .2s;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #3498db;
-      box-shadow: 0 0 0 3px rgba(52,152,219,.1);
-    }
-    .form-group textarea { resize: vertical; min-height: 80px; }
-
-    /* ── Submission Checklist ── */
-    .checklist-box {
-      background: #f9f9f9;
-      border: 1px solid #e8e8e8;
-      border-radius: 6px;
-      padding: 16px;
-      margin-bottom: 16px;
-    }
-    .checklist-box h4 {
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: #2c3e50;
-    }
-    .checklist-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-size: 13px;
-      color: #555;
-    }
-    .checklist-item:last-child { margin-bottom: 0; }
-    .checklist-item input[type="checkbox"] { width: 18px; height: 18px; cursor: pointer; }
-    .checklist-item.complete { color: #27a745; font-weight: 500; }
-    .checklist-item.complete input { accent-color: #27a745; }
-
-    /* ── File Drop Zone ── */
-    .file-drop {
-      border: 2px dashed #3498db;
-      border-radius: 6px;
-      padding: 30px;
-      text-align: center;
-      background: #f0f8ff;
-      cursor: pointer;
-      transition: all .3s ease;
-      position: relative;
-    }
-    .file-drop:hover { background: #e6f2ff; border-color: #2980b9; }
-    .file-drop.dragover { background: #e6f2ff; border-color: #2980b9; box-shadow: 0 0 0 4px rgba(52,152,219,.2); }
-    .file-drop-icon { font-size: 32px; margin-bottom: 10px; }
-    .file-drop p { font-weight: 600; color: #3498db; margin-bottom: 4px; }
-    .file-drop span { display: block; color: #999; font-size: 12px; margin-bottom: 10px; }
-    #assignment_file { 
-      display: none;
-    }
-
-    /* ── File Size Indicator ── */
-    .file-size-indicator {
-      font-size: 12px;
-      color: #888;
-      margin-top: 4px;
-    }
-
-    /* ── Checkbox Row ── */
-    .checkbox-row input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; }
-    .checkbox-row label { font-weight: 400; }
-.checkbox-row label {
-  font-weight: 500;
-  white-space: nowrap;
-  display: inline-block;
-}
-    .checkbox-submit-row .checkbox-row {
-  flex: 1;
-  margin: 0;
-}
-
-.checkbox-submit-row .submit-btn {
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-    /* ── Buttons ── */
-    .submit-btn {
-      background: #3498db;
-      color: #fff;
-      padding: 12px 28px;
-      border: none;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .2s;
-    }
-    .submit-btn:hover:not(:disabled) { background: #2980b9; }
-    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    /* ── Modal ── */
-    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,.4); }
-    .modal.show { display: block; }
-    .modal-content { background: #fff; margin: 5% auto; padding: 20px; width: 90%; max-width: 500px; border-radius: 8px; }
-    .modal-header { font-size: 18px; font-weight: 600; margin-bottom: 16px; }
-    .modal-close { float: right; font-size: 24px; cursor: pointer; color: #999; }
-    .modal-close:hover { color: #333; }
-    @media (max-width: 768px) {
-      .modal-content { width: 95%; }
-    }
-  </style>
+    </script>
+    
+    <title>Academic Hub - Assignment Submission Portal | Maurice Udom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(160deg, #064e3b 0%, #059669 50%, #10b981 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid #34d399;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background-color: #047857;
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 1px solid #34d399;
+        }
+        
+        nav a {
+            color: #d1fae5;
+            text-decoration: none;
+            margin: 0 15px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #fff;
+        }
+        
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #064e3b;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #34d399;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #047857;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+        }
+        
+        h4 {
+            color: #059669;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .deadline-list {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+            padding: 20px;
+            border-left: 4px solid #10b981;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .deadline-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #d1fae5;
+        }
+        
+        .deadline-item:last-child {
+            border-bottom: none;
+        }
+        
+        .deadline-title {
+            font-weight: bold;
+            color: #047857;
+        }
+        
+        .deadline-date {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid #dc2626;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h3 {
+            color: #991b1b;
+            margin-top: 0;
+        }
+        
+        .warning-box strong {
+            color: #7f1d1d;
+        }
+        
+        .guidelines {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+            padding: 25px;
+            border-left: 4px solid #10b981;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        
+        .guidelines ol {
+            margin-left: 20px;
+        }
+        
+        .guidelines li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #059669;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            background-color: #047857;
+        }
+        
+        .form-section {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #10b981;
+        }
+        
+        .form-section h3 {
+            margin-top: 0;
+            color: #064e3b;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #047857;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1fae5;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        footer {
+            background-color: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+        
+        footer a {
+            color: #34d399;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb {
+            padding: 10px 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: #059669;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+            
+            main {
+                padding: 20px 10px;
+            }
+            
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<header class="site-header">
-  <h1>Assignment Hub</h1>
-  <span>| Secure Assignment Submission Portal</span> 
-</header>
-
-<div class="container">
-
-  <!-- ── Sidebar ── -->
-  <aside class="sidebar">
-    <h3>Navigation</h3>
-    <ul>
-     <li><a href="#submit">📤 Submit Assignment</a></li>
-      <li><a href="#grades" onclick="toggleGradeLookup(event)">📊 Check Status</a></li>
-      <li><a href="#extension" onclick="toggleExtensionForm(event)">⏱️ Request Extension</a></li>
-      <li><a href="../contact-lecturer.html">✉️ Contact Lecturer</a></li>
-      <li><a href="../lecture-series.html">🎙️ Lecture Series</a></li>
-      <li><a href="../blog-academic-writing-errors.html">📝 Blogs</a></li>
-    </ul>
-    <div style="margin-top:20px">
-      <h3>📅 Upcoming Deadlines</h3>
-      <div class="deadline-item">
-        <strong>Assignment 1</strong>
-        <select style="width: 100%; padding: 6px; margin-top: 6px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px;">
-          <option>Select Month & Date</option>
-          <option>January 15, 2026</option>
-          <option>February 10, 2026</option>
-          <option>March 20, 2026</option>
-          <option>April 25, 2026</option>
-          <option>May 30, 2026</option>
-          <option>June 15, 2026</option>
-          <option>July 20, 2026</option>
-          <option>August 25, 2026</option>
-          <option>September 10, 2026</option>
-          <option>October 15, 2026</option>
-          <option>November 20, 2026</option>
-          <option>December 15, 2026</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- Ad Space for Upcoming Deadlines -->
-    <div class="ad-box" style="margin-top:20px; min-height:200px;">
-      Ad Space 300×200<br><small style="color: #ccc;">Your AdSense ads here</small>
-    </div>
-
-    <!-- Submission Success Indicator -->
-    <div id="submission-success-box" style="display: none; margin-top: 20px;">
-      <h3 style="color: #27a745;">✓ Submission Status</h3>
-      <div class="submission-success-item">
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-          <span style="font-size: 20px;">✓</span>
-          <strong style="color: #27a745;">Assignment Submitted</strong>
+    <header role="banner">
+        <h1>🎓 Academic Hub</h1>
+        <p>Assignment Submission Portal</p>
+    </header>
+    
+    <nav role="navigation" aria-label="Main navigation">
+        <a href="https://mauriceudom.org/" aria-label="Return to Maurice Udom homepage">← Home</a>
+        <a href="#deadlines" aria-label="Jump to assignment deadlines">Deadlines</a>
+        <a href="#integrity" aria-label="Jump to academic integrity policy">Integrity Policy</a>
+        <a href="#submit" aria-label="Jump to submission form">Submit</a>
+    </nav>
+    
+    <main>
+        <div class="breadcrumb">
+            <a href="https://mauriceudom.org/">Maurice Udom</a> > Academic Hub
         </div>
-        <small style="color: #999;">Submitted: <span id="submission-time">—</span></small>
-        <div style="margin-top: 8px; padding: 8px; background: #d4edda; border-radius: 4px; border-left: 3px solid #28a745;">
-          <small style="color: #155724; font-weight: 500;">Your work has been received. Feedback will be provided within 7-10 business days.</small>
-        </div>
-      </div>
-    </div>
-
-    <!-- AdSense sidebar square -->
-    <div class="ad-box" style="margin-top:20px; min-height:250px;">
-      Ad Space 250×250<br><small style="color: #ccc;">Your AdSense ads here</small>
-    </div>
-  </aside>
-
-  <!-- ── Main Content ── -->
-  <main class="content">
-   <h1>Academic Integrity &amp; Plagiarism Policy</h1>
-    <p class="last-updated">Effective: May 2026</p>
-
-    <div class="alert warning">
-      ⚠ Important — Plagiarism is not tolerated and will result in serious academic consequences. Please read this policy carefully before submitting.
-    </div>
-
-    <div class="ad-box">
-      Ad Space 728×90<br><small style="color: #ccc;">Your AdSense leaderboard ads here</small>
-    </div>
-
-    <!-- Definition of Plagiarism -->
-    <div class="policy-section">
-      <h3>1. Definition of Plagiarism</h3>
-      <p>Plagiarism is presenting someone else's work, ideas, or words as your own without proper attribution. This includes direct copying, paraphrasing without citation, collusion, self-plagiarism, and inadequate citations.</p>
-    </div>
-
-    <!-- Detection Methods -->
-    <div class="policy-section">
-      <h3>2. Detection Methods</h3>
-      <p>All submissions are checked using plagiarism detection software, peer comparison, manual instructor review, source verification, and metadata analysis to ensure originality.</p>
-    </div>
-
-    <div class="ad-box" style="min-height:280px;">
-      Ad Space 336×280<br><small style="color: #ccc;">Your AdSense rectangle ads here</small>
-    </div>
-
-    <!-- Consequences of Academic Dishonesty -->
-    <div class="policy-section">
-      <h3>3. Consequences of Academic Dishonesty</h3>
-      <p>Violations result in: immediate zero grade, formal academic report, disciplinary action, course grade reduction, and potential legal consequences for copyright infringement.</p>
-    </div>
-
-    <!-- How to Avoid Plagiarism -->
-    <div class="policy-section">
-      <h3>4. How to Avoid Plagiarism</h3>
-      <p>Always cite sources using proper format (APA, MLA, Chicago), use quotation marks for direct quotes, paraphrase correctly with citations, start early, and consult instructors when unsure about citation practices.</p>
-    </div>
-    <!-- ── Submission Form ── -->
-    <section class="submit-section" id="submit">
-      <h2>Submit Your Assignment</h2>
-
-      <div id="form-message"></div>
-      <p style="font-size: 15px; font-weight: 600; color: #2c3e50; margin-bottom: 16px; padding: 12px; background: #f0f8ff; border-left: 4px solid #3498db; border-radius: 4px;">
-  ✓ I confirm this work is entirely my own and original. I have read the Academic Integrity Policy and understand the consequences of plagiarism.
-</p>    
-       <!-- Submission Checklist -->
-      <div class="checklist-box">
-        <h4>✓ Before You Submit — Checklist</h4>
-        <div class="checklist-item">
-          <input type="checkbox" id="check1" onchange="updateChecklist()">
-          <label for="check1">I have read the Academic Integrity Policy above</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="check2" onchange="updateChecklist()">
-          <label for="check2">My file is in PDF or DOCX format (max 25 MB)</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="check3" onchange="updateChecklist()">
-          <label for="check3">I have included proper citations and references</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="check4" onchange="updateChecklist()">
-          <label for="check4">I have spell-checked and proofread my work</label>
-        </div>
-        <div class="checklist-item">
-          <input type="checkbox" id="check5" onchange="updateChecklist()">
-          <label for="check5">This work is entirely my own and original</label>
-        </div>
-      </div>
-
-      <form id="assignment-form" action="https://usebasin.com/f/6bf29083817a" method="POST" enctype="multipart/form-data">
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="student_name">Full Name *</label>
-            <input type="text" id="student_name" name="student_name" placeholder="Enter your full name" required>
-          </div>
-          <div class="form-group">
-            <label for="student_id">Student ID / Matric Number *</label>
-            <input type="text" id="student_id" name="student_id" placeholder="e.g., STU-2024-0042" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="student_email">Email Address *</label>
-            <input type="email" id="student_email" name="student_email" placeholder="your.email@example.com" required>
-          </div>
-          <div class="form-group">
-            <label for="module">Course Title & Code *</label>
-            <input type="text" id="module" name="module" placeholder="e.g., ENG 301 — Academic Writing" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="assignment_title">Assignment Title *</label>
-          <input type="text" id="assignment_title" name="assignment_title" placeholder="e.g., Critical Analysis of Academic Integrity" required>
-        </div>
-
-        <div class="form-group">
-          <label>Upload Assignment File * (PDF or DOCX, max 25 MB)</label>
-          <label for="assignment_file" class="file-drop" id="file-drop-zone" style="cursor: pointer;">
-            <div class="file-drop-icon">📄</div>
-            <p>Drag and drop your file here</p>
-            <span>or click to browse</span>
-            <div id="file-name"></div>
-            <div id="file-size" class="file-size-indicator"></div>
-          </label>
-          <input type="file" id="assignment_file" name="assignment_file" accept=".pdf,.doc,.docx" required onchange="handleFileSelect()">
-        </div>
-
-        <div class="form-group">
-          <label for="comments">Additional Comments (optional)</label>
-          <textarea id="comments" name="comments" placeholder="Any notes for your reviewer..." maxlength="500" onchange="updateCommentCount()"></textarea>
-          <div style="font-size: 12px; color: #999; margin-top: 4px;">
-            <span id="comment-count">0</span> / 500 characters
-          </div>
-        </div>
-<div class="form-group">
-  <div class="checkbox-row">
-    <input type="checkbox" id="integrity_pledge" name="integrity_pledge" required>
-    <label for="integrity_pledge">I confirm this work is entirely my own and original.</label>
-  </div>
-  
-  <!-- Formspree Configuration -->
-  <input type="hidden" name="_subject" value="New Assignment Submission from Assignment Hub">
-  <input type="hidden" name="_next" value="javascript:void(0)">
-
-  <button type="submit" class="submit-btn" id="submit-btn" disabled>Submit Assignment</button>
-</div>
-      </form>
-    </section>
-
-    <!-- Grade Lookup Modal -->
-    <div id="gradeLookupModal" class="modal">
-      <div class="modal-content">
-        <span class="modal-close" onclick="closeModal('gradeLookupModal')">&times;</span>
-        <div class="modal-header">📊 Check Submission Status</div>
-        <form>
-          <div class="form-group">
-            <label for="grade_student_id">Student ID *</label>
-            <input type="text" id="grade_student_id" placeholder="Enter your student ID" required>
-          </div>
-          <div class="form-group">
-            <label for="grade_email">Email Address *</label>
-            <input type="email" id="grade_email" placeholder="Enter your email" required>
-          </div>
-          <button type="submit" class="submit-btn" style="width: 100%;">Check Status</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Extension Request Modal -->
-    <div id="extensionModal" class="modal">
-      <div class="modal-content">
-        <span class="modal-close" onclick="closeModal('extensionModal')">&times;</span>
-        <div class="modal-header">⏱️ Request Assignment Extension</div>
-        <form id="extension-form" onsubmit="handleExtensionRequest(event)">
-          <div class="form-group">
-            <label for="ext_assignment">Assignment *</label>
-            <input type="text" id="ext_assignment" placeholder="Which assignment?" required>
-          </div>
-          <div class="form-group">
-            <label for="ext_days">Extension Duration *</label>
-            <select id="ext_days" required>
-              <option>Select duration</option>
-              <option>2-3 days</option>
-              <option>1 week</option>
-              <option>More than 1 week</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="ext_reason">Reason for request *</label>
-            <textarea id="ext_reason" placeholder="Explain your circumstances..." required maxlength="300"></textarea>
-            <div style="font-size: 12px; color: #999; margin-top: 4px;">
-              <span id="reason-count">0</span> / 300 characters
+        
+        <section>
+            <h2>Welcome to the Academic Hub</h2>
+            <p>This platform provides secure submission of academic assignments and coursework for Maurice Udom's courses. All submissions are handled with confidentiality and checked against our academic integrity standards.</p>
+            
+            <p><strong>Before submitting your assignment:</strong></p>
+            <ol style="margin-left: 20px; margin-top: 15px;">
+                <li>Select your course from the dropdown menu</li>
+                <li>Read and understand the Academic Integrity Policy below</li>
+                <li>Prepare your assignment file (PDF or DOCX format)</li>
+                <li>Upload to Google Drive or OneDrive with "Anyone with link" sharing</li>
+                <li>Complete and submit the form below</li>
+                <li>Watch for confirmation email</li>
+            </ol>
+        </section>
+        
+        <section id="deadlines">
+            <h2>Upcoming Assignment Deadlines</h2>
+            <p>Keep track of your submission deadlines. All assignments must be submitted before the deadline specified below.</p>
+            
+            <div class="deadline-list">
+                <div class="deadline-item">
+                    <div class="deadline-title">📝 Essay 2</div>
+                    <div class="deadline-date">May 10, 2026 — 11:59 PM</div>
+                </div>
+                <div class="deadline-item">
+                    <div class="deadline-title">📊 Research Paper</div>
+                    <div class="deadline-date">May 24, 2026 — 11:59 PM</div>
+                </div>
+                <div class="deadline-item">
+                    <div class="deadline-title">🎤 Group Presentation</div>
+                    <div class="deadline-date">June 3, 2026 — 11:59 PM</div>
+                </div>
             </div>
-          </div>
-          <button type="submit" class="submit-btn" style="width: 100%;">Submit Extension Request</button>
-        </form>
-      </div>
-    </div>
-
-  </main>
-</div>
-
-<script>
-// ── Form Validation Handler ──
-function validateForm() {
-  const studentName = document.getElementById('student_name').value.trim();
-  const studentId = document.getElementById('student_id').value.trim();
-  const studentEmail = document.getElementById('student_email').value.trim();
-  const module = document.getElementById('module').value.trim();
-  const assignmentTitle = document.getElementById('assignment_title').value.trim();
-  const file = document.getElementById('assignment_file').files[0];
-  const integrityPledge = document.getElementById('integrity_pledge').checked;
-  
-  const isComplete = studentName && studentId && studentEmail && module && assignmentTitle && file && integrityPledge;
-  
-  document.getElementById('submit-btn').disabled = !isComplete;
-  
-  return isComplete;
-}
-
-// Add real-time validation to all form fields
-document.getElementById('student_name').addEventListener('input', validateForm);
-document.getElementById('student_id').addEventListener('input', validateForm);
-document.getElementById('student_email').addEventListener('input', validateForm);
-document.getElementById('module').addEventListener('input', validateForm);
-document.getElementById('assignment_title').addEventListener('input', validateForm);
-document.getElementById('assignment_file').addEventListener('change', function() {
-  handleFileSelect();
-  validateForm();
-});
-document.getElementById('integrity_pledge').addEventListener('change', validateForm);
-
-// Initial button state (disabled on page load)
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('submit-btn').disabled = true;
-});
-
-function handleFileSelect() {
-  const fileInput = document.getElementById('assignment_file');
-  const fileNameEl = document.getElementById('file-name');
-  const fileSizeEl = document.getElementById('file-size');
-  
-  if (fileInput.files.length > 0) {
-    const file = fileInput.files[0];
-    const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
-    const sizePercent = Math.round((file.size / (25 * 1024 * 1024)) * 100);
+        </section>
+        
+        <section id="integrity">
+            <h2>Academic Integrity & Plagiarism Policy</h2>
+            <p><strong>Effective: May 2026</strong></p>
+            
+            <div class="warning-box">
+                <h3>⚠️ Zero Tolerance Policy</h3>
+                <p>Plagiarism is <strong>NOT tolerated</strong> and will result in an automatic <strong>ZERO</strong> for the assignment.</p>
+            </div>
+            
+            <h3>1. Definition of Plagiarism</h3>
+            <p>Plagiarism is defined as presenting someone else's work, ideas, or language as your own without proper acknowledgment. This includes:</p>
+            
+            <ul style="margin-left: 20px; margin: 15px 0;">
+                <li><strong>Direct Copying:</strong> Copying word-for-word from a classmate, book, or online source</li>
+                <li><strong>Paraphrasing without Citation:</strong> Rephrasing an idea without crediting the original author</li>
+                <li><strong>Collusion:</strong> Submitting collaborative work as your individual effort</li>
+                <li><strong>Self-Plagiarism:</strong> Submitting the same work across multiple assignments</li>
+            </ul>
+            
+            <h3>2. Detection Methods</h3>
+            <p>All assignments are subject to verification using:</p>
+            
+            <ul style="margin-left: 20px; margin: 15px 0;">
+                <li><strong>Digital Comparison Tools:</strong> Cross-referenced against previous submissions and internet resources</li>
+                <li><strong>Peer-to-Peer Checking:</strong> Compared against other students in the current session</li>
+                <li><strong>AI Metadata Analysis:</strong> Document version history and metadata are monitored</li>
+            </ul>
+            
+            <h3>3. Consequences of Academic Dishonesty</h3>
+            <p>Students found to have plagiarized will face:</p>
+            
+            <div class="guidelines">
+                <ol>
+                    <li>An immediate score of <strong>ZERO</strong> for the assignment</li>
+                    <li>A formal report submitted to the department head</li>
+                    <li>Requirement to resubmit with a maximum possible grade of <strong>PASS</strong> only</li>
+                </ol>
+            </div>
+            
+            <h3>4. How to Avoid Plagiarism</h3>
+            <p>Proper academic practice includes:</p>
+            
+            <ul style="margin-left: 20px; margin: 15px 0;">
+                <li><strong>Use quotation marks</strong> for direct quotes and cite the source</li>
+                <li><strong>Paraphrase properly</strong> by rewording ideas and still citing the source</li>
+                <li><strong>Create a bibliography</strong> listing all sources used</li>
+                <li><strong>Use citation styles</strong> like APA, MLA, or Chicago consistently</li>
+                <li><strong>Acknowledge collaboration</strong> — Tell your instructor if you worked with others</li>
+                <li><strong>Save drafts</strong> — Keep evidence of your work process</li>
+            </ul>
+            
+            <p style="margin-top: 20px; padding: 15px; background: #f0fdf4; border-left: 4px solid #10b981; border-radius: 4px;">
+                Visit the <strong>Lecture Series</strong> on our homepage for guides on citing sources and summarizing academic works properly.
+            </p>
+        </section>
+        
+        <section id="submit">
+            <h2>Submit Your Assignment</h2>
+            
+            <div class="form-section">
+                <h3>Assignment Submission Form</h3>
+                <p>Fill in all required fields and submit your assignment. A confirmation will be sent to your email.</p>
+                
+                <form>
+                    <div class="form-group">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" id="fullname" name="fullname" required aria-label="Enter your full name">
+                        <div class="form-note">Your legal name as it appears on registration</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="studentid">Student ID *</label>
+                        <input type="text" id="studentid" name="studentid" required aria-label="Enter your student ID number">
+                        <div class="form-note">University or institution student identification</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required aria-label="Enter your email address">
+                        <div class="form-note">Confirmation will be sent to this address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="course">Course *</label>
+                        <select id="course" name="course" required aria-label="Select your course">
+                            <option value="">-- Select Course --</option>
+                            <option value="GNS 201">GNS 201: Communication in English</option>
+                            <option value="GNS 202">GNS 202: Communication in English II</option>
+                            <option value="GNS 402">GNS 402: Literary Appreciation & Oral Composition</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="title">Assignment Title *</label>
+                        <input type="text" id="title" name="title" required aria-label="Enter the assignment title">
+                        <div class="form-note">Title as it was given in the course</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="filelink">File Link (Google Drive or OneDrive) *</label>
+                        <input type="url" id="filelink" name="filelink" placeholder="https://drive.google.com/..." required aria-label="Paste your file sharing link">
+                        <div class="form-note">📎 Upload your PDF or DOCX to <a href="https://drive.google.com" style="color: #059669;">Google Drive</a> or <a href="https://onedrive.live.com" style="color: #059669;">OneDrive</a>, set sharing to <strong>"Anyone with the link"</strong>, then paste the link here.</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Additional Comments (Optional)</label>
+                        <textarea id="comments" name="comments" aria-label="Add any comments about your submission"></textarea>
+                        <div class="form-note">Any special notes for the instructor</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label style="display: flex; align-items: flex-start; font-weight: normal;">
+                            <input type="checkbox" id="integrity" name="integrity" required style="margin-right: 10px; margin-top: 3px;">
+                            <span>I confirm this work is entirely my own and I have read and understood the Academic Integrity Policy above.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn" aria-label="Submit your assignment">Submit Assignment</button>
+                </form>
+            </div>
+            
+            <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <h3 style="margin-top: 0; color: #064e3b;">✅ After Submission</h3>
+                <p>Your assignment has been received. A confirmation will be sent to your email shortly. The instructor will review your work and provide feedback according to the course grading schedule.</p>
+            </div>
+        </section>
+    </main>
     
-    fileNameEl.textContent = file.name;
-    
-    if (file.size > 25 * 1024 * 1024) {
-      fileSizeEl.innerHTML = `<span style="color: #d9534f; font-weight: 600;">⚠ File exceeds 25 MB limit!</span>`;
-    } else {
-      fileSizeEl.innerHTML = `<span>📊 ${sizeMB} MB (${sizePercent}% of limit)</span>`;
-    }
-  } else {
-    fileNameEl.textContent = '';
-    fileSizeEl.textContent = '';
-  }
-}
-
-// ── Drag and Drop ──
-const dropZone = document.getElementById('file-drop-zone');
-const fileInput = document.getElementById('assignment_file');
-
-// Label automatically triggers file input when clicked (no extra handler needed)
-
-['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-  dropZone.addEventListener(eventName, preventDefaults, false);
-});
-
-function preventDefaults(e) {
-  e.preventDefault();
-  e.stopPropagation();
-}
-
-['dragenter', 'dragover'].forEach(eventName => {
-  dropZone.addEventListener(eventName, highlight, false);
-});
-
-['dragleave', 'drop'].forEach(eventName => {
-  dropZone.addEventListener(eventName, unhighlight, false);
-});
-
-function highlight(e) {
-  dropZone.style.borderColor = '#3498db';
-  dropZone.style.background = '#f0f8ff';
-  dropZone.classList.add('dragover');
-}
-
-function unhighlight(e) {
-  dropZone.style.borderColor = '#3498db';
-  dropZone.style.background = '#f0f8ff';
-  dropZone.classList.remove('dragover');
-}
-
-dropZone.addEventListener('drop', handleDrop, false);
-
-function handleDrop(e) {
-  const dt = e.dataTransfer;
-  const files = dt.files;
-  document.getElementById('assignment_file').files = files;
-  handleFileSelect();
-  validateForm();
-}
-
-// ── Checklist Update ──
-function updateChecklist() {
-  const allChecked = document.getElementById('check1').checked &&
-                    document.getElementById('check2').checked &&
-                    document.getElementById('check3').checked &&
-                    document.getElementById('check4').checked &&
-                    document.getElementById('check5').checked;
-  
-  const items = document.querySelectorAll('.checklist-item');
-  items.forEach((item, idx) => {
-    const input = item.querySelector('input[type="checkbox"]');
-    if (input.checked) {
-      item.classList.add('complete');
-    } else {
-      item.classList.remove('complete');
-    }
-  });
-}
-
-// ── Character Counter ──
-function updateCommentCount() {
-  const count = document.getElementById('comments').value.length;
-  document.getElementById('comment-count').textContent = count;
-}
-
-function updateReasonCount() {
-  const count = document.getElementById('ext_reason').value.length;
-  document.getElementById('reason-count').textContent = count;
-}
-
-// ── Modal Functions ──
-function toggleGradeLookup(e) {
-  e.preventDefault();
-  document.getElementById('gradeLookupModal').classList.add('show');
-}
-
-function toggleExtensionForm(e) {
-  e.preventDefault();
-  document.getElementById('extensionModal').classList.add('show');
-}
-
-function closeModal(modalId) {
-  document.getElementById(modalId).classList.remove('show');
-}
-
-window.onclick = function(event) {
-  if (event.target.classList.contains('modal')) {
-    event.target.classList.remove('show');
-  }
-}
-
-// ── Form Submission with Formspree ──
-document.getElementById('assignment-form').addEventListener('submit', function(e) {
-  const studentName = document.getElementById('student_name').value.trim();
-  const studentId = document.getElementById('student_id').value.trim();
-  const studentEmail = document.getElementById('student_email').value.trim();
-  const module = document.getElementById('module').value.trim();
-  const assignmentTitle = document.getElementById('assignment_title').value.trim();
-  const file = document.getElementById('assignment_file').files[0];
-  const integrityPledge = document.getElementById('integrity_pledge').checked;
-
-  // Validate each field
-  if (!studentName) { showMsg('error', 'Please enter your full name.'); e.preventDefault(); return; }
-  if (!studentId) { showMsg('error', 'Please enter your student ID.'); e.preventDefault(); return; }
-  if (!studentEmail) { showMsg('error', 'Please enter your email address.'); e.preventDefault(); return; }
-  if (!module) { showMsg('error', 'Please enter your course title and code.'); e.preventDefault(); return; }
-  if (!assignmentTitle) { showMsg('error', 'Please enter the assignment title.'); e.preventDefault(); return; }
-  if (!file) { showMsg('error', 'Please select a file to upload.'); e.preventDefault(); return; }
-  if (file.size > 25 * 1024 * 1024) { showMsg('error', 'File exceeds 25 MB limit.'); e.preventDefault(); return; }
-  if (!integrityPledge) {
-    showMsg('error', 'You must confirm the integrity pledge before submitting.'); e.preventDefault(); return;
-  }
-
-  // If validation passes, show loading state
-  const btn = document.getElementById('submit-btn');
-  btn.disabled = true;
-  btn.innerHTML = '<span class="spinner"></span> Submitting…';
-  
-  // Store submission data for success display
-  const timestamp = new Date().toLocaleString();
-  window.submissionData = {
-    name: studentName,
-    time: timestamp,
-    file: file.name,
-    email: studentEmail
-  };
-});
-
-// ── Extension Request Handler ──
-document.getElementById('ext_reason').addEventListener('keyup', updateReasonCount);
-
-function handleExtensionRequest(e) {
-  e.preventDefault();
-  
-  const assignment = document.getElementById('ext_assignment').value;
-  const days = document.getElementById('ext_days').value;
-  
-  showAlert(`Extension request for "${assignment}" (${days}) has been submitted. Please allow 24-48 hours for a response.`, 'success');
-  
-  setTimeout(() => {
-    closeModal('extensionModal');
-    document.getElementById('extension-form').reset();
-    document.getElementById('reason-count').textContent = '0';
-  }, 2000);
-}
-
-// ── Message Display ──
-function showMsg(type, text) {
-  const el = document.getElementById('form-message');
-  el.className = 'alert ' + (type === 'success' ? 'success' : 'error');
-  el.textContent = text;
-  el.style.display = 'block';
-  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-function showAlert(text, type) {
-  const msg = document.getElementById('form-message');
-  msg.className = 'alert ' + (type === 'success' ? 'success' : 'error');
-  msg.textContent = text;
-  msg.style.display = 'block';
-  msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}
-
-// Initial validation check
-validateForm();
-</script>
-
+    <footer role="contentinfo">
+        <p>&copy; 2026 Dr. Maurice Udom. All rights reserved.</p>
+        <p><a href="https://mauriceudom.org/">mauriceudom.org</a> — Academic Hub</p>
+    </footer>
 </body>
 </html>
