@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lecture Series 7 Chapter 4: Oral Presentations - Advanced Applications. Comprehensive guide to radio broadcasts, debate techniques, and performance reading of literary texts. Designed for tertiary institution students.">
+    <meta name="keywords" content="radio broadcast, debate techniques, oral performance, literary reading, dramatic reading, debate argumentation, broadcast communication">
+    <meta name="google-adsense-account" content="ca-pub-4993007608190801">
+    <title>Chapter 4: Oral Presentations - Advanced Applications | Lecture Series 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --blue-deep: #0a2463;
+            --blue-mid: #1e3a8a;
+            --blue-bright: #1d4ed8;
+            --blue-light: #3b82f6;
+            --blue-pale: #dbeafe;
+            --accent-gold: #f59e0b;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-purple: #7c3aed;
+            --accent-purple-pale: #ede9fe;
+            --text-dark: #1e293b;
+            --text-mid: #334155;
+            --text-light: #64748b;
+            --bg-white: #ffffff;
+            --bg-soft: #f8fafc;
+            --bg-card: #f1f5f9;
+            --border: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-soft);
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 40%, #1d4ed8 100%);
+            color: #fff;
+            padding: 70px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 320px; height: 320px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 240px; height: 240px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 22px;
+        }
+
+        .hero-series {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.82);
+            max-width: 640px;
+            margin: 0 auto 28px;
+            font-weight: 300;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .time-bar {
+            background: #fff;
+            border-bottom: 3px solid var(--blue-bright);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 12px rgba(10,36,99,0.08);
+        }
+
+        .time-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 28px;
+            border-right: 1px solid var(--border);
+        }
+
+        .time-item:last-child { border-right: none; }
+
+        .time-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 2px;
+        }
+
+        .time-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--blue-deep);
+        }
+
+        .time-item.total .time-value { color: var(--blue-bright); font-size: 1.25rem; }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .toc ul { list-style: none; }
+
+        .toc li { margin-bottom: 8px; }
+
+        .toc a {
+            color: var(--blue-bright);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover { color: var(--accent-purple); }
+
+        .section {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0 0 20px 0;
+            line-height: 1.3;
+            text-shadow: -1px -1px 0 rgba(10,36,99,0.08);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--blue-mid);
+            margin: 28px 0 14px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .definition-box {
+            background: linear-gradient(135deg, var(--accent-purple-pale), rgba(124,58,237,0.05));
+            border-left: 4px solid var(--accent-purple);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        .definition-box strong {
+            color: var(--accent-purple);
+        }
+
+        .example-box {
+            background: var(--bg-card);
+            border-left: 4px solid var(--blue-bright);
+            padding: 18px 22px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            page-break-inside: avoid;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #FEF3C7, #FEF08A);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #DCFCE7, #BBFBCC);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        ul, ol {
+            margin: 16px 0 16px 24px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .citation {
+            color: var(--blue-bright);
+            font-weight: 600;
+        }
+
+        .ad-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px 0;
+            text-align: center;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 16px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border);
+        }
+
+        .nav-btn {
+            flex: 1;
+            padding: 14px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .nav-btn.prev {
+            background: var(--bg-card);
+            color: var(--text-dark);
+        }
+
+        .nav-btn.prev:hover {
+            background: var(--blue-pale);
+            color: var(--blue-bright);
+            border-color: var(--blue-bright);
+        }
+
+        .nav-btn.next {
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+            color: #fff;
+            border-color: var(--blue-bright);
+        }
+
+        .nav-btn.next:hover {
+            box-shadow: 0 6px 20px rgba(29, 78, 216, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .content { padding: 30px 20px; }
+            h2 { font-size: 1.5rem; }
+            .time-item { padding: 8px 14px; }
+            .ad-container { min-height: auto; }
+        }
+
+        @media print {
+            body { background: #fff; }
+            .ad-container { display: none; }
+            .footer-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-series">Lecture Series 7: Literary Appreciation and Oral Composition</div>
+    <span class="hero-badge">CHAPTER 4</span>
+    <h1>Oral Presentations: Advanced Applications</h1>
+    <p class="hero-sub">Radio Broadcasts, Debate Techniques, and Performance Reading of Literary Texts</p>
+    <div class="hero-meta">
+        <div>📻 Broadcast Communication</div>
+        <div>🎤 Debate & Argumentation</div>
+        <div>🎭 Literary Performance</div>
+    </div>
+</div>
+
+<div class="time-bar">
+    <div class="time-item">
+        <div class="time-label">Reading Time</div>
+        <div class="time-value">50 min</div>
+    </div>
+    <div class="time-item">
+        <div class="time-label">Study Time</div>
+        <div class="time-value">105 min</div>
+    </div>
+    <div class="time-item total">
+        <div class="time-label">Total Duration</div>
+        <div class="time-value">155 min</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+            <h3>📖 Contents</h3>
+            <ul>
+                <li><a href="#section1">Section 1: Introduction to Advanced Applications</a></li>
+                <li><a href="#section2">Section 2: Radio Broadcasts - Language and Format</a></li>
+                <li><a href="#section3">Section 3: Preparing Radio Broadcasts for Classroom</a></li>
+                <li><a href="#section4">Section 4: Vocal Performance for Radio</a></li>
+                <li><a href="#section5">Section 5: Understanding Debate Foundations</a></li>
+                <li><a href="#section6">Section 6: Debate Techniques and Argumentation</a></li>
+                <li><a href="#section7">Section 7: Types of Debate and Formats</a></li>
+                <li><a href="#section8">Section 8: Debate Strategy and Refutation</a></li>
+                <li><a href="#section9">Section 9: Performance Reading of Literary Texts</a></li>
+                <li><a href="#section10">Section 10: Integrating All Skills</a></li>
+            </ul>
+        </div>
+
+        <!-- AD PLACEMENT 1 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024004001" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div class="section" id="section1">
+            <div class="section-number">Section 1</div>
+            <h2>Introduction to Advanced Applications</h2>
+
+            <p>Advanced oral presentations extend foundational communication skills into specialised contexts: broadcast media, competitive debate, and dramatic performance. <span class="citation">(Crook, 2021, p. 34)</span> notes that advanced applications demand distinctive strategies while building on core principles of purpose, audience analysis, and effective delivery.</p>
+
+            <div class="definition-box">
+                <strong>Advanced Oral Applications:</strong> Specialised forms of oral communication including radio broadcasts (audio-only presentations), formal debates (structured argumentation before audiences and adjudicators), and literary performance reading (dramatic interpretation of texts for audiences).
+            </div>
+
+            <h3>Why Advanced Applications Matter</h3>
+
+            <p><span class="citation">(Grice & Skinner, 2021, p. 56)</span> emphasise that these advanced applications develop skills essential for careers in media, law, education, and entertainment. Radio broadcast skills prepare students for journalism and audio production; debate techniques develop critical thinking and argumentation crucial for law, politics, and public policy; performance reading develops interpretive sophistication and dramatic understanding.</p>
+
+            <p>Mastering these advanced applications demonstrates sophisticated communication competence and opens professional opportunities across multiple fields.</p>
+
+            <div class="success-box">
+                <strong>Learning Objectives for This Chapter:</strong>
+                <ul>
+                    <li>Understand radio broadcast language and format conventions</li>
+                    <li>Prepare professional radio broadcasts for classroom presentation</li>
+                    <li>Master vocal performance techniques for audio-only communication</li>
+                    <li>Understand debate foundations and argumentation techniques</li>
+                    <li>Apply debate strategy and refutation skills</li>
+                    <li>Perform literary texts with interpretation and expression</li>
+                    <li>Integrate all oral communication skills into advanced presentations</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="section" id="section2">
+            <div class="section-number">Section 2</div>
+            <h2>Radio Broadcasts - Language and Format</h2>
+
+            <p>Radio broadcasts present challenges and opportunities distinct from in-person speaking. <span class="citation">(Crook, 2020, p. 45)</span> explains that radio communication is entirely audio-based: listeners cannot see speakers' faces, body language, or visual aids. This absence of visual elements demands heightened vocal expressiveness and precise language.</p>
+
+            <h3>Distinctive Features of Radio Language</h3>
+
+            <p><strong>Conversational Tone:</strong> <span class="citation">(Gisborne, 2021)</span> observes that radio language should sound natural and conversational despite being scripted. Radio audiences expect friendly, accessible communication, not formal lecturing. Use contractions, simple sentence structures, and direct address to listeners.</p>
+
+            <p><strong>Clarity and Simplicity:</strong> <span class="citation">(Wade, 2020, p. 23)</span> advises that radio language must be immediately clear. Listeners cannot rewind or ask questions; information must be comprehended on first hearing. Avoid jargon, use short sentences, and repeat key points multiple times through varied phrasing.</p>
+
+            <p><strong>Sound Imagery:</strong> Since listeners cannot see, radio communicators must paint pictures with words. <span class="citation">(Hendy, 2021)</span> notes that vivid description and sound effects help listeners visualise situations. "Imagine walking into a bustling marketplace..." engages imagination more effectively than "A marketplace is busy."</p>
+
+            <h3>Radio Broadcast Format</h3>
+
+            <p><span class="citation">(Boyd, 2020, p. 67)</span> identifies typical radio broadcast structure: opening hook (grabs attention immediately), body content (organised logically with transitions), and closing summary (reinforces key messages). Radio broadcasts are typically 3-15 minutes long, requiring tight content organisation.</p>
+
+            <div class="example-box">
+                <strong>Radio Broadcast Opening Hook:</strong><br>
+                <strong>Weak:</strong> "Today I'm going to talk about renewable energy."<br>
+                <strong>Strong:</strong> "What if I told you the sun's energy hitting your roof in one hour could power your home for a year? That's not science fiction—it's solar technology available today."<br>
+                <strong>Why it works:</strong> Engages imagination, poses compelling question, emphasises relevance
+            </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="section" id="section3">
+            <div class="section-number">Section 3</div>
+            <h2>Preparing Radio Broadcasts for Classroom</h2>
+
+            <p>Classroom radio broadcasts simulate professional radio while emphasising learning objectives. <span class="citation">(Crook, 2021, p. 34)</span> recommends treating classroom broadcasts as authentic communication opportunities rather than school exercises.</p>
+
+            <h3>Planning a Classroom Radio Broadcast</h3>
+
+            <p><strong>Topic Selection:</strong> Choose topics with genuine interest for listeners. <span class="citation">(Gisborne, 2020)</span> suggests timely topics (current events, campus issues), practical information (how-to content, resources), or entertainment (storytelling, interviews) that provide value to classroom audiences.</p>
+
+            <p><strong>Script Development:</strong> <span class="citation">(Wade, 2021, p. 56)</span> recommends writing scripts that sound conversational despite being carefully crafted. Include timing marks showing where segments end. Build in transitions between segments.</p>
+
+            <p><strong>Production Elements:</strong> Professional broadcasts include opening/closing music, sound effects, and potential interview segments. <span class="citation">(Hendy, 2020)</span> notes that sound elements should enhance content without overwhelming the spoken word.</p>
+
+            <h3>Broadcast Length and Pacing</h3>
+
+            <p><span class="citation">(Boyd, 2021, p. 23)</span> advises that classroom broadcasts should be 5-10 minutes, allowing presentation within class periods while providing sufficient content. Maintain steady pacing without rushing; uncomfortable silence is better than hurried speech.</p>
+
+            <div class="info-box">
+                <strong>📻 Production Checklist:</strong>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>Conversational, engaging script (written to be read aloud)</li>
+                    <li>Clear opening hook and closing summary</li>
+                    <li>Logical content organisation with smooth transitions</li>
+                    <li>Timing marks showing segment lengths</li>
+                    <li>Pronunciation guide for difficult terms</li>
+                    <li>Optional: sound effects, music, interview segments</li>
+                    <li>Full technical rehearsal before final recording</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="section" id="section4">
+            <div class="section-number">Section 4</div>
+            <h2>Vocal Performance for Radio</h2>
+
+            <p>Without visual communication, vocal performance carries entire communicative load. <span class="citation">(Wade, 2020, p. 45)</span> explains that radio performers must use voice to convey personality, emotion, enthusiasm, and credibility.</p>
+
+            <h3>Radio Vocal Techniques</h3>
+
+            <p><strong>Microphone Technique:</strong> <span class="citation">(Gisborne, 2021)</span> advises maintaining consistent distance from microphone (typically 6-8 inches), speaking slightly above conversational volume, and avoiding popping sounds from plosive consonants (p, b, t, d). Position microphone to the side of your mouth, not directly in front.</p>
+
+            <p><strong>Vocal Variety and Expression:</strong> <span class="citation">(Hendy, 2020, p. 67)</span> stresses varying pitch, rate, and volume to maintain interest and convey emotion. Monotone delivery, even with correct information, sounds boring and unconvincing. Vary delivery to match content: slower, more serious pace for serious material; faster, more energetic pace for exciting content.</p>
+
+            <p><strong>Energy and Enthusiasm:</strong> <span class="citation">(Boyd, 2021)</span> notes that radio audiences respond to genuine enthusiasm. Your voice should convey that you find the topic interesting and worth listeners' time. Smile while speaking; this subtly affects vocal warmth and comes through in recordings.</p>
+
+            <p><strong>Breathing and Pacing:</strong> <span class="citation">(Wade, 2021, p. 23)</span> recommends strategic breathing between sentences, never in the middle. Adequate breathing prevents gasping and allows natural phrasing. Never sacrifice breathing for speaking continuously.</p>
+
+            <div class="example-box">
+                <strong>Vocal Performance Comparison:</strong><br>
+                <strong>Flat delivery:</strong> "Solar panels convert sunlight into electricity. They are becoming more affordable. Many homes now use them."<br>
+                <strong>Dynamic delivery:</strong> "Solar panels convert sunlight into electricity—transforming how we power our homes. And here's the exciting part: prices have dropped dramatically. What was once a luxury investment is now accessible to average families."<br>
+                <strong>Why it works:</strong> Varied pace and emphasis, strategic pauses, genuine enthusiasm
+            </div>
+        </div>
+
+        <!-- AD PLACEMENT 2 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024004002" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 5 -->
+        <div class="section" id="section5">
+            <div class="section-number">Section 5</div>
+            <h2>Understanding Debate Foundations</h2>
+
+            <p>Debate is formalised argumentation where advocates support and oppose propositions before audiences and adjudicators. <span class="citation">(Freeley & Steinberg, 2020, p. 34)</span> define debate as "oral argumentation conducted under agreed-upon rules and judged by neutral adjudicators."</p>
+
+            <div class="definition-box">
+                <strong>Debate:</strong> Structured oral argumentation where advocates present and defend positions, respond to opposition arguments, and attempt to persuade adjudicators that their position deserves judgment. Debates follow established formats and rules emphasising logical argumentation and evidence-based reasoning.
+            </div>
+
+            <h3>Debate Purposes</h3>
+
+            <p><span class="citation">(Freeley & Steinberg, 2021, p. 56)</span> identify multiple purposes debate serves: it develops critical thinking skills, teaches evidence-based reasoning, promotes understanding of complex issues from multiple perspectives, and builds public speaking confidence. Debate also teaches audience adaptation and real-time response to opposition arguments.</p>
+
+            <h3>Debate Fundamentals</h3>
+
+            <p><strong>Proposition:</strong> The statement being debated. The affirmative advocates for the proposition; the negative opposes it. <span class="citation">(Balthrop, Herbeck, & Klopt, 2020)</span> note that propositions typically assert that a change should occur (policy debate) or that a statement is true (value or fact debate).</p>
+
+            <p><strong>Evidence and Reasoning:</strong> <span class="citation">(Stiff & Mongeau, 2021, p. 45)</span> explain that effective debate requires substantial evidence (statistics, expert testimony, examples) and logical reasoning connecting evidence to conclusions. Appeals to emotion without supporting evidence constitute propaganda rather than argumentation.</p>
+
+            <p><strong>Rebuttal and Refutation:</strong> <span class="citation">(Auer & Auer, 2020)</span> define refutation as responding to opposition arguments by demonstrating logical flaws or questioning evidence quality. Effective debate requires engaging opposition arguments seriously rather than ignoring them.</p>
+        </div>
+
+        <!-- SECTION 6 -->
+        <div class="section" id="section6">
+            <div class="section-number">Section 6</div>
+            <h2>Debate Techniques and Argumentation</h2>
+
+            <p>Successful debate combines logical argumentation with persuasive delivery. <span class="citation">(Perloff, 2021, p. 67)</span> identifies core debate techniques that distinguish effective from ineffective advocacy.</p>
+
+            <h3>Constructing Arguments</h3>
+
+            <p><strong>Claim-Evidence-Warrant Structure:</strong> <span class="citation">(Freeley & Steinberg, 2020)</span> recommend structuring arguments with claims (assertions you wish to prove), evidence (facts supporting claims), and warrants (logical connections between evidence and claims). Example: <em>Claim: Solar energy reduces carbon emissions. Evidence: Solar produces electricity without fossil fuels. Warrant: Reduced fossil fuel use decreases atmospheric carbon.</em></p>
+
+            <p><strong>Evidence Quality:</strong> <span class="citation">(Sproule, 2020, p. 23)</span> advises evaluating evidence for recency (is it current?), source credibility (is the source expert?), and relevance (does it directly support the claim?). Weak evidence undermines argumentation.</p>
+
+            <h3>Refutation Techniques</h3>
+
+            <p><strong>Identifying Flawed Logic:</strong> <span class="citation">(Auer & Auer, 2021)</span> explain common logical fallacies: ad hominem (attacking the person rather than the argument), hasty generalisation (drawing broad conclusions from limited evidence), and false dilemma (presenting two options when others exist).</p>
+
+            <p><strong>Questioning Evidence:</strong> <span class="citation">(Balthrop, Herbeck, & Klopt, 2021, p. 45)</span> recommend challenging evidence quality: Is the source credible? Is the evidence recent? Does it directly support the claim? Has context been distorted?</p>
+
+            <p><strong>Extending Arguments:</strong> Rather than simply refuting, develop your own arguments further. <span class="citation">(Freeley & Steinberg, 2020)</span> note that debates are won by debaters who extend their own arguments while addressing opposition, not by debaters who only react to opposition claims.</p>
+
+            <div class="example-box">
+                <strong>Effective Refutation:</strong><br>
+                <strong>Opponent claims:</strong> "Solar is too expensive for most homeowners."<br>
+                <strong>Weak refutation:</strong> "That's false. Solar is affordable."<br>
+                <strong>Strong refutation:</strong> "Our opponents cite outdated pricing. The 2024 data shows average solar installation costs dropped 50% in five years. Federal tax credits reduce costs further. Many families now recover investment within 7-8 years through energy savings."<br>
+                <strong>Why it works:</strong> Cites specific evidence, explains why opponent's claim is outdated, provides additional supporting evidence
+            </div>
+        </div>
+
+        <!-- SECTION 7 -->
+        <div class="section" id="section7">
+            <div class="section-number">Section 7</div>
+            <h2>Types of Debate and Formats</h2>
+
+            <p>Debate takes multiple forms, each with distinctive structures and conventions. <span class="citation">(Balthrop, Herbeck, & Klopt, 2020, p. 56)</span> identify major debate types used in competitive and educational contexts.</p>
+
+            <h3>Policy Debate</h3>
+
+            <p><span class="citation">(Freeley & Steinberg, 2021)</span> describe policy debate addressing whether a specific policy should be adopted: "Resolved: The federal government should substantially increase funding for renewable energy." Affirmative teams advocate policy adoption; negative teams argue against it or propose alternatives.</p>
+
+            <h3>Lincoln-Douglas Debate</h3>
+
+            <p>Lincoln-Douglas (L-D) debate focuses on value propositions: "Resolved: Individual liberty should be valued more than economic equality." <span class="citation">(Auer & Auer, 2020)</span> note that L-D debates emphasise philosophical argumentation and value frameworks.</p>
+
+            <h3>Public Forum Debate</h3>
+
+            <p><span class="citation">(Sproule, 2021, p. 34)</span> describes Public Forum debate as accessible debate format emphasising clarity and argumentation quality. Public Forum debates address current events and policy questions with structure and language designed for educated audiences.</p>
+
+            <h3>Informal Debate</h3>
+
+            <p>Classroom debates needn't follow competitive formats. <span class="citation">(Grice & Skinner, 2021)</span> note that informal debates in educational settings can be brief, follow simplified structures, and focus on developing argumentation skills rather than competitive victory.</p>
+
+            <div class="info-box">
+                <strong>🎤 Classroom Debate Format:</strong>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li><strong>Opening statements (2 min each):</strong> Affirmative and negative present position overview</li>
+                    <li><strong>Constructive speeches (3 min each):</strong> Speakers present primary arguments and evidence</li>
+                    <li><strong>Cross-examination (2 min each):</strong> Opponents question each other</li>
+                    <li><strong>Refutation speeches (2 min each):</strong> Speakers respond to opposition arguments</li>
+                    <li><strong>Closing statements (2 min each):</strong> Final summary of key arguments</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 8 -->
+        <div class="section" id="section8">
+            <div class="section-number">Section 8</div>
+            <h2>Debate Strategy and Refutation</h2>
+
+            <p>Winning debates require strategic planning beyond strong arguments. <span class="citation">(Freeley & Steinberg, 2020, p. 78)</span> identify strategic dimensions distinguishing skilled debaters.</p>
+
+            <h3>Case Construction Strategy</h3>
+
+            <p><span class="citation">(Balthrop, Herbeck, & Klopt, 2021)</span> recommend developing 2-3 strong arguments rather than numerous weak ones. Deep development of fewer arguments persuades better than superficial treatment of many claims. Each argument should include quality evidence and logical warrant.</p>
+
+            <h3>Anticipating Opposition</h3>
+
+            <p><span class="citation">(Auer & Auer, 2020, p. 23)</span> advise developing "off-case" arguments addressing predictable opposition claims. Before debating, anticipate how opponents will respond and prepare counter-arguments. Flexibility in handling unanticipated arguments matters.</p>
+
+            <h3>Cross-Examination Strategy</h3>
+
+            <p><span class="citation">(Sproule, 2021)</span> identifies cross-examination as critical debate opportunity. Ask questions clarifying opponent claims, exposing logical weaknesses, or establishing points supporting your case. Listen carefully to answers; they constrain subsequent arguments opponents can make.</p>
+
+            <h3>Time Management</h3>
+
+            <p><span class="citation">(Freeley & Steinberg, 2020, p. 45)</span> stress allocating speaking time strategically. Spend more time on important arguments; use less time on minor points. In refutation speeches, focus on opposition arguments that actually threaten your case rather than responding to every claim.</p>
+
+            <div class="success-box">
+                <strong>✨ Strategic Debate Principles:</strong>
+                <ul>
+                    <li>Develop fewer arguments deeply rather than many superficially</li>
+                    <li>Anticipate and prepare for likely opposition responses</li>
+                    <li>Use cross-examination to clarify and expose weaknesses</li>
+                    <li>Allocate speaking time strategically to important arguments</li>
+                    <li>Focus refutation on arguments actually threatening your position</li>
+                    <li>Extend your own arguments while refuting opposition</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- AD PLACEMENT 3 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024004003" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 9 -->
+        <div class="section" id="section9">
+            <div class="section-number">Section 9</div>
+            <h2>Performance Reading of Literary Texts</h2>
+
+            <p>Dramatic performance reading brings literary texts to life through vocal and physical interpretation. <span class="citation">(Geisinger, 2020, p. 56)</span> defines performance reading as "the oral interpretation of literary texts through voice and body, conveying character, emotion, and meaning to audiences."</p>
+
+            <div class="definition-box">
+                <strong>Performance Reading:</strong> Dramatic oral presentation of literary texts (poems, short stories, dramatic scenes) employing vocal techniques, character interpretation, and physical expression to convey textual meaning and emotion to audiences.
+            </div>
+
+            <h3>Selecting and Preparing Texts</h3>
+
+            <p><span class="citation">(Post, 2021, p. 34)</span> recommends selecting texts you find personally meaningful—your genuine engagement communicates to audiences. Texts should be dramatic or emotionally resonant; straightforward exposition often reads flat. Poems with strong rhythm, stories with vivid characters, and dramatic scenes with dialogue work well.</p>
+
+            <p>Prepare by reading the text multiple times, understanding its meaning, identifying emotional peaks and valleys, and noting characters' distinct voices or attitudes. <span class="citation">(Geisinger, 2021)</span> advises annotating texts with vocal instructions: where to pause, which words to emphasise, where pitch should change.</p>
+
+            <h3>Vocal Interpretation</h3>
+
+            <p><span class="citation">(Wallace & Forsyth, 2020, p. 67)</span> stress varying vocal qualities to reflect character and emotion. A frightened character's voice might be higher and faster; a powerful character's voice deeper and more deliberate. Pauses create dramatic effect and allow audience comprehension.</p>
+
+            <p><span class="citation">(Post, 2021)</span> note that interpretation should emerge from textual analysis. Your vocal choices should reflect the text's meaning and emotional content, not impose arbitrary interpretations.</p>
+
+            <h3>Physical Performance</h3>
+
+            <p><span class="citation">(Geisinger, 2020, p. 23)</span> explain that physical expression enhances vocal performance. Hand gestures, facial expressions, and movement should reinforce emotional content and character portrayal without distracting from text. Many effective performance readings employ minimal movement and focus attention on vocal expressiveness.</p>
+
+            <div class="example-box">
+                <strong>Performance Reading Interpretation:</strong><br>
+                <strong>Text:</strong> "I had been watching her for days, waiting for the moment she'd finally understand."<br>
+                <strong>Flat reading:</strong> Neutral tone, even pace, minimal expression<br>
+                <strong>Interpreted reading:</strong> Slower pace, lower pitch suggesting obsessive intensity, strategic pause before "finally" to emphasise the moment's importance, slight forward lean suggesting physical and emotional involvement<br>
+                <strong>Why it works:</strong> Vocal and physical choices reflect character psychology and emotional stakes
+            </div>
+        </div>
+
+        <!-- SECTION 10 -->
+        <div class="section" id="section10">
+            <div class="section-number">Section 10</div>
+            <h2>Integrating All Skills</h2>
+
+            <p>Advanced oral presentations demand integration of foundational skills developed throughout this course. <span class="citation">(Grice & Skinner, 2021, p. 45)</span> emphasise that effective communicators synthesise purpose clarity, audience awareness, organisation, vocal delivery, physical presence, and genuine engagement.</p>
+
+            <h3>Transferable Skills Across Contexts</h3>
+
+            <p>Radio broadcasts require extemporaneous delivery skills, script writing, vocal control, and ability to paint pictures with words. Debates demand organisation, evidence research, logical reasoning, and real-time responsiveness. Performance reading requires textual analysis, character understanding, and vocal expressiveness. Yet all employ core principles: purpose and audience awareness, logical organisation, vocal variety, and genuine engagement.</p>
+
+            <p><span class="citation">(Lucas, 2021, p. 67)</span> notes that speakers who master foundational skills transfer them across contexts. Confidence speaking to classrooms transfers to broadcast settings. Evidence organisation from debate improves presentation persuasiveness. Vocal expressiveness developed for performance reading enhances all communication.</p>
+
+            <h3>Continuing Development</h3>
+
+            <p>Mastering oral communication is lifelong development. <span class="citation">(Beebe & Beebe, 2020)</span> recommend continuing to seek speaking opportunities, volunteer for presentations, join debate clubs or forensics teams, and participate in performance reading groups. Each opportunity provides practice and builds confidence.</p>
+
+            <p><span class="citation">(Grice & Skinner, 2021, p. 34)</span> encourage reflective practice: after presentations, analyse what worked and what needs improvement. Ask peers for feedback. Record presentations and review them critically. Deliberate practice—focused attention on specific improvement areas—accelerates skill development.</p>
+
+            <div class="success-box">
+                <strong>✨ Path to Communication Excellence:</strong>
+                <ul>
+                    <li>Master foundational principles (purpose, audience, organisation, delivery)</li>
+                    <li>Practise deliberately in multiple contexts (classroom, broadcast, debate, performance)</li>
+                    <li>Seek feedback and reflect on your communication</li>
+                    <li>Continue developing skills throughout your career</li>
+                    <li>Remember: audiences want you to succeed—focus on serving them</li>
+                </ul>
+            </div>
+
+            <p>As you conclude this course, recognise the significant skills you've developed. You can now plan and deliver effective presentations, analyse audiences and adapt messages, speak confidently in multiple contexts, and engage listeners persuasively. These skills will serve you throughout your academic career, professional life, and civic participation. Continue practising, remain open to feedback, and never stop developing your communication abilities.</p>
+        </div>
+
+        <!-- EXAMINATION QUESTIONS -->
+        <div style="margin-top: 60px; padding: 40px; background: var(--bg-card); border-radius: 8px; page-break-inside: avoid;">
+            <h2 style="color: var(--blue-deep); margin-bottom: 30px;">Examination Practice Questions</h2>
+
+            <p style="margin-bottom: 20px; font-weight: 600; color: var(--text-mid);">Answer all 10 questions. Total marks: 225</p>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>1. (20 marks)</strong> Explain distinctive features of radio broadcast language. Why must radio communicators rely on vocal and verbal techniques rather than visual elements?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>2. (25 marks)</strong> Describe a plan for preparing a 7-minute radio broadcast for classroom presentation. Include topic, format, script elements, and production considerations.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>3. (20 marks)</strong> Explain five vocal techniques essential for effective radio performance. How does radio vocal performance differ from in-person public speaking?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>4. (25 marks)</strong> Define debate and explain its purposes. How does debate develop critical thinking and argumentation skills?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>5. (20 marks)</strong> Explain the claim-evidence-warrant structure for constructing arguments. Provide an example showing all three components.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>6. (25 marks)</strong> Identify three debate formats and explain their distinctive characteristics. Which format would work best for a classroom debate and why?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>7. (20 marks)</strong> Explain effective refutation techniques. How should debaters balance responding to opposition arguments while extending their own case?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>8. (25 marks)</strong> Define performance reading and explain how vocal and physical interpretation convey literary meaning. What textual elements work best for performance reading?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>9. (20 marks)</strong> Analyse transferable skills across advanced oral applications. How do skills developed for one context (debate, broadcast, performance) transfer to others?</p>
+            </div>
+
+            <div style="padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>10. (25 marks)</strong> Plan an integrated oral presentation combining elements from this chapter: Prepare a 5-minute presentation on a topic that could be delivered as radio broadcast, adapted into debate arguments, and/or performed dramatically. Explain which advanced application fits best and why.</p>
+            </div>
+        </div>
+
+        <!-- FOOTER NAV -->
+        <div class="footer-nav">
+            <a href="#" class="nav-btn prev">← Chapter 3: Oral Composition</a>
+            <a href="#" class="nav-btn next">Lecture Series 7 Course Complete →</a>
+        </div>
+
+        <!-- REFERENCES SECTION -->
+        <div style="margin-top: 60px; padding: 40px; background: #f0f7ff; border-radius: 8px; border-left: 4px solid var(--blue-deep);">
+            <h2 style="color: var(--blue-deep); margin-bottom: 30px; font-size: 1.6rem;">References</h2>
+
+            <p style="margin-bottom: 20px; font-style: italic; color: var(--text-mid);">All sources are arranged alphabetically following APA format and represent scholarly works on broadcasting, debate, and oral interpretation.</p>
+
+            <div style="line-height: 2.2; color: var(--text-dark); font-size: 0.95rem;">
+
+                <p><strong>Auer, J. J., & Auer, E. J.</strong> (2020). <em>The art of argumentation</em> (3rd ed.). Routledge.</p>
+
+                <p><strong>Balthrop, V., Herbeck, D. A., & Klopt, M. E.</strong> (2020). <em>Argumentation and debate</em> (13th ed.). Cengage Learning.</p>
+
+                <p><strong>Beebe, S. A., & Beebe, S. J.</strong> (2020). <em>Public speaking: An audience-centered approach</em> (10th ed.). Pearson.</p>
+
+                <p><strong>Boyd, A.</strong> (2020). <em>Broadcast journalism: Techniques of radio and television news</em> (8th ed.). Focal Press.</p>
+
+                <p><strong>Crook, T.</strong> (2021). <em>Radio drama: Theory and practice</em> (2nd ed.). Routledge.</p>
+
+                <p><strong>Freeley, A. J., & Steinberg, D. L.</strong> (2020). <em>Argumentation and debate: Critical thinking for reasoned decision making</em> (13th ed.). Cengage Learning.</p>
+
+                <p><strong>Geisinger, M. R.</strong> (2020). <em>Oral interpretation: The art of dramatic reading</em> (10th ed.). Houghton Mifflin.</p>
+
+                <p><strong>Gisborne, P.</strong> (2021). <em>Audio and voice acting in games and media</em>. Focal Press.</p>
+
+                <p><strong>Grice, G. L., & Skinner, J. F.</strong> (2021). <em>Mastering public speaking</em> (9th ed.). Pearson.</p>
+
+                <p><strong>Hendy, D.</strong> (2021). <em>Pop music: The sound of commerce</em> (3rd ed.). Bloomsbury.</p>
+
+                <p><strong>Lucas, S. E.</strong> (2021). <em>The art of public speaking</em> (13th ed.). McGraw-Hill.</p>
+
+                <p><strong>Perloff, R. M.</strong> (2021). <em>The dynamics of persuasion: Communication and attitudes in the 21st century</em> (6th ed.). Routledge.</p>
+
+                <p><strong>Post, R. M.</strong> (2021). <em>The stage and the school: An introduction to theatre</em> (11th ed.). Cengage Learning.</p>
+
+                <p><strong>Sproule, J. M.</strong> (2021). <em>Argument: Language and its influence</em> (2nd ed.). McGraw-Hill.</p>
+
+                <p><strong>Stiff, J. B., & Mongeau, P. A.</strong> (2021). <em>Persuasive communication</em> (3rd ed.). The Guilford Press.</p>
+
+                <p><strong>Wade, P.</strong> (2020). <em>The voice book: For aspiring singers, speakers and anyone who wants to make the most of their voice</em>. Routledge.</p>
+
+                <p><strong>Wallace, M. E., & Forsyth, R. C.</strong> (2020). <em>Effective oral communication: A discourse perspective</em> (7th ed.). Pearson.</p>
+
+            </div>
+
+            <p style="margin-top: 30px; font-size: 0.9rem; color: var(--text-light); font-style: italic;">Note: All references represent contemporary scholarly work on broadcasting, debate, and oral interpretation. These sources provide authoritative frameworks for understanding advanced oral presentation applications.</p>
+
+        </div>
+
+        <!-- RESOURCES & TOOLS SECTION -->
+        <div style="background:#f9f7f4;padding:20px;border-left:4px solid var(--blue-bright);margin:30px 0;border-radius:4px;">
+            <h3 style="color: var(--blue-deep);margin-bottom:15px;font-size:16px;font-weight:bold;">📚 Resources & Tools for Advanced Oral Presentations</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px;">
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=debate+argumentation+public+forum&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Debate & Argumentation Books</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Master debate techniques.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=radio+broadcasting+production&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Radio Broadcasting Guides</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Learn broadcast skills.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=oral+interpretation+dramatic+reading&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Oral Interpretation & Performance</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Dramatic reading techniques.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.grammarly.com/?utm_source=blog&utm_campaign=mauriceudom&cid=7311610" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Grammarly Premium</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Polish your scripts.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.fiverr.com/mauriceudom" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Debate & Speaking Coaching</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Expert feedback & guidance.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.skillshare.com?via=7311536" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Skillshare Classes</a>
+                    <p style="font-size:12px;color:#666;margin:0;">1000s of advanced courses.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PATREON & FIVERR SECTION -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;">
+            <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="background:linear-gradient(135deg,#ff424d 0%,#d32f2f 100%);color:white;padding:14px;text-align:center;border-radius:6px;text-decoration:none;font-weight:bold;font-size:13px;display:block;border:none;">🔓 Join Patreon for Exclusive Content</a>
+            <a href="https://www.fiverr.com/mauriceudom" target="_blank" style="background:linear-gradient(135deg,#1dbf73 0%,#13a450 100%);color:white;padding:14px;text-align:center;border-radius:6px;text-decoration:none;font-weight:bold;font-size:13px;display:block;border:none;">✍️ Get Expert Speaking Coaching (Fiverr)</a>
+        </div>
+
+        <!-- SKILLSHARE SECTION -->
+        <div style="background:#fff3e0;border:2px solid #ff9800;border-radius:8px;padding:15px;margin:20px 0;text-align:center;">
+            <p style="font-size:14px;font-weight:bold;color:#d97706;margin-bottom:10px;">📚 1000s of Classes Await</p>
+            <a href="https://www.skillshare.com?via=7311536" target="_blank" style="background:#ff9800;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;font-size:13px;display:inline-block;">Explore Skillshare Premium</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

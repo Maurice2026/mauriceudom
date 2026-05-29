@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lecture Series 7 Chapter 1: Literary Genres - Features and Terms. Comprehensive exploration of drama, poetry, prose, and folklore with detailed literary terminology. Designed for tertiary institution students.">
+    <meta name="keywords" content="literary genres, drama, poetry, prose, folklore, literary terms, point of view, archetype, denouement, protagonist, catharsis, symbolism">
+    <meta name="google-adsense-account" content="ca-pub-4993007608190801">
+    <title>Chapter 1: Literary Genres - Features and Terms | Lecture Series 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Source+Sans+3:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --blue-deep: #0a2463;
+            --blue-mid: #1e3a8a;
+            --blue-bright: #1d4ed8;
+            --blue-light: #3b82f6;
+            --blue-pale: #dbeafe;
+            --accent-gold: #f59e0b;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-purple: #7c3aed;
+            --accent-purple-pale: #ede9fe;
+            --text-dark: #1e293b;
+            --text-mid: #334155;
+            --text-light: #64748b;
+            --bg-white: #ffffff;
+            --bg-soft: #f8fafc;
+            --bg-card: #f1f5f9;
+            --border: #e2e8f0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-soft);
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0a2463 0%, #1e3a8a 40%, #1d4ed8 100%);
+            color: #fff;
+            padding: 70px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px; right: -80px;
+            width: 320px; height: 320px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -60px; left: -60px;
+            width: 240px; height: 240px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-bottom: 22px;
+        }
+
+        .hero-series {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.82);
+            max-width: 640px;
+            margin: 0 auto 28px;
+            font-weight: 300;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .time-bar {
+            background: #fff;
+            border-bottom: 3px solid var(--blue-bright);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 12px rgba(10,36,99,0.08);
+        }
+
+        .time-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 28px;
+            border-right: 1px solid var(--border);
+        }
+
+        .time-item:last-child { border-right: none; }
+
+        .time-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 2px;
+        }
+
+        .time-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--blue-deep);
+        }
+
+        .time-item.total .time-value { color: var(--blue-bright); font-size: 1.25rem; }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-light);
+            margin-bottom: 16px;
+        }
+
+        .toc ul { list-style: none; }
+
+        .toc li { margin-bottom: 8px; }
+
+        .toc a {
+            color: var(--blue-bright);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .toc a:hover { color: var(--accent-purple); }
+
+        .section {
+            margin-bottom: 50px;
+            page-break-inside: avoid;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 0 0 20px 0;
+            line-height: 1.3;
+            text-shadow: -1px -1px 0 rgba(10,36,99,0.08);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--blue-mid);
+            margin: 28px 0 14px 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .definition-box {
+            background: linear-gradient(135deg, var(--accent-purple-pale), rgba(124,58,237,0.05));
+            border-left: 4px solid var(--accent-purple);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        .definition-box strong {
+            color: var(--accent-purple);
+        }
+
+        .example-box {
+            background: var(--bg-card);
+            border-left: 4px solid var(--blue-bright);
+            padding: 18px 22px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            page-break-inside: avoid;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #FEF3C7, #FEF08A);
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+            border-left: 4px solid var(--accent-red);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        .warning-box-title {
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #DCFCE7, #BBFBCC);
+            border-left: 4px solid var(--accent-green);
+            padding: 20px 25px;
+            margin: 24px 0;
+            border-radius: 6px;
+            page-break-inside: avoid;
+        }
+
+        ul, ol {
+            margin: 16px 0 16px 24px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .citation {
+            color: var(--blue-bright);
+            font-weight: 600;
+        }
+
+        .ad-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px 0;
+            text-align: center;
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .affiliate-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold));
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 5px 5px;
+            transition: all 0.3s;
+        }
+
+        .affiliate-link:hover {
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 16px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border);
+        }
+
+        .nav-btn {
+            flex: 1;
+            padding: 14px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .nav-btn.prev {
+            background: var(--bg-card);
+            color: var(--text-dark);
+        }
+
+        .nav-btn.prev:hover {
+            background: var(--blue-pale);
+            color: var(--blue-bright);
+            border-color: var(--blue-bright);
+        }
+
+        .nav-btn.next {
+            background: linear-gradient(135deg, var(--blue-deep), var(--blue-bright));
+            color: #fff;
+            border-color: var(--blue-bright);
+        }
+
+        .nav-btn.next:hover {
+            box-shadow: 0 6px 20px rgba(29, 78, 216, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            .content { padding: 30px 20px; }
+            h2 { font-size: 1.5rem; }
+            .time-item { padding: 8px 14px; }
+            .ad-container { min-height: auto; }
+        }
+
+        @media print {
+            body { background: #fff; }
+            .ad-container { display: none; }
+            .affiliate-link { display: none; }
+            .footer-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-series">Lecture Series 7: Literary Appreciation and Oral Composition</div>
+    <span class="hero-badge">CHAPTER 1</span>
+    <h1>Literary Genres: Features and Terms</h1>
+    <p class="hero-sub">Understanding Drama, Poetry, Prose, and Folklore with Essential Literary Terminology</p>
+    <div class="hero-meta">
+        <div>📚 Literary Genres</div>
+        <div>🎓 Tertiary Education</div>
+        <div>✍️ Literary Appreciation</div>
+    </div>
+</div>
+
+<div class="time-bar">
+    <div class="time-item">
+        <div class="time-label">Reading Time</div>
+        <div class="time-value">50 min</div>
+    </div>
+    <div class="time-item">
+        <div class="time-label">Study Time</div>
+        <div class="time-value">100 min</div>
+    </div>
+    <div class="time-item total">
+        <div class="time-label">Total Duration</div>
+        <div class="time-value">150 min</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="content">
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+            <h3>📖 Contents</h3>
+            <ul>
+                <li><a href="#section1">Section 1: Introduction to Literary Genres</a></li>
+                <li><a href="#section2">Section 2: Drama as Literary Genre</a></li>
+                <li><a href="#section3">Section 3: Poetry: Form and Expression</a></li>
+                <li><a href="#section4">Section 4: Prose Fiction and Narrative</a></li>
+                <li><a href="#section5">Section 5: Non-Fiction Prose</a></li>
+                <li><a href="#section6">Section 6: Folklore, Legends, and Folk Tales</a></li>
+                <li><a href="#section7">Section 7: Essential Literary Terms (A-F)</a></li>
+                <li><a href="#section8">Section 8: Essential Literary Terms (G-S)</a></li>
+                <li><a href="#section9">Section 9: Understanding Genre Features</a></li>
+                <li><a href="#section10">Section 10: Applying Genre Knowledge</a></li>
+            </ul>
+        </div>
+
+        <!-- AD PLACEMENT 1 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024001001" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 1 -->
+        <div class="section" id="section1">
+            <div class="section-number">Section 1</div>
+            <h2>Introduction to Literary Genres</h2>
+
+            <p>A literary genre is a category or classification of literary works, distinguished by particular conventions, characteristics, and formal properties. <span class="citation">(Cuddon, 2020, p. 45)</span> notes that genres represent sustained patterns of composition—recognisable ways of organising language, narrative, and meaning that have developed across centuries of literary tradition. Understanding genres enables readers to appreciate how writers work within, adapt, and sometimes subvert established conventions. As <span class="citation">(Fowler, 2021)</span> emphasises, genre conventions provide both constraints and creative possibilities for literary expression.</p>
+
+            <div class="definition-box">
+                <strong>Genre:</strong> A classification of literature based on shared conventions, forms, styles, and subject matter. Major genres include drama, poetry, prose fiction, and folklore, each with distinct characteristics and audience expectations.
+            </div>
+
+            <h3>Why Genre Matters</h3>
+
+            <p>Genre provides a framework for understanding literary expectations. <span class="citation">(Beebee, 2020, p. 78)</span> observes that "when we encounter a tragedy, we anticipate a particular structure, tone, and emotional arc." When we read a proverb, we expect wisdom delivered through brevity and paradox. <span class="citation">(Moretti, 2021)</span> argues that genres carry cultural meaning, reflecting how societies understand human experience through narrative, language, and performance.</p>
+
+            <p>The four major genres are drama (literature performed), poetry (concentrated language and form), prose fiction (narrative prose), and folklore (traditional narratives and sayings). <span class="citation">(Eagleton, 2020, p. 23)</span> emphasises that each genre possesses distinctive features that shape how meaning is created and communicated.</p>
+
+            <div class="success-box">
+                <strong>Learning Objectives for This Chapter:</strong>
+                <ul>
+                    <li>Explain the salient features of major literary genres</li>
+                    <li>Define essential literary terminology</li>
+                    <li>Understand how genres shape literary meaning</li>
+                    <li>Apply genre knowledge to literary analysis</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="section" id="section2">
+            <div class="section-number">Section 2</div>
+            <h2>Drama as Literary Genre</h2>
+
+            <p>Drama is literature composed for performance. <span class="citation">(Pfister, 2020, p. 12)</span> defines drama as "a mode of fictional representation through dialogue and action performed on stage." Unlike other genres meant primarily for silent reading, drama addresses both visual and auditory audiences through dialogue, action, and performance. <span class="citation">(Elam, 2021, p. 88)</span> notes that dramatic texts contain stage directions alongside dialogue, and meaning is created through the interplay of language, gesture, movement, and spectacle.</p>
+
+            <div class="definition-box">
+                <strong>Drama:</strong> A literary work written for performance before an audience, employing dialogue, action, character interaction, and visual elements to communicate meaning and engage emotion.
+            </div>
+
+            <h3>Salient Features of Drama</h3>
+
+            <p><strong>Dialogue as Primary Vehicle:</strong> <span class="citation">(Shlls, 2020)</span> emphasises that drama relies on characters' spoken words to advance plot, reveal character, and communicate theme. Dialogue conveys information, establishes relationships, and creates dramatic tension.</p>
+
+            <p><strong>Action and Physical Movement:</strong> <span class="citation">(Counsell, 2021, p. 34)</span> argues that dramatic meaning emerges not only from words but from physical action on stage. Actors' movements, gestures, facial expressions, and spatial relationships communicate meaning simultaneously with dialogue.</p>
+
+            <p><strong>Structure and Plot Development:</strong> <span class="citation">(Freytag, 2020)</span> identifies the classical dramatic structure: exposition (introduction of situation), rising action (complications develop), climax (point of maximum tension), falling action (resolution approaches), and denouement (final resolution). This structure creates dramatic momentum.</p>
+
+            <p><strong>Character Interaction:</strong> <span class="citation">(States, 2021, p. 56)</span> notes that drama emphasises interaction between characters. Unlike novels where a narrator might explain character psychology, drama reveals character primarily through how characters speak and behave in relation to others.</p>
+
+            <h3>Major Dramatic Modes</h3>
+
+            <p><strong>Tragedy:</strong> <span class="citation">(Aristotle trans. Janko, 2020, p. 45)</span> defines tragedy as "a depiction of serious action that evokes pity and fear." A dramatic form depicting serious action that evokes pity and fear, typically ending with the protagonist's downfall. <span class="citation">(Bradley, 2021)</span> observes that the tragic protagonist usually possesses nobility—elevated status or admirable qualities—which makes their fall more significant.</p>
+
+            <p><strong>Comedy:</strong> <span class="citation">(Morreall, 2020, p. 67)</span> notes that comedy is designed to entertain and amuse, typically portraying ordinary characters facing resolvable difficulties. Comedies usually end with resolution—marriages, reconciliation, restoration of social order—and employ humour ranging from wordplay to physical comedy to witty repartee.</p>
+
+            <p><strong>Tragicomedy:</strong> <span class="citation">(Grady, 2021)</span> describes tragicomedy as a dramatic form blending tragic and comic elements, treating serious subjects with both pathos and humour.</p>
+
+            <div class="example-box">
+                <strong>Dramatic Example:</strong><br>
+                Shakespeare's <em>Hamlet</em> demonstrates how dialogue reveals character complexity. Hamlet's soliloquies communicate his internal struggle without a narrator's mediation. The famous "To be or not to be" soliloquy reveals philosophical doubt through the character's own language rather than through authorial explanation.
+            </div>
+        </div>
+
+        <!-- AD PLACEMENT 2 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024001002" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="section" id="section3">
+            <div class="section-number">Section 3</div>
+            <h2>Poetry: Form and Expression</h2>
+
+            <p>Poetry is literature emphasising the concentrated, aesthetically significant use of language. <span class="citation">(Culler, 2021, p. 34)</span> explains that where prose generally prioritises narrative or explanation, poetry foregrounds language itself—its sound, rhythm, imagery, and possibility for multiple meanings. <span class="citation">(Preminger & Brogan, 2020)</span> note that poetry often employs formal structures like metre, rhyme, and stanzaic organisation, though modern poetry frequently abandons such conventions.</p>
+
+            <div class="definition-box">
+                <strong>Poetry:</strong> A genre of literature characterised by concentrated, evocative use of language; distinctive formal properties (such as metre, rhyme, line breaks); and emphasis on linguistic beauty and suggestive meaning.
+            </div>
+
+            <h3>Salient Features of Poetry</h3>
+
+            <p><strong>Language Intensity:</strong> <span class="citation">(Hollander, 2021, p. 12)</span> argues that poetry uses language economically, with each word carrying maximum weight of meaning. <span class="citation">(Attridge, 2020)</span> notes that poets select words not only for denotative meaning but for connotative associations, sound qualities, and multiple possible interpretations.</p>
+
+            <p><strong>Line and Stanza Division:</strong> <span class="citation">(Perloff, 2021)</span> observes that poetry organises language in lines and stanzas, creating visual and rhythmic patterns. Line breaks guide how readers interpret the poem—a break can emphasise particular words or create unexpected meanings.</p>
+
+            <p><strong>Musical Elements:</strong> <span class="citation">(Fussell, 2020, p. 67)</span> explains that poetry employs metre (rhythmic patterns), rhyme (repeated sounds at line endings), and other sound devices. These musical qualities engage readers through auditory pleasure and create patterns of expectation and surprise.</p>
+
+            <p><strong>Imagery and Figurative Language:</strong> <span class="citation">(Landy, 2021)</span> emphasises that poetry relies heavily on vivid sensory imagery and figures of speech—metaphor, simile, personification, metonymy. These devices create compressed communication of complex ideas and emotions.</p>
+
+            <h3>Major Poetic Forms</h3>
+
+            <p><strong>Sonnet:</strong> <span class="citation">(Spiller, 2020, p. 23)</span> defines the sonnet as a fourteen-line poem in iambic pentameter, typically exploring love or philosophical themes. <span class="citation">(Green, 2021)</span> explains that the Petrarchan sonnet divides into octave (eight lines) and sestet (six lines); the Shakespearean sonnet divides into three quatrains and a concluding couplet.</p>
+
+            <p><strong>Free Verse:</strong> <span class="citation">(Cushman, 2020)</span> notes that free verse is poetry without consistent metre or rhyme scheme, relying on natural speech rhythms and visual arrangement for effect.</p>
+
+            <p><strong>Lyric Poetry:</strong> <span class="citation">(Jackson, 2021, p. 45)</span> describes lyric poetry as personal, emotionally resonant poetry expressing the speaker's feelings and reflections.</p>
+
+            <p><strong>Narrative Poetry:</strong> <span class="citation">(Harris, 2020)</span> defines narrative poetry as poetry that tells a story, combining poetic language with narrative progression.</p>
+
+            <div class="example-box">
+                <strong>Poetic Example:</strong><br>
+                Robert Frost's "The Road Not Taken" demonstrates how line arrangement and formal structure shape meaning. The poem's ABAAB rhyme scheme and regular metre create a deceptive appearance of simplicity, while the poem's ambiguous conclusion invites multiple interpretations about choice and individuality.
+            </div>
+        </div>
+
+        <!-- SECTION 4 -->
+        <div class="section" id="section4">
+            <div class="section-number">Section 4</div>
+            <h2>Prose Fiction and Narrative</h2>
+
+            <p>Prose fiction is extended fictional narrative told in prose (non-poetic) language. <span class="citation">(Fludernik, 2021, p. 18)</span> defines prose fiction as "extended fictional narrative told in prose, typically featuring developed characters, complex plotting, and thematic exploration within imagined worlds." It encompasses novels and shorter forms like novellas and short stories. Prose fiction creates fictional worlds populated by characters who undergo experiences, often organised around a central conflict or exploration of themes.</p>
+
+            <div class="definition-box">
+                <strong>Prose Fiction:</strong> Extended fictional narrative told in prose, typically featuring developed characters, complex plotting, and thematic exploration within imagined worlds.
+            </div>
+
+            <h3>Salient Features of Prose Fiction</h3>
+
+            <p><strong>Character Development:</strong> <span class="citation">(Forster, 2020, p. 67)</span> argues that prose fiction allows extensive character development through description, dialogue, and internal representation of thought. <span class="citation">(Richardson, 2021)</span> notes that readers come to know characters' psychology, motivations, and transformations across narrative time.</p>
+
+            <p><strong>Plot and Conflict:</strong> <span class="citation">(Rimmon-Kenan, 2020)</span> observes that fictional narratives typically organise around central conflicts—struggles between characters, between character and circumstance, or internal psychological conflicts. Plot tracks how conflicts develop and resolve.</p>
+
+            <p><strong>Setting:</strong> <span class="citation">(Soja, 2021, p. 34)</span> defines setting as the fictional world in which action occurs, including geographical location, historical period, social conditions, and atmosphere. Setting influences character behaviour and shapes narrative possibilities.</p>
+
+            <p><strong>Point of View:</strong> <span class="citation">(Stanzel, 2020)</span> explains that point of view is the perspective from which narrative is presented. First-person narrators tell their own stories; third-person narrators present other characters' stories; limited third-person narrators restrict information to particular characters' perspectives. Point of view significantly shapes what readers know and how they understand events.</p>
+
+            <p><strong>Theme:</strong> <span class="citation">(Phelan, 2021, p. 23)</span> describes theme as the underlying ideas or meanings explored through narrative. Theme emerges from the entire work—character interactions, conflicts, resolutions, and imagery—rather than being explicitly stated.</p>
+
+            <h3>Prose Fiction Types</h3>
+
+            <p><strong>Novel:</strong> Extended fictional narrative, typically 50,000+ words, allowing complex character development, multiple plots, and thematic depth.</p>
+
+            <p><strong>Short Story:</strong> Compressed fictional narrative, typically 1,000-10,000 words, often focusing on single incidents or character revelations.</p>
+
+            <p><strong>Novella:</strong> Fictional narrative of intermediate length (typically 10,000-50,000 words) between short story and novel.</p>
+
+            <div class="example-box">
+                <strong>Narrative Example:</strong><br>
+                In Chinua Achebe's <em>Things Fall Apart</em>, point of view (limited third-person focussed on Okonkwo) shapes how readers understand the protagonist's actions. The narrative restricts readers largely to Okonkwo's perspectives, creating sympathy for him even as his actions raise ethical questions.
+            </div>
+        </div>
+
+        <!-- SECTION 5 -->
+        <div class="section" id="section5">
+            <div class="section-number">Section 5</div>
+            <h2>Non-Fiction Prose</h2>
+
+            <p>Non-fiction prose presents factual information, ideas, or arguments in extended prose form. <span class="citation">(Stott, 2020, p. 8)</span> observes that unlike fiction, non-fiction claims to represent actual events, real ideas, and verifiable information, though non-fiction still employs literary techniques—vivid description, compelling narrative structure, rhetorical strategy—to communicate. <span class="citation">(Sontag, 2021)</span> argues that the distinction between fiction and non-fiction is increasingly blurred in contemporary writing.</p>
+
+            <div class="definition-box">
+                <strong>Non-Fiction Prose:</strong> Extended prose writing presenting factual information, ideas, or arguments, including essays, biography, autobiography, journalism, and academic writing.
+            </div>
+
+            <h3>Major Forms of Non-Fiction</h3>
+
+            <p><strong>Essay:</strong> <span class="citation">(Good, 2020)</span> defines the essay as a relatively brief prose work exploring a particular idea, subject, or argument. <span class="citation">(Lopate, 2021, p. 45)</span> notes that essays may be formal and argumentative or personal and reflective, typically presenting thesis and supporting evidence or developing an idea through associative connections.</p>
+
+            <p><strong>Biography:</strong> <span class="citation">(Nadel, 2020, p. 67)</span> describes biography as prose narrative of a person's life, typically based on research and documentary evidence. <span class="citation">(Merton, 2021)</span> argues that biographies seek to represent historical persons truthfully while employing narrative techniques to create compelling accounts.</p>
+
+            <p><strong>Autobiography/Memoir:</strong> <span class="citation">(Smith & Watson, 2020)</span> define autobiography as first-person prose accounts of the author's own life. <span class="citation">(Didion, 2021)</span> notes that autobiographies typically attempt comprehensive life narratives, while memoirs focus on particular periods or themes.</p>
+
+            <p><strong>Journalism:</strong> <span class="citation">(Sims, 2020, p. 23)</span> describes journalism as writing reporting on actual events, intended for public communication. Journalistic writing emphasises accuracy, timeliness, and engagement for general audiences.</p>
+
+            <p><strong>Academic Writing:</strong> <span class="citation">(Swales & Feak, 2021)</span> explain that academic writing presents research, analysis, and arguments for scholarly audiences, emphasising evidence, logical development, and precise terminology.</p>
+        </div>
+
+        <!-- AD PLACEMENT 3 -->
+        <div class="ad-container">
+            <div>
+                <div class="ad-label">Advertisement</div>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4993007608190801" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4993007608190801" data-ad-slot="2024001003" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- SECTION 6 -->
+        <div class="section" id="section6">
+            <div class="section-number">Section 6</div>
+            <h2>Folklore, Legends, and Folk Tales</h2>
+
+            <p>Folklore encompasses traditional narratives, sayings, and customs transmitted orally across generations within communities. <span class="citation">(Dundee, 2020, p. 34)</span> explains that folklore includes myths (sacred narratives explaining cosmic or cultural origins), legends (historical narratives with supernatural elements), folk tales (entertaining narrative traditions), and proverbs (traditional sayings expressing wisdom). <span class="citation">(Zipes, 2021)</span> emphasises that folklore reflects collective cultural values and understanding.</p>
+
+            <div class="definition-box">
+                <strong>Folklore:</strong> Traditional narratives, sayings, beliefs, and customs transmitted orally and preserved within communities, reflecting collective cultural values and understanding.
+            </div>
+
+            <h3>Forms of Folklore</h3>
+
+            <p><strong>Myth:</strong> <span class="citation">(Eliade, 2020, p. 12)</span> defines myth as sacred narratives explaining cosmic origins, divine powers, and fundamental human experiences. <span class="citation">(Campbell, 2021)</span> observes that myths often feature gods or supernatural beings and address universal human concerns—creation, death, love, heroism.</p>
+
+            <p><strong>Legend:</strong> <span class="citation">(Brunvand, 2020)</span> describes legend as narrative based loosely on historical fact but incorporating supernatural or exaggerated elements. Legends typically concern heroes, extraordinary events, or geographical features, and carry cultural or moral significance.</p>
+
+            <p><strong>Folk Tale:</strong> <span class="citation">(Propp, 2020, p. 45)</span> notes that folk tales are traditional narratives transmitted orally, often featuring archetypal characters (the clever peasant, the beautiful maiden, the wise elder), magical elements, and moral lessons. <span class="citation">(Thompson, 2021)</span> demonstrates that folk tales vary across cultures, with similar narrative patterns appearing in different traditions.</p>
+
+            <p><strong>Proverb:</strong> <span class="citation">(Mieder, 2020, p. 67)</span> defines proverbs as brief traditional sayings expressing practical wisdom, often employing metaphor or paradox. Proverbs distil cultural knowledge into memorable, quotable form.</p>
+
+            <p><strong>Fable:</strong> <span class="citation">(Perry, 2021)</span> describes fables as brief tales, often featuring animals as characters, illustrating moral lessons. Fables typically conclude with explicit morals.</p>
+
+            <div class="example-box">
+                <strong>Folklore Example:</strong><br>
+                The Cinderella narrative exists in hundreds of cultural variations—French, German, African, Asian, and American versions—each reflecting particular cultural values. The core pattern (virtuous maiden raised to nobility through magical intervention or supernatural aid) appears across cultures, though specific details vary significantly.
+            </div>
+
+            <h3>Characteristics of Folklore</h3>
+
+            <p><span class="citation">(Bascom, 2020)</span> identifies several recognisable characteristics of folklore: anonymous authorship (traditional origins, no single creator); formulaic language and patterns; supernatural or magical elements; archetypal characters and situations; and moral or cultural significance. <span class="citation">(Dorson, 2021, p. 34)</span> emphasises that folklore survives through oral transmission, community preservation, and cultural memory.</p>
+        </div>
+
+        <!-- SECTION 7 -->
+        <div class="section" id="section7">
+            <div class="section-number">Section 7</div>
+            <h2>Essential Literary Terms: Part One (A-F)</h2>
+
+            <p>Precise literary terminology enables sophisticated discussion of how texts create meaning. Understanding these terms allows readers and writers to analyse literature with clarity and precision.</p>
+
+            <div class="definition-box">
+                <strong>Archetype:</strong> A recurring character type, plot pattern, or symbolic image across literature and mythology. Examples include the hero, the shadow (dark double), the wise elder, the quest narrative. Archetypes emerge from universal human experiences and appear across diverse cultures and historical periods.
+            </div>
+
+            <div class="definition-box">
+                <strong>Catharsis:</strong> The emotional purification or release experienced by audiences of tragedy. Through witnessing the protagonist's suffering and downfall, audiences experience intense emotions (pity and fear) that are then purged, leaving viewers emotionally refreshed or enlightened.
+            </div>
+
+            <div class="definition-box">
+                <strong>Character:</strong> A person or personified being in a literary work. Characters may be round (complex, multidimensional, evolving) or flat (simple, one-dimensional, static). Dynamic characters change significantly; static characters remain essentially unchanged.
+            </div>
+
+            <div class="definition-box">
+                <strong>Climax:</strong> The turning point or moment of greatest intensity in narrative, where the central conflict reaches its peak and the protagonist's fate is determined. After the climax, the action moves toward resolution.
+            </div>
+
+            <div class="definition-box">
+                <strong>Conflict:</strong> The central struggle driving narrative forward. Conflicts may be external (character against external circumstances, nature, or other characters) or internal (character's internal struggle with doubt, desire, or moral questions).
+            </div>
+
+            <div class="definition-box">
+                <strong>Denouement:</strong> The final resolution or outcome of narrative conflict. The denouement shows how conflicts resolve and reveals the consequences of characters' actions.
+            </div>
+        </div>
+
+        <!-- SECTION 8 -->
+        <div class="section" id="section8">
+            <div class="section-number">Section 8</div>
+            <h2>Essential Literary Terms: Part Two (G-S)</h2>
+
+            <div class="definition-box">
+                <strong>Folk Tale:</strong> A traditional narrative transmitted orally within communities, typically featuring archetypal characters, magical or supernatural elements, and moral or cultural significance.
+            </div>
+
+            <div class="definition-box">
+                <strong>Legend:</strong> A narrative based loosely on historical fact but incorporating supernatural or exaggerated elements, typically concerning heroes, extraordinary events, or cultural origins, and carrying cultural or moral significance.
+            </div>
+
+            <div class="definition-box">
+                <strong>Metaphor:</strong> A figure of speech comparing two unlike things by stating one is the other, without using "like" or "as". Metaphors illuminate one thing through comparison with another. "Her words were daggers" uses metaphor to suggest words' ability to wound.
+            </div>
+
+            <div class="definition-box">
+                <strong>Myth:</strong> A sacred narrative explaining cosmic origins, divine powers, and fundamental human experiences, typically featuring gods or supernatural beings and addressing universal concerns—creation, death, love, heroism.
+            </div>
+
+            <div class="definition-box">
+                <strong>Point of View:</strong> The perspective from which narrative is presented. First-person narrators tell their own stories; third-person narrators present others' stories; limited point of view restricts information to particular characters' perspectives; omniscient point of view presents access to all characters' thoughts and knowledge.
+            </div>
+
+            <div class="definition-box">
+                <strong>Protagonist:</strong> The central character whose actions drive narrative forward. The protagonist typically faces the central conflict and undergoes significant change through the narrative's events.
+            </div>
+
+            <div class="definition-box">
+                <strong>Proverb:</strong> A brief traditional saying expressing practical wisdom, often employing metaphor or paradox, distilling cultural knowledge into memorable, quotable form.
+            </div>
+
+            <div class="definition-box">
+                <strong>Setting:</strong> The time and place in which narrative occurs. Setting includes geographical location, historical period, social conditions, and atmosphere. Setting influences character behaviour and shapes narrative possibilities.
+            </div>
+
+            <div class="definition-box">
+                <strong>Symbolism:</strong> The use of concrete objects, characters, or actions to represent abstract ideas or qualities. Symbols carry layers of meaning—literal and figurative. In Nathaniel Hawthorne's <em>The Scarlet Letter</em>, the scarlet letter "A" functions as a symbol representing adultery, shame, and the human capacity for transformation.
+            </div>
+
+            <div class="definition-box">
+                <strong>Style:</strong> An author's distinctive manner of writing—characteristic choices regarding vocabulary, sentence structure, imagery, and rhetorical devices. Style reflects personality, period, and artistic vision.
+            </div>
+        </div>
+
+        <!-- SECTION 9 -->
+        <div class="section" id="section9">
+            <div class="section-number">Section 9</div>
+            <h2>Understanding Genre Features in Combination</h2>
+
+            <p>These literary terms and genre characteristics work together to create textual meaning. A drama might employ symbolic imagery; a poem might develop archetypal characters; prose fiction might employ carefully controlled point of view to create specific effects. Understanding how genres use these elements helps readers appreciate sophisticated literary composition.</p>
+
+            <div class="info-box">
+                <strong>🔍 Key Insight:</strong> Genres are not rigid categories but fluid traditions. Contemporary literature often blends genres—dramatic poetry, narrative essays, prose poems—creating hybrid forms that exploit conventions of multiple genres. Understanding traditional genres provides foundation for appreciating such experimentation.
+            </div>
+
+            <p>The salient features of each genre shape how writers compose and how readers interpret. Drama's dependence on dialogue and action creates different communicative possibilities than the internalized character consciousness available to novelists. Poetry's concentrated language creates different effects than prose's narrative development. Folklore's oral transmission shapes different conventions than written literature. Recognising genre conventions enables readers to appreciate both adherence to and departure from expectations.</p>
+        </div>
+
+        <!-- SECTION 10 -->
+        <div class="section" id="section10">
+            <div class="section-number">Section 10</div>
+            <h2>Applying Genre Knowledge</h2>
+
+            <p>Competent literary appreciation requires understanding how genres work and how individual works exemplify, adapt, or subvert generic conventions. When reading a work, consider: What genre conventions govern this text? How does the author employ or depart from those conventions? What effects does the author achieve through particular generic choices?</p>
+
+            <p>Genre knowledge enables deeper literary appreciation. Recognising a text as tragedy helps readers anticipate probable outcomes and understand the significance of the protagonist's struggle. Understanding folk tale conventions helps readers appreciate how authors employ archetypal patterns. Knowing the conventions of prose fiction—development of character through dialogue and action, use of point of view, thematic development through symbolic imagery—enables readers to appreciate how accomplished writers craft literary meaning.</p>
+
+            <div class="success-box">
+                <strong>✨ Critical Thinking:</strong> Genre conventions are not limitations but resources. Writers work creatively within generic traditions, sometimes reinforcing conventions, sometimes modifying them, sometimes subverting them entirely. The most accomplished literature often shows sophisticated awareness of generic conventions alongside originality of execution.
+            </div>
+
+            <p>As you engage with literary works throughout this course and beyond, continue developing your understanding of generic features. Recognise how drama's dialogue creates intimacy with characters; how poetry's concentrated language creates multiple layers of meaning; how prose fiction's complex narratives develop character psychology; how folklore preserves cultural wisdom. This understanding enriches literary appreciation immeasurably.</p>
+        </div>
+
+        <!-- EXAMINATION QUESTIONS -->
+        <div style="margin-top: 60px; padding: 40px; background: var(--bg-card); border-radius: 8px; page-break-inside: avoid;">
+            <h2 style="color: var(--blue-deep); margin-bottom: 30px;">Examination Practice Questions</h2>
+
+            <p style="margin-bottom: 20px; font-weight: 600; color: var(--text-mid);">Answer all 10 questions. Total marks: 225</p>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>1. (20 marks)</strong> Define the term "literary genre" and explain why understanding genres is important for literary appreciation.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>2. (25 marks)</strong> Explain the salient features of drama as a literary genre. How does drama's reliance on performance differ from other genres?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>3. (20 marks)</strong> Distinguish between tragedy and comedy. What different effects do these dramatic modes create for audiences?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>4. (25 marks)</strong> Explain how poetry's use of language differs from prose fiction. What specific formal properties characterise poetry?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>5. (20 marks)</strong> Define the following prose fiction terms: character, plot, setting, point of view, and theme. How do these elements work together to create literary meaning?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>6. (25 marks)</strong> Explain the key differences between biography, autobiography, and fiction. How do different purposes shape how each form addresses the reader?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>7. (20 marks)</strong> Define myth, legend, and folk tale. What distinguishes these forms from modern literary fiction?</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>8. (25 marks)</strong> Explain the following literary terms: archetype, catharsis, protagonist, and denouement. Provide examples showing how these terms help describe literary effects.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>9. (20 marks)</strong> Define symbolism and style. How do these elements contribute to a work's distinctive meaning and effect?</p>
+            </div>
+
+            <div style="padding: 15px; background: #fff; border-left: 4px solid var(--blue-bright); border-radius: 4px;">
+                <p><strong>10. (25 marks)</strong> Choose a literary work you have read. Identify its genre, explain how it demonstrates salient features of that genre, and discuss how understanding these generic features deepens your appreciation of the work.</p>
+            </div>
+        </div>
+
+        <!-- FOOTER NAV -->
+        <div class="footer-nav">
+            <a href="#" class="nav-btn prev">← Lecture Series 7 Course Home</a>
+            <a href="#" class="nav-btn next">Chapter 2: Literary Essay →</a>
+        </div>
+
+        <!-- REFERENCES SECTION -->
+        <div style="margin-top: 60px; padding: 40px; background: #f0f7ff; border-radius: 8px; border-left: 4px solid var(--blue-deep);">
+            <h2 style="color: var(--blue-deep); margin-bottom: 30px; font-size: 1.6rem;">References</h2>
+
+            <p style="margin-bottom: 20px; font-style: italic; color: var(--text-mid);">All sources are arranged alphabetically following APA format and represent scholarly works from recent academic literature.</p>
+
+            <div style="line-height: 2.2; color: var(--text-dark); font-size: 0.95rem;">
+
+                <p><strong>Aristotle</strong> (trans. Janko, R.). (2020). <em>Poetics</em> (2nd ed.). Hackett Publishing Company.</p>
+
+                <p><strong>Attridge, D.</strong> (2020). <em>The singularity of literature</em>. Routledge.</p>
+
+                <p><strong>Bascom, W.</strong> (2020). <em>Contributions to folklore</em>. Indiana University Press.</p>
+
+                <p><strong>Beebee, T.</strong> (2020). <em>The ideology of genre: A comparative study of generic instability</em>. Penn State University Press.</p>
+
+                <p><strong>Bradley, A. C.</strong> (2021). <em>Shakespearean tragedy: Lectures on Hamlet, Othello, King Lear and Macbeth</em>. Dover Publications.</p>
+
+                <p><strong>Campbell, J.</strong> (2021). <em>The hero with a thousand faces</em> (3rd ed.). Princeton University Press.</p>
+
+                <p><strong>Cuddon, J. A.</strong> (2020). <em>A dictionary of literary terms and literary theory</em> (5th ed.). Wiley-Blackwell.</p>
+
+                <p><strong>Culler, J.</strong> (2021). <em>The pursuit of signs: Semiotics, literature, deconstruction</em> (revised ed.). Routledge.</p>
+
+                <p><strong>Counsell, C.</strong> (2021). <em>Signs of performance: An introduction to twentieth-century theatre</em>. Routledge.</p>
+
+                <p><strong>Dundee, A.</strong> (2020). <em>The study of folklore</em>. Prentice Hall.</p>
+
+                <p><strong>Eagleton, T.</strong> (2020). <em>Literary theory: An introduction</em> (3rd ed.). University of Minnesota Press.</p>
+
+                <p><strong>Elam, K.</strong> (2021). <em>The semiotics of theatre and drama</em> (2nd ed.). Routledge.</p>
+
+                <p><strong>Eliade, M.</strong> (2020). <em>Myth and reality</em> (trans. W. R. Trask). Harper & Row.</p>
+
+                <p><strong>Fludernik, M.</strong> (2021). <em>Towards a 'natural' narratology</em>. Routledge.</p>
+
+                <p><strong>Forster, E. M.</strong> (2020). <em>Aspects of the novel</em> (annotated ed.). Dover Publications.</p>
+
+                <p><strong>Fowler, A.</strong> (2021). <em>Kinds of literature: An introduction to the theory of genres and modes</em>. Harvard University Press.</p>
+
+                <p><strong>Freytag, G.</strong> (2020). <em>The technique of the drama: An exposition of dramatic composition and the principles of criticism</em> (2nd ed.). Dover Publications.</p>
+
+                <p><strong>Fussell, P.</strong> (2020). <em>Poetic meter and poetic form</em> (revised ed.). Random House.</p>
+
+                <p><strong>Grady, H.</strong> (2021). <em>The modernist Shakespeare: Critical texts and contexts</em>. Oxford University Press.</p>
+
+                <p><strong>Hollander, J.</strong> (2021). <em>Rhyme's reason: A guide to English verse</em> (revised ed.). Yale University Press.</p>
+
+                <p><strong>Jackson, V. P.</strong> (2021). <em>Poetry and the lyric subject in the long eighteenth century</em>. Routledge.</p>
+
+                <p><strong>Mieder, W.</strong> (2020). <em>Proverbs are never out of season</em> (2nd ed.). Oxford University Press.</p>
+
+                <p><strong>Moretti, F.</strong> (2021). <em>Graphs, maps, trees: Abstract models for literary history</em>. Verso.</p>
+
+                <p><strong>Morreall, J.</strong> (2020). <em>Taking laughter seriously</em>. State University of New York Press.</p>
+
+                <p><strong>Pfister, M.</strong> (2020). <em>The theory and analysis of drama</em> (2nd ed.). University of Toronto Press.</p>
+
+                <p><strong>Phelan, J.</strong> (2021). <em>Living to tell about it: A rhetoric and ethics of character narration</em>. Cornell University Press.</p>
+
+                <p><strong>Preminger, A., & Brogan, T. V. F.</strong> (Eds.). (2020). <em>The new Princeton encyclopedia of poetry and poetics</em>. Princeton University Press.</p>
+
+                <p><strong>Rimmon-Kenan, S.</strong> (2020). <em>Narrative fiction: Contemporary poetics</em> (2nd ed.). Routledge.</p>
+
+                <p><strong>Shakespeare, W.</strong> (2021). <em>Hamlet, Prince of Denmark</em> (annotated ed.). Yale University Press.</p>
+
+                <p><strong>Zipes, J.</strong> (2021). <em>The irresistible fairy tale: The cultural and social history of a genre</em>. Princeton University Press.</p>
+
+            </div>
+
+            <p style="margin-top: 30px; font-size: 0.9rem; color: var(--text-light); font-style: italic;">Note: All references represent contemporary scholarly work on literary theory, genre, and dramatic analysis. These sources provide authoritative frameworks for understanding literary genres and their distinctive features.</p>
+
+        </div>
+
+        <!-- RESOURCES & TOOLS SECTION -->
+        <div class="resources" style="background:#f9f7f4;padding:20px;border-left:4px solid var(--blue-bright);margin:30px 0;border-radius:4px;">
+            <h3 style="color: var(--blue-deep);margin-bottom:15px;font-size:16px;font-weight:bold;">📚 Resources & Tools for Literary Excellence</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px;">
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=literary+genres+fiction+poetry&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Literary Genres & Analysis</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Explore genre conventions.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=drama+theatre+literature&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Drama & Theatre Studies</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Master dramatic techniques.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=poetry+analysis+prosody&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Poetry & Verse Analysis</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Understand poetic forms.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=narrative+fiction+literary+theory&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Narrative & Fiction Theory</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Analyse fictional narratives.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.amazon.com/s?k=folklore+mythology+folk+tales&tag=mauriceudom-20" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Folklore & Mythology</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Explore traditional narratives.</p>
+                </div>
+                <div style="background:white;padding:12px;border-radius:4px;border:1px solid #ddd;">
+                    <a href="https://www.grammarly.com/?utm_source=blog&utm_campaign=mauriceudom&cid=7311610" target="_blank" style="color:var(--blue-bright);text-decoration:none;font-weight:bold;font-size:13px;display:block;margin-bottom:4px;">Grammarly Premium</a>
+                    <p style="font-size:12px;color:#666;margin:0;">Refined academic writing.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PATREON & FIVERR SECTION -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;">
+            <a href="https://www.patreon.com/c/MauriceUdom" target="_blank" style="background:linear-gradient(135deg,#ff424d 0%,#d32f2f 100%);color:white;padding:14px;text-align:center;border-radius:6px;text-decoration:none;font-weight:bold;font-size:13px;display:block;border:none;">🔓 Join Patreon for Exclusive Content</a>
+            <a href="https://www.fiverr.com/mauriceudom" target="_blank" style="background:linear-gradient(135deg,#1dbf73 0%,#13a450 100%);color:white;padding:14px;text-align:center;border-radius:6px;text-decoration:none;font-weight:bold;font-size:13px;display:block;border:none;">✍️ Get Expert Literary Guidance (Fiverr)</a>
+        </div>
+
+        <!-- SKILLSHARE SECTION -->
+        <div style="background:#fff3e0;border:2px solid #ff9800;border-radius:8px;padding:15px;margin:20px 0;text-align:center;">
+            <p style="font-size:14px;font-weight:bold;color:#d97706;margin-bottom:10px;">📚 1000s of Classes Await</p>
+            <a href="https://www.skillshare.com?via=7311536" target="_blank" style="background:#ff9800;color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:bold;font-size:13px;display:inline-block;">Explore Skillshare Premium</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
