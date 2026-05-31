@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture Series 5: Communication in English — Lecture Series · Maurice Udom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:        #1a1208;
+      --parchment:  #faf6ef;
+      --cream:      #f3ede2;
+      --gold:       #FFB800;
+      --gold-light: #FFB800;
+      --gold-dk:    #b8860b;
+      --rust:       #8b3a0f;
+      --sage:       #3d5c3d;
+      --muted:      #6b5f4e;
+      --rule:       #d6cbb8;
+      --mod:        #1F3864;
+      --module1:    #1F3864;
+      --module2:    #2d5a27;
+      --module3:    #6b2d0f;
+      --module4:    #4a2d6b;
+      --module5:    #1a4a5c;
+      --module6:    #5c3a1a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: var(--ink);
+      color: var(--gold-light);
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 0.77rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-family: 'Source Serif 4', serif;
+    }
+    .topbar a { color: var(--gold-light); text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--mod);
+      border-bottom: 3px solid var(--gold);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 60px;
+      box-shadow: 0 2px 16px rgba(26,18,8,0.2);
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: #fff; text-decoration: none;
+    }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.72); text-decoration: none;
+      font-size: 0.83rem; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: 'Source Serif 4', serif;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--mod);
+      color: #fff;
+      padding: 72px 48px 60px;
+      position: relative; overflow: hidden;
+      text-align: center;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 4px; background: var(--gold);
+    }
+    .hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+    .hero-eyebrow {
+      font-size: 0.73rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 18px; font-family: 'Source Serif 4', serif;
+      font-weight: 700;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 900; line-height: 1.06;
+      margin-bottom: 20px; color: #fff;
+      white-space: nowrap;
+    }
+    .hero-rule { width: 72px; height: 3px; background: var(--gold); margin: 0 auto 24px; }
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1rem; line-height: 1.8;
+      max-width: 560px; margin: 0 auto 40px;
+    }
+    .hero-stats {
+      display: flex; justify-content: center;
+      gap: 40px; flex-wrap: wrap;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; font-weight: 900;
+      color: var(--gold); display: block;
+    }
+    .stat-label {
+      font-size: 0.68rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4);
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 64px 48px;
+      position: relative; z-index: 1;
+    }
+
+    /* ── MODULE BLOCK ── */
+    .module-block {
+      margin-bottom: 56px;
+      animation: fadeUp 0.6s ease both;
+    }
+    .module-block:nth-child(1) { animation-delay: 0.05s; }
+    .module-block:nth-child(2) { animation-delay: 0.12s; }
+    .module-block:nth-child(3) { animation-delay: 0.19s; }
+    .module-block:nth-child(4) { animation-delay: 0.26s; }
+    .module-block:nth-child(5) { animation-delay: 0.33s; }
+    .module-block:nth-child(6) { animation-delay: 0.40s; }
+
+    .module-header {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      margin-bottom: 0;
+      border-radius: 4px 4px 0 0;
+      overflow: hidden;
+    }
+    .module-color-bar {
+      width: 8px;
+      flex-shrink: 0;
+    }
+    .module-header-inner {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-left: none;
+      border-bottom: none;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .module-label-group { display: flex; align-items: center; gap: 14px; }
+    .module-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .module-title-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--ink);
+    }
+    .module-meta {
+      display: flex; gap: 16px; flex-wrap: wrap;
+    }
+    .module-stat {
+      font-size: 0.75rem; color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── LECTURE TABLE ── */
+    .lecture-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--rule);
+      border-top: none;
+      background: #fff;
+      border-radius: 0 0 4px 4px;
+      overflow: hidden;
+    }
+    .lecture-table tr {
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.18s;
+    }
+    .lecture-table tr:last-child { border-bottom: none; }
+    .lecture-table tr.available:hover { background: #fdf9f3; cursor: pointer; }
+    .lecture-table tr.available:hover .lec-title { color: var(--gold); }
+    .lecture-table tr.available:hover .lec-arrow { opacity: 1; transform: translateX(3px); }
+
+    .lec-num {
+      width: 64px;
+      padding: 16px 0 16px 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.82rem; font-weight: 700;
+      color: var(--muted);
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    .lec-title-cell {
+      padding: 16px 16px;
+      vertical-align: middle;
+    }
+    .lec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.98rem; font-weight: 700;
+      color: var(--ink); margin-bottom: 3px;
+      transition: color 0.18s;
+      text-decoration: none; display: block;
+    }
+    .lec-desc {
+      font-size: 0.8rem; color: var(--muted);
+      line-height: 1.5; font-style: italic;
+    }
+    .lec-status {
+      width: 90px;
+      padding: 16px 12px;
+      text-align: center; vertical-align: middle;
+    }
+    .lec-duration { display: none; }
+    .lec-arrow {
+      width: 40px;
+      padding: 16px 16px 16px 0;
+      text-align: right; vertical-align: middle;
+      color: var(--gold); font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.18s, transform 0.18s;
+    }
+
+    .status-pill {
+      display: inline-block;
+      font-size: 0.65rem; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 3px 8px;
+      border-radius: 2px; white-space: nowrap;
+      font-family: 'Source Serif 4', serif;
+    }
+    .pill-live    { background: #e6f2e6; color: var(--sage); border: 1px solid #b4d4b4; }
+    .pill-soon    { background: #f5f0e6; color: var(--gold); border: 1px solid #dcc878; }
+    .pill-planned { background: #f0f0f0; color: #999;         border: 1px solid #d8d8d8; }
+
+    /* click row navigates */
+    .lecture-table tr.available { cursor: pointer; }
+
+    /* ── MODULE COLORS ── */
+    .m1 .module-color-bar { background: var(--module1); }
+    .m1 .module-num        { background: var(--module1); }
+    .m2 .module-color-bar  { background: var(--module2); }
+    .m2 .module-num        { background: var(--module2); }
+    .m3 .module-color-bar  { background: var(--module3); }
+    .m3 .module-num        { background: var(--module3); }
+    .m4 .module-color-bar  { background: var(--module4); }
+    .m4 .module-num        { background: var(--module4); }
+    .m5 .module-color-bar  { background: var(--module5); }
+    .m5 .module-num        { background: var(--module5); }
+    .m6 .module-color-bar  { background: var(--module6); }
+    .m6 .module-num        { background: var(--module6); }
+
+    /* ── HOW TO USE ── */
+    .how-section {
+      background: var(--mod);
+      color: #fff;
+      padding: 56px 48px;
+      margin: 64px -48px 0;
+      border-radius: 4px;
+      border-top: 3px solid var(--gold);
+    }
+    .how-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 700;
+      margin-bottom: 36px; text-align: center;
+      color: #fff;
+    }
+    .how-section h2 em { color: var(--gold); font-style: italic; }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+    }
+    .how-item { text-align: center; }
+    .how-icon {
+      font-size: 1.8rem; margin-bottom: 12px;
+      display: block;
+    }
+    .how-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; margin-bottom: 8px;
+      color: var(--gold);
+    }
+    .how-item p {
+      font-size: 0.83rem; color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #100e08;
+      color: #6b6358;
+      text-align: center;
+      padding: 32px 48px;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      margin-top: 0;
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 48px 20px 40px; }
+      main { padding: 40px 20px; }
+      .how-section { margin: 48px -20px 0; padding: 40px 20px; }
+      .lec-arrow { display: none; }
+      .lec-num { width: 44px; padding-left: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="https://mauriceudom.org/lectures.html">← All Lecture Series</a>
+    &nbsp;·&nbsp;
+    <a href="https://mauriceudom.org">mauriceudom.org</a>
+  </div>
+
+  <nav>
+    <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+    <ul class="nav-links">
+      <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+      <li><a href="#" class="active">Communication in English</a></li>
+      <li><a href="https://mauriceudom.org/blog-index.html">Blog</a></li>
+      <li><a href="https://mauriceudom.org#mauriceedit">Editorial</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Tertiary Institutions · Lecture Blog Series</p>
+      <h1>Lecture Series 5: Communication in English</h1>
+      <div class="hero-rule"></div>
+      <p>A comprehensive course designed to enhance language proficiency for academic and professional success — from the sound system of English to advanced reasoning and writing.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">Modules</span></div>
+        <div class="stat"><span class="stat-num">22+</span><span class="stat-label">Lectures</span></div>
+        <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Exam Qs Planned</span></div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══ MODULE 1 ══ -->
+    <div class="module-block m1">
+      <div class="module-header">
+        <div class="module-color-bar"></div>
+        <div class="module-header-inner">
+          <div class="module-label-group">
+            <span class="module-num">Module 1</span>
+            <span class="module-title-text">Phonetics &amp; Phonology</span>
+          </div>
+          <div class="module-meta">
+            <span class="module-stat">4 Lectures</span>
+            <span class="module-stat">·</span>
+            <span class="module-stat">✅ All Live</span>
+          </div>
+        </div>
+      </div>
+      <table class="lecture-table">
+        <tbody>
+          <tr class="available" onclick="window.location='lecture-1-1.html'">
+            <td class="lec-num">1.1</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-1-1.html">Foundations of English Sounds</a>
+              <p class="lec-desc">Orthography vs. phonology · The 44 phonemes · Organs of speech · Silent letter audit</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-1-2.html'">
+            <td class="lec-num">1.2</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-1-2.html">Vowels and Consonants in Depth</a>
+              <p class="lec-desc">Vowel quadrilateral · Long vs. short vowels · Place &amp; manner of articulation · The schwa /ə/</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-1-3.html'">
+            <td class="lec-num">1.3</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-1-3.html">Suprasegmentals — Stress and Intonation</a>
+              <p class="lec-desc">Word stress · Sentence stress · Falling &amp; rising intonation · Meaning through stress</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-1-4.html'">
+            <td class="lec-num">1.4</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-1-4.html">IPA and Dictionary Usage</a>
+              <p class="lec-desc">Decoding IPA symbols · BrE vs. AmE · Transcription challenge · Local interference</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══ MODULE 2 ══ -->
+    <div class="module-block m2">
+      <div class="module-header">
+        <div class="module-color-bar"></div>
+        <div class="module-header-inner">
+          <div class="module-label-group">
+            <span class="module-num">Module 2</span>
+            <span class="module-title-text">Grammar &amp; Usage</span>
+          </div>
+          <div class="module-meta">
+            <span class="module-stat">5 Lectures</span>
+            <span class="module-stat">·</span>
+            <span class="module-stat">✅ All Live</span>
+          </div>
+        </div>
+      </div>
+      <table class="lecture-table">
+        <tbody>
+          <tr class="available" onclick="window.location='lecture-2-1.html'">
+            <td class="lec-num">2.1</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-2-1.html">The Building Blocks: Word Classes</a>
+              <p class="lec-desc">Open &amp; closed classes · Nouns, verbs, adjectives, adverbs · Functional shifts</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-2-2.html'">
+            <td class="lec-num">2.2</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-2-2.html">Sentence Architecture and Types</a>
+              <p class="lec-desc">Simple, compound, complex · Clauses &amp; phrases · Declarative, interrogative, imperative</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-2-3.html'">
+            <td class="lec-num">2.3</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-2-3.html">The Rules of Agreement: Concord</a>
+              <p class="lec-desc">Subject-verb concord · Collective nouns · Pronoun-antecedent agreement</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-2-4.html'">
+            <td class="lec-num">2.4</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-2-4.html">Verb Mechanics: Tense, Aspect, and Voice</a>
+              <p class="lec-desc">Tense system · Simple, progressive, perfect · Active vs. passive voice</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-2-5.html'">
+            <td class="lec-num">2.5</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-2-5.html">The Sentence: Definition, Types, and Parts</a>
+              <p class="lec-desc">Sentence definition &middot; Types of sentences &middot; Parts and functions</p>
+            </td>
+            <td class="lec-duration">30 min</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══ MODULE 3 ══ -->
+    <div class="module-block m3">
+      <div class="module-header">
+        <div class="module-color-bar"></div>
+        <div class="module-header-inner">
+          <div class="module-label-group">
+            <span class="module-num">Module 3</span>
+            <span class="module-title-text">Language Skills</span>
+          </div>
+          <div class="module-meta">
+            <span class="module-stat">4 Lectures</span>
+            <span class="module-stat">·</span>
+            <span class="module-stat">✅ All Live</span>
+          </div>
+        </div>
+      </div>
+      <table class="lecture-table">
+        <tbody>
+          <tr class="available" onclick="window.location='lecture-3-1.html'">
+            <td class="lec-num">3.1</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-3-1.html">Reading Skills: Strategies and Techniques</a>
+              <p class="lec-desc">Skimming · Scanning · SQ3R technique · Reading for academic purposes</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-3-2.html'">
+            <td class="lec-num">3.2</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-3-2.html">Listening Skills: Active and Critical Listening</a>
+              <p class="lec-desc">Types of listening · Barriers to listening · Note-taking strategies</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-3-3.html'">
+            <td class="lec-num">3.3</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-3-3.html">Speaking Skills: Public Speaking and Presentations</a>
+              <p class="lec-desc">Preparing a speech · Delivery techniques · Managing stage fright</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-3-4.html'">
+            <td class="lec-num">3.4</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-3-4.html">Integrated Language Use in Academic Contexts</a>
+              <p class="lec-desc">Seminar participation · Discussion skills · Academic register</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══ MODULE 4 ══ -->
+    <div class="module-block m4">
+      <div class="module-header">
+        <div class="module-color-bar"></div>
+        <div class="module-header-inner">
+          <div class="module-label-group">
+            <span class="module-num">Module 4</span>
+            <span class="module-title-text">Writing Activities</span>
+          </div>
+          <div class="module-meta">
+            <span class="module-stat">4 Lectures</span>
+            <span class="module-stat">·</span>
+            <span class="module-stat">✅ All Live</span>
+          </div>
+        </div>
+      </div>
+      <table class="lecture-table">
+        <tbody>
+          <tr class="available" onclick="window.location='lecture-4-1.html'">
+            <td class="lec-num">4.1</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-4-1.html">Essay Writing I: Foundations</a>
+              <p class="lec-desc">Structure of an essay · Narrative techniques · Expository writing strategies</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-4-2.html'">
+            <td class="lec-num">4.2</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-4-2.html">Essay Writing II: Advanced Techniques</a>
+              <p class="lec-desc">Thesis statements · Evidence &amp; reasoning · Counterarguments · Conclusions</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-4-3.html'">
+            <td class="lec-num">4.3</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-4-3.html">Letter Writing: Formal and Informal</a>
+              <p class="lec-desc">Official vs. personal letters · Format &amp; conventions · Tone &amp; register</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-4-4.html'">
+            <td class="lec-num">4.4</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-4-4.html">CV and Application Writing</a>
+              <p class="lec-desc">Structure of a CV · Academic vs. professional CVs · Common errors to avoid</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr>
+            <td class="lec-num">4.5</td>
+            <td class="lec-title-cell">
+              <span class="lec-title" style="color:var(--muted)">Technical Report Writing</span>
+              <p class="lec-desc">Structure of a report · Objective tone · Data presentation · Executive summaries</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══ MODULE 5 ══ -->
+    <div class="module-block m5">
+      <div class="module-header">
+        <div class="module-color-bar"></div>
+        <div class="module-header-inner">
+          <div class="module-label-group">
+            <span class="module-num">Module 5</span>
+            <span class="module-title-text">Logical Reasoning</span>
+          </div>
+          <div class="module-meta">
+            <span class="module-stat">3 Lectures</span>
+            <span class="module-stat">·</span>
+            <span class="module-stat">✅ All Live</span>
+          </div>
+        </div>
+      </div>
+      <table class="lecture-table">
+        <tbody>
+          <tr class="available" onclick="window.location='lecture-5-1.html'">
+            <td class="lec-num">5.1</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-5-1.html">Introduction to Logic and Arguments</a>
+              <p class="lec-desc">From specific to general · From general to specific · Application in academic writing</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-5-2.html'">
+            <td class="lec-num">5.2</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-5-2.html">Fallacies and Faulty Reasoning</a>
+              <p class="lec-desc">Major &amp; minor premises · Valid vs. invalid arguments · Logical structure</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-5-3.html'">
+            <td class="lec-num">5.3</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-5-3.html">Critical Thinking and Analytical Reasoning</a>
+              <p class="lec-desc">Ad hominem · Straw man · False dichotomy · Identifying fallacies in real discourse</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══ MODULE 6 ══ -->
+    <div class="module-block m6">
+      <div class="module-header">
+        <div class="module-color-bar"></div>
+        <div class="module-header-inner">
+          <div class="module-label-group">
+            <span class="module-num">Module 6</span>
+            <span class="module-title-text">Digital Literacy</span>
+          </div>
+          <div class="module-meta">
+            <span class="module-stat">2 Lectures</span>
+            <span class="module-stat">·</span>
+            <span class="module-stat">✅ All Live</span>
+          </div>
+        </div>
+      </div>
+      <table class="lecture-table">
+        <tbody>
+          <tr class="available" onclick="window.location='lecture-6-1.html'">
+            <td class="lec-num">6.1</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-6-1.html">Introduction to Digital Literacy</a>
+              <p class="lec-desc">Digital dictionaries · Corpus tools · Online academic writing resources</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+          <tr class="available" onclick="window.location='lecture-6-2.html'">
+            <td class="lec-num">6.2</td>
+            <td class="lec-title-cell">
+              <a class="lec-title" href="lecture-6-2.html">Digital Communication in Academic and Professional Contexts</a>
+              <p class="lec-desc">Email etiquette · Plagiarism in the digital age · Citing online sources</p>
+            </td>
+            <td class="lec-duration">1 hr</td>
+            <td class="lec-status"><span class="status-pill pill-live">Live</span></td>
+            <td class="lec-arrow">→</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- HOW TO USE -->
+    <div class="how-section">
+      <h2>How to Use <em>This Series</em></h2>
+      <div class="how-grid">
+        <div class="how-item">
+          <span class="how-icon">📖</span>
+          <h3>Read</h3>
+          <p>Read actively — engage with key concept boxes and examples rather than passively scanning the text.</p>
+        </div>
+        <div class="how-item">
+          <span class="how-icon">📝</span>
+          <h3>Note</h3>
+          <p>Take notes on key definitions and examples. Identify connections between modules as the series progresses.</p>
+        </div>
+        <div class="how-item">
+          <span class="how-icon">✏️</span>
+          <h3>Practise</h3>
+          <p>Attempt every activity and drill. Use mark allocations to guide the depth of your answers.</p>
+        </div>
+        <div class="how-item">
+          <span class="how-icon">🎓</span>
+          <h3>Apply</h3>
+          <p>Test your learning in real academic writing, oral presentations, and classroom discussions.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+    Lecture Series 5: Lecture Series 5: Communication in English · Lecture Series &nbsp;·&nbsp;
+    Designed for Tertiary Institutions &nbsp;·&nbsp;
+    Dr. Maurice Udom
+    <br><br>
+    © 2026. All rights reserved. &nbsp;·&nbsp;
+    <a href="https://mauriceudom.org">mauriceudom.org</a>
+    &nbsp;·&nbsp;
+    <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a>
+  </footer>
+
+</body>
+</html>

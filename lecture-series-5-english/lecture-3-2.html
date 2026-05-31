@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 3.2: Listening Skills — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px;animation:fadeUp .5s ease both;animation-delay:.02s}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-icon{font-size:1.1rem}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'✓';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.78rem}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:topic-counter}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:topic-counter}
+    .overview-topics li::before{content:counter(topic-counter)'.';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.82rem}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(2){animation-delay:.05s}.section-block:nth-child(3){animation-delay:.10s}.section-block:nth-child(4){animation-delay:.15s}.section-block:nth-child(5){animation-delay:.20s}.section-block:nth-child(6){animation-delay:.25s}.section-block:nth-child(7){animation-delay:.30s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* LISTENING TYPES */
+    .listen-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .listen-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .listen-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.6}
+    .listen-table tr:last-child td{border-bottom:none}
+    .listen-table tr:nth-child(even) td{background:#faf6ef}
+    .label{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif}
+    /* BARRIERS GRID */
+    .barrier-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .barrier-card{background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--mod);padding:14px 16px}
+    .barrier-type{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:4px}
+    .barrier-name{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+    .barrier-desc{font-size:.86rem;color:#2a2016;line-height:1.55}
+    /* NOTE TAKING */
+    .notetake-wrap{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:20px 0}
+    .notetake-head{background:var(--mod);color:var(--white);padding:12px 20px;font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700}
+    .notetake-body{padding:18px 20px;display:grid;gap:12px}
+    .notetake-row{display:grid;grid-template-columns:140px 1fr;gap:16px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+    .notetake-row:last-child{border-bottom:none;padding-bottom:0}
+    .notetake-method{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--mod)}
+    .notetake-desc{font-size:.88rem;color:#2a2016;line-height:1.6}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-word{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:2px}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .skill-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.barrier-grid{grid-template-columns:1fr}.overview-body{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.notetake-row{grid-template-columns:1fr}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}.activity-item{grid-template-columns:28px 1fr}}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 3 &nbsp;·&nbsp; Lecture 2</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Listening Skills — Active and Critical Listening</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Language Skills</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+          <li>Distinguish between hearing and listening</li>
+          <li>Identify and describe the main types of listening</li>
+          <li>Recognise and overcome barriers to effective listening</li>
+          <li>Apply structured note-taking strategies in academic contexts</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+          <li>Hearing vs. Listening — A Critical Distinction</li>
+          <li>Types of Listening</li>
+          <li>Barriers to Effective Listening</li>
+          <li>Note-Taking as a Listening Strategy</li>
+          <li>Practical Activity</li>
+          <li>Conclusion &amp; Key Takeaway</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lecture 3.1 before proceeding.</p>
+        <a class="prereq-link" href="lecture-3-1.html">← Lecture 3.1 — Reading Skills</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">Hearing vs. Listening — A Critical Distinction</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Of the four primary language skills — reading, writing, speaking, and listening — listening is the most frequently used and the least formally taught <span class="cite">(Vandergrift &amp; Goh, 2019, p. 1)</span>. Research indicates that tertiary-level students spend approximately 50–75% of their classroom time listening, yet most receive almost no explicit instruction in how to do it effectively <span class="cite">(Gilakjani &amp; Sabouri, 2021, p. 124)</span>.</p>
+    <p>The first and most important distinction to establish is that <strong>hearing</strong> and <strong>listening</strong> are not the same thing. One is physiological; the other is cognitive and purposeful <span class="cite">(Rost, 2020, p. 7)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Hearing vs. Listening</div>
+      <dl>
+        <dt>Hearing</dt>
+        <dd>A passive, involuntary physiological process — the reception of sound waves by the ear. Hearing requires no effort or intent and occurs continuously while a person is awake <span class="cite">(Rost, 2020, p. 8)</span>.</dd>
+        <dt>Listening</dt>
+        <dd>An active, deliberate, cognitive process — the conscious selection, attention, comprehension, and interpretation of what is heard. Listening requires mental effort, purpose, and engagement <span class="cite">(Vandergrift &amp; Goh, 2019, p. 4)</span>.</dd>
+        <dt>Active Listening</dt>
+        <dd>The highest form of listening — involving not only comprehension but also critical evaluation, emotional intelligence, and responsive feedback. Active listening is a learnable skill that can be deliberately practised and improved <span class="cite">(Brownell, 2018, p. 22)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Types of Listening</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Not all listening situations are identical. Different academic and professional contexts call for different types of listening, each with a distinct purpose and requiring different cognitive processes <span class="cite">(Rost, 2020, p. 14)</span>.</p>
+
+    <table class="listen-table">
+      <thead><tr><th>Type</th><th>Purpose</th><th>Academic Context</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="label">Discriminative</span></td>
+          <td>Distinguishing between sounds, words, and phonemes — the most basic level of listening, essential for understanding spoken language at all <span class="cite">(Vandergrift &amp; Goh, 2019, p. 16)</span>.</td>
+          <td>Following a lecture in a second language · Understanding an unfamiliar accent</td>
+        </tr>
+        <tr>
+          <td><span class="label">Comprehensive</span></td>
+          <td>Understanding the full message — its content, organisation, and meaning <span class="cite">(Brownell, 2018, p. 28)</span>.</td>
+          <td>Listening to a lecture · Following instructions · Attending a seminar presentation</td>
+        </tr>
+        <tr>
+          <td><span class="label">Critical</span></td>
+          <td>Evaluating the content for logic, credibility, evidence, and bias. The listener questions and analyses rather than merely absorbing <span class="cite">(Rost, 2020, p. 19)</span>.</td>
+          <td>Panel discussions · Oral examinations · Listening to political or academic debates</td>
+        </tr>
+        <tr>
+          <td><span class="label">Empathic</span></td>
+          <td>Listening to understand the speaker's feelings, perspective, and emotional state — suspending judgement to fully enter the speaker's frame of reference <span class="cite">(Brownell, 2018, p. 34)</span>.</td>
+          <td>Counselling contexts · Group discussions where personal experiences are shared · Peer support</td>
+        </tr>
+        <tr>
+          <td><span class="label">Appreciative</span></td>
+          <td>Listening for enjoyment, aesthetic pleasure, or entertainment. The listener is not focused on information or evaluation <span class="cite">(Gilakjani &amp; Sabouri, 2021, p. 127)</span>.</td>
+          <td>Listening to poetry readings · Attending a lecture by an inspiring scholar · Oral storytelling</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Academic Priority:</strong> In tertiary-level academic contexts, <strong>comprehensive</strong> and <strong>critical</strong> listening are the most important types. Comprehensive listening ensures you understand what is being communicated; critical listening ensures you can evaluate, question, and build upon it <span class="cite">(Rost, 2020, p. 22)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Barriers to Effective Listening</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Even motivated listeners regularly fail to listen effectively because of barriers — internal and external factors that interfere with the reception, processing, or retention of spoken information <span class="cite">(Brownell, 2018, p. 44)</span>. Identifying these barriers is the first step to overcoming them.</p>
+
+    <div class="barrier-grid">
+      <div class="barrier-card">
+        <div class="barrier-type">Internal Barrier</div>
+        <div class="barrier-name">Pseudo-listening</div>
+        <div class="barrier-desc">Appearing to listen — maintaining eye contact and nodding — while mentally absent. One of the most common barriers in lecture settings <span class="cite">(Vandergrift &amp; Goh, 2019, p. 28)</span>.</div>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-type">Internal Barrier</div>
+        <div class="barrier-name">Selective Listening</div>
+        <div class="barrier-desc">Hearing only what you want or expect to hear, filtering out information that challenges existing beliefs or seems unimportant <span class="cite">(Brownell, 2018, p. 47)</span>.</div>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-type">Internal Barrier</div>
+        <div class="barrier-name">Cognitive Overload</div>
+        <div class="barrier-desc">The speaker delivers information faster than the listener can process it, causing comprehension breakdown. Common in technical or highly specialised lectures <span class="cite">(Rost, 2020, p. 35)</span>.</div>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-type">Internal Barrier</div>
+        <div class="barrier-name">Emotional Interference</div>
+        <div class="barrier-desc">Strong emotional reactions to the speaker or content — anxiety, anger, boredom, or prejudice — that prevent objective processing of the message <span class="cite">(Gilakjani &amp; Sabouri, 2021, p. 130)</span>.</div>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-type">External Barrier</div>
+        <div class="barrier-name">Environmental Noise</div>
+        <div class="barrier-desc">Physical distractions in the listening environment — background conversation, traffic noise, poor acoustics, or interruptions <span class="cite">(Brownell, 2018, p. 50)</span>.</div>
+      </div>
+      <div class="barrier-card">
+        <div class="barrier-type">External Barrier</div>
+        <div class="barrier-name">Speaker Characteristics</div>
+        <div class="barrier-desc">Unclear pronunciation, an unfamiliar accent, speaking too fast or too slowly, or monotonous delivery that reduces listener engagement <span class="cite">(Vandergrift &amp; Goh, 2019, p. 31)</span>.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION IV -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Note-Taking as a Listening Strategy</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>The most powerful strategy for improving listening in academic settings is <strong>structured note-taking</strong>. Note-taking forces active engagement with the spoken content — the listener must process, select, and record information simultaneously, preventing passive or pseudo-listening <span class="cite">(Dunkel &amp; Pialorsi, 2018, p. 12)</span>.</p>
+    <p>There are several established note-taking methods, each suited to different types of academic listening situations <span class="cite">(Rost, 2020, p. 48)</span>:</p>
+
+    <div class="notetake-wrap">
+      <div class="notetake-head">Structured Note-Taking Methods</div>
+      <div class="notetake-body">
+        <div class="notetake-row">
+          <div class="notetake-method">Cornell Method</div>
+          <div class="notetake-desc">Divide the page into three sections: a narrow left column for key words and questions, a wide right column for notes, and a summary section at the bottom. Ideal for lectures <span class="cite">(Dunkel &amp; Pialorsi, 2018, p. 14)</span>.</div>
+        </div>
+        <div class="notetake-row">
+          <div class="notetake-method">Outlining</div>
+          <div class="notetake-desc">Record main ideas as headings, with supporting details and examples indented beneath. Most effective when the speaker has a clear, hierarchical structure <span class="cite">(Rost, 2020, p. 50)</span>.</div>
+        </div>
+        <div class="notetake-row">
+          <div class="notetake-method">Mind Mapping</div>
+          <div class="notetake-desc">Place the main topic in the centre and branch outward to subtopics and details. Effective for lectures that cover a broad topic with many interrelated concepts <span class="cite">(Brownell, 2018, p. 58)</span>.</div>
+        </div>
+        <div class="notetake-row">
+          <div class="notetake-method">Charting</div>
+          <div class="notetake-desc">Create columns for different categories of information. Particularly effective when a lecture compares or contrasts multiple items across consistent categories <span class="cite">(Dunkel &amp; Pialorsi, 2018, p. 18)</span>.</div>
+        </div>
+        <div class="notetake-row">
+          <div class="notetake-method">Sentence Method</div>
+          <div class="notetake-desc">Write each new piece of information as a complete sentence on a new line. Simple and comprehensive but can be slow — best used when listening pace allows time for full sentences <span class="cite">(Vandergrift &amp; Goh, 2019, p. 38)</span>.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Key Principle:</strong> Note-taking is not transcription. A student who tries to write every word the lecturer says will always fall behind and miss the next point. The goal is to capture <em>key ideas, evidence, and relationships</em> — not every word <span class="cite">(Dunkel &amp; Pialorsi, 2018, p. 20)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION V: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Practical Activity: Listening Awareness</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Listening Skills — 10 Scenario Questions</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">For each scenario, identify the type of listening required, the barrier present, or the appropriate note-taking method. Write one sentence justifying your answer.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-word">A student nods and maintains eye contact during a lecture but cannot recall a single point afterwards.</div><div class="activity-answer">Identify the specific listening barrier demonstrated.</div></div><span class="skill-badge">Pseudo-listening</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-word">During a panel debate, you evaluate each speaker's argument for logical consistency and credibility.</div><div class="activity-answer">Which type of listening is this?</div></div><span class="skill-badge">Critical Listening</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-word">A professor speaks very rapidly and uses highly technical vocabulary throughout the lecture.</div><div class="activity-answer">Identify the external barrier present.</div></div><span class="skill-badge">Speaker Characteristic</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-word">Your lecturer's lecture compares three theories across the same five criteria. Which note-taking method is most efficient?</div><div class="activity-answer">Think about the structure of the content.</div></div><span class="skill-badge">Charting</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-word">A classmate shares a personal experience of academic failure. What listening mode do you adopt?</div><div class="activity-answer">The goal is understanding feelings, not evaluating arguments.</div></div><span class="skill-badge">Empathic Listening</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-word">You are attending a research presentation. What note-taking method uses a central topic with radiating branches?</div><div class="activity-answer">Identify the visual, non-linear method.</div></div><span class="skill-badge">Mind Mapping</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-word">A student only pays attention to points that confirm what he already believes and ignores contradictory evidence.</div><div class="activity-answer">Name the internal listening barrier.</div></div><span class="skill-badge">Selective Listening</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-word">During a lecture, you write a full sentence for each new idea as soon as it is stated. Which method is this?</div><div class="activity-answer">Identify the straightforward, comprehensive method.</div></div><span class="skill-badge">Sentence Method</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-word">Distinguish in one sentence: why is a student who hears a lecture but cannot summarise it not truly listening?</div><div class="activity-answer">Apply the hearing vs. listening distinction.</div></div><span class="skill-badge">Hearing ≠ Listening</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-word">You listen to a spoken word poet perform at a university event purely for aesthetic appreciation.</div><div class="activity-answer">Which type of listening does not require evaluation or comprehension focus?</div></div><span class="skill-badge">Appreciative Listening</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section VI</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>Listening is not a passive ability that students either have or do not have — it is an active, learnable skill that improves with deliberate practice. A student who can distinguish the types of listening, recognise the barriers that obstruct it, and apply structured note-taking will perform significantly better in lectures, seminars, oral examinations, and group discussions <span class="cite">(Vandergrift &amp; Goh, 2019, p. 55)</span>.</p>
+      <br>
+      <p>The most important shift this lecture asks of the student is from <strong>passive hearing</strong> to <strong>active listening</strong> — from sitting in a lecture hall and hoping information will lodge in the memory, to deliberately engaging, questioning, and recording what is heard <span class="cite">(Rost, 2020, p. 60)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 3.2 — Listening Skills: Active and Critical Listening</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best distinguishes <em>listening</em> from <em>hearing</em>?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Listening is passive and involuntary; hearing is active and deliberate</div><div class="q-option">B. &nbsp;Hearing is passive and physiological; listening is active and cognitive</div><div class="q-option">C. &nbsp;Both are identical processes occurring simultaneously in the brain</div><div class="q-option">D. &nbsp;Hearing requires concentration; listening does not</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">Define <em>active listening</em> and explain why it is described as the highest form of listening. Give two specific behaviours that distinguish an active listener from a passive one.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Identify</span><p class="q-text">Name and briefly describe <strong>five types</strong> of listening covered in this lecture. For each, give one academic or professional context in which that type of listening is most appropriate.</p></div><p class="q-marks">[5 marks — 1 per type]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span><p class="q-text">A student who appears attentive during a lecture but is mentally thinking about other things is engaging in:</p></div><div class="q-options"><div class="q-option">A. &nbsp;Selective listening</div><div class="q-option">B. &nbsp;Critical listening</div><div class="q-option">C. &nbsp;Pseudo-listening</div><div class="q-option">D. &nbsp;Empathic listening</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between an <em>internal</em> and an <em>external</em> barrier to listening. Give two examples of each and suggest one practical strategy for overcoming each barrier you name.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Multiple Choice</span><p class="q-text">The Cornell note-taking method is best described as:</p></div><div class="q-options"><div class="q-option">A. &nbsp;A visual diagram with a central topic and radiating branches</div><div class="q-option">B. &nbsp;A page divided into sections for key words, notes, and a summary</div><div class="q-option">C. &nbsp;Writing each new idea as a complete sentence on a new line</div><div class="q-option">D. &nbsp;A table of columns for comparing categories across multiple items</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Write Out</span><p class="q-text">Explain why note-taking is described as a <em>listening strategy</em> rather than merely a recording tool. What cognitive processes does note-taking activate that improve listening comprehension?</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Apply</span><p class="q-text">A lecture compares the economic policies of three West African nations across five consistent categories. Which note-taking method is most appropriate, and why? Sketch the basic structure of the method you recommend.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">Which type of listening is most relevant when attending a panel discussion and evaluating the logical strength of each speaker's arguments?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Discriminative listening</div><div class="q-option">B. &nbsp;Appreciative listening</div><div class="q-option">C. &nbsp;Empathic listening</div><div class="q-option">D. &nbsp;Critical listening</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain the relationship between listening skill and academic success at the tertiary level. Use at least two specific types of listening and one note-taking strategy to support your argument.</p></div><p class="q-marks">[3 marks]</p></div>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Brownell, J. (2018). <em>Listening: Attitudes, Principles, and Skills</em> (6th ed.). Routledge.</div>
+      <div class="ref-item">Dunkel, P., &amp; Pialorsi, F. (2018). <em>Academic Listening Encounters: Life in Society</em> (2nd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Gilakjani, A. P., &amp; Sabouri, N. B. (2021). A study of factors affecting EFL learners' English listening comprehension and the strategies for improvement. <em>Journal of Language Teaching and Research</em>, 7(2), 123–133.</div>
+      <div class="ref-item">Nwosu, C. C. (2020). Listening comprehension challenges among undergraduate students in Nigerian universities. <em>Journal of Communication and Language Arts</em>, 4(1), 55–70.</div>
+      <div class="ref-item">Okafor, I. F. (2021). Active listening and academic performance: Evidence from tertiary institutions in South-South Nigeria. <em>African Research Review</em>, 15(3), 78–92.</div>
+      <div class="ref-item">Rost, M. (2020). <em>Teaching and Researching Listening</em> (3rd ed.). Routledge.</div>
+      <div class="ref-item">Steil, L. K., &amp; Bommelje, R. K. (2018). <em>Listening Leaders: The Ten Golden Rules to Listen, Lead and Succeed</em>. Beaver's Pond Press.</div>
+      <div class="ref-item">Vandergrift, L., &amp; Goh, C. C. M. (2019). <em>Teaching and Learning Second Language Listening: Metacognition in Action</em>. Routledge.</div>
+      <div class="ref-item">Wolvin, A. D. (2022). <em>Listening and Human Communication in the 21st Century</em>. Wiley-Blackwell.</div>
+      <div class="ref-item">Zulkifli, H. (2021). Listening strategy instruction and comprehension development in EFL academic contexts. <em>TESOL International Journal</em>, 16(1), 44–60.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-3-3.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 3</div>
+      <div class="next-title">Lecture 3.3 — Speaking Skills: Public Speaking and Presentations</div>
+      <div class="next-desc">Preparing a speech · Delivery techniques · Managing stage fright</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-3-1.html">← Lecture 3.1</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-3-3.html">Lecture 3.3 →</a>
+  </div>
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 3.2 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

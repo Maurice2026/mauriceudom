@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 1.1: Foundations of English Sounds — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:       #1a1208;
+      --parchment: #faf6ef;
+      --cream:     #f3ede2;
+      --gold:      #FFB800;
+      --gold-dk:   #b8860b;
+      --muted:     #6b5f4e;
+      --rule:      #d6cbb8;
+      --mod:       #1F3864;
+      --mod-lt:    #e8edf5;
+      --white:     #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--parchment);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 17px; line-height: 1.8;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: var(--ink); color: var(--gold);
+      text-align: center; padding: 10px 24px;
+      font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase;
+    }
+    .topbar a { color: var(--gold); text-decoration: none; }
+    .topbar a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--mod); border-bottom: 3px solid var(--gold);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 60px;
+      box-shadow: 0 2px 16px rgba(26,18,8,0.2);
+    }
+    .nav-brand { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--white); text-decoration: none; }
+    .nav-brand span { color: var(--gold); }
+    .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,0.72); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-index { background: var(--gold); color: var(--mod) !important; padding: 6px 16px; border-radius: 2px; font-size: 0.75rem; font-weight: 700; }
+    .nav-links .nav-index:hover { background: #ffc933; }
+
+    /* TITLE PAGE */
+    .lecture-header {
+      background: var(--mod); color: var(--white);
+      padding: 72px 48px 60px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .lecture-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--gold); }
+    .lec-module-tag { font-size: 1rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); font-weight: 700; display: block; margin-bottom: 24px; }
+    .lec-course-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 900; color: var(--white); line-height: 1.06; margin-bottom: 22px; }
+    .lec-sub-title { font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2.8vw, 1.6rem); font-weight: 700; color: var(--white); margin-bottom: 32px; }
+    .lec-rule { width: 72px; height: 3px; background: var(--gold); margin: 0 auto 30px; }
+    .lecture-meta { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .meta-chip { font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+    .meta-chip strong { color: var(--white); }
+
+    /* CONTENT */
+    .content-wrap { max-width: 820px; margin: 0 auto; padding: 56px 48px 80px; position: relative; z-index: 1; }
+
+    .section-block { margin-bottom: 52px; animation: fadeUp 0.5s ease both; }
+    .section-block:nth-child(1){animation-delay:.05s}
+    .section-block:nth-child(2){animation-delay:.10s}
+    .section-block:nth-child(3){animation-delay:.15s}
+    .section-block:nth-child(4){animation-delay:.20s}
+    .section-block:nth-child(5){animation-delay:.25s}
+
+    .section-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    .section-num { background: var(--mod); color: var(--white); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 12px; border-radius: 2px; white-space: nowrap; flex-shrink: 0; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 1.22rem; font-weight: 700; color: var(--mod); }
+    .section-rule { flex: 1; height: 1px; background: var(--rule); }
+
+    p { margin-bottom: 18px; color: #2a2016; }
+    p:last-child { margin-bottom: 0; }
+    .cite { color: var(--mod); font-style: italic; font-size: 0.9em; }
+
+    /* KEY CONCEPT */
+    .key-concept { background: var(--mod-lt); border-left: 4px solid var(--mod); border-radius: 0 4px 4px 0; padding: 20px 24px; margin: 28px 0; }
+    .key-concept-label { font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mod); font-weight: 700; margin-bottom: 12px; }
+    .key-concept dl { display: grid; gap: 12px; }
+    .key-concept dt { font-weight: 700; color: var(--mod); font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 2px; }
+    .key-concept dd { color: #2a3a5c; font-size: 0.91rem; line-height: 1.65; margin-left: 0; padding-left: 14px; border-left: 2px solid rgba(31,56,100,0.2); }
+
+    /* GOLDEN RULE */
+    .golden-rule { background: #fef8e7; border: 1px solid #e8d090; border-left: 4px solid var(--gold-dk); border-radius: 0 4px 4px 0; padding: 18px 24px; margin: 24px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .golden-rule-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .golden-rule-text { font-family: 'Playfair Display', serif; font-size: 1rem; color: #7a5c00; line-height: 1.6; }
+    .golden-rule-text strong { color: var(--gold-dk); }
+
+    h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--mod); margin: 28px 0 14px; }
+
+    /* 26 LETTERS DISPLAY */
+    .alphabet-display {
+      background: var(--white); border: 1px solid var(--rule);
+      border-radius: 4px; padding: 20px 24px; margin: 20px 0;
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    }
+    .letter-chip {
+      width: 38px; height: 38px;
+      background: var(--mod-lt); border: 1px solid #c0ccd8;
+      border-radius: 3px; display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700;
+      color: var(--mod);
+    }
+
+    /* PHONEME TABLES */
+    .phoneme-section { margin: 24px 0; }
+    .phoneme-table-title {
+      background: var(--mod); color: var(--white);
+      font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 700;
+      padding: 10px 18px; border-radius: 4px 4px 0 0;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .phoneme-table-title .count-badge {
+      background: var(--gold); color: var(--mod);
+      font-size: 0.72rem; font-weight: 700; padding: 2px 10px; border-radius: 2px;
+    }
+    .phoneme-grid-table {
+      width: 100%; border-collapse: collapse;
+      border: 1px solid var(--rule); border-top: none;
+      background: var(--white); border-radius: 0 0 4px 4px; overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .phoneme-grid-table th {
+      background: var(--mod-lt); color: var(--mod);
+      padding: 8px 14px; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; text-align: left;
+      border-bottom: 1px solid var(--rule);
+    }
+    .phoneme-grid-table td {
+      padding: 9px 14px; border-bottom: 1px solid var(--rule);
+      font-size: 0.9rem; vertical-align: middle;
+    }
+    .phoneme-grid-table tr:last-child td { border-bottom: none; }
+    .phoneme-grid-table tr:nth-child(even) td { background: #faf6ef; }
+    .ipa { font-family: 'Source Serif 4', serif; color: var(--mod); font-weight: 700; font-size: 1rem; }
+    .ex-word { color: var(--muted); font-style: italic; }
+
+    /* two-col phoneme layout */
+    .phoneme-two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      border: 1px solid var(--rule); border-top: none;
+      background: var(--white); margin-bottom: 20px;
+    }
+    .phoneme-two-col .pcell {
+      padding: 9px 14px; border-bottom: 1px solid var(--rule);
+      border-right: 1px solid var(--rule); font-size: 0.9rem;
+      display: flex; gap: 12px; align-items: center;
+    }
+    .phoneme-two-col .pcell:nth-child(even) { border-right: none; }
+    .phoneme-two-col .pcell:nth-last-child(-n+2) { border-bottom: none; }
+
+    /* ORGANS DIAGRAM */
+    .diagram-wrap {
+      background: var(--white); border: 1px solid var(--rule);
+      border-radius: 4px; padding: 24px;
+      margin: 24px 0; text-align: center;
+    }
+    .diagram-caption {
+      font-size: 0.8rem; color: var(--muted); font-style: italic;
+      margin-top: 14px; line-height: 1.5;
+    }
+
+    /* ACTIVITY */
+    .activity-box { background: var(--ink); color: var(--parchment); border-radius: 4px; overflow: hidden; margin: 32px 0; }
+    .activity-header { padding: 14px 24px; background: rgba(255,184,0,0.18); border-bottom: 1px solid rgba(255,184,0,0.25); display: flex; align-items: center; gap: 10px; }
+    .activity-label { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+    .activity-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--white); }
+    .activity-body { padding: 24px; }
+    .activity-instruction { font-size: 0.88rem; color: #c0b8ac; margin-bottom: 20px; line-height: 1.65; }
+    .activity-list { list-style: none; display: grid; gap: 9px; }
+    .activity-item { display: grid; grid-template-columns: 32px 1fr auto; align-items: center; gap: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 3px; padding: 11px 14px; }
+    .activity-item-num { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 900; color: var(--gold); text-align: center; }
+    .activity-word { font-family: 'Playfair Display', serif; font-size: 0.97rem; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+    .activity-answer { font-size: 0.76rem; color: #8a9ab4; }
+    .silent-badge { background: rgba(255,184,0,0.15); border: 1px solid rgba(255,184,0,0.3); color: var(--gold); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border-radius: 2px; white-space: nowrap; }
+
+    /* CONCLUSION */
+    .conclusion-box { background: var(--cream); border: 1px solid var(--rule); border-top: 3px solid var(--gold-dk); padding: 28px 32px; margin-top: 8px; }
+    .conclusion-box p { font-size: 1rem; line-height: 1.8; }
+    .conclusion-box strong { color: var(--mod); }
+
+    /* EXAM */
+    .exam-section { background: var(--mod); color: var(--white); border-radius: 4px; overflow: hidden; margin: 56px 0 0; }
+    .exam-header { padding: 20px 28px; border-bottom: 2px solid var(--gold); display: flex; align-items: center; justify-content: space-between; }
+    .exam-header h2 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+    .exam-header p { font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 0; }
+    .exam-total { background: var(--gold); color: var(--mod); font-family: 'Playfair Display', serif; font-size: 0.78rem; font-weight: 700; padding: 6px 14px; border-radius: 2px; white-space: nowrap; }
+    .exam-body { padding: 28px; display: grid; gap: 18px; }
+    .exam-q { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; padding: 18px 20px; }
+    .exam-q-top { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 8px; }
+    .q-num { background: var(--gold); color: var(--mod); font-family: 'Playfair Display', serif; font-size: 0.78rem; font-weight: 900; padding: 2px 9px; border-radius: 2px; flex-shrink: 0; margin-top: 2px; }
+    .q-type { font-size: 0.63rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(255,184,0,0.3); padding: 2px 8px; border-radius: 2px; flex-shrink: 0; margin-top: 3px; }
+    .q-text { font-size: 0.95rem; color: var(--white); line-height: 1.65; }
+    .q-marks { font-size: 0.74rem; color: rgba(255,255,255,0.38); margin-top: 8px; text-align: right; font-style: italic; }
+    .q-options { margin-top: 10px; display: grid; gap: 6px; }
+    .q-option { font-size: 0.88rem; color: rgba(255,255,255,0.72); padding-left: 4px; }
+
+    /* REFERENCES */
+    .references-section { margin-top: 56px; }
+    .ref-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+    .ref-title { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--mod); }
+    .ref-rule { flex: 1; height: 1px; background: var(--rule); }
+    .ref-list { display: grid; gap: 12px; }
+    .ref-item { padding: 14px 18px; background: var(--white); border: 1px solid var(--rule); border-left: 3px solid var(--mod); font-size: 0.86rem; line-height: 1.7; color: #2a2016; }
+
+    /* NEXT / NAV */
+    .next-lecture { background: var(--mod); color: var(--white); border-radius: 4px; padding: 24px 28px; margin-top: 48px; display: flex; align-items: center; justify-content: space-between; gap: 20px; text-decoration: none; border-top: 3px solid var(--gold); transition: background 0.2s, transform 0.2s; }
+    .next-lecture:hover { background: #2a4a80; transform: translateX(4px); }
+    .next-label { font-size: 0.67rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .next-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; }
+    .next-desc { font-size: 0.82rem; color: rgba(255,255,255,0.52); margin-top: 4px; }
+    .next-arrow { font-size: 1.6rem; color: var(--gold); flex-shrink: 0; }
+
+    .lecture-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 0; border-top: 1px solid var(--rule); margin-top: 48px; }
+    .lnav-btn { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--muted); font-size: 0.82rem; transition: color 0.2s; }
+    .lnav-btn:hover { color: var(--gold-dk); }
+    .lnav-btn.disabled { opacity: 0.3; pointer-events: none; }
+    .lnav-index { background: var(--mod); color: var(--white) !important; padding: 8px 20px; border-radius: 2px; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .lnav-index:hover { background: #2a4a80; }
+
+    footer { background: #100e08; color: #6b6358; text-align: center; padding: 28px 48px; font-size: 0.78rem; letter-spacing: 0.05em; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+
+    @media(max-width:768px){
+      nav{padding:0 20px}
+      .nav-links li:not(:last-child){display:none}
+      .lecture-header{padding:48px 20px 40px}
+      .content-wrap{padding:36px 20px 56px}
+      .phoneme-two-col{grid-template-columns:1fr}
+      .phoneme-two-col .pcell{border-right:none}
+      .phoneme-two-col .pcell:nth-last-child(-n+2){border-bottom:1px solid var(--rule)}
+      .phoneme-two-col .pcell:last-child{border-bottom:none}
+      .next-lecture{flex-direction:column;align-items:flex-start}
+      .exam-body{padding:16px}
+      .activity-item{grid-template-columns:28px 1fr}
+      .silent-badge{display:none}
+    }
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a>
+  &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<!-- TITLE PAGE -->
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 1 &nbsp;·&nbsp; Lecture 1</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Foundations of English Sounds</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Phonetics &amp; Phonology</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>Explain the difference between orthography and phonology</li>
+<li>Identify and list the 44 phonemes of English</li>
+<li>Describe the function of the major organs of speech</li>
+<li>Identify silent letters in common English words</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>Introduction: Sound vs. Script</li>
+<li>The 44 Phonemes of English</li>
+<li>The Mechanics of Speech — Organs of Speech</li>
+<li>Practical Activity: The Silent Letter Audit</li>
+<li>Conclusion & Key Takeaway</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="prereq-none">This is the first lecture in the course. No prior lecture is required.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">Introduction: Sound vs. Script</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>The first hurdle in mastering English phonetics is recognising that <strong>English is not a phonetic language</strong>. As Roach <span class="cite">(2022, p. 4)</span> observes, the English writing system is historically irregular — the same sound can be spelled in multiple ways, and the same spelling can represent different sounds depending on context. Unlike some indigenous Nigerian languages where one letter consistently represents one sound, English frequently uses different letter combinations for the same sound <span class="cite">(Gut, 2019, p. 98)</span>.</p>
+
+    <p>Consider these three words: <em>rough</em>, <em>physics</em>, <em>fan</em>. They look nothing alike — yet the letters <strong>gh</strong>, <strong>ph</strong>, and <strong>f</strong> all produce exactly the same sound: <span class="ipa">/f/</span>. This fundamental mismatch between script and sound is the central challenge of English phonetics for learners in Nigerian tertiary institutions <span class="cite">(Oyebola &amp; Gut, 2020, p. 166)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concepts</div>
+      <dl>
+        <dt>Orthography</dt>
+        <dd>The spelling system — the letters seen on the page. English orthography is notoriously irregular and cannot be relied upon as a guide to pronunciation <span class="cite">(Davenport &amp; Hannahs, 2020, p. 3)</span>.</dd>
+        <dt>Phonology</dt>
+        <dd>The sound system — the actual phonemes heard and produced in spoken language. Phonology studies how sounds function and pattern within a language <span class="cite">(Skandera &amp; Burleigh, 2019, p. 11)</span>.</dd>
+        <dt>Phoneme</dt>
+        <dd>The smallest unit of sound that distinguishes one word from another. Changing one phoneme changes the meaning: <em>cat</em> → <em>bat</em> → <em>hat</em> <span class="cite">(Cruttenden, 2021, p. 18)</span>.</dd>
+      </dl>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>The Golden Rule:</strong> In this course, we listen to what we <em>hear</em>, not what we <em>see</em>. The written word is a guide — the spoken sound is the truth.</p>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">The 44 Phonemes of English</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <h3>The 26 Letters of the English Alphabet</h3>
+    <p>The English alphabet contains <strong>26 letters</strong>. These are the graphemes — the written symbols — from which all English words are constructed <span class="cite">(Ladefoged &amp; Johnson, 2020, p. 2)</span>:</p>
+
+    <div class="alphabet-display">
+      <span class="letter-chip">A</span><span class="letter-chip">B</span><span class="letter-chip">C</span><span class="letter-chip">D</span><span class="letter-chip">E</span><span class="letter-chip">F</span><span class="letter-chip">G</span><span class="letter-chip">H</span><span class="letter-chip">I</span><span class="letter-chip">J</span><span class="letter-chip">K</span><span class="letter-chip">L</span><span class="letter-chip">M</span><span class="letter-chip">N</span><span class="letter-chip">O</span><span class="letter-chip">P</span><span class="letter-chip">Q</span><span class="letter-chip">R</span><span class="letter-chip">S</span><span class="letter-chip">T</span><span class="letter-chip">U</span><span class="letter-chip">V</span><span class="letter-chip">W</span><span class="letter-chip">X</span><span class="letter-chip">Y</span><span class="letter-chip">Z</span>
+    </div>
+
+    <p>Despite having only 26 letters, English has <strong>44 distinct sounds</strong> — phonemes. This gap of 18 between letters and sounds explains why English spelling so often misleads the learner <span class="cite">(Roach, 2022, p. 9)</span>. These 44 phonemes divide into <strong>20 vowel sounds</strong> and <strong>24 consonant sounds</strong> <span class="cite">(Cruttenden, 2021, p. 22)</span>.</p>
+
+    <!-- VOWELS: 20 -->
+    <h3>The 20 Vowel Sounds</h3>
+    <p>Vowels are produced with an open vocal tract — the airstream from the lungs passes through the mouth without obstruction or narrowing sufficient to cause friction <span class="cite">(Skandera &amp; Burleigh, 2019, p. 25)</span>. English has 20 vowel sounds: 12 monophthongs and 8 diphthongs.</p>
+
+    <!-- Monophthongs -->
+    <div class="phoneme-section">
+      <div class="phoneme-table-title">
+        Monophthongs — Pure Single Vowels
+        <span class="count-badge">12 Sounds</span>
+      </div>
+      <div class="phoneme-two-col">
+        <div class="pcell"><span class="ipa">/iː/</span>&nbsp; <span class="ex-word">as in <em>see</em></span></div>
+        <div class="pcell"><span class="ipa">/ɪ/</span>&nbsp; <span class="ex-word">as in <em>sit</em></span></div>
+        <div class="pcell"><span class="ipa">/e/</span>&nbsp; <span class="ex-word">as in <em>bed</em></span></div>
+        <div class="pcell"><span class="ipa">/æ/</span>&nbsp; <span class="ex-word">as in <em>cat</em></span></div>
+        <div class="pcell"><span class="ipa">/ɑː/</span>&nbsp; <span class="ex-word">as in <em>car</em></span></div>
+        <div class="pcell"><span class="ipa">/ɒ/</span>&nbsp; <span class="ex-word">as in <em>hot</em></span></div>
+        <div class="pcell"><span class="ipa">/ɔː/</span>&nbsp; <span class="ex-word">as in <em>law</em></span></div>
+        <div class="pcell"><span class="ipa">/ʊ/</span>&nbsp; <span class="ex-word">as in <em>put</em></span></div>
+        <div class="pcell"><span class="ipa">/uː/</span>&nbsp; <span class="ex-word">as in <em>blue</em></span></div>
+        <div class="pcell"><span class="ipa">/ʌ/</span>&nbsp; <span class="ex-word">as in <em>cup</em></span></div>
+        <div class="pcell"><span class="ipa">/ɜː/</span>&nbsp; <span class="ex-word">as in <em>bird</em></span></div>
+        <div class="pcell"><span class="ipa">/ə/</span>&nbsp; <span class="ex-word">as in <em>about</em> (schwa)</span></div>
+      </div>
+    </div>
+
+    <!-- Diphthongs -->
+    <div class="phoneme-section">
+      <div class="phoneme-table-title">
+        Diphthongs — Gliding Vowel Sounds
+        <span class="count-badge">8 Sounds</span>
+      </div>
+      <div class="phoneme-two-col">
+        <div class="pcell"><span class="ipa">/eɪ/</span>&nbsp; <span class="ex-word">as in <em>face</em></span></div>
+        <div class="pcell"><span class="ipa">/aɪ/</span>&nbsp; <span class="ex-word">as in <em>my</em></span></div>
+        <div class="pcell"><span class="ipa">/ɔɪ/</span>&nbsp; <span class="ex-word">as in <em>boy</em></span></div>
+        <div class="pcell"><span class="ipa">/əʊ/</span>&nbsp; <span class="ex-word">as in <em>go</em></span></div>
+        <div class="pcell"><span class="ipa">/aʊ/</span>&nbsp; <span class="ex-word">as in <em>now</em></span></div>
+        <div class="pcell"><span class="ipa">/ɪə/</span>&nbsp; <span class="ex-word">as in <em>ear</em></span></div>
+        <div class="pcell"><span class="ipa">/eə/</span>&nbsp; <span class="ex-word">as in <em>air</em></span></div>
+        <div class="pcell"><span class="ipa">/ʊə/</span>&nbsp; <span class="ex-word">as in <em>pure</em></span></div>
+      </div>
+    </div>
+
+    <p style="font-size:0.9rem;color:var(--muted);font-style:italic;margin-top:-10px;">Diphthongs are gliding vowels in which the tongue moves from one position to another within the same syllable <span class="cite">(Ladefoged &amp; Johnson, 2020, p. 21)</span>.</p>
+
+    <!-- CONSONANTS: 24 -->
+    <h3>The 24 Consonant Sounds</h3>
+    <p>Consonants are produced with some degree of closure or narrowing in the vocal tract that obstructs or impedes the airstream <span class="cite">(Davenport &amp; Hannahs, 2020, p. 19)</span>. The key distinction between consonants is <strong>voicing</strong> — whether the vocal cords vibrate during production. Voiced consonants cause a buzz felt at the throat; voiceless ones produce only a rush of air <span class="cite">(Roach, 2022, p. 31)</span>.</p>
+
+    <div class="phoneme-section">
+      <div class="phoneme-table-title">
+        The 24 Consonant Sounds of English
+        <span class="count-badge">24 Sounds</span>
+      </div>
+      <table class="phoneme-grid-table">
+        <thead>
+          <tr>
+            <th>IPA Symbol</th>
+            <th>Example Word</th>
+            <th>Voicing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="ipa">/p/</span></td><td class="ex-word"><em>pen</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/b/</span></td><td class="ex-word"><em>bat</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/t/</span></td><td class="ex-word"><em>top</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/d/</span></td><td class="ex-word"><em>dog</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/k/</span></td><td class="ex-word"><em>cat</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/g/</span></td><td class="ex-word"><em>get</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/f/</span></td><td class="ex-word"><em>fan</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/v/</span></td><td class="ex-word"><em>van</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/θ/</span></td><td class="ex-word"><em>thin</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/ð/</span></td><td class="ex-word"><em>this</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/s/</span></td><td class="ex-word"><em>sun</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/z/</span></td><td class="ex-word"><em>zoo</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/ʃ/</span></td><td class="ex-word"><em>she</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/ʒ/</span></td><td class="ex-word"><em>measure</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/tʃ/</span></td><td class="ex-word"><em>church</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/dʒ/</span></td><td class="ex-word"><em>judge</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/m/</span></td><td class="ex-word"><em>man</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/n/</span></td><td class="ex-word"><em>net</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/ŋ/</span></td><td class="ex-word"><em>sing</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/h/</span></td><td class="ex-word"><em>hat</em></td><td>Voiceless</td></tr>
+          <tr><td><span class="ipa">/l/</span></td><td class="ex-word"><em>leg</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/r/</span></td><td class="ex-word"><em>red</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/w/</span></td><td class="ex-word"><em>wet</em></td><td>Voiced</td></tr>
+          <tr><td><span class="ipa">/j/</span></td><td class="ex-word"><em>yes</em></td><td>Voiced</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">The Mechanics of Speech — Organs of Speech</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>To produce the 44 phonemes, the human body employs a coordinated system of organs sometimes collectively referred to as the <strong>vocal tract</strong>. Understanding this mechanism helps learners identify and correct <strong>first-language interference</strong> — the tendency to superimpose the phonological habits of one's mother tongue onto English <span class="cite">(Oyebola &amp; Gut, 2020, p. 170)</span>. As Ladefoged and Johnson <span class="cite">(2020, p. 7)</span> note, conscious awareness of articulator position is the first step toward deliberate self-correction.</p>
+
+    <!-- SVG DIAGRAM OF ORGANS OF SPEECH -->
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;height:auto;display:block;margin:0 auto;">
+        <defs>
+          <style>
+            .org-label { font-family:'Source Serif 4',Georgia,serif; font-size:11.5px; fill:#1F3864; font-weight:600; }
+            .org-line  { stroke:#1F3864; stroke-width:1.2; fill:none; stroke-dasharray:4,3; }
+            .org-dot   { fill:#FFB800; stroke:#1F3864; stroke-width:1.2; }
+            .org-tissue{ fill:#f5ddd0; stroke:#c0856a; stroke-width:1.2; }
+            .org-bone  { fill:#e8e0d0; stroke:#b0a888; stroke-width:1.2; }
+            .org-air   { fill:#ddeeff; stroke:#88aacc; stroke-width:1; opacity:0.6; }
+            .org-muscle{ fill:#f0c8b8; stroke:#c08878; stroke-width:1.2; }
+            .org-cavity{ fill:#fff8f4; stroke:#d4b0a0; stroke-width:1; }
+          </style>
+        </defs>
+
+        <!-- HEAD OUTLINE -->
+        <!-- Skull / head silhouette -->
+        <path class="org-bone" d="M170,20 Q260,10 330,50 Q390,90 395,160 Q400,220 370,255 L360,280 Q355,295 340,300 L320,305 L300,310 Q285,340 270,360 Q255,380 240,395 Q230,405 220,400 Q215,415 210,420 Q190,425 180,415 L175,400 Q165,390 160,375 Q150,355 148,330 L145,305 Q130,300 120,290 L110,270 Q90,240 95,180 Q95,100 170,20 Z"/>
+
+        <!-- Nasal cavity -->
+        <path class="org-cavity" d="M185,60 Q220,50 255,58 Q270,65 268,90 Q265,110 245,118 Q225,125 205,118 Q185,110 183,90 Q181,72 185,60 Z"/>
+        <!-- Nostril opening -->
+        <ellipse class="org-tissue" cx="200" cy="120" rx="10" ry="6"/>
+        <ellipse class="org-tissue" cx="240" cy="120" rx="10" ry="6"/>
+
+        <!-- Oral cavity -->
+        <path class="org-cavity" d="M145,155 Q200,145 270,152 Q300,158 310,175 Q315,195 300,210 Q270,225 220,228 Q175,228 152,212 Q135,198 140,178 Z"/>
+
+        <!-- Hard palate -->
+        <path class="org-bone" d="M160,155 Q215,148 268,154 Q270,165 265,170 Q215,162 158,168 Z"/>
+
+        <!-- Soft palate / velum -->
+        <path class="org-muscle" d="M268,154 Q295,158 305,172 Q308,185 298,192 Q285,188 272,178 Q268,168 268,154 Z"/>
+
+        <!-- Uvula -->
+        <ellipse class="org-tissue" cx="296" cy="197" rx="7" ry="9"/>
+
+        <!-- Tongue body -->
+        <path class="org-muscle" d="M148,210 Q180,240 225,242 Q265,240 285,225 Q295,212 288,200 Q268,195 240,200 Q210,205 185,205 Q162,202 148,210 Z"/>
+        <!-- Tongue tip -->
+        <path class="org-muscle" d="M148,210 Q138,215 132,225 Q130,235 140,240 Q155,245 165,235 Q162,220 148,210 Z"/>
+
+        <!-- Teeth upper -->
+        <rect class="org-bone" x="160" y="162" width="100" height="10" rx="2"/>
+        <!-- Teeth lower -->
+        <rect class="org-bone" x="155" y="228" width="100" height="10" rx="2"/>
+
+        <!-- Lips -->
+        <path class="org-tissue" d="M132,222 Q160,212 200,210 Q240,210 272,218 Q280,225 272,232 Q240,240 200,240 Q160,240 134,232 Q126,228 132,222 Z"/>
+
+        <!-- Alveolar ridge label region -->
+        <path style="fill:#f0e8d8;stroke:#c0a878;stroke-width:1" d="M160,162 Q185,155 210,158 Q210,168 185,172 Q162,170 160,162 Z"/>
+
+        <!-- Pharynx -->
+        <path class="org-cavity" d="M310,170 Q330,175 335,220 Q335,260 320,280 Q305,270 300,245 Q298,215 305,190 Z"/>
+
+        <!-- Larynx / vocal cords area -->
+        <path class="org-muscle" d="M300,280 Q320,285 330,305 Q330,325 315,330 Q298,328 292,310 Q288,293 300,280 Z"/>
+        <!-- Vocal fold symbol -->
+        <line style="stroke:#1F3864;stroke-width:2" x1="298" y1="300" x2="325" y2="308"/>
+        <line style="stroke:#1F3864;stroke-width:2" x1="298" y1="312" x2="325" y2="320"/>
+
+        <!-- Trachea -->
+        <path class="org-air" d="M292,330 Q288,360 285,400 Q295,402 305,400 Q308,360 315,330 Z"/>
+
+        <!-- Lungs simplified -->
+        <ellipse class="org-air" cx="265" cy="435" rx="35" ry="22"/>
+        <ellipse class="org-air" cx="325" cy="435" rx="35" ry="22"/>
+        <text style="font-family:'Source Serif 4',serif;font-size:10px;fill:#336699;text-anchor:middle" x="295" y="438">LUNGS</text>
+
+        <!-- ─── LABEL LINES AND TEXT ─── -->
+
+        <!-- 1. Nasal Cavity -->
+        <line class="org-line" x1="225" y1="80" x2="80" y2="55"/>
+        <circle class="org-dot" cx="225" cy="80" r="3.5"/>
+        <text class="org-label" x="12" y="52">Nasal Cavity</text>
+
+        <!-- 2. Hard Palate -->
+        <line class="org-line" x1="215" y1="158" x2="80" y2="135"/>
+        <circle class="org-dot" cx="215" cy="158" r="3.5"/>
+        <text class="org-label" x="8" y="132">Hard Palate</text>
+
+        <!-- 3. Alveolar Ridge -->
+        <line class="org-line" x1="185" y1="163" x2="80" y2="155"/>
+        <circle class="org-dot" cx="185" cy="163" r="3.5"/>
+        <text class="org-label" x="4" y="153">Alveolar Ridge</text>
+
+        <!-- 4. Teeth -->
+        <line class="org-line" x1="175" y1="170" x2="80" y2="178"/>
+        <circle class="org-dot" cx="175" cy="170" r="3.5"/>
+        <text class="org-label" x="20" y="178">Teeth</text>
+
+        <!-- 5. Lips -->
+        <line class="org-line" x1="140" y1="226" x2="80" y2="220"/>
+        <circle class="org-dot" cx="140" cy="226" r="3.5"/>
+        <text class="org-label" x="28" y="220">Lips</text>
+
+        <!-- 6. Tongue -->
+        <line class="org-line" x1="200" y1="225" x2="80" y2="255"/>
+        <circle class="org-dot" cx="200" cy="225" r="3.5"/>
+        <text class="org-label" x="18" y="258">Tongue</text>
+
+        <!-- 7. Soft Palate (Velum) -->
+        <line class="org-line" x1="285" y1="172" x2="410" y2="110"/>
+        <circle class="org-dot" cx="285" cy="172" r="3.5"/>
+        <text class="org-label" x="412" y="110">Soft Palate (Velum)</text>
+
+        <!-- 8. Uvula -->
+        <line class="org-line" x1="296" y1="200" x2="415" y2="175"/>
+        <circle class="org-dot" cx="296" cy="200" r="3.5"/>
+        <text class="org-label" x="417" y="178">Uvula</text>
+
+        <!-- 9. Pharynx -->
+        <line class="org-line" x1="323" y1="220" x2="415" y2="220"/>
+        <circle class="org-dot" cx="323" cy="220" r="3.5"/>
+        <text class="org-label" x="417" y="224">Pharynx</text>
+
+        <!-- 10. Larynx / Vocal Cords -->
+        <line class="org-line" x1="312" y1="305" x2="415" y2="300"/>
+        <circle class="org-dot" cx="312" cy="305" r="3.5"/>
+        <text class="org-label" x="417" y="297">Larynx</text>
+        <text class="org-label" x="417" y="311">(Vocal Cords)</text>
+
+        <!-- 11. Trachea -->
+        <line class="org-line" x1="298" y1="365" x2="415" y2="365"/>
+        <circle class="org-dot" cx="298" cy="365" r="3.5"/>
+        <text class="org-label" x="417" y="369">Trachea</text>
+
+        <!-- 12. Lungs -->
+        <line class="org-line" x1="295" y1="420" x2="415" y2="420"/>
+        <circle class="org-dot" cx="295" cy="420" r="3.5"/>
+        <text class="org-label" x="417" y="424">Lungs (Power Source)</text>
+
+        <!-- Title -->
+        <text style="font-family:'Playfair Display',Georgia,serif;font-size:13px;fill:#1F3864;font-weight:700;text-anchor:middle" x="260" y="460">Figure 1: The Organs of Speech</text>
+      </svg>
+      <p class="diagram-caption">Figure 1: Cross-section of the human vocal tract showing the principal organs involved in speech production.<br>Adapted from Ladefoged &amp; Johnson <span class="cite">(2020, p. 8)</span> and Cruttenden <span class="cite">(2021, p. 6)</span>.</p>
+    </div>
+
+    <p>Each organ plays a specific and critical role. The <strong>lungs</strong> supply the airstream that powers all speech sounds <span class="cite">(Skandera &amp; Burleigh, 2019, p. 16)</span>. The <strong>vocal cords</strong> in the larynx vibrate to produce voiced sounds and remain apart for voiceless ones. The <strong>tongue</strong> — the most mobile articulator — shapes vowels by adjusting its height and position, and forms consonants by contacting or approaching the palate, alveolar ridge, or teeth <span class="cite">(Roach, 2022, p. 18)</span>. The <strong>lips</strong> are essential for bilabial sounds such as <span class="ipa">/p/</span>, <span class="ipa">/b/</span>, and <span class="ipa">/m/</span>, while the <strong>teeth</strong> are necessary for dental fricatives: <span class="ipa">/θ/</span> as in <em>thin</em> and <span class="ipa">/ð/</span> as in <em>this</em> — sounds that frequently pose difficulties for Nigerian students due to first-language interference <span class="cite">(Gut, 2019, p. 105)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Academic Note — First Language Interference</div>
+      <dl>
+        <dt>What it is</dt>
+        <dd>The unconscious application of first-language phonological rules to English — for example, substituting <span class="ipa">/t/</span> for <span class="ipa">/θ/</span>, producing <em>"tin"</em> instead of <em>"thin"</em> <span class="cite">(Aremo, 2021, p. 515)</span>.</dd>
+        <dt>Why it matters</dt>
+        <dd>It affects intelligibility in academic and professional settings. The goal is not to erase linguistic identity, but to expand the learner's phonological range so they can be clearly understood in any formal context <span class="cite">(Deterding, 2018, p. 320; Jenkins, 2022, p. 8)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION IV: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Practical Activity: The Silent Letter Audit</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>One of the most direct demonstrations that English orthography does not reliably represent its phonology is the existence of <strong>silent letters</strong> — graphemes that appear in the spelling of a word but contribute no sound to its pronunciation <span class="cite">(Davenport &amp; Hannahs, 2020, p. 5)</span>. Silent letters are largely historical relics — remnants of earlier pronunciations or borrowings from Latin, Greek, and French that were retained in spelling long after the sounds disappeared from speech <span class="cite">(Cruttenden, 2021, p. 20)</span>.</p>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">The Silent Letter Audit — 10 Academic Words</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">Write each word in your notebook. Identify the silent letter, cross it out, and read the word aloud pronouncing only the sounds that remain. Then write the full IPA transcription beside each word.</p>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <span class="activity-item-num">1</span>
+            <div>
+              <div class="activity-word">Receipt</div>
+              <div class="activity-answer">IPA: /rɪˈsiːt/ — sounds as if spelled <em>receeit</em></div>
+            </div>
+            <span class="silent-badge">Silent P</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">2</span>
+            <div>
+              <div class="activity-word">Psychology</div>
+              <div class="activity-answer">IPA: /saɪˈkɒlədʒi/ — begins with /s/, not /ps/</div>
+            </div>
+            <span class="silent-badge">Silent P</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">3</span>
+            <div>
+              <div class="activity-word">Indict</div>
+              <div class="activity-answer">IPA: /ɪnˈdaɪt/ — sounds exactly like <em>indite</em></div>
+            </div>
+            <span class="silent-badge">Silent C</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">4</span>
+            <div>
+              <div class="activity-word">Column</div>
+              <div class="activity-answer">IPA: /ˈkɒləm/ — the final 'n' is not sounded</div>
+            </div>
+            <span class="silent-badge">Silent N</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">5</span>
+            <div>
+              <div class="activity-word">Debt</div>
+              <div class="activity-answer">IPA: /det/ — 'b' retained from Latin <em>debitum</em></div>
+            </div>
+            <span class="silent-badge">Silent B</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">6</span>
+            <div>
+              <div class="activity-word">Gnome</div>
+              <div class="activity-answer">IPA: /nəʊm/ — the initial 'g' is never pronounced</div>
+            </div>
+            <span class="silent-badge">Silent G</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">7</span>
+            <div>
+              <div class="activity-word">Knight</div>
+              <div class="activity-answer">IPA: /naɪt/ — both 'k' and 'gh' are silent</div>
+            </div>
+            <span class="silent-badge">Silent K &amp; GH</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">8</span>
+            <div>
+              <div class="activity-word">Pneumonia</div>
+              <div class="activity-answer">IPA: /njuːˈməʊniə/ — begins with /n/, not /pn/</div>
+            </div>
+            <span class="silent-badge">Silent P</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">9</span>
+            <div>
+              <div class="activity-word">Wednesday</div>
+              <div class="activity-answer">IPA: /ˈwenzdeɪ/ — the 'd' in the middle disappears</div>
+            </div>
+            <span class="silent-badge">Silent D</span>
+          </li>
+          <li class="activity-item">
+            <span class="activity-item-num">10</span>
+            <div>
+              <div class="activity-word">Subtle</div>
+              <div class="activity-answer">IPA: /ˈsʌtəl/ — the 'b' is historically inserted but not pronounced</div>
+            </div>
+            <span class="silent-badge">Silent B</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION V: CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>Mastering the 44 sounds is the first and most critical step toward <strong>International Intelligibility</strong>. As Jenkins <span class="cite">(2022, p. 14)</span> argues, intelligibility — not native-like accent — is the appropriate target for speakers of English as an additional language. The goal of this course is not to make the student sound British or American, but to ensure their speech is sufficiently clear to be understood by any English speaker, regardless of background <span class="cite">(Deterding, 2018, p. 329)</span>.</p>
+      <br>
+      <p>A student who understands the relationship between the 26 letters and the 44 sounds — who knows why the <em>p</em> in <em>psychology</em> is silent, why <em>rough</em> ends with an <span class="ipa">/f/</span>, and where the tongue must be placed to produce <span class="ipa">/θ/</span> — has established the phonological foundation on which all further language work in this course will build <span class="cite">(Aremo, 2021, p. 522)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAMINATION QUESTIONS -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div>
+        <h2>Examination Questions</h2>
+        <p>Lecture 1.1 — Foundations of English Sounds</p>
+      </div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">1</span><span class="q-type">Multiple Choice</span>
+          <p class="q-text">How many distinct phonemes does the English language have, and how does this number compare to the number of letters in its alphabet?</p>
+        </div>
+        <div class="q-options">
+          <div class="q-option">A. &nbsp;26 phonemes — the same as the alphabet</div>
+          <div class="q-option">B. &nbsp;36 phonemes — 10 more than the alphabet</div>
+          <div class="q-option">C. &nbsp;44 phonemes — 18 more than the alphabet</div>
+          <div class="q-option">D. &nbsp;52 phonemes — 26 more than the alphabet</div>
+        </div>
+        <p class="q-marks">[1 mark]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">2</span><span class="q-type">Write Out</span>
+          <p class="q-text">Define the term <em>phoneme</em> and explain, with two examples drawn from this lecture, how changing a single phoneme alters the meaning of a word.</p>
+        </div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">3</span><span class="q-type">Transcribe</span>
+          <p class="q-text">Write the full IPA phonetic transcription of each word below and identify the silent letter in each: &nbsp;<strong>Debt &nbsp;·&nbsp; Column &nbsp;·&nbsp; Pneumonia &nbsp;·&nbsp; Subtle</strong></p>
+        </div>
+        <p class="q-marks">[4 marks — 1 per word]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">4</span><span class="q-type">Distinguish</span>
+          <p class="q-text">Distinguish between <em>orthography</em> and <em>phonology</em>. Using evidence from the lecture, explain why this distinction is particularly significant for first-year students in Nigerian tertiary institutions.</p>
+        </div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">5</span><span class="q-type">Multiple Choice</span>
+          <p class="q-text">A diphthong is best described as:</p>
+        </div>
+        <div class="q-options">
+          <div class="q-option">A. &nbsp;A pure single vowel with a steady tongue position throughout</div>
+          <div class="q-option">B. &nbsp;A gliding vowel sound in which the tongue moves from one position to another within the same syllable</div>
+          <div class="q-option">C. &nbsp;A voiceless consonant produced at the back of the throat</div>
+          <div class="q-option">D. &nbsp;A nasal sound produced through the nose</div>
+        </div>
+        <p class="q-marks">[1 mark]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">6</span><span class="q-type">List &amp; Pronounce</span>
+          <p class="q-text">From memory, list any <strong>six</strong> of the 12 monophthong vowel sounds of English. For each, write the IPA symbol and one example word that contains that sound.</p>
+        </div>
+        <p class="q-marks">[3 marks — ½ per correct entry]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">7</span><span class="q-type">Multiple Choice</span>
+          <p class="q-text">Which of the following is a <strong>voiced</strong> consonant sound?</p>
+        </div>
+        <div class="q-options">
+          <div class="q-option">A. &nbsp;/p/</div>
+          <div class="q-option">B. &nbsp;/s/</div>
+          <div class="q-option">C. &nbsp;/k/</div>
+          <div class="q-option">D. &nbsp;/d/</div>
+        </div>
+        <p class="q-marks">[1 mark]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">8</span><span class="q-type">Diagram &amp; Label</span>
+          <p class="q-text">Draw a simple cross-section of the human head and label <strong>any six</strong> organs of speech. For each labelled organ, state one specific sound or category of sounds it produces.</p>
+        </div>
+        <p class="q-marks">[3 marks — ½ per correct label and function]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">9</span><span class="q-type">Identify &amp; Explain</span>
+          <p class="q-text">What is <em>first-language interference</em>? Give one specific phonological example affecting Nigerian students' pronunciation of English and propose one practical correction strategy.</p>
+        </div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top">
+          <span class="q-num">10</span><span class="q-type">Transcribe &amp; Analyse</span>
+          <p class="q-text">Provide the full IPA transcription of the word <em>Psychology</em>. Then write a short paragraph (4–5 sentences) explaining: (a) which letter is silent and why it exists in the spelling, and (b) what the word illustrates about the relationship between the English alphabet and the English sound system.</p>
+        </div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading">
+      <h2 class="ref-title">References</h2>
+      <div class="ref-rule"></div>
+    </div>
+    <div class="ref-list">
+      <div class="ref-item">Aremo, B. (2021). Phonological awareness and reading development among first-year undergraduates in Nigerian universities. <em>Journal of Language Teaching and Research</em>, 12(4), 512–523.</div>
+      <div class="ref-item">Cruttenden, A. (2021). <em>Gimson's Pronunciation of English</em> (9th ed.). Routledge.</div>
+      <div class="ref-item">Davenport, M., &amp; Hannahs, S. J. (2020). <em>Introducing Phonetics and Phonology</em> (4th ed.). Routledge.</div>
+      <div class="ref-item">Deterding, D. (2018). Pronunciation problems in English as a lingua franca. <em>Journal of the International Phonetic Association</em>, 48(3), 317–334.</div>
+      <div class="ref-item">Gut, U. (2019). First language influence and final consonant clusters in the new Englishes of West Africa. <em>World Englishes</em>, 38(1), 97–115.</div>
+      <div class="ref-item">Jenkins, J. (2022). English as a lingua franca: Phonological intelligibility revisited. <em>Applied Linguistics</em>, 43(1), 1–22.</div>
+      <div class="ref-item">Ladefoged, P., &amp; Johnson, K. (2020). <em>A Course in Phonetics</em> (8th ed.). Cengage Learning.</div>
+      <div class="ref-item">Oyebola, F., &amp; Gut, U. (2020). The phonetics of Nigerian English: Segmental features and intelligibility. <em>English World-Wide</em>, 41(2), 165–198.</div>
+      <div class="ref-item">Roach, P. (2022). <em>English Phonetics and Phonology: A Practical Course</em> (5th ed.). Cambridge University Press.</div>
+      <div class="ref-item">Skandera, P., &amp; Burleigh, P. (2019). <em>A Manual of English Phonetics and Phonology</em> (3rd ed.). Narr Francke Attempto Verlag.</div>
+    </div>
+  </div>
+
+  <!-- NEXT LECTURE -->
+  <a class="next-lecture" href="lecture-1-2.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 1</div>
+      <div class="next-title">Lecture 1.2 — Vowels and Consonants in Depth</div>
+      <div class="next-desc">The vowel quadrilateral · Long vs. short vowels · Place &amp; manner of articulation · The schwa /ə/</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn disabled" href="#">← Previous</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-1-2.html">Next Lecture →</a>
+  </div>
+
+</div><!-- /.content-wrap -->
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 1.1 &nbsp;·&nbsp;
+  Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp;
+  <a href="https://mauriceudom.org">mauriceudom.org</a>
+  <br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 2.5: The Sentence — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff;--green:#1a5c1a;--red:#8b1a1a}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(1){animation-delay:.04s}.section-block:nth-child(2){animation-delay:.08s}.section-block:nth-child(3){animation-delay:.12s}.section-block:nth-child(4){animation-delay:.16s}.section-block:nth-child(5){animation-delay:.20s}.section-block:nth-child(6){animation-delay:.24s}.section-block:nth-child(7){animation-delay:.28s}.section-block:nth-child(8){animation-delay:.32s}.section-block:nth-child(9){animation-delay:.36s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+
+    /* SENTENCE TYPE CARDS */
+    .type-cards{display:grid;gap:14px;margin:20px 0}
+    .type-card{background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--mod);padding:16px 20px}
+    .type-card-label{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:5px}
+    .type-card-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:7px}
+    .type-card-def{font-size:.9rem;color:#2a2016;line-height:1.65;margin-bottom:8px}
+    .type-card-ex{font-size:.87rem;font-style:italic;color:var(--mod);background:var(--mod-lt);padding:7px 12px;border-radius:3px}
+    .type-card-formula{font-size:.74rem;color:var(--muted);margin-top:5px;letter-spacing:.03em}
+
+    /* GENERAL TABLE */
+    .gen-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .gen-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.87rem;font-weight:700;text-align:left}
+    .gen-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.89rem;vertical-align:top;line-height:1.6}
+    .gen-table tr:last-child td{border-bottom:none}
+    .gen-table tr:nth-child(even) td{background:#faf6ef}
+    .ex{font-style:italic;color:var(--muted)}
+    .label{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif}
+
+    /* SENTENCE PARSE DIAGRAM */
+    .diagram-wrap{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:24px;margin:24px 0;text-align:center}
+    .diagram-caption{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px;line-height:1.5}
+
+    /* PARSE DISPLAY */
+    .parse-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:20px 0}
+    .parse-sentence{background:var(--mod);color:var(--white);padding:14px 20px;font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;letter-spacing:.01em}
+    .parse-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0}
+    .parse-cell{padding:12px 16px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+    .parse-cell:last-child{border-right:none}
+    .parse-tag{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:4px;display:block}
+    .parse-word{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink)}
+    .parse-note{font-size:.74rem;color:var(--muted);font-style:italic;margin-top:3px}
+
+    /* PART HIGHLIGHT COLOURS */
+    .subj{border-top:3px solid #1F3864}
+    .pred{border-top:3px solid #2d5a27}
+    .verb{border-top:3px solid #b8860b}
+    .dobj{border-top:3px solid #6b2d0f}
+    .iobj{border-top:3px solid #4a2d6b}
+    .comp{border-top:3px solid #1a4a5c}
+
+    /* COLOUR KEY */
+    .colour-key{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 20px;padding:12px 16px;background:var(--cream);border:1px solid var(--rule);border-radius:3px}
+    .key-item{display:flex;align-items:center;gap:6px;font-size:.77rem;color:var(--muted)}
+    .key-swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0}
+
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-sent{font-size:.92rem;color:var(--white);line-height:1.6;margin-bottom:2px;font-style:italic}
+    .activity-answer{font-size:.74rem;color:#8a9ab4}
+    .parse-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.3;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.parse-grid{grid-template-columns:1fr 1fr}.colour-key{gap:10px}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}.activity-item{grid-template-columns:28px 1fr}}
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 2 &nbsp;·&nbsp; Lecture 5</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">The Sentence — Definition, Types, and Parts</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Grammar &amp; Usage</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>Define a sentence using formal grammatical criteria</li>
+<li>Classify sentences by structure and by function</li>
+<li>Identify the subject, predicate, and verb in any sentence</li>
+<li>Distinguish direct objects, indirect objects, and complements</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>What Is a Sentence?</li>
+<li>Types of Sentences by Structure</li>
+<li>Types of Sentences by Function</li>
+<li>Parts of the Sentence — Subject and Predicate</li>
+<li>The Verb — Transitive, Intransitive, Linking</li>
+<li>The Object — Direct and Indirect</li>
+<li>The Complement — Subject and Object Complement</li>
+<li>Practical Activity: Sentence Parsing</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lectures 2.1–2.4 before proceeding.</p>
+        <a class="prereq-link" href="lecture-2-4.html">← Lecture 2.4 — Verb Mechanics: Tense, Aspect, and Voice</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I: WHAT IS A SENTENCE -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">What Is a Sentence?</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>The sentence is the fundamental unit of communication in English. All written and spoken language — from a casual text message to a doctoral thesis — is ultimately constructed from sentences. Yet defining the sentence precisely is more complex than it first appears <span class="cite">(Huddleston &amp; Pullum, 2019, p. 85)</span>.</p>
+    <p>A traditional definition states that a sentence is "a group of words expressing a complete thought." While useful as a starting point, this definition is insufficient for grammatical analysis because it relies on the intuitive notion of "completeness" rather than on structural criteria <span class="cite">(Quirk et al., 2018, p. 44)</span>. A more rigorous definition requires that a sentence must contain at minimum:</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Definition and Minimum Requirements</div>
+      <dl>
+        <dt>The Sentence — Formal Definition</dt>
+        <dd>A grammatically complete unit of language that contains at minimum a <strong>subject</strong> and a <strong>finite verb</strong>, expresses a proposition, and is capable of standing alone as an utterance <span class="cite">(Biber et al., 2021, p. 89)</span>.</dd>
+        <dt>Subject</dt>
+        <dd>The noun phrase about which the predicate makes a statement. Every sentence must have a subject — though in imperative sentences, the subject <em>you</em> is typically implied rather than stated <span class="cite">(Crystal, 2019, p. 106)</span>.</dd>
+        <dt>Finite Verb</dt>
+        <dd>A verb that is marked for tense and agrees with its subject in person and number. A group of words lacking a finite verb — however long — is a phrase or clause, not a sentence <span class="cite">(Huddleston &amp; Pullum, 2019, p. 87)</span>.</dd>
+      </dl>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Key Test:</strong> Ask two questions — (1) Is there a finite verb? (2) Does the verb have a subject? If both answers are yes, the unit is a sentence. <em>"Running through the hall"</em> fails Test 1 — no finite verb. <em>"Which the committee approved"</em> fails Test 2 — no independent subject-verb pairing <span class="cite">(Quirk et al., 2018, p. 46)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION II: TYPES BY STRUCTURE -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Types of Sentences by Structure</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Sentences are classified structurally according to the number and type of clauses they contain. This classification determines the syntactic complexity of the sentence and has direct implications for academic writing style <span class="cite">(Swales &amp; Feak, 2020, p. 38)</span>.</p>
+
+    <!-- SVG STRUCTURAL DIAGRAM -->
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 520 310" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;height:auto;display:block;margin:0 auto">
+        <defs><style>.sd-label{font-family:'Source Serif 4',Georgia,serif;font-size:11px;fill:#1F3864;font-weight:700}.sd-ex{font-family:'Source Serif 4',Georgia,serif;font-size:9.5px;fill:#6b5f4e;font-style:italic}.sd-title{font-family:'Playfair Display',Georgia,serif;font-size:12px;fill:#fff;font-weight:700}.sd-box{fill:#1F3864;rx:3}.sd-ic{fill:#e8f0e8;stroke:#2d5a27;stroke-width:1.2}.sd-dc{fill:#fef8e6;stroke:#b8860b;stroke-width:1.2}.sd-line{stroke:#1F3864;stroke-width:1.5;fill:none}.sd-plus{font-family:'Playfair Display',serif;font-size:16px;fill:#1F3864;font-weight:900;text-anchor:middle}</style></defs>
+
+        <!-- ROOT -->
+        <rect x="185" y="8" width="150" height="32" rx="3" fill="#1F3864"/>
+        <text class="sd-title" x="260" y="29" text-anchor="middle">SENTENCE TYPES</text>
+
+        <!-- BRANCHES -->
+        <line class="sd-line" x1="260" y1="40" x2="260" y2="60"/>
+        <line class="sd-line" x1="65" y1="60" x2="455" y2="60"/>
+        <line class="sd-line" x1="65" y1="60" x2="65" y2="80"/>
+        <line class="sd-line" x1="195" y1="60" x2="195" y2="80"/>
+        <line class="sd-line" x1="325" y1="60" x2="325" y2="80"/>
+        <line class="sd-line" x1="455" y1="60" x2="455" y2="80"/>
+
+        <!-- SIMPLE -->
+        <rect x="10" y="80" width="110" height="28" rx="3" fill="#1F3864"/>
+        <text class="sd-title" x="65" y="99" text-anchor="middle">Simple</text>
+        <line class="sd-line" x1="65" y1="108" x2="65" y2="125"/>
+        <rect class="sd-ic" x="15" y="125" width="100" height="22" rx="2"/>
+        <text class="sd-label" x="65" y="140" text-anchor="middle">1 Indep. Clause</text>
+        <text class="sd-ex" x="65" y="165" text-anchor="middle">"She studies hard."</text>
+
+        <!-- COMPOUND -->
+        <rect x="140" y="80" width="110" height="28" rx="3" fill="#1F3864"/>
+        <text class="sd-title" x="195" y="99" text-anchor="middle">Compound</text>
+        <line class="sd-line" x1="195" y1="108" x2="195" y2="125"/>
+        <rect class="sd-ic" x="144" y="125" width="45" height="22" rx="2"/>
+        <text class="sd-label" x="166" y="140" text-anchor="middle">IC</text>
+        <text class="sd-plus" x="197" y="142">+</text>
+        <rect class="sd-ic" x="205" y="125" width="45" height="22" rx="2"/>
+        <text class="sd-label" x="227" y="140" text-anchor="middle">IC</text>
+        <text class="sd-ex" x="195" y="165" text-anchor="middle">"She studies, but he sleeps."</text>
+
+        <!-- COMPLEX -->
+        <rect x="270" y="80" width="110" height="28" rx="3" fill="#1F3864"/>
+        <text class="sd-title" x="325" y="99" text-anchor="middle">Complex</text>
+        <line class="sd-line" x1="325" y1="108" x2="325" y2="125"/>
+        <rect class="sd-ic" x="274" y="125" width="45" height="22" rx="2"/>
+        <text class="sd-label" x="296" y="140" text-anchor="middle">IC</text>
+        <text class="sd-plus" x="327" y="142">+</text>
+        <rect class="sd-dc" x="335" y="125" width="45" height="22" rx="2"/>
+        <text class="sd-label" x="357" y="140" text-anchor="middle">DC</text>
+        <text class="sd-ex" x="325" y="165" text-anchor="middle">"She studies because she cares."</text>
+
+        <!-- COMPOUND-COMPLEX -->
+        <rect x="395" y="80" width="120" height="28" rx="3" fill="#1F3864"/>
+        <text class="sd-title" x="455" y="92" text-anchor="middle">Compound-</text>
+        <text class="sd-title" x="455" y="104" text-anchor="middle">Complex</text>
+        <line class="sd-line" x1="455" y1="108" x2="455" y2="125"/>
+        <rect class="sd-ic" x="399" y="125" width="30" height="22" rx="2"/>
+        <text class="sd-label" x="414" y="140" text-anchor="middle">IC</text>
+        <text class="sd-plus" x="436" y="142">+</text>
+        <rect class="sd-ic" x="443" y="125" width="30" height="22" rx="2"/>
+        <text class="sd-label" x="458" y="140" text-anchor="middle">IC</text>
+        <text class="sd-plus" x="480" y="142">+</text>
+        <rect class="sd-dc" x="487" y="125" width="28" height="22" rx="2"/>
+        <text class="sd-label" x="501" y="140" text-anchor="middle">DC</text>
+        <text class="sd-ex" x="455" y="165" text-anchor="middle">"Although late, she arrived and passed."</text>
+
+        <!-- KEY -->
+        <rect class="sd-ic" x="130" y="210" width="80" height="18" rx="2"/>
+        <text class="sd-label" x="170" y="223" text-anchor="middle">IC = Independent Clause</text>
+        <rect class="sd-dc" x="280" y="210" width="80" height="18" rx="2"/>
+        <text class="sd-label" x="320" y="223" text-anchor="middle">DC = Dependent Clause</text>
+
+        <text style="font-family:'Playfair Display',Georgia,serif;font-size:12px;fill:#1F3864;font-weight:700;text-anchor:middle" x="260" y="255">Figure 4: Classification of Sentences by Structural Type</text>
+      </svg>
+      <p class="diagram-caption">Figure 4: The four structural types of English sentences, showing their clause composition. Adapted from Huddleston &amp; Pullum <span class="cite">(2019, p. 92)</span> and Quirk et al. <span class="cite">(2018, p. 48)</span>.</p>
+    </div>
+
+    <div class="type-cards">
+      <div class="type-card">
+        <div class="type-card-label">Type 1</div>
+        <div class="type-card-title">Simple Sentence</div>
+        <div class="type-card-def">One independent clause only. May have a compound subject or compound predicate but remains structurally simple <span class="cite">(Biber et al., 2021, p. 96)</span>.</div>
+        <div class="type-card-ex">"The professor submitted the report." &nbsp;·&nbsp; "Ahmed and Fatima passed the examination."</div>
+        <div class="type-card-formula">Formula: [Independent Clause]</div>
+      </div>
+      <div class="type-card">
+        <div class="type-card-label">Type 2</div>
+        <div class="type-card-title">Compound Sentence</div>
+        <div class="type-card-def">Two or more independent clauses joined by a co-ordinating conjunction (FANBOYS) or semicolon. Each clause could stand alone <span class="cite">(Quirk et al., 2018, p. 52)</span>.</div>
+        <div class="type-card-ex">"The data was collected, <strong>but</strong> the analysis was incomplete." &nbsp;·&nbsp; "He wrote the draft; she revised it."</div>
+        <div class="type-card-formula">Formula: [IC] + co-ordinator + [IC]</div>
+      </div>
+      <div class="type-card">
+        <div class="type-card-label">Type 3</div>
+        <div class="type-card-title">Complex Sentence</div>
+        <div class="type-card-def">One independent clause and one or more dependent (subordinate) clauses, introduced by subordinating conjunctions or relative pronouns <span class="cite">(Crystal, 2019, p. 111)</span>.</div>
+        <div class="type-card-ex">"<strong>Although</strong> the result was unexpected, the methodology was sound." &nbsp;·&nbsp; "The student <strong>who scored highest</strong> received a scholarship."</div>
+        <div class="type-card-formula">Formula: [IC] + [DC] (in any order)</div>
+      </div>
+      <div class="type-card" style="border-left-color:var(--gold-dk)">
+        <div class="type-card-label">Type 4 — Advanced</div>
+        <div class="type-card-title">Compound-Complex Sentence</div>
+        <div class="type-card-def">Two or more independent clauses AND one or more dependent clauses. The hallmark of advanced academic prose, allowing simultaneous expression of multiple logical relationships <span class="cite">(Swales &amp; Feak, 2020, p. 45)</span>.</div>
+        <div class="type-card-ex">"<strong>Although</strong> the sample was small, the findings were significant, <strong>and</strong> the paper was accepted for publication."</div>
+        <div class="type-card-formula">Formula: [IC] + [DC] + co-ordinator + [IC]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION III: TYPES BY FUNCTION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Types of Sentences by Function</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Every sentence is also produced for a communicative purpose — a function. English recognises four functional sentence types. These cut across structural types: a simple sentence can be declarative, interrogative, imperative, or exclamatory <span class="cite">(Crystal, 2019, p. 114)</span>.</p>
+
+    <table class="gen-table">
+      <thead><tr><th>Type</th><th>Function</th><th>Form Marker</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="label">Declarative</span></td>
+          <td>States a fact, opinion, or piece of information. The dominant type in academic writing <span class="cite">(Biber et al., 2021, p. 118)</span>.</td>
+          <td>Subject precedes finite verb</td>
+          <td class="ex">"The study confirmed the hypothesis."</td>
+        </tr>
+        <tr>
+          <td><span class="label">Interrogative</span></td>
+          <td>Asks a question, inviting a response or information <span class="cite">(Quirk et al., 2018, p. 58)</span>.</td>
+          <td>Auxiliary precedes subject (Yes/No); Wh-word at front (Wh-question)</td>
+          <td class="ex">"Did the results support the theory?" / "What caused the anomaly?"</td>
+        </tr>
+        <tr>
+          <td><span class="label">Imperative</span></td>
+          <td>Issues a command, instruction, or request. Subject <em>you</em> is omitted <span class="cite">(Huddleston &amp; Pullum, 2019, p. 95)</span>.</td>
+          <td>Base form of verb; no stated subject</td>
+          <td class="ex">"Read the passage carefully." / "Consider the following evidence."</td>
+        </tr>
+        <tr>
+          <td><span class="label">Exclamatory</span></td>
+          <td>Expresses strong emotion or surprise. Rare in formal academic writing <span class="cite">(Crystal, 2019, p. 115)</span>.</td>
+          <td>Introduced by <em>What</em> or <em>How</em></td>
+          <td class="ex">"What a remarkable contribution this study has made!"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION IV: SUBJECT AND PREDICATE -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Parts of the Sentence — Subject and Predicate</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Every sentence divides into two major constituents: the <strong>subject</strong> and the <strong>predicate</strong>. This binary division is the most fundamental grammatical analysis a student can perform on any sentence <span class="cite">(Quirk et al., 2018, p. 66)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Subject and Predicate — Definitions</div>
+      <dl>
+        <dt>Subject</dt>
+        <dd>The noun phrase that the sentence is about. It is the topic of the predicate's statement. In declarative sentences, the subject typically appears before the finite verb. The subject controls verb agreement — it determines whether the verb is singular or plural <span class="cite">(Huddleston &amp; Pullum, 2019, p. 100)</span>.</dd>
+        <dt>Predicate</dt>
+        <dd>Everything in the sentence that is not the subject — the finite verb and all that accompanies it. The predicate makes a statement, asks a question, or gives a command about the subject <span class="cite">(Biber et al., 2021, p. 125)</span>.</dd>
+      </dl>
+    </div>
+
+    <!-- PARSE EXAMPLE 1 -->
+    <div class="parse-block">
+      <div class="parse-sentence">"The senior lecturer published a comprehensive textbook last year."</div>
+      <div class="parse-grid">
+        <div class="parse-cell subj">
+          <span class="parse-tag">Subject</span>
+          <span class="parse-word">The senior lecturer</span>
+          <div class="parse-note">Noun phrase — controls verb agreement</div>
+        </div>
+        <div class="parse-cell pred">
+          <span class="parse-tag">Predicate</span>
+          <span class="parse-word">published a comprehensive textbook last year</span>
+          <div class="parse-note">Everything said about the subject</div>
+        </div>
+      </div>
+    </div>
+
+    <p>Within the predicate, it is possible to identify further components — the verb, the object, and the complement. Each plays a distinct grammatical role <span class="cite">(Crystal, 2019, p. 107)</span>.</p>
+  </div>
+
+  <!-- SECTION V: THE VERB -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">The Verb</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>The verb is the core of the predicate — the element without which no predicate can exist. Every complete sentence contains at least one finite verb <span class="cite">(Biber et al., 2021, p. 127)</span>. For the purposes of sentence analysis, verbs are classified by the type of structure they require:</p>
+
+    <table class="gen-table">
+      <thead><tr><th>Verb Type</th><th>Definition</th><th>Requires</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="label">Transitive</span></td>
+          <td>Carries action from the subject to an object — the action passes across to something <span class="cite">(Quirk et al., 2018, p. 74)</span>.</td>
+          <td>A direct object to complete meaning</td>
+          <td class="ex">"She wrote <u>a letter</u>." — <em>wrote</em> is transitive; <em>a letter</em> is the object</td>
+        </tr>
+        <tr>
+          <td><span class="label">Intransitive</span></td>
+          <td>Does not carry action to an object — the action remains with the subject <span class="cite">(Huddleston &amp; Pullum, 2019, p. 108)</span>.</td>
+          <td>No object; sentence is complete without one</td>
+          <td class="ex">"The child <u>slept</u>." / "The crowd <u>cheered</u> loudly."</td>
+        </tr>
+        <tr>
+          <td><span class="label">Linking (Copular)</span></td>
+          <td>Connects the subject to a subject complement — describes or identifies the subject rather than expressing an action <span class="cite">(Biber et al., 2021, p. 130)</span>.</td>
+          <td>A subject complement (not an object)</td>
+          <td class="ex">"The result <u>seems</u> conclusive." / "She <u>became</u> the director."</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Common linking verbs include: <em>be, become, seem, appear, feel, look, taste, smell, sound, grow, remain, stay, turn</em>. They are crucially different from transitive verbs because what follows them is a <strong>complement</strong>, not an object <span class="cite">(Crystal, 2019, p. 109)</span>.</p>
+  </div>
+
+  <!-- SECTION VI: OBJECTS -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section VI</span>
+      <h2 class="section-title">The Object — Direct and Indirect</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>When a transitive verb is used, the sentence requires an <strong>object</strong> — the noun phrase that receives or is affected by the action of the verb. English distinguishes between two types of object <span class="cite">(Quirk et al., 2018, p. 80)</span>:</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Direct Object and Indirect Object</div>
+      <dl>
+        <dt>Direct Object (DO)</dt>
+        <dd>The noun phrase that directly receives the action of the verb. Test: ask <em>What?</em> or <em>Whom?</em> after the verb — the answer is the direct object <span class="cite">(Huddleston &amp; Pullum, 2019, p. 112)</span>. Example: "She sent <strong>a letter</strong>." — <em>What</em> did she send? A letter.</dd>
+        <dt>Indirect Object (IO)</dt>
+        <dd>The noun phrase that indicates the recipient or beneficiary of the action — the entity for whom or to whom the direct object is given, sent, or shown <span class="cite">(Biber et al., 2021, p. 133)</span>. The indirect object always co-occurs with a direct object and typically precedes it. Test: ask <em>To whom?</em> or <em>For whom?</em> Example: "She sent <strong>the dean</strong> a letter." — <em>To whom</em> did she send it? The dean.</dd>
+      </dl>
+    </div>
+
+    <!-- PARSE EXAMPLE 2 — DO and IO -->
+    <div class="parse-block">
+      <div class="parse-sentence">"The registrar sent the students their examination timetables."</div>
+      <div class="parse-grid">
+        <div class="parse-cell subj">
+          <span class="parse-tag">Subject</span>
+          <span class="parse-word">The registrar</span>
+          <div class="parse-note">Agent performing the action</div>
+        </div>
+        <div class="parse-cell verb">
+          <span class="parse-tag">Verb</span>
+          <span class="parse-word">sent</span>
+          <div class="parse-note">Transitive — requires both objects</div>
+        </div>
+        <div class="parse-cell iobj">
+          <span class="parse-tag">Indirect Object</span>
+          <span class="parse-word">the students</span>
+          <div class="parse-note">Recipient — to whom it was sent</div>
+        </div>
+        <div class="parse-cell dobj">
+          <span class="parse-tag">Direct Object</span>
+          <span class="parse-word">their examination timetables</span>
+          <div class="parse-note">What was sent — receives the action</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Order Rule:</strong> When both a direct and indirect object are present without a preposition, the indirect object comes first: <em>"Give <strong>me</strong> the report."</em> When the preposition <em>to</em> or <em>for</em> is used, the direct object comes first: <em>"Give the report <strong>to me</strong>."</em> Both are grammatically correct <span class="cite">(Quirk et al., 2018, p. 82)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION VII: COMPLEMENTS -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section VII</span>
+      <h2 class="section-title">The Complement — Subject and Object Complement</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>A <strong>complement</strong> is a word or phrase that completes the meaning of the verb by describing or identifying either the subject or the object. Unlike an object, a complement does not receive an action — it provides information about an entity already mentioned in the sentence <span class="cite">(Biber et al., 2021, p. 138)</span>. There are two types:</p>
+
+    <h3>Subject Complement (SC)</h3>
+    <p>A subject complement follows a <strong>linking verb</strong> and describes or identifies the subject. It may be a noun phrase, adjective phrase, or prepositional phrase <span class="cite">(Huddleston &amp; Pullum, 2019, p. 116)</span>.</p>
+
+    <!-- PARSE EXAMPLE 3 — Subject Complement -->
+    <div class="parse-block">
+      <div class="parse-sentence">"The new professor became the head of department."</div>
+      <div class="parse-grid">
+        <div class="parse-cell subj">
+          <span class="parse-tag">Subject</span>
+          <span class="parse-word">The new professor</span>
+          <div class="parse-note">Who the sentence is about</div>
+        </div>
+        <div class="parse-cell verb">
+          <span class="parse-tag">Linking Verb</span>
+          <span class="parse-word">became</span>
+          <div class="parse-note">Connects subject to complement</div>
+        </div>
+        <div class="parse-cell comp">
+          <span class="parse-tag">Subject Complement</span>
+          <span class="parse-word">the head of department</span>
+          <div class="parse-note">Identifies the subject — answers "What did she become?"</div>
+        </div>
+      </div>
+    </div>
+
+    <p>Further examples of subject complements: <em>"The result <strong>was conclusive</strong>."</em> (adjective phrase) · <em>"She <strong>remained the director</strong> for three years."</em> (noun phrase) · <em>"The food <strong>tastes bitter</strong>."</em> (adjective) <span class="cite">(Crystal, 2019, p. 110)</span>.</p>
+
+    <h3>Object Complement (OC)</h3>
+    <p>An object complement follows the direct object and describes or identifies it. It is related to the direct object in the same way a subject complement is related to the subject <span class="cite">(Quirk et al., 2018, p. 88)</span>.</p>
+
+    <!-- PARSE EXAMPLE 4 — Object Complement -->
+    <div class="parse-block">
+      <div class="parse-sentence">"The senate appointed Professor Nwosu the Vice-Chancellor."</div>
+      <div class="parse-grid">
+        <div class="parse-cell subj">
+          <span class="parse-tag">Subject</span>
+          <span class="parse-word">The senate</span>
+          <div class="parse-note">Agent performing the action</div>
+        </div>
+        <div class="parse-cell verb">
+          <span class="parse-tag">Verb</span>
+          <span class="parse-word">appointed</span>
+          <div class="parse-note">Transitive verb</div>
+        </div>
+        <div class="parse-cell dobj">
+          <span class="parse-tag">Direct Object</span>
+          <span class="parse-word">Professor Nwosu</span>
+          <div class="parse-note">Who received the appointment</div>
+        </div>
+        <div class="parse-cell comp">
+          <span class="parse-tag">Object Complement</span>
+          <span class="parse-word">the Vice-Chancellor</span>
+          <div class="parse-note">Identifies what the DO became</div>
+        </div>
+      </div>
+    </div>
+
+    <p>Further examples: <em>"They found the report <strong>incomplete</strong>."</em> (adjective OC) · <em>"The committee elected her <strong>chairperson</strong>."</em> (noun phrase OC) · <em>"His speech left the audience <strong>speechless</strong>."</em> (adjective OC) <span class="cite">(Biber et al., 2021, p. 140)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Distinguishing Object from Complement</div>
+      <dl>
+        <dt>The Renaming Test</dt>
+        <dd>A complement <em>renames or describes</em> another element. A direct object <em>receives an action</em>. Ask: is this element saying something about the subject or object? If yes, it is a complement. If it independently receives an action, it is an object <span class="cite">(Huddleston &amp; Pullum, 2019, p. 118)</span>.</dd>
+        <dt>The Linking Verb Clue</dt>
+        <dd>Subject complements always follow linking verbs. If you can replace the verb with a form of <em>be</em> and the sentence still makes sense, the complement is a subject complement: <em>"She became the director"</em> → <em>"She was the director."</em> ✓</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION VIII: COLOUR KEY AND FULL PARSE -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section VIII</span>
+      <h2 class="section-title">Practical Activity: Sentence Parsing</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Sentence parsing — the systematic identification of each element in a sentence — is the core practical skill of grammatical analysis. A student who can parse accurately can diagnose any grammatical error in their own writing <span class="cite">(Thornbury, 2019, p. 95)</span>.</p>
+
+    <div class="colour-key">
+      <div class="key-item"><div class="key-swatch" style="background:#1F3864"></div> Subject</div>
+      <div class="key-item"><div class="key-swatch" style="background:#2d5a27"></div> Predicate</div>
+      <div class="key-item"><div class="key-swatch" style="background:#b8860b"></div> Verb</div>
+      <div class="key-item"><div class="key-swatch" style="background:#6b2d0f"></div> Direct Object</div>
+      <div class="key-item"><div class="key-swatch" style="background:#4a2d6b"></div> Indirect Object</div>
+      <div class="key-item"><div class="key-swatch" style="background:#1a4a5c"></div> Complement</div>
+    </div>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Parse Each Sentence — Identify All Parts</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">For each sentence below, identify: (a) the Subject, (b) the Verb and its type (transitive / intransitive / linking), and (c) any Object (direct or indirect) or Complement (subject or object). Write your analysis in a table.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-sent">"The committee approved the proposal unanimously."</div><div class="activity-answer">Identify subject, verb type, and direct object.</div></div><span class="parse-badge">Transitive · DO</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-sent">"Professor Bello gave the students their results."</div><div class="activity-answer">Identify subject, verb, indirect object, and direct object.</div></div><span class="parse-badge">Transitive · IO + DO</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-sent">"The research findings appear inconclusive."</div><div class="activity-answer">What type of verb is "appear"? What follows it?</div></div><span class="parse-badge">Linking · SC</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-sent">"The vice-chancellor declared the project a success."</div><div class="activity-answer">What is the direct object? What does "a success" describe?</div></div><span class="parse-badge">Transitive · DO + OC</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-sent">"The students worked diligently throughout the semester."</div><div class="activity-answer">Does "diligently" receive the action or modify the verb?</div></div><span class="parse-badge">Intransitive</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-sent">"The rector remained committed to the vision."</div><div class="activity-answer">"Remained" — linking or transitive? What follows?</div></div><span class="parse-badge">Linking · SC</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-sent">"The board of governors elected Dr. Eze the new provost."</div><div class="activity-answer">Identify subject, verb, direct object, and object complement.</div></div><span class="parse-badge">Transitive · DO + OC</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-sent">"She sent the editorial team the revised manuscript."</div><div class="activity-answer">Two noun phrases after the verb — which is IO and which is DO?</div></div><span class="parse-badge">Transitive · IO + DO</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-sent">"The laboratory report sounded thoroughly convincing."</div><div class="activity-answer">What kind of verb is "sounded"? Is "convincing" an object or complement?</div></div><span class="parse-badge">Linking · SC</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-sent">"The dean considered the submission premature."</div><div class="activity-answer">"premature" follows the object "the submission" — what role does it play?</div></div><span class="parse-badge">Transitive · DO + OC</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION IX: CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IX</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>The sentence is not merely a string of words — it is a precisely organised grammatical structure, every element of which carries a specific syntactic function. The ability to distinguish subject from predicate, transitive from linking verb, direct from indirect object, and subject complement from object complement is the foundation of grammatical self-correction in academic writing <span class="cite">(Quirk et al., 2018, p. 92)</span>.</p>
+      <br>
+      <p>A student who has internalised the parsing framework presented in this lecture can approach any sentence — in their own writing or in a scholarly text — and account for every element within it. This analytical rigour is what separates grammatically confident academic writers from those who write by intuition alone <span class="cite">(Swales &amp; Feak, 2020, p. 52)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 2.5 — The Sentence: Definition, Types, and Parts</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the most grammatically precise definition of a sentence?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Any group of words that begins with a capital letter and ends with a full stop</div><div class="q-option">B. &nbsp;A group of words expressing a complete thought, however loosely defined</div><div class="q-option">C. &nbsp;A grammatically complete unit containing at minimum a subject and a finite verb, capable of standing alone</div><div class="q-option">D. &nbsp;A clause that is always introduced by a co-ordinating conjunction</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Identify &amp; Label</span><p class="q-text">For each sentence, identify the Subject, the Verb (and its type), and either the Object or Complement as appropriate: &nbsp;(a) <em>"The dean appointed Dr. Chukwu the new registrar."</em> &nbsp; (b) <em>"The results seemed surprisingly inconsistent."</em> &nbsp; (c) <em>"The lecturer gave the class their feedback."</em></p></div><p class="q-marks">[6 marks — 2 per sentence]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">In the sentence <em>"The committee elected her chairperson,"</em> the word <em>chairperson</em> is:</p></div><div class="q-options"><div class="q-option">A. &nbsp;A direct object receiving the action of the verb</div><div class="q-option">B. &nbsp;An indirect object indicating the recipient</div><div class="q-option">C. &nbsp;An object complement describing the direct object</div><div class="q-option">D. &nbsp;A subject complement following a linking verb</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between a <em>direct object</em> and an <em>indirect object</em>. Write two original sentences — one using only a direct object and one using both a direct and indirect object. Label all elements.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following verbs is a <em>linking verb</em>?</p></div><div class="q-options"><div class="q-option">A. &nbsp;write</div><div class="q-option">B. &nbsp;conduct</div><div class="q-option">C. &nbsp;become</div><div class="q-option">D. &nbsp;submit</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Write Out</span><p class="q-text">Explain the difference between a <em>subject complement</em> and an <em>object complement</em>. For each type, write one original sentence and identify every part of the sentence.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">A compound-complex sentence contains:</p></div><div class="q-options"><div class="q-option">A. &nbsp;One independent clause only</div><div class="q-option">B. &nbsp;Two or more independent clauses and no dependent clauses</div><div class="q-option">C. &nbsp;One independent clause and one or more dependent clauses</div><div class="q-option">D. &nbsp;Two or more independent clauses and one or more dependent clauses</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Classify</span><p class="q-text">Classify each sentence by both <strong>structural type</strong> and <strong>functional type</strong>, justifying each answer: &nbsp;(a) <em>"Submit your assignment before the deadline."</em> &nbsp; (b) <em>"Although the funding was limited, the study succeeded, and the findings were published."</em> &nbsp; (c) <em>"Where did the research team conduct their fieldwork?"</em></p></div><p class="q-marks">[3 marks — 1 per sentence]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">In the sentence <em>"The registrar sent the students their timetables,"</em> the indirect object is:</p></div><div class="q-options"><div class="q-option">A. &nbsp;the registrar</div><div class="q-option">B. &nbsp;sent</div><div class="q-option">C. &nbsp;the students</div><div class="q-option">D. &nbsp;their timetables</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain why the ability to identify the parts of a sentence — subject, predicate, verb, object, and complement — is described as foundational to grammatical accuracy in academic writing. Use specific examples of errors that arise from misidentifying these elements.</p></div><p class="q-marks">[2 marks]</p></div>
+
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Adewole, L. O. (2020). Syntactic complexity in the academic writing of Nigerian university students. <em>Journal of Applied Linguistics and Language Research</em>, 7(3), 58–74.</div>
+      <div class="ref-item">Biber, D., Johansson, S., Leech, G., Conrad, S., &amp; Finegan, E. (2021). <em>Longman Grammar of Spoken and Written English</em> (2nd ed.). Pearson Longman.</div>
+      <div class="ref-item">Crystal, D. (2019). <em>The Cambridge Encyclopedia of the English Language</em> (3rd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Dik, S. C. (2018). <em>The Theory of Functional Grammar: The Structure of the Clause</em> (reprint ed.). De Gruyter Mouton.</div>
+      <div class="ref-item">Huddleston, R., &amp; Pullum, G. K. (2019). <em>A Student's Introduction to English Grammar</em> (2nd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Nwachukwu-Agbada, J. O. J. (2021). Sentence structure errors in undergraduate academic essays: A Nigerian university case study. <em>African Journal of English Language Teaching</em>, 5(1), 88–106.</div>
+      <div class="ref-item">Obi-Okoye, A. F. (2022). Syntactic interference and clause embedding in the writing of first-year students at Nigerian tertiary institutions. <em>International Journal of English Language Education</em>, 10(2), 141–158.</div>
+      <div class="ref-item">Quirk, R., Greenbaum, S., Leech, G., &amp; Svartvik, J. (2018). <em>A Comprehensive Grammar of the English Language</em> (reprint ed.). Longman.</div>
+      <div class="ref-item">Swales, J. M., &amp; Feak, C. B. (2020). <em>Academic Writing for Graduate Students</em> (4th ed.). University of Michigan Press.</div>
+      <div class="ref-item">Thornbury, S. (2019). <em>An A–Z of ELT: A Dictionary of Terms and Concepts</em> (2nd ed.). Macmillan Education.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-2-4.html">
+    <div>
+      <div class="next-label">Previous Lecture · Module 2</div>
+      <div class="next-title">Lecture 2.4 — Verb Mechanics: Tense, Aspect, and Voice</div>
+      <div class="next-desc">Return to the verb mechanics lecture</div>
+    </div>
+    <span class="next-arrow">←</span>
+  </a>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-2-4.html">← Lecture 2.4</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn disabled" href="#">Next Module →</a>
+  </div>
+
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 2.5 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

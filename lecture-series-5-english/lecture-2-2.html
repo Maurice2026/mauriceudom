@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 2.2: Sentence Architecture — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(1){animation-delay:.05s}.section-block:nth-child(2){animation-delay:.10s}.section-block:nth-child(3){animation-delay:.15s}.section-block:nth-child(4){animation-delay:.20s}.section-block:nth-child(5){animation-delay:.25s}.section-block:nth-child(6){animation-delay:.30s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+
+    /* SENTENCE TYPE CARDS */
+    .sent-cards{display:grid;gap:16px;margin:20px 0}
+    .sent-card{background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:18px 20px}
+    .sent-card-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:6px;font-family:'Source Serif 4',serif}
+    .sent-card-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:8px}
+    .sent-card-def{font-size:.9rem;color:#2a2016;line-height:1.65;margin-bottom:10px}
+    .sent-card-example{font-size:.88rem;font-style:italic;color:var(--mod);background:var(--mod-lt);padding:8px 12px;border-radius:3px;line-height:1.6}
+    .sent-card-formula{font-size:.76rem;color:var(--muted);margin-top:6px;letter-spacing:.04em}
+
+    /* FUNCTIONAL TYPES TABLE */
+    .func-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .func-table th{background:var(--mod);color:var(--white);padding:11px 18px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .func-table td{padding:11px 18px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.6}
+    .func-table tr:last-child td{border-bottom:none}
+    .func-table tr:nth-child(even) td{background:#faf6ef}
+    .ex{font-style:italic;color:var(--muted)}
+
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-sent{font-size:.92rem;color:var(--white);line-height:1.6;margin-bottom:2px;font-style:italic}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .type-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}.activity-item{grid-template-columns:28px 1fr}}
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 2 &nbsp;·&nbsp; Lecture 2</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Sentence Architecture and Types</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Grammar &amp; Usage</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>Distinguish a phrase from a clause</li>
+<li>Identify and classify the four structural sentence types</li>
+<li>Classify sentences by their communicative function</li>
+<li>Combine simple sentences into complex and compound-complex forms</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>Clauses and Phrases — The Units of Sentence Structure</li>
+<li>Structural Sentence Types (Simple to Compound-Complex)</li>
+<li>Functional Sentence Types</li>
+<li>Practical Activity: Identify and Combine</li>
+<li>Conclusion & Key Takeaway</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lecture 2.1 before proceeding.</p>
+        <a class="prereq-link" href="lecture-2-1.html">← Lecture 2.1 — The Building Blocks: Word Classes</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">Clauses and Phrases — The Units of Sentence Structure</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Lecture 2.1 established that every word in English belongs to a class. This lecture examines how those words combine into the primary unit of communication: the <strong>sentence</strong>. Understanding sentence structure is indispensable for academic writing, where the ability to vary sentence type signals intellectual sophistication and rhetorical control <span class="cite">(Swales &amp; Feak, 2020, p. 32)</span>.</p>
+    <p>Before examining sentence types, two foundational terms must be defined precisely — the <strong>phrase</strong> and the <strong>clause</strong> — since sentences are built from these units <span class="cite">(Huddleston &amp; Pullum, 2019, p. 86)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Foundational Distinctions</div>
+      <dl>
+        <dt>Phrase</dt>
+        <dd>A group of words built around a head word, functioning as a single grammatical unit. A phrase does <em>not</em> contain both a subject and a finite verb. Examples: <em>the comprehensive report</em> (noun phrase); <em>very carefully</em> (adverb phrase); <em>in the library</em> (prepositional phrase) <span class="cite">(Biber et al., 2021, p. 95)</span>.</dd>
+        <dt>Clause</dt>
+        <dd>A grammatical unit that contains at minimum a <strong>subject</strong> and a <strong>finite verb</strong>. A clause may be independent (able to stand alone as a sentence) or dependent (requiring attachment to an independent clause) <span class="cite">(Quirk et al., 2018, p. 85)</span>.</dd>
+        <dt>Independent Clause</dt>
+        <dd>A clause that expresses a complete thought and can stand alone as a sentence: <em>"The student submitted the assignment."</em></dd>
+        <dt>Dependent (Subordinate) Clause</dt>
+        <dd>A clause that cannot stand alone — it depends on an independent clause to complete its meaning: <em>"…although the deadline had passed."</em> <span class="cite">(Yule, 2020, p. 88)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Structural Sentence Types</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>English sentences are classified structurally according to the number and type of clauses they contain. There are four structural types, arranged here in ascending complexity — a progression that mirrors the expected development of academic writing style from introductory to advanced level <span class="cite">(Swales &amp; Feak, 2020, p. 38)</span>.</p>
+
+    <div class="sent-cards">
+      <div class="sent-card">
+        <div class="sent-card-label">Type 1</div>
+        <div class="sent-card-title">Simple Sentence</div>
+        <div class="sent-card-def">Contains exactly <strong>one independent clause</strong> and no dependent clauses. Despite its name, a simple sentence can have compound subjects or compound predicates and still remain structurally simple <span class="cite">(Huddleston &amp; Pullum, 2019, p. 90)</span>.</div>
+        <div class="sent-card-example">"The researcher collected data." &nbsp;·&nbsp; "Students and lecturers debated the findings and proposed solutions."</div>
+        <div class="sent-card-formula">Formula: [Independent Clause]</div>
+      </div>
+      <div class="sent-card">
+        <div class="sent-card-label">Type 2</div>
+        <div class="sent-card-title">Compound Sentence</div>
+        <div class="sent-card-def">Contains <strong>two or more independent clauses</strong> joined by a co-ordinating conjunction (FANBOYS: <em>for, and, nor, but, or, yet, so</em>) or a semicolon. Each clause could stand alone as a sentence <span class="cite">(Biber et al., 2021, p. 102)</span>.</div>
+        <div class="sent-card-example">"The data was collected, <strong>but</strong> the analysis revealed unexpected results." &nbsp;·&nbsp; "He wrote the report; she edited it."</div>
+        <div class="sent-card-formula">Formula: [Independent Clause] + co-ordinator + [Independent Clause]</div>
+      </div>
+      <div class="sent-card">
+        <div class="sent-card-label">Type 3</div>
+        <div class="sent-card-title">Complex Sentence</div>
+        <div class="sent-card-def">Contains <strong>one independent clause</strong> and <strong>one or more dependent clauses</strong> introduced by subordinating conjunctions (<em>although, because, when, if, since, unless, whereas</em>) or relative pronouns (<em>who, which, that</em>) <span class="cite">(Quirk et al., 2018, p. 94)</span>.</div>
+        <div class="sent-card-example">"<strong>Although</strong> the sample size was limited, the findings were statistically significant." &nbsp;·&nbsp; "The student <strong>who submitted first</strong> received the highest mark."</div>
+        <div class="sent-card-formula">Formula: [Independent Clause] + [Dependent Clause] (in any order)</div>
+      </div>
+      <div class="sent-card" style="border-left-color:var(--gold-dk)">
+        <div class="sent-card-label">Type 4 — Advanced</div>
+        <div class="sent-card-title">Compound-Complex Sentence</div>
+        <div class="sent-card-def">Contains <strong>two or more independent clauses</strong> AND <strong>one or more dependent clauses</strong>. This is the hallmark of advanced academic prose — it allows the writer to express multiple relationships simultaneously <span class="cite">(Swales &amp; Feak, 2020, p. 45)</span>.</div>
+        <div class="sent-card-example">"<strong>Although</strong> the methodology was contested, the data supported the hypothesis, <strong>and</strong> subsequent studies confirmed the initial findings."</div>
+        <div class="sent-card-formula">Formula: [Independent] + [Dependent] + co-ordinator + [Independent]</div>
+      </div>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Academic Writing Tip:</strong> Over-reliance on simple sentences creates choppy, underdeveloped prose. Over-reliance on compound-complex sentences can obscure meaning. The mark of a skilled academic writer is the conscious, purposeful <em>variety</em> of sentence structure <span class="cite">(Swales &amp; Feak, 2020, p. 47)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Functional Sentence Types</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Sentences are also classified by their <strong>communicative function</strong> — what the speaker or writer intends to achieve with the utterance <span class="cite">(Crystal, 2019, p. 109)</span>. These functional types cut across the structural types: any structural type can perform any function.</p>
+
+    <table class="func-table">
+      <thead><tr><th>Type</th><th>Function</th><th>Typical Form</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Declarative</strong></td>
+          <td>States a fact, opinion, or piece of information — the default sentence type in academic writing</td>
+          <td>Subject + Verb (+ Object/Complement)</td>
+          <td class="ex">"The experiment confirmed the hypothesis."</td>
+        </tr>
+        <tr>
+          <td><strong>Interrogative</strong></td>
+          <td>Asks a question, inviting a response</td>
+          <td>Auxiliary + Subject + Verb (Yes/No) or Wh-word + Auxiliary + Subject + Verb</td>
+          <td class="ex">"Did the results support the theory?" &nbsp;/ &nbsp;"What caused the anomaly?"</td>
+        </tr>
+        <tr>
+          <td><strong>Imperative</strong></td>
+          <td>Issues a command, instruction, or request; the subject <em>you</em> is typically omitted</td>
+          <td>Base form of verb (+ Object)</td>
+          <td class="ex">"Submit your work before Friday." &nbsp;/ &nbsp;"Consider the following evidence."</td>
+        </tr>
+        <tr>
+          <td><strong>Exclamatory</strong></td>
+          <td>Expresses strong emotion or emphasis; rare in formal academic writing</td>
+          <td>What/How + noun phrase / adjective phrase</td>
+          <td class="ex">"What a remarkable discovery this proved to be!"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>In academic and professional writing, <strong>declaratives</strong> dominate, supported selectively by <strong>imperatives</strong> in instructions and methodology sections. Interrogatives appear in rhetorical questions, and exclamatives are almost entirely absent from formal registers <span class="cite">(Biber et al., 2021, p. 118)</span>.</p>
+  </div>
+
+  <!-- SECTION IV: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Practical Activity: Identify and Combine</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Accurate identification of sentence type is the prerequisite for deliberate manipulation of sentence structure in academic writing <span class="cite">(Thornbury, 2019, p. 88)</span>. The activity below tests both identification and construction skills.</p>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Identify the Sentence Type — 10 Sentences</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">For each sentence below, identify both its <strong>structural type</strong> (Simple / Compound / Complex / Compound-Complex) and its <strong>functional type</strong> (Declarative / Interrogative / Imperative / Exclamatory). Write one sentence justifying your structural classification.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-sent">"The committee reviewed the proposals."</div><div class="activity-answer">One subject, one verb, no dependent clause — identify both types.</div></div><span class="type-badge">Simple · Declarative</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-sent">"The report was thorough, but the recommendations were vague."</div><div class="activity-answer">Two independent clauses joined by "but" — identify both types.</div></div><span class="type-badge">Compound · Declarative</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-sent">"Although funding was limited, the project succeeded."</div><div class="activity-answer">One dependent clause + one independent clause — identify both types.</div></div><span class="type-badge">Complex · Declarative</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-sent">"Submit your assignment by noon."</div><div class="activity-answer">No stated subject — the implied subject is "you" — identify both types.</div></div><span class="type-badge">Simple · Imperative</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-sent">"Have you read the supplementary text?"</div><div class="activity-answer">Auxiliary precedes subject — identify both types.</div></div><span class="type-badge">Simple · Interrogative</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-sent">"Because the data was incomplete, the researchers extended the study, and a revised paper was submitted."</div><div class="activity-answer">Count the clauses — how many independent? How many dependent?</div></div><span class="type-badge">Compound-Complex · Declarative</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-sent">"What a significant contribution this research has made to the field!"</div><div class="activity-answer">Strong emotion expressed through What + noun phrase structure.</div></div><span class="type-badge">Simple · Exclamatory</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-sent">"The lecturer explained the concept, and the students took detailed notes."</div><div class="activity-answer">Two independent clauses, each with subject and verb — joined by "and".</div></div><span class="type-badge">Compound · Declarative</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-sent">"The student who scored highest in the examination was awarded a scholarship."</div><div class="activity-answer">Relative clause "who scored highest" — dependent on the main clause.</div></div><span class="type-badge">Complex · Declarative</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-sent">"Read the passage carefully and answer all ten questions."</div><div class="activity-answer">Two imperative clauses joined by "and" — identify both structural and functional types.</div></div><span class="type-badge">Compound · Imperative</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION V: CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>The four structural sentence types — simple, compound, complex, and compound-complex — are not merely grammatical categories. They are rhetorical tools. The deliberate selection of sentence type shapes how ideas are presented, how relationships between ideas are signalled, and how a reader experiences the logic of an argument <span class="cite">(Swales &amp; Feak, 2020, p. 50)</span>.</p>
+      <br>
+      <p>A student who can identify clauses, distinguish independent from dependent, and consciously vary sentence structure will produce academic prose that is not only grammatically correct but stylistically compelling. This is the goal of the entire Grammar and Usage module <span class="cite">(Biber et al., 2021, p. 120)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 2.2 — Sentence Architecture and Types</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the correct definition of a <em>dependent clause</em>?</p></div><div class="q-options"><div class="q-option">A. &nbsp;A clause that contains a subject and a finite verb and can stand alone as a sentence</div><div class="q-option">B. &nbsp;A group of words without a finite verb functioning as a single unit</div><div class="q-option">C. &nbsp;A clause that cannot stand alone and requires attachment to an independent clause</div><div class="q-option">D. &nbsp;A clause joined to another clause using a co-ordinating conjunction</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Identify</span><p class="q-text">Identify the structural type of each sentence and justify your answer in one sentence: &nbsp;(a) <em>"She studied all night."</em> &nbsp; (b) <em>"She studied all night, but she still failed the test."</em> &nbsp; (c) <em>"Although she studied all night, she still failed."</em></p></div><p class="q-marks">[3 marks — 1 per sentence]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Write Out</span><p class="q-text">Distinguish between a <em>phrase</em> and a <em>clause</em>. Write one original example of each and explain why your example fits the definition.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span><p class="q-text">A compound-complex sentence contains:</p></div><div class="q-options"><div class="q-option">A. &nbsp;One independent clause and no dependent clauses</div><div class="q-option">B. &nbsp;Two or more independent clauses and no dependent clauses</div><div class="q-option">C. &nbsp;One independent clause and one or more dependent clauses</div><div class="q-option">D. &nbsp;Two or more independent clauses and one or more dependent clauses</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Combine</span><p class="q-text">Combine the following three simple sentences into one compound-complex sentence without losing any information: &nbsp;<em>"The lecturer arrived late. The students had already begun. They were discussing the previous lecture."</em></p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Multiple Choice</span><p class="q-text">In the sentence <em>"Submit your work before the deadline,"</em> the functional type is:</p></div><div class="q-options"><div class="q-option">A. &nbsp;Declarative</div><div class="q-option">B. &nbsp;Interrogative</div><div class="q-option">C. &nbsp;Imperative</div><div class="q-option">D. &nbsp;Exclamatory</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Identify &amp; Label</span><p class="q-text">In the sentence <em>"Although the methodology was questioned, the findings were accepted, and the paper was published in a peer-reviewed journal,"</em> identify: (a) the number of independent clauses, (b) the number of dependent clauses, and (c) the structural sentence type.</p></div><p class="q-marks">[3 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Write Out</span><p class="q-text">List the seven FANBOYS co-ordinating conjunctions. For each, write an original sentence demonstrating its correct use in joining two independent clauses.</p></div><p class="q-marks">[3 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is a complex sentence?</p></div><div class="q-options"><div class="q-option">A. &nbsp;"The dean spoke and the students listened."</div><div class="q-option">B. &nbsp;"The results were published."</div><div class="q-option">C. &nbsp;"Because funding was secured, the project continued."</div><div class="q-option">D. &nbsp;"Read the instructions and answer the questions."</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain why sentence variety is described as a marker of academic writing sophistication. Use specific examples of each structural type — simple, compound, complex, and compound-complex — to support your argument.</p></div><p class="q-marks">[3 marks]</p></div>
+
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Adewole, L. O. (2020). Syntactic complexity in the academic writing of Nigerian university students. <em>Journal of Applied Linguistics and Language Research</em>, 7(3), 58–74.</div>
+      <div class="ref-item">Biber, D., Johansson, S., Leech, G., Conrad, S., &amp; Finegan, E. (2021). <em>Longman Grammar of Spoken and Written English</em> (2nd ed.). Pearson Longman.</div>
+      <div class="ref-item">Crystal, D. (2019). <em>The Cambridge Encyclopedia of the English Language</em> (3rd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Huddleston, R., &amp; Pullum, G. K. (2019). <em>A Student's Introduction to English Grammar</em> (2nd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Nwachukwu-Agbada, J. O. J. (2021). Sentence structure errors in undergraduate academic essays: A Nigerian university case study. <em>African Journal of English Language Teaching</em>, 5(1), 88–106.</div>
+      <div class="ref-item">Obi-Okoye, A. F. (2022). Syntactic interference and clause embedding in the writing of first-year students at Nigerian tertiary institutions. <em>International Journal of English Language Education</em>, 10(2), 141–158.</div>
+      <div class="ref-item">Quirk, R., Greenbaum, S., Leech, G., &amp; Svartvik, J. (2018). <em>A Comprehensive Grammar of the English Language</em> (reprint ed.). Longman.</div>
+      <div class="ref-item">Swales, J. M., &amp; Feak, C. B. (2020). <em>Academic Writing for Graduate Students</em> (4th ed.). University of Michigan Press.</div>
+      <div class="ref-item">Thornbury, S. (2019). <em>An A–Z of ELT: A Dictionary of Terms and Concepts</em> (2nd ed.). Macmillan Education.</div>
+      <div class="ref-item">Yule, G. (2020). <em>The Study of Language</em> (7th ed.). Cambridge University Press.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-2-3.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 2</div>
+      <div class="next-title">Lecture 2.3 — The Rules of Agreement (Concord)</div>
+      <div class="next-desc">Subject-verb concord · Collective nouns · Complex agreement · Pronoun-antecedent agreement</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-2-1.html">← Lecture 2.1</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-2-3.html">Lecture 2.3 →</a>
+  </div>
+
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 2.2 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

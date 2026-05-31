@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 6.1: Introduction to Digital Literacy &mdash; Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'\2713';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:14px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:3px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.7;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* LITERACY PILLARS */
+    .pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+    .pillar-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .pillar-head{padding:13px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--white);text-align:center}
+    .pc1{background:#1a4a7c}.pc2{background:#1a5c2a}.pc3{background:#7a4a00}.pc4{background:#5c1a2a}.pc5{background:#2a4a1a}.pc6{background:var(--mod)}
+    .pillar-body{padding:14px 16px;font-size:.86rem;color:#2a2016;line-height:1.6}
+    .pillar-body em{display:block;margin-top:8px;padding:7px 10px;background:var(--cream);border-left:3px solid var(--rule);font-size:.84rem;border-radius:0 3px 3px 0}
+    /* COMPARE TABLE */
+    .compare-table{width:100%;border-collapse:collapse;margin:22px 0;border:1px solid var(--rule)}
+    .compare-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .compare-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.65}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even) td{background:#faf6ef}
+    .lbl{font-weight:700;color:var(--mod)}
+    /* SKILLS CARDS */
+    .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+    .skill-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .skill-head{padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--white);background:var(--mod)}
+    .skill-body{padding:14px 16px;font-size:.88rem;color:#2a2016;line-height:1.65}
+    .skill-body ul{list-style:none;display:grid;gap:6px}
+    .skill-body ul li{padding-left:14px;position:relative}
+    .skill-body ul li::before{content:'\2022';position:absolute;left:0;color:var(--mod)}
+    /* MISINFORMATION BOX */
+    .misinfo-card{background:var(--white);border:1px solid var(--rule);border-left:5px solid #8b1a1a;border-radius:0 4px 4px 0;margin:16px 0;overflow:hidden}
+    .misinfo-head{background:#8b1a1a;color:var(--white);padding:10px 18px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;display:flex;align-items:center;justify-content:space-between}
+    .misinfo-tag{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(255,255,255,.2);padding:2px 8px;border-radius:2px}
+    .misinfo-body{padding:14px 18px;font-size:.9rem;color:#2a2016;line-height:1.7}
+    .misinfo-example{background:var(--cream);border-left:3px solid #8b1a1a;padding:9px 12px;margin:10px 0;font-style:italic;font-size:.88rem;border-radius:0 3px 3px 0}
+    .misinfo-detect{background:#fef8e7;border-left:3px solid var(--gold-dk);padding:9px 12px;font-size:.88rem;color:#7a5c00;border-radius:0 3px 3px 0}
+    .misinfo-detect strong{color:var(--gold-dk)}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.9rem;color:#c0b8ac;margin-bottom:18px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:10px}
+    .activity-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:12px 14px}
+    .a-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .a-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.65}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    /* EXAM */
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    /* REFS */
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    /* NAV */
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body,.pillars-grid,.skills-grid{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+<div class="topbar"><a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;&middot;&nbsp; <a href="index.html">Communication in English</a></div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 6 &nbsp;&middot;&nbsp; Lecture 1</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Introduction to Digital Literacy</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip"><strong>Duration:</strong>&nbsp;30 Minutes</span>
+    <span class="meta-chip"><strong>Module:</strong>&nbsp;Digital Literacy</span>
+    <span class="meta-chip"><strong>Level:</strong>&nbsp;Tertiary</span>
+    <span class="meta-chip"><strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<div class="overview-block">
+  <div class="overview-header"><span style="font-size:1.1rem">&#128203;</span>&nbsp;<span class="overview-header-title">Lecture Overview</span></div>
+  <div class="overview-body">
+    <div class="overview-col">
+      <div class="overview-col-label">Learning Objectives</div>
+      <ul class="overview-objectives">
+        <li>Define digital literacy and explain its relevance in Nigeria</li>
+        <li>Identify the six core pillars of digital literacy</li>
+        <li>Distinguish different types of online misinformation</li>
+        <li>Apply fact-checking strategies to digital content</li>
+        <li>Practise safe, ethical, and responsible digital communication</li>
+        <li>Use digital tools effectively for academic work</li>
+      </ul>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Topics Covered</div>
+      <ol class="overview-topics">
+        <li>What Is Digital Literacy?</li>
+        <li>The Six Pillars of Digital Literacy</li>
+        <li>Digital Communication in Nigeria</li>
+        <li>Misinformation, Disinformation, and Fake News</li>
+        <li>Fact-Checking Strategies</li>
+        <li>Digital Safety and Online Ethics</li>
+        <li>Digital Tools for Academic Work</li>
+        <li>Practical Activity</li>
+      </ol>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Prerequisite</div>
+      <p class="overview-prereq">Module 5 (Logical Reasoning) should be completed before this module. The critical thinking and evidence evaluation skills from Module 5 are directly applied in assessing the credibility of digital information.</p>
+      <a class="prereq-link" href="lecture-5-3.html">&#8592; Lecture 5.3 &mdash; Critical Thinking</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION I: WHAT IS DIGITAL LITERACY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section I</span><h2 class="section-title">What Is Digital Literacy?</h2><div class="section-rule"></div></div>
+
+  <p>Digital literacy is the ability to find, evaluate, create, and communicate information using digital technologies, in ways that are safe, ethical, effective, and appropriate to different social and academic contexts <span class="cite">(Bawden, 2021, p. 18)</span>. It goes far beyond simply being able to use a smartphone or browse the internet. A digitally literate person understands <em>how</em> digital systems work, <em>why</em> information behaves the way it does online, and <em>how</em> to navigate the digital world with intelligence, responsibility, and critical awareness.</p>
+
+  <p>In Nigeria, digital literacy has become urgent and unavoidable. With over 122 million active internet users as of 2024, Nigeria has one of the largest digital populations in Africa <span class="cite">(Statista, 2024)</span>. Nigerians are among the most active users of social media platforms worldwide &mdash; WhatsApp, Facebook, Instagram, X (formerly Twitter), and TikTok are deeply woven into daily communication, commerce, politics, and education. Yet digital access has not automatically produced digital competence. Misinformation spreads rapidly through messaging apps. Cybercrime targets individuals who lack digital safety knowledge. University students submit plagiarised content downloaded from unreliable online sources. These challenges make digital literacy a critical academic and civic competency <span class="cite">(Ojo &amp; Dike, 2022, p. 7)</span>.</p>
+
+  <p>It is important to distinguish digital literacy from related concepts:</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Digital Literacy vs. Related Concepts</div>
+    <dl>
+      <dt>Digital Literacy</dt>
+      <dd>The ability to find, evaluate, create, and communicate information using digital technology safely, effectively, and ethically. Covers skills across multiple domains: information, communication, content creation, safety, problem-solving, and critical evaluation <span class="cite">(Bawden, 2021, p. 20)</span>.</dd>
+      <dt>Digital Access</dt>
+      <dd>Simply having the hardware and internet connection to go online. Many Nigerians have digital access without being digitally literate &mdash; they can open WhatsApp but cannot evaluate whether the information they receive is credible. Access is the prerequisite; literacy is the skill <span class="cite">(Ojo &amp; Dike, 2022, p. 9)</span>.</dd>
+      <dt>Computer Literacy</dt>
+      <dd>The older, narrower concept of being able to operate a computer &mdash; using a keyboard, navigating a file system, running software. Digital literacy is broader: it includes computer skills but extends to information evaluation, online communication, digital identity, and safety in networked environments.</dd>
+      <dt>Information Literacy</dt>
+      <dd>The ability to identify an information need, locate relevant sources, evaluate their credibility, and use the information ethically. Information literacy is a subset of digital literacy &mdash; one of its six core pillars, which we examine in Section II.</dd>
+    </dl>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>Why Digital Literacy Matters for University Students:</strong> Every assessment you complete draws on digital tools &mdash; online research databases, word processors, referencing software, e-learning platforms, and digital submission systems. Every communication you send &mdash; emails to lecturers, group chats with classmates, presentations &mdash; is a digital act. Your ability to navigate this environment with competence and integrity directly affects your academic success <span class="cite">(Bawden, 2021, p. 25)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION II: SIX PILLARS -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section II</span><h2 class="section-title">The Six Pillars of Digital Literacy</h2><div class="section-rule"></div></div>
+
+  <p>Digital literacy is not a single skill but a complex of related competencies. Researchers and educators have identified six core pillars that together constitute full digital literacy. Mastery in all six is the goal of a digitally literate university student <span class="cite">(Jisc, 2019; Hobbs, 2020, p. 14)</span>.</p>
+
+  <div class="pillars-grid">
+    <div class="pillar-card">
+      <div class="pillar-head pc1">1. Information Literacy</div>
+      <div class="pillar-body">
+        <p>The ability to find, evaluate, and use information effectively and ethically. This includes searching academic databases, distinguishing credible from unreliable sources, understanding how search engine algorithms work, and citing sources correctly.</p>
+        <em>Nigerian example: Knowing to search Google Scholar or the university library portal for research, rather than relying on the first result that appears on a general Google search.</em>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-head pc2">2. Communication and Collaboration</div>
+      <div class="pillar-body">
+        <p>The ability to communicate effectively using digital channels &mdash; email, video conferencing, collaborative documents, and academic platforms. Includes understanding audience, tone, and format in different digital contexts, and working productively with others online.</p>
+        <em>Example: Writing a formal email to a lecturer versus a casual WhatsApp message to a classmate &mdash; the same information communicated in completely different registers appropriate to each platform.</em>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-head pc3">3. Digital Content Creation</div>
+      <div class="pillar-body">
+        <p>The ability to create digital content &mdash; documents, presentations, videos, websites, and social media posts &mdash; to a standard appropriate for academic, professional, and civic contexts. Includes understanding copyright, licensing, and intellectual property as they apply to digital content.</p>
+        <em>Example: Creating a well-structured PowerPoint presentation for a seminar that uses original images or properly licensed visuals, rather than copying images without attribution.</em>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-head pc4">4. Digital Safety and Wellbeing</div>
+      <div class="pillar-body">
+        <p>The ability to protect your personal information, recognise online threats (phishing, scams, malware), manage your digital reputation, and maintain psychological wellbeing in online environments. Includes understanding privacy settings, strong password practices, and the long-term visibility of digital footprints <span class="cite">(Hobbs, 2020, p. 22)</span>.</p>
+        <em>Nigerian example: Recognising when a WhatsApp message asking you to "verify your BVN by clicking this link" is a phishing attempt rather than a legitimate bank communication.</em>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-head pc5">5. Problem-Solving and Technical Skills</div>
+      <div class="pillar-body">
+        <p>The ability to use digital tools effectively to solve real problems, troubleshoot technical issues, and adapt to new technologies. This includes navigating unfamiliar software, understanding basic file management, and using productivity tools for academic work.</p>
+        <em>Example: Being able to use the university's e-learning management system (LMS) to submit assignments, access lecture notes, participate in online quizzes, and contact lecturers &mdash; even when the interface is unfamiliar.</em>
+      </div>
+    </div>
+    <div class="pillar-card">
+      <div class="pillar-head pc6">6. Critical Thinking in Digital Contexts</div>
+      <div class="pillar-body">
+        <p>The ability to apply critical thinking skills (from Module 5) specifically to digital content &mdash; evaluating the credibility of online sources, recognising bias and agenda in digital media, understanding how algorithms shape what we see, and resisting manipulation by misinformation.</p>
+        <em>Example: Understanding that the YouTube videos recommended to you are shaped by an algorithm designed to maximise your watch time, not to give you balanced, accurate information on a topic.</em>
+      </div>
+    </div>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>Self-Assessment:</strong> Rate yourself honestly from 1&ndash;5 on each of the six pillars. Where are your strongest skills? Where are your gaps? Digital literacy development should be deliberate &mdash; identify your weakest pillar and focus effort there. For most Nigerian university students, the areas most needing development are information literacy (evaluating online sources) and digital safety <span class="cite">(Ojo &amp; Dike, 2022, p. 14)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION III: DIGITAL COMMUNICATION IN NIGERIA -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section III</span><h2 class="section-title">Digital Communication in Nigeria</h2><div class="section-rule"></div></div>
+
+  <p>Nigeria's digital communication landscape is one of the most dynamic and complex in Africa. With the highest number of internet users on the continent, Nigeria is simultaneously a leader in digital innovation &mdash; in fintech, e-commerce, and the creative industries &mdash; and a major site of digital misinformation, online fraud, and the misuse of communication technology <span class="cite">(Nwosu &amp; Obi, 2021, p. 33)</span>.</p>
+
+  <p>Understanding the specific contours of digital communication in Nigeria is essential for university students, who are among the heaviest users of digital platforms and who will enter careers in which digital communication competence is expected across all sectors.</p>
+
+  <table class="compare-table">
+    <thead><tr><th>Platform</th><th>Primary Use in Nigeria</th><th>Academic / Professional Application</th><th>Key Risk</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lbl">WhatsApp</span></td><td>Personal communication, family groups, news sharing, mobile commerce (buy/sell groups)</td><td>Group projects, class announcements, lecturer-student communication in informal contexts</td><td>Rapid spread of misinformation through forwarded messages; no editorial oversight; false health and political information</td></tr>
+      <tr><td><span class="lbl">X (Twitter)</span></td><td>Political commentary, trending news, public debate, professional networking</td><td>Following academics, researchers, and institutions; participating in public knowledge discourse</td><td>Echo chambers; viral misinformation; harassment; context collapse (academic language misread by general audience)</td></tr>
+      <tr><td><span class="lbl">Facebook</span></td><td>Community groups, marketplace, news, older demographic communication</td><td>Academic and professional group pages; alumni networks; event announcements</td><td>Algorithmic amplification of emotionally charged content; political manipulation; scam advertisements</td></tr>
+      <tr><td><span class="lbl">Email</span></td><td>Formal professional and institutional communication</td><td>The primary formal channel for university communication: lecturers, administration, applications, research</td><td>Phishing emails; spam; professional tone errors that damage academic reputation</td></tr>
+      <tr><td><span class="lbl">Google / YouTube</span></td><td>Information search; entertainment; informal learning</td><td>Research starting point; finding academic videos and lectures; accessing open educational resources</td><td>Filter bubbles; sponsored content indistinguishable from organic results; non-peer-reviewed videos presented as authoritative</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION IV: MISINFORMATION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section IV</span><h2 class="section-title">Misinformation, Disinformation, and Fake News</h2><div class="section-rule"></div></div>
+
+  <p>One of the most serious challenges of digital communication is the proliferation of false and misleading information. Nigeria has experienced devastating consequences of digital misinformation: false medical information during the COVID-19 pandemic, ethnic violence triggered by fabricated stories, and financial scams that have cost citizens billions of naira. Understanding the precise categories of false information is the first step toward resisting it <span class="cite">(Ireton &amp; Posetti, 2020, p. 42)</span>.</p>
+
+  <div class="misinfo-card">
+    <div class="misinfo-head">&#10006; Misinformation <span class="misinfo-tag">False but Not Deliberate</span></div>
+    <div class="misinfo-body">
+      <p><strong>Definition:</strong> False or inaccurate information shared without the intent to deceive. The person sharing it genuinely believes it to be true. Misinformation spreads through ignorance, carelessness, or misunderstanding &mdash; not deliberate malice <span class="cite">(Wardle &amp; Derakhshan, 2021, p. 6)</span>.</p>
+      <div class="misinfo-example">Nigerian Example: A WhatsApp message claiming that drinking hot water with lemon juice cures malaria is forwarded thousands of times by people who genuinely believe it and want to help their contacts. The original sender may not have intended to deceive anyone &mdash; but the information is medically false and potentially dangerous, as it may discourage people from seeking proper treatment.</div>
+      <div class="misinfo-detect"><strong>Why it spreads:</strong> People forward misinformation because it confirms their existing beliefs (confirmation bias), because it triggers emotional responses (fear, hope, outrage), or because they trust the person who sent it to them without verifying the information independently.</div>
+    </div>
+  </div>
+
+  <div class="misinfo-card">
+    <div class="misinfo-head">&#10006; Disinformation <span class="misinfo-tag">Deliberately False</span></div>
+    <div class="misinfo-body">
+      <p><strong>Definition:</strong> False information deliberately created and spread to deceive, manipulate, or cause harm. Disinformation involves <em>intent</em> &mdash; the creator knows the information is false and spreads it anyway for political, financial, or social purposes <span class="cite">(Ireton &amp; Posetti, 2020, p. 45)</span>.</p>
+      <div class="misinfo-example">Nigerian Example: During an election period, a political campaign creates and distributes a fabricated video showing an opponent making a statement they never actually made, designed to damage their electoral chances. The creators know the video is a fabrication. This is disinformation: a deliberate, coordinated deception campaign.</div>
+      <div class="misinfo-example">Financial Example: A fraudulent investment scheme creates a fake website, fake testimonials, and fake news articles claiming that a famous Nigerian entrepreneur endorses their product. All of this is deliberately created to defraud investors. This is financial disinformation &mdash; deliberate deception for economic gain.</div>
+      <div class="misinfo-detect"><strong>Why it is dangerous:</strong> Disinformation is often sophisticated and well-funded. It exploits the same psychological vulnerabilities as misinformation but adds the element of strategic design. In a high-information-volume environment, it can be nearly impossible to distinguish from genuine content without deliberate fact-checking.</div>
+    </div>
+  </div>
+
+  <div class="misinfo-card">
+    <div class="misinfo-head">&#10006; Malinformation <span class="misinfo-tag">True but Used to Harm</span></div>
+    <div class="misinfo-body">
+      <p><strong>Definition:</strong> Genuine information used out of context or shared with the deliberate intent to harm an individual, organisation, or group. The information itself may be true, but its weaponised use is the problem <span class="cite">(Wardle &amp; Derakhshan, 2021, p. 8)</span>.</p>
+      <div class="misinfo-example">Example: Private photographs or messages belonging to a person are leaked online without their consent to damage their reputation or expose them to harassment. The information (the photographs) is real, but its use is harmful, unethical, and in many cases criminal under Nigeria&rsquo;s Cybercrimes Act 2015.</div>
+      <div class="misinfo-detect"><strong>Note:</strong> Malinformation is why privacy protection (Pillar 4 &mdash; Digital Safety) is so important. Anything you share digitally can potentially be taken out of context and weaponised.</div>
+    </div>
+  </div>
+
+  <div class="misinfo-card">
+    <div class="misinfo-head">&#10006; Fake News <span class="misinfo-tag">A Special Category</span></div>
+    <div class="misinfo-body">
+      <p><strong>Definition:</strong> The term "fake news" refers specifically to fabricated news stories presented in the format of legitimate journalism &mdash; with the visual appearance of newspaper articles or broadcast reports &mdash; that are entirely or substantially false. It is a form of disinformation dressed in journalistic clothing <span class="cite">(Allcott &amp; Gentzkow, 2020, p. 214)</span>.</p>
+      <div class="misinfo-example">Example: A website designed to look like a reputable Nigerian news outlet publishes a story claiming that the Central Bank of Nigeria has announced a 50% devaluation of the naira with immediate effect. The story is entirely fabricated but spreads through social media before it is debunked, causing panic in financial markets and among ordinary citizens.</div>
+      <div class="misinfo-detect"><strong>Important note:</strong> The term "fake news" is also misused by politicians and public figures to dismiss any journalism they dislike &mdash; even when the journalism is accurate and well-evidenced. Be sceptical when powerful people use this phrase &mdash; check whether the journalism has been specifically and substantively refuted, or whether the label is being used to avoid accountability.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION V: FACT-CHECKING -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section V</span><h2 class="section-title">Fact-Checking Strategies</h2><div class="section-rule"></div></div>
+
+  <p>Fact-checking is the practice of verifying the accuracy of information before accepting or sharing it. In the age of social media, where information moves faster than the ability to verify it, fact-checking has become one of the most essential digital literacy skills <span class="cite">(Posetti &amp; Matthews, 2018, p. 12)</span>. The following strategies form a practical toolkit for any digitally literate person.</p>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-head">Strategy 1 &mdash; Lateral Reading</div>
+      <div class="skill-body">
+        <p>Rather than reading deeply into a single website to assess its credibility, <strong>lateral reading</strong> involves opening multiple new tabs and checking what <em>other</em> sources say <em>about</em> the original source. This is how professional fact-checkers work.</p>
+        <ul>
+          <li>When you encounter an unfamiliar website, search for the name of the site or organisation in a new tab</li>
+          <li>Ask: what do independent, credible sources say about this outlet?</li>
+          <li>Check Wikipedia, media review sites, and established news organisations for assessments of the source</li>
+          <li>Do not trust a source&rsquo;s description of itself &mdash; find out what others say about it</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Strategy 2 &mdash; Reverse Image Search</div>
+      <div class="skill-body">
+        <p>Images are frequently taken out of context to support false claims. A photograph from a flood in Mozambique in 2019 may be shared as "evidence" of flooding in Lagos in 2024. Reverse image search lets you find the original source of any image.</p>
+        <ul>
+          <li>Right-click any image and select "Search image with Google" (or use tools.google.com/reverse-image-search)</li>
+          <li>Check when the image first appeared online and in what context</li>
+          <li>If the image was being used before the event it allegedly depicts, it is being used dishonestly</li>
+          <li>TinEye is an alternative reverse image search tool</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Strategy 3 &mdash; Check the Date</div>
+      <div class="skill-body">
+        <p>Old stories and photographs are regularly re-shared as if they are current news. A report of violence from three years ago may be shared with the caption "happening right now." Always check the original publication date of any content before accepting its claimed context.</p>
+        <ul>
+          <li>Look for the publication or upload date on the article or video</li>
+          <li>Search for the story using date filters to confirm when it actually occurred</li>
+          <li>Be especially sceptical of dramatic content shared without a clear date</li>
+          <li>Ask: is this being shared at a time when there is political or social tension that would make this content emotionally useful for someone&rsquo;s agenda?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Strategy 4 &mdash; Use Nigerian Fact-Checking Organisations</div>
+      <div class="skill-body">
+        <p>Several credible organisations in Nigeria and Africa provide professional fact-checking services. Before sharing or believing a claim, check these resources:</p>
+        <ul>
+          <li><strong>Dubawa</strong> (dubawa.org) &mdash; Nigeria&rsquo;s leading fact-checking initiative</li>
+          <li><strong>Africa Check</strong> (africacheck.org) &mdash; Pan-African fact-checking organisation</li>
+          <li><strong>FactCheckHub</strong> (factcheckhub.com) &mdash; Nigeria-focused fact-checking</li>
+          <li><strong>Snopes</strong> (snopes.com) &mdash; International; strong for viral social media claims</li>
+          <li>Search the claim on any of these sites before sharing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Strategy 5 &mdash; SIFT Method</div>
+      <div class="skill-body">
+        <p>The <strong>SIFT</strong> method (developed by Mike Caulfield) provides a four-step framework for quickly evaluating online information <span class="cite">(Caulfield, 2019)</span>:</p>
+        <ul>
+          <li><strong>S</strong>top: Before reacting or sharing, pause. Ask yourself: do I know this source? Am I reacting emotionally?</li>
+          <li><strong>I</strong>nvestigate the source: Who is behind this content? What are their credentials and motivations?</li>
+          <li><strong>F</strong>ind better coverage: Is this story reported by multiple credible independent sources?</li>
+          <li><strong>T</strong>race claims: Where did the original claim, image, or statistic come from? Follow it back to its source.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Strategy 6 &mdash; Evaluate Emotional Triggers</div>
+      <div class="skill-body">
+        <p>Misinformation and disinformation are designed to trigger strong emotional responses &mdash; outrage, fear, pride, disgust &mdash; because emotional arousal impairs careful thinking and dramatically increases sharing behaviour.</p>
+        <ul>
+          <li>If content makes you feel intensely emotional (shocked, furious, scared), treat this as a <em>signal to slow down</em>, not a reason to immediately share</li>
+          <li>Ask: who benefits from me feeling this way and sharing this?</li>
+          <li>Check the claim with a fact-checking tool before acting on the emotion</li>
+          <li>Recall from Module 5: emotional persuasion without evidence is often a fallacy &mdash; an appeal to fear or an appeal to the bandwagon</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION VI: DIGITAL SAFETY AND ETHICS -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VI</span><h2 class="section-title">Digital Safety and Online Ethics</h2><div class="section-rule"></div></div>
+
+  <p>Digital safety is the practice of protecting yourself, your information, and others from harm in online environments. For Nigerian university students, the most relevant threats include account hacking, phishing scams, social engineering fraud, and the misuse of personal data. Online ethics refers to the standards of appropriate and responsible behaviour in digital spaces <span class="cite">(Nwosu &amp; Obi, 2021, p. 55)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Digital Safety &mdash; Core Practices</div>
+    <dl>
+      <dt>Strong Password Management</dt>
+      <dd>Use passwords of at least 12 characters combining letters, numbers, and symbols. Never use the same password for multiple accounts. Never use your name, date of birth, or the word "password." Use a trusted password manager application to store complex passwords securely. Enable two-factor authentication (2FA) on all important accounts &mdash; your university email, banking apps, and social media <span class="cite">(Hobbs, 2020, p. 45)</span>.</dd>
+      <dt>Recognising Phishing Attempts</dt>
+      <dd>Phishing is an attempt to steal your personal information (passwords, BVN, banking details) by pretending to be a legitimate organisation. Common signs: unexpected urgency ("Your account will be closed in 24 hours"), requests for sensitive information via email or WhatsApp, links that look almost but not exactly like a real site (e.g., "nigerianbannk.com" instead of "nigerianbank.com"), poor grammar and spelling. In Nigeria, common phishing targets include bank account holders, JAMB applicants, and those seeking employment. Never click suspicious links and never provide personal information in response to unsolicited digital communication.</dd>
+      <dt>Privacy Settings and Digital Footprints</dt>
+      <dd>Everything you post, comment on, like, or share online contributes to your permanent digital footprint. Future employers, university admissions offices, and professional bodies increasingly search candidates&rsquo; social media histories. Review and set your privacy settings on all platforms. Be deliberate about what you post publicly. Remember: even "deleted" content may have been screenshot, archived, or cached by search engines before deletion <span class="cite">(Nwosu &amp; Obi, 2021, p. 60)</span>.</dd>
+      <dt>Online Ethics and Academic Integrity</dt>
+      <dd>Digital environments raise specific ethical challenges for university students: plagiarism facilitated by easy copy-paste from online sources, the submission of AI-generated work as one&rsquo;s own, the sharing of examination questions or answers via WhatsApp groups, and cyberbullying of classmates or lecturers. All of these violate academic integrity standards and may carry serious academic and legal consequences under Nigerian law (Cybercrimes Act 2015) and university regulations.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION VII: DIGITAL TOOLS FOR ACADEMIC WORK -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VII</span><h2 class="section-title">Digital Tools for Academic Work</h2><div class="section-rule"></div></div>
+
+  <p>Digitally literate students use a range of tools to support their academic work efficiently and ethically. The following are the most important categories, with guidance on their appropriate academic use <span class="cite">(Bawden, 2021, p. 88)</span>.</p>
+
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-head">Research Databases</div>
+      <div class="skill-body">
+        <p>For credible academic sources, use these platforms rather than general search engines:</p>
+        <ul>
+          <li><strong>Google Scholar</strong> (scholar.google.com) &mdash; free access to academic articles across all disciplines</li>
+          <li><strong>JSTOR</strong> (jstor.org) &mdash; humanities and social science journals</li>
+          <li><strong>PubMed</strong> &mdash; medical and life sciences research</li>
+          <li><strong>African Journals Online (AJOL)</strong> &mdash; peer-reviewed African scholarship</li>
+          <li>Your university library portal &mdash; check what databases your institution subscribes to</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Reference Management</div>
+      <div class="skill-body">
+        <p>Use reference management software to organise your sources and generate citations automatically in APA, MLA, or any required format:</p>
+        <ul>
+          <li><strong>Zotero</strong> &mdash; free, browser-integrated, excellent for students</li>
+          <li><strong>Mendeley</strong> &mdash; free, with a PDF reader and annotation tool</li>
+          <li><strong>RefWorks</strong> &mdash; institutional access often provided by universities</li>
+          <li>Using these tools eliminates citation errors and saves significant time during essay writing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Writing and Productivity</div>
+      <div class="skill-body">
+        <p>Core digital writing tools every student should master:</p>
+        <ul>
+          <li><strong>Microsoft Word / Google Docs</strong> &mdash; word processing; track changes for peer review; comments for feedback</li>
+          <li><strong>Grammarly</strong> &mdash; grammar and style checker; use as a learning tool, not a replacement for your own editing</li>
+          <li><strong>Microsoft Teams / Google Meet / Zoom</strong> &mdash; for online group meetings and presentations</li>
+          <li><strong>Google Drive / OneDrive</strong> &mdash; cloud storage and collaboration</li>
+        </ul>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-head">Plagiarism Awareness</div>
+      <div class="skill-body">
+        <p>Understanding plagiarism in the digital age:</p>
+        <ul>
+          <li>Universities use tools like <strong>Turnitin</strong> and <strong>iThenticate</strong> to detect copied content &mdash; including paraphrasing that is too close to the original</li>
+          <li>Copying from websites without citation is plagiarism, even if the website has no copyright notice</li>
+          <li>Using AI-generated text and presenting it as your own work is an emerging form of academic dishonesty</li>
+          <li>The correct use of any source requires proper citation; building on others&rsquo; ideas is scholarship &mdash; presenting their ideas as yours is fraud</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VIII</span><h2 class="section-title">Practical Activity</h2><div class="section-rule"></div></div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <span style="font-size:1.1rem">&#128269;</span>
+      <div><div class="activity-label">Practical Activity &mdash; Section VIII</div><div class="activity-title">Digital Literacy in Action &mdash; 10 Exercises</div></div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-instruction">Apply the digital literacy skills from this lecture to the following exercises. Record your findings and reflections in writing.</p>
+      <ul class="activity-list">
+        <li class="activity-item"><span class="a-num">1</span><span class="a-text">Rate yourself from 1 (very weak) to 5 (very strong) on each of the six pillars of digital literacy. Write one specific action you will take this semester to improve your weakest pillar.</span></li>
+        <li class="activity-item"><span class="a-num">2</span><span class="a-text">Find a piece of information you recently received on WhatsApp or social media. Apply the SIFT method to it. What did you find? Was the information accurate, misleading, or false?</span></li>
+        <li class="activity-item"><span class="a-num">3</span><span class="a-text">Choose any dramatic photograph you have seen shared online recently. Perform a reverse image search on it. When was the image first published? Is it being used in its original context?</span></li>
+        <li class="activity-item"><span class="a-num">4</span><span class="a-text">Visit Dubawa.org or Africa Check and find one claim they have fact-checked that relates to Nigeria. Summarise: (a) what the original claim was, (b) what the fact-checkers found, and (c) how the misinformation spread.</span></li>
+        <li class="activity-item"><span class="a-num">5</span><span class="a-text">Classify each of the following as misinformation, disinformation, or malinformation, and justify your classification: (a) A friend forwards a message saying that onion soup cures COVID, which they genuinely believe. (b) A politician&rsquo;s team creates and distributes a fabricated quote from their opponent. (c) A private message from a public official is leaked to the press to damage their reputation.</span></li>
+        <li class="activity-item"><span class="a-num">6</span><span class="a-text">Conduct a Google search on a topic related to your course. Compare the first three results from a general Google search with three results from Google Scholar on the same topic. What differences do you observe in credibility, methodology, and the quality of evidence?</span></li>
+        <li class="activity-item"><span class="a-num">7</span><span class="a-text">Review your social media privacy settings on one platform. What information is currently visible to the public? What changes, if any, will you make and why?</span></li>
+        <li class="activity-item"><span class="a-num">8</span><span class="a-text">Write a formal email to a fictitious lecturer requesting an extension on an assignment due to a documented health issue. Then write a WhatsApp message to a classmate about the same situation. Compare the tone, vocabulary, and structure. What makes each appropriate for its platform?</span></li>
+        <li class="activity-item"><span class="a-num">9</span><span class="a-text">Read the following scenario and identify all the digital literacy issues present: <em>"Emeka found an article on a website that appeared professional. He copied three paragraphs directly into his essay without citation, added his name to the document, and submitted it via the university portal. He also sent the article link to his WhatsApp class group with the message: &lsquo;This proves what I said &mdash; share everywhere.&rsquo;"</em></span></li>
+        <li class="activity-item"><span class="a-num">10</span><span class="a-text">Download and set up either Zotero or Mendeley on your device. Import three academic sources on any topic related to your course. Generate a reference list in APA 7th edition format. Bring the reference list to your next class.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Conclusion</span><h2 class="section-title">Key Takeaway</h2><div class="section-rule"></div></div>
+  <div class="conclusion-box">
+    <p>Digital literacy is not a luxury or a supplementary skill &mdash; it is a fundamental competency for participation in twenty-first-century academic, professional, and civic life. In Nigeria, where digital technology is rapidly reshaping every sector of society, the ability to navigate digital environments with intelligence, scepticism, safety, and ethical responsibility is as essential as the ability to read and write <span class="cite">(Ojo &amp; Dike, 2022, p. 72)</span>.</p>
+    <br>
+    <p>This lecture has introduced the six pillars of digital literacy, the categories of digital misinformation, six practical fact-checking strategies, the essentials of digital safety and ethics, and the key digital tools for academic work. Lecture 6.2 extends this foundation by examining digital communication in professional and academic writing contexts &mdash; including email etiquette, netiquette, online academic discourse, and the ethical use of digital media in research and publication <span class="cite">(Bawden, 2021, p. 100)</span>.</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div class="exam-section">
+  <div class="exam-header">
+    <div><h2>Examination Questions</h2><p>Lecture 6.1 &mdash; Introduction to Digital Literacy</p></div>
+    <span class="exam-total">10 Questions &middot; 30 Marks</span>
+  </div>
+  <div class="exam-body">
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best defines digital literacy?</p></div><div class="q-options"><div class="q-option">A. The ability to operate a computer and use Microsoft Office software</div><div class="q-option">B. The ability to find, evaluate, create, and communicate information using digital technology safely, effectively, and ethically</div><div class="q-option">C. Having access to the internet and a smartphone</div><div class="q-option">D. The ability to write computer programs and build websites</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Explain</span><p class="q-text">Distinguish between misinformation and disinformation. For each, provide one original example drawn from Nigerian digital communication, and explain the key difference between them.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">The SIFT method of fact-checking stands for:</p></div><div class="q-options"><div class="q-option">A. Search, Identify, Follow, Trust</div><div class="q-option">B. Stop, Investigate, Find better coverage, Trace claims</div><div class="q-option">C. Share, Inform, Forward, Track</div><div class="q-option">D. Scan, Interpret, Filter, Test</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">List and Explain</span><p class="q-text">Name any FOUR of the six pillars of digital literacy. For each, write two sentences explaining what it means and why it is important for a university student in Nigeria.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">Malinformation is best described as:</p></div><div class="q-options"><div class="q-option">A. False information shared by someone who genuinely believes it to be true</div><div class="q-option">B. Deliberately fabricated information created to deceive the public</div><div class="q-option">C. True information used out of context or shared with the deliberate intent to harm</div><div class="q-option">D. Fictional stories presented in the format of news journalism</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Apply</span><p class="q-text">Describe THREE specific fact-checking strategies a Nigerian university student should use when they receive dramatic news on a WhatsApp group. For each strategy, explain how it works and give one example of how it would be applied.</p></div><p class="q-marks">[6 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the best Nigerian fact-checking organisation for verifying claims circulating on social media?</p></div><div class="q-options"><div class="q-option">A. Wikipedia</div><div class="q-option">B. Google News</div><div class="q-option">C. Dubawa</div><div class="q-option">D. BBC Africa</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Identify Issues</span><p class="q-text">A student receives a WhatsApp message saying: <em>"BREAKING: The Federal Government has cancelled all 2025 university admissions due to ASUU strike action. Forward to all students immediately."</em> Identify (a) the emotional manipulation technique being used, (b) two specific fact-checking steps the student should take before doing anything, and (c) the ethical implications of forwarding this message without verification.</p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">A student copies three paragraphs from a website into their essay without citation, changes a few words, and submits it. This is best described as:</p></div><div class="q-options"><div class="q-option">A. Legitimate research synthesis</div><div class="q-option">B. Plagiarism &mdash; a violation of academic integrity</div><div class="q-option">C. Paraphrasing &mdash; an acceptable academic practice</div><div class="q-option">D. Digital content creation</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Essay</span><p class="q-text">Write an essay of 280&ndash;350 words discussing why digital literacy has become an essential skill for university students in Nigeria. In your essay, refer to at least THREE specific digital literacy competencies and explain how each addresses a real challenge faced by Nigerian students in the digital environment.</p></div><p class="q-marks">[8 marks]</p></div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="references-section">
+  <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+  <div class="ref-list">
+    <div class="ref-item">Allcott, H., &amp; Gentzkow, M. (2020). Social media and fake news in the digital age. <em>Journal of Economic Perspectives</em>, 31(2), 211&ndash;236.</div>
+    <div class="ref-item">Bawden, D. (2021). <em>Introduction to Information Science</em> (2nd ed.). Facet Publishing.</div>
+    <div class="ref-item">Caulfield, M. (2019). <em>Web Literacy for Student Fact-Checkers</em>. Pressbooks. https://webliteracy.pressbooks.com</div>
+    <div class="ref-item">Hobbs, R. (2020). <em>Mind Over Media: Propaganda Education for a Digital Age</em>. W.W. Norton.</div>
+    <div class="ref-item">Ireton, C., &amp; Posetti, J. (2020). <em>Journalism, Fake News &amp; Disinformation: Handbook for Journalism Education and Training</em>. UNESCO.</div>
+    <div class="ref-item">Jisc. (2019). <em>Building Digital Capability: The Six Elements Defined</em>. Jisc. https://www.jisc.ac.uk/rd/projects/building-digital-capability</div>
+    <div class="ref-item">Nwosu, L. C., &amp; Obi, E. C. (2021). Digital communication competence among undergraduates in Nigerian universities: Challenges and opportunities. <em>Journal of Communication and Media Studies</em>, 12(1), 28&ndash;64.</div>
+    <div class="ref-item">Ojo, T. A., &amp; Dike, V. W. (2022). Digital literacy and academic performance of undergraduate students in Nigerian universities. <em>African Journal of Library, Archives and Information Science</em>, 32(1), 1&ndash;18.</div>
+    <div class="ref-item">Posetti, J., &amp; Matthews, A. (2018). <em>A Short Guide to the History of &lsquo;Fake News&rsquo; and Disinformation</em>. International Center for Journalists.</div>
+    <div class="ref-item">Wardle, C., &amp; Derakhshan, H. (2021). <em>Information Disorder: Toward an Interdisciplinary Framework for Research and Policy Making</em> (2nd ed.). Council of Europe.</div>
+  </div>
+</div>
+
+<a class="next-lecture" href="lecture-6-2.html">
+  <div>
+    <div class="next-label">Next Lecture &middot; Module 6</div>
+    <div class="next-title">Lecture 6.2 &mdash; Digital Communication in Academic and Professional Contexts</div>
+    <div class="next-desc">Email etiquette &middot; Netiquette &middot; Online academic writing &middot; Digital research ethics &middot; Social media and professional identity</div>
+  </div>
+  <span class="next-arrow">&rarr;</span>
+</a>
+<div class="lecture-nav">
+  <a class="lnav-btn" href="lecture-5-3.html">&#8592; Lecture 5.3</a>
+  <a class="lnav-index" href="index.html">Course Index</a>
+  <a class="lnav-btn" href="lecture-6-2.html">Lecture 6.2 &rarr;</a>
+</div>
+
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>Communication in English &middot; Lecture 6.1 &nbsp;&middot;&nbsp; Dr. Maurice Udom &nbsp;&middot;&nbsp; <a href="index.html">Course Index</a> &nbsp;&middot;&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>&copy; 2026 Maurice Udom. All rights reserved.</footer>
+</body>
+</html>

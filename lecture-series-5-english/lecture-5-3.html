@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 5.3: Critical Thinking and Analytical Reasoning &mdash; Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-icon{font-size:1.1rem}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'\2713';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.78rem}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.82rem}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:14px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:3px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.7;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* ELEMENT CARDS */
+    .elements-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}
+    .element-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;text-align:center}
+    .element-card-head{background:var(--mod);color:var(--white);padding:10px 12px;font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;line-height:1.3}
+    .element-card-body{padding:12px;font-size:.8rem;color:#2a2016;line-height:1.55}
+    /* BLOOM STEPS */
+    .bloom-stack{display:grid;gap:6px;margin:20px 0}
+    .bloom-level{display:flex;align-items:center;gap:14px;padding:11px 16px;border-radius:3px;border:1px solid var(--rule)}
+    .bloom-level:nth-child(1){background:#f0f4fd;border-color:#c5d2e8}
+    .bloom-level:nth-child(2){background:#e8f0fb;border-color:#b0c4e0}
+    .bloom-level:nth-child(3){background:#dde8f8;border-color:#9ab5d8}
+    .bloom-level:nth-child(4){background:#d0dfef;border-color:#84a6ce}
+    .bloom-level:nth-child(5){background:#c4d6e7;border-color:#6e97c4}
+    .bloom-level:nth-child(6){background:var(--mod);border-color:var(--mod)}
+    .bloom-num{background:var(--mod);color:var(--white);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .bloom-level:nth-child(6) .bloom-num{background:rgba(255,255,255,.25);color:var(--white)}
+    .bloom-level:nth-child(6) .bloom-content{color:var(--white)}
+    .bloom-content-title{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--mod);margin-bottom:2px}
+    .bloom-level:nth-child(6) .bloom-content-title{color:var(--gold)}
+    .bloom-content-desc{font-size:.83rem;color:#2a2016;line-height:1.5}
+    .bloom-level:nth-child(6) .bloom-content-desc{color:rgba(255,255,255,.8)}
+    /* EVIDENCE TABLE */
+    .compare-table{width:100%;border-collapse:collapse;margin:22px 0;border:1px solid var(--rule)}
+    .compare-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .compare-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.65}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even) td{background:#faf6ef}
+    .lbl{font-weight:700;color:var(--mod)}
+    /* FACT OPINION TABLE */
+    .fot{width:100%;border-collapse:collapse;margin:22px 0}
+    .fot th{background:var(--mod);color:var(--white);padding:10px 14px;font-size:.85rem;font-weight:700;text-align:left}
+    .fot td{padding:11px 14px;border-bottom:1px solid var(--rule);font-size:.88rem;vertical-align:top;line-height:1.6}
+    .fot tr:nth-child(even) td{background:#faf6ef}
+    .fact-col{border-left:3px solid #1a5c2a}.opin-col{border-left:3px solid #8b1a1a}.inf-col{border-left:3px solid var(--mod)}
+    /* MODULE SUMMARY */
+    .module-summary{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:32px 0}
+    .ms-header{padding:16px 24px;border-bottom:2px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .ms-header h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin:0}
+    .ms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+    .ms-col{padding:18px 20px;border-right:1px solid rgba(255,255,255,.12)}
+    .ms-col:last-child{border-right:none}
+    .ms-lec-title{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--gold);margin-bottom:10px}
+    .ms-points{list-style:none;display:grid;gap:6px}
+    .ms-points li{font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5;padding-left:14px;position:relative}
+    .ms-points li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.9rem;color:#c0b8ac;margin-bottom:18px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:10px}
+    .activity-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:12px 14px}
+    .a-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .a-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.65}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body,.elements-grid,.ms-grid{grid-template-columns:1fr 1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+<div class="topbar"><a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;&middot;&nbsp; <a href="index.html">Communication in English</a></div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 5 &nbsp;&middot;&nbsp; Lecture 3</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Critical Thinking and Analytical Reasoning</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip"><strong>Duration:</strong>&nbsp;35 Minutes</span>
+    <span class="meta-chip"><strong>Module:</strong>&nbsp;Logical Reasoning</span>
+    <span class="meta-chip"><strong>Level:</strong>&nbsp;Tertiary</span>
+    <span class="meta-chip"><strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<div class="overview-block">
+  <div class="overview-header"><span class="overview-header-icon">&#128203;</span><span class="overview-header-title">Lecture Overview</span></div>
+  <div class="overview-body">
+    <div class="overview-col">
+      <div class="overview-col-label">Learning Objectives</div>
+      <ul class="overview-objectives">
+        <li>Define critical thinking and distinguish it from ordinary thinking</li>
+        <li>Explain the eight elements of critical thought (Paul and Elder)</li>
+        <li>Apply three evidence criteria: credibility, relevance, sufficiency</li>
+        <li>Distinguish between facts, opinions, and inferences</li>
+        <li>Apply Bloom's Taxonomy to academic reasoning tasks</li>
+        <li>Use critical thinking to strengthen academic writing</li>
+      </ul>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Topics Covered</div>
+      <ol class="overview-topics">
+        <li>What Is Critical Thinking?</li>
+        <li>The Eight Elements of Reasoning (Paul and Elder)</li>
+        <li>The Three Criteria for Evaluating Evidence</li>
+        <li>Fact, Opinion, and Inference</li>
+        <li>Bloom's Taxonomy and Academic Reasoning</li>
+        <li>Applying Critical Thinking in Academic Writing</li>
+        <li>Common Essay Reasoning Errors</li>
+        <li>Module 5 Summary</li>
+      </ol>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Prerequisite</div>
+      <p class="overview-prereq">Lectures 5.1 and 5.2 must be completed before this lecture. This final lecture of Module 5 synthesises the logic and fallacy knowledge from the previous two lectures into the broader discipline of critical thinking.</p>
+      <a class="prereq-link" href="lecture-5-2.html">&#8592; Lecture 5.2 &mdash; Fallacies and Faulty Reasoning</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION I: WHAT IS CT -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section I</span><h2 class="section-title">What Is Critical Thinking?</h2><div class="section-rule"></div></div>
+
+  <p>Critical thinking is the disciplined, self-directed process of actively analysing, synthesising, evaluating, and applying information to reach well-reasoned conclusions. It goes beyond simply accepting what is presented and instead asks: <em>Is this claim true? Is the evidence sufficient? Have I considered alternative explanations? What assumptions are being made?</em> <span class="cite">(Paul &amp; Elder, 2020, p. 4)</span>.</p>
+
+  <p>Ordinary thinking is passive &mdash; it accepts information as it is presented, relies on habit and intuition, and is easily influenced by emotion, authority, and social pressure. Critical thinking is <em>active</em>, <em>self-monitoring</em>, and <em>disciplined</em> &mdash; it constantly examines and corrects itself <span class="cite">(Facione, 2020, p. 10)</span>.</p>
+
+  <p>The difference can be illustrated clearly. When a student reads a news headline that says "University students are lazy and underprepared for the job market," an ordinary thinker might either accept or reject this claim based on whether it matches their gut feeling. A critical thinker asks: Who published this claim? What evidence supports it? What was the sample? Who defines "lazy"? What comparison is being made? What interests does the publisher have? Only after answering these questions would a critical thinker form a view &mdash; and even then, they would hold it with appropriate tentativeness.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Critical Thinking &mdash; Core Characteristics</div>
+    <dl>
+      <dt>Rationality</dt>
+      <dd>Critical thinking is guided by reasons and evidence, not by emotion, habit, or social pressure. This does not mean emotions are irrelevant &mdash; emotional intelligence is part of being fully human &mdash; but it means that evidence, not feeling, determines the conclusion <span class="cite">(Paul &amp; Elder, 2020, p. 8)</span>.</dd>
+      <dt>Self-Awareness</dt>
+      <dd>Critical thinkers are aware of their own biases, assumptions, and limitations. They recognise that their own thinking can be flawed by cultural conditioning, personal experience, wishful thinking, and cognitive shortcuts &mdash; and they take steps to compensate for these influences <span class="cite">(Brookfield, 2019, p. 12)</span>.</dd>
+      <dt>Open-Mindedness</dt>
+      <dd>Critical thinkers are willing to consider evidence that contradicts their existing views, to change their minds when the evidence warrants it, and to entertain perspectives very different from their own. This does not mean agreeing with everything &mdash; it means being genuinely open to being persuaded by good reasons <span class="cite">(Facione, 2020, p. 15)</span>.</dd>
+      <dt>Intellectual Discipline</dt>
+      <dd>Critical thinking is effortful. It requires slowing down, asking hard questions, examining assumptions, checking sources, and revising conclusions. It is the opposite of the mental shortcuts our minds naturally prefer. This is why it must be deliberately cultivated, especially in academic settings <span class="cite">(Halpern, 2019, p. 22)</span>.</dd>
+    </dl>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>Critical Thinking and Academic Success:</strong> Research consistently shows that students with strong critical thinking skills write better essays, achieve higher grades, perform better in careers, and make more informed life decisions. Critical thinking is not a bonus skill &mdash; it is the foundational skill that makes all other academic abilities more powerful <span class="cite">(Halpern, 2019, p. 5)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION II: EIGHT ELEMENTS -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section II</span><h2 class="section-title">The Eight Elements of Reasoning (Paul and Elder)</h2><div class="section-rule"></div></div>
+
+  <p>Richard Paul and Linda Elder, two of the world's leading theorists of critical thinking, identified eight universal elements that are present in all reasoning. These elements provide a comprehensive framework for analysing any argument, text, or piece of reasoning &mdash; including your own academic essays <span class="cite">(Paul &amp; Elder, 2020, p. 60)</span>.</p>
+
+  <p>Understanding these elements means you can take any essay, any speech, or any piece of writing and ask eight powerful analytical questions of it. More importantly, you can use these elements to <em>construct</em> better arguments in your own writing by ensuring that each element is addressed consciously and clearly.</p>
+
+  <div class="elements-grid">
+    <div class="element-card">
+      <div class="element-card-head">1. Purpose</div>
+      <div class="element-card-body">Every piece of reasoning has a <em>purpose or goal</em>. Ask: What is the thinker trying to achieve? What problem are they trying to solve or question are they trying to answer? In academic writing: What is your essay trying to establish?</div>
+    </div>
+    <div class="element-card">
+      <div class="element-card-head">2. Question at Issue</div>
+      <div class="element-card-body">All reasoning is a response to a <em>question or problem</em>. Ask: What is the central question being addressed? Is it clearly stated? Is it the right question? In academic writing: Is your research question focused and answerable?</div>
+    </div>
+    <div class="element-card">
+      <div class="element-card-head">3. Information</div>
+      <div class="element-card-body">Reasoning uses <em>evidence, data, facts, and experience</em> as raw material. Ask: What data is being used? Is it accurate? Is it sufficient? Does it actually support the conclusion? In academic writing: Is your evidence current, credible, and relevant?</div>
+    </div>
+    <div class="element-card">
+      <div class="element-card-head">4. Concepts</div>
+      <div class="element-card-body">Reasoning uses <em>concepts, theories, definitions, and principles</em> to interpret information. Ask: What key terms are being used? Are they defined clearly and consistently? Are the right conceptual frameworks being applied?</div>
+    </div>
+    <div class="element-card">
+      <div class="element-card-head">5. Assumptions</div>
+      <div class="element-card-body">All reasoning takes something for granted &mdash; things accepted without proof. Ask: What is being assumed? Are these assumptions justified? Are they stated or hidden? In academic writing: examine your own unstated assumptions.</div>
+    </div>
+    <div class="element-card">
+      <div class="element-card-head">6. Inferences</div>
+      <div class="element-card-body">Reasoning draws <em>conclusions and interpretations</em> from information. Ask: What is the reasoning step from the evidence to the conclusion? Is this inference justified by the evidence, or does it leap beyond what the evidence supports?</div>
+    </div>
+    <div class="element-card">
+      <div class="element-card-head">7. Point of View</div>
+      <div class="element-card-body">All reasoning is conducted from a <em>perspective or point of view</em>. Ask: What perspective shapes this argument? What is left out from this viewpoint? What would the argument look like from a different perspective?</div>
+    </div>
+    <div class="element-card">
+      <div class="element-card-head">8. Implications</div>
+      <div class="element-card-body">All reasoning has <em>consequences and implications</em>. Ask: If this argument is correct, what follows? What are the practical, ethical, or theoretical consequences of accepting this conclusion? Have these been considered?</div>
+    </div>
+  </div>
+
+  <h3>Applying the Eight Elements to Academic Reading &mdash; Worked Example</h3>
+  <p>Suppose you read an article arguing that Nigerian universities should switch entirely to online examinations. Applying Paul and Elder's framework, a critical thinker would ask:</p>
+  <p><strong>Purpose:</strong> Is the author trying to improve educational efficiency, or do they have a commercial interest in online examination platforms? <strong>Question:</strong> Is the question "Should Nigerian universities use online examinations?" the right question, or should it be "Under what conditions are online examinations appropriate?"? <strong>Information:</strong> What evidence is offered? Are the studies cited from Nigerian contexts or transplanted from different educational systems? <strong>Assumptions:</strong> The argument may assume all students have reliable internet access &mdash; is this true for rural Nigerian students? <strong>Implications:</strong> If all examinations go online, what happens to students in areas with unstable power supply? Each of these questions deepens the analysis and prevents uncritical acceptance <span class="cite">(Paul &amp; Elder, 2020, p. 68)</span>.</p>
+</div>
+
+<!-- SECTION III: EVIDENCE CRITERIA -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section III</span><h2 class="section-title">The Three Criteria for Evaluating Evidence</h2><div class="section-rule"></div></div>
+
+  <p>Critical thinking requires not just <em>finding</em> evidence but <em>evaluating</em> it. Three criteria are essential for assessing whether any piece of evidence genuinely supports a claim in academic writing <span class="cite">(Govier, 2020, p. 72)</span>. These criteria apply whether you are evaluating someone else's argument or constructing your own.</p>
+
+  <table class="compare-table">
+    <thead><tr><th>Criterion</th><th>The Question to Ask</th><th>Academic Application</th><th>Example of Failure</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="lbl">1. Credibility</span></td>
+        <td>Is the source trustworthy, expert, and authoritative? Is the evidence accurate and verifiable?</td>
+        <td>Use peer-reviewed journals, established academic publishers, government statistics, and credentialed experts. Check for methodology transparency.</td>
+        <td>Citing a blog post or unverified Wikipedia article as the primary evidence for a major claim. Citing a study that has been retracted or discredited.</td>
+      </tr>
+      <tr>
+        <td><span class="lbl">2. Relevance</span></td>
+        <td>Does this evidence actually address the specific claim being made? Is it directly related to the conclusion?</td>
+        <td>Every piece of evidence you include must directly support your specific thesis. Evidence that is merely "about the same topic" but does not speak to your exact claim is irrelevant.</td>
+        <td>Arguing that Nigerian students need better mental health support and citing evidence about student debt in the United States &mdash; a different context, different problem, different population.</td>
+      </tr>
+      <tr>
+        <td><span class="lbl">3. Sufficiency</span></td>
+        <td>Is there enough evidence to justify the claim? Does the weight and quantity of evidence match the strength of the conclusion?</td>
+        <td>Strong conclusions require strong and extensive evidence. Tentative claims require less. Never draw a universal conclusion from one study, one anecdote, or one statistic.</td>
+        <td>Concluding that "corporal punishment causes long-term psychological harm to all children" based on a single case study of five children. One study cannot establish a universal principle.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>The Evidence Evaluation Rule:</strong> Before including any evidence in an academic essay, ask yourself three questions in order: (1) Is this source credible enough to be cited in academic work? (2) Does this evidence directly address my specific claim? (3) Is this evidence sufficient to support the strength of the conclusion I am drawing? If any answer is "no" or "uncertain," either find better evidence or weaken your conclusion to match what the evidence can actually support <span class="cite">(Govier, 2020, p. 80)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION IV: FACT, OPINION, INFERENCE -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section IV</span><h2 class="section-title">Fact, Opinion, and Inference</h2><div class="section-rule"></div></div>
+
+  <p>One of the most fundamental skills in critical thinking is the ability to distinguish between facts, opinions, and inferences. Many arguments fail or become confused because writers &mdash; and readers &mdash; treat opinions as facts, or treat inferences as established facts. The confusion between these three categories is a source of enormous analytical error <span class="cite">(Ruggiero, 2019, p. 55)</span>.</p>
+
+  <table class="fot">
+    <thead>
+      <tr>
+        <th class="fact-col">FACT</th>
+        <th class="opin-col">OPINION</th>
+        <th class="inf-col">INFERENCE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="fact-col"><strong>Definition:</strong> A statement that can be verified as true or false by observation, measurement, or scientific investigation. Facts are independent of what anyone thinks or feels about them.</td>
+        <td class="opin-col"><strong>Definition:</strong> A statement that expresses a personal belief, evaluation, preference, or judgement. Opinions may be informed or uninformed, but they cannot be verified as objectively true or false in the same way facts can.</td>
+        <td class="inf-col"><strong>Definition:</strong> A conclusion drawn from facts or observations, but which goes beyond what is directly observed. Inferences interpret evidence and draw conclusions &mdash; they are reasonable but not certain, and they can be wrong.</td>
+      </tr>
+      <tr>
+        <td class="fact-col"><strong>Key test:</strong> Can it be checked by direct evidence independent of personal perspective?</td>
+        <td class="opin-col"><strong>Key test:</strong> Does it reflect a personal evaluation, preference, or value judgement?</td>
+        <td class="inf-col"><strong>Key test:</strong> Is it a reasonable conclusion drawn from observable evidence, but not directly observable itself?</td>
+      </tr>
+      <tr>
+        <td class="fact-col"><em>Example:</em> "Nigeria has 36 states and a Federal Capital Territory."<br><br><em>Example:</em> "The University of Uyo was established in 1983."<br><br><em>Example:</em> "Global surface temperatures have increased by approximately 1.1&deg;C since the pre-industrial period."</td>
+        <td class="opin-col"><em>Example:</em> "Nigerian universities offer the best education in West Africa."<br><br><em>Example:</em> "Mathematics is more important than English in the modern economy."<br><br><em>Example:</em> "The current JAMB cut-off score is too low."</td>
+        <td class="inf-col"><em>Example:</em> The library is empty on a Monday morning. Inference: Students do not use the library at the start of the week. (Reasonable, but the students might be in a seminar, online, or elsewhere &mdash; not certain.)<br><br><em>Example:</em> Test scores dropped after the new policy was introduced. Inference: The policy caused scores to drop. (Possible, but other factors may be responsible.)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Why This Distinction Matters in Academic Writing</h3>
+  <p>Academic writing requires rigorous honesty about what kind of statement you are making. Consider these common errors:</p>
+  <p><strong>Treating opinion as fact:</strong> Writing "It is clear that Nigerian students are not adequately prepared for university-level work" presents a contested judgement as if it were an objective fact. The correct academic form is: "There is evidence to suggest that some Nigerian students may face challenges in transitioning to university-level academic expectations (National Board for Technical Education, 2022)." The hedging is not weakness &mdash; it is intellectual honesty <span class="cite">(Moore &amp; Parker, 2021, p. 38)</span>.</p>
+  <p><strong>Treating inference as fact:</strong> If graduation rates improved after a new curriculum was introduced, it is an <em>inference</em> that the new curriculum caused the improvement &mdash; not a fact. Other factors (improved funding, better lecturers, economic conditions) may be responsible. Claiming the curriculum "caused" the improvement without isolating its specific contribution overstates what the evidence establishes.</p>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>Academic Language Rule:</strong> Use "it is a fact that..." only for things that are genuinely verifiable. Use "in my view," "I argue that," or "this suggests" for opinions and inferences. Use hedging language ("may," "might," "could," "appears to," "suggests") when drawing inferences from evidence. Precision in this language is a marker of academic maturity and intellectual integrity <span class="cite">(Ruggiero, 2019, p. 60)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION V: BLOOM'S TAXONOMY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section V</span><h2 class="section-title">Bloom's Taxonomy and Academic Reasoning</h2><div class="section-rule"></div></div>
+
+  <p>Bloom's Taxonomy, revised by Anderson and Krathwohl (2001), provides a hierarchical classification of the cognitive skills required in education. It describes six levels of thinking, from the most basic (remembering) to the most sophisticated (creating). Critical thinking operates primarily at the higher levels of this taxonomy <span class="cite">(Anderson &amp; Krathwohl, 2019, p. 67)</span>.</p>
+
+  <p>Understanding Bloom's Taxonomy helps you recognise what level of thinking an examination question or essay prompt is asking for &mdash; and ensures that you operate at the appropriate level. Many students fail to achieve high marks not because they lack knowledge, but because they reason at too low a level (describing when they should be analysing, or listing when they should be evaluating).</p>
+
+  <div class="bloom-stack">
+    <div class="bloom-level">
+      <div class="bloom-num">1</div>
+      <div class="bloom-content">
+        <div class="bloom-content-title">Remembering &mdash; The Foundational Level</div>
+        <div class="bloom-content-desc">Recall and recognise facts, definitions, and basic information. Key verbs: list, define, recall, identify, state. Example: "List the four components of an argument." This is the most basic level &mdash; necessary but insufficient for academic success on its own.</div>
+      </div>
+    </div>
+    <div class="bloom-level">
+      <div class="bloom-num">2</div>
+      <div class="bloom-content">
+        <div class="bloom-content-title">Understanding &mdash; Comprehension</div>
+        <div class="bloom-content-desc">Demonstrate understanding by explaining in your own words, summarising, paraphrasing, or classifying. Key verbs: explain, describe, summarise, interpret, classify. Example: "Explain the difference between deductive and inductive reasoning." This goes beyond recitation to showing genuine comprehension.</div>
+      </div>
+    </div>
+    <div class="bloom-level">
+      <div class="bloom-num">3</div>
+      <div class="bloom-content">
+        <div class="bloom-content-title">Applying &mdash; Using Knowledge</div>
+        <div class="bloom-content-desc">Use knowledge or concepts in new contexts, solve problems, or apply principles to specific situations. Key verbs: apply, use, demonstrate, illustrate, solve. Example: "Identify the fallacy in the following argument." This level requires transferring knowledge to a new situation.</div>
+      </div>
+    </div>
+    <div class="bloom-level">
+      <div class="bloom-num">4</div>
+      <div class="bloom-content">
+        <div class="bloom-content-title">Analysing &mdash; Breaking Down</div>
+        <div class="bloom-content-desc">Break material into components, identify relationships, distinguish relevant from irrelevant parts, examine how parts relate to the whole. Key verbs: analyse, distinguish, examine, compare, contrast, deconstruct. Example: "Analyse the logical structure of this argument and identify its strengths and weaknesses." This is the level most examination essays require.</div>
+      </div>
+    </div>
+    <div class="bloom-level">
+      <div class="bloom-num">5</div>
+      <div class="bloom-content">
+        <div class="bloom-content-title">Evaluating &mdash; Making Judgements</div>
+        <div class="bloom-content-desc">Make judgements based on criteria, assess the quality or value of material, justify decisions with evidence and reasoning. Key verbs: evaluate, assess, judge, critique, justify, defend. Example: "Evaluate the strengths and weaknesses of inductive reasoning in social science research." This level requires taking a position and defending it with evidence.</div>
+      </div>
+    </div>
+    <div class="bloom-level">
+      <div class="bloom-num">6</div>
+      <div class="bloom-content">
+        <div class="bloom-content-title">Creating &mdash; The Highest Level</div>
+        <div class="bloom-content-desc">Produce something new by combining elements in an original way &mdash; generate a hypothesis, design a study, construct an argument, or write an original essay that synthesises multiple sources into a new thesis. Key verbs: create, design, construct, formulate, compose. Example: "Write an essay arguing for or against the proposition that critical thinking can be taught." This is the level of genuine intellectual independence.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>Exam Strategy:</strong> Read every examination question carefully and identify which level of Bloom's Taxonomy it requires. The verb is the signal: "List" = Remembering. "Explain" = Understanding. "Identify" = Applying. "Analyse" = Analysing. "Evaluate" = Evaluating. "Argue" or "Discuss" = Creating and Evaluating. Answering at the right level is as important as having the right content <span class="cite">(Anderson &amp; Krathwohl, 2019, p. 75)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION VI: APPLYING CT IN WRITING -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VI</span><h2 class="section-title">Applying Critical Thinking in Academic Writing</h2><div class="section-rule"></div></div>
+
+  <p>Critical thinking is not merely an abstract intellectual exercise &mdash; it must translate directly into the way you read and write academically. A critically thinking writer reads sources with sceptical attention, constructs arguments with logical care, and presents conclusions with appropriate intellectual humility <span class="cite">(Ennis, 2018, p. 42)</span>.</p>
+
+  <h3>Six Common Reasoning Errors in Academic Essays</h3>
+  <p>Even students who understand logic and fallacies in theory often make these specific errors when writing under examination pressure or essay deadlines. Knowing them in advance allows you to avoid them deliberately:</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Six Reasoning Errors to Avoid</div>
+    <dl>
+      <dt>1. The Unsupported Assertion</dt>
+      <dd>Making a claim without providing any evidence or reasoning to support it. Example: Writing "Social media has damaged communication skills in Nigerian youth" as if it were self-evident, without citing any research, data, or reasoning. Every significant claim must be followed by evidence or a logical argument for why it is true <span class="cite">(Moore &amp; Parker, 2021, p. 44)</span>.</dd>
+      <dt>2. The Leap in Reasoning</dt>
+      <dd>Drawing a conclusion that goes significantly beyond what the evidence supports. Example: Citing one study showing that students who attended private secondary schools scored higher in university entrance examinations, then concluding "Private education is superior to public education in all respects." The evidence speaks only to one measure &mdash; entrance examination scores &mdash; in one study. It cannot support a universal conclusion about all aspects of education.</dd>
+      <dt>3. Ignoring Counter-Evidence</dt>
+      <dd>Presenting only the evidence that supports your position while ignoring evidence that contradicts it. This is intellectually dishonest and logically irresponsible. Academic writing requires you to engage with the strongest counter-arguments, acknowledge what they establish, and explain why your position is still the most defensible despite them <span class="cite">(Ennis, 2018, p. 50)</span>.</dd>
+      <dt>4. Confusing Correlation with Causation</dt>
+      <dd>Concluding that because two things are correlated, one caused the other (this is the post hoc fallacy in action, studied in Lecture 5.2). Example: "States with more universities have higher rates of entrepreneurship. Therefore, universities cause entrepreneurship." Both may be caused by a third factor &mdash; higher investment in education by wealthier states &mdash; rather than one causing the other.</dd>
+      <dt>5. The Misuse of Quotations</dt>
+      <dd>Using a quotation from an author to support a claim, when the author actually meant something different in context, or when the quotation is taken from a work about a different topic or time period. Always read the full context of any quotation you use, and ensure it genuinely supports your specific claim rather than merely sounding related to it <span class="cite">(Brookfield, 2019, p. 35)</span>.</dd>
+      <dt>6. Circular Conclusion</dt>
+      <dd>Ending an essay by simply restating the thesis in slightly different words, rather than showing how the body of evidence and reasoning has <em>established</em> the thesis. A strong conclusion demonstrates that the argument has been made, synthesises the key evidence, and may extend to broader implications. It does not merely announce the thesis again.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION VII: MODULE 5 SUMMARY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VII</span><h2 class="section-title">Module 5 &mdash; Complete Summary</h2><div class="section-rule"></div></div>
+  <p>Module 5 has developed three interconnected competencies: the formal analysis of logical arguments (Lecture 5.1), the identification and avoidance of fallacious reasoning (Lecture 5.2), and the broader discipline of critical thinking applied to academic contexts (this lecture). Together, these three lectures equip you to construct, evaluate, and communicate arguments with genuine intellectual rigour.</p>
+
+  <div class="module-summary">
+    <div class="ms-header"><h3>Module 5 &mdash; Logical Reasoning: Three Lectures in Summary</h3></div>
+    <div class="ms-grid">
+      <div class="ms-col">
+        <div class="ms-lec-title">Lecture 5.1 &mdash; Logic and Arguments</div>
+        <ul class="ms-points">
+          <li>Logic: systematic study of correct reasoning</li>
+          <li>Formal vs. informal logic</li>
+          <li>Arguments: claims, premises, conclusions</li>
+          <li>Deductive vs. inductive reasoning</li>
+          <li>Valid and invalid arguments (3 examples each)</li>
+          <li>Sound and unsound arguments (4-cell grid)</li>
+          <li>The argument evaluation checklist</li>
+        </ul>
+      </div>
+      <div class="ms-col">
+        <div class="ms-lec-title">Lecture 5.2 &mdash; Fallacies</div>
+        <ul class="ms-points">
+          <li>Definition and danger of fallacies</li>
+          <li>Formal vs. informal fallacies</li>
+          <li>Ad Hominem: attack on the person</li>
+          <li>Straw Man: distortion of opposing view</li>
+          <li>False Dichotomy: artificial binary</li>
+          <li>Hasty Generalisation: small sample, broad claim</li>
+          <li>Appeal to Authority: wrong expert</li>
+          <li>Slippery Slope: unjustified causal chain</li>
+          <li>Circular Reasoning: conclusion as premise</li>
+          <li>Red Herring: irrelevant distraction</li>
+          <li>Post Hoc: correlation mistaken for causation</li>
+          <li>Bandwagon: popularity as evidence</li>
+        </ul>
+      </div>
+      <div class="ms-col">
+        <div class="ms-lec-title">Lecture 5.3 &mdash; Critical Thinking</div>
+        <ul class="ms-points">
+          <li>CT: disciplined, self-directed reasoning</li>
+          <li>Eight elements of reasoning (Paul and Elder)</li>
+          <li>Evidence criteria: credibility, relevance, sufficiency</li>
+          <li>Fact vs. opinion vs. inference</li>
+          <li>Bloom's Taxonomy: six cognitive levels</li>
+          <li>Six common essay reasoning errors</li>
+          <li>Academic language and hedging</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VIII</span><h2 class="section-title">Practical Activity &mdash; Critical Analysis</h2><div class="section-rule"></div></div>
+  <p>Apply all three lectures of Module 5 to the following exercises. These are designed to develop integrative critical thinking skills across logic, fallacy identification, and analytical reasoning.</p>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <span style="font-size:1.1rem">&#128270;</span>
+      <div><div class="activity-label">Practical Activity &mdash; Section VIII</div><div class="activity-title">Integrated Critical Thinking Exercises</div></div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-instruction">Apply the full framework of Module 5 to each exercise. Where appropriate, name the element of reasoning, the fallacy, or the Bloom's level involved.</p>
+      <ul class="activity-list">
+        <li class="activity-item"><span class="a-num">1</span><span class="a-text">Read a newspaper editorial from any Nigerian publication this week. Using Paul and Elder's eight elements, analyse the argument the editorial makes. Identify the purpose, question at issue, key assumptions, and two potential weaknesses in the reasoning.</span></li>
+        <li class="activity-item"><span class="a-num">2</span><span class="a-text">Classify each of the following as FACT, OPINION, or INFERENCE, and justify your classification: (a) "Nigeria has the largest economy in Africa by GDP." (b) "Nigerian universities produce graduates who are not ready for the workforce." (c) "The library was locked when I arrived, so it must be closed for maintenance."</span></li>
+        <li class="activity-item"><span class="a-num">3</span><span class="a-text">Examine the following examination question: "Evaluate the impact of digital technology on communication in Nigerian higher education." At what level of Bloom's Taxonomy does this question operate? What does a response at that level look like, compared to a response at the Remembering level?</span></li>
+        <li class="activity-item"><span class="a-num">4</span><span class="a-text">A lecturer argues: "This textbook is the best on the market because it was written by a Professor who has been teaching for 30 years and who says in the preface that it is the most comprehensive guide available." Identify (a) the fallacy related to authority, (b) the fallacy related to circular reasoning, and (c) explain how you would evaluate the textbook's quality properly.</span></li>
+        <li class="activity-item"><span class="a-num">5</span><span class="a-text">Write a short essay (200&ndash;250 words) in which you use all three evidence criteria (credibility, relevance, sufficiency) to evaluate the evidence in the following claim: <em>"A 2022 study conducted at a single private university in Lagos, involving 30 students, found that those who attended study groups scored an average of 12 points higher than those who studied alone. Therefore, study groups improve examination performance."</em></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Conclusion</span><h2 class="section-title">Key Takeaway and Module Completion</h2><div class="section-rule"></div></div>
+  <div class="conclusion-box">
+    <p>Critical thinking is not simply an academic requirement &mdash; it is one of the most important intellectual capacities a person can develop for navigating the complexity of modern life. In an era of social media misinformation, political manipulation, advertising excess, and information overload, the ability to slow down, ask the right questions, evaluate evidence rigorously, and reach well-reasoned conclusions is both rare and precious <span class="cite">(Paul &amp; Elder, 2020, p. 200)</span>.</p>
+    <br>
+    <p>With the completion of Lecture 5.3, you have covered the complete arc of <strong>Module 5: Logical Reasoning</strong>. You began with the formal analysis of arguments &mdash; claims, premises, conclusions, validity, soundness. You then examined the ten major logical fallacies &mdash; the errors in reasoning that weaken arguments and mislead audiences. And you have now situated all of this within the broader framework of critical thinking, evidence evaluation, and analytical writing. These three lectures provide you with the tools not just to pass examinations, but to think, argue, and communicate at the highest level that academic life demands <span class="cite">(Halpern, 2019, p. 210)</span>.</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div class="exam-section">
+  <div class="exam-header">
+    <div><h2>Examination Questions</h2><p>Lecture 5.3 &mdash; Critical Thinking and Analytical Reasoning</p></div>
+    <span class="exam-total">10 Questions &middot; 30 Marks</span>
+  </div>
+  <div class="exam-body">
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best describes critical thinking?</p></div><div class="q-options"><div class="q-option">A. The ability to memorise and recall large amounts of information accurately</div><div class="q-option">B. The disciplined, self-directed process of analysing, evaluating, and applying information to reach well-reasoned conclusions</div><div class="q-option">C. Disagreeing with authority figures on principle</div><div class="q-option">D. Writing essays with many references and quotations</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">Paul and Elder identified eight elements of reasoning. Name any FIVE of these elements and for each, write one sentence explaining what it means and one question a critical thinker would ask using it.</p></div><p class="q-marks">[5 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the correct definition of an INFERENCE?</p></div><div class="q-options"><div class="q-option">A. A statement that can be directly verified as true or false by observation or measurement</div><div class="q-option">B. A personal belief or evaluation that reflects a value judgement</div><div class="q-option">C. A conclusion drawn from observable evidence that goes beyond what is directly observed and may be wrong</div><div class="q-option">D. A fallacy in which a conclusion is used as its own premise</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Classify and Explain</span><p class="q-text">Classify each of the following statements as FACT, OPINION, or INFERENCE, and explain your classification in one sentence each:<br>(a) "The University of Lagos was founded in 1962."<br>(b) "Science is more valuable to Nigeria's development than the humanities."<br>(c) "The lecture hall was empty when I arrived at 9am, so the class must have been cancelled."</p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">Which level of Bloom's Taxonomy is demonstrated when a student writes an essay arguing for a position and defending it against the strongest counter-arguments?</p></div><div class="q-options"><div class="q-option">A. Remembering</div><div class="q-option">B. Understanding</div><div class="q-option">C. Applying</div><div class="q-option">D. Evaluating</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Apply the Three Criteria</span><p class="q-text">Apply the three criteria for evaluating evidence (credibility, relevance, sufficiency) to the following: <em>"A single anonymous online forum post from 2019 claims that eating breakfast improves examination scores. My essay argues that Nigerian universities should require students to eat breakfast before examinations."</em> Identify which criteria are violated and explain why.</p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">When a writer draws a conclusion that goes significantly beyond what the evidence actually supports, this is called:</p></div><div class="q-options"><div class="q-option">A. A circular conclusion</div><div class="q-option">B. A leap in reasoning</div><div class="q-option">C. A misuse of quotation</div><div class="q-option">D. An unsupported assertion</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Explain with Examples</span><p class="q-text">Explain the difference between an OPINION and an INFERENCE in academic writing. Why is it important not to treat either one as a fact? Provide one original example of each from any academic or Nigerian social context.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Bloom's Analysis</span><p class="q-text">An examination question reads: <em>"Describe the causes of student dropout in Nigerian tertiary institutions."</em> (a) At what level of Bloom's Taxonomy does this question operate? (b) Rewrite the question so that it operates at the Evaluating level. (c) Explain what a strong response at the Evaluating level would need to include that a Remembering-level response would not.</p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Essay</span><p class="q-text">Write an essay of 280&ndash;350 words on the following: <em>"Critical thinking is the most important skill a university student can develop."</em> In your essay, define critical thinking, draw on at least TWO concepts from Module 5 (Logic, Fallacies, or Critical Thinking), and evaluate whether you agree or disagree with the statement, using evidence and reasoning to support your position.</p></div><p class="q-marks">[8 marks]</p></div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="references-section">
+  <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+  <div class="ref-list">
+    <div class="ref-item">Anderson, L. W., &amp; Krathwohl, D. R. (2019). <em>A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom's Taxonomy</em> (2nd ed.). Pearson.</div>
+    <div class="ref-item">Brookfield, S. D. (2019). <em>Teaching for Critical Thinking: Tools and Techniques to Help Students Question Their Assumptions</em> (2nd ed.). Jossey-Bass.</div>
+    <div class="ref-item">Ennis, R. H. (2018). Critical thinking across the curriculum: A vision. <em>Topoi</em>, 37(1), 165&ndash;184.</div>
+    <div class="ref-item">Facione, P. A. (2020). <em>Critical Thinking: A Statement of Expert Consensus for Purposes of Educational Assessment and Instruction</em> (2nd ed.). California Academic Press.</div>
+    <div class="ref-item">Govier, T. (2020). <em>A Practical Study of Argument</em> (8th ed.). Cengage Learning.</div>
+    <div class="ref-item">Halpern, D. F. (2019). <em>Thought and Knowledge: An Introduction to Critical Thinking</em> (6th ed.). Routledge.</div>
+    <div class="ref-item">Moore, B. N., &amp; Parker, R. (2021). <em>Critical Thinking</em> (13th ed.). McGraw-Hill.</div>
+    <div class="ref-item">Nwosu, C. E., &amp; Emeka, O. (2022). Critical thinking dispositions among undergraduate students in South-South Nigerian universities. <em>Journal of Higher Education in Africa</em>, 20(1), 77&ndash;96.</div>
+    <div class="ref-item">Paul, R., &amp; Elder, L. (2020). <em>Critical Thinking: Tools for Taking Charge of Your Professional and Personal Life</em> (3rd ed.). Pearson.</div>
+    <div class="ref-item">Ruggiero, V. R. (2019). <em>Beyond Feelings: A Guide to Critical Thinking</em> (11th ed.). McGraw-Hill.</div>
+  </div>
+</div>
+
+<a class="next-lecture" href="index.html">
+  <div>
+    <div class="next-label">Module 5 Complete &mdash; Return to Course Index</div>
+    <div class="next-title">Communication in English &mdash; Course Index</div>
+    <div class="next-desc">View all modules and lectures &middot; Continue to Module 6: Digital Literacy</div>
+  </div>
+  <span class="next-arrow">&rarr;</span>
+</a>
+<div class="lecture-nav">
+  <a class="lnav-btn" href="lecture-5-2.html">&#8592; Lecture 5.2</a>
+  <a class="lnav-index" href="index.html">Course Index</a>
+  <a class="lnav-btn disabled" href="#">Module 6 &rarr;</a>
+</div>
+
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>Communication in English &middot; Lecture 5.3 &nbsp;&middot;&nbsp; Dr. Maurice Udom &nbsp;&middot;&nbsp; <a href="index.html">Course Index</a> &nbsp;&middot;&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>&copy; 2026 Maurice Udom. All rights reserved.</footer>
+</body>
+</html>

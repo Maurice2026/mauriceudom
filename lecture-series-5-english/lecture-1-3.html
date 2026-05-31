@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 1.3: Suprasegmentals — Stress and Intonation — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(1){animation-delay:.05s}.section-block:nth-child(2){animation-delay:.10s}.section-block:nth-child(3){animation-delay:.15s}.section-block:nth-child(4){animation-delay:.20s}.section-block:nth-child(5){animation-delay:.25s}.section-block:nth-child(6){animation-delay:.30s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    .ipa{font-family:'Source Serif 4',serif;color:var(--mod);font-weight:700;font-size:1rem}
+
+    /* STRESS SHIFT TABLE */
+    .stress-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .stress-table th{background:var(--mod);color:var(--white);padding:11px 18px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .stress-table td{padding:11px 18px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:middle}
+    .stress-table tr:last-child td{border-bottom:none}
+    .stress-table tr:nth-child(even) td{background:#faf6ef}
+    .stress-mark{color:var(--gold-dk);font-weight:900;font-size:1.1em}
+
+    /* INTONATION DIAGRAM */
+    .diagram-wrap{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:24px;margin:24px 0;text-align:center}
+    .diagram-caption{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px;line-height:1.5}
+
+    /* STRESS MEANING EXERCISE */
+    .stress-exercise{background:var(--ink);border-radius:4px;overflow:hidden;margin:28px 0}
+    .stress-exercise-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25)}
+    .stress-exercise-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .stress-exercise-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .stress-exercise-body{padding:24px}
+    .stress-sentence-list{list-style:none;display:grid;gap:12px}
+    .stress-sentence-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:14px 18px}
+    .stress-num{display:inline-block;background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.75rem;font-weight:900;padding:1px 8px;border-radius:2px;margin-right:10px}
+    .stress-sentence{font-size:.97rem;color:var(--white);line-height:1.6;margin-bottom:6px}
+    .stress-meaning{font-size:.78rem;color:#8a9ab4}
+    strong.stressed{color:var(--gold);text-decoration:underline;text-decoration-color:rgba(255,184,0,.5)}
+
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-word{font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--white);margin-bottom:2px}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .tune-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}.activity-item{grid-template-columns:28px 1fr}}
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 1 &nbsp;·&nbsp; Lecture 3</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Suprasegmentals — Stress and Intonation</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Phonetics &amp; Phonology</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>Define suprasegmentals and explain their role in communication</li>
+<li>Apply the noun-verb stress shift rule correctly</li>
+<li>Distinguish content words from structure words in a sentence</li>
+<li>Identify falling, rising, and fall-rise intonation patterns</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>What Are Suprasegmentals?</li>
+<li>Word Stress — The Heartbeat of the Word</li>
+<li>Sentence Stress: Content vs. Structure Words</li>
+<li>Intonation — The Melody of Meaning</li>
+<li>Practical Activity: Stress Shift and Meaning</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lectures 1.1 and 1.2 before proceeding.</p>
+        <a class="prereq-link" href="lecture-1-2.html">← Lecture 1.2 — Vowels and Consonants in Depth</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">What Are Suprasegmentals?</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Lectures 1.1 and 1.2 focused on the <em>segments</em> of speech — the individual vowels and consonants that make up words. This lecture turns to the features that operate <em>above and across</em> those segments: the <strong>suprasegmentals</strong>. These are the prosodic properties of speech — stress, intonation, tone, rhythm, and tempo — that function at the level of the syllable, word, phrase, and entire utterance <span class="cite">(Cruttenden, 2021, p. 250)</span>.</p>
+    <p>A student may pronounce every individual sound perfectly, yet still be misunderstood if stress is placed on the wrong syllable or if intonation conveys the wrong communicative intent <span class="cite">(Jenkins, 2022, p. 11)</span>. Suprasegmentals carry meaning independently of phonemes — they are the <em>music</em> of the language <span class="cite">(Roach, 2022, p. 88)</span>.</p>
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <dl>
+        <dt>Suprasegmentals</dt>
+        <dd>Phonological features that extend over more than one sound segment — including word stress, sentence stress, intonation, rhythm, and tempo. They modify and add meaning to the segmental content of utterances <span class="cite">(Ladefoged &amp; Johnson, 2020, p. 231)</span>.</dd>
+        <dt>Prosody</dt>
+        <dd>The broader term for the study of the rhythm and melody of speech, encompassing all suprasegmental features <span class="cite">(Skandera &amp; Burleigh, 2019, p. 68)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Word Stress — The Heartbeat of the Word</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>In English, every word with more than one syllable has one syllable that receives greater prominence — it is spoken with greater <strong>loudness</strong>, <strong>length</strong>, and <strong>pitch height</strong> than the others <span class="cite">(Roach, 2022, p. 90)</span>. This is the <strong>stressed syllable</strong>. In IPA transcription, stress is marked by a small vertical line <span class="ipa">ˈ</span> before the stressed syllable: <em>photograph</em> → <span class="ipa">/ˈfəʊtəɡrɑːf/</span>.</p>
+
+    <h3>The Stress-Shift Rule: Noun vs. Verb Pairs</h3>
+    <p>One of the most academically significant stress patterns in English is the <strong>noun-verb stress shift</strong> — where the same word functions as either a noun or a verb depending on which syllable carries the stress <span class="cite">(Cruttenden, 2021, p. 262)</span>. This is particularly relevant in academic and formal professional English:</p>
+
+    <table class="stress-table">
+      <thead><tr><th>Word</th><th>As a Noun (stress on Syl. 1)</th><th>As a Verb (stress on Syl. 2)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>present</strong></td><td><span class="stress-mark">ˈ</span>present — <em>a gift</em> &nbsp;<span class="ipa">/ˈpreznt/</span></td><td>pre<span class="stress-mark">ˈ</span>sent — <em>to give/show</em> &nbsp;<span class="ipa">/prɪˈzent/</span></td></tr>
+        <tr><td><strong>object</strong></td><td><span class="stress-mark">ˈ</span>object — <em>a thing</em> &nbsp;<span class="ipa">/ˈɒbdʒɪkt/</span></td><td>ob<span class="stress-mark">ˈ</span>ject — <em>to oppose</em> &nbsp;<span class="ipa">/əbˈdʒekt/</span></td></tr>
+        <tr><td><strong>permit</strong></td><td><span class="stress-mark">ˈ</span>permit — <em>a document</em> &nbsp;<span class="ipa">/ˈpɜːmɪt/</span></td><td>per<span class="stress-mark">ˈ</span>mit — <em>to allow</em> &nbsp;<span class="ipa">/pəˈmɪt/</span></td></tr>
+        <tr><td><strong>conduct</strong></td><td><span class="stress-mark">ˈ</span>conduct — <em>behaviour</em> &nbsp;<span class="ipa">/ˈkɒndʌkt/</span></td><td>con<span class="stress-mark">ˈ</span>duct — <em>to lead/manage</em> &nbsp;<span class="ipa">/kənˈdʌkt/</span></td></tr>
+        <tr><td><strong>record</strong></td><td><span class="stress-mark">ˈ</span>record — <em>a document/disc</em> &nbsp;<span class="ipa">/ˈrekɔːd/</span></td><td>re<span class="stress-mark">ˈ</span>cord — <em>to capture</em> &nbsp;<span class="ipa">/rɪˈkɔːd/</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Sentence Stress: Content vs. Structure Words</h3>
+    <p>English is a <strong>stress-timed language</strong> — its rhythm is created by the regular recurrence of stressed syllables, regardless of how many unstressed syllables fall between them <span class="cite">(Skandera &amp; Burleigh, 2019, p. 72)</span>. This means certain words in a sentence are stressed while others are reduced.</p>
+    <div class="key-concept">
+      <div class="key-concept-label">Content Words vs. Structure Words</div>
+      <dl>
+        <dt>Content Words — Stressed</dt>
+        <dd>Nouns, main verbs, adjectives, and adverbs. They carry the core meaning of the sentence and receive stress: <em><strong>students</strong>, <strong>reading</strong>, <strong>library</strong></em>.</dd>
+        <dt>Structure Words — Unstressed</dt>
+        <dd>Articles (<em>a, the</em>), prepositions (<em>in, at, of</em>), pronouns (<em>he, she, it</em>), and conjunctions (<em>and, but</em>). These are grammatical glue — typically reduced to the schwa <span class="ipa">/ə/</span> in fluent speech <span class="cite">(Deterding, 2018, p. 322)</span>.</dd>
+      </dl>
+    </div>
+    <p>Example: <em>"The students are reading in the library."</em> In natural speech, <em>the</em> <span class="ipa">/ðə/</span>, <em>are</em> <span class="ipa">/ə/</span>, and <em>in</em> <span class="ipa">/ɪn/</span> are weakened and spoken rapidly, while <em>students</em>, <em>reading</em>, and <em>library</em> carry full stress <span class="cite">(Aremo, 2021, p. 517)</span>.</p>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Intonation — The Melody of Meaning</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Intonation is the systematic rise and fall of pitch across an utterance. It is not random — in English, specific intonation patterns carry specific communicative meanings, signalling whether the speaker has finished speaking, is asking a question, making a request, or expressing uncertainty <span class="cite">(Roach, 2022, p. 107)</span>.</p>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;height:auto;display:block;margin:0 auto">
+        <defs><style>.it-label{font-family:'Source Serif 4',Georgia,serif;font-size:12px;fill:#1F3864;font-weight:700}.it-ex{font-family:'Source Serif 4',Georgia,serif;font-size:11px;fill:#6b5f4e;font-style:italic}.it-arr{stroke:#1F3864;stroke-width:2.5;fill:none;stroke-linecap:round}.it-title{font-family:'Playfair Display',Georgia,serif;font-size:12px;fill:#1F3864;font-weight:700}.it-bg{fill:#e8edf5;rx:4}</style></defs>
+
+        <!-- Box 1: Falling -->
+        <rect x="10" y="10" width="148" height="195" rx="4" fill="#e8edf5" stroke="#d6cbb8" stroke-width="1"/>
+        <text class="it-title" x="84" y="30" text-anchor="middle">Falling ↘</text>
+        <text class="it-label" x="84" y="48" text-anchor="middle">Definite Statements</text>
+        <path class="it-arr" d="M 30,80 Q 84,75 138,130" marker-end="url(#arr)"/>
+        <text class="it-ex" x="84" y="155" text-anchor="middle">"She passed the exam."</text>
+        <text class="it-ex" x="84" y="170" text-anchor="middle">"Where is the hall?"</text>
+        <text class="it-ex" x="84" y="185" text-anchor="middle">Commands / Wh-questions</text>
+
+        <!-- Box 2: Rising -->
+        <rect x="176" y="10" width="148" height="195" rx="4" fill="#e8edf5" stroke="#d6cbb8" stroke-width="1"/>
+        <text class="it-title" x="250" y="30" text-anchor="middle">Rising ↗</text>
+        <text class="it-label" x="250" y="48" text-anchor="middle">Yes/No Questions</text>
+        <path class="it-arr" d="M 196,130 Q 250,75 304,70" marker-end="url(#arr)"/>
+        <text class="it-ex" x="250" y="155" text-anchor="middle">"Are you ready?"</text>
+        <text class="it-ex" x="250" y="170" text-anchor="middle">"Is this correct?"</text>
+        <text class="it-ex" x="250" y="185" text-anchor="middle">Uncertainty / Politeness</text>
+
+        <!-- Box 3: Fall-Rise -->
+        <rect x="342" y="10" width="148" height="195" rx="4" fill="#e8edf5" stroke="#d6cbb8" stroke-width="1"/>
+        <text class="it-title" x="416" y="30" text-anchor="middle">Fall-Rise ↘↗</text>
+        <text class="it-label" x="416" y="48" text-anchor="middle">Implied Meaning</text>
+        <path class="it-arr" d="M 362,75 Q 395,120 416,130 Q 440,120 462,80" marker-end="url(#arr2)"/>
+        <text class="it-ex" x="416" y="155" text-anchor="middle">"I'd love to…"</text>
+        <text class="it-ex" x="416" y="170" text-anchor="middle">"The report is fine…"</text>
+        <text class="it-ex" x="416" y="185" text-anchor="middle">Reservation / More to say</text>
+
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#1F3864"/></marker>
+          <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#1F3864"/></marker>
+        </defs>
+      </svg>
+      <p class="diagram-caption">Figure 3: The three principal intonation patterns of English and their communicative functions. Adapted from Cruttenden <span class="cite">(2021, p. 280)</span> and Roach <span class="cite">(2022, p. 110)</span>.</p>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Intelligibility Note:</strong> In Nigerian English, a tendency toward a flatter, more level pitch pattern can obscure the distinction between statements and questions, potentially causing confusion in academic presentations, seminars, and oral examinations <span class="cite">(Oyebola &amp; Gut, 2020, p. 181)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION IV: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Practical Activity: Stress Shift and Meaning</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>One of the most striking demonstrations of how suprasegmentals carry independent meaning is the <strong>stress-shift exercise</strong>. Read the same sentence multiple times, each time placing the primary stress on a different word. The change in stress shifts the implied meaning — even though every phoneme stays identical <span class="cite">(Skandera &amp; Burleigh, 2019, p. 76)</span>.</p>
+
+    <div class="stress-exercise">
+      <div class="stress-exercise-header">
+        <div class="stress-exercise-label">Core Sentence Activity</div>
+        <div class="stress-exercise-title">"I didn't say she stole the money."</div>
+      </div>
+      <div class="stress-exercise-body">
+        <ul class="stress-sentence-list">
+          <li class="stress-sentence-item"><span class="stress-num">1</span><span class="stress-sentence"><strong class="stressed">I</strong> didn't say she stole the money.</span><div class="stress-meaning">Implied meaning: Someone else said it — not me.</div></li>
+          <li class="stress-sentence-item"><span class="stress-num">2</span><span class="stress-sentence">I <strong class="stressed">didn't</strong> say she stole the money.</span><div class="stress-meaning">Implied meaning: Strong denial — I absolutely did not say it.</div></li>
+          <li class="stress-sentence-item"><span class="stress-num">3</span><span class="stress-sentence">I didn't <strong class="stressed">say</strong> she stole the money.</span><div class="stress-meaning">Implied meaning: I implied it or wrote it — but did not say it aloud.</div></li>
+          <li class="stress-sentence-item"><span class="stress-num">4</span><span class="stress-sentence">I didn't say <strong class="stressed">she</strong> stole the money.</span><div class="stress-meaning">Implied meaning: I said someone else stole it — not specifically her.</div></li>
+          <li class="stress-sentence-item"><span class="stress-num">5</span><span class="stress-sentence">I didn't say she <strong class="stressed">stole</strong> the money.</span><div class="stress-meaning">Implied meaning: She may have borrowed it — the method is in question.</div></li>
+          <li class="stress-sentence-item"><span class="stress-num">6</span><span class="stress-sentence">I didn't say she stole <strong class="stressed">the</strong> money.</span><div class="stress-meaning">Implied meaning: She stole something else, or some (unspecified) money.</div></li>
+          <li class="stress-sentence-item"><span class="stress-num">7</span><span class="stress-sentence">I didn't say she stole the <strong class="stressed">money</strong>.</span><div class="stress-meaning">Implied meaning: She stole something — but not specifically money.</div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Written Activity</div>
+          <div class="activity-title">Identify the Intonation Tune — 10 Utterances</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">For each utterance below, identify whether the appropriate intonation is Falling (↘), Rising (↗), or Fall-Rise (↘↗). Write your answer and one-sentence justification for each.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-word">"Close the door."</div><div class="activity-answer">A direct command — state the tune and explain why.</div></div><span class="tune-badge">Command</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-word">"Did you complete the assignment?"</div><div class="activity-answer">A Yes/No question seeking a binary response.</div></div><span class="tune-badge">Yes/No Q</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-word">"Where did she go?"</div><div class="activity-answer">A Wh-question — the answer is open-ended.</div></div><span class="tune-badge">Wh-Q</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-word">"The results were published last week."</div><div class="activity-answer">A plain declarative statement of fact.</div></div><span class="tune-badge">Statement</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-word">"I'll try to attend…"</div><div class="activity-answer">The speaker implies hesitation or a condition.</div></div><span class="tune-badge">Reservation</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-word">"Could you pass the form, please?"</div><div class="activity-answer">A polite request — consider the social register.</div></div><span class="tune-badge">Request</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-word">"The lecture starts at nine."</div><div class="activity-answer">A definitive statement of schedule.</div></div><span class="tune-badge">Statement</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-word">"Really?"</div><div class="activity-answer">A short response expressing surprise or seeking confirmation.</div></div><span class="tune-badge">Reaction</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-word">"The essay is good…"</div><div class="activity-answer">The speaker has a reservation — something is left unsaid.</div></div><span class="tune-badge">Reservation</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-word">"What is the capital of Nigeria?"</div><div class="activity-answer">A Wh-question in an examination or classroom context.</div></div><span class="tune-badge">Wh-Q</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION V -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>A student may pronounce every phoneme flawlessly, yet still fail to communicate effectively if stress and intonation are misplaced. Suprasegmentals are not decorative features of speech — they are <strong>meaning-bearing</strong> at every level of utterance <span class="cite">(Jenkins, 2022, p. 15)</span>.</p>
+      <br>
+      <p>Mastering the stress-shift rule, recognising content and structure words, and controlling falling and rising intonation patterns will make a direct and measurable difference to performance in academic presentations, seminars, viva examinations, and professional communication <span class="cite">(Aremo, 2021, p. 520)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 1.3 — Suprasegmentals: Stress and Intonation</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Suprasegmentals are best described as:</p></div><div class="q-options"><div class="q-option">A. &nbsp;Individual vowel and consonant sounds</div><div class="q-option">B. &nbsp;Features that operate above or across segments — including stress, intonation, and rhythm</div><div class="q-option">C. &nbsp;Silent letters retained from Latin and French borrowings</div><div class="q-option">D. &nbsp;The classification of consonants by place of articulation</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">Explain the noun-verb stress-shift rule in English. Using the word <em>permit</em>, show how a change in stress position changes the grammatical category and meaning of the word.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Identify</span><p class="q-text">Identify the stressed syllable in each of the following words by writing the IPA transcription and placing the stress mark (ˈ) in the correct position: &nbsp;<strong>photograph &nbsp;·&nbsp; photography &nbsp;·&nbsp; record (noun) &nbsp;·&nbsp; record (verb)</strong></p></div><p class="q-marks">[4 marks — 1 per word]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span><p class="q-text">Which intonation pattern is typically used for Yes/No questions in English?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Falling intonation ↘</div><div class="q-option">B. &nbsp;Rising intonation ↗</div><div class="q-option">C. &nbsp;Fall-rise intonation ↘↗</div><div class="q-option">D. &nbsp;Level tone with no pitch movement</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between <em>content words</em> and <em>structure words</em> in English sentence stress. Give three examples of each category and explain why structure words are typically reduced to the schwa in fluent speech.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Analyse</span><p class="q-text">Read this sentence: <em>"I didn't say she stole the money."</em> Choose <strong>any two</strong> words and, for each, write how stressing that particular word changes the implied meaning of the utterance.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">The fall-rise intonation pattern (↘↗) is most typically used to signal:</p></div><div class="q-options"><div class="q-option">A. &nbsp;A completed, definite statement</div><div class="q-option">B. &nbsp;A direct command or instruction</div><div class="q-option">C. &nbsp;A reservation, implied meaning, or that more is to follow</div><div class="q-option">D. &nbsp;A standard Wh-question</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Write Out</span><p class="q-text">Explain what is meant by the statement that English is a <em>stress-timed language</em>. How does this rhythmic property affect the way structure words are pronounced in connected speech?</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Identify &amp; Explain</span><p class="q-text">Identify the intonation tune — falling, rising, or fall-rise — most appropriate for each of the following utterances, and give a one-sentence reason for your answer: &nbsp;(a) <em>"What time is the seminar?"</em> &nbsp; (b) <em>"Are you a registered student?"</em> &nbsp; (c) <em>"The thesis is ready…"</em></p></div><p class="q-marks">[3 marks — 1 per utterance]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain why suprasegmentals are described as <em>meaning-bearing</em> features of speech. Use specific examples of stress shift and intonation contrast to support your argument.</p></div><p class="q-marks">[2 marks]</p></div>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Aremo, B. (2021). Phonological awareness and reading development among first-year undergraduates in Nigerian universities. <em>Journal of Language Teaching and Research</em>, 12(4), 512–523.</div>
+      <div class="ref-item">Cruttenden, A. (2021). <em>Gimson's Pronunciation of English</em> (9th ed.). Routledge.</div>
+      <div class="ref-item">Deterding, D. (2018). Pronunciation problems in English as a lingua franca. <em>Journal of the International Phonetic Association</em>, 48(3), 317–334.</div>
+      <div class="ref-item">Jenkins, J. (2022). English as a lingua franca: Phonological intelligibility revisited. <em>Applied Linguistics</em>, 43(1), 1–22.</div>
+      <div class="ref-item">Ladefoged, P., &amp; Johnson, K. (2020). <em>A Course in Phonetics</em> (8th ed.). Cengage Learning.</div>
+      <div class="ref-item">Oyebola, F., &amp; Gut, U. (2020). The phonetics of Nigerian English: Segmental features and intelligibility. <em>English World-Wide</em>, 41(2), 165–198.</div>
+      <div class="ref-item">Roach, P. (2022). <em>English Phonetics and Phonology: A Practical Course</em> (5th ed.). Cambridge University Press.</div>
+      <div class="ref-item">Skandera, P., &amp; Burleigh, P. (2019). <em>A Manual of English Phonetics and Phonology</em> (3rd ed.). Narr Francke Attempto Verlag.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-1-4.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 1</div>
+      <div class="next-title">Lecture 1.4 — IPA and Dictionary Usage</div>
+      <div class="next-desc">Decoding IPA symbols · BrE vs. AmE · Transcription challenge · Local interference</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-1-2.html">← Lecture 1.2</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-1-4.html">Lecture 1.4 →</a>
+  </div>
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 1.3 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

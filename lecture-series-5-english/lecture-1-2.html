@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 1.2: Vowels and Consonants in Depth — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}
+    .topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(1){animation-delay:.05s}.section-block:nth-child(2){animation-delay:.10s}.section-block:nth-child(3){animation-delay:.15s}.section-block:nth-child(4){animation-delay:.20s}.section-block:nth-child(5){animation-delay:.25s}.section-block:nth-child(6){animation-delay:.30s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    .ipa{font-family:'Source Serif 4',serif;color:var(--mod);font-weight:700;font-size:1rem}
+    .ex-word{color:var(--muted);font-style:italic}
+
+    /* VOWEL QUADRILATERAL DIAGRAM */
+    .diagram-wrap{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:24px;margin:24px 0;text-align:center}
+    .diagram-caption{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px;line-height:1.5}
+
+    /* COMPARISON TABLE */
+    .compare-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .compare-table th{background:var(--mod);color:var(--white);padding:11px 18px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .compare-table td{padding:11px 18px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:middle}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even) td{background:#faf6ef}
+
+    /* THREE-CRITERIA TABLE */
+    .criteria-block{margin:20px 0}
+    .criteria-header{background:var(--mod);color:var(--white);padding:11px 20px;font-family:'Playfair Display',serif;font-size:.92rem;font-weight:700;border-radius:4px 4px 0 0;display:flex;justify-content:space-between;align-items:center}
+    .criteria-body{background:var(--white);border:1px solid var(--rule);border-top:none;border-radius:0 0 4px 4px;overflow:hidden}
+    .criteria-row{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--rule)}
+    .criteria-row:last-child{border-bottom:none}
+    .criteria-label{background:var(--mod-lt);padding:12px 16px;font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.9rem;display:flex;align-items:center}
+    .criteria-content{padding:12px 16px;font-size:.9rem;color:#2a2016;line-height:1.65}
+
+    /* MINIMAL PAIRS DRILL */
+    .pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:20px 0;background:var(--white)}
+    .pair-header{grid-column:1/-1;background:var(--mod);color:var(--white);padding:10px 18px;font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;display:grid;grid-template-columns:1fr 1fr}
+    .pair-header span{text-align:center}
+    .pair-row{display:contents}
+    .pair-cell{padding:11px 18px;border-bottom:1px solid var(--rule);text-align:center;font-size:.95rem}
+    .pair-cell:nth-child(odd){border-right:1px solid var(--rule)}
+    .pair-row:last-of-type .pair-cell{border-bottom:none}
+    .pair-ipa{display:block;font-size:.78rem;color:var(--muted);margin-top:2px}
+
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-word{font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--white);margin-bottom:2px}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .sound-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+
+    /* CONCLUSION */
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+
+    /* EXAM */
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+
+    /* REFERENCES */
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+
+    /* NAV */
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.3;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    ul.body-list{padding-left:24px;margin-bottom:18px}
+    ul.body-list li{margin-bottom:10px;color:#2a2016}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.pair-grid{grid-template-columns:1fr}.criteria-row{grid-template-columns:1fr}.criteria-label{border-bottom:1px solid var(--rule)}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 1 &nbsp;·&nbsp; Lecture 2</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Vowels and Consonants in Depth</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Phonetics &amp; Phonology</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>Classify vowels using the vowel quadrilateral</li>
+<li>Distinguish long and short vowel pairs</li>
+<li>Describe consonants by voicing, place, and manner</li>
+<li>Identify and use the schwa /ə/ correctly</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>The Vowel Quadrilateral — Monophthongs</li>
+<li>The Long vs. Short Vowel Distinction</li>
+<li>Consonant Classification: The Three Criteria</li>
+<li>The Schwa /ə/ — The Most Important Sound</li>
+<li>Practical Activity: Minimal Pair Drill</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lecture 1.1 before proceeding.</p>
+        <a class="prereq-link" href="lecture-1-1.html">← Lecture 1.1 — Foundations of English Sounds</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">The Vowel Quadrilateral — Classifying Monophthongs</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Lecture 1.1 established that English has 12 monophthong vowels. This lecture explains precisely <em>how</em> those vowels are classified and produced. Vowels in English are not simply "A, E, I, O, U" — they are described systematically using three articulatory criteria: <strong>tongue height</strong>, <strong>tongue backness</strong>, and <strong>lip position</strong> <span class="cite">(Roach, 2022, p. 10)</span>. The traditional tool for mapping these relationships is the <strong>Vowel Quadrilateral</strong>, a diagram developed by the International Phonetic Association <span class="cite">(Ladefoged &amp; Johnson, 2020, p. 17)</span>.</p>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 500 340" xmlns="http://www.w3.org/2000/svg" style="max-width:480px;width:100%;height:auto;display:block;margin:0 auto">
+        <defs>
+          <style>.vq-label{font-family:'Source Serif 4',Georgia,serif;font-size:13px;fill:#1F3864;font-weight:700}.vq-ipa{font-family:'Source Serif 4',Georgia,serif;font-size:14px;fill:#1F3864;font-weight:700}.vq-ex{font-family:'Source Serif 4',Georgia,serif;font-size:10px;fill:#6b5f4e;font-style:italic}.vq-dot{fill:#FFB800;stroke:#1F3864;stroke-width:1.5}.vq-line{stroke:#d6cbb8;stroke-width:1.5;fill:none}.vq-axis{stroke:#1F3864;stroke-width:1;fill:none;stroke-dasharray:3,3}.vq-title{font-family:'Playfair Display',Georgia,serif;font-size:13px;fill:#1F3864;font-weight:700}</style>
+        </defs>
+        <!-- Quadrilateral frame -->
+        <polygon class="vq-line" points="80,40 380,40 280,280 80,280"/>
+        <!-- Horizontal guides -->
+        <line class="vq-axis" x1="80" y1="40" x2="380" y2="40"/>
+        <line class="vq-axis" x1="80" y1="140" x2="305" y2="140"/>
+        <line class="vq-axis" x1="80" y1="280" x2="280" y2="280"/>
+        <!-- Vertical dividers -->
+        <line class="vq-axis" x1="80" y1="40" x2="80" y2="280"/>
+
+        <!-- Column headers -->
+        <text class="vq-title" x="100" y="22">Front</text>
+        <text class="vq-title" x="220" y="22">Central</text>
+        <text class="vq-title" x="345" y="22">Back</text>
+
+        <!-- Row headers -->
+        <text class="vq-label" x="8" y="44">Close</text>
+        <text class="vq-label" x="8" y="144">Mid</text>
+        <text class="vq-label" x="8" y="284">Open</text>
+
+        <!-- VOWEL DOTS & LABELS -->
+        <!-- /iː/ close front -->
+        <circle class="vq-dot" cx="110" cy="40" r="7"/>
+        <text class="vq-ipa" x="122" y="37">/iː/</text>
+        <text class="vq-ex" x="122" y="50">see</text>
+
+        <!-- /ɪ/ near-close front -->
+        <circle class="vq-dot" cx="130" cy="80" r="7"/>
+        <text class="vq-ipa" x="142" y="77">/ɪ/</text>
+        <text class="vq-ex" x="142" y="90">sit</text>
+
+        <!-- /e/ close-mid front -->
+        <circle class="vq-dot" cx="110" cy="118" r="7"/>
+        <text class="vq-ipa" x="122" y="115">/e/</text>
+        <text class="vq-ex" x="122" y="128">bed</text>
+
+        <!-- /æ/ open-mid front -->
+        <circle class="vq-dot" cx="100" cy="200" r="7"/>
+        <text class="vq-ipa" x="112" y="197">/æ/</text>
+        <text class="vq-ex" x="112" y="210">cat</text>
+
+        <!-- /ə/ mid central (schwa) -->
+        <circle class="vq-dot" cx="195" cy="140" r="7"/>
+        <text class="vq-ipa" x="207" y="137">/ə/</text>
+        <text class="vq-ex" x="207" y="150">about</text>
+
+        <!-- /ɜː/ mid central -->
+        <circle class="vq-dot" cx="175" cy="155" r="7"/>
+        <text class="vq-ipa" x="140" y="170">/ɜː/</text>
+        <text class="vq-ex" x="140" y="182">bird</text>
+
+        <!-- /ʌ/ open-mid central -->
+        <circle class="vq-dot" cx="210" cy="200" r="7"/>
+        <text class="vq-ipa" x="222" y="197">/ʌ/</text>
+        <text class="vq-ex" x="222" y="210">cup</text>
+
+        <!-- /ɑː/ open back -->
+        <circle class="vq-dot" cx="255" cy="280" r="7"/>
+        <text class="vq-ipa" x="235" y="300">/ɑː/</text>
+        <text class="vq-ex" x="234" y="312">car</text>
+
+        <!-- /ɒ/ open back rounded -->
+        <circle class="vq-dot" cx="280" cy="265" r="7"/>
+        <text class="vq-ipa" x="292" y="262">/ɒ/</text>
+        <text class="vq-ex" x="292" y="274">hot</text>
+
+        <!-- /ɔː/ open-mid back rounded -->
+        <circle class="vq-dot" cx="290" cy="200" r="7"/>
+        <text class="vq-ipa" x="302" y="197">/ɔː/</text>
+        <text class="vq-ex" x="302" y="210">law</text>
+
+        <!-- /ʊ/ near-close back rounded -->
+        <circle class="vq-dot" cx="320" cy="90" r="7"/>
+        <text class="vq-ipa" x="332" y="87">/ʊ/</text>
+        <text class="vq-ex" x="332" y="100">put</text>
+
+        <!-- /uː/ close back rounded -->
+        <circle class="vq-dot" cx="340" cy="45" r="7"/>
+        <text class="vq-ipa" x="352" y="42">/uː/</text>
+        <text class="vq-ex" x="352" y="55">blue</text>
+
+        <text class="vq-title" x="250" y="335" text-anchor="middle">Figure 2: The Vowel Quadrilateral — 12 Monophthongs of English</text>
+      </svg>
+      <p class="diagram-caption">Figure 2: The Vowel Quadrilateral mapping the 12 English monophthongs by tongue position (front–central–back) and tongue height (close–mid–open). Adapted from Ladefoged &amp; Johnson <span class="cite">(2020, p. 18)</span> and Cruttenden <span class="cite">(2021, p. 30)</span>.</p>
+    </div>
+
+    <h3>The Long vs. Short Vowel Distinction</h3>
+    <p>A critical challenge for Nigerian students is the <strong>vowel merger</strong> — pronouncing long and short vowels identically, thereby confusing listeners <span class="cite">(Oyebola &amp; Gut, 2020, p. 172)</span>. The following pairs must be clearly distinguished in both production and perception:</p>
+
+    <table class="compare-table">
+      <thead><tr><th>Short Vowel</th><th>Example</th><th>Long Vowel</th><th>Example</th><th>Contrast</th></tr></thead>
+      <tbody>
+        <tr><td><span class="ipa">/ɪ/</span></td><td class="ex-word">ship</td><td><span class="ipa">/iː/</span></td><td class="ex-word">sheep</td><td>Short front vs. long front</td></tr>
+        <tr><td><span class="ipa">/ʊ/</span></td><td class="ex-word">pull</td><td><span class="ipa">/uː/</span></td><td class="ex-word">pool</td><td>Short back vs. long back</td></tr>
+        <tr><td><span class="ipa">/ɒ/</span></td><td class="ex-word">cot</td><td><span class="ipa">/ɔː/</span></td><td class="ex-word">court</td><td>Open back unrounded vs. rounded</td></tr>
+        <tr><td><span class="ipa">/e/</span></td><td class="ex-word">pen</td><td><span class="ipa">/ɜː/</span></td><td class="ex-word">pern</td><td>Close-mid vs. central</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Consonant Classification: The Three Criteria</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Every consonant in English can be fully and precisely described using exactly three labels: its <strong>voicing</strong>, its <strong>place of articulation</strong>, and its <strong>manner of articulation</strong> <span class="cite">(Davenport &amp; Hannahs, 2020, p. 22)</span>. For example, the sound <span class="ipa">/b/</span> is a <em>voiced bilabial plosive</em>; the sound <span class="ipa">/f/</span> is a <em>voiceless labio-dental fricative</em>. Mastering these three parameters allows the learner to describe, compare, and correct any consonant sound systematically <span class="cite">(Skandera &amp; Burleigh, 2019, p. 38)</span>.</p>
+
+    <h3>Criterion 1: Voicing</h3>
+    <p>As established in Lecture 1.1, consonants are either <strong>voiced</strong> (vocal cords vibrate) or <strong>voiceless</strong> (vocal cords remain open). Test by placing two fingers on the larynx: voiced sounds produce a perceptible buzz <span class="cite">(Roach, 2022, p. 31)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Voiced / Voiceless Pairs</div>
+      <dl>
+        <dt>Voiced examples</dt>
+        <dd><span class="ipa">/b/</span> <em>bat</em> &nbsp;·&nbsp; <span class="ipa">/d/</span> <em>dog</em> &nbsp;·&nbsp; <span class="ipa">/g/</span> <em>get</em> &nbsp;·&nbsp; <span class="ipa">/v/</span> <em>van</em> &nbsp;·&nbsp; <span class="ipa">/z/</span> <em>zoo</em> &nbsp;·&nbsp; <span class="ipa">/ð/</span> <em>this</em></dd>
+        <dt>Voiceless counterparts</dt>
+        <dd><span class="ipa">/p/</span> <em>pat</em> &nbsp;·&nbsp; <span class="ipa">/t/</span> <em>top</em> &nbsp;·&nbsp; <span class="ipa">/k/</span> <em>cat</em> &nbsp;·&nbsp; <span class="ipa">/f/</span> <em>fan</em> &nbsp;·&nbsp; <span class="ipa">/s/</span> <em>sun</em> &nbsp;·&nbsp; <span class="ipa">/θ/</span> <em>thin</em></dd>
+      </dl>
+    </div>
+
+    <h3>Criterion 2: Place of Articulation</h3>
+    <p>Place of articulation identifies <em>where</em> in the vocal tract the obstruction or narrowing occurs <span class="cite">(Ladefoged &amp; Johnson, 2020, p. 30)</span>:</p>
+
+    <div class="criteria-block">
+      <div class="criteria-header">Places of Articulation</div>
+      <div class="criteria-body">
+        <div class="criteria-row">
+          <div class="criteria-label">Bilabial</div>
+          <div class="criteria-content">Both lips meet. Produces <span class="ipa">/p/</span>, <span class="ipa">/b/</span>, <span class="ipa">/m/</span>. E.g. <em>pan, ban, man</em>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Labio-dental</div>
+          <div class="criteria-content">Upper teeth contact lower lip. Produces <span class="ipa">/f/</span>, <span class="ipa">/v/</span>. E.g. <em>fan, van</em>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Dental</div>
+          <div class="criteria-content">Tongue tip touches or approaches upper teeth. Produces <span class="ipa">/θ/</span> <em>thin</em>, <span class="ipa">/ð/</span> <em>this</em>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Alveolar</div>
+          <div class="criteria-content">Tongue tip contacts the alveolar ridge (just behind upper teeth). Produces <span class="ipa">/t/</span>, <span class="ipa">/d/</span>, <span class="ipa">/n/</span>, <span class="ipa">/s/</span>, <span class="ipa">/z/</span>, <span class="ipa">/l/</span>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Palato-alveolar</div>
+          <div class="criteria-content">Tongue blade near the back of the alveolar ridge. Produces <span class="ipa">/ʃ/</span> <em>she</em>, <span class="ipa">/ʒ/</span> <em>measure</em>, <span class="ipa">/tʃ/</span> <em>church</em>, <span class="ipa">/dʒ/</span> <em>judge</em>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Velar</div>
+          <div class="criteria-content">Back of tongue contacts the soft palate (velum). Produces <span class="ipa">/k/</span>, <span class="ipa">/g/</span>, <span class="ipa">/ŋ/</span> <em>sing</em>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Glottal</div>
+          <div class="criteria-content">Constriction at the level of the glottis (vocal cords). Produces <span class="ipa">/h/</span> <em>hat</em>.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Criterion 3: Manner of Articulation</h3>
+    <p>Manner of articulation describes <em>how</em> the airstream is modified at the place of obstruction <span class="cite">(Cruttenden, 2021, p. 38)</span>:</p>
+
+    <div class="criteria-block">
+      <div class="criteria-header">Manners of Articulation</div>
+      <div class="criteria-body">
+        <div class="criteria-row">
+          <div class="criteria-label">Plosive</div>
+          <div class="criteria-content">Airflow is completely blocked then suddenly released as a burst. E.g. <span class="ipa">/p/, /b/, /t/, /d/, /k/, /g/</span>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Fricative</div>
+          <div class="criteria-content">Airflow is narrowed to create turbulent friction. E.g. <span class="ipa">/f/, /v/, /s/, /z/, /θ/, /ð/, /ʃ/, /ʒ/, /h/</span>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Affricate</div>
+          <div class="criteria-content">Begins as a plosive and releases as a fricative. E.g. <span class="ipa">/tʃ/</span> <em>church</em>, <span class="ipa">/dʒ/</span> <em>judge</em>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Nasal</div>
+          <div class="criteria-content">Oral cavity is blocked; air escapes through the nose. E.g. <span class="ipa">/m/, /n/, /ŋ/</span>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Lateral</div>
+          <div class="criteria-content">Tongue blocks the centre of the mouth; air escapes around the sides. E.g. <span class="ipa">/l/</span>.</div>
+        </div>
+        <div class="criteria-row">
+          <div class="criteria-label">Approximant</div>
+          <div class="criteria-content">Articulators approach each other but do not create friction. E.g. <span class="ipa">/r/, /w/, /j/</span>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">The Schwa /ə/ — The Most Important Sound in English</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Among all 44 phonemes, the <strong>schwa</strong> <span class="ipa">/ə/</span> deserves special attention. It is the most frequently occurring vowel sound in spoken English — more common than any other phoneme — and yet it receives almost no attention in formal spelling instruction <span class="cite">(Roach, 2022, p. 14)</span>. The schwa is a short, mid-central, <em>unstressed</em> vowel that appears in the reduced syllables of virtually every polysyllabic English word <span class="cite">(Skandera &amp; Burleigh, 2019, p. 30)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">The Schwa /ə/ in Academic Vocabulary</div>
+      <dl>
+        <dt>about</dt><dd><span class="ipa">/əˈbaʊt/</span> — the 'a' is reduced to schwa</dd>
+        <dt>teacher</dt><dd><span class="ipa">/ˈtiːtʃə/</span> — the 'er' suffix is typically schwa in BrE</dd>
+        <dt>director</dt><dd><span class="ipa">/dɪˈrektə/</span> — the final 'or' reduces to schwa</dd>
+        <dt>education</dt><dd><span class="ipa">/ˌedʒuˈkeɪʃən/</span> — multiple unstressed syllables carry schwa</dd>
+        <dt>government</dt><dd><span class="ipa">/ˈɡʌvənmənt/</span> — both unstressed syllables carry schwa</dd>
+      </dl>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Academic Tip:</strong> Many Nigerian students over-pronounce unstressed syllables — giving each vowel its full written value. Using the schwa correctly on unstressed syllables creates the natural rhythm of English and significantly improves intelligibility <span class="cite">(Deterding, 2018, p. 324)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION IV: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Practical Activity: Minimal Pair Drill</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>A <strong>minimal pair</strong> is two words that differ by exactly one phoneme. Drilling minimal pairs is one of the most effective methods for training phonemic discrimination — the ability to hear and produce contrasting sounds clearly <span class="cite">(Jenkins, 2022, p. 10)</span>. The pairs below target the specific contrasts most challenging for Nigerian English speakers <span class="cite">(Gut, 2019, p. 108)</span>.</p>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Minimal Pair Drill — 10 Pairs</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">Read each pair aloud three times. Focus on producing a <em>clearly audible</em> difference between the two sounds. Record yourself if possible and compare.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-word">ship &nbsp;/ʃɪp/ &nbsp;→&nbsp; sheep &nbsp;/ʃiːp/</div><div class="activity-answer">Short /ɪ/ vs. long /iː/ — a common vowel merger error</div></div><span class="sound-badge">/ɪ/ vs /iː/</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-word">pull &nbsp;/pʊl/ &nbsp;→&nbsp; pool &nbsp;/puːl/</div><div class="activity-answer">Short /ʊ/ vs. long /uː/ — back vowel distinction</div></div><span class="sound-badge">/ʊ/ vs /uː/</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-word">fan &nbsp;/fæn/ &nbsp;→&nbsp; van &nbsp;/væn/</div><div class="activity-answer">Voiceless /f/ vs. voiced /v/ — labio-dental pair</div></div><span class="sound-badge">/f/ vs /v/</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-word">pat &nbsp;/pæt/ &nbsp;→&nbsp; bat &nbsp;/bæt/</div><div class="activity-answer">Voiceless /p/ vs. voiced /b/ — bilabial pair</div></div><span class="sound-badge">/p/ vs /b/</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-word">thin &nbsp;/θɪn/ &nbsp;→&nbsp; tin &nbsp;/tɪn/</div><div class="activity-answer">Dental /θ/ vs. alveolar /t/ — key Nigerian interference point</div></div><span class="sound-badge">/θ/ vs /t/</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-word">this &nbsp;/ðɪs/ &nbsp;→&nbsp; dis &nbsp;/dɪs/</div><div class="activity-answer">Voiced dental /ð/ vs. voiced alveolar /d/</div></div><span class="sound-badge">/ð/ vs /d/</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-word">duck &nbsp;/dʌk/ &nbsp;→&nbsp; dark &nbsp;/dɑːk/</div><div class="activity-answer">Open-mid central /ʌ/ vs. open back /ɑː/</div></div><span class="sound-badge">/ʌ/ vs /ɑː/</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-word">bit &nbsp;/bɪt/ &nbsp;→&nbsp; beat &nbsp;/biːt/</div><div class="activity-answer">Short /ɪ/ vs. long /iː/ in final position</div></div><span class="sound-badge">/ɪ/ vs /iː/</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-word">leave &nbsp;/liːv/ &nbsp;→&nbsp; live &nbsp;/lɪv/</div><div class="activity-answer">Verb pair: /iː/ vs /ɪ/ — meaning changes with vowel length</div></div><span class="sound-badge">/iː/ vs /ɪ/</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-word">seat &nbsp;/siːt/ &nbsp;→&nbsp; set &nbsp;/set/</div><div class="activity-answer">Close front /iː/ vs. close-mid /e/ — academic vocabulary pair</div></div><span class="sound-badge">/iː/ vs /e/</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION V -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>Understanding the <em>where</em> and <em>how</em> of sound production is the foundation of phonological self-correction. When a word does not sound right, the speaker can now ask a precise question: Is my tongue in the correct position? Am I voicing or devoicing correctly? Is the vowel long or short? <span class="cite">(Cruttenden, 2021, p. 42)</span>.</p>
+      <br>
+      <p>The three criteria for consonant classification — <strong>voicing, place of articulation, and manner of articulation</strong> — provide a complete and systematic vocabulary for describing any sound in English. These tools will be used throughout the remaining lectures of this module and across the entire course <span class="cite">(Roach, 2022, p. 35)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 1.2 — Vowels and Consonants in Depth</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which three criteria are used to classify consonant sounds in English?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Voicing, length, and lip shape</div><div class="q-option">B. &nbsp;Voicing, place of articulation, and manner of articulation</div><div class="q-option">C. &nbsp;Tongue height, tongue backness, and lip position</div><div class="q-option">D. &nbsp;Nasality, plosion, and frication</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">Explain the term <em>vowel merger</em>. Provide two minimal pair examples where vowel merger would cause a breakdown in communication for a Nigerian English speaker.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Classify</span><p class="q-text">Using all three criteria, fully classify each of the following consonant sounds: &nbsp;<strong>/f/ &nbsp;·&nbsp; /d/ &nbsp;·&nbsp; /ŋ/ &nbsp;·&nbsp; /tʃ/</strong></p></div><p class="q-marks">[4 marks — 1 per sound]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span><p class="q-text">The schwa /ə/ is best described as:</p></div><div class="q-options"><div class="q-option">A. &nbsp;A long, stressed back vowel</div><div class="q-option">B. &nbsp;A short, mid-central, unstressed vowel found in reduced syllables</div><div class="q-option">C. &nbsp;A diphthong gliding from /e/ to /ɪ/</div><div class="q-option">D. &nbsp;A voiceless fricative consonant</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Transcribe</span><p class="q-text">Provide the full IPA transcription of the following words, clearly indicating where the schwa /ə/ appears in each: &nbsp;<strong>about &nbsp;·&nbsp; teacher &nbsp;·&nbsp; government</strong></p></div><p class="q-marks">[3 marks — 1 per word]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between a <em>plosive</em> and a <em>fricative</em> manner of articulation. Give two examples of each from the consonant inventory of English.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">The sounds /θ/ (as in <em>thin</em>) and /ð/ (as in <em>this</em>) share which place of articulation?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Bilabial</div><div class="q-option">B. &nbsp;Alveolar</div><div class="q-option">C. &nbsp;Dental</div><div class="q-option">D. &nbsp;Velar</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Diagram</span><p class="q-text">Sketch a simple vowel quadrilateral. On it, place and label any <strong>six</strong> of the 12 English monophthongs at their approximate tongue positions.</p></div><p class="q-marks">[3 marks — ½ per correctly placed vowel]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Write Out</span><p class="q-text">Explain why over-pronouncing unstressed syllables — giving each vowel its full written value — is a characteristic error among Nigerian English speakers, and how the correct use of the schwa corrects this.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Analyse</span><p class="q-text">The words <em>ship</em> and <em>sheep</em> form a minimal pair. Explain what a minimal pair is, write the IPA transcription of each word, identify the one phoneme that differs, and state why this particular contrast is especially important for Nigerian students of English.</p></div><p class="q-marks">[3 marks]</p></div>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Cruttenden, A. (2021). <em>Gimson's Pronunciation of English</em> (9th ed.). Routledge.</div>
+      <div class="ref-item">Davenport, M., &amp; Hannahs, S. J. (2020). <em>Introducing Phonetics and Phonology</em> (4th ed.). Routledge.</div>
+      <div class="ref-item">Deterding, D. (2018). Pronunciation problems in English as a lingua franca. <em>Journal of the International Phonetic Association</em>, 48(3), 317–334.</div>
+      <div class="ref-item">Gut, U. (2019). First language influence and final consonant clusters in the new Englishes of West Africa. <em>World Englishes</em>, 38(1), 97–115.</div>
+      <div class="ref-item">Jenkins, J. (2022). English as a lingua franca: Phonological intelligibility revisited. <em>Applied Linguistics</em>, 43(1), 1–22.</div>
+      <div class="ref-item">Ladefoged, P., &amp; Johnson, K. (2020). <em>A Course in Phonetics</em> (8th ed.). Cengage Learning.</div>
+      <div class="ref-item">Oyebola, F., &amp; Gut, U. (2020). The phonetics of Nigerian English: Segmental features and intelligibility. <em>English World-Wide</em>, 41(2), 165–198.</div>
+      <div class="ref-item">Roach, P. (2022). <em>English Phonetics and Phonology: A Practical Course</em> (5th ed.). Cambridge University Press.</div>
+      <div class="ref-item">Skandera, P., &amp; Burleigh, P. (2019). <em>A Manual of English Phonetics and Phonology</em> (3rd ed.). Narr Francke Attempto Verlag.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-1-3.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 1</div>
+      <div class="next-title">Lecture 1.3 — Suprasegmentals: Stress and Intonation</div>
+      <div class="next-desc">Word stress · Sentence stress · Falling &amp; rising intonation · Meaning through stress shift</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-1-1.html">← Lecture 1.1</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-1-3.html">Lecture 1.3 →</a>
+  </div>
+
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 1.2 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

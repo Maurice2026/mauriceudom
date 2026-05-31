@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 2.1: The Building Blocks — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(1){animation-delay:.05s}.section-block:nth-child(2){animation-delay:.10s}.section-block:nth-child(3){animation-delay:.15s}.section-block:nth-child(4){animation-delay:.20s}.section-block:nth-child(5){animation-delay:.25s}.section-block:nth-child(6){animation-delay:.30s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+
+    /* WORD CLASS TABLE */
+    .wc-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .wc-table th{background:var(--mod);color:var(--white);padding:11px 18px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .wc-table td{padding:11px 18px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.6}
+    .wc-table tr:last-child td{border-bottom:none}
+    .wc-table tr:nth-child(even) td{background:#faf6ef}
+    .wc-label{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif}
+    .ex{font-style:italic;color:var(--muted)}
+
+    /* FUNCTIONAL SHIFT CARDS */
+    .shift-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+    .shift-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .shift-card-head{background:var(--mod);color:var(--white);padding:10px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700}
+    .shift-card-body{padding:14px 16px;display:grid;gap:8px}
+    .shift-row{font-size:.88rem;padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.5}
+    .shift-row:last-child{border-bottom:none}
+    .shift-class{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mod);font-weight:700;display:block;margin-bottom:2px}
+
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-word{font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--white);margin-bottom:2px}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .wc-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.3;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.shift-grid{grid-template-columns:1fr}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 2 &nbsp;·&nbsp; Lecture 1</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">The Building Blocks — Word Classes</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Grammar &amp; Usage</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>Define word class and distinguish open from closed classes</li>
+<li>Identify the four major open word classes with examples</li>
+<li>Name and describe the five closed word classes</li>
+<li>Recognise and explain functional shift in context</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>Introduction: From Sound to Structure</li>
+<li>Open Classes — The Meaning Carriers</li>
+<li>Closed Classes — The Grammatical Glue</li>
+<li>Functional Shifts — When Words Change Class</li>
+<li>Practical Activity: Word Class Identification</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Module 1 (Phonetics & Phonology) should be completed before beginning Module 2.</p>
+        <a class="prereq-link" href="lecture-1-4.html">← Lecture 1.4 — IPA and Dictionary Usage</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">Introduction: From Sound to Structure</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Module 1 established the sound system of English — the 44 phonemes, the organs that produce them, and the suprasegmental features that give speech its rhythm and meaning. Module 2 now turns to a different but equally fundamental dimension of language: <strong>grammar</strong> — the structural system that governs how words are organised into meaningful sentences <span class="cite">(Biber et al., 2021, p. 3)</span>.</p>
+    <p>The starting point for any study of grammar is the <strong>word class</strong> — sometimes called a <em>part of speech</em>. Every word in English belongs to a class that determines how it behaves grammatically: where it can appear in a sentence, what forms it can take, and what kind of meaning it contributes <span class="cite">(Huddleston &amp; Pullum, 2019, p. 17)</span>. A student who cannot identify word classes cannot diagnose or correct grammatical errors in their own writing — a critical skill in academic and professional contexts <span class="cite">(Yule, 2020, p. 71)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <dl>
+        <dt>Word Class (Part of Speech)</dt>
+        <dd>A category of words that share grammatical properties — the same syntactic functions, the same morphological possibilities, and the same distributional patterns in sentences <span class="cite">(Huddleston &amp; Pullum, 2019, p. 18)</span>.</dd>
+        <dt>Open vs. Closed Classes</dt>
+        <dd>English word classes divide into two major groups: <strong>open classes</strong> — which regularly admit new members — and <strong>closed classes</strong> — whose membership is fixed and rarely changes <span class="cite">(Biber et al., 2021, p. 56)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Open Classes — The Meaning Carriers</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Open classes are called "open" because new words are continuously added to them as language evolves. They carry the primary lexical and referential meaning of sentences <span class="cite">(Crystal, 2019, p. 84)</span>. English has four major open classes:</p>
+
+    <table class="wc-table">
+      <thead><tr><th>Word Class</th><th>Definition</th><th>Examples</th><th>Test</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="wc-label">Noun</span></td>
+          <td>Names a person, place, thing, concept, or idea. Can be preceded by a determiner (<em>the, a</em>) <span class="cite">(Yule, 2020, p. 72)</span>.</td>
+          <td class="ex">student, university, justice, democracy, Lagos</td>
+          <td>Can follow <em>the</em>: <em>the student ✓</em></td>
+        </tr>
+        <tr>
+          <td><span class="wc-label">Verb</span></td>
+          <td>Expresses an action, event, process, or state. Changes form to indicate tense, aspect, and agreement <span class="cite">(Biber et al., 2021, p. 68)</span>.</td>
+          <td class="ex">write, analyse, become, present, conduct</td>
+          <td>Can follow <em>will</em>: <em>will write ✓</em></td>
+        </tr>
+        <tr>
+          <td><span class="wc-label">Adjective</span></td>
+          <td>Modifies a noun, attributing a quality, quantity, or characteristic to it <span class="cite">(Huddleston &amp; Pullum, 2019, p. 52)</span>.</td>
+          <td class="ex">academic, comprehensive, critical, formal, precise</td>
+          <td>Fits: <em>very __ : very academic ✓</em></td>
+        </tr>
+        <tr>
+          <td><span class="wc-label">Adverb</span></td>
+          <td>Modifies a verb, adjective, another adverb, or an entire clause, typically expressing manner, time, degree, or frequency <span class="cite">(Crystal, 2019, p. 92)</span>.</td>
+          <td class="ex">quickly, thoroughly, however, therefore, very</td>
+          <td>Modifies the verb: <em>writes clearly ✓</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Academic Note:</strong> New words entering English almost always join one of the open classes — especially nouns and verbs. Words like <em>googling</em> (verb), <em>selfie</em> (noun), and <em>viral</em> (adjective) are recent additions. Closed classes, by contrast, have not gained significant new members in centuries <span class="cite">(Biber et al., 2021, p. 57)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Closed Classes — The Grammatical Glue</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Closed classes contain a fixed, limited set of words that serve primarily grammatical — rather than lexical — functions. They bind the open-class words together into coherent sentences <span class="cite">(Quirk et al., 2018, p. 67)</span>. While individual members are few, they are among the most frequently used words in the language.</p>
+
+    <table class="wc-table">
+      <thead><tr><th>Word Class</th><th>Definition</th><th>Common Members</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="wc-label">Pronoun</span></td>
+          <td>Substitutes for a noun or noun phrase to avoid repetition <span class="cite">(Yule, 2020, p. 76)</span>.</td>
+          <td class="ex">I, you, he, she, it, we, they, who, which, this, that</td>
+        </tr>
+        <tr>
+          <td><span class="wc-label">Determiner</span></td>
+          <td>Introduces a noun phrase, specifying reference or quantity <span class="cite">(Huddleston &amp; Pullum, 2019, p. 60)</span>.</td>
+          <td class="ex">the, a, an, this, that, these, those, my, your, every, some</td>
+        </tr>
+        <tr>
+          <td><span class="wc-label">Preposition</span></td>
+          <td>Shows the relationship between a noun/pronoun and another element in the sentence <span class="cite">(Crystal, 2019, p. 97)</span>.</td>
+          <td class="ex">in, on, at, of, by, for, with, through, between, during</td>
+        </tr>
+        <tr>
+          <td><span class="wc-label">Conjunction</span></td>
+          <td>Joins words, phrases, or clauses. Co-ordinating conjunctions join equals; subordinating conjunctions introduce dependent clauses <span class="cite">(Biber et al., 2021, p. 80)</span>.</td>
+          <td class="ex">and, but, or, nor, yet, so, for, because, although, when, if</td>
+        </tr>
+        <tr>
+          <td><span class="wc-label">Auxiliary Verb</span></td>
+          <td>Helps the main verb express tense, aspect, modality, or voice <span class="cite">(Quirk et al., 2018, p. 74)</span>.</td>
+          <td class="ex">be, have, do, will, would, shall, should, may, might, must, can</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION IV -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Functional Shifts — When Words Change Class</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>One of the most important and frequently misunderstood features of English grammar is <strong>functional shift</strong> — also called <em>conversion</em> or <em>zero derivation</em>. This is the process by which a word moves from one word class to another without any change in its form <span class="cite">(Bauer et al., 2018, p. 143)</span>. The word's class is determined entirely by its function in the sentence — not by its spelling or sound <span class="cite">(Huddleston &amp; Pullum, 2019, p. 22)</span>.</p>
+
+    <div class="shift-grid">
+      <div class="shift-card">
+        <div class="shift-card-head">Noun → Verb</div>
+        <div class="shift-card-body">
+          <div class="shift-row"><span class="shift-class">Noun</span>We need a <em>Google</em> search. <span class="cite">(Google = company name)</span></div>
+          <div class="shift-row"><span class="shift-class">Verb</span>Let me <em>Google</em> that for you. <span class="cite">(Google = to search)</span></div>
+          <div class="shift-row"><span class="shift-class">Noun</span>He gave a <em>report</em> on the findings.</div>
+          <div class="shift-row"><span class="shift-class">Verb</span>She will <em>report</em> to the committee.</div>
+        </div>
+      </div>
+      <div class="shift-card">
+        <div class="shift-card-head">Adjective → Noun</div>
+        <div class="shift-card-body">
+          <div class="shift-row"><span class="shift-class">Adjective</span>The <em>poor</em> performance was noted.</div>
+          <div class="shift-row"><span class="shift-class">Noun</span>The government must protect the <em>poor</em>.</div>
+          <div class="shift-row"><span class="shift-class">Adjective</span>A <em>daily</em> exercise routine is recommended.</div>
+          <div class="shift-row"><span class="shift-class">Noun</span>The <em>daily</em> arrived at seven o'clock.</div>
+        </div>
+      </div>
+      <div class="shift-card">
+        <div class="shift-card-head">Verb → Noun</div>
+        <div class="shift-card-body">
+          <div class="shift-row"><span class="shift-class">Verb</span>We must <em>walk</em> to the venue immediately.</div>
+          <div class="shift-row"><span class="shift-class">Noun</span>The evening <em>walk</em> was very refreshing.</div>
+          <div class="shift-row"><span class="shift-class">Verb</span>Please <em>run</em> the programme again.</div>
+          <div class="shift-row"><span class="shift-class">Noun</span>The candidate had a long <em>run</em> of victories.</div>
+        </div>
+      </div>
+      <div class="shift-card">
+        <div class="shift-card-head">Noun → Adjective</div>
+        <div class="shift-card-body">
+          <div class="shift-row"><span class="shift-class">Noun</span>She works in <em>gold</em> and other precious metals.</div>
+          <div class="shift-row"><span class="shift-class">Adjective</span>He received a <em>gold</em> medal for his research.</div>
+          <div class="shift-row"><span class="shift-class">Noun</span>The <em>stone</em> was found near the riverbank.</div>
+          <div class="shift-row"><span class="shift-class">Adjective</span>The <em>stone</em> building withstood the flood.</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px">The grammatical class of a word can only be determined by studying its role in the sentence — not by looking at the word in isolation. This principle is foundational to accurate grammatical analysis <span class="cite">(Biber et al., 2021, p. 62)</span>.</p>
+  </div>
+
+  <!-- SECTION V: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Practical Activity: Word Class Identification</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>The passage below is drawn from a model academic abstract. Identify the word class of each underlined word, giving a one-sentence justification for each answer <span class="cite">(Quirk et al., 2018, p. 80)</span>.</p>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Identify the Word Class — 10 Underlined Words</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">Read the passage. For each numbered word, state its word class and explain how its function in the sentence determines your answer.</p>
+        <p style="font-size:.9rem;color:#c0b8ac;line-height:1.8;margin-bottom:20px;border-left:3px solid rgba(255,184,0,.3);padding-left:16px;font-style:italic">"The (1)<strong style="color:#fff">rapid</strong> expansion of digital communication has (2)<strong style="color:#fff">fundamentally</strong> altered the way (3)<strong style="color:#fff">students</strong> engage with (4)<strong style="color:#fff">academic</strong> texts. (5)<strong style="color:#fff">However</strong>, many (6)<strong style="color:#fff">lack</strong> the critical (7)<strong style="color:#fff">literacy</strong> skills (8)<strong style="color:#fff">necessary</strong> to evaluate sources (9)<strong style="color:#fff">effectively</strong>. This study (10)<strong style="color:#fff">examines</strong> the implications for tertiary education."</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-word">rapid</div><div class="activity-answer">Modifies the noun "expansion" — what class is it?</div></div><span class="wc-badge">Adjective</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-word">fundamentally</div><div class="activity-answer">Modifies the verb "altered" — expressing degree/manner</div></div><span class="wc-badge">Adverb</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-word">students</div><div class="activity-answer">Names the people performing the action — subject role</div></div><span class="wc-badge">Noun</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-word">academic</div><div class="activity-answer">Modifies the noun "texts" — attributive position</div></div><span class="wc-badge">Adjective</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-word">However</div><div class="activity-answer">Connects and contrasts the two sentences — conjunctive adverb</div></div><span class="wc-badge">Adverb</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-word">lack</div><div class="activity-answer">Expresses the state or condition of the subject "many"</div></div><span class="wc-badge">Verb</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-word">literacy</div><div class="activity-answer">Names a concept — preceded by the adjective "critical"</div></div><span class="wc-badge">Noun</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-word">necessary</div><div class="activity-answer">Modifies "skills" — postpositive adjective in this position</div></div><span class="wc-badge">Adjective</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-word">effectively</div><div class="activity-answer">Modifies the verb "evaluate" — manner adverb</div></div><span class="wc-badge">Adverb</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-word">examines</div><div class="activity-answer">Expresses the action of the subject "This study" — main verb</div></div><span class="wc-badge">Verb</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION VI: CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section VI</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>Word classes are not merely a labelling exercise — they are the analytical framework through which grammar is understood and applied. Knowing that a word is a noun tells you it can be the subject of a clause, can be pluralised, and can be preceded by a determiner. Knowing that a word is an adverb tells you it can be moved to different positions in the sentence without changing core meaning <span class="cite">(Yule, 2020, p. 78)</span>.</p>
+      <br>
+      <p>The concept of <strong>functional shift</strong> is particularly important in academic writing, where the same word may appear as a noun in one sentence and a verb in the next. Misidentifying the class leads to errors in agreement, tense, and sentence structure — the precise errors this module is designed to eliminate <span class="cite">(Huddleston &amp; Pullum, 2019, p. 25)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 2.1 — The Building Blocks: Word Classes</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best describes an "open" word class?</p></div><div class="q-options"><div class="q-option">A. &nbsp;A class with a fixed, limited set of members that rarely changes</div><div class="q-option">B. &nbsp;A class that regularly admits new members as language evolves</div><div class="q-option">C. &nbsp;A class whose members function only as grammatical connectors</div><div class="q-option">D. &nbsp;A class restricted to function words such as prepositions and conjunctions</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">Define the term <em>word class</em> and explain, with examples, why the same word can belong to different classes depending on context.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Identify</span><p class="q-text">Identify the word class of each underlined word and justify your answer in one sentence each: &nbsp;<strong>"The <u>committee</u> will <u>formally</u> <u>present</u> its <u>final</u> report <u>tomorrow</u>."</strong></p></div><p class="q-marks">[5 marks — 1 per word]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span><p class="q-type" style="margin-left:4px">Which sentence demonstrates a functional shift of the word <em>water</em> from noun to verb?</p></div><div class="q-options"><div class="q-option">A. &nbsp;"She drank the cold water slowly."</div><div class="q-option">B. &nbsp;"The water level rose dangerously."</div><div class="q-option">C. &nbsp;"Please water the plants before you leave."</div><div class="q-option">D. &nbsp;"The water in the dam was still."</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between co-ordinating conjunctions and subordinating conjunctions. Give three examples of each and write one original sentence using each type.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Multiple Choice</span><p class="q-text">In the sentence <em>"The poor deserve better government support,"</em> the word <em>poor</em> functions as:</p></div><div class="q-options"><div class="q-option">A. &nbsp;An adjective modifying "government"</div><div class="q-option">B. &nbsp;A noun serving as the subject of the verb</div><div class="q-option">C. &nbsp;An adverb modifying "deserve"</div><div class="q-option">D. &nbsp;A determiner introducing the noun phrase</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Write Out</span><p class="q-text">List the five closed word classes covered in this lecture. For each, give three examples of actual words that belong to it and explain what grammatical function the class performs.</p></div><p class="q-marks">[3 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Analyse</span><p class="q-text">Explain the concept of <em>functional shift</em>. Using the word <em>report</em>, write two sentences — one in which it functions as a noun and one in which it functions as a verb. Underline the word and label its class in each sentence.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following words is an auxiliary verb?</p></div><div class="q-options"><div class="q-option">A. &nbsp;quickly</div><div class="q-option">B. &nbsp;might</div><div class="q-option">C. &nbsp;although</div><div class="q-option">D. &nbsp;between</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain why the ability to identify word classes is described as "foundational" to grammatical accuracy in academic writing. Use specific examples of errors that arise when word classes are misidentified.</p></div><p class="q-marks">[2 marks]</p></div>
+
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Bauer, L., Lieber, R., &amp; Plag, I. (2018). <em>The Oxford Reference Guide to English Morphology</em>. Oxford University Press.</div>
+      <div class="ref-item">Biber, D., Johansson, S., Leech, G., Conrad, S., &amp; Finegan, E. (2021). <em>Longman Grammar of Spoken and Written English</em> (2nd ed.). Pearson Longman.</div>
+      <div class="ref-item">Crystal, D. (2019). <em>The Cambridge Encyclopedia of the English Language</em> (3rd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Huddleston, R., &amp; Pullum, G. K. (2019). <em>A Student's Introduction to English Grammar</em> (2nd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Iwuchukwu, O. (2020). Grammatical interference in the written English of Nigerian undergraduate students. <em>Journal of English as an International Language</em>, 15(1), 44–62.</div>
+      <div class="ref-item">Oladele, A. O. (2021). Word class errors in academic essays of first-year students in Nigerian universities. <em>Nigerian Journal of Language and Literature</em>, 8(2), 115–130.</div>
+      <div class="ref-item">Quirk, R., Greenbaum, S., Leech, G., &amp; Svartvik, J. (2018). <em>A Comprehensive Grammar of the English Language</em> (reprint ed.). Longman.</div>
+      <div class="ref-item">Thornbury, S. (2019). <em>An A–Z of ELT: A Dictionary of Terms and Concepts</em> (2nd ed.). Macmillan Education.</div>
+      <div class="ref-item">Yule, G. (2020). <em>The Study of Language</em> (7th ed.). Cambridge University Press.</div>
+      <div class="ref-item">Zwicky, A. M. (2022). Parts of speech: Where morphology and syntax meet. <em>Annual Review of Linguistics</em>, 8(1), 1–20.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-2-2.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 2</div>
+      <div class="next-title">Lecture 2.2 — Sentence Architecture and Types</div>
+      <div class="next-desc">Simple, compound, complex · Clauses &amp; phrases · Declarative, interrogative, imperative</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-1-4.html">← Lecture 1.4</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-2-2.html">Lecture 2.2 →</a>
+  </div>
+
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 2.1 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

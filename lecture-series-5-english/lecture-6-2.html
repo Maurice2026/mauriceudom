@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 6.2: Digital Communication in Academic and Professional Contexts &mdash; Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'\2713';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:14px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:3px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.7;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* EMAIL TEMPLATE */
+    .email-demo{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:22px 0;font-family:'Source Serif 4',serif}
+    .email-header{background:#f0f4fd;border-bottom:1px solid var(--rule);padding:14px 20px}
+    .email-field{display:flex;gap:12px;font-size:.86rem;color:#2a2016;margin-bottom:6px}
+    .email-field:last-child{margin-bottom:0}
+    .email-field-label{font-weight:700;color:var(--mod);width:60px;flex-shrink:0}
+    .email-body-text{padding:18px 20px;font-size:.91rem;color:#2a2016;line-height:1.75;border-bottom:1px solid var(--rule)}
+    .email-verdict{padding:12px 20px;background:var(--cream);font-size:.86rem;color:#2a2016;line-height:1.6}
+    .email-verdict strong{color:var(--mod)}
+    /* NETIQUETTE */
+    .netiquette-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+    .net-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .net-head{padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--white)}
+    .net-do{background:#1a5c2a}.net-dont{background:#8b1a1a}
+    .net-body{padding:14px 16px;font-size:.87rem;color:#2a2016;line-height:1.65}
+    .net-body ul{list-style:none;display:grid;gap:7px}
+    .net-body ul li{padding-left:16px;position:relative}
+    .net-body ul li::before{position:absolute;left:0;font-size:.82rem}
+    .net-do .net-body ul li::before{content:'\2713';color:#1a5c2a}
+    .net-dont .net-body ul li::before{content:'\2717';color:#8b1a1a}
+    /* COMPARE TABLE */
+    .compare-table{width:100%;border-collapse:collapse;margin:22px 0;border:1px solid var(--rule)}
+    .compare-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .compare-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.65}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even) td{background:#faf6ef}
+    .lbl{font-weight:700;color:var(--mod)}
+    /* IDENTITY GRID */
+    .identity-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:22px 0}
+    .id-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .id-head{padding:11px 14px;font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;color:var(--white);text-align:center}
+    .id-c1{background:var(--mod)}.id-c2{background:#2a6640}.id-c3{background:#7a4a00}
+    .id-body{padding:12px 14px;font-size:.85rem;color:#2a2016;line-height:1.6}
+    /* MODULE SUMMARY */
+    .module-summary{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:32px 0}
+    .ms-header{padding:16px 24px;border-bottom:2px solid var(--gold)}
+    .ms-header h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);margin:0}
+    .ms-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+    .ms-col{padding:18px 22px;border-right:1px solid rgba(255,255,255,.12)}
+    .ms-col:last-child{border-right:none}
+    .ms-lec-title{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--gold);margin-bottom:10px}
+    .ms-points{list-style:none;display:grid;gap:6px}
+    .ms-points li{font-size:.82rem;color:rgba(255,255,255,.78);line-height:1.5;padding-left:14px;position:relative}
+    .ms-points li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.9rem;color:#c0b8ac;margin-bottom:18px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:10px}
+    .activity-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:12px 14px}
+    .a-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .a-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.65}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    /* EXAM */
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .back-to-course{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s}
+    .back-to-course:hover{background:#2a4a80}
+    .btc-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .btc-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .btc-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .btc-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body,.netiquette-grid,.identity-grid,.ms-grid{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.back-to-course{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+<div class="topbar"><a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;&middot;&nbsp; <a href="index.html">Communication in English</a></div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 6 &nbsp;&middot;&nbsp; Lecture 2</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Digital Communication in Academic and Professional Contexts</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip"><strong>Duration:</strong>&nbsp;35 Minutes</span>
+    <span class="meta-chip"><strong>Module:</strong>&nbsp;Digital Literacy</span>
+    <span class="meta-chip"><strong>Level:</strong>&nbsp;Tertiary</span>
+    <span class="meta-chip"><strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<div class="overview-block">
+  <div class="overview-header"><span style="font-size:1.1rem">&#128203;</span>&nbsp;<span class="overview-header-title">Lecture Overview</span></div>
+  <div class="overview-body">
+    <div class="overview-col">
+      <div class="overview-col-label">Learning Objectives</div>
+      <ul class="overview-objectives">
+        <li>Write effective academic and professional emails</li>
+        <li>Apply netiquette principles to all digital communication</li>
+        <li>Understand online academic discourse conventions</li>
+        <li>Manage digital identity and professional reputation</li>
+        <li>Apply research ethics to digital and online sources</li>
+        <li>Communicate responsibly on social media platforms</li>
+      </ul>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Topics Covered</div>
+      <ol class="overview-topics">
+        <li>Academic Email Writing</li>
+        <li>Netiquette &mdash; Rules of Digital Conduct</li>
+        <li>Online Academic Discourse</li>
+        <li>Digital Identity and Professional Reputation</li>
+        <li>Research Ethics in the Digital Age</li>
+        <li>Social Media and Academic Communication</li>
+        <li>Module 6 Summary</li>
+        <li>Course Completion</li>
+      </ol>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Prerequisite</div>
+      <p class="overview-prereq">Lecture 6.1 must be completed before this lecture. The foundational digital literacy competencies, misinformation awareness, and fact-checking skills from 6.1 are assumed throughout this lecture.</p>
+      <a class="prereq-link" href="lecture-6-1.html">&#8592; Lecture 6.1 &mdash; Introduction to Digital Literacy</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION I: EMAIL WRITING -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section I</span><h2 class="section-title">Academic Email Writing</h2><div class="section-rule"></div></div>
+
+  <p>Email is the primary formal channel of communication in Nigerian universities and in professional environments. It is the medium through which students correspond with lecturers, submit formal requests, communicate with the university administration, and increasingly, conduct academic and professional networking. Despite its centrality, email writing is one of the most poorly executed communication skills among Nigerian students <span class="cite">(Nwosu &amp; Obi, 2021, p. 68)</span>.</p>
+
+  <p>An email to a lecturer or a professional contact is a formal document that reflects your intelligence, your care, and your respect for the recipient. A poorly written email &mdash; with no salutation, unclear purpose, informal language, or typographical errors &mdash; creates a negative impression that can affect how you are perceived academically and professionally. A well-written email demonstrates competence, maturity, and professionalism.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">The Seven Components of a Well-Written Academic Email</div>
+    <dl>
+      <dt>1. A Clear, Specific Subject Line</dt>
+      <dd>The subject line is the first thing the recipient sees. It must tell them immediately what the email is about and whether it requires action. Vague subject lines ("Help needed", "Question") are unhelpful. Clear subject lines ("Request for Extension &mdash; ENG 201 Essay, Due 15 May") allow the recipient to prioritise and respond appropriately <span class="cite">(Guffey &amp; Loewy, 2021, p. 112)</span>.</dd>
+      <dt>2. A Formal and Appropriate Salutation</dt>
+      <dd>Address the recipient by their correct title and surname: "Dear Dr. Udom," / "Dear Professor Eze," / "Dear Mr. Adeyemi," / "Dear Mrs. Okafor," &mdash; always followed by a comma. Never use first names when addressing lecturers or administrators unless explicitly invited to. Never use "Hi" or "Hello" in a formal academic email. If you do not know the title, "Dear Dr./Prof. [Surname]" is safe; never use "Dear Sir/Ma'am" as your opening in email to a named individual.</dd>
+      <dt>3. A Contextualising Opening Sentence</dt>
+      <dd>Begin by identifying yourself (your name, department, and year of study) and stating the purpose of the email in one clear sentence. Do not assume the recipient knows who you are &mdash; they may have hundreds of students. Example: "My name is Adaeze Okonkwo, a 200-level student in the Department of English and Literary Studies. I am writing to request a brief extension on the ENG 201 essay due on 15 May."</dd>
+      <dt>4. A Concise and Clearly Organised Body</dt>
+      <dd>The body should address one topic per email. Provide all relevant context in the most concise form possible. Use short paragraphs (3&ndash;5 sentences each). If multiple points are needed, use numbered or bulleted lists rather than one dense paragraph. The reader should be able to understand your request and what response you need without re-reading.</dd>
+      <dt>5. A Polite and Specific Request or Question</dt>
+      <dd>State clearly what you need from the recipient. "Could you please advise me on..." / "I would be grateful if you could..." / "Please find attached..." Use conditional and courteous phrasing. Never demand. Never assume. Remember that the recipient is under no obligation to respond immediately, and acknowledge this if appropriate: "I understand you have a busy schedule and would appreciate any guidance at your convenience."</dd>
+      <dt>6. A Professional Closing</dt>
+      <dd>End with a formal sign-off: "Yours sincerely," (when you know the recipient's name) / "Yours faithfully," (when you do not). Follow with your full name, department, student number or staff designation, and any relevant contact information. "Thanks," "Cheers," or "Best," are too informal for academic emails to lecturers or administrators.</dd>
+      <dt>7. Proofreading Before Sending</dt>
+      <dd>Always read your email at least once before clicking Send. Check for spelling errors, grammatical mistakes, tone inconsistencies, missing attachments (if promised), and correct recipient address. One careless email can undermine weeks of professional impression-building <span class="cite">(Guffey &amp; Loewy, 2021, p. 118)</span>.</dd>
+    </dl>
+  </div>
+
+  <h3>Email Writing &mdash; Annotated Examples</h3>
+
+  <div class="email-demo">
+    <div class="email-header">
+      <div class="email-field"><span class="email-field-label">To:</span> dr.udom@uniuyo.edu.ng</div>
+      <div class="email-field"><span class="email-field-label">Subject:</span> Request for Extension &mdash; ENG 301 Essay, Submission Date 20 May 2026</div>
+    </div>
+    <div class="email-body-text">
+      Dear Dr. Udom,<br><br>
+      My name is Chukwuemeka Adiele, a 300-level student in the Department of English and Literary Studies (Student No. 2021/ENG/0347). I am writing to respectfully request a short extension on the ENG 301 essay currently due on 20 May 2026.<br><br>
+      I have been experiencing a significant health issue since last week, which has substantially reduced my ability to complete the required research and writing. I have attached a medical certificate from the University Health Centre dated 12 May 2026 in support of this request. I am seeking an extension of five working days, which would move my submission date to 27 May 2026.<br><br>
+      I understand that this request is at your discretion and I appreciate you considering it. Please let me know if any further documentation is required or if an alternative arrangement would be more appropriate.<br><br>
+      Yours sincerely,<br>
+      Chukwuemeka Adiele<br>
+      300-Level, English and Literary Studies<br>
+      Student No. 2021/ENG/0347<br>
+      Tel: 080X-XXX-XXXX
+    </div>
+    <div class="email-verdict"><strong>Why this email works:</strong> Specific, informative subject line. Immediate self-identification. Clear purpose stated in the first sentence. Supporting evidence (medical certificate) mentioned and attached. Specific and reasonable request (5 days, not "a few weeks"). Acknowledgement of lecturer's discretion. Professional closing with full identification. The email is courteous, concise, and provides everything the lecturer needs to make a decision.</div>
+  </div>
+
+  <div class="email-demo">
+    <div class="email-header">
+      <div class="email-field"><span class="email-field-label">To:</span> dr.udom@uniuyo.edu.ng</div>
+      <div class="email-field"><span class="email-field-label">Subject:</span> pls help</div>
+    </div>
+    <div class="email-body-text">
+      Good day sir,<br><br>
+      Am emeka i am your student. I need extension because i am sick and cannot finish the work. Please give me more time. I will submit when am well.<br><br>
+      Thanks<br>
+      Emeka
+    </div>
+    <div class="email-verdict"><strong>Why this email fails:</strong> Subject line is uninformative and unprofessional. "Am" instead of "I am" throughout (grammatical errors). No student number, department, or course code. No specific extension period requested. No supporting documentation mentioned. No formal salutation or sign-off. The email creates an impression of carelessness and disrespect, and does not give the lecturer enough information to act on the request &mdash; even if they are sympathetic. This is unfortunately a very common type of email received by Nigerian university lecturers.</div>
+  </div>
+</div>
+
+<!-- SECTION II: NETIQUETTE -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section II</span><h2 class="section-title">Netiquette &mdash; The Rules of Digital Conduct</h2><div class="section-rule"></div></div>
+
+  <p>Netiquette (a portmanteau of "network" and "etiquette") refers to the accepted standards of polite, respectful, and appropriate behaviour in digital communication environments. Just as face-to-face interaction is governed by social norms, digital interaction has its own evolving conventions &mdash; and violating them can have real consequences for your academic and professional reputation <span class="cite">(Shea, 2019, p. 22)</span>.</p>
+
+  <div class="netiquette-grid">
+    <div class="net-card">
+      <div class="net-head net-do">&#10003; Digital Communication Do's</div>
+      <div class="net-body">
+        <ul>
+          <li>Match your tone to the platform and audience &mdash; formal for email, more casual for class group chats, always professional in academic forums</li>
+          <li>Respond to emails and messages within a reasonable time (24&ndash;48 hours for academic emails)</li>
+          <li>Use a clear, professional email address &mdash; your university-issued address or a variation of your real name (e.g., c.adiele@gmail.com, not "slimboy99@yahoo.com")</li>
+          <li>Acknowledge receipt of information even if you cannot respond fully immediately</li>
+          <li>Credit others for their ideas when sharing content digitally &mdash; attribution is as important online as in written essays</li>
+          <li>Re-read messages before sending to ensure they convey the intended tone</li>
+          <li>Use appropriate subject lines and keep messages focused and concise</li>
+          <li>Respect others' time by not sending unnecessary "reply-all" messages</li>
+        </ul>
+      </div>
+    </div>
+    <div class="net-card">
+      <div class="net-head net-dont">&#10007; Digital Communication Don'ts</div>
+      <div class="net-body">
+        <ul>
+          <li>Never type in ALL CAPS in digital communication &mdash; it is the digital equivalent of shouting and is considered aggressive and rude</li>
+          <li>Never share personal information about others without their consent &mdash; including photographs taken at private events</li>
+          <li>Do not forward emails or messages beyond their intended audience without permission</li>
+          <li>Never use WhatsApp voice notes for formal academic communication with lecturers or administrators</li>
+          <li>Do not use excessive emoji or informal abbreviations (LOL, BRB, LMAO) in academic or professional digital communication</li>
+          <li>Never post or comment in anger &mdash; take a pause before responding to upsetting digital content</li>
+          <li>Do not participate in online harassment, pile-ons, or cyberbullying in any form, including sharing posts that target individuals</li>
+          <li>Never share copyrighted material (articles, textbook chapters, films) through academic group chats without proper licensing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>The Permanence Principle:</strong> Before posting, sending, or sharing anything digitally, apply this test: <em>Would I be comfortable if this message were seen by my future employer, my lecturer, my parents, and a newspaper journalist simultaneously?</em> If no, do not send it. Digital content is rarely truly temporary &mdash; screenshots, archives, and cached versions can preserve what you thought was deleted. Your digital communication is part of your permanent record <span class="cite">(Shea, 2019, p. 30)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION III: ONLINE ACADEMIC DISCOURSE -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section III</span><h2 class="section-title">Online Academic Discourse</h2><div class="section-rule"></div></div>
+
+  <p>Academic discourse is the specialised mode of communication used in scholarly communities &mdash; characterised by precision, evidence-based argument, acknowledgement of sources, appropriate hedging language, and intellectual rigour. As academic activity moves increasingly into digital spaces (online lectures, virtual seminars, discussion forums, academic social networks), students must learn to maintain the standards of academic discourse in these new environments <span class="cite">(Herring, 2020, p. 44)</span>.</p>
+
+  <h3>Online Discussion Forums and Virtual Seminars</h3>
+  <p>Many universities now use learning management systems (LMS) such as Moodle, Blackboard, or Google Classroom, which include discussion forum features. Contributions to these forums are academic contributions &mdash; they should demonstrate the same quality of reasoning and expression as a seminar contribution or a short essay response.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Standards for Online Academic Discussion Posts</div>
+    <dl>
+      <dt>Substantive Content</dt>
+      <dd>A discussion post should contribute something meaningful to the academic conversation &mdash; an argued position, a relevant example, a critical question, or a synthesis of ideas. Responses like "I agree with Adaeze" or "Great point!" are not academic contributions. They add nothing to the intellectual discourse <span class="cite">(Herring, 2020, p. 46)</span>.</dd>
+      <dt>Evidence and Citation</dt>
+      <dd>Even in informal online academic discussions, claims should be supported by reference to course materials, readings, or credible sources. You need not use formal APA citation in every discussion post, but you should identify your sources: "In the reading by Hurley and Watson (2018), the argument is that..." This practice builds the habit of evidence-based reasoning.</dd>
+      <dt>Respectful Disagreement</dt>
+      <dd>Online academic discourse requires the ability to disagree with a classmate's or lecturer's position without being dismissive, aggressive, or personal. Academic disagreement is about ideas, not people. Phrases such as "I take a different view from [Name]'s position, because the evidence suggests..." demonstrate intellectual maturity and appropriate discourse conduct.</dd>
+      <dt>Appropriate Register</dt>
+      <dd>Online academic forums require a register that is more formal than WhatsApp but can be slightly less formal than a written essay. Avoid slang, emoji in serious posts, and the abbreviations of instant messaging. Write in complete sentences. Proof-read before submitting. Your posts in an academic forum are visible to your lecturer and all classmates &mdash; they form part of your academic record and participation grade.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION IV: DIGITAL IDENTITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section IV</span><h2 class="section-title">Digital Identity and Professional Reputation</h2><div class="section-rule"></div></div>
+
+  <p>Your digital identity is the sum of all information about you that exists in digital form &mdash; your social media profiles, your posts and comments, photographs, videos, forum contributions, professional profiles, and even information others have posted about you. In an age when employers, universities, and professional bodies routinely conduct digital searches of candidates, your digital identity is as important as your physical one <span class="cite">(Hobbs, 2020, p. 68)</span>.</p>
+
+  <div class="identity-grid">
+    <div class="id-card">
+      <div class="id-head id-c1">Personal Digital Identity</div>
+      <div class="id-body">
+        <p>How you present yourself in personal digital spaces &mdash; Instagram, TikTok, personal Facebook, WhatsApp status. These are primarily social but are not private from the professional world unless carefully managed.</p>
+        <p style="margin-top:10px"><strong>Key rule:</strong> Apply the Permanence Principle to everything. Content shared in "personal" spaces regularly crosses into professional visibility, particularly content involving professional opinions, political statements, or behaviour that reflects on character.</p>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-head id-c2">Academic Digital Identity</div>
+      <div class="id-body">
+        <p>How you present yourself in academic digital spaces &mdash; university email, LMS discussion forums, ResearchGate, Google Scholar profiles, academic Twitter/X. These spaces directly reflect your academic competence and scholarly identity.</p>
+        <p style="margin-top:10px"><strong>Key rule:</strong> Maintain consistent professional standards. Even casual academic online spaces reflect your intellectual character. Build a positive academic digital footprint by making thoughtful contributions to online scholarly discussions.</p>
+      </div>
+    </div>
+    <div class="id-card">
+      <div class="id-head id-c3">Professional Digital Identity</div>
+      <div class="id-body">
+        <p>How you present yourself in professional digital spaces &mdash; LinkedIn, professional email, company or institutional social media, professional networking platforms. These are seen directly by employers, clients, and professional bodies.</p>
+        <p style="margin-top:10px"><strong>Key rule:</strong> Invest in your professional digital profile from your university years. A well-maintained LinkedIn profile with academic achievements, relevant projects, and professional endorsements gives you a significant advantage in the Nigerian and global job market.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3>Building a Positive Professional Digital Presence</h3>
+  <p>Rather than merely avoiding digital mistakes, digitally literate graduates actively build positive professional digital identities. This involves creating a LinkedIn profile while still at university, contributing to academic online discussions, maintaining a professional email address, and using digital platforms to showcase skills, projects, and achievements. In Nigeria&rsquo;s competitive job market, digital visibility that demonstrates academic and professional competence is a real advantage <span class="cite">(Ojo &amp; Dike, 2022, p. 55)</span>.</p>
+</div>
+
+<!-- SECTION V: RESEARCH ETHICS -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section V</span><h2 class="section-title">Research Ethics in the Digital Age</h2><div class="section-rule"></div></div>
+
+  <p>The digital age has dramatically expanded access to information and research tools, but it has also created new ethical challenges for academic researchers at all levels &mdash; from undergraduate students to senior academics. Understanding the ethics of digital research is essential for maintaining academic integrity and avoiding serious consequences <span class="cite">(Bawden, 2021, p. 142)</span>.</p>
+
+  <table class="compare-table">
+    <thead><tr><th>Ethical Issue</th><th>What It Involves</th><th>The Academic Standard</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="lbl">Copyright and Fair Use</span></td>
+        <td>Most content online &mdash; articles, images, videos, software &mdash; is protected by copyright even when freely accessible. Downloading, sharing, or reproducing copyrighted content without permission may be illegal, and using it in academic work without attribution is plagiarism.</td>
+        <td>Use content that is licensed for reuse (Creative Commons), properly attributed, or obtained through authorised academic databases. Never reproduce more than a short quotation from any copyrighted source, and always cite. Never photocopy or digitally share full textbooks or journal articles in class groups without authorisation.</td>
+      </tr>
+      <tr>
+        <td><span class="lbl">Plagiarism and AI Misuse</span></td>
+        <td>Copying from online sources without citation is plagiarism. Submitting AI-generated text (from ChatGPT, Gemini, or similar tools) as your own original work is a form of academic fraud increasingly addressed by university regulations worldwide &mdash; including in Nigerian universities.</td>
+        <td>All submitted work must be your own original thinking and writing. Sources must be cited. AI tools may be used to support research (checking grammar, exploring ideas) only where explicitly permitted by the lecturer or institution. When in doubt, ask. Turnitin and AI-detection tools are now routinely used by universities.</td>
+      </tr>
+      <tr>
+        <td><span class="lbl">Online Research Participant Privacy</span></td>
+        <td>Students conducting research involving data collected from social media, online surveys, or digital platforms must handle participant data responsibly &mdash; ensuring anonymity, obtaining informed consent where required, and not using data in ways participants would not expect or consent to.</td>
+        <td>Follow your institution&rsquo;s research ethics guidelines. In general: do not collect personal data without consent, anonymise data wherever possible, and do not store personal data insecurely. Refer to Nigeria&rsquo;s Data Protection Regulation (NDPR 2019) for the legal framework.</td>
+      </tr>
+      <tr>
+        <td><span class="lbl">Source Attribution Online</span></td>
+        <td>The informal culture of the internet encourages sharing without attribution &mdash; memes, quotations, and images circulate without credit to their creators. Academic work requires the opposite: every source must be identified, credited, and cited in the appropriate format.</td>
+        <td>Apply the same citation standards to digital sources as to print sources. Websites, online articles, YouTube videos, podcasts, and tweets used in academic work must be cited in APA, MLA, or the format required by your institution. Use Zotero or Mendeley to manage digital citations systematically.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION VI: SOCIAL MEDIA AND ACADEMIC COMMUNICATION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VI</span><h2 class="section-title">Social Media and Academic Communication</h2><div class="section-rule"></div></div>
+
+  <p>Social media platforms &mdash; particularly X (Twitter), LinkedIn, ResearchGate, and academic Facebook groups &mdash; have become important venues for scholarly communication, professional networking, and knowledge dissemination. Nigerian academics and students who understand how to navigate academic social media have access to global scholarly conversations, emerging research, and professional opportunities that were unavailable to previous generations <span class="cite">(Nwosu &amp; Obi, 2021, p. 88)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Academic and Professional Social Media Use</div>
+    <dl>
+      <dt>X (Formerly Twitter) &mdash; Academic Twitter (#AcademicTwitter)</dt>
+      <dd>X has a significant academic community where researchers share their findings, discuss emerging ideas, post about conferences and calls for papers, and engage in scholarly debate. Nigerian academics and students can follow global thought leaders, access pre-publication research threads, and build networks beyond their institution. The key is to engage substantively &mdash; sharing ideas, asking genuine questions, and contributing to discussions &mdash; rather than merely scrolling <span class="cite">(Herring, 2020, p. 62)</span>.</dd>
+      <dt>LinkedIn &mdash; Professional Academic Networking</dt>
+      <dd>LinkedIn is the world&rsquo;s largest professional network and increasingly important for academic career development. A strong LinkedIn profile includes: a professional photograph, a summary of your academic background and research interests, your educational qualifications, relevant skills and certifications, and connections with classmates, lecturers, and professionals in your field. Begin building this profile in your first year of university &mdash; not in your final year when you are suddenly looking for employment.</dd>
+      <dt>ResearchGate and Google Scholar Profiles</dt>
+      <dd>As you begin producing academic work &mdash; even undergraduate essays that develop into publishable research &mdash; maintaining a ResearchGate profile and a Google Scholar profile allows you to share your academic work, track citations, and be discoverable by the global scholarly community. These platforms are the academic equivalents of a professional portfolio.</dd>
+      <dt>What to Avoid on Academic Social Media</dt>
+      <dd>Avoid posting uninformed opinions on technical academic debates you are not qualified to adjudicate. Avoid aggressive or dismissive engagement with other academics' work. Avoid sharing unverified claims in academic spaces &mdash; your professional credibility depends on the accuracy of what you post. Avoid oversharing personal information. And always maintain awareness that what you post under your real name in academic contexts is permanent and publicly searchable <span class="cite">(Ojo &amp; Dike, 2022, p. 60)</span>.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION VII: MODULE SUMMARY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VII</span><h2 class="section-title">Module 6 &mdash; Complete Summary</h2><div class="section-rule"></div></div>
+
+  <div class="module-summary">
+    <div class="ms-header"><h3>Module 6 &mdash; Digital Literacy: Two Lectures in Summary</h3></div>
+    <div class="ms-grid">
+      <div class="ms-col">
+        <div class="ms-lec-title">Lecture 6.1 &mdash; Introduction to Digital Literacy</div>
+        <ul class="ms-points">
+          <li>Definition: finding, evaluating, creating, communicating using digital technology safely and ethically</li>
+          <li>Six pillars: information, communication, content creation, safety, problem-solving, critical thinking</li>
+          <li>Nigeria's digital landscape: 122 million+ internet users, challenges and opportunities</li>
+          <li>Misinformation (unintentional), disinformation (deliberate), malinformation (true but harmful), fake news</li>
+          <li>Six fact-checking strategies: lateral reading, reverse image search, checking dates, Nigerian fact-checkers, SIFT method, evaluating emotional triggers</li>
+          <li>Digital safety: passwords, phishing, digital footprints, academic integrity</li>
+          <li>Digital tools: academic databases, reference managers, writing software, plagiarism awareness</li>
+        </ul>
+      </div>
+      <div class="ms-col">
+        <div class="ms-lec-title">Lecture 6.2 &mdash; Digital Communication in Context</div>
+        <ul class="ms-points">
+          <li>Academic email: 7 components &mdash; subject line, salutation, opening, body, request, closing, proofreading</li>
+          <li>Good vs. poor email: annotated examples with analysis</li>
+          <li>Netiquette: digital do's and don'ts &mdash; the Permanence Principle</li>
+          <li>Online academic discourse: substantive posts, evidence, respectful disagreement, register</li>
+          <li>Three digital identities: personal, academic, professional</li>
+          <li>Research ethics: copyright, plagiarism/AI misuse, participant privacy, source attribution</li>
+          <li>Academic social media: X, LinkedIn, ResearchGate, Google Scholar profiles</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VIII</span><h2 class="section-title">Practical Activity</h2><div class="section-rule"></div></div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <span style="font-size:1.1rem">&#128269;</span>
+      <div><div class="activity-label">Practical Activity &mdash; Section VIII</div><div class="activity-title">Digital Communication in Practice &mdash; 10 Exercises</div></div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-instruction">Apply the digital communication skills from both lectures of Module 6 to the following exercises. All written responses should be produced at the appropriate level of formality for their context.</p>
+      <ul class="activity-list">
+        <li class="activity-item"><span class="a-num">1</span><span class="a-text">Write a formal email to a fictitious lecturer (Dr. Amina Bello, Department of Communication Arts) requesting clarification on an essay question for a course she teaches. Apply all seven components of a well-written academic email. Your email must be 150&ndash;200 words.</span></li>
+        <li class="activity-item"><span class="a-num">2</span><span class="a-text">A classmate sends you the following email asking for feedback: <em>"hi can u help me with my assignment its due tomorrow and i dont know wut to do pls help im in ur class"</em>. Rewrite this email so it would be appropriate to send to a lecturer. Identify at least five specific problems with the original.</span></li>
+        <li class="activity-item"><span class="a-num">3</span><span class="a-text">Review the list of Netiquette Do's and Don'ts. Identify THREE of the "Don'ts" that you have personally observed being violated in an academic digital context (such as a class WhatsApp group). For each, describe the situation and explain what harm the violation caused or could cause.</span></li>
+        <li class="activity-item"><span class="a-num">4</span><span class="a-text">A lecturer posts the following question in your course online discussion forum: <em>"Based on this week's readings, how do you think social media affects the quality of public discourse in Nigeria?"</em> Write a discussion post of 120&ndash;150 words that meets the academic discourse standards outlined in this lecture.</span></li>
+        <li class="activity-item"><span class="a-num">5</span><span class="a-text">Search your own name on Google. What do you find? What image does your current digital footprint project? What changes, if any, would you make to improve your academic and professional digital identity? Write a reflection of 150&ndash;200 words.</span></li>
+        <li class="activity-item"><span class="a-num">6</span><span class="a-text">Identify a case of each of the following from real Nigerian digital experience: (a) copyright infringement online, (b) AI or plagiarism misuse in academic contexts, (c) privacy violation involving personal data. For each, describe the situation and identify the specific ethical violation.</span></li>
+        <li class="activity-item"><span class="a-num">7</span><span class="a-text">Create or review your LinkedIn profile. Ensure it includes: a professional photograph, an accurate academic summary, your current institution and year of study, three relevant skills, and at least two connections. Share your profile URL with your class group and review two classmates' profiles, offering one constructive observation for each.</span></li>
+        <li class="activity-item"><span class="a-num">8</span><span class="a-text">A fellow student tells you: <em>"It's fine to use ChatGPT to write my essay &mdash; I just rephrase it a bit and it's original enough."</em> Using the concepts from this lecture and from Module 5 (critical thinking), construct a well-reasoned response that addresses the ethical, academic, and practical problems with this position.</span></li>
+        <li class="activity-item"><span class="a-num">9</span><span class="a-text">You discover that a close friend has posted a screenshot of a private WhatsApp conversation from your class group on their public Facebook page, including comments made by named classmates. Apply the concepts of malinformation, netiquette, digital safety, and the Permanence Principle to analyse what has happened and what the appropriate response might be.</span></li>
+        <li class="activity-item"><span class="a-num">10</span><span class="a-text">Write a 200-word personal Digital Literacy Action Plan. Identify: (a) your current strongest pillar, (b) your weakest pillar, (c) one specific new tool or habit you will adopt from Module 6, and (d) one aspect of your digital communication behaviour you will change based on what you have learned. This plan should be specific and actionable, not vague.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Conclusion</span><h2 class="section-title">Course Completion &mdash; Final Reflection</h2><div class="section-rule"></div></div>
+  <div class="conclusion-box">
+    <p>Module 6 completes the <strong>Communication in English</strong> course. You have travelled from the foundational sounds of English (Module 1: Phonetics and Phonology) through the rules of grammar (Module 2), the four core language skills (Module 3), academic writing across multiple genres (Module 4), the principles of logical and critical reasoning (Module 5), and finally to the digital literacy competencies that govern communication in the twenty-first century (Module 6) <span class="cite">(Bawden, 2021, p. 200)</span>.</p>
+    <br>
+    <p>The unifying thread across all six modules is this: <strong>effective communication is always conscious, purposeful, and audience-aware.</strong> Whether you are pronouncing a word, constructing a sentence, presenting a speech, writing an essay, evaluating an argument, or composing a professional email &mdash; the questions are always the same: What am I trying to say? Who am I saying it to? What is the appropriate form, register, and medium? And how do I ensure my communication is accurate, honest, and ethical? These are the questions of a Communication in English graduate. Carry them with you into every professional and personal context your future holds <span class="cite">(Nwosu &amp; Obi, 2021, p. 110)</span>.</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div class="exam-section">
+  <div class="exam-header">
+    <div><h2>Examination Questions</h2><p>Lecture 6.2 &mdash; Digital Communication in Academic and Professional Contexts</p></div>
+    <span class="exam-total">10 Questions &middot; 30 Marks</span>
+  </div>
+  <div class="exam-body">
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the most professional subject line for an email to a lecturer?</p></div><div class="q-options"><div class="q-option">A. "hi please help"</div><div class="q-option">B. "Question about assignment"</div><div class="q-option">C. "Request for Clarification &mdash; ENG 201 Essay Question, Dr. Udom"</div><div class="q-option">D. "URGENT: Need help NOW"</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">List and briefly explain FIVE of the seven components of a well-written academic email. For each component, give one example of good practice and one example of poor practice.</p></div><p class="q-marks">[5 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best describes the "Permanence Principle" in digital communication?</p></div><div class="q-options"><div class="q-option">A. Digital content should be permanent and never deleted</div><div class="q-option">B. Before posting anything digitally, ask whether you would be comfortable if it were seen by your employer, lecturer, parents, and a journalist simultaneously</div><div class="q-option">C. Online content should always be backed up permanently</div><div class="q-option">D. Professional emails must be stored permanently for five years</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Rewrite</span><p class="q-text">Rewrite the following email to make it academically appropriate. Identify at least FOUR specific problems with the original:<br><em>"hey lecturer, am one of ur student pls i need extension for the work because something happened at home. thanks"</em></p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">Using AI-generated text and submitting it as your own original academic work is best described as:</p></div><div class="q-options"><div class="q-option">A. An efficient research tool that all universities now approve of</div><div class="q-option">B. A form of academic dishonesty equivalent to plagiarism</div><div class="q-option">C. A legitimate form of digital content creation</div><div class="q-option">D. Only a problem if the AI is not properly cited</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Explain with Examples</span><p class="q-text">Distinguish between personal digital identity, academic digital identity, and professional digital identity. For each, give one specific example of how a Nigerian university student might manage each type, and one example of a mistake to avoid.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">When contributing to an online academic discussion forum, which of the following is an appropriate academic contribution?</p></div><div class="q-options"><div class="q-option">A. "I totally agree with what Blessing said &#128516;"</div><div class="q-option">B. "I take a different view from Blessing's position, because the reading by Hurley and Watson suggests that validity is about structure, not content."</div><div class="q-option">C. "This topic is too complicated. Can we discuss it in class instead?"</div><div class="q-option">D. "EVERYONE SHOULD READ THIS. ITS VERY IMPORTANT!!!"</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Analyse</span><p class="q-text">Read the following scenario and identify all the digital ethics violations present. For each violation, name the ethical issue, explain why it is a problem, and state what the correct behaviour should have been:<br><em>"Kemi downloaded a journal article from her university database and shared the full PDF in the class WhatsApp group. She then used two paragraphs from the article in her essay without citation. She also posted a photo from the class group in her Instagram story without asking anyone's permission."</em></p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is NOT a netiquette violation?</p></div><div class="q-options"><div class="q-option">A. Typing a message in ALL CAPS to emphasise urgency</div><div class="q-option">B. Responding to an academic email within 24 hours</div><div class="q-option">C. Using "LOL" and emoji in a formal email to a university administrator</div><div class="q-option">D. Forwarding a private email to others without the sender's permission</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Essay</span><p class="q-text">Write an essay of 280&ndash;350 words on the following topic: <em>"The digital skills a Nigerian university student needs to succeed in the twenty-first century go far beyond being able to use a smartphone."</em> In your essay, draw on specific concepts from both Lectures 6.1 and 6.2, and argue for the specific digital literacy competencies you consider most essential and why.</p></div><p class="q-marks">[8 marks]</p></div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="references-section">
+  <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+  <div class="ref-list">
+    <div class="ref-item">Bawden, D. (2021). <em>Introduction to Information Science</em> (2nd ed.). Facet Publishing.</div>
+    <div class="ref-item">Guffey, M. E., &amp; Loewy, D. (2021). <em>Business Communication: Process and Product</em> (10th ed.). Cengage Learning.</div>
+    <div class="ref-item">Herring, S. C. (2020). <em>Computer-Mediated Communication: Linguistic, Social and Cross-Cultural Perspectives</em> (3rd ed.). John Benjamins.</div>
+    <div class="ref-item">Hobbs, R. (2020). <em>Mind Over Media: Propaganda Education for a Digital Age</em>. W.W. Norton.</div>
+    <div class="ref-item">Ireton, C., &amp; Posetti, J. (2020). <em>Journalism, Fake News &amp; Disinformation: Handbook for Journalism Education and Training</em>. UNESCO.</div>
+    <div class="ref-item">Jisc. (2019). <em>Building Digital Capability: The Six Elements Defined</em>. Jisc. https://www.jisc.ac.uk</div>
+    <div class="ref-item">Nwosu, L. C., &amp; Obi, E. C. (2021). Digital communication competence among undergraduates in Nigerian universities: Challenges and opportunities. <em>Journal of Communication and Media Studies</em>, 12(1), 28&ndash;110.</div>
+    <div class="ref-item">Ojo, T. A., &amp; Dike, V. W. (2022). Digital literacy and academic performance of undergraduate students in Nigerian universities. <em>African Journal of Library, Archives and Information Science</em>, 32(1), 1&ndash;72.</div>
+    <div class="ref-item">Shea, V. (2019). <em>Netiquette</em> (Revised ed.). Albion Books.</div>
+    <div class="ref-item">Wardle, C., &amp; Derakhshan, H. (2021). <em>Information Disorder: Toward an Interdisciplinary Framework for Research and Policy Making</em> (2nd ed.). Council of Europe.</div>
+  </div>
+</div>
+
+<a class="back-to-course" href="index.html">
+  <div>
+    <div class="btc-label">Course Complete &mdash; Return to Index</div>
+    <div class="btc-title">Communication in English &mdash; Full Course Index</div>
+    <div class="btc-desc">All 6 modules &middot; All 20 lectures &middot; Dr. Maurice Udom</div>
+  </div>
+  <span class="btc-arrow">&#8594;</span>
+</a>
+<div class="lecture-nav">
+  <a class="lnav-btn" href="lecture-6-1.html">&#8592; Lecture 6.1</a>
+  <a class="lnav-index" href="index.html">Course Index</a>
+  <a class="lnav-btn disabled" href="#">Course Complete</a>
+</div>
+
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>Communication in English &middot; Lecture 6.2 &nbsp;&middot;&nbsp; Dr. Maurice Udom &nbsp;&middot;&nbsp; <a href="index.html">Course Index</a> &nbsp;&middot;&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>&copy; 2026 Maurice Udom. All rights reserved.</footer>
+</body>
+</html>

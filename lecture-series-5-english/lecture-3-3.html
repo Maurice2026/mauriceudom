@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 3.3: Speaking Skills — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px;animation:fadeUp .5s ease both;animation-delay:.02s}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-icon{font-size:1.1rem}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'✓';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.78rem}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:topic-counter}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:topic-counter}
+    .overview-topics li::before{content:counter(topic-counter)'.';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.82rem}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(2){animation-delay:.05s}.section-block:nth-child(3){animation-delay:.10s}.section-block:nth-child(4){animation-delay:.15s}.section-block:nth-child(5){animation-delay:.20s}.section-block:nth-child(6){animation-delay:.25s}.section-block:nth-child(7){animation-delay:.30s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* SPEECH STRUCTURE */
+    .speech-structure{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .speech-structure th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .speech-structure td{padding:12px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.6}
+    .speech-structure tr:last-child td{border-bottom:none}
+    .speech-structure tr:nth-child(even) td{background:#faf6ef}
+    .label{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif}
+    /* DELIVERY GRID */
+    .delivery-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .delivery-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:16px 18px}
+    .delivery-icon{font-size:1.4rem;margin-bottom:8px;display:block}
+    .delivery-name{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--mod);margin-bottom:6px}
+    .delivery-desc{font-size:.86rem;color:#2a2016;line-height:1.55}
+    /* STAGE FRIGHT */
+    .fright-block{background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--gold-dk);padding:16px 20px;margin:10px 0}
+    .fright-cause{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dk);font-weight:700;margin-bottom:4px}
+    .fright-strategy{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:5px}
+    .fright-desc{font-size:.87rem;color:#2a2016;line-height:1.55}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-word{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:2px}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .skill-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.delivery-grid{grid-template-columns:1fr}.overview-body{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}.activity-item{grid-template-columns:28px 1fr}}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 3 &nbsp;·&nbsp; Lecture 3</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Speaking Skills — Public Speaking and Presentations</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Language Skills</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+          <li>Structure a speech or presentation with a clear introduction, body, and conclusion</li>
+          <li>Apply verbal and non-verbal delivery techniques effectively</li>
+          <li>Identify and manage communication apprehension (stage fright)</li>
+          <li>Adapt a speech to different audiences and academic purposes</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+          <li>Why Speaking Skill Matters at the Tertiary Level</li>
+          <li>Preparing a Speech — Structure and Planning</li>
+          <li>Delivery Techniques — Verbal and Non-Verbal</li>
+          <li>Managing Stage Fright</li>
+          <li>Practical Activity</li>
+          <li>Conclusion &amp; Key Takeaway</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lectures 3.1 and 3.2 before proceeding.</p>
+        <a class="prereq-link" href="lecture-3-2.html">← Lecture 3.2 — Listening Skills</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">Why Speaking Skill Matters at the Tertiary Level</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Public speaking is consistently ranked among the most important academic and professional competencies expected of university graduates <span class="cite">(Lucas, 2020, p. 4)</span>. At the tertiary level, students are required to give seminar presentations, participate in oral examinations (vivas), contribute to panel discussions, and deliver research findings — all of which demand confident, organised, and intelligible spoken English <span class="cite">(Bailey, 2018, p. 6)</span>.</p>
+    <p>Yet surveys consistently reveal that communication apprehension — commonly called <em>stage fright</em> — is among the most widely reported anxieties among students, including at Nigerian universities <span class="cite">(Okafor, 2021, p. 34)</span>. This lecture addresses both the structural and psychological dimensions of effective public speaking.</p>
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <dl>
+        <dt>Public Speaking</dt>
+        <dd>The process of communicating a prepared or semi-prepared message to a defined audience with a specific purpose — to inform, persuade, or inspire <span class="cite">(Lucas, 2020, p. 6)</span>.</dd>
+        <dt>Communication Apprehension</dt>
+        <dd>A level of fear or anxiety associated with real or anticipated communication with others. It is a normal and universal experience, not a personal failing <span class="cite">(McCroskey, 2019, p. 8)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Preparing a Speech — Structure and Planning</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Effective public speaking begins long before a speaker stands before an audience. Preparation is the single most reliable strategy for reducing anxiety and improving delivery <span class="cite">(Lucas, 2020, p. 22)</span>. A well-prepared speech has three essential components: a clear structure, audience awareness, and a defined purpose.</p>
+
+    <h3>The Classical Three-Part Structure</h3>
+    <p>Every effective academic speech or presentation follows the same fundamental structure — a structure that has been documented since classical rhetoric <span class="cite">(Perloff, 2021, p. 44)</span>:</p>
+
+    <table class="speech-structure">
+      <thead><tr><th>Part</th><th>Purpose</th><th>Key Elements</th><th>Approximate Length</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="label">Introduction</span></td>
+          <td>Capture attention, establish credibility, state the topic and purpose, and preview the main points <span class="cite">(Lucas, 2020, p. 180)</span>.</td>
+          <td>Attention-getter · Thesis statement · Preview of main points</td>
+          <td>10–15% of total time</td>
+        </tr>
+        <tr>
+          <td><span class="label">Body</span></td>
+          <td>Develop the main arguments or information in a logical, organised sequence with supporting evidence <span class="cite">(Bailey, 2018, p. 24)</span>.</td>
+          <td>2–4 main points · Supporting evidence · Transitions between points</td>
+          <td>70–80% of total time</td>
+        </tr>
+        <tr>
+          <td><span class="label">Conclusion</span></td>
+          <td>Signal the end, restate the thesis in different words, summarise the main points, and leave a memorable closing impression <span class="cite">(Perloff, 2021, p. 52)</span>.</td>
+          <td>Summary · Restatement of thesis · Memorable closing line or call to action</td>
+          <td>10–15% of total time</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Audience Analysis</div>
+      <dl>
+        <dt>Know Your Audience</dt>
+        <dd>Before writing a word, ask: Who are they? What do they already know about this topic? What do they need to know? What will interest or concern them? Academic presentations for fellow students differ from those delivered to lecturers or external examiners <span class="cite">(Lucas, 2020, p. 30)</span>.</dd>
+        <dt>Purpose</dt>
+        <dd>Every speech has one of three primary purposes: <strong>to inform</strong> (present new knowledge), <strong>to persuade</strong> (change attitudes or behaviour), or <strong>to inspire</strong> (motivate and move). The purpose shapes every other decision in the preparation process <span class="cite">(Bailey, 2018, p. 14)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Delivery Techniques — Verbal and Non-Verbal</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>A well-structured speech delivered poorly will fail. Delivery is the vehicle through which the content reaches the audience, and it operates on two channels simultaneously — verbal and non-verbal <span class="cite">(Lucas, 2020, p. 240)</span>.</p>
+
+    <h3>Verbal Delivery</h3>
+    <div class="delivery-grid">
+      <div class="delivery-card">
+        <span class="delivery-icon">🎙️</span>
+        <div class="delivery-name">Volume</div>
+        <div class="delivery-desc">Speak loudly enough to be heard by all audience members, including those at the back. Vary volume for emphasis — lowering the voice can be as powerful as raising it <span class="cite">(Bailey, 2018, p. 34)</span>.</div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon">⏱️</span>
+        <div class="delivery-name">Pace</div>
+        <div class="delivery-desc">Speak at a rate that allows the audience to absorb content — approximately 120–150 words per minute for academic presentations. Slow down for complex ideas; pause for emphasis <span class="cite">(Lucas, 2020, p. 246)</span>.</div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon">🎵</span>
+        <div class="delivery-name">Pitch and Intonation</div>
+        <div class="delivery-desc">Vary pitch to convey meaning and maintain audience attention. A monotone delivery — regardless of content — causes audiences to disengage within minutes <span class="cite">(McCroskey, 2019, p. 52)</span>.</div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon">✂️</span>
+        <div class="delivery-name">Clarity and Articulation</div>
+        <div class="delivery-desc">Pronounce words fully and clearly, particularly final consonants. Avoid mumbling, swallowing syllables, or running words together. Apply the phonological principles from Module 1 <span class="cite">(Perloff, 2021, p. 62)</span>.</div>
+      </div>
+    </div>
+
+    <h3>Non-Verbal Delivery</h3>
+    <div class="delivery-grid">
+      <div class="delivery-card">
+        <span class="delivery-icon">👀</span>
+        <div class="delivery-name">Eye Contact</div>
+        <div class="delivery-desc">Maintain regular eye contact with different sections of the audience — not just the examiner or one person. Eye contact signals confidence and keeps the audience engaged <span class="cite">(Lucas, 2020, p. 255)</span>.</div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon">🧍</span>
+        <div class="delivery-name">Posture and Stance</div>
+        <div class="delivery-desc">Stand upright with feet shoulder-width apart. Avoid swaying, slouching, or pacing nervously. A grounded, open stance projects authority and confidence <span class="cite">(Bailey, 2018, p. 42)</span>.</div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon">🤲</span>
+        <div class="delivery-name">Gestures</div>
+        <div class="delivery-desc">Use purposeful hand gestures to reinforce key points, show size or direction, or emphasise contrast. Avoid repetitive, nervous gestures such as fidgeting or gripping the lectern <span class="cite">(McCroskey, 2019, p. 60)</span>.</div>
+      </div>
+      <div class="delivery-card">
+        <span class="delivery-icon">😊</span>
+        <div class="delivery-name">Facial Expression</div>
+        <div class="delivery-desc">Your face must match your words. A speaker who discusses a problem while smiling sends a contradictory message. Facial expressions communicate emotion, sincerity, and engagement <span class="cite">(Perloff, 2021, p. 68)</span>.</div>
+      </div>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>The 7-38-55 Principle:</strong> Research by Mehrabian <span class="cite">(cited in Lucas, 2020, p. 242)</span> suggests that when verbal and non-verbal messages conflict, audiences rely primarily on non-verbal cues to determine meaning. Content alone is not enough — how you deliver it matters enormously.</p>
+    </div>
+  </div>
+
+  <!-- SECTION IV -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Managing Stage Fright</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Communication apprehension — the anxiety of speaking before an audience — is experienced by over 75% of people at some point in their lives <span class="cite">(McCroskey, 2019, p. 12)</span>. The goal is not to eliminate anxiety entirely — a moderate level of arousal actually improves performance — but to manage it so it does not disrupt delivery <span class="cite">(Lucas, 2020, p. 58)</span>.</p>
+
+    <div class="fright-block">
+      <div class="fright-cause">Strategy 1 — Preparation</div>
+      <div class="fright-strategy">Know your material thoroughly</div>
+      <div class="fright-desc">The single most powerful anxiety-reducer is thorough preparation. When you know your content deeply, the fear of forgetting diminishes substantially. Practise your speech aloud at least three times before delivery <span class="cite">(Lucas, 2020, p. 60)</span>.</div>
+    </div>
+    <div class="fright-block">
+      <div class="fright-cause">Strategy 2 — Reframing</div>
+      <div class="fright-strategy">Reframe anxiety as energy</div>
+      <div class="fright-desc">The physiological symptoms of anxiety — elevated heart rate, heightened alertness — are identical to the symptoms of excitement. Consciously reframe the feeling as positive energy and readiness, not threat <span class="cite">(McCroskey, 2019, p. 20)</span>.</div>
+    </div>
+    <div class="fright-block">
+      <div class="fright-cause">Strategy 3 — Audience Focus</div>
+      <div class="fright-strategy">Shift focus from self to audience</div>
+      <div class="fright-desc">Most anxiety is self-centred — the speaker is focused on how they appear rather than on delivering value to the audience. Deliberately shifting focus outward to the audience and their needs reduces self-consciousness <span class="cite">(Bailey, 2018, p. 52)</span>.</div>
+    </div>
+    <div class="fright-block">
+      <div class="fright-cause">Strategy 4 — Physical Regulation</div>
+      <div class="fright-strategy">Use controlled breathing</div>
+      <div class="fright-desc">Slow, deep diaphragmatic breathing before and during a speech reduces cortisol and activates the parasympathetic nervous system — the body's calming mechanism. Take three deep breaths before beginning <span class="cite">(Perloff, 2021, p. 80)</span>.</div>
+    </div>
+    <div class="fright-block">
+      <div class="fright-cause">Strategy 5 — Experience</div>
+      <div class="fright-strategy">Speak frequently and deliberately</div>
+      <div class="fright-desc">Public speaking anxiety decreases with exposure. Every presentation — however imperfect — builds confidence for the next. Seek opportunities to speak: seminars, church, community meetings, student groups <span class="cite">(Lucas, 2020, p. 65)</span>.</div>
+    </div>
+  </div>
+
+  <!-- SECTION V: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Practical Activity: Speech Analysis</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Speaking Skills — 10 Scenario Questions</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">For each scenario or question below, identify the relevant speaking principle, strategy, or error. Write one sentence justifying your answer.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-word">A student's presentation has no clear opening, jumps straight into content, and ends abruptly. What structural element is missing?</div><div class="activity-answer">Check the three-part speech structure.</div></div><span class="skill-badge">Introduction &amp; Conclusion</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-word">A speaker reads directly from notes without looking at the audience throughout a ten-minute presentation.</div><div class="activity-answer">Identify the non-verbal delivery error.</div></div><span class="skill-badge">No Eye Contact</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-word">Before giving a speech, a student takes three slow, deep breaths and mentally tells himself "I am excited, not afraid." Which two strategies is he applying?</div><div class="activity-answer">Name both anxiety management strategies.</div></div><span class="skill-badge">Breathing + Reframing</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-word">A lecturer's voice remains at exactly the same pitch and volume for fifty minutes. What is the likely effect on the audience?</div><div class="activity-answer">What happens to attention when delivery is monotone?</div></div><span class="skill-badge">Monotone — Disengagement</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-word">A student is preparing a 5-minute presentation. How much time should she spend on her introduction and conclusion respectively?</div><div class="activity-answer">Apply the percentage guidelines from Section II.</div></div><span class="skill-badge">~30–45 seconds each</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-word">During a seminar presentation, a speaker constantly sways from foot to foot and twists her ring. What is this communicating to the audience?</div><div class="activity-answer">Identify the non-verbal signal and its likely effect.</div></div><span class="skill-badge">Nervous Gestures</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-word">A student is more anxious about how he looks than about whether his audience is learning. What strategy should he apply?</div><div class="activity-answer">Which strategy shifts focus outward?</div></div><span class="skill-badge">Audience Focus</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-word">Identify the three primary purposes of a public speech and give one academic example of each.</div><div class="activity-answer">Think: inform, persuade, inspire.</div></div><span class="skill-badge">3 Purposes</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-word">A speaker's closing line is: "In summary, I covered three points — and that's it." Evaluate this conclusion and suggest an improvement.</div><div class="activity-answer">What makes a memorable conclusion?</div></div><span class="skill-badge">Weak Conclusion</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-word">Why does Module 1 (Phonetics) remain directly relevant to spoken academic presentations?</div><div class="activity-answer">Connect pronunciation competence to presentation delivery.</div></div><span class="skill-badge">Module 1 Link</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section VI</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>Effective public speaking is not a talent — it is a skill built through deliberate preparation, structured delivery, and repeated practice. A student who structures every presentation with a clear introduction, body, and conclusion; who controls pace, volume, and eye contact; and who manages anxiety through preparation and audience focus will consistently deliver compelling academic presentations <span class="cite">(Lucas, 2020, p. 70)</span>.</p>
+      <br>
+      <p>The phonological competence developed in Module 1 — clarity of pronunciation, correct stress placement, and appropriate intonation — is the acoustic foundation on which every delivery technique in this lecture depends. Good speaking integrates grammar, phonology, and rhetoric simultaneously <span class="cite">(Bailey, 2018, p. 60)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 3.3 — Speaking Skills: Public Speaking and Presentations</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">What percentage of a speech's total time should typically be allocated to the introduction?</p></div><div class="q-options"><div class="q-option">A. &nbsp;30–40%</div><div class="q-option">B. &nbsp;10–15%</div><div class="q-option">C. &nbsp;50%</div><div class="q-option">D. &nbsp;70–80%</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">Describe the three-part structure of an effective speech. For each part, state its purpose and name two key elements it should contain.</p></div><p class="q-marks">[3 marks — 1 per part]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is a <em>non-verbal</em> delivery element?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Articulation</div><div class="q-option">B. &nbsp;Pitch</div><div class="q-option">C. &nbsp;Eye contact</div><div class="q-option">D. &nbsp;Pace</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between verbal and non-verbal delivery in public speaking. Give two examples of each type and explain how each affects audience perception of the speaker.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">The most reliable single strategy for reducing communication apprehension before a speech is:</p></div><div class="q-options"><div class="q-option">A. &nbsp;Avoiding eye contact with the audience</div><div class="q-option">B. &nbsp;Memorising the speech word for word</div><div class="q-option">C. &nbsp;Thorough preparation and repeated practice</div><div class="q-option">D. &nbsp;Speaking as quickly as possible to finish sooner</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Write Out</span><p class="q-text">Explain the concept of <em>audience analysis</em>. Why must a speaker consider the audience before writing a speech? Give two specific ways in which audience analysis would change the content or delivery of an academic presentation.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">Communication apprehension is best described as:</p></div><div class="q-options"><div class="q-option">A. &nbsp;A rare condition affecting only inexperienced speakers</div><div class="q-option">B. &nbsp;A sign of intellectual inadequacy that cannot be overcome</div><div class="q-option">C. &nbsp;A normal, universal experience of anxiety associated with speaking before others</div><div class="q-option">D. &nbsp;A condition caused exclusively by insufficient vocabulary</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Apply</span><p class="q-text">Name and explain <strong>three</strong> strategies for managing stage fright. For each, explain the psychological or physiological mechanism through which it reduces anxiety.</p></div><p class="q-marks">[3 marks — 1 per strategy]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following describes the three primary purposes of a public speech?</p></div><div class="q-options"><div class="q-option">A. &nbsp;To read, to write, and to listen</div><div class="q-option">B. &nbsp;To inform, to persuade, and to inspire</div><div class="q-option">C. &nbsp;To question, to answer, and to analyse</div><div class="q-option">D. &nbsp;To summarise, to expand, and to conclude</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain why public speaking skill is considered a core competency for tertiary-level students. Draw on at least two delivery techniques and one anxiety management strategy discussed in this lecture to support your argument.</p></div><p class="q-marks">[5 marks]</p></div>
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Bailey, S. (2018). <em>Academic Writing: A Handbook for International Students</em> (5th ed.). Routledge.</div>
+      <div class="ref-item">Beebe, S. A., &amp; Beebe, S. J. (2021). <em>Public Speaking: An Audience-Centred Approach</em> (10th ed.). Pearson.</div>
+      <div class="ref-item">Ekwueme, C. O. (2020). Oral communication competence and academic performance: A study of tertiary students in Enugu State, Nigeria. <em>Journal of the Linguistic Association of Nigeria</em>, 23(1), 44–60.</div>
+      <div class="ref-item">Hamilton, G. (2019). <em>Public Speaking for College and Career</em> (11th ed.). McGraw-Hill Education.</div>
+      <div class="ref-item">Lucas, S. E. (2020). <em>The Art of Public Speaking</em> (13th ed.). McGraw-Hill Education.</div>
+      <div class="ref-item">McCroskey, J. C. (2019). <em>An Introduction to Rhetorical Communication</em> (9th ed.). Routledge.</div>
+      <div class="ref-item">Adeyemi, B. A. (2022). Oral presentation skills and academic confidence among undergraduates in Nigerian universities. <em>Journal of Communication and Media Research</em>, 14(1), 66–82.</div>
+      <div class="ref-item">Okafor, I. F. (2021). Active listening and academic performance: Evidence from tertiary institutions in South-South Nigeria. <em>African Research Review</em>, 15(3), 78–92.</div>
+      <div class="ref-item">Perloff, R. M. (2021). <em>The Dynamics of Persuasion: Communication and Attitudes in the Twenty-First Century</em> (7th ed.). Routledge.</div>
+      <div class="ref-item">Verderber, R. F., Verderber, K. S., &amp; Sellnow, D. D. (2018). <em>Communicate!</em> (15th ed.). Cengage Learning.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-3-4.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 3</div>
+      <div class="next-title">Lecture 3.4 — Integrated Language Use in Academic Contexts</div>
+      <div class="next-desc">Seminar participation · Discussion skills · Academic register</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-3-2.html">← Lecture 3.2</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-3-4.html">Lecture 3.4 →</a>
+  </div>
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 3.3 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

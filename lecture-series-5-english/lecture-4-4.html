@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 4.4: CV and Application Writing &mdash; Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'\2713';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:14px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:3px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.7;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* CV TEMPLATE */
+    .cv-template{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:22px 0;font-family:'Source Serif 4',serif}
+    .cv-name-bar{background:var(--mod);color:var(--white);padding:20px 28px;text-align:center}
+    .cv-name{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;letter-spacing:.04em}
+    .cv-contact{font-size:.82rem;color:rgba(255,255,255,.72);margin-top:6px}
+    .cv-body{padding:0 28px 24px}
+    .cv-section{margin-top:20px;padding-top:16px;border-top:1px solid var(--rule)}
+    .cv-section-title{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--mod);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+    .cv-entry{margin-bottom:12px}
+    .cv-entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+    .cv-entry-title{font-weight:700;font-size:.9rem;color:var(--ink)}
+    .cv-entry-date{font-size:.8rem;color:var(--muted);white-space:nowrap}
+    .cv-entry-sub{font-size:.85rem;color:var(--mod);font-style:italic;margin-bottom:4px}
+    .cv-entry-desc{font-size:.85rem;color:#2a2016;line-height:1.6}
+    .cv-entry-desc ul{list-style:none;display:grid;gap:4px;margin-top:4px}
+    .cv-entry-desc ul li{padding-left:16px;position:relative}
+    .cv-entry-desc ul li::before{content:'\2022';position:absolute;left:0;color:var(--mod)}
+    /* COMPARE TABLE */
+    .compare-table{width:100%;border-collapse:collapse;margin:22px 0;border:1px solid var(--rule)}
+    .compare-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .compare-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.65}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even) td{background:#faf6ef}
+    .lbl{font-weight:700;color:var(--mod)}
+    /* LETTER TEMPLATE */
+    .letter-demo{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:28px 32px;margin:22px 0;font-size:.92rem;line-height:1.85;color:#2a2016}
+    .letter-demo .sender{text-align:right;margin-bottom:20px;font-size:.88rem}
+    .letter-demo .date{text-align:right;margin-bottom:20px;font-size:.88rem}
+    .letter-demo .recipient{margin-bottom:20px;font-size:.88rem}
+    .letter-demo .salutation{font-weight:700;margin-bottom:16px}
+    .letter-demo .body-para{margin-bottom:14px}
+    .letter-demo .closing{margin-top:20px}
+    .letter-verdict{background:var(--cream);border:1px solid var(--rule);padding:12px 18px;border-radius:3px;margin-top:12px;font-size:.86rem;color:#2a2016;line-height:1.6}
+    .letter-verdict strong{color:var(--mod)}
+    /* DOS DONTS */
+    .dd-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+    .dd-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .dd-head{padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--white)}
+    .dd-do{background:#1a5c2a}.dd-dont{background:#8b1a1a}
+    .dd-body{padding:14px 16px;font-size:.87rem;color:#2a2016;line-height:1.65}
+    .dd-body ul{list-style:none;display:grid;gap:7px}
+    .dd-body ul li{padding-left:16px;position:relative}
+    .dd-body ul li::before{position:absolute;left:0}
+    .dd-do .dd-body ul li::before{content:'\2713';color:#1a5c2a}
+    .dd-dont .dd-body ul li::before{content:'\2717';color:#8b1a1a}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.9rem;color:#c0b8ac;margin-bottom:18px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:10px}
+    .activity-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:12px 14px}
+    .a-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .a-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.65}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    /* EXAM */
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body,.dd-grid{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+<div class="topbar"><a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;&middot;&nbsp; <a href="index.html">Communication in English</a></div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 4 &nbsp;&middot;&nbsp; Lecture 4</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">CV and Application Writing</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip"><strong>Duration:</strong>&nbsp;30 Minutes</span>
+    <span class="meta-chip"><strong>Module:</strong>&nbsp;Writing Activities</span>
+    <span class="meta-chip"><strong>Level:</strong>&nbsp;Tertiary</span>
+    <span class="meta-chip"><strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<div class="overview-block">
+  <div class="overview-header"><span style="font-size:1.1rem">&#128203;</span>&nbsp;<span class="overview-header-title">Lecture Overview</span></div>
+  <div class="overview-body">
+    <div class="overview-col">
+      <div class="overview-col-label">Learning Objectives</div>
+      <ul class="overview-objectives">
+        <li>Understand the purpose and function of a CV</li>
+        <li>Distinguish CV types: chronological, functional, combined</li>
+        <li>Identify all sections of a complete professional Nigerian CV</li>
+        <li>Write a well-structured cover / application letter</li>
+        <li>Tailor CV and application letters to specific job requirements</li>
+        <li>Avoid common CV and application writing errors</li>
+      </ul>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Topics Covered</div>
+      <ol class="overview-topics">
+        <li>What Is a CV?</li>
+        <li>CV vs. R&eacute;sum&eacute;</li>
+        <li>Types of CV</li>
+        <li>Sections of a Complete CV</li>
+        <li>Annotated Model CV</li>
+        <li>The Application / Cover Letter</li>
+        <li>Annotated Model Application Letter</li>
+        <li>CV and Letter Writing Do&rsquo;s and Don&rsquo;ts</li>
+      </ol>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Prerequisite</div>
+      <p class="overview-prereq">Lectures 4.1&ndash;4.3 (Essay Writing and Letter Writing) should be completed before this lecture. The principles of formal letter writing from Lecture 4.3 are directly extended and applied here.</p>
+      <a class="prereq-link" href="lecture-4-3.html">&#8592; Lecture 4.3 &mdash; Letter Writing</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION I: WHAT IS A CV -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section I</span><h2 class="section-title">What Is a CV?</h2><div class="section-rule"></div></div>
+
+  <p>A <strong>Curriculum Vitae</strong> (from the Latin, meaning "course of life") is a comprehensive written document that presents a person&rsquo;s educational background, professional experience, skills, achievements, and qualifications. It is the primary document used in the Nigerian job market and in academic applications to introduce oneself to potential employers, institutions, or selection committees <span class="cite">(Paltridge &amp; Starfield, 2020, p. 112)</span>.</p>
+
+  <p>The CV is not merely a list &mdash; it is a carefully curated, strategically organised argument that the applicant is the best candidate for the position being applied for. Every section, every bullet point, and every word choice should serve the purpose of convincing the reader that this particular person possesses exactly the qualifications, experience, and character the role requires.</p>
+
+  <p>In the Nigerian context, a well-written CV is often the only representation of a candidate before an interview is offered. Employers and human resources departments may receive dozens or hundreds of CVs for a single position. A CV that is poorly formatted, grammatically incorrect, inappropriately lengthy, or missing key information will be eliminated without the candidate ever knowing. Understanding what makes a CV excellent is therefore a career-critical skill <span class="cite">(Andrews &amp; Smith, 2019, p. 88)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">CV vs. R&eacute;sum&eacute; &mdash; An Important Distinction</div>
+    <dl>
+      <dt>Curriculum Vitae (CV)</dt>
+      <dd>A comprehensive document presenting the full record of a person&rsquo;s academic and professional life. In Nigeria and the UK, CVs are typically 2&ndash;4 pages (longer for senior academics or professionals). A CV includes all qualifications, publications, conferences, professional memberships, and detailed experience. Used for most professional and academic applications in Nigeria <span class="cite">(Paltridge &amp; Starfield, 2020, p. 114)</span>.</dd>
+      <dt>R&eacute;sum&eacute;</dt>
+      <dd>A shorter (1&ndash;2 page) document common in the United States and Canada, tailored specifically to one job application. It includes only the most relevant experience for that particular role, omitting anything not directly applicable. The r&eacute;sum&eacute; is less common in Nigeria but is increasingly used for international applications and positions with global companies. The principles of good writing apply equally to both.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION II: TYPES OF CV -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section II</span><h2 class="section-title">Types of CV</h2><div class="section-rule"></div></div>
+
+  <p>The three main types of CV serve different needs depending on your career stage, career history, and the nature of the role being applied for <span class="cite">(Hacker &amp; Sommers, 2021, p. 224)</span>.</p>
+
+  <table class="compare-table">
+    <thead><tr><th>Type</th><th>Structure</th><th>Best For</th><th>Nigerian Application</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="lbl">Chronological CV</span></td>
+        <td>Experience listed in reverse chronological order (most recent first). The standard and most widely used format.</td>
+        <td>Candidates with a consistent, relevant work history. Employers can quickly see career progression and the most recent experience.</td>
+        <td>The most common format used in Nigerian professional applications. Recommended for graduates and experienced professionals alike unless there are specific gaps or career changes to manage.</td>
+      </tr>
+      <tr>
+        <td><span class="lbl">Functional CV</span></td>
+        <td>Skills and competencies are listed first and emphasised, with less detail on the chronology of employment. Work history is present but de-emphasised.</td>
+        <td>Career changers, those with employment gaps, or candidates whose skills are more impressive than their job titles suggest.</td>
+        <td>Less common in Nigeria but useful for graduates applying for roles in a field different from their degree discipline, or for those returning to work after a gap.</td>
+      </tr>
+      <tr>
+        <td><span class="lbl">Combined CV</span></td>
+        <td>Begins with a skills summary, then presents a full chronological work history. Combines the advantages of both formats.</td>
+        <td>Experienced professionals who want to highlight transferable skills while also demonstrating a strong career record.</td>
+        <td>Increasingly used by Nigerian mid-career professionals applying for senior positions. Also useful for academic applications where both research skills and employment history matter.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>For Nigerian University Graduates:</strong> The <strong>chronological CV</strong> is the recommended format for most first-job applications. It is familiar to Nigerian employers, easy to read, and clearly presents your educational qualifications &mdash; which, as a recent graduate, are your primary asset. Ensure your most recent degree and most relevant academic achievements appear prominently <span class="cite">(Andrews &amp; Smith, 2019, p. 92)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION III: SECTIONS OF A CV -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section III</span><h2 class="section-title">Sections of a Complete Professional CV</h2><div class="section-rule"></div></div>
+
+  <p>A complete, professional Nigerian CV typically contains the following sections, in this order. Each section serves a distinct purpose and should be presented with careful attention to formatting, accuracy, and relevance <span class="cite">(Oshima &amp; Hogue, 2021, p. 198)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">The Eight Essential Sections of a Nigerian Professional CV</div>
+    <dl>
+      <dt>1. Personal Information / Contact Details</dt>
+      <dd>Full name (in bold, slightly larger font), phone number, professional email address, city and state of residence, and optionally a LinkedIn URL. Do not include date of birth, religion, ethnicity, marital status, or a photograph unless specifically requested &mdash; these details are not required in a modern professional CV and may expose you to discrimination. Your email address must be professional (e.g., a.okonkwo@gmail.com, not "fancyboy2002@yahoo.com").</dd>
+      <dt>2. Personal Statement / Professional Summary</dt>
+      <dd>A concise paragraph of 3&ndash;5 sentences summarising who you are professionally, your key qualifications, and what you bring to the role. This replaces the old-fashioned "Objective" section. It should be tailored to the specific job and should immediately make the employer want to read more. It answers: who are you? what can you do? what are you seeking? <span class="cite">(Hacker &amp; Sommers, 2021, p. 228)</span>.</dd>
+      <dt>3. Education</dt>
+      <dd>Listed in reverse chronological order (most recent first). Include: name of institution, degree awarded, year of graduation, and class of degree or CGPA if strong. Include secondary school (WAEC/NECO) details if you are a recent graduate. Include NYSC completion year. Do not include primary school.</dd>
+      <dt>4. Work Experience / Professional Experience</dt>
+      <dd>Listed in reverse chronological order. For each role: job title, name of organisation, dates of employment (month and year), and 3&ndash;5 bullet points describing your responsibilities and achievements. Use action verbs: "Coordinated...", "Developed...", "Managed...", "Analysed...", "Facilitated...". Quantify achievements where possible: "Managed a team of 8 staff" is stronger than "Managed staff."</dd>
+      <dt>5. Skills</dt>
+      <dd>A concise list of relevant professional and technical skills: software proficiency, languages spoken, research methods, project management tools, laboratory techniques (if applicable). Distinguish between proficiency levels where relevant. Only list skills you genuinely possess &mdash; interviewers frequently test claimed skills directly.</dd>
+      <dt>6. Professional Memberships and Certifications</dt>
+      <dd>Membership of relevant professional bodies (NMA, NBA, NSE, NUJ, ICAN, CIPM, etc.), relevant professional certifications (PMP, Google Analytics, IELTS, etc.), and any awards or honours received. Include the year obtained.</dd>
+      <dt>7. Publications and Research (if applicable)</dt>
+      <dd>For academic and research positions, list any published articles, conference papers, research projects, or dissertations in the appropriate citation format. For non-academic applications, this section may be omitted or replaced with "Projects."</dd>
+      <dt>8. Referees</dt>
+      <dd>List two or three referees who can speak to your professional or academic competence. Always seek permission before listing anyone as a referee. Include their name, title, organisation, and contact details. "References available upon request" is acceptable in some contexts but listing named referees is stronger. Nigerian employers typically expect referees to be included.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION IV: ANNOTATED MODEL CV -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section IV</span><h2 class="section-title">Annotated Model CV</h2><div class="section-rule"></div></div>
+
+  <p>Study the following model CV carefully. It demonstrates correct structure, formatting, language, and content for a recent Nigerian university graduate applying for a professional role.</p>
+
+  <div class="cv-template">
+    <div class="cv-name-bar">
+      <div class="cv-name">ADAEZE NGOZI OKONKWO</div>
+      <div class="cv-contact">08012345678 &nbsp;&middot;&nbsp; a.okonkwo@gmail.com &nbsp;&middot;&nbsp; Lagos, Nigeria &nbsp;&middot;&nbsp; linkedin.com/in/adaeze-okonkwo</div>
+    </div>
+    <div class="cv-body">
+      <div class="cv-section">
+        <div class="cv-section-title">Professional Summary</div>
+        <div class="cv-entry-desc">A motivated and detail-oriented Mass Communication graduate with a Second Class Upper degree from the University of Lagos, specialising in public relations and media management. Demonstrated ability in content development, stakeholder engagement, and digital communication through academic projects and NYSC service. Seeking a communications officer role in a forward-thinking organisation where I can contribute to strategic communication goals and continue developing professionally.</div>
+      </div>
+      <div class="cv-section">
+        <div class="cv-section-title">Education</div>
+        <div class="cv-entry">
+          <div class="cv-entry-head"><span class="cv-entry-title">B.Sc. Mass Communication &mdash; Second Class Upper (4.32/5.0)</span><span class="cv-entry-date">2018&ndash;2022</span></div>
+          <div class="cv-entry-sub">University of Lagos, Akoka, Lagos</div>
+          <div class="cv-entry-desc">Final Year Project: "The Role of Social Media in Political Mobilisation During the 2019 Nigerian General Elections" (Distinction)</div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-head"><span class="cv-entry-title">West African Senior School Certificate (WASSCE) &mdash; 8 Credits</span><span class="cv-entry-date">2018</span></div>
+          <div class="cv-entry-sub">Queens College, Lagos &mdash; including English Language (A1), Government (A1), Economics (B2)</div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-head"><span class="cv-entry-title">National Youth Service Corps (NYSC) &mdash; Certificate of National Service</span><span class="cv-entry-date">2022&ndash;2023</span></div>
+          <div class="cv-entry-sub">Federal Ministry of Information and Culture, Abuja</div>
+        </div>
+      </div>
+      <div class="cv-section">
+        <div class="cv-section-title">Work Experience</div>
+        <div class="cv-entry">
+          <div class="cv-entry-head"><span class="cv-entry-title">Communications Assistant (NYSC Posting)</span><span class="cv-entry-date">Aug 2022 &mdash; Jul 2023</span></div>
+          <div class="cv-entry-sub">Federal Ministry of Information and Culture, Abuja</div>
+          <div class="cv-entry-desc"><ul>
+            <li>Drafted press releases, social media content, and internal communications for the Ministry&rsquo;s Public Affairs department</li>
+            <li>Coordinated media coverage for three ministerial press conferences, liaising with journalists from 12 national outlets</li>
+            <li>Managed the Ministry&rsquo;s Facebook page, growing the follower base by 34% over 8 months through consistent content strategy</li>
+            <li>Prepared weekly media monitoring reports for the Director of Public Affairs</li>
+          </ul></div>
+        </div>
+        <div class="cv-entry">
+          <div class="cv-entry-head"><span class="cv-entry-title">Student Intern &mdash; Public Relations</span><span class="cv-entry-date">Jun &mdash; Aug 2021</span></div>
+          <div class="cv-entry-sub">Insight Publicis Nigeria, Victoria Island, Lagos</div>
+          <div class="cv-entry-desc"><ul>
+            <li>Supported account managers in the development of PR campaigns for three client accounts in the FMCG sector</li>
+            <li>Conducted media monitoring and prepared daily clippings reports</li>
+            <li>Assisted in writing and editing client newsletters and blog content</li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="cv-section">
+        <div class="cv-section-title">Skills</div>
+        <div class="cv-entry-desc"><ul>
+          <li><strong>Digital Tools:</strong> Microsoft Office Suite (Advanced), Google Workspace, Canva, Hootsuite, Mailchimp</li>
+          <li><strong>Communication:</strong> Press release writing, media relations, stakeholder engagement, public speaking</li>
+          <li><strong>Research:</strong> Qualitative research methods, media monitoring, content analysis</li>
+          <li><strong>Languages:</strong> English (fluent), Igbo (native), Yoruba (conversational)</li>
+        </ul></div>
+      </div>
+      <div class="cv-section">
+        <div class="cv-section-title">Certifications and Awards</div>
+        <div class="cv-entry-desc"><ul>
+          <li>Google Digital Marketing Certificate &mdash; Google Skillshop (2023)</li>
+          <li>Best Graduating Student &mdash; Department of Mass Communication, UNILAG (2022)</li>
+          <li>Student of the Year &mdash; NYSC FCT State Secretariat (2023)</li>
+        </ul></div>
+      </div>
+      <div class="cv-section">
+        <div class="cv-section-title">Referees</div>
+        <div class="cv-entry-desc"><ul>
+          <li><strong>Prof. Chidi Okafor</strong> &mdash; Head of Department, Mass Communication, University of Lagos &middot; c.okafor@unilag.edu.ng &middot; 0803XXXXXXX</li>
+          <li><strong>Mr. Emeka Eze</strong> &mdash; Director of Public Affairs, Federal Ministry of Information and Culture &middot; e.eze@minfo.gov.ng &middot; 0801XXXXXXX</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="letter-verdict"><strong>Key features of this model CV:</strong> Clear contact details with professional email. Personal summary tailored to communications roles. Education listed in reverse chronological order with specific achievements. Work experience uses strong action verbs and quantified achievements. Skills are organised by category. Awards are included. Referees are named with contact details. Estimated length: 2 pages &mdash; appropriate for a recent graduate.</div>
+</div>
+
+<!-- SECTION V: APPLICATION / COVER LETTER -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section V</span><h2 class="section-title">The Application / Cover Letter</h2><div class="section-rule"></div></div>
+
+  <p>An application letter (also called a cover letter) is a formal letter submitted alongside your CV when applying for a job, postgraduate programme, scholarship, or other opportunity. While the CV lists your qualifications and experience, the application letter tells your story &mdash; it explains <em>why you are applying</em>, <em>why you are the right person</em>, and <em>how your specific background connects to this specific opportunity</em>. A generic application letter that could have been sent to any employer is as bad as no letter at all <span class="cite">(Hyland, 2019, p. 156)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Structure of a Professional Application Letter &mdash; Four Paragraphs</div>
+    <dl>
+      <dt>Paragraph 1 &mdash; Opening: State Your Purpose</dt>
+      <dd>Clearly state the position you are applying for, where you saw the advertisement (or how you learned of the opportunity), and a brief, compelling statement of why you are interested. Be specific about the role and the organisation. "I wish to apply for the position of Communications Officer advertised in The Punch newspaper of 12 April 2026" is professional. "I am writing to express my interest in working for your esteemed organisation" is vague and unimpressive.</dd>
+      <dt>Paragraph 2 &mdash; Education and Relevant Qualifications</dt>
+      <dd>Highlight your most relevant educational qualifications &mdash; not as a repeat of your CV, but as a focused argument for your suitability. Mention your degree, class, institution, and any particularly relevant coursework, research, or projects. Connect your academic background directly to the requirements of the role: "My final-year project on digital media strategy directly addresses the content development responsibilities outlined in your job description."</dd>
+      <dt>Paragraph 3 &mdash; Experience and Demonstrable Skills</dt>
+      <dd>Present your most relevant professional or practical experience as evidence of your ability to perform the job. Describe one or two specific achievements or responsibilities that directly align with what the employer is seeking. This paragraph should make the employer feel that you already understand the role and have demonstrated competence in similar work. Use quantified achievements where possible <span class="cite">(Paltridge &amp; Starfield, 2020, p. 120)</span>.</dd>
+      <dt>Paragraph 4 &mdash; Closing: Call to Action</dt>
+      <dd>Express enthusiasm for the role, indicate that your CV is enclosed/attached for further review, and request an interview or further discussion. Provide your availability and preferred contact method. Thank the reader for their time and consideration. End with an appropriate formal sign-off.</dd>
+    </dl>
+  </div>
+
+  <h3>Annotated Model Application Letter</h3>
+
+  <div class="letter-demo">
+    <div class="sender">
+      17, Adeola Crescent<br>
+      Surulere, Lagos<br>
+      a.okonkwo@gmail.com<br>
+      08012345678
+    </div>
+    <div class="date">15 April 2026</div>
+    <div class="recipient">
+      The Human Resources Manager<br>
+      Sterling Bank Plc<br>
+      20 Marina Street<br>
+      Lagos Island, Lagos
+    </div>
+    <p class="salutation">Dear Sir / Madam,</p>
+    <p class="body-para"><strong>RE: APPLICATION FOR THE POSITION OF CORPORATE COMMUNICATIONS OFFICER</strong></p>
+    <p class="body-para">I write in response to your advertisement for the position of Corporate Communications Officer published on Sterling Bank&rsquo;s careers portal on 10 April 2026. Having closely followed Sterling Bank&rsquo;s innovative communication strategy and its commitment to positioning Nigerian financial services for a younger, digitally engaged audience, I am confident that my background in strategic communication and digital media makes me an exceptionally strong candidate for this role.</p>
+    <p class="body-para">I hold a Bachelor of Science degree in Mass Communication (Second Class Upper Honours) from the University of Lagos, where my studies concentrated on public relations, media management, and corporate communication. My final-year research project &mdash; which examined the use of social media in financial services branding &mdash; earned a distinction and provided me with analytical insights directly relevant to the digital communication responsibilities outlined in your job specification.</p>
+    <p class="body-para">During my NYSC posting at the Federal Ministry of Information and Culture, I managed a social media audience of over 45,000 followers, grew the Ministry&rsquo;s Facebook engagement by 34% within eight months, and drafted communications for three ministerial press events. Prior to this, my internship at Insight Publicis gave me hands-on experience in campaign development, media relations, and stakeholder management across FMCG accounts. I am confident these experiences have equipped me with the communication, analytical, and organisational skills your Corporate Communications team requires.</p>
+    <p class="body-para">I am enthusiastic about the opportunity to contribute to Sterling Bank&rsquo;s communication goals and would welcome the chance to discuss my application further at your convenience. Please find my curriculum vitae attached for your consideration. I am available for interview at any time and can be reached at the telephone number and email address above.</p>
+    <p class="body-para">Thank you sincerely for your time and consideration.</p>
+    <div class="closing">
+      Yours faithfully,<br><br>
+      <strong>ADAEZE NGOZI OKONKWO</strong>
+    </div>
+  </div>
+  <div class="letter-verdict"><strong>Key features:</strong> Full formal letter format with sender address, date, recipient address, and subject line in bold. Organisation-specific opening (not generic). Educational qualifications linked to role requirements. Experience quantified (45,000 followers, 34% growth). Confident but not arrogant tone. Professional closing. The letter is four substantive paragraphs &mdash; approximately one page &mdash; the appropriate length for an application letter.</div>
+</div>
+
+<!-- SECTION VI: DOS AND DONTS -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VI</span><h2 class="section-title">CV and Application Writing &mdash; Do&rsquo;s and Don&rsquo;ts</h2><div class="section-rule"></div></div>
+
+  <div class="dd-grid">
+    <div class="dd-card">
+      <div class="dd-head dd-do">&#10003; CV and Application Do&rsquo;s</div>
+      <div class="dd-body">
+        <ul>
+          <li>Tailor both CV and cover letter specifically to each job and each employer &mdash; generic applications are immediately apparent and rarely succeed</li>
+          <li>Use a clean, professional font (Calibri, Garamond, Times New Roman) in 11&ndash;12pt; ensure consistent formatting throughout</li>
+          <li>Use strong action verbs at the start of every experience bullet: Developed, Led, Managed, Coordinated, Analysed, Designed, Achieved</li>
+          <li>Quantify achievements wherever possible: numbers, percentages, team sizes, budgets managed, outcomes achieved</li>
+          <li>Proofread meticulously: a single spelling error can eliminate an otherwise excellent candidate</li>
+          <li>Save and submit in PDF format to preserve formatting across all devices and operating systems</li>
+          <li>Keep your CV to 2&ndash;3 pages as a recent graduate; 3&ndash;4 pages for mid-career professionals</li>
+          <li>Use consistent date formats throughout (e.g., "Aug 2022 &mdash; Jul 2023" throughout, not mixed with "2022/2023")</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dd-card">
+      <div class="dd-head dd-dont">&#10007; CV and Application Don&rsquo;ts</div>
+      <div class="dd-body">
+        <ul>
+          <li>Do not include photograph, religion, ethnicity, tribe, or marital status unless specifically required by the employer</li>
+          <li>Do not use "Objective" statements (&ldquo;My objective is to obtain a challenging position...&rdquo;) &mdash; replace with a professional summary</li>
+          <li>Do not use informal or unprofessional language anywhere in either document</li>
+          <li>Do not list referees without their prior knowledge and permission</li>
+          <li>Do not exaggerate or falsify qualifications, grades, or experience &mdash; these claims are verified, and discovered dishonesty ends careers</li>
+          <li>Do not submit a cover letter that begins with &ldquo;I am writing to humbly apply...&rdquo; &mdash; the word "humbly" is inappropriate in professional applications</li>
+          <li>Do not use dense paragraphs in the experience section &mdash; use bullet points for clarity and scannability</li>
+          <li>Do not include irrelevant personal hobbies unless they directly demonstrate relevant skills (e.g., "Team Captain, University Football Club" demonstrates leadership)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VII</span><h2 class="section-title">Practical Writing Tasks</h2><div class="section-rule"></div></div>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <span style="font-size:1.1rem">&#9999;</span>
+      <div><div class="activity-label">Practical Writing Activity &mdash; Section VII</div><div class="activity-title">CV and Application Letter Writing Tasks</div></div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-instruction">Complete the following writing tasks. All responses must follow the professional standards and structures taught in this lecture.</p>
+      <ul class="activity-list">
+        <li class="activity-item"><span class="a-num">1</span><span class="a-text">Write your own complete chronological CV using the model in this lecture as a guide. Include all eight sections. Your CV should be 2&ndash;3 pages and tailored to your chosen career field. Submit for peer review &mdash; each student should review one classmate&rsquo;s CV and provide written feedback on structure, content, language, and formatting.</span></li>
+        <li class="activity-item"><span class="a-num">2</span><span class="a-text">Find a real job advertisement posted by a Nigerian company on Jobberman, LinkedIn, or any credible recruitment platform. Write a 4-paragraph application letter responding to that specific advertisement, using the model in this lecture as your guide. The letter must be tailored to the specific role and organisation &mdash; generic letters will not be accepted.</span></li>
+        <li class="activity-item"><span class="a-num">3</span><span class="a-text">Rewrite the following weak experience bullet point as two strong, quantified, action-verb-led bullet points: <em>"I was responsible for helping with the social media of the company and also I did some writing and helped to plan events during my time there."</em></span></li>
+        <li class="activity-item"><span class="a-num">4</span><span class="a-text">A student writes this personal statement: <em>"My objective is to work in a good company where I can grow and contribute to the organisation."</em> Rewrite this as a professional summary of 3&ndash;5 sentences for a graduate applying for a banking role, using the model in this lecture as your guide.</span></li>
+        <li class="activity-item"><span class="a-num">5</span><span class="a-text">Read the following application letter opening and identify at least FIVE specific problems with it. Then rewrite the opening paragraph professionally: <em>"Dear Sir/Ma, I am humbly writing this letter to inform you of my desire to work in your very prestigious and esteemed organisation. I am a graduate and I have experience and I believe I can add value if given the opportunity."</em></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Conclusion</span><h2 class="section-title">Key Takeaway</h2><div class="section-rule"></div></div>
+  <div class="conclusion-box">
+    <p>Your CV and application letter are the first impression you make on a potential employer &mdash; and in the Nigerian job market, where competition is intense and opportunities are precious, that first impression may be your only one. A well-crafted CV communicates not just your qualifications but your professionalism, your attention to detail, your communication ability, and your seriousness of purpose. These are qualities every employer seeks <span class="cite">(Andrews &amp; Smith, 2019, p. 100)</span>.</p>
+    <br>
+    <p>This lecture completes <strong>Module 4: Writing Activities</strong>. You have now studied essay writing at both foundational and advanced levels, formal and informal letter writing, and professional CV and application writing. The writing competencies developed across all four lectures of this module &mdash; clarity, structure, evidence-based argument, appropriate register, and meticulous accuracy &mdash; are the foundation of all professional communication. These skills will serve you across every module of this course and throughout your career <span class="cite">(Paltridge &amp; Starfield, 2020, p. 130)</span>.</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div class="exam-section">
+  <div class="exam-header">
+    <div><h2>Examination Questions</h2><p>Lecture 4.4 &mdash; CV and Application Writing</p></div>
+    <span class="exam-total">10 Questions &middot; 30 Marks</span>
+  </div>
+  <div class="exam-body">
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best defines a Curriculum Vitae (CV)?</p></div><div class="q-options"><div class="q-option">A. A short one-page document listing only skills relevant to one specific job</div><div class="q-option">B. A comprehensive written document presenting a person&rsquo;s education, experience, skills, and achievements</div><div class="q-option">C. A letter written to an employer explaining why you want a job</div><div class="q-option">D. A testimonial written by a referee about a candidate&rsquo;s abilities</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between a chronological CV and a functional CV. For each, state who it is best suited for and give one specific reason why, drawing on examples from the Nigerian graduate job market.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is NOT appropriate to include in a modern professional Nigerian CV?</p></div><div class="q-options"><div class="q-option">A. A professional summary of 3&ndash;5 sentences</div><div class="q-option">B. Religion and ethnic group</div><div class="q-option">C. Relevant professional certifications</div><div class="q-option">D. Named referees with contact details</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Rewrite</span><p class="q-text">Rewrite the following experience description as two strong, professional, action-verb-led CV bullet points: <em>"I worked in the marketing department and my job was to help with social media and to write some content and also I helped to organise events."</em></p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">In an application letter, what is the primary purpose of the third paragraph?</p></div><div class="q-options"><div class="q-option">A. To state the position being applied for and where the advertisement was seen</div><div class="q-option">B. To present relevant professional experience as evidence of suitability for the role</div><div class="q-option">C. To request an interview and provide contact details</div><div class="q-option">D. To describe your educational qualifications in detail</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Write Out</span><p class="q-text">Write a professional personal statement / summary of 4&ndash;5 sentences for a final-year Engineering student at the University of Port Harcourt, applying for a graduate trainee position at an oil and gas company. The statement must be specific to the field and the type of role.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the correct way to sign off an application letter when you know the recipient&rsquo;s name?</p></div><div class="q-options"><div class="q-option">A. Yours faithfully,</div><div class="q-option">B. Yours sincerely,</div><div class="q-option">C. Best regards,</div><div class="q-option">D. Thanks and God bless,</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Identify Problems</span><p class="q-text">Identify FIVE specific problems in the following application letter opening, and explain why each is problematic: <em>"Dear Sir/Ma, I am humbly writing to bring to your kind attention my strong desire to work in your esteemed organisation. I am a graduate of the University of Nigeria and I have passed all my courses. I am hardworking, honest and God-fearing and I believe your company will benefit greatly from my skills."</em></p></div><p class="q-marks">[5 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">In what format should a CV ideally be saved and submitted for professional applications?</p></div><div class="q-options"><div class="q-option">A. Microsoft Word (.docx) so the employer can edit it if necessary</div><div class="q-option">B. PDF format to preserve formatting across all devices and operating systems</div><div class="q-option">C. Plain text (.txt) for maximum compatibility</div><div class="q-option">D. JPEG image format for easy sharing on social media</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Essay</span><p class="q-text">Write a four-paragraph application letter applying for a position of your choice at a real or fictitious Nigerian organisation. Your letter must follow the four-paragraph structure taught in this lecture, demonstrate knowledge of the organisation and role, and use professional formal English throughout. The letter must be 280&ndash;350 words.</p></div><p class="q-marks">[8 marks]</p></div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="references-section">
+  <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+  <div class="ref-list">
+    <div class="ref-item">Andrews, R., &amp; Smith, A. (2019). <em>Developing Writers: Teaching and Learning in the Digital Age</em>. Open University Press.</div>
+    <div class="ref-item">Hacker, D., &amp; Sommers, N. (2021). <em>A Writer&rsquo;s Reference</em> (10th ed.). Bedford/St. Martin&rsquo;s.</div>
+    <div class="ref-item">Hyland, K. (2019). <em>Second Language Writing</em> (2nd ed.). Cambridge University Press.</div>
+    <div class="ref-item">Lunsford, A. A. (2021). <em>The St. Martin&rsquo;s Handbook</em> (9th ed.). Bedford/St. Martin&rsquo;s.</div>
+    <div class="ref-item">Murray, R., &amp; Hughes, G. (2019). <em>Writing Up Your University Assignments and Research Projects</em> (3rd ed.). Open University Press.</div>
+    <div class="ref-item">Oshima, A., &amp; Hogue, A. (2021). <em>Writing Academic English</em> (5th ed.). Pearson Longman.</div>
+    <div class="ref-item">Paltridge, B., &amp; Starfield, S. (2020). <em>Thesis and Dissertation Writing in a Second Language</em> (3rd ed.). Routledge.</div>
+    <div class="ref-item">Nwofor, I. C. (2022). Professional document writing in Nigerian tertiary institutions: A survey of graduate competencies. <em>Journal of Applied Linguistics in Africa</em>, 8(2), 44&ndash;62.</div>
+    <div class="ref-item">Usman, A. O. (2021). Teaching CV and application letter writing in Nigerian universities: Challenges and best practices. <em>African Journal of Language and Communication Studies</em>, 4(1), 18&ndash;37.</div>
+    <div class="ref-item">Wingate, U. (2019). <em>Academic Literacy and Student Diversity: The Case for Inclusive Practice</em>. Multilingual Matters.</div>
+  </div>
+</div>
+
+<a class="next-lecture" href="lecture-5-1.html">
+  <div>
+    <div class="next-label">Next &mdash; Module 5</div>
+    <div class="next-title">Lecture 5.1 &mdash; Introduction to Logic and Arguments</div>
+    <div class="next-desc">What is logic &middot; Valid and invalid arguments &middot; Sound and unsound reasoning &middot; Deductive vs inductive</div>
+  </div>
+  <span class="next-arrow">&rarr;</span>
+</a>
+<div class="lecture-nav">
+  <a class="lnav-btn" href="lecture-4-3.html">&#8592; Lecture 4.3</a>
+  <a class="lnav-index" href="index.html">Course Index</a>
+  <a class="lnav-btn" href="lecture-5-1.html">Lecture 5.1 &rarr;</a>
+</div>
+
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>Communication in English &middot; Lecture 4.4 &nbsp;&middot;&nbsp; Dr. Maurice Udom &nbsp;&middot;&nbsp; <a href="index.html">Course Index</a> &nbsp;&middot;&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>&copy; 2026 Maurice Udom. All rights reserved.</footer>
+</body>
+</html>

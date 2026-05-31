@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 2.4: Verb Mechanics — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(1){animation-delay:.05s}.section-block:nth-child(2){animation-delay:.10s}.section-block:nth-child(3){animation-delay:.15s}.section-block:nth-child(4){animation-delay:.20s}.section-block:nth-child(5){animation-delay:.25s}.section-block:nth-child(6){animation-delay:.30s}.section-block:nth-child(7){animation-delay:.35s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+
+    /* TENSE-ASPECT TABLE */
+    .tense-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .tense-table th{background:var(--mod);color:var(--white);padding:10px 14px;font-family:'Playfair Display',serif;font-size:.82rem;font-weight:700;text-align:left}
+    .tense-table td{padding:10px 14px;border-bottom:1px solid var(--rule);font-size:.87rem;vertical-align:top;line-height:1.55}
+    .tense-table tr:last-child td{border-bottom:none}
+    .tense-table tr:nth-child(even) td{background:#faf6ef}
+    .tense-form{font-family:'Source Serif 4',serif;font-weight:700;color:var(--mod)}
+    .ex{font-style:italic;color:var(--muted)}
+
+    /* ACTIVE / PASSIVE COMPARE */
+    .voice-compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:20px 0}
+    .voice-col-head{padding:11px 18px;font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--white);background:var(--mod)}
+    .voice-cell{padding:11px 18px;border-bottom:1px solid var(--rule);font-size:.88rem;line-height:1.6;border-right:1px solid var(--rule)}
+    .voice-cell:nth-child(even){border-right:none}
+    .voice-row-last .voice-cell{border-bottom:none}
+
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-sent{font-size:.92rem;color:var(--white);line-height:1.6;margin-bottom:2px;font-style:italic}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .tense-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+
+    /* MODULE SUMMARY */
+    .module-summary{background:var(--mod);color:var(--white);border-radius:4px;padding:32px;margin:48px 0 0;border-top:3px solid var(--gold)}
+    .module-summary h2{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:var(--gold);margin-bottom:20px}
+    .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .summary-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:14px 16px}
+    .summary-lec{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .summary-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white);margin-bottom:4px}
+    .summary-topics{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.5}
+
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .module-end{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;text-align:center;border-top:3px solid var(--gold)}
+    .module-end h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:8px}
+    .module-end p{font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:16px}
+    .module-end a{display:inline-block;background:var(--gold);color:var(--mod);font-weight:700;padding:10px 24px;border-radius:2px;text-decoration:none;font-size:.85rem;letter-spacing:.06em}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.3;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.voice-compare{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}.activity-item{grid-template-columns:28px 1fr}}
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 2 &nbsp;·&nbsp; Lecture 4</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Verb Mechanics — Tense, Aspect, and Voice</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Grammar &amp; Usage</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>Identify and form all twelve tense-aspect combinations</li>
+<li>Select the appropriate tense for academic writing contexts</li>
+<li>Form active and passive voice constructions correctly</li>
+<li>Choose between active and passive voice for rhetorical effect</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>The Verb as the Engine of the Sentence</li>
+<li>The Tense-Aspect System — All 12 Forms</li>
+<li>Active and Passive Voice</li>
+<li>When to Use Each Voice in Academic Writing</li>
+<li>Practical Activity: Tense and Voice Identification</li>
+<li>Module 2 Summary</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lectures 2.1–2.3 before proceeding.</p>
+        <a class="prereq-link" href="lecture-2-3.html">← Lecture 2.3 — The Rules of Agreement: Concord</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">The Verb as the Engine of the Sentence</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>If the noun is the primary naming unit of English, the <strong>verb</strong> is its primary action unit — and no element of the sentence carries more grammatical information. The verb encodes <strong>tense</strong> (when an event occurs), <strong>aspect</strong> (how an event unfolds over time), and <strong>voice</strong> (the relationship between the subject and the action) <span class="cite">(Biber et al., 2021, p. 220)</span>. Mastery of these three dimensions is fundamental to accurate and professional academic writing <span class="cite">(Swales &amp; Feak, 2020, p. 62)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Three Dimensions of the Verb</div>
+      <dl>
+        <dt>Tense</dt>
+        <dd>Locates an event in time — past, present, or future. English has two morphological tenses (past and present/non-past); future time is expressed through modal auxiliaries and other constructions <span class="cite">(Huddleston &amp; Pullum, 2019, p. 160)</span>.</dd>
+        <dt>Aspect</dt>
+        <dd>Describes the internal temporal structure of an event — whether it is complete, ongoing, or has current relevance. English has two aspects: <strong>perfect</strong> and <strong>progressive</strong> <span class="cite">(Quirk et al., 2018, p. 125)</span>.</dd>
+        <dt>Voice</dt>
+        <dd>Indicates whether the grammatical subject performs the action (active) or receives it (passive) <span class="cite">(Biber et al., 2021, p. 248)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">The Tense-Aspect System</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>English verbs combine tense and aspect to produce twelve distinct verb forms. Understanding this system is essential for conveying precise temporal meaning in academic writing, where the choice between tenses is rarely arbitrary <span class="cite">(Swales &amp; Feak, 2020, p. 65)</span>.</p>
+
+    <table class="tense-table">
+      <thead>
+        <tr><th>Tense &amp; Aspect</th><th>Form</th><th>Academic Use</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Present Simple</strong></td><td class="tense-form">V / V-s</td><td>General truths, habitual actions, reporting what an author claims</td><td class="ex">"Smith (2021) argues that…"</td></tr>
+        <tr><td><strong>Past Simple</strong></td><td class="tense-form">V-ed</td><td>Completed events at a specific past time; methodology sections</td><td class="ex">"The researchers collected data in 2022."</td></tr>
+        <tr><td><strong>Future Simple</strong></td><td class="tense-form">will + V</td><td>Predictions, announcements, promises</td><td class="ex">"This paper will examine three factors."</td></tr>
+        <tr><td><strong>Present Progressive</strong></td><td class="tense-form">am/is/are + V-ing</td><td>Ongoing actions; current trends in the field</td><td class="ex">"Researchers are increasingly focusing on…"</td></tr>
+        <tr><td><strong>Past Progressive</strong></td><td class="tense-form">was/were + V-ing</td><td>Ongoing past action interrupted by another event</td><td class="ex">"The experiment was running when the power failed."</td></tr>
+        <tr><td><strong>Present Perfect</strong></td><td class="tense-form">have/has + V-en</td><td>Past events with current relevance; review of literature</td><td class="ex">"Studies have shown a consistent pattern."</td></tr>
+        <tr><td><strong>Past Perfect</strong></td><td class="tense-form">had + V-en</td><td>Events completed before another past event</td><td class="ex">"The data had been collected before the methodology was revised."</td></tr>
+        <tr><td><strong>Present Perfect Progressive</strong></td><td class="tense-form">have/has been + V-ing</td><td>Ongoing action that began in the past and continues now</td><td class="ex">"Scholars have been debating this issue since 2015."</td></tr>
+        <tr><td><strong>Past Perfect Progressive</strong></td><td class="tense-form">had been + V-ing</td><td>Ongoing past action completed before another past event</td><td class="ex">"They had been collecting samples for three months before the analysis began."</td></tr>
+        <tr><td><strong>Future Progressive</strong></td><td class="tense-form">will be + V-ing</td><td>Actions that will be in progress at a future point</td><td class="ex">"The committee will be reviewing applications in March."</td></tr>
+        <tr><td><strong>Future Perfect</strong></td><td class="tense-form">will have + V-en</td><td>Actions that will be completed by a future time</td><td class="ex">"By the end of the study, the team will have interviewed 200 participants."</td></tr>
+        <tr><td><strong>Future Perfect Progressive</strong></td><td class="tense-form">will have been + V-ing</td><td>Duration of ongoing action up to a future point</td><td class="ex">"By December, they will have been conducting research for two years."</td></tr>
+      </tbody>
+    </table>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Critical Academic Tense:</strong> The <strong>present perfect</strong> is the most frequently misused tense by Nigerian students. It signals that a past event has <em>current relevance</em> — it is the standard tense for literature reviews: <em>"Research has demonstrated..."</em> not <em>"Research demonstrated..."</em> unless a specific past date is given <span class="cite">(Swales &amp; Feak, 2020, p. 70)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Active and Passive Voice</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Voice determines the relationship between the grammatical subject and the action expressed by the verb. English has two voices: <strong>active</strong> and <strong>passive</strong>. The choice between them is not merely stylistic — in academic writing, it is a rhetorical decision that determines emphasis, formality, and objectivity <span class="cite">(Biber et al., 2021, p. 250)</span>.</p>
+
+    <h3>Active Voice</h3>
+    <p>In the active voice, the grammatical subject is the agent — the one who performs the action. Active sentences are typically more direct, vigorous, and concise <span class="cite">(Crystal, 2019, p. 128)</span>.</p>
+
+    <h3>Passive Voice</h3>
+    <p>In the passive voice, the grammatical subject is the recipient of the action. The agent (doer) may be expressed in a <em>by</em>-phrase or omitted entirely. The passive is formed with <em>be</em> + past participle <span class="cite">(Quirk et al., 2018, p. 136)</span>.</p>
+
+    <div class="voice-compare">
+      <div class="voice-col-head">Active Voice</div>
+      <div class="voice-col-head">Passive Voice</div>
+      <div class="voice-cell">"The researcher <strong>conducted</strong> three experiments."</div>
+      <div class="voice-cell">"Three experiments <strong>were conducted</strong> by the researcher."</div>
+      <div class="voice-cell">"The committee <strong>approved</strong> the proposal."</div>
+      <div class="voice-cell">"The proposal <strong>was approved</strong> by the committee."</div>
+      <div class="voice-cell">"Smith (2021) <strong>argues</strong> that the data is inconclusive."</div>
+      <div class="voice-cell">"It <strong>has been argued</strong> that the data is inconclusive."</div>
+      <div class="voice-cell">"The students <strong>will submit</strong> their dissertations in May."</div>
+      <div class="voice-cell" style="border-bottom:none">"The dissertations <strong>will be submitted</strong> in May."</div>
+    </div>
+
+    <div class="key-concept">
+      <div class="key-concept-label">When to Use Each Voice in Academic Writing</div>
+      <dl>
+        <dt>Use Active Voice when:</dt>
+        <dd>The agent is important and should be emphasised · The sentence needs to be direct and concise · Attributing a claim to a specific scholar: <em>"Chomsky (2018) argues that…"</em> <span class="cite">(Swales &amp; Feak, 2020, p. 75)</span>.</dd>
+        <dt>Use Passive Voice when:</dt>
+        <dd>The action or result is more important than who performed it · The agent is unknown, unimportant, or obvious · Achieving objectivity and formality in scientific reporting: <em>"The samples were analysed using gas chromatography."</em> · Avoiding first-person constructions where not permitted <span class="cite">(Biber et al., 2021, p. 255)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION IV: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Practical Activity: Tense and Voice Identification</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>The ability to identify verb tense and voice in academic texts — and to convert between them — is a core skill for both reading comprehension and writing production <span class="cite">(Gass &amp; Selinker, 2020, p. 112)</span>.</p>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Identify Tense and Voice — 10 Sentences</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">For each sentence, identify (a) the tense-aspect combination and (b) the voice (active or passive). For items 6–10, convert the sentence to the opposite voice without changing the tense.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-sent">"The committee reviews all applications annually."</div><div class="activity-answer">Identify the tense and aspect — then state the voice.</div></div><span class="tense-badge">Pres. Simple · Active</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-sent">"The data had been collected before the analysis began."</div><div class="activity-answer">Two verb phrases — focus on the main one.</div></div><span class="tense-badge">Past Perf. · Passive</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-sent">"Researchers have demonstrated a clear correlation."</div><div class="activity-answer">Which tense signals "past event with current relevance"?</div></div><span class="tense-badge">Pres. Perfect · Active</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-sent">"The paper was peer-reviewed by three experts."</div><div class="activity-answer">Identify the tense and note the by-phrase.</div></div><span class="tense-badge">Past Simple · Passive</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-sent">"Scholars have been debating this hypothesis since 2018."</div><div class="activity-answer">Ongoing past action continuing to now — which aspect?</div></div><span class="tense-badge">Pres. Perf. Prog. · Active</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-sent">"The university approved the new curriculum."</div><div class="activity-answer">Convert to passive — retain past simple tense.</div></div><span class="tense-badge">Convert → Passive</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-sent">"The results were published in a reputable journal."</div><div class="activity-answer">Convert to active — you may supply a logical agent.</div></div><span class="tense-badge">Convert → Active</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-sent">"The government will fund the research project."</div><div class="activity-answer">Convert to passive — retain future simple tense.</div></div><span class="tense-badge">Convert → Passive</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-sent">"The proposals have been evaluated by a panel of professors."</div><div class="activity-answer">Convert to active — use the agent in the by-phrase as the subject.</div></div><span class="tense-badge">Convert → Active</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-sent">"Researchers are currently conducting three major studies."</div><div class="activity-answer">Convert to passive — retain present progressive tense.</div></div><span class="tense-badge">Convert → Passive</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION V: CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Conclusion &amp; Module 2 Summary</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>The verb is the most grammatically complex element of the English sentence. Its tense locates events in time, its aspect characterises their internal structure, and its voice controls the focus of information within the clause. A student who commands these three dimensions can write with precision, objectivity, and stylistic flexibility — the hallmarks of mature academic prose <span class="cite">(Biber et al., 2021, p. 260)</span>.</p>
+      <br>
+      <p>The passive voice, in particular, deserves special attention in academic writing — it is not a grammatical weakness but a purposeful rhetorical tool, deployed strategically to achieve the impersonal, evidence-centred tone that characterises formal scholarly writing <span class="cite">(Swales &amp; Feak, 2020, p. 78)</span>.</p>
+    </div>
+
+    <div class="module-summary">
+      <h2>Module 2 Complete — What You Have Covered</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <div class="summary-lec">Lecture 2.1</div>
+          <div class="summary-title">The Building Blocks — Word Classes</div>
+          <div class="summary-topics">Open &amp; closed classes · Nouns, verbs, adjectives, adverbs · Functional shift</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-lec">Lecture 2.2</div>
+          <div class="summary-title">Sentence Architecture and Types</div>
+          <div class="summary-topics">Simple, compound, complex, compound-complex · Functional types · Clause vs. phrase</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-lec">Lecture 2.3</div>
+          <div class="summary-title">The Rules of Agreement — Concord</div>
+          <div class="summary-topics">8 concord rules · Collective nouns · Indefinite pronouns · Pronoun-antecedent agreement</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-lec">Lecture 2.4</div>
+          <div class="summary-title">Verb Mechanics — Tense, Aspect, Voice</div>
+          <div class="summary-topics">12 tense-aspect combinations · Active vs. passive voice · Academic voice selection</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 2.4 — Verb Mechanics: Tense, Aspect, and Voice</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which tense-aspect form is most appropriate for reporting what a published scholar has argued in a literature review?</p></div><div class="q-options"><div class="q-option">A. &nbsp;Past simple: "Smith argued that…"</div><div class="q-option">B. &nbsp;Present perfect: "Smith has argued that…"</div><div class="q-option">C. &nbsp;Past progressive: "Smith was arguing that…"</div><div class="q-option">D. &nbsp;Future simple: "Smith will argue that…"</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Identify</span><p class="q-text">Identify the tense-aspect combination and voice of each sentence: &nbsp;(a) <em>"The data is being analysed."</em> &nbsp; (b) <em>"Scholars had debated this issue for decades."</em> &nbsp; (c) <em>"The university will have published the results by June."</em></p></div><p class="q-marks">[3 marks — 1 per sentence]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Write Out</span><p class="q-text">Explain the difference between <em>tense</em> and <em>aspect</em> in English grammar. Use the verb <em>write</em> to construct one example of the present perfect and one of the past perfect, explaining what each conveys about time.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span><p class="q-text">The passive voice is formed using:</p></div><div class="q-options"><div class="q-option">A. &nbsp;An auxiliary verb + the present participle (V-ing)</div><div class="q-option">B. &nbsp;A modal verb + the base form of the verb</div><div class="q-option">C. &nbsp;The verb <em>be</em> in the appropriate tense + the past participle (V-en)</div><div class="q-option">D. &nbsp;The verb <em>have</em> + the base form of the main verb</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Convert</span><p class="q-text">Convert the following active sentences to the passive voice, retaining the original tense: &nbsp;(a) <em>"The panel evaluated all the proposals."</em> &nbsp; (b) <em>"Researchers are currently conducting three major studies."</em> &nbsp; (c) <em>"The government will fund the initiative."</em></p></div><p class="q-marks">[3 marks — 1 per sentence]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Multiple Choice</span><p class="q-text">Which statement about the passive voice in academic writing is most accurate?</p></div><div class="q-options"><div class="q-option">A. &nbsp;It should be avoided entirely as it weakens writing</div><div class="q-option">B. &nbsp;It is a purposeful rhetorical tool for achieving objectivity and impersonality</div><div class="q-option">C. &nbsp;It is only used in informal conversational English</div><div class="q-option">D. &nbsp;It requires the agent to always be expressed in a by-phrase</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Write Out</span><p class="q-text">Write one original sentence in each of the following tense-aspect forms: (a) present progressive, (b) past perfect, (c) present perfect progressive. For each, explain what temporal meaning the form conveys.</p></div><p class="q-marks">[3 marks — 1 per form]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between the active and passive voice. Give two specific situations in academic writing where the passive voice is the more appropriate choice, and write one original example sentence for each situation.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">In the sentence <em>"The samples were collected and analysed in a controlled environment,"</em> the passive construction is used primarily because:</p></div><div class="q-options"><div class="q-option">A. &nbsp;The writer does not know who collected the samples</div><div class="q-option">B. &nbsp;The action and result are more important than the agent</div><div class="q-option">C. &nbsp;The active voice is incorrect in this context</div><div class="q-option">D. &nbsp;The present perfect requires the passive in scientific writing</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain why a command of tense, aspect, and voice is described as essential for academic writing. Draw on at least two specific examples — one involving tense selection and one involving voice — to illustrate how incorrect choices affect the clarity and credibility of academic prose.</p></div><p class="q-marks">[3 marks]</p></div>
+
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Biber, D., Johansson, S., Leech, G., Conrad, S., &amp; Finegan, E. (2021). <em>Longman Grammar of Spoken and Written English</em> (2nd ed.). Pearson Longman.</div>
+      <div class="ref-item">Comrie, B. (2018). <em>Aspect: An Introduction to the Study of Verbal Aspect and Related Problems</em> (reprint ed.). Cambridge University Press.</div>
+      <div class="ref-item">Crystal, D. (2019). <em>The Cambridge Encyclopedia of the English Language</em> (3rd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Gass, S. M., &amp; Selinker, L. (2020). <em>Second Language Acquisition: An Introductory Course</em> (5th ed.). Routledge.</div>
+      <div class="ref-item">Huddleston, R., &amp; Pullum, G. K. (2019). <em>A Student's Introduction to English Grammar</em> (2nd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Nwachukwu-Agbada, J. O. J. (2021). Sentence structure errors in undergraduate academic essays: A Nigerian university case study. <em>African Journal of English Language Teaching</em>, 5(1), 88–106.</div>
+      <div class="ref-item">Obi-Okoye, A. F. (2022). Syntactic interference and clause embedding in the writing of first-year students at Nigerian tertiary institutions. <em>International Journal of English Language Education</em>, 10(2), 141–158.</div>
+      <div class="ref-item">Quirk, R., Greenbaum, S., Leech, G., &amp; Svartvik, J. (2018). <em>A Comprehensive Grammar of the English Language</em> (reprint ed.). Longman.</div>
+      <div class="ref-item">Swales, J. M., &amp; Feak, C. B. (2020). <em>Academic Writing for Graduate Students</em> (4th ed.). University of Michigan Press.</div>
+      <div class="ref-item">Thornbury, S. (2019). <em>An A–Z of ELT: A Dictionary of Terms and Concepts</em> (2nd ed.). Macmillan Education.</div>
+    </div>
+  </div>
+
+  <!-- MODULE END -->
+  <div class="module-end">
+    <h3>Module 2 Complete</h3>
+    <p>You have completed all four lectures of Module 2: Grammar &amp; Usage. Proceed to Module 3: Language Skills when it becomes available.</p>
+    <a href="index.html">Return to Course Index →</a>
+  </div>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-2-3.html">← Lecture 2.3</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn disabled" href="#">Next Module →</a>
+  </div>
+
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 2.4 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

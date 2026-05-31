@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 4.3: Letter Writing — Formal and Informal — Lecture Series 5: Communication in English</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'\2713';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:14px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:3px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.7;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* LETTER TEMPLATES */
+    .letter-demo{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:22px 0;font-family:'Source Serif 4',serif}
+    .letter-demo-head{background:var(--mod);color:var(--white);padding:10px 20px;font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700}
+    .letter-body{padding:22px 28px;font-size:.91rem;color:#2a2016;line-height:1.85;border-bottom:1px solid var(--rule)}
+    .letter-body .addr{margin-bottom:18px;font-size:.9rem}
+    .letter-body .salut{margin-bottom:14px;font-weight:600}
+    .letter-body .para{margin-bottom:12px}
+    .letter-body .sign{margin-top:18px}
+    .letter-verdict{padding:12px 20px;background:var(--cream);font-size:.86rem;color:#2a2016;line-height:1.6}
+    .letter-verdict strong{color:var(--mod)}
+    /* COMPARE TABLE */
+    .compare-table{width:100%;border-collapse:collapse;margin:22px 0;border:1px solid var(--rule)}
+    .compare-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .compare-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.65}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even) td{background:#faf6ef}
+    .lbl{font-weight:700;color:var(--mod)}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.9rem;color:#c0b8ac;margin-bottom:18px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:10px}
+    .activity-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:12px 14px}
+    .a-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .a-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.65}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{text-decoration:none;color:var(--muted);font-size:.82rem}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem}
+    footer a{color:var(--gold);text-decoration:none}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.next-lecture{flex-direction:column}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+<div class="topbar"><a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;&middot;&nbsp; <a href="index.html">Communication in English</a></div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 4 &nbsp;&middot;&nbsp; Lecture 3</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Letter Writing: Formal and Informal</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip"><strong>Duration:</strong>&nbsp;30 Minutes</span>
+    <span class="meta-chip"><strong>Module:</strong>&nbsp;Writing Activities</span>
+    <span class="meta-chip"><strong>Level:</strong>&nbsp;Tertiary</span>
+    <span class="meta-chip"><strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<div class="overview-block">
+  <div class="overview-header"><span style="font-size:1.1rem">&#128203;</span>&nbsp;<span class="overview-header-title">Lecture Overview</span></div>
+  <div class="overview-body">
+    <div class="overview-col">
+      <div class="overview-col-label">Learning Objectives</div>
+      <ul class="overview-objectives">
+        <li>Identify and explain the components of a formal letter</li>
+        <li>Distinguish formal from informal letter conventions</li>
+        <li>Write formal letters for various purposes: complaints, applications, requests</li>
+        <li>Write informal letters appropriate to personal contexts</li>
+        <li>Apply correct Nigerian and international letter-writing formats</li>
+        <li>Avoid common letter-writing errors</li>
+      </ul>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Topics Covered</div>
+      <ol class="overview-topics">
+        <li>What Is a Letter? Types and Purposes</li>
+        <li>Components of a Formal Letter</li>
+        <li>Formal Letter Conventions and Register</li>
+        <li>Types of Formal Letters</li>
+        <li>Model Formal Letter &mdash; Annotated</li>
+        <li>Informal Letters &mdash; Structure and Style</li>
+        <li>Formal vs. Informal &mdash; Comparison</li>
+        <li>Common Letter-Writing Errors</li>
+      </ol>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Prerequisite</div>
+      <p class="overview-prereq">Lectures 4.1 and 4.2 should be completed first. Writing skills developed in those lectures &mdash; particularly clarity, audience awareness, and appropriate register &mdash; are directly applied to letter writing.</p>
+      <a class="prereq-link" href="lecture-4-2.html">&#8592; Lecture 4.2 &mdash; Essay Writing II</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION I: INTRODUCTION TO LETTER WRITING -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section I</span><h2 class="section-title">What Is a Letter? Types and Purposes</h2><div class="section-rule"></div></div>
+
+  <p>A letter is a written message addressed from one person or organisation to another, typically covering a specific subject and composed in a form appropriate to the relationship between writer and recipient. Despite the rise of email and digital communication, formal letter writing remains a crucial skill in Nigerian academic, professional, legal, and governmental contexts <span class="cite">(Guffey &amp; Loewy, 2021, p. 148)</span>.</p>
+
+  <p>Letters are classified in two major ways: by formality level (formal or informal) and by purpose. Understanding the purpose of a letter helps determine its appropriate structure, tone, and vocabulary.</p>
+
+  <table class="compare-table">
+    <thead><tr><th>Type</th><th>Purpose</th><th>Typical Context</th><th>Register</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lbl">Formal &mdash; Application</span></td><td>Apply for a position, scholarship, admission, or programme</td><td>Employment, postgraduate study, bursaries, internships</td><td>Formal; persuasive</td></tr>
+      <tr><td><span class="lbl">Formal &mdash; Complaint</span></td><td>Report a problem and request remedy from an institution</td><td>University administration, government agencies, companies</td><td>Formal; assertive but polite</td></tr>
+      <tr><td><span class="lbl">Formal &mdash; Request</span></td><td>Ask for information, a favour, permission, or documentation</td><td>Reference letters, transcripts, permissions, data access</td><td>Formal; courteous</td></tr>
+      <tr><td><span class="lbl">Formal &mdash; Official</span></td><td>Represent an organisation or institution officially</td><td>Government correspondence, institutional notices, legal matters</td><td>Highly formal; precise</td></tr>
+      <tr><td><span class="lbl">Informal</span></td><td>Personal communication with family, friends, or close acquaintances</td><td>Congratulations, invitations, personal news, friendly updates</td><td>Casual; warm and conversational</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION II: COMPONENTS OF A FORMAL LETTER -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section II</span><h2 class="section-title">Components of a Formal Letter</h2><div class="section-rule"></div></div>
+
+  <p>A formal letter in the Nigerian and international convention contains specific components that must appear in the correct position and format. Each component has a precise function <span class="cite">(Nwofor, 2019, p. 22)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">The Eight Components of a Formal Letter</div>
+    <dl>
+      <dt>1. Writer&rsquo;s Address (Top Right)</dt>
+      <dd>Your full postal address, written in the top right-hand corner. Include house or flat number, street name, town/city, and state. Do not include your name here. Example: <em>15 Azikiwe Road, Uyo, Akwa Ibom State.</em> In formal Nigerian convention, the date is written directly below the address.</dd>
+      <dt>2. Date</dt>
+      <dd>Write the full date in unambiguous format, directly below the writer&rsquo;s address. Write out the month in full to avoid confusion: <em>15 May 2026</em> (not 15/5/26, which is ambiguous internationally). Do not abbreviate: "May" not "May."</dd>
+      <dt>3. Recipient&rsquo;s Address (Left-Aligned)</dt>
+      <dd>The full name, title, and address of the person or organisation receiving the letter, written on the left-hand side below the date. Include: title and name (if known), position/designation, organisation name, full postal address. If the recipient&rsquo;s name is not known, use their title only: <em>The Director of Admissions.</em></dd>
+      <dt>4. Salutation</dt>
+      <dd>The formal opening greeting, aligned left: <em>Dear Dr. Udom,</em> / <em>Dear Sir,</em> / <em>Dear Madam,</em> / <em>Dear Sir/Madam,</em> (when gender is unknown). Always followed by a comma in Nigerian convention. Never use first names in a formal letter salutation unless specifically invited to do so.</dd>
+      <dt>5. Subject Line (Reference Line)</dt>
+      <dd>A brief, capitalised line directly below the salutation identifying the specific subject of the letter. This allows the recipient to understand the letter&rsquo;s purpose at a glance and facilitates filing. Format: <em>RE: APPLICATION FOR THE POSITION OF RESEARCH ASSISTANT</em>. The "RE:" prefix is conventional in Nigerian formal letters.</dd>
+      <dt>6. Body</dt>
+      <dd>The main content of the letter, divided into paragraphs. The first paragraph states the purpose of the letter. Middle paragraphs develop the content with relevant details, evidence, or argument. The final paragraph states what action is requested or expected and thanks the recipient. Each paragraph should have a single clear focus and be separated by a blank line.</dd>
+      <dt>7. Complimentary Close</dt>
+      <dd>The formal sign-off before the signature. Use: <em>Yours sincerely,</em> when you know the recipient&rsquo;s name (used with "Dear [Name]"). Use: <em>Yours faithfully,</em> when you do not know the recipient&rsquo;s name (used with "Dear Sir/Madam"). These are not interchangeable &mdash; the rule is absolute <span class="cite">(Guffey &amp; Loewy, 2021, p. 155)</span>.</dd>
+      <dt>8. Signature</dt>
+      <dd>Your handwritten signature, followed by your printed full name below it, and (if relevant) your designation or title. Example: <em>[Signature]</em> / Chukwuemeka Adiele / 300-Level Student, Department of English and Literary Studies.</dd>
+    </dl>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>The Sincerely/Faithfully Rule:</strong> "Yours sincerely" is used when the salutation contains a name (Dear Dr. Udom). "Yours faithfully" is used when the salutation does not contain a name (Dear Sir/Madam). This rule is fixed in formal English letter-writing convention and is tested in examinations <span class="cite">(Nwofor, 2019, p. 30)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION III: MODEL FORMAL LETTER -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section III</span><h2 class="section-title">Model Formal Letter &mdash; Fully Annotated</h2><div class="section-rule"></div></div>
+
+  <p>Study the following model formal letter carefully. Each component is correctly positioned and formatted according to standard Nigerian formal letter-writing convention.</p>
+
+  <div class="letter-demo">
+    <div class="letter-demo-head">Model Formal Letter &mdash; Complaint Letter</div>
+    <div class="letter-body">
+      <div class="addr" style="text-align:right">
+        Room 22, Block C, Student Hostel,<br>
+        University of Uyo,<br>
+        Uyo, Akwa Ibom State.<br>
+        15 May 2026
+      </div>
+      <div class="addr">
+        The Director,<br>
+        Student Affairs Division,<br>
+        University of Uyo,<br>
+        Uyo, Akwa Ibom State.
+      </div>
+      <div class="salut">Dear Sir/Madam,</div>
+      <div class="para"><strong>RE: DETERIORATING WATER SUPPLY CONDITIONS IN BLOCK C STUDENT HOSTEL</strong></div>
+      <div class="para">I write on behalf of the students residing in Block C of the university hostel to formally bring to your attention the severely deteriorating water supply conditions we have been experiencing since the commencement of the second semester in February 2026.</div>
+      <div class="para">For the past three months, residents of Block C have had access to running water on fewer than four days per week, with complete absence of water supply on weekends being a regular occurrence. Despite multiple verbal complaints to the hostel warden, no remedial action has been taken. The situation has caused significant hardship and poses a serious public health risk, particularly during the current period of elevated temperatures.</div>
+      <div class="para">We respectfully request that your office investigate this matter urgently and take immediate steps to restore consistent water supply to Block C. We further request that a formal acknowledgement of this complaint be issued within five working days, and that a timeline for restoration of services be communicated to the affected residents.</div>
+      <div class="para">We trust that this matter will receive the urgent attention it deserves. We are available to provide further information or meet with your representative at your convenience.</div>
+      <div class="sign">
+        Yours faithfully,<br><br>
+        [Signature]<br>
+        Ngozi Okonkwo<br>
+        Block C Hostel Representative<br>
+        Student Number: 2022/ENG/0178
+      </div>
+    </div>
+    <div class="letter-verdict"><strong>Analysis:</strong> Note the correct use of "Yours faithfully" because the salutation is "Dear Sir/Madam" (name unknown). The subject line is in full capitals and begins with "RE:". The letter is organised into four clear paragraphs: purpose, problem details, specific requests, closing. The tone is firm and assertive without being aggressive. Every component is in the correct position.</div>
+  </div>
+</div>
+
+<!-- SECTION IV: INFORMAL LETTERS -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section IV</span><h2 class="section-title">Informal Letters &mdash; Structure and Style</h2><div class="section-rule"></div></div>
+
+  <p>Informal letters are personal communications addressed to family members, friends, or close acquaintances. Their structure is less rigid than formal letters, and their tone may be warm, conversational, humorous, or intimate &mdash; depending on the relationship between writer and recipient <span class="cite">(Harmer, 2020, p. 112)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Components of an Informal Letter</div>
+    <dl>
+      <dt>Address (Top Right)</dt>
+      <dd>Your address, written in the top right corner. The format is the same as a formal letter, but you may omit the recipient&rsquo;s address entirely in an informal letter since it is a personal communication, not a document requiring filing.</dd>
+      <dt>Date</dt>
+      <dd>Written below the address. The format may be slightly less formal: "15 May 2026" or "15th May 2026" are both acceptable.</dd>
+      <dt>Salutation</dt>
+      <dd>Warm and personal: <em>Dear Kemi,</em> / <em>Dear Uncle Tunde,</em> / <em>My dear Adaeze,</em> / <em>Dear Mum,</em>. First names or familiar titles are appropriate. The salutation is followed by a comma.</dd>
+      <dt>Body</dt>
+      <dd>Conversational in style. May begin with an enquiry about the recipient&rsquo;s wellbeing: "I hope this letter meets you in good health and high spirits." Content is personal, anecdotal, and may range freely across topics. Paragraphs are less strictly structured than in formal letters.</dd>
+      <dt>Complimentary Close</dt>
+      <dd>Warm and personal: <em>Yours lovingly,</em> / <em>Yours sincerely,</em> / <em>With love,</em> / <em>Best wishes,</em> / <em>Take care,</em>. The appropriate close depends on the intimacy of the relationship.</dd>
+      <dt>Signature</dt>
+      <dd>First name only is standard in informal letters to people who know you well: <em>Emeka</em> / <em>Your daughter, Adaeze</em>.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION V: FORMAL vs INFORMAL COMPARISON -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section V</span><h2 class="section-title">Formal vs. Informal Letters &mdash; Comparison</h2><div class="section-rule"></div></div>
+
+  <table class="compare-table">
+    <thead><tr><th>Feature</th><th>Formal Letter</th><th>Informal Letter</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lbl">Recipient&rsquo;s address</span></td><td>Required &mdash; full name, title, address on left</td><td>Optional &mdash; usually omitted</td></tr>
+      <tr><td><span class="lbl">Salutation</span></td><td>Dear Dr. Obi / Dear Sir/Madam</td><td>Dear Kemi / My dear Uncle / Dear Mum</td></tr>
+      <tr><td><span class="lbl">Subject line</span></td><td>Required &mdash; in capitals, prefixed "RE:"</td><td>Not required</td></tr>
+      <tr><td><span class="lbl">Tone</span></td><td>Formal, precise, objective, impersonal</td><td>Warm, conversational, personal, relaxed</td></tr>
+      <tr><td><span class="lbl">Language</span></td><td>Standard formal English; no contractions; no slang</td><td>Contractions acceptable; colloquial language appropriate</td></tr>
+      <tr><td><span class="lbl">First person</span></td><td>"I write to inform you..." (formal first person)</td><td>"I&rsquo;m so excited to tell you..." (natural first person)</td></tr>
+      <tr><td><span class="lbl">Complimentary close</span></td><td>Yours sincerely / Yours faithfully (rule-governed)</td><td>With love / Best wishes / Yours (flexible)</td></tr>
+      <tr><td><span class="lbl">Signature</span></td><td>Full name + title/designation</td><td>First name only usually sufficient</td></tr>
+    </tbody>
+  </table>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>Common Error &mdash; Register Confusion:</strong> The most common letter-writing error is using informal language in a formal letter or overly stiff language in an informal one. In a formal letter, avoid contractions ("I&rsquo;m" &rarr; "I am"), slang, Nigerian Pidgin, excessive familiarity, and emotional language. In an informal letter, avoid the coldness of formal register unless the letter is actually dealing with a serious matter <span class="cite">(Paltridge, 2018, p. 78)</span>.</p>
+  </div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VI</span><h2 class="section-title">Practical Writing Activity</h2><div class="section-rule"></div></div>
+  <div class="activity-box">
+    <div class="activity-header">
+      <span style="font-size:1.1rem">&#128396;</span>
+      <div><div class="activity-label">Practical Activity &mdash; Section VI</div><div class="activity-title">Letter Writing Exercises &mdash; 10 Tasks</div></div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-instruction">Complete all letter writing tasks below. Each letter must use the correct format, appropriate register, and include all required components.</p>
+      <ul class="activity-list">
+        <li class="activity-item"><span class="a-num">1</span><span class="a-text">Write a formal letter to the Vice Chancellor of your university requesting the establishment of a student mental health support centre on campus. Your letter must include all eight components of a formal letter and a compelling, well-organised body.</span></li>
+        <li class="activity-item"><span class="a-num">2</span><span class="a-text">Write an informal letter to a close friend who has just been admitted to the university of their first choice. Congratulate them warmly, share a relevant personal anecdote, and offer practical advice for their first year.</span></li>
+        <li class="activity-item"><span class="a-num">3</span><span class="a-text">Write a formal complaint letter to the Director of Academic Affairs about consistent delays in the release of examination results in your department. Be specific about the problem, its impact, and what remedy you are requesting.</span></li>
+        <li class="activity-item"><span class="a-num">4</span><span class="a-text">Identify and correct ALL errors in the following letter opening: <em>"Dear Sir Udom, I am a student of English dept. Am writing this letter to ask you about my score. I think i was marked unfair and i want to complain about this. Yours sincerely, Emeka"</em></span></li>
+        <li class="activity-item"><span class="a-num">5</span><span class="a-text">Write a formal letter from a student organisation requesting permission from the Registrar to use the university auditorium for a public lecture. Include the date, expected attendance, purpose, and assurances regarding venue care.</span></li>
+        <li class="activity-item"><span class="a-num">6</span><span class="a-text">Explain why "Yours sincerely" and "Yours faithfully" are not interchangeable. Write two example letter salutations and endings showing the correct use of each, with an explanation of the rule that governs the choice.</span></li>
+        <li class="activity-item"><span class="a-num">7</span><span class="a-text">Write an informal letter to your parent or guardian explaining why you need extra financial support for a particular semester. Your letter must be honest, appropriately detailed, and demonstrate respect for the recipient without being manipulative.</span></li>
+        <li class="activity-item"><span class="a-num">8</span><span class="a-text">Convert the following informal letter opening into a formal register: <em>"Hey Registrar! How are you doing? I&rsquo;m Tunde and am in 300 level. I wanna ask about my transcript cos I need it for grad school application. When can I come get it? Let me know ASAP!"</em></span></li>
+        <li class="activity-item"><span class="a-num">9</span><span class="a-text">Write a formal letter to a company whose product you have used, commending the quality of their service. A positive letter of commendation is as professionally important as a complaint &mdash; it builds goodwill and demonstrates communication competence.</span></li>
+        <li class="activity-item"><span class="a-num">10</span><span class="a-text">Compare and contrast a formal and an informal letter by writing both versions on the same topic: <em>asking for a postponement of a planned meeting.</em> Version A: a formal request to a university panel. Version B: an informal request to a friend. Annotate each letter to highlight the key differences in format, language, and tone.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Conclusion</span><h2 class="section-title">Key Takeaway</h2><div class="section-rule"></div></div>
+  <div class="conclusion-box">
+    <p>Letter writing &mdash; both formal and informal &mdash; is a practical communication skill with immediate real-world application. In Nigeria, formal letters are used to petition government agencies, apply for positions, lodge complaints with institutions, and communicate officially in virtually every sector of professional life. Mastery of formal letter conventions &mdash; the correct positioning of components, the appropriate register, the Sincerely/Faithfully rule, and the professional tone &mdash; marks you as a competent communicator <span class="cite">(Nwofor, 2019, p. 48)</span>.</p>
+    <br>
+    <p>Lecture 4.4 completes Module 4 by examining two of the most consequential genres of professional writing you will encounter as a graduating student: the <strong>curriculum vitae (CV)</strong> and the <strong>letter of application</strong> &mdash; the two documents that will open the door to your career <span class="cite">(Guffey &amp; Loewy, 2021, p. 180)</span>.</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div class="exam-section">
+  <div class="exam-header">
+    <div><h2>Examination Questions</h2><p>Lecture 4.3 &mdash; Letter Writing: Formal and Informal</p></div>
+    <span class="exam-total">10 Questions &middot; 30 Marks</span>
+  </div>
+  <div class="exam-body">
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">In a formal letter, "Yours faithfully" is used when:</p></div><div class="q-options"><div class="q-option">A. The salutation begins with the recipient&rsquo;s name (e.g., Dear Dr. Obi)</div><div class="q-option">B. The writer knows the recipient personally</div><div class="q-option">C. The salutation does not contain the recipient&rsquo;s name (e.g., Dear Sir/Madam)</div><div class="q-option">D. The letter is addressed to a government official</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">List and Explain</span><p class="q-text">List and briefly explain FIVE of the eight components of a formal letter. For each component, state its position in the letter and its function.</p></div><p class="q-marks">[5 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the correct format for the subject line in a formal Nigerian letter?</p></div><div class="q-options"><div class="q-option">A. subject: my complaint about the hostel</div><div class="q-option">B. RE: DETERIORATING CONDITIONS IN BLOCK C STUDENT HOSTEL</div><div class="q-option">C. About: Hostel Problem</div><div class="q-option">D. Dear Sir, Regarding my hostel situation&hellip;</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Write a Letter</span><p class="q-text">Write a formal letter (200&ndash;250 words) from a student to the Head of the Bursary Department requesting a fee payment extension due to unforeseen family circumstances. Your letter must include all required components correctly positioned and formatted.</p></div><p class="q-marks">[8 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">In an informal letter, which of the following salutations is most appropriate when writing to a close friend?</p></div><div class="q-options"><div class="q-option">A. Dear Sir/Madam,</div><div class="q-option">B. To Whom It May Concern,</div><div class="q-option">C. Dear Emeka,</div><div class="q-option">D. Dear Mr. Emeka Adiele,</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Distinguish</span><p class="q-text">Identify FOUR key differences between a formal and an informal letter. For each difference, give one example from a formal letter and one from an informal letter on the same topic.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is NOT an appropriate complimentary close for a formal letter?</p></div><div class="q-options"><div class="q-option">A. Yours sincerely,</div><div class="q-option">B. Yours faithfully,</div><div class="q-option">C. With warm regards and love always,</div><div class="q-option">D. Yours truly,</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Identify and Correct</span><p class="q-text">Identify and correct FOUR errors in the following formal letter extract: <em>"Dear Dr Udom, Am a student in 300 level. I want to complain about my marks because I think it&rsquo;s not fair. Please can you change it? Yours sincerely, Emeka"</em></p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">Where is the writer&rsquo;s address positioned in a formal letter?</p></div><div class="q-options"><div class="q-option">A. Top left, above the recipient&rsquo;s address</div><div class="q-option">B. Top right, above the date</div><div class="q-option">C. Below the salutation on the left</div><div class="q-option">D. At the end of the letter, after the signature</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Essay</span><p class="q-text">Write a formal letter (200&ndash;250 words) from a group of students to the Vice Chancellor of their university, recommending the introduction of a compulsory entrepreneurship course for all undergraduate students. Your letter must be correctly formatted, professionally toned, and include specific reasons to support the recommendation.</p></div><p class="q-marks">[4 marks]</p></div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="references-section">
+  <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+  <div class="ref-list">
+    <div class="ref-item">Andrews, R., &amp; Smith, A. (2018). <em>Developing Writers: Teaching and Learning in the Digital Age</em>. Open University Press.</div>
+    <div class="ref-item">Carter, R., &amp; McCarthy, M. (2019). <em>Cambridge Grammar of English</em>. Cambridge University Press.</div>
+    <div class="ref-item">Davis, B., &amp; McKay, S. (2020). <em>Structures and Strategies: An Introduction to Academic Writing</em> (3rd ed.). Macmillan.</div>
+    <div class="ref-item">Flowerdew, L. (2019). <em>Corpus-Based Analyses of the Problem-Solution Pattern</em>. John Benjamins.</div>
+    <div class="ref-item">Guffey, M. E., &amp; Loewy, D. (2021). <em>Business Communication: Process and Product</em> (10th ed.). Cengage Learning.</div>
+    <div class="ref-item">Harmer, J. (2020). <em>How to Teach Writing</em> (2nd ed.). Pearson Longman.</div>
+    <div class="ref-item">Nwofor, C. O. (2019). <em>Effective Letter Writing for Nigerian Students and Professionals</em> (3rd ed.). Enugu: CIDJAP Press.</div>
+    <div class="ref-item">Paltridge, B. (2018). <em>Discourse Analysis: An Introduction</em> (3rd ed.). Bloomsbury.</div>
+    <div class="ref-item">Thompson, G. (2019). <em>Introducing Functional Grammar</em> (4th ed.). Routledge.</div>
+    <div class="ref-item">Usman, A. K. (2021). Formal letter writing competence among undergraduate students in North-Central Nigerian universities. <em>Journal of English Language Teaching</em>, 14(2), 55&ndash;72.</div>
+  </div>
+</div>
+
+<a class="next-lecture" href="lecture-4-4.html">
+  <div>
+    <div class="next-label">Next Lecture &middot; Module 4</div>
+    <div class="next-title">Lecture 4.4 &mdash; CV and Application Writing</div>
+    <div class="next-desc">Curriculum vitae structure &middot; Application letter &middot; Nigerian and international CV formats &middot; Career communication</div>
+  </div>
+  <span class="next-arrow">&rarr;</span>
+</a>
+<div class="lecture-nav">
+  <a class="lnav-btn" href="lecture-4-2.html">&#8592; Lecture 4.2</a>
+  <a class="lnav-index" href="index.html">Course Index</a>
+  <a class="lnav-btn" href="lecture-4-4.html">Lecture 4.4 &rarr;</a>
+</div>
+
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>Communication in English &middot; Lecture 4.3 &nbsp;&middot;&nbsp; Dr. Maurice Udom &nbsp;&middot;&nbsp; <a href="index.html">Course Index</a> &nbsp;&middot;&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>&copy; 2026 Maurice Udom. All rights reserved.</footer>
+</body>
+</html>

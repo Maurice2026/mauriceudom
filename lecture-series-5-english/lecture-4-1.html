@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 4.1: Essay Writing I — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    /* OVERVIEW */
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px;animation:fadeUp .5s ease both}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-icon{font-size:1.1rem}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'✓';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.78rem}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.82rem}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    /* SECTIONS */
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(2){animation-delay:.05s}.section-block:nth-child(3){animation-delay:.10s}.section-block:nth-child(4){animation-delay:.15s}.section-block:nth-child(5){animation-delay:.20s}.section-block:nth-child(6){animation-delay:.25s}.section-block:nth-child(7){animation-delay:.30s}.section-block:nth-child(8){animation-delay:.35s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    /* KEY CONCEPT */
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    /* GOLDEN RULE */
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* SVG DIAGRAM */
+    .diagram-wrap{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:24px;margin:28px 0;text-align:center}
+    .diagram-caption{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px;line-height:1.5}
+    /* STRUCTURE CARDS */
+    .struct-cards{border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:20px 0}
+    .struct-card{padding:22px 26px;border-bottom:1px solid var(--rule);background:var(--white)}
+    .struct-card:last-child{border-bottom:none}
+    .struct-card-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+    .struct-card-num{background:var(--mod);color:var(--white);font-family:'Playfair Display',serif;font-size:.95rem;font-weight:900;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .struct-card-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod)}
+    .struct-card-pct{margin-left:auto;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-dk);background:#fef8e7;border:1px solid #e8d090;padding:2px 10px;border-radius:2px}
+    .struct-card-body{font-size:.92rem;color:#2a2016;line-height:1.7}
+    .struct-list{list-style:none;margin-top:10px;display:grid;gap:5px}
+    .struct-list li{padding-left:16px;position:relative;font-size:.9rem;color:#2a2016}
+    .struct-list li::before{content:'→';position:absolute;left:0;color:var(--mod);font-size:.8rem;top:2px}
+    /* THESIS COMPARE */
+    .thesis-compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:22px 0}
+    .tc-col{padding:20px 22px}
+    .tc-weak{background:#fff5f5;border-right:1px solid var(--rule)}
+    .tc-strong{background:#f0fff4}
+    .tc-tag{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;display:inline-block;padding:2px 10px;border-radius:2px;margin-bottom:10px}
+    .tc-tag-weak{background:#fee2e2;color:#8b1a1a}
+    .tc-tag-strong{background:#d1fae5;color:#1a5c2a}
+    .tc-text{font-size:.92rem;font-style:italic;color:#2a2016;line-height:1.65}
+    .tc-note{font-size:.82rem;margin-top:10px;line-height:1.5}
+    .tc-weak .tc-note{color:#8b1a1a}
+    .tc-strong .tc-note{color:#1a5c2a}
+    /* PARA ANATOMY */
+    .para-anatomy{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:22px 0}
+    .pa-head{background:var(--mod);color:var(--white);padding:12px 20px;font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700}
+    .pa-row{display:grid;grid-template-columns:160px 1fr;border-bottom:1px solid var(--rule)}
+    .pa-row:last-child{border-bottom:none}
+    .pa-label{padding:14px 16px;background:var(--mod-lt);font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--mod);border-right:1px solid var(--rule);display:flex;align-items:center}
+    .pa-desc{padding:14px 16px;font-size:.9rem;color:#2a2016;line-height:1.65}
+    /* TRANSITION BOX */
+    .trans-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+    .trans-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;padding:14px 16px}
+    .trans-card-label{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:var(--mod);margin-bottom:6px}
+    .trans-card-words{font-size:.88rem;color:#2a2016;font-style:italic;line-height:1.6}
+    /* TYPE CARDS */
+    .type-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+    .type-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .type-card-head{background:var(--mod);color:var(--white);padding:13px 18px;font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;display:flex;align-items:center;gap:10px}
+    .type-card-body{padding:16px 18px;font-size:.9rem;color:#2a2016;line-height:1.65}
+    .type-card-body strong{color:var(--mod)}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .task-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:20px 22px;margin-bottom:14px}
+    .task-box:last-child{margin-bottom:0}
+    .task-num{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+    .task-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px}
+    .task-desc{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.65}
+    .task-bullets{list-style:none;margin-top:10px;display:grid;gap:5px}
+    .task-bullets li{font-size:.86rem;color:rgba(255,184,0,.85);padding-left:16px;position:relative}
+    .task-bullets li::before{content:'·';position:absolute;left:0;color:var(--gold);font-size:1.1rem;top:-2px}
+    /* CONCLUSION */
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    /* EXAM */
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    /* REFS */
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    /* NAV */
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body,.thesis-compare,.type-grid,.trans-grid{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.tc-weak{border-right:none;border-bottom:1px solid var(--rule)}.pa-row{grid-template-columns:1fr}.pa-label{border-right:none;border-bottom:1px solid var(--rule)}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 4 &nbsp;·&nbsp; Lecture 1</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Essay Writing I — Foundations</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Writing Activities</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- OVERVIEW BLOCK -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+          <li>Define essay writing in academic contexts</li>
+          <li>Identify the structural components of an essay</li>
+          <li>Develop coherent and unified paragraphs</li>
+          <li>Apply basic essay writing techniques</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+          <li>What Is an Essay?</li>
+          <li>The Three-Part Essay Structure</li>
+          <li>The Thesis Statement</li>
+          <li>Paragraph Unity and Coherence</li>
+          <li>Types of Essays — Introductory Level</li>
+          <li>Practical Writing Task</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Module 3 (Language Skills) should be completed before beginning Module 4. Strong sentence-level grammar from Module 2 is assumed throughout this module.</p>
+        <a class="prereq-link" href="lecture-3-4.html">← Lecture 3.4 — Integrated Language Use</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">What Is an Essay?</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>An essay is a structured piece of writing designed to present an idea, argument, or narrative in a coherent and logical manner. In academic contexts, essays are not merely expressive compositions but <strong>analytical tools</strong> used to demonstrate understanding and critical thinking <span class="cite">(Bailey, 2018)</span>.</p>
+
+    <p>Contemporary research emphasises that essay writing is central to academic success because it integrates reading, thinking, and writing into a single intellectual activity <span class="cite">(Wingate, 2020)</span>. Therefore, an essay must go beyond storytelling to include organisation, argumentation, and clarity.</p>
+
+    <p>At the tertiary level, the essay is the primary instrument by which students demonstrate their grasp of course content, their ability to reason critically, and their command of academic language. Every examination question and assignment brief ultimately demands this same skill. Understanding what an essay is — and what it is not — is the first step toward writing one well.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <dl>
+        <dt>Academic Essay — Definition</dt>
+        <dd>A structured piece of writing that presents a central idea, argument, or analysis in a logical, coherent, and purposeful manner. Unlike casual writing, the academic essay must demonstrate understanding, integrate evidence, and communicate ideas with precision and clarity <span class="cite">(Bailey, 2018)</span>.</dd>
+        <dt>Essay as an Analytical Tool</dt>
+        <dd>In academic contexts, the essay goes beyond personal expression. It functions as an instrument of intellectual inquiry — one that integrates reading comprehension, critical reasoning, and formal written expression into a unified performance. Essay writing is therefore central to academic literacy <span class="cite">(Wingate, 2020)</span>.</dd>
+      </dl>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Foundational Principle:</strong> An essay is not a collection of loosely related ideas — it is a unified argument that moves logically from a clear beginning, through a developed middle, to a purposeful end. Every sentence must earn its place by contributing to that movement <span class="cite">(Lunsford, 2019)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">The Structure of an Essay</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>A standard academic essay consists of three major parts. This structure is not arbitrary — it mirrors the movement of a well-formed argument: from statement, through support, to resolution. Every essay, regardless of length or subject, is built on this same framework <span class="cite">(Oshima &amp; Hogue, 2020)</span>.</p>
+
+    <!-- SVG ESSAY STRUCTURE DIAGRAM -->
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="max-width:500px;width:100%;height:auto;display:block;margin:0 auto">
+        <!-- INTRODUCTION -->
+        <rect x="60" y="10" width="400" height="58" rx="3" fill="#1F3864"/>
+        <text font-family="Georgia,serif" font-weight="700" font-size="13" fill="white" x="260" y="34" text-anchor="middle">INTRODUCTION</text>
+        <text font-family="Georgia,serif" font-size="10" fill="#FFB800" x="260" y="52" text-anchor="middle">Hook · Background · Thesis Statement  |  10–15%</text>
+        <!-- arrow -->
+        <line x1="260" y1="68" x2="260" y2="84" stroke="#d6cbb8" stroke-width="2"/>
+        <polygon points="254,82 266,82 260,90" fill="#d6cbb8"/>
+        <!-- BODY -->
+        <rect x="60" y="90" width="400" height="108" rx="3" fill="#e8edf5" stroke="#1F3864" stroke-width="1.5"/>
+        <text font-family="Georgia,serif" font-weight="700" font-size="13" fill="#1F3864" x="260" y="114" text-anchor="middle">BODY PARAGRAPHS</text>
+        <text font-family="Georgia,serif" font-size="9.5" fill="#4a5c7a" x="260" y="130" text-anchor="middle">Topic Sentence → Evidence → Analysis → Linking Sentence</text>
+        <!-- 3 para boxes -->
+        <rect x="78" y="140" width="105" height="40" rx="2" fill="white" stroke="#d6cbb8"/>
+        <text font-family="Georgia,serif" font-size="9.5" fill="#1F3864" font-weight="700" x="130" y="157" text-anchor="middle">Paragraph 1</text>
+        <text font-family="Georgia,serif" font-size="9" fill="#6b5f4e" x="130" y="171" text-anchor="middle">Main Point</text>
+        <rect x="207" y="140" width="105" height="40" rx="2" fill="white" stroke="#d6cbb8"/>
+        <text font-family="Georgia,serif" font-size="9.5" fill="#1F3864" font-weight="700" x="259" y="157" text-anchor="middle">Paragraph 2</text>
+        <text font-family="Georgia,serif" font-size="9" fill="#6b5f4e" x="259" y="171" text-anchor="middle">Development</text>
+        <rect x="336" y="140" width="105" height="40" rx="2" fill="white" stroke="#d6cbb8"/>
+        <text font-family="Georgia,serif" font-size="9.5" fill="#1F3864" font-weight="700" x="388" y="157" text-anchor="middle">Paragraph 3</text>
+        <text font-family="Georgia,serif" font-size="9" fill="#6b5f4e" x="388" y="171" text-anchor="middle">Further Support</text>
+        <text font-family="Georgia,serif" font-size="9.5" fill="#4a5c7a" x="260" y="192" text-anchor="middle">70–80% of essay</text>
+        <!-- arrow -->
+        <line x1="260" y1="198" x2="260" y2="214" stroke="#d6cbb8" stroke-width="2"/>
+        <polygon points="254,212 266,212 260,220" fill="#d6cbb8"/>
+        <!-- CONCLUSION -->
+        <rect x="60" y="220" width="400" height="50" rx="3" fill="#FFB800"/>
+        <text font-family="Georgia,serif" font-weight="700" font-size="13" fill="#1F3864" x="260" y="242" text-anchor="middle">CONCLUSION</text>
+        <text font-family="Georgia,serif" font-size="10" fill="#7a5c00" x="260" y="258" text-anchor="middle">Restate Thesis · Summarise · Closing Statement  |  10–15%</text>
+      </svg>
+      <p class="diagram-caption">Figure 1: The standard three-part essay structure. All academic essays — regardless of length or subject — are built on this framework <span class="cite">(Oshima &amp; Hogue, 2020)</span>.</p>
+    </div>
+
+    <div class="struct-cards">
+      <!-- INTRODUCTION -->
+      <div class="struct-card">
+        <div class="struct-card-head">
+          <div class="struct-card-num">1</div>
+          <div class="struct-card-title">Introduction</div>
+          <span class="struct-card-pct">10–15%</span>
+        </div>
+        <div class="struct-card-body">
+          <p>The introduction provides background information and presents the thesis statement, which expresses the central idea of the essay. Its purpose is to orient the reader — to establish what the essay is about and why it matters.</p>
+          <p style="margin-top:12px">A strong introduction must accomplish three things:</p>
+          <ul class="struct-list">
+            <li>Engage the reader with a compelling opening — a striking fact, a thought-provoking question, or a relevant anecdote</li>
+            <li>Provide sufficient context or background information so the reader understands the topic</li>
+            <li>End with a clear and specific thesis statement that announces the essay's central argument</li>
+          </ul>
+          <p style="margin-top:12px;font-size:.9rem;color:var(--muted)">The introduction should not contain arguments, detailed evidence, or the conclusion. Its role is to set the stage, not to perform <span class="cite">(Lunsford, 2019)</span>.</p>
+        </div>
+      </div>
+      <!-- BODY -->
+      <div class="struct-card">
+        <div class="struct-card-head">
+          <div class="struct-card-num">2</div>
+          <div class="struct-card-title">Body Paragraphs</div>
+          <span class="struct-card-pct">70–80%</span>
+        </div>
+        <div class="struct-card-body">
+          <p>The body develops the argument or main idea through a series of paragraphs. Each body paragraph must be unified — addressing one central idea — and must contribute directly to proving the thesis.</p>
+          <p style="margin-top:12px">Each paragraph must contain the following four elements <span class="cite">(Hyland, 2019)</span>:</p>
+          <ul class="struct-list">
+            <li><strong>A topic sentence</strong> — states the paragraph's one central idea; the paragraph's mini-thesis</li>
+            <li><strong>Supporting details or evidence</strong> — facts, examples, quotations, statistics that back the topic sentence</li>
+            <li><strong>Explanation or analysis</strong> — the writer's interpretation of how the evidence supports the point</li>
+            <li><strong>A linking sentence</strong> — connects smoothly to the next paragraph or back to the thesis</li>
+          </ul>
+          <p style="margin-top:12px;font-size:.9rem;color:var(--muted)">Effective paragraphing improves readability and logical flow <span class="cite">(Hyland, 2019)</span>.</p>
+        </div>
+      </div>
+      <!-- CONCLUSION -->
+      <div class="struct-card">
+        <div class="struct-card-head">
+          <div class="struct-card-num">3</div>
+          <div class="struct-card-title">Conclusion</div>
+          <span class="struct-card-pct">10–15%</span>
+        </div>
+        <div class="struct-card-body">
+          <p>The conclusion summarises the essay and reinforces the thesis without introducing new ideas. Its function is to bring the essay to a purposeful and memorable close — not to begin a new line of argument.</p>
+          <p style="margin-top:12px">A strong conclusion must accomplish the following:</p>
+          <ul class="struct-list">
+            <li>Restate the main argument (thesis) in fresh language — not word-for-word repetition</li>
+            <li>Briefly summarise the key supporting points made in the body paragraphs</li>
+            <li>Leave a final impression — a broader implication, a call to action, or a closing reflection</li>
+            <li>Never introduce new arguments, evidence, or ideas not already established in the body</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">The Thesis Statement</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>The thesis is the most important part of an essay. It defines the direction of the entire work. Placed at the end of the introduction, it is the single sentence that tells the reader exactly what the essay will prove or demonstrate <span class="cite">(Andrews &amp; Smith, 2019)</span>.</p>
+
+    <p>Without a clear thesis, every paragraph that follows has no clear purpose to serve. The thesis is the anchor of the essay — every body paragraph must connect back to it, and the conclusion must restate it. A strong thesis statement must be:</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Qualities of a Good Thesis Statement</div>
+      <dl>
+        <dt>Clear</dt>
+        <dd>The thesis must be unambiguous. The reader should immediately understand what claim is being made. Vague or obscure language in a thesis produces a vague and directionless essay.</dd>
+        <dt>Specific</dt>
+        <dd>The thesis must focus on a defined, manageable aspect of the topic — not the entire subject. A specific thesis allows the writer to go into genuine depth rather than covering everything superficially.</dd>
+        <dt>Focused</dt>
+        <dd>A good thesis makes one clear, central claim. It does not attempt to prove two or three separate things at once. The body of the essay will develop the thesis — the thesis itself should be concise <span class="cite">(Andrews &amp; Smith, 2019)</span>.</dd>
+      </dl>
+    </div>
+
+    <h3>Thesis Statement — Weak vs. Strong</h3>
+    <p>The difference between a weak and strong thesis is the difference between a statement of fact and an arguable, specific claim. Study the following comparison carefully:</p>
+
+    <div class="thesis-compare">
+      <div class="tc-col tc-weak">
+        <span class="tc-tag tc-tag-weak">✗ Weak Thesis</span>
+        <p class="tc-text">"Education is important."</p>
+        <p class="tc-note">This is a statement of obvious fact. No reasonable person would dispute it. It provides no direction, makes no argument, and gives the reader no sense of what the essay will prove.</p>
+      </div>
+      <div class="tc-col tc-strong">
+        <span class="tc-tag tc-tag-strong">✓ Strong Thesis</span>
+        <p class="tc-text">"Education plays a crucial role in national development by improving literacy, promoting innovation, and reducing poverty."</p>
+        <p class="tc-note">Specific, arguable, and purposeful. It previews three supporting points — one for each body paragraph — and makes a claim that the essay can actually prove <span class="cite">(Andrews &amp; Smith, 2019)</span>.</p>
+      </div>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>The Thesis Test:</strong> Before finalising a thesis statement, apply these three questions: (1) Is this an arguable claim — could a reasonable person disagree? (2) Is it specific enough to be proved within the essay? (3) Does it tell the reader exactly what the body paragraphs will demonstrate? If the answer to all three is <em>yes</em>, the thesis is strong. Clarity in thesis writing significantly enhances essay quality <span class="cite">(Andrews &amp; Smith, 2019)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION IV -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Paragraph Unity and Coherence</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>A paragraph must function as a unified unit of meaning. Two essential qualities define a well-constructed academic paragraph: <strong>unity</strong> and <strong>coherence</strong>. These two qualities work together — a paragraph may be unified in its ideas but incoherent in its expression, and vice versa. Both must be achieved simultaneously <span class="cite">(Oshima &amp; Hogue, 2020)</span>.</p>
+
+    <div class="para-anatomy">
+      <div class="pa-head">Anatomy of a Well-Constructed Body Paragraph</div>
+      <div class="pa-row">
+        <div class="pa-label">Topic Sentence</div>
+        <div class="pa-desc"><strong>Definition:</strong> The first sentence of the paragraph, which states the one central idea that the paragraph will develop. Every subsequent sentence must relate to this sentence — if a sentence does not support the topic sentence, it does not belong in the paragraph.<br><strong>Example:</strong> <em>"Access to quality primary education is the most critical factor in reducing long-term poverty in developing nations."</em></div>
+      </div>
+      <div class="pa-row">
+        <div class="pa-label">Supporting Details</div>
+        <div class="pa-desc"><strong>Definition:</strong> Facts, examples, statistics, quotations, or expert opinion that provide concrete evidence for the topic sentence. Must be specific and directly relevant — vague generalities weaken a paragraph.<br><strong>Example:</strong> <em>"UNESCO (2022) reports that each additional year of schooling increases an individual's lifetime earnings by approximately 10%."</em></div>
+      </div>
+      <div class="pa-row">
+        <div class="pa-label">Analysis / Explanation</div>
+        <div class="pa-desc"><strong>Definition:</strong> The writer's own explanation of how the evidence supports the topic sentence. This is where critical thinking is demonstrated — evidence does not interpret itself. The writer must always explain the significance of the evidence.<br><strong>Example:</strong> <em>"This statistic demonstrates that education is not merely a social good but a measurable economic investment with generational consequences."</em></div>
+      </div>
+      <div class="pa-row">
+        <div class="pa-label">Linking Sentence</div>
+        <div class="pa-desc"><strong>Definition:</strong> The final sentence, which connects this paragraph to the next — or loops the argument back to the thesis — maintaining the essay's logical flow and forward momentum.<br><strong>Example:</strong> <em>"If primary education yields such significant returns, the case for universal access to schooling becomes both morally and economically compelling."</em></div>
+      </div>
+    </div>
+
+    <h3>Unity and Coherence Defined</h3>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Two Essential Paragraph Qualities</div>
+      <dl>
+        <dt>Unity</dt>
+        <dd>A paragraph has unity when every sentence it contains relates to and supports the one central idea stated in the topic sentence. Any sentence that introduces a different idea — even a related one — breaks unity and belongs in a separate paragraph. Poor unity fragments the essay's argument and confuses the reader.</dd>
+        <dt>Coherence</dt>
+        <dd>A paragraph has coherence when ideas flow logically and smoothly from one sentence to the next, so the reader can follow the development of the argument without confusion. Coherence is achieved through logical sequencing, the use of transition words, and the repetition of key terms. Poor coherence is one of the major causes of weak academic writing <span class="cite">(Oshima &amp; Hogue, 2020)</span>.</dd>
+      </dl>
+    </div>
+
+    <h3>Transition Words for Coherence</h3>
+    <p>Transition words and phrases signal the logical relationship between sentences and paragraphs. Using them correctly significantly improves the coherence and readability of academic writing <span class="cite">(Graff &amp; Birkenstein, 2021)</span>.</p>
+
+    <div class="trans-grid">
+      <div class="trans-card">
+        <div class="trans-card-label">Adding Information</div>
+        <div class="trans-card-words">Furthermore, Moreover, In addition, Additionally, Besides, Also</div>
+      </div>
+      <div class="trans-card">
+        <div class="trans-card-label">Contrasting / Conceding</div>
+        <div class="trans-card-words">However, Nevertheless, On the other hand, Although, Despite this, While</div>
+      </div>
+      <div class="trans-card">
+        <div class="trans-card-label">Cause and Effect</div>
+        <div class="trans-card-words">Therefore, Consequently, As a result, Thus, Hence, For this reason</div>
+      </div>
+      <div class="trans-card">
+        <div class="trans-card-label">Illustrating / Exemplifying</div>
+        <div class="trans-card-words">For example, For instance, To illustrate, Specifically, As demonstrated by</div>
+      </div>
+      <div class="trans-card">
+        <div class="trans-card-label">Sequencing</div>
+        <div class="trans-card-words">First, Second, Third, Subsequently, Then, Finally, Thereafter</div>
+      </div>
+      <div class="trans-card">
+        <div class="trans-card-label">Concluding / Summarising</div>
+        <div class="trans-card-words">In conclusion, In summary, To summarise, Ultimately, It follows that</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION V -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Types of Essays — Introductory Level</h2>
+      <div class="section-rule"></div>
+    </div>
+
+    <p>At the introductory level, students focus on two essay types that develop the foundational skills of expression and organisation before progressing to the more complex demands of argumentative writing. These two types serve as the training ground for all academic essay writing <span class="cite">(Cottrell, 2019)</span>.</p>
+
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="type-card-head"><span>📖</span> Narrative Essay</div>
+        <div class="type-card-body">
+          <p><strong>Definition:</strong> A narrative essay tells a story — typically a personal experience — in a structured and purposeful way. Unlike casual storytelling, the academic narrative essay uses the story to illustrate or reflect upon a broader theme or insight.</p>
+          <p style="margin-top:10px"><strong>Key Features:</strong></p>
+          <p>Organised chronologically (events presented in time order) · First-person perspective · Vivid, descriptive language · A clear beginning, rising action, climax, and resolution · A reflective conclusion that draws out the significance of the experience rather than simply ending the story.</p>
+          <p style="margin-top:10px"><strong>Purpose:</strong> To develop the student's ability to organise a sequence of events logically while developing a personal voice and descriptive skill in writing.</p>
+          <p style="margin-top:10px"><strong>Example Topic:</strong> <em>"My First Day at University"</em> — narrate the experience, then reflect on what it taught you about academic life.</p>
+        </div>
+      </div>
+      <div class="type-card">
+        <div class="type-card-head"><span>🖼️</span> Descriptive Essay</div>
+        <div class="type-card-body">
+          <p><strong>Definition:</strong> A descriptive essay paints a detailed and vivid picture of a person, place, object, or experience using precise and evocative language. The goal is to create a specific impression in the reader's mind through carefully chosen detail <span class="cite">(Bailey, 2018)</span>.</p>
+          <p style="margin-top:10px"><strong>Key Features:</strong></p>
+          <p>Organised spatially, thematically, or chronologically · Rich sensory detail (sight, sound, smell, touch, taste) · Precise vocabulary — concrete nouns and specific adjectives · A dominant impression that unifies the entire description · Figurative language (simile, metaphor) where appropriate.</p>
+          <p style="margin-top:10px"><strong>Purpose:</strong> To sharpen the student's observational skill and develop the ability to convey specific, concrete details rather than vague generalities.</p>
+          <p style="margin-top:10px"><strong>Example Topic:</strong> <em>"A Place That Influenced My Life"</em> — describe the place through specific sensory details, not abstract statements.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Why Begin with These Types:</strong> These two essay types help students develop expression and organisation skills before moving to argumentative writing. Narrative teaches structure and voice; descriptive teaches precision and detail. Both are foundations upon which the argumentative essay — covered in Lecture 4.2 — is built.</p>
+    </div>
+  </div>
+
+  <!-- SECTION VI: PRACTICAL TASK -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section VI</span>
+      <h2 class="section-title">Practical Writing Task</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Writing competence develops only through sustained practice. Apply every concept covered in this lecture to the task below <span class="cite">(Thornbury, 2019)</span>.</p>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity — Section VI</div>
+          <div class="activity-title">Descriptive Essay Writing Task</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <div class="task-box">
+          <div class="task-num">Writing Task</div>
+          <div class="task-title">Write a Descriptive Essay (400–600 Words)</div>
+          <div class="task-desc">Topic: <strong>"A Place That Influenced My Life"</strong><br><br>
+          Your essay must demonstrate all of the structural and compositional skills taught in this lecture. Focus on creating a clear, organised, and vivid piece of writing that shows — rather than tells — what makes this place significant to you.</div>
+          <ul class="task-bullets">
+            <li>Write a clear <strong>introduction</strong> that engages the reader and ends with a thesis statement identifying the place and its significance to you</li>
+            <li>Develop at least <strong>three organised body paragraphs</strong>, each with a topic sentence, specific sensory details as evidence, analysis of the significance of those details, and a linking sentence</li>
+            <li>Write a <strong>strong conclusion</strong> that restates your thesis and leaves the reader with a final reflection on how the place shaped you</li>
+            <li>Use at least four different <strong>transition words</strong> to ensure coherence</li>
+            <li>Avoid vague statements — replace every general claim with a specific, concrete detail</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Conclusion</span>
+      <h2 class="section-title">Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>The academic essay is the primary vehicle through which tertiary-level intellectual competence is demonstrated and assessed. Mastery of its foundational elements — the three-part structure, the thesis statement, and the well-constructed paragraph — provides the platform upon which all advanced academic writing is built <span class="cite">(Wingate, 2020)</span>.</p>
+      <br>
+      <p>A student who can write a <strong>clear and specific thesis</strong>, develop it through <strong>unified and coherent paragraphs</strong>, and bring it to a <strong>purposeful conclusion</strong> has acquired the most transferable writing skill available at the undergraduate level. Every essay type — narrative, descriptive, argumentative, analytical — is a variation on this same structural logic. These foundations are not merely introductory — they are permanent <span class="cite">(Graff &amp; Birkenstein, 2021)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div>
+        <h2>Examination Questions</h2>
+        <p>Lecture 4.1 — Essay Writing I: Foundations</p>
+      </div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span>
+        <p class="q-text">Which of the following best defines an academic essay?</p></div>
+        <div class="q-options">
+          <div class="q-option">A. &nbsp;A personal story written informally</div>
+          <div class="q-option">B. &nbsp;A structured piece of writing presenting an idea or argument</div>
+          <div class="q-option">C. &nbsp;A list of unrelated ideas</div>
+          <div class="q-option">D. &nbsp;A casual conversation in written form</div>
+        </div>
+        <p class="q-marks">[1 mark]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Short Answer</span>
+        <p class="q-text">Define an essay and state its primary purpose in academic writing.</p></div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Identification</span>
+        <p class="q-text">List the three main parts of an essay and briefly explain each.</p></div>
+        <p class="q-marks">[3 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span>
+        <p class="q-text">Which part of an essay contains the thesis statement?</p></div>
+        <div class="q-options">
+          <div class="q-option">A. &nbsp;Body</div>
+          <div class="q-option">B. &nbsp;Conclusion</div>
+          <div class="q-option">C. &nbsp;Introduction</div>
+          <div class="q-option">D. &nbsp;Title</div>
+        </div>
+        <p class="q-marks">[1 mark]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Explanation</span>
+        <p class="q-text">Explain the concept of a thesis statement with one example.</p></div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Paragraph Writing</span>
+        <p class="q-text">Write one well-structured paragraph on: <em>"The Importance of Education."</em></p></div>
+        <p class="q-marks">[3 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Distinction</span>
+        <p class="q-text">Differentiate between unity and coherence in paragraph writing.</p></div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Multiple Choice</span>
+        <p class="q-text">Which of the following best describes coherence?</p></div>
+        <div class="q-options">
+          <div class="q-option">A. &nbsp;Use of long sentences</div>
+          <div class="q-option">B. &nbsp;Logical flow of ideas</div>
+          <div class="q-option">C. &nbsp;Use of difficult vocabulary</div>
+          <div class="q-option">D. &nbsp;Repetition of words</div>
+        </div>
+        <p class="q-marks">[1 mark]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Essay Type Identification</span>
+        <p class="q-text">State two types of essays taught at the introductory level and explain one.</p></div>
+        <p class="q-marks">[2 marks]</p>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Essay Writing Task</span>
+        <p class="q-text">Write a short essay (200–300 words) on: <em>"My First Day at University."</em></p></div>
+        <p class="q-marks">[3 marks]</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading">
+      <h2 class="ref-title">References</h2>
+      <div class="ref-rule"></div>
+    </div>
+    <div class="ref-list">
+      <div class="ref-item">Andrews, R., &amp; Smith, A. (2019). Essay structure and student performance. <em>Journal of Academic Writing</em>, 9(1), 45–60.</div>
+      <div class="ref-item">Bailey, S. (2018). <em>Academic Writing: A Handbook for International Students</em>. Routledge.</div>
+      <div class="ref-item">Cottrell, S. (2019). <em>The Study Skills Handbook</em>. Palgrave.</div>
+      <div class="ref-item">Graff, G., &amp; Birkenstein, C. (2021). <em>They Say / I Say</em>. Norton.</div>
+      <div class="ref-item">Hyland, K. (2019). <em>Second Language Writing</em>. Cambridge University Press.</div>
+      <div class="ref-item">Lunsford, A. (2019). <em>The St. Martin's Handbook</em>. Bedford.</div>
+      <div class="ref-item">Oshima, A., &amp; Hogue, A. (2020). <em>Writing Academic English</em>. Pearson.</div>
+      <div class="ref-item">Swales, J., &amp; Feak, C. (2020). <em>Academic Writing for Graduate Students</em>. University of Michigan Press.</div>
+      <div class="ref-item">Thornbury, S. (2019). <em>How to Teach Writing</em>. Pearson.</div>
+      <div class="ref-item">Wingate, U. (2020). Essay writing pedagogy and academic literacy. <em>Studies in Higher Education</em>, 45(3), 512–525.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-4-2.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 4</div>
+      <div class="next-title">Lecture 4.2 — Essay Writing II: Advanced Techniques</div>
+      <div class="next-desc">Argumentative &amp; expository essays · Strong thesis · Evidence &amp; counterargument · Cohesion</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn disabled" href="#">← Lecture 3.4</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-4-2.html">Lecture 4.2 →</a>
+  </div>
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Communication in English &nbsp;·&nbsp; Lecture 4.1 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

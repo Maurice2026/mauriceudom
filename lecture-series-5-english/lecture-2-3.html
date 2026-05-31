@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 2.3: The Rules of Agreement — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff;--red:#8b1a1a;--green:#1a5c1a}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .section-block{margin-bottom:52px;animation:fadeUp .5s ease both}
+    .section-block:nth-child(1){animation-delay:.05s}.section-block:nth-child(2){animation-delay:.10s}.section-block:nth-child(3){animation-delay:.15s}.section-block:nth-child(4){animation-delay:.20s}.section-block:nth-child(5){animation-delay:.25s}.section-block:nth-child(6){animation-delay:.30s}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}
+    p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:12px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:2px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.65;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+
+    /* ERROR/CORRECT TABLE */
+    .concord-table{width:100%;border-collapse:collapse;margin:20px 0;border:1px solid var(--rule)}
+    .concord-table th{background:var(--mod);color:var(--white);padding:11px 18px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .concord-table td{padding:11px 18px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.6}
+    .concord-table tr:last-child td{border-bottom:none}
+    .concord-table tr:nth-child(even) td{background:#faf6ef}
+    .wrong{color:var(--red);font-weight:600}
+    .correct{color:var(--green);font-weight:600}
+    .rule-note{font-size:.78rem;color:var(--muted);font-style:italic;margin-top:4px;display:block}
+
+    /* RULE BLOCKS */
+    .rule-block{background:var(--white);border:1px solid var(--rule);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:16px 20px;margin:12px 0}
+    .rule-num{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:6px;display:block}
+    .rule-text{font-size:.92rem;color:#2a2016;line-height:1.65}
+    .rule-example{font-size:.86rem;color:var(--muted);font-style:italic;margin-top:6px}
+
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.88rem;color:#c0b8ac;margin-bottom:20px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:9px}
+    .activity-item{display:grid;grid-template-columns:32px 1fr auto;align-items:center;gap:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:11px 14px}
+    .activity-item-num{font-family:'Playfair Display',serif;font-size:1rem;font-weight:900;color:var(--gold);text-align:center}
+    .activity-sent{font-size:.92rem;color:var(--white);line-height:1.6;margin-bottom:2px}
+    .activity-answer{font-size:.76rem;color:#8a9ab4}
+    .ans-badge{background:rgba(255,184,0,.15);border:1px solid rgba(255,184,0,.3);color:var(--gold);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;white-space:nowrap}
+
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 20px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.3);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.88rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}.activity-item{grid-template-columns:28px 1fr}}
+  
+    /* ── LECTURE OVERVIEW ── */
+    .overview-block {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+      animation-delay: 0.02s;
+    }
+    .overview-header {
+      background: var(--mod);
+      padding: 14px 24px;
+      border-bottom: 3px solid var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .overview-header-icon { font-size: 1.1rem; }
+    .overview-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+    .overview-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+    .overview-col {
+      padding: 18px 20px;
+      border-right: 1px solid var(--rule);
+    }
+    .overview-col:last-child { border-right: none; }
+    .overview-col-label {
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--mod);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: 'Source Serif 4', serif;
+    }
+    .overview-objectives {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+    }
+    .overview-objectives li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 14px;
+      position: relative;
+    }
+    .overview-objectives li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .78rem;
+    }
+    .overview-topics {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      counter-reset: topic-counter;
+    }
+    .overview-topics li {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.5;
+      padding-left: 22px;
+      position: relative;
+      counter-increment: topic-counter;
+    }
+    .overview-topics li::before {
+      content: counter(topic-counter) '.';
+      position: absolute;
+      left: 0;
+      color: var(--mod);
+      font-weight: 700;
+      font-size: .82rem;
+    }
+    .overview-prereq {
+      font-size: .86rem;
+      color: #2a2016;
+      line-height: 1.6;
+    }
+    .prereq-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: .78rem;
+      color: var(--mod);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(31,56,100,.3);
+      transition: border-color .2s;
+    }
+    .prereq-link:hover { border-color: var(--mod); }
+    .prereq-none {
+      font-size: .82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    @media(max-width:768px){
+      .overview-body { grid-template-columns: 1fr; }
+      .overview-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .overview-col:last-child { border-bottom: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp;
+  <a href="index.html">Communication in English</a>
+</div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">↩ Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 2 &nbsp;·&nbsp; Lecture 3</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">The Rules of Agreement — Concord</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip">⏱ <strong>Duration:</strong>&nbsp;25 Minutes</span>
+    <span class="meta-chip">📚 <strong>Module:</strong>&nbsp;Grammar &amp; Usage</span>
+    <span class="meta-chip">🎯 <strong>Level:</strong>&nbsp;Tertiary — New Entrants</span>
+    <span class="meta-chip">✅ <strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- LECTURE OVERVIEW -->
+  <div class="overview-block">
+    <div class="overview-header">
+      <span class="overview-header-icon">📋</span>
+      <span class="overview-header-title">Lecture Overview</span>
+    </div>
+    <div class="overview-body">
+      <div class="overview-col">
+        <div class="overview-col-label">Learning Objectives</div>
+        <ul class="overview-objectives">
+<li>State and apply the eight core rules of concord</li>
+<li>Identify and correct subject-verb agreement errors</li>
+<li>Apply the proximity rule for either/or and neither/nor</li>
+<li>Ensure correct pronoun-antecedent agreement in academic writing</li>
+        </ul>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Topics Covered</div>
+        <ol class="overview-topics">
+<li>What is Concord?</li>
+<li>Subject-Verb Concord — Core Rules and Problem Areas</li>
+<li>Pronoun-Antecedent Agreement</li>
+<li>Practical Activity: Concord Correction Drill</li>
+<li>Conclusion & Key Takeaway</li>
+        </ol>
+      </div>
+      <div class="overview-col">
+        <div class="overview-col-label">Prerequisite</div>
+        <p class="overview-prereq">Students should have completed Lectures 2.1 and 2.2 before proceeding.</p>
+        <a class="prereq-link" href="lecture-2-2.html">← Lecture 2.2 — Sentence Architecture and Types</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SECTION I -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section I</span>
+      <h2 class="section-title">What is Concord?</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Among the most common grammatical errors in Nigerian undergraduate writing is the violation of <strong>concord</strong> — also called <em>agreement</em>. Concord is the grammatical requirement that certain elements within a sentence must match each other in number, person, or gender <span class="cite">(Huddleston &amp; Pullum, 2019, p. 130)</span>. The most critical form of concord in English is <strong>subject-verb agreement</strong>: the verb must reflect whether its subject is singular or plural <span class="cite">(Iwuchukwu, 2020, p. 50)</span>.</p>
+    <p>Concord errors do not merely mark a student as grammatically weak — in formal academic and professional writing, they undermine the credibility of the entire argument. A sentence that lacks concord signals inattention to the conventions of standard written English <span class="cite">(Oladele, 2021, p. 119)</span>.</p>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <dl>
+        <dt>Concord (Agreement)</dt>
+        <dd>The grammatical relationship in which two or more words in a sentence must match in form — typically in number (singular/plural) or person (first/second/third) <span class="cite">(Biber et al., 2021, p. 185)</span>.</dd>
+        <dt>The Golden Rule of Subject-Verb Concord</dt>
+        <dd>A singular subject takes a singular verb; a plural subject takes a plural verb. This rule appears simple but becomes complex in several high-frequency academic constructions <span class="cite">(Quirk et al., 2018, p. 102)</span>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- SECTION II -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section II</span>
+      <h2 class="section-title">Subject-Verb Concord — Core Rules and Problem Areas</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>The basic rule is straightforward. It is its application in complex grammatical environments that creates difficulty. The following are the most important concord rules for academic writing <span class="cite">(Quirk et al., 2018, p. 105)</span>:</p>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 1 — Basic Agreement</span>
+      <div class="rule-text">A singular subject takes a singular verb; a plural subject takes a plural verb.</div>
+      <div class="rule-example"><span class="correct">✓</span> "The student <em>writes</em> clearly." &nbsp;|&nbsp; <span class="correct">✓</span> "The students <em>write</em> clearly."</div>
+    </div>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 2 — Intervening Phrases</span>
+      <div class="rule-text">A phrase between the subject and verb does not change the number of the subject. The verb must agree with the <em>head</em> of the subject noun phrase, not the nearest noun <span class="cite">(Huddleston &amp; Pullum, 2019, p. 133)</span>.</div>
+      <div class="rule-example"><span class="wrong">✗</span> "The quality of the reports <em>are</em> poor." &nbsp;|&nbsp; <span class="correct">✓</span> "The quality of the reports <em>is</em> poor." (Subject = <em>quality</em>, singular)</div>
+    </div>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 3 — Either/Or and Neither/Nor</span>
+      <div class="rule-text">When subjects are joined by <em>either…or</em> or <em>neither…nor</em>, the verb agrees with the subject closest to it (the <em>proximity rule</em>) <span class="cite">(Biber et al., 2021, p. 192)</span>.</div>
+      <div class="rule-example"><span class="correct">✓</span> "Either the dean or the lecturers <em>are</em> responsible." &nbsp;|&nbsp; <span class="correct">✓</span> "Either the lecturers or the dean <em>is</em> responsible."</div>
+    </div>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 4 — Collective Nouns</span>
+      <div class="rule-text">Collective nouns (<em>committee, team, government, jury, staff, audience</em>) take a singular verb when the group acts as a unified whole, and a plural verb when individual members act independently. In Nigerian academic English, the singular form is standard <span class="cite">(Quirk et al., 2018, p. 110)</span>.</div>
+      <div class="rule-example"><span class="correct">✓</span> "The committee <em>has</em> reached a decision." (acting as one) &nbsp;|&nbsp; "The committee <em>are</em> divided on the issue." (British English — members acting individually)</div>
+    </div>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 5 — Indefinite Pronouns</span>
+      <div class="rule-text">Pronouns such as <em>everyone, nobody, each, either, neither, someone, anyone</em> are grammatically singular and always take a singular verb, even when their sense is plural <span class="cite">(Huddleston &amp; Pullum, 2019, p. 140)</span>.</div>
+      <div class="rule-example"><span class="wrong">✗</span> "Everyone <em>have</em> submitted their forms." &nbsp;|&nbsp; <span class="correct">✓</span> "Everyone <em>has</em> submitted their forms."</div>
+    </div>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 6 — Subjects Joined by "and"</span>
+      <div class="rule-text">Two or more subjects joined by <em>and</em> form a compound subject and take a plural verb — unless they refer to the same entity or are treated as a unit <span class="cite">(Biber et al., 2021, p. 189)</span>.</div>
+      <div class="rule-example"><span class="correct">✓</span> "The rector and the registrar <em>have</em> signed the document." &nbsp;|&nbsp; <span class="correct">✓</span> "Bread and butter <em>is</em> her favourite breakfast." (single unit)</div>
+    </div>
+
+    <table class="concord-table" style="margin-top:24px">
+      <thead><tr><th>Common Error Type</th><th>Incorrect ✗</th><th>Correct ✓</th><th>Rule</th></tr></thead>
+      <tbody>
+        <tr><td>Intervening plural noun</td><td class="wrong">"The list of requirements <em>are</em> long."</td><td class="correct">"The list of requirements <em>is</em> long."</td><td>Rule 2</td></tr>
+        <tr><td>Indefinite pronoun</td><td class="wrong">"Each of the students <em>have</em> a handbook."</td><td class="correct">"Each of the students <em>has</em> a handbook."</td><td>Rule 5</td></tr>
+        <tr><td>Collective noun</td><td class="wrong">"The jury <em>are</em> unanimous."</td><td class="correct">"The jury <em>is</em> unanimous."</td><td>Rule 4</td></tr>
+        <tr><td>Neither…nor</td><td class="wrong">"Neither the dean nor the staff <em>are</em> available."</td><td class="correct">"Neither the dean nor the staff <em>are</em> available." ✓ (proximity: staff — plural)</td><td>Rule 3</td></tr>
+        <tr><td>Compound subject</td><td class="wrong">"The lecturer and the student <em>was</em> present."</td><td class="correct">"The lecturer and the student <em>were</em> present."</td><td>Rule 6</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION III -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section III</span>
+      <h2 class="section-title">Pronoun-Antecedent Agreement</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>A second form of concord that demands attention in academic writing is <strong>pronoun-antecedent agreement</strong>. A pronoun must agree in number and person with the noun it refers back to — its <em>antecedent</em> <span class="cite">(Crystal, 2019, p. 115)</span>. Violations of this rule are frequent in student writing and often create ambiguity about who or what is being discussed <span class="cite">(Oladele, 2021, p. 122)</span>.</p>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 7 — Pronoun-Antecedent Number Agreement</span>
+      <div class="rule-text">A singular antecedent takes a singular pronoun; a plural antecedent takes a plural pronoun <span class="cite">(Biber et al., 2021, p. 200)</span>.</div>
+      <div class="rule-example"><span class="wrong">✗</span> "Every student must submit <em>their</em> assignment." (singular antecedent, plural pronoun — grammatically problematic in formal writing) &nbsp;|&nbsp; <span class="correct">✓</span> "Every student must submit <em>his or her</em> assignment." (formal) or restructure: <span class="correct">✓</span> "All students must submit <em>their</em> assignments."</div>
+    </div>
+
+    <div class="rule-block">
+      <span class="rule-num">Rule 8 — Clear Antecedent Reference</span>
+      <div class="rule-text">Every pronoun must have a clear, unambiguous antecedent. When two nouns precede a pronoun, the pronoun's referent must be immediately clear <span class="cite">(Huddleston &amp; Pullum, 2019, p. 145)</span>.</div>
+      <div class="rule-example"><span class="wrong">✗</span> "The dean met the lecturer and <em>he</em> submitted the report." (Who submitted — the dean or the lecturer?) &nbsp;|&nbsp; <span class="correct">✓</span> "The dean met the lecturer, who then submitted the report."</div>
+    </div>
+
+    <div class="golden-rule">
+      <span class="golden-rule-icon">📌</span>
+      <p class="golden-rule-text"><strong>Academic Writing Rule:</strong> When concord is in doubt — particularly with collective nouns or indefinite pronouns — restructure the sentence to avoid the problem entirely. Clarity is always preferable to a technically correct but awkward construction <span class="cite">(Swales &amp; Feak, 2020, p. 58)</span>.</p>
+    </div>
+  </div>
+
+  <!-- SECTION IV: ACTIVITY -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section IV</span>
+      <h2 class="section-title">Practical Activity: Concord Correction Drill</h2>
+      <div class="section-rule"></div>
+    </div>
+    <p>Each sentence below contains a concord error commonly found in undergraduate essays at Nigerian tertiary institutions <span class="cite">(Iwuchukwu, 2020, p. 55)</span>. Identify the error, state which rule is violated, and rewrite the sentence correctly.</p>
+
+    <div class="activity-box">
+      <div class="activity-header">
+        <span style="font-size:1.1rem">✏️</span>
+        <div>
+          <div class="activity-label">Practical Activity</div>
+          <div class="activity-title">Concord Correction Drill — 10 Sentences</div>
+        </div>
+      </div>
+      <div class="activity-body">
+        <p class="activity-instruction">For each sentence: (a) identify the error, (b) name the rule violated, and (c) rewrite the sentence correctly.</p>
+        <ul class="activity-list">
+          <li class="activity-item"><span class="activity-item-num">1</span><div><div class="activity-sent">"The group of researchers <span style="color:#ff8888">are</span> presenting tomorrow."</div><div class="activity-answer">Intervening phrase — what is the actual subject?</div></div><span class="ans-badge">Rule 2</span></li>
+          <li class="activity-item"><span class="activity-item-num">2</span><div><div class="activity-sent">"Everyone in both departments <span style="color:#ff8888">have</span> been informed."</div><div class="activity-answer">Indefinite pronoun — always singular.</div></div><span class="ans-badge">Rule 5</span></li>
+          <li class="activity-item"><span class="activity-item-num">3</span><div><div class="activity-sent">"The committee <span style="color:#ff8888">are</span> unanimous in their verdict."</div><div class="activity-answer">Collective noun acting as one unit.</div></div><span class="ans-badge">Rule 4</span></li>
+          <li class="activity-item"><span class="activity-item-num">4</span><div><div class="activity-sent">"Neither the director nor the assistants <span style="color:#ff8888">was</span> present."</div><div class="activity-answer">Neither…nor — proximity rule applies.</div></div><span class="ans-badge">Rule 3</span></li>
+          <li class="activity-item"><span class="activity-item-num">5</span><div><div class="activity-sent">"The quality of the submitted reports <span style="color:#ff8888">are</span> satisfactory."</div><div class="activity-answer">The subject is "quality" — singular.</div></div><span class="ans-badge">Rule 2</span></li>
+          <li class="activity-item"><span class="activity-item-num">6</span><div><div class="activity-sent">"Each of the candidates <span style="color:#ff8888">were</span> given a form."</div><div class="activity-answer">"Each" is singular — always takes singular verb.</div></div><span class="ans-badge">Rule 5</span></li>
+          <li class="activity-item"><span class="activity-item-num">7</span><div><div class="activity-sent">"The professor and the dean <span style="color:#ff8888">was</span> seated at the high table."</div><div class="activity-answer">Two subjects joined by "and" = compound plural subject.</div></div><span class="ans-badge">Rule 6</span></li>
+          <li class="activity-item"><span class="activity-item-num">8</span><div><div class="activity-sent">"Every student must bring their own stationery to the examination hall."</div><div class="activity-answer">Pronoun-antecedent: restructure for formal academic register.</div></div><span class="ans-badge">Rule 7</span></li>
+          <li class="activity-item"><span class="activity-item-num">9</span><div><div class="activity-sent">"The number of students enrolled in the programme <span style="color:#ff8888">have</span> increased."</div><div class="activity-answer">"The number" is singular; "a number" would be plural.</div></div><span class="ans-badge">Rule 2</span></li>
+          <li class="activity-item"><span class="activity-item-num">10</span><div><div class="activity-sent">"The dean spoke to the registrar and she filed the report."</div><div class="activity-answer">Ambiguous pronoun — who is "she"? Rewrite for clarity.</div></div><span class="ans-badge">Rule 8</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION V: CONCLUSION -->
+  <div class="section-block">
+    <div class="section-heading">
+      <span class="section-num">Section V</span>
+      <h2 class="section-title">Conclusion &amp; Key Takeaway</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="conclusion-box">
+      <p>Concord is not a peripheral grammatical concern — it is the very mechanism by which English signals the logical relationships between subjects and their actions, and between pronouns and the entities they represent. Every violation of concord introduces ambiguity or inaccuracy into a text <span class="cite">(Biber et al., 2021, p. 205)</span>.</p>
+      <br>
+      <p>The eight rules covered in this lecture address the vast majority of concord errors found in Nigerian undergraduate writing. A student who masters these rules — particularly the <strong>intervening phrase rule</strong>, the <strong>collective noun rule</strong>, and the <strong>indefinite pronoun rule</strong> — will eliminate the most persistent source of grammatical error in their academic essays <span class="cite">(Iwuchukwu, 2020, p. 60)</span>.</p>
+    </div>
+  </div>
+
+  <!-- EXAM -->
+  <div class="exam-section">
+    <div class="exam-header">
+      <div><h2>Examination Questions</h2><p>Lecture 2.3 — The Rules of Agreement: Concord</p></div>
+      <span class="exam-total">10 Questions · 20 Marks</span>
+    </div>
+    <div class="exam-body">
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">In the sentence <em>"The list of requirements are extensive,"</em> the error is caused by:</p></div><div class="q-options"><div class="q-option">A. &nbsp;Using a plural verb with a collective noun</div><div class="q-option">B. &nbsp;Allowing an intervening phrase to determine verb number</div><div class="q-option">C. &nbsp;Using a plural indefinite pronoun incorrectly</div><div class="q-option">D. &nbsp;Applying the proximity rule incorrectly</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Correct &amp; Explain</span><p class="q-text">Identify and correct the concord error in each sentence, stating which rule applies: &nbsp;(a) <em>"Each of the departments have submitted their returns."</em> &nbsp; (b) <em>"The jury are divided on the verdict."</em> &nbsp; (c) <em>"Neither the students nor the lecturer were informed."</em></p></div><p class="q-marks">[3 marks — 1 per sentence]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Write Out</span><p class="q-text">State and explain the <em>proximity rule</em> as it applies to either…or and neither…nor constructions. Write two original sentences — one correctly applying the rule with a singular subject closest to the verb, and one with a plural subject closest to the verb.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Multiple Choice</span><p class="q-text">Which sentence demonstrates correct concord?</p></div><div class="q-options"><div class="q-option">A. &nbsp;"Everyone have completed the form."</div><div class="q-option">B. &nbsp;"The committee are unanimous in their decision."</div><div class="q-option">C. &nbsp;"The quality of the submitted essays is high."</div><div class="q-option">D. &nbsp;"The dean and the registrar was present at the meeting."</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Distinguish</span><p class="q-text">Explain the difference between the uses of <em>"the number of"</em> and <em>"a number of"</em> in terms of subject-verb concord. Write one original sentence illustrating each usage correctly.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Multiple Choice</span><p class="q-text">In the sentence <em>"The committee has reached a unanimous decision,"</em> the verb <em>has</em> is singular because:</p></div><div class="q-options"><div class="q-option">A. &nbsp;Collective nouns always take singular verbs in all varieties of English</div><div class="q-option">B. &nbsp;The committee is acting as a single unified body</div><div class="q-option">C. &nbsp;The proximity rule requires a singular verb here</div><div class="q-option">D. &nbsp;The compound subject rule applies</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Write Out</span><p class="q-text">What is pronoun-antecedent agreement? Explain why the sentence <em>"The dean met the lecturer and he submitted the report"</em> is grammatically problematic, and rewrite it correctly.</p></div><p class="q-marks">[2 marks]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Correct</span><p class="q-text">Rewrite the following paragraph, correcting all concord errors: &nbsp;<em>"The team of researchers have submitted their findings. Each of the members were present at the conference. Neither the supervisor nor the assistants was able to attend the final session."</em></p></div><p class="q-marks">[3 marks — 1 per corrected sentence]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following sentences correctly applies the compound-subject rule?</p></div><div class="q-options"><div class="q-option">A. &nbsp;"The rector and the vice-chancellor was present."</div><div class="q-option">B. &nbsp;"The rector and the vice-chancellor were present."</div><div class="q-option">C. &nbsp;"The rector and the vice-chancellor has addressed the students."</div><div class="q-option">D. &nbsp;"The rector and vice-chancellor was addressed."</div></div><p class="q-marks">[1 mark]</p></div>
+
+      <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">In a paragraph of 6–8 sentences, explain why concord errors are described as damaging to the credibility of academic writing. Use specific examples of the error types covered in this lecture to support your argument.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    </div>
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-section">
+    <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+    <div class="ref-list">
+      <div class="ref-item">Biber, D., Johansson, S., Leech, G., Conrad, S., &amp; Finegan, E. (2021). <em>Longman Grammar of Spoken and Written English</em> (2nd ed.). Pearson Longman.</div>
+      <div class="ref-item">Crystal, D. (2019). <em>The Cambridge Encyclopedia of the English Language</em> (3rd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Faraclas, N. (2018). Nigerian Pidgin English and the dynamics of multilingualism. <em>Journal of Pidgin and Creole Languages</em>, 33(1), 1–28.</div>
+      <div class="ref-item">Gass, S. M., &amp; Selinker, L. (2020). <em>Second Language Acquisition: An Introductory Course</em> (5th ed.). Routledge.</div>
+      <div class="ref-item">Huddleston, R., &amp; Pullum, G. K. (2019). <em>A Student's Introduction to English Grammar</em> (2nd ed.). Cambridge University Press.</div>
+      <div class="ref-item">Iwuchukwu, O. (2020). Grammatical interference in the written English of Nigerian undergraduate students. <em>Journal of English as an International Language</em>, 15(1), 44–62.</div>
+      <div class="ref-item">Oladele, A. O. (2021). Word class errors in academic essays of first-year students in Nigerian universities. <em>Nigerian Journal of Language and Literature</em>, 8(2), 115–130.</div>
+      <div class="ref-item">Quirk, R., Greenbaum, S., Leech, G., &amp; Svartvik, J. (2018). <em>A Comprehensive Grammar of the English Language</em> (reprint ed.). Longman.</div>
+      <div class="ref-item">Swales, J. M., &amp; Feak, C. B. (2020). <em>Academic Writing for Graduate Students</em> (4th ed.). University of Michigan Press.</div>
+      <div class="ref-item">Yule, G. (2020). <em>The Study of Language</em> (7th ed.). Cambridge University Press.</div>
+    </div>
+  </div>
+
+  <a class="next-lecture" href="lecture-2-4.html">
+    <div>
+      <div class="next-label">Next Lecture · Module 2</div>
+      <div class="next-title">Lecture 2.4 — Verb Mechanics: Tense, Aspect, and Voice</div>
+      <div class="next-desc">The tense system · Simple, progressive, perfect · Active vs. passive voice</div>
+    </div>
+    <span class="next-arrow">→</span>
+  </a>
+
+  <div class="lecture-nav">
+    <a class="lnav-btn" href="lecture-2-2.html">← Lecture 2.2</a>
+    <a class="lnav-index" href="index.html">Course Index</a>
+    <a class="lnav-btn" href="lecture-2-4.html">Lecture 2.4 →</a>
+  </div>
+
+</div>
+
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>
+  Lecture Series 5: Communication in English · Lecture 2.3 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp;
+  <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>
+  © 2026 Maurice Udom. All rights reserved.
+</footer>
+</body>
+</html>

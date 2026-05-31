@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 5.2: Fallacies and Faulty Reasoning — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-icon{font-size:1.1rem}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'checkmark';content:'\2713';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.78rem}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.82rem}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:14px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:3px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.7;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    /* FALLACY CARDS */
+    .fallacy-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:24px 0;border-left:5px solid #8b1a1a}
+    .fallacy-head{background:#8b1a1a;color:var(--white);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .fallacy-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700}
+    .fallacy-num{background:rgba(255,255,255,.2);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:2px}
+    .fallacy-body{padding:20px 24px}
+    .fallacy-def{font-size:.95rem;color:#2a2016;line-height:1.75;margin-bottom:16px}
+    .fallacy-def strong{color:#8b1a1a}
+    .fallacy-section{margin-bottom:16px}
+    .fallacy-section-label{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--mod);margin-bottom:8px}
+    .fallacy-example{background:var(--cream);border-left:3px solid #8b1a1a;padding:10px 14px;border-radius:0 3px 3px 0;font-style:italic;font-size:.92rem;color:#2a2016;line-height:1.65;margin-bottom:8px}
+    .fallacy-analysis{background:var(--mod-lt);border-left:3px solid var(--mod);padding:10px 14px;border-radius:0 3px 3px 0;font-size:.9rem;color:#2a3a5c;line-height:1.65;margin-bottom:8px}
+    .fallacy-avoid{background:#fef8e7;border-left:3px solid var(--gold-dk);padding:10px 14px;border-radius:0 3px 3px 0;font-size:.9rem;color:#7a5c00;line-height:1.65}
+    .fallacy-avoid strong{color:var(--gold-dk)}
+    /* TWO COLS */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+    .info-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .info-card-head{padding:12px 18px;font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--white)}
+    .ic-formal{background:var(--mod)}.ic-informal{background:#2a6640}
+    .info-card-body{padding:14px 16px;font-size:.9rem;color:#2a2016;line-height:1.65}
+    /* ACTIVITY */
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.9rem;color:#c0b8ac;margin-bottom:18px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:10px}
+    .activity-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:12px 14px}
+    .a-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .a-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.65}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body,.two-col{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+<div class="topbar"><a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;&middot;&nbsp; <a href="index.html">Communication in English</a></div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 5 &nbsp;&middot;&nbsp; Lecture 2</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Fallacies and Faulty Reasoning</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip"><strong>Duration:</strong>&nbsp;35 Minutes</span>
+    <span class="meta-chip"><strong>Module:</strong>&nbsp;Logical Reasoning</span>
+    <span class="meta-chip"><strong>Level:</strong>&nbsp;Tertiary</span>
+    <span class="meta-chip"><strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<div class="overview-block">
+  <div class="overview-header"><span class="overview-header-icon">&#128203;</span><span class="overview-header-title">Lecture Overview</span></div>
+  <div class="overview-body">
+    <div class="overview-col">
+      <div class="overview-col-label">Learning Objectives</div>
+      <ul class="overview-objectives">
+        <li>Define a logical fallacy and explain why fallacies occur</li>
+        <li>Distinguish formal from informal fallacies</li>
+        <li>Identify, define, and analyse 10 major fallacies with examples</li>
+        <li>Detect fallacies in academic, political, and everyday discourse</li>
+        <li>Avoid fallacies in academic writing and argumentation</li>
+      </ul>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Topics Covered</div>
+      <ol class="overview-topics">
+        <li>What Is a Logical Fallacy?</li>
+        <li>Formal vs. Informal Fallacies</li>
+        <li>Ad Hominem</li>
+        <li>Straw Man</li>
+        <li>False Dichotomy</li>
+        <li>Hasty Generalisation</li>
+        <li>Appeal to Authority</li>
+        <li>Slippery Slope</li>
+        <li>Circular Reasoning (Begging the Question)</li>
+        <li>Red Herring</li>
+        <li>Post Hoc Ergo Propter Hoc</li>
+        <li>Bandwagon (Ad Populum)</li>
+      </ol>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Prerequisite</div>
+      <p class="overview-prereq">Lecture 5.1 must be completed before this lecture. A solid understanding of what constitutes a valid argument and sound reasoning is essential for understanding what makes a fallacy an error.</p>
+      <a class="prereq-link" href="lecture-5-1.html">&#8592; Lecture 5.1 &mdash; Introduction to Logic</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION I: WHAT IS A FALLACY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section I</span><h2 class="section-title">What Is a Logical Fallacy?</h2><div class="section-rule"></div></div>
+
+  <p>A <strong>logical fallacy</strong> is an error in reasoning that renders an argument invalid, weak, or misleading. Fallacies are not simply false statements &mdash; they are <em>flawed patterns of reasoning</em> in which the conclusion does not follow logically from the premises, or in which the premises themselves are introduced in a deceptive or irrelevant way <span class="cite">(Engel, 2020, p. 4)</span>.</p>
+
+  <p>Fallacies are extremely common in everyday life. They appear in political speeches, advertising campaigns, social media arguments, courtroom debates, and &mdash; unfortunately &mdash; in academic writing when students reason carelessly. Learning to identify fallacies is one of the most practically valuable skills a university student can develop, because it protects against manipulation and strengthens one's own arguments <span class="cite">(Bassham et al., 2020, p. 140)</span>.</p>
+
+  <p>Consider this example before we begin:</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Why Fallacies Are Dangerous</div>
+    <dl>
+      <dt>Fallacies Sound Convincing</dt>
+      <dd>The most dangerous feature of a fallacy is not that it is obviously wrong &mdash; it is that it often sounds reasonable at first hearing. A fallacy exploits psychological tendencies, emotional responses, or cognitive shortcuts to make a bad argument appear persuasive. This is why critical thinkers must learn to slow down and examine the <em>structure</em> of arguments, not merely their surface plausibility <span class="cite">(Engel, 2020, p. 6)</span>.</dd>
+      <dt>Definition</dt>
+      <dd>A logical fallacy is an argument that contains an error in reasoning &mdash; either in its formal structure (the way premises and conclusion are connected) or in the relevance, acceptability, or sufficiency of the premises (informal fallacies). In both cases, the fallacy means that the conclusion is not properly supported by the reasoning offered <span class="cite">(Walton, 2020, p. 18)</span>.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION II: FORMAL VS INFORMAL -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section II</span><h2 class="section-title">Formal vs. Informal Fallacies</h2><div class="section-rule"></div></div>
+
+  <p>Fallacies are classified into two broad categories. Understanding this classification clarifies where exactly the reasoning goes wrong in each case <span class="cite">(Hurley &amp; Watson, 2018, p. 114)</span>.</p>
+
+  <div class="two-col">
+    <div class="info-card">
+      <div class="info-card-head ic-formal">Formal Fallacies</div>
+      <div class="info-card-body">
+        <p><strong>Definition:</strong> A formal fallacy is an error in the <em>logical structure</em> of a deductive argument. The flaw can be detected simply by examining the form of the argument &mdash; without knowing whether the premises are true or false.</p>
+        <p style="margin-top:10px"><strong>Key feature:</strong> The conclusion does not follow from the premises because the argument violates the rules of deductive logic.</p>
+        <p style="margin-top:10px"><strong>Example &mdash; Affirming the Consequent:</strong> If P then Q. Q is true. Therefore P is true. This structure is always invalid regardless of the content &mdash; wet ground does not prove it rained.</p>
+        <p style="margin-top:10px"><strong>Covered in:</strong> Lecture 5.1 under invalid argument patterns.</p>
+      </div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-head ic-informal">Informal Fallacies</div>
+      <div class="info-card-body">
+        <p><strong>Definition:</strong> An informal fallacy is an error that arises from the <em>content, context, or use of language</em> in an argument &mdash; not from its formal structure alone. The premises may be structured correctly but are irrelevant, misleading, ambiguous, or insufficient to support the conclusion <span class="cite">(Hurley &amp; Watson, 2018, p. 115)</span>.</p>
+        <p style="margin-top:10px"><strong>Key feature:</strong> To detect an informal fallacy, you must examine <em>what</em> is being said, not just <em>how</em> it is structured.</p>
+        <p style="margin-top:10px"><strong>Divided into:</strong> Fallacies of relevance (premises irrelevant to conclusion), fallacies of weak induction (premises insufficient), and fallacies of presumption, ambiguity, and grammatical analogy.</p>
+        <p style="margin-top:10px"><strong>Focus of this lecture:</strong> The 10 most important informal fallacies in academic and public discourse.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">&#128204;</span>
+    <p class="golden-rule-text"><strong>The Test for a Fallacy:</strong> When evaluating an argument for fallacies, ask: (1) Are the premises relevant to the conclusion, or do they introduce something irrelevant? (2) Are the premises sufficient to support the conclusion, or does the argument leap beyond what the evidence supports? (3) Are the premises acceptable &mdash; or do they assume what they are trying to prove? If any of these conditions fail, a fallacy may be present <span class="cite">(Govier, 2020, p. 88)</span>.</p>
+  </div>
+</div>
+
+<!-- THE 10 FALLACIES -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section III</span><h2 class="section-title">The Ten Major Fallacies &mdash; Full Analysis</h2><div class="section-rule"></div></div>
+
+  <p>The following ten fallacies are among the most commonly encountered in academic writing, political discourse, everyday conversation, and the media. Each is presented with a full definition, a clear Nigerian or academic example, a logical analysis of exactly why it fails, and guidance on how to avoid it in your own arguments <span class="cite">(Engel, 2020, p. 20)</span>.</p>
+
+  <!-- FALLACY 1: AD HOMINEM -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 1 &mdash; Ad Hominem (Attack on the Person)</div>
+      <span class="fallacy-num">Latin: "Against the Person"</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> The ad hominem fallacy occurs when someone attacks or dismisses an argument by criticising the <em>person making it</em> rather than addressing the argument itself. Instead of engaging with the evidence or reasoning provided, the attacker redirects attention to the character, motives, personal history, or circumstances of the speaker. The Latin name means "against the person" <span class="cite">(Hurley &amp; Watson, 2018, p. 128)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Political Context</div>
+        <div class="fallacy-example">"Senator Adamu has proposed a new policy to reduce poverty through agricultural subsidies. But why should we listen to him? He has been accused of financial misconduct and he himself comes from a wealthy family that has never experienced poverty."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The argument does not address a single aspect of the agricultural subsidy proposal. It attacks the senator's personal history and background instead. Even if the senator is wealthy or has faced accusations, those facts are irrelevant to whether the policy would actually reduce poverty. The policy must be evaluated on its own merits &mdash; its economic logic, its evidence base, its implementation feasibility &mdash; not on the character of the person proposing it. The senator's biography cannot make a good policy bad or a bad policy good.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Academic Context</div>
+        <div class="fallacy-example">"Dr. Eze argues that the university's new examination policy is unfair to students. But everyone knows she has a conflict with the Dean, so of course she would say that."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> Even if Dr. Eze has a personal conflict with the Dean, that fact does not address the substance of her argument about the examination policy. Her motives for making the argument are entirely separate from whether her argument is correct. Even people with personal grievances can make valid arguments &mdash; and even people with no apparent motivation can make poor ones. The argument about the policy must stand or fall on its own logical and evidential merits.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Varieties of Ad Hominem</div>
+        <div class="fallacy-analysis">There are three common forms: (1) <strong>Abusive Ad Hominem</strong> &mdash; directly insulting the person (calling them stupid, corrupt, or dishonest). (2) <strong>Circumstantial Ad Hominem</strong> &mdash; claiming the person's argument is biased because of their circumstances or self-interest (as in the Dean example). (3) <strong>Tu Quoque (You Too)</strong> &mdash; dismissing a person's argument by pointing out that they themselves do not follow the principle they are advocating. Example: "You tell me to exercise regularly, but you never exercise yourself!" &mdash; even if true, this does not disprove the health benefits of exercise <span class="cite">(Walton, 2020, p. 34)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> Always address the <em>argument</em>, not the person making it. In academic writing, you engage with the ideas, evidence, and reasoning in a text &mdash; never with the personality, reputation, or personal history of the author. If you disagree with a scholar, show specifically why their evidence is insufficient, their reasoning flawed, or their conclusions overstated. Personal characteristics are simply irrelevant to academic evaluation of arguments.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 2: STRAW MAN -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 2 &mdash; Straw Man</div>
+      <span class="fallacy-num">Misrepresentation Fallacy</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> The straw man fallacy occurs when someone misrepresents, distorts, or exaggerates an opponent's argument to make it easier to refute &mdash; and then attacks the distorted version rather than the actual argument. The name comes from the idea of constructing a "straw man" (a flimsy imitation) and then knocking it down instead of engaging with the real, stronger opponent <span class="cite">(Engel, 2020, p. 54)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Education Policy Debate</div>
+        <div class="fallacy-example">Person A: "I think students should have some voice in how assessment methods are designed at our university." Person B: "So you're saying students should just grade themselves and do whatever they want? That would make a mockery of academic standards."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> Person A said nothing about students grading themselves or abandoning academic standards. They only suggested that students should have <em>some voice</em> in how assessment methods are designed &mdash; a reasonable request that many universities accommodate through student representation. Person B has created a wild distortion of Person A's actual position, made it look extreme and absurd, and then attacked <em>that distortion</em>. Person A's actual argument has not been engaged with at all. This is the straw man: attack what was never said.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Political Discourse</div>
+        <div class="fallacy-example">Activist: "The government should reduce expenditure on arms and redirect some of those funds toward healthcare." Opponent: "These people want Nigeria to have no defence at all &mdash; they want our enemies to walk in and take over the country!"</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The activist proposed reducing some arms spending and redirecting it to healthcare &mdash; not abolishing Nigeria's entire defence capability. "Reducing expenditure" is dramatically different from "having no defence at all." The opponent has grossly distorted the position to make it sound treasonous, then attacked the distortion. Every debate, essay, and conversation requires engaging with what someone <em>actually said</em> &mdash; not a cartoon version of it <span class="cite">(Walton, 2020, p. 40)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> When discussing an author's argument, always represent it as accurately and charitably as possible &mdash; present the <em>strongest</em> version of the opposing view before engaging with it. This is called the principle of charity. Read directly from the source. Quote precisely. If you disagree, engage with the actual argument, not a weakened version of it. Writing that misrepresents other scholars damages your academic credibility and is a form of intellectual dishonesty.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 3: FALSE DICHOTOMY -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 3 &mdash; False Dichotomy (Either/Or Fallacy)</div>
+      <span class="fallacy-num">Also: False Dilemma, Black-and-White Thinking</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> The false dichotomy fallacy (also called the false dilemma) occurs when an argument presents only two options as if they were the only possibilities, when in reality there are additional options that have been ignored or suppressed. It forces an artificial binary choice between two extremes, eliminating the middle ground <span class="cite">(Copi et al., 2019, p. 178)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Academic Debate</div>
+        <div class="fallacy-example">"You either fully support our university's new examination policy or you are against academic excellence. Which is it?"</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> This presents only two positions: full support for the policy, or opposition to academic excellence. But there are many other possibilities: a person could support academic excellence while believing this particular policy is a poor way to achieve it. A person could support excellence while also wanting the policy revised, modified, partially implemented, or replaced with a better alternative. The argument eliminates all middle ground and nuance to force agreement through a false choice.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Nigerian Political Discourse</div>
+        <div class="fallacy-example">"If you do not vote for our party in the next election, then you want Nigeria to collapse. There is no middle ground."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> This ignores the full spectrum of political choices: voting for a different party, voting for an independent candidate, advocating for electoral reform, supporting civil society oversight, or believing that a different solution entirely is needed. The argument illegitimately collapses all of these options into one: vote for us, or the country collapses. Real-world situations almost always have more than two options <span class="cite">(Bassham et al., 2020, p. 160)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> Before constructing any argument that says "either X or Y," ask yourself: are these genuinely the only two options? In almost every academic debate, there is a spectrum of positions. Acknowledge the full range of views. If you are presenting a binary, make sure it is genuinely exhaustive &mdash; that you have demonstrated there truly are no other alternatives before forcing a choice.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 4: HASTY GENERALISATION -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 4 &mdash; Hasty Generalisation</div>
+      <span class="fallacy-num">Also: Sweeping Generalisation, Overgeneralisation</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> A hasty generalisation occurs when a broad general conclusion is drawn from a sample that is too small, too limited, or unrepresentative of the population being described. The arguer sees a few examples and incorrectly concludes that those examples represent the whole <span class="cite">(Hurley &amp; Watson, 2018, p. 152)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Everyday Student Context</div>
+        <div class="fallacy-example">"I met three students from Department X and all three were arrogant and unfriendly. The students in that department are clearly arrogant and unfriendly people."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> Three individuals cannot represent an entire department of potentially hundreds of students. The three students encountered may have been having bad days, may be atypical of their peers, or may have been selected by chance from a narrow social circle. The conclusion &mdash; that <em>all</em> students in the department share these qualities &mdash; goes dramatically beyond what three encounters can establish. This is the essential error of the hasty generalisation: the evidence is too small and potentially unrepresentative to support the broad conclusion drawn.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Research and Academic Writing</div>
+        <div class="fallacy-example">"A study of 15 students in one classroom found that those who studied with background music performed better on a quiz. Therefore, listening to music while studying improves academic performance."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> Fifteen students in one classroom is far too small a sample to generalise to all students. The students may share unique characteristics (all music lovers, all habitual background-noise studiers, all studying the same easy material). The results may not replicate across different subjects, ages, music types, or study conditions. Academic research requires large, diverse, representative samples before such generalisations can be made. This is why peer-reviewed studies go through rigorous methodology review <span class="cite">(Govier, 2020, p. 105)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> Never draw conclusions that outrun your evidence. If you have two or three examples, your conclusion should be hedged: "This suggests...", "It appears that...", "In some cases..." Do not write "This proves that all..." or "This shows that every..." unless your evidence is comprehensive and representative. Academic writing demands proportionate claims: strong evidence justifies strong conclusions; limited evidence justifies tentative conclusions only.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 5: APPEAL TO AUTHORITY -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 5 &mdash; Appeal to Inappropriate Authority</div>
+      <span class="fallacy-num">Latin: Ad Verecundiam</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> This fallacy occurs when an argument cites an authority figure as evidence for a claim, but that authority is not actually an expert in the relevant field, or when authority is invoked to settle a question that legitimate experts disagree about. Note that citing genuine experts is <em>not</em> a fallacy &mdash; the fallacy arises only when the authority cited is inappropriate, biased, or cited as if they settle a genuine debate <span class="cite">(Engel, 2020, p. 68)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Celebrity Endorsement</div>
+        <div class="fallacy-example">"A popular Nollywood actor says this herbal supplement cures high blood pressure. It must work &mdash; he's a very successful person."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The actor's success in the film industry gives them no expertise whatsoever in pharmacology, medicine, or human physiology. A celebrity's popularity does not confer scientific knowledge. The claim about the herbal supplement must be evaluated through clinical trials, peer-reviewed medical research, and assessment by qualified physicians &mdash; not through the endorsement of a famous face. Advertising routinely exploits this fallacy because celebrity association is psychologically persuasive even when logically irrelevant.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Academic Context</div>
+        <div class="fallacy-example">"Professor Nwosu, a respected economist, has said that climate change is exaggerated. Therefore, we can disregard the scientific consensus on global warming."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> Professor Nwosu's expertise is in economics, not climate science. Even if he is an excellent economist, his opinion on climate science carries no special authority beyond that of any educated layperson. Furthermore, the scientific consensus on climate change is established by tens of thousands of climate scientists worldwide &mdash; the opinion of one economist in a different field cannot outweigh that body of evidence. Genuine appeal to authority requires citing experts who are genuinely expert in the <em>relevant field</em>, where a clear consensus exists <span class="cite">(Bassham et al., 2020, p. 168)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> When citing authorities, ensure they are genuine experts in the specific field being discussed. Check that the majority of experts in that field hold the same view. Never use a single expert opinion to dismiss a well-established consensus. Always distinguish between fields &mdash; a great engineer's opinion on economics is just an informed opinion, not expert testimony. In academic writing, rely on peer-reviewed sources in the relevant discipline.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 6: SLIPPERY SLOPE -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 6 &mdash; Slippery Slope</div>
+      <span class="fallacy-num">Also: Camel's Nose, Domino Fallacy</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> The slippery slope fallacy occurs when an argument asserts that one event will inevitably lead to a chain of increasingly extreme and undesirable consequences, without providing adequate evidence for each step in that chain. It assumes, without justification, that a moderate first step will necessarily lead to catastrophic final outcomes <span class="cite">(Walton, 2020, p. 58)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; University Policy</div>
+        <div class="fallacy-example">"If we allow students to submit assignments one day late without penalty, next they will want a week's extension. Then they will want to write examinations at home. Eventually, students will stop attending lectures altogether, and academic standards will collapse completely."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The argument assumes that each step in this chain will inevitably follow from the previous one, but it provides no evidence for these causal links. A one-day grace period does not logically or necessarily lead to home examinations or abandoned lectures. Each step in the chain would require a separate decision, separate policy, and separate circumstances &mdash; none of which are established by the first step. The argument uses fear of an imagined worst case to oppose a reasonable and modest proposal.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Social Policy</div>
+        <div class="fallacy-example">"If Nigeria legalises same-sex civil partnerships, next people will want to marry animals, then children. Our entire moral and social structure will disintegrate within a generation."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The argument leaps from one specific legal change to a series of increasingly extreme and logically disconnected outcomes. The argument provides no evidence whatsoever for why civil partnership legislation would lead to marriages with animals or children &mdash; claims that involve entirely different legal, ethical, and biological categories. Countries that have changed partnership laws have not experienced these predicted consequences. The fallacy manufactures fear through an unjustified chain of "what if" scenarios <span class="cite">(Copi et al., 2019, p. 182)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> If you argue that one thing will lead to another, you must provide specific evidence for each causal link in the chain. Do not assume that the first step makes later steps inevitable. Acknowledge that intervening decisions, safeguards, or circumstances exist that could stop the chain at any point. Legitimate slippery slope arguments do exist &mdash; but only when each causal step is individually evidenced and justified.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 7: CIRCULAR REASONING -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 7 &mdash; Circular Reasoning (Begging the Question)</div>
+      <span class="fallacy-num">Latin: Petitio Principii</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> Circular reasoning, or begging the question, occurs when the conclusion of an argument is used as one of its premises &mdash; either explicitly or in a disguised form. The argument goes in a circle: it assumes as true the very thing it is trying to prove, providing no real evidence or reasoning beyond restating the conclusion <span class="cite">(Hurley &amp; Watson, 2018, p. 160)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Simple and Clear</div>
+        <div class="fallacy-example">"The Bible is the word of God because the Bible says it is the word of God."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The argument is perfectly circular. The premise (the Bible says it is God's word) and the conclusion (the Bible is God's word) are logically identical. To use a document to prove its own divine authority is to assume what you are trying to establish. For someone who already accepts the Bible's authority, no argument is needed. For someone who doesn't, this argument provides nothing they would accept as evidence. A genuine argument for biblical authority would need to draw on external historical, archaeological, or philosophical evidence.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Academic and Institutional Context</div>
+        <div class="fallacy-example">"This textbook must be reliable because it says in the preface that it is a reliable and authoritative source on the subject."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> A book's claim about its own reliability is not evidence of its reliability. The same reasoning could be applied to any book, reliable or not. Reliability must be established by external criteria: the credentials of the author, the rigour of the research methodology, the accuracy of claims when checked against independent sources, peer review, and citation in other credible scholarship. A book does not become reliable merely by claiming to be so <span class="cite">(Govier, 2020, p. 116)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Disguised Circular Reasoning</div>
+        <div class="fallacy-analysis">Circular reasoning is often harder to detect when the premise and conclusion are worded differently. Example: "Wealthy people deserve their success because successful people have always worked hard and earned what they have." This uses "deserve success" and "earned what they have" as if they are different, but they are the same claim rephrased. The argument is: wealthy people deserve success because wealthy people deserve success.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> Never use a claim as evidence for itself, even when the two are phrased differently. Your premises must be logically distinct from and genuinely supportive of your conclusion. If you find yourself writing a paragraph that seems to simply restate the thesis in different words without providing new evidence or reasoning, you are likely engaging in circular reasoning. Each body paragraph must add something genuinely new to the argument.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 8: RED HERRING -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 8 &mdash; Red Herring</div>
+      <span class="fallacy-num">Also: Ignoratio Elenchi, Missing the Point</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> The red herring fallacy occurs when an argument introduces an irrelevant topic or piece of information to distract the audience from the actual issue being discussed. Rather than engaging with the real argument, the speaker or writer redirects attention to something tangentially related but logically irrelevant &mdash; deliberately or accidentally steering the discussion off course <span class="cite">(Engel, 2020, p. 86)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Political Accountability</div>
+        <div class="fallacy-example">Journalist: "Your government has not built any new schools despite promises to improve education. How do you respond?" Politician: "I am glad you raised the topic of education. Education is close to my heart. In fact, I was the first person in my family to attend university, and that experience shaped everything I care about in public service. Let me tell you about my humble beginnings..."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The journalist asked a direct, specific question about unfulfilled school construction promises. The politician responded with an emotional personal story about their own education &mdash; which is entirely irrelevant to whether schools were built as promised. The personal story may be true and touching, but it does not address the accountability question at all. The politician has introduced a red herring: a sympathetic distraction designed to change the emotional atmosphere and avoid the uncomfortable question entirely.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; University Life</div>
+        <div class="fallacy-example">Student: "The grading for this assignment seems inconsistent. I answered the same questions as my classmate and received a much lower mark." Lecturer: "You know, what concerns me more is your attendance record this semester. You missed three lectures in October."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The student raised a specific, legitimate concern about the consistency of grading. The lecturer responded by raising a completely separate issue &mdash; attendance &mdash; which is irrelevant to whether the grading of this particular assignment was fair. Even if the student's attendance was poor, that does not address or resolve the question of grading consistency. The attendance issue is a red herring: it may be a valid concern in its own right, but it belongs in a separate conversation <span class="cite">(Walton, 2020, p. 64)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> Every paragraph and every sentence in an academic essay must be relevant to the thesis. Before including any piece of information, ask: does this directly support my argument, or does it merely surround it? Red herrings often appear when a writer is unsure how to support a claim and instead writes around it. Discipline yourself to eliminate anything that does not directly advance the argument you are making.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 9: POST HOC -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 9 &mdash; Post Hoc Ergo Propter Hoc</div>
+      <span class="fallacy-num">Latin: "After this, therefore because of this"</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> The post hoc fallacy occurs when someone concludes that because Event B followed Event A in time, Event A must have <em>caused</em> Event B. It confuses <em>correlation</em> (two things happening together or in sequence) with <em>causation</em> (one thing actually causing the other). The full Latin phrase is <em>Post hoc ergo propter hoc</em> &mdash; "after this, therefore because of this" <span class="cite">(Copi et al., 2019, p. 186)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Superstition and Daily Life</div>
+        <div class="fallacy-example">"I wore my blue shirt on the day of my examination and I scored 90%. I will always wear my blue shirt for examinations because it brings me good results."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The score of 90% followed the wearing of the blue shirt in time, but there is no causal mechanism by which a shirt's colour could affect examination performance. The actual causes of the good result are almost certainly the student's preparation, the difficulty level of the paper, their mental state on that day, and their understanding of the subject matter. The blue shirt happened to be present when these conditions were satisfied &mdash; but "present at the same time as" is radically different from "the cause of." This is also the basis of most superstitious beliefs worldwide.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Economic and Political Reasoning</div>
+        <div class="fallacy-example">"The economy improved significantly in the two years after Governor Adebayo took office. Therefore, Governor Adebayo's policies are responsible for the economic improvement."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> Economic improvements that follow a governor's assumption of office may be caused by many factors unrelated to their policies: global oil price increases, rainfall patterns that improved agriculture, policies inherited from the previous administration finally taking effect, international investment decisions made years earlier, or simple economic cycles. To attribute the improvement to the current governor's policies without isolating their specific contribution and excluding other explanations is to commit the post hoc fallacy. In social research, establishing causation requires controlled analysis &mdash; not mere temporal sequence <span class="cite">(Bassham et al., 2020, p. 172)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> Never write "because A happened before B, A caused B." To claim causation in academic writing, you must: (1) establish that A preceded B, (2) show that A and B are correlated, (3) provide a plausible causal mechanism, and (4) eliminate alternative explanations. The words "correlation," "associated with," and "may have contributed to" are appropriate when you can show a relationship but cannot establish full causation. The words "caused" and "led to" require much stronger evidence.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FALLACY 10: BANDWAGON -->
+  <div class="fallacy-card">
+    <div class="fallacy-head">
+      <div class="fallacy-name">&#10006; Fallacy 10 &mdash; Bandwagon / Ad Populum</div>
+      <span class="fallacy-num">Latin: "Appeal to the People"</span>
+    </div>
+    <div class="fallacy-body">
+      <p class="fallacy-def"><strong>Definition:</strong> The bandwagon fallacy (formally called <em>ad populum</em>, meaning "appeal to the people") occurs when an argument claims that something must be true, good, or right simply because many people believe it or do it. The popularity of a belief is offered as if it were evidence for its truth or value <span class="cite">(Hurley &amp; Watson, 2018, p. 168)</span>.</p>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 1 &mdash; Consumer Behaviour</div>
+        <div class="fallacy-example">"Over 10 million Nigerians use Miracle Herb Supplement every day. It must be effective. Join the millions who have already discovered the secret!"</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> The number of people using a product tells us absolutely nothing about whether it works. Ten million people could be buying a supplement that has no pharmacological effect whatsoever, perhaps because its advertising is compelling, because it was endorsed by a celebrity, or because social pressure makes it fashionable. Historically, millions of people have simultaneously believed in things that turned out to be false or harmful. Truth and effectiveness are not determined by headcount. The supplement's effectiveness must be established by clinical trials, not by sales figures.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Example 2 &mdash; Academic and Social Pressure</div>
+        <div class="fallacy-example">"Everyone in this department knows that Professor X's grading is unfair. Since everyone thinks so, it must be true."</div>
+        <div class="fallacy-analysis"><strong>Why it is a fallacy:</strong> Even if every student in the department holds this belief, the truth of the claim must be established by examining actual grading evidence &mdash; comparing marked scripts against the marking scheme, analysing grade distributions, reviewing moderation procedures. Widespread belief among those who may have an interest in perceiving unfairness (students who received low grades) is not objective evidence. Throughout history, entire populations have simultaneously held beliefs that were demonstrably false <span class="cite">(Engel, 2020, p. 98)</span>.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">Why Bandwagon Is So Common</div>
+        <div class="fallacy-analysis">Humans are social animals with a deep evolutionary tendency to conform to group behaviour. The bandwagon fallacy exploits this psychological tendency. Phrases like "everyone knows that...", "it is widely accepted that...", "most people believe...", "the majority agrees..." are often signals that a bandwagon argument is being made. In academic contexts, you may cite a consensus among experts in a field &mdash; but this is different from citing popular opinion or majority belief among the general public.</div>
+      </div>
+
+      <div class="fallacy-section">
+        <div class="fallacy-section-label">How to Avoid It in Academic Writing</div>
+        <div class="fallacy-avoid"><strong>Rule:</strong> Never use "everyone believes" or "most people think" as evidence for a factual claim. Evidence must be evaluated on its own merits, not on the number of believers. When citing consensus, ensure it is a consensus among relevant <em>experts</em> in the relevant <em>field</em>, not general public opinion. And always remember: once, the entire world believed the earth was flat. Popularity has never been a reliable guide to truth.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section IV</span><h2 class="section-title">Practical Activity &mdash; Fallacy Identification</h2><div class="section-rule"></div></div>
+  <p>Apply your knowledge of all ten fallacies to the following exercises. For each item, identify the fallacy present, explain why it is a fallacy, and rewrite the argument to make it logically sound <span class="cite">(Bassham et al., 2020, p. 185)</span>.</p>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <span style="font-size:1.1rem">&#128269;</span>
+      <div><div class="activity-label">Practical Activity &mdash; Section IV</div><div class="activity-title">Identify the Fallacy &mdash; 10 Exercises</div></div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-instruction">For each argument: (a) identify the fallacy by name, (b) explain precisely why it is a fallacy, and (c) where possible, rewrite the argument to remove the fallacy.</p>
+      <ul class="activity-list">
+        <li class="activity-item"><span class="a-num">1</span><span class="a-text"><em>"You cannot trust Emeka's research on poverty. He grew up in a wealthy family and has never experienced poverty himself."</em> &mdash; Name the fallacy. What should we evaluate instead?</span></li>
+        <li class="activity-item"><span class="a-num">2</span><span class="a-text"><em>"The activist says we should reduce car usage in Lagos. So apparently she wants us all to walk barefoot to our offices and abandon modern life entirely."</em> &mdash; What has been distorted? Reconstruct the actual argument.</span></li>
+        <li class="activity-item"><span class="a-num">3</span><span class="a-text"><em>"You are either with us in building a greater Nigeria, or you are an enemy of progress."</em> &mdash; How many options are being suppressed here? Name three.</span></li>
+        <li class="activity-item"><span class="a-num">4</span><span class="a-text"><em>"I asked five of my friends if they liked the new cafeteria menu and they all hated it. The new menu is a failure."</em> &mdash; What is wrong with the sample? What would a valid conclusion sound like?</span></li>
+        <li class="activity-item"><span class="a-num">5</span><span class="a-text"><em>"It rained the day after our student president made his speech calling for better campus infrastructure. His speech clearly brought the rain."</em> &mdash; Confuses what with what?</span></li>
+        <li class="activity-item"><span class="a-num">6</span><span class="a-text"><em>"Nine out of ten students at this university buy this brand of energy drink. It must be the best energy drink available."</em> &mdash; What does popularity actually tell us?</span></li>
+        <li class="activity-item"><span class="a-num">7</span><span class="a-text"><em>"If we allow students to use calculators in mathematics examinations, soon they will not know how to do any mathematics at all, and our engineering and science graduates will be incompetent."</em> &mdash; What causal evidence is missing?</span></li>
+        <li class="activity-item"><span class="a-num">8</span><span class="a-text"><em>"Academic writing is important because it is a crucial part of academic life."</em> &mdash; Identify the circular structure. Rewrite it with a genuine reason.</span></li>
+        <li class="activity-item"><span class="a-num">9</span><span class="a-text"><em>"A famous footballer says this investment scheme guarantees returns of 50% monthly. Since he is very successful, I should invest."</em> &mdash; Why is this authority irrelevant?</span></li>
+        <li class="activity-item"><span class="a-num">10</span><span class="a-text">Write your own original argument that contains <strong>two different fallacies</strong>. Exchange with a classmate and identify each other's fallacies. Then rewrite both arguments to be fallacy-free.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Conclusion</span><h2 class="section-title">Key Takeaway</h2><div class="section-rule"></div></div>
+  <div class="conclusion-box">
+    <p>Fallacies are not rare curiosities found only in philosophy textbooks &mdash; they are the daily currency of political speech, advertising, social media, and unfortunately, weak academic writing. The student who can identify an ad hominem, recognise a straw man, and resist a bandwagon argument is equipped with one of the most practically powerful intellectual skills available <span class="cite">(Engel, 2020, p. 110)</span>.</p>
+    <br>
+    <p>The core principle unifying all ten fallacies is the same: the <strong>conclusion does not follow from the evidence</strong>, or the evidence is <strong>irrelevant, insufficient, or dishonestly framed</strong>. Avoiding fallacies in academic writing means ensuring that every premise you offer is directly relevant to your conclusion, that your evidence is sufficient to support the claims you make, and that you engage with opposing views honestly rather than distorting them. Lecture 5.3 extends this to the broader discipline of <strong>critical thinking</strong> &mdash; the capacity to evaluate all claims, including your own, with rigour and intellectual honesty <span class="cite">(Bassham et al., 2020, p. 190)</span>.</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div class="exam-section">
+  <div class="exam-header">
+    <div><h2>Examination Questions</h2><p>Lecture 5.2 &mdash; Fallacies and Faulty Reasoning</p></div>
+    <span class="exam-total">10 Questions &middot; 30 Marks</span>
+  </div>
+  <div class="exam-body">
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best defines a logical fallacy?</p></div><div class="q-options"><div class="q-option">A. A statement that is factually false</div><div class="q-option">B. An error in reasoning in which the conclusion does not follow properly from the premises or in which premises are irrelevant, insufficient, or misleading</div><div class="q-option">C. An argument that uses difficult language to confuse the reader</div><div class="q-option">D. A disagreement between two people with different opinions</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Identify &amp; Explain</span><p class="q-text">Identify the fallacy in the following argument, name it, and explain in full why it fails logically: <em>"You should not accept Dr. Obi's argument about corruption in the education sector. She was once suspended from her previous university job."</em></p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-type" style="display:inline">Which fallacy is committed when a speaker distorts an opponent's argument to make it easier to refute?</p></div><div class="q-options"><div class="q-option">A. Post Hoc</div><div class="q-option">B. Straw Man</div><div class="q-option">C. Red Herring</div><div class="q-option">D. Ad Populum</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Identify &amp; Rewrite</span><p class="q-text">Identify the fallacy in this argument and rewrite it to make it logically sound: <em>"Ninety percent of students in this country use social media daily. Social media must therefore be beneficial for academic learning."</em></p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">The Post Hoc Ergo Propter Hoc fallacy involves which of the following errors?</p></div><div class="q-options"><div class="q-option">A. Attacking the character of the person making an argument</div><div class="q-option">B. Concluding that because B followed A in time, A must have caused B</div><div class="q-option">C. Using only two options when many others exist</div><div class="q-option">D. Drawing a broad conclusion from a small and unrepresentative sample</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Analyse</span><p class="q-text">Distinguish between an ad hominem fallacy and a red herring fallacy. For each, write one original example drawn from Nigerian university or public life, and explain what makes each argument logically defective.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is the best example of circular reasoning?</p></div><div class="q-options"><div class="q-option">A. "Everyone in my class believes this book is accurate, so it must be."</div><div class="q-option">B. "This policy is good because good policies always produce good results, and this policy produces good results."</div><div class="q-option">C. "The minister's speech was too long. Besides, inflation has risen this year."</div><div class="q-option">D. "If we change the grading scale, students will eventually refuse to write any examinations."</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Write Out</span><p class="q-text">Select any THREE fallacies from those covered in this lecture. For each: (a) provide the full definition, (b) give one original example from academic or Nigerian public life, and (c) explain precisely why the reasoning fails. Each fallacy must be clearly labelled.</p></div><p class="q-marks">[6 marks &mdash; 2 per fallacy]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Multiple Choice</span><p class="q-text">A false dichotomy fallacy occurs when:</p></div><div class="q-options"><div class="q-option">A. A person's argument is dismissed because of their personal characteristics</div><div class="q-option">B. An argument presents only two options as if they were the only possibilities, ignoring other alternatives</div><div class="q-option">C. An argument draws a broad conclusion from too small a sample</div><div class="q-option">D. An argument uses an irrelevant issue to distract from the main topic</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Essay</span><p class="q-text">Write a short essay (250&ndash;350 words) explaining why logical fallacies are particularly dangerous in academic writing and public discourse. In your essay, discuss any two specific fallacies, explain why they are difficult to detect, and describe what academic writers should do to ensure their arguments are fallacy-free.</p></div><p class="q-marks">[9 marks]</p></div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="references-section">
+  <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+  <div class="ref-list">
+    <div class="ref-item">Bassham, G., Irwin, W., Nardone, H., &amp; Wallace, J. (2020). <em>Critical Thinking: A Student&#39;s Introduction</em> (6th ed.). McGraw-Hill.</div>
+    <div class="ref-item">Bennett, B. (2019). <em>Logically Fallacious: The Ultimate Collection of Over 300 Logical Fallacies</em>. eBookIt.com.</div>
+    <div class="ref-item">Copi, I. M., Cohen, C., &amp; McMahon, K. (2019). <em>Introduction to Logic</em> (15th ed.). Routledge.</div>
+    <div class="ref-item">Curtis, G. N. (2019). The fallacy files: A taxonomy of logical fallacies in public discourse. <em>Informal Logic</em>, 39(2), 128&ndash;155.</div>
+    <div class="ref-item">Engel, S. M. (2020). <em>With Good Reason: An Introduction to Informal Fallacies</em> (7th ed.). Bedford/St. Martin&#39;s.</div>
+    <div class="ref-item">Govier, T. (2020). <em>A Practical Study of Argument</em> (8th ed.). Cengage Learning.</div>
+    <div class="ref-item">Hurley, P. J., &amp; Watson, L. (2018). <em>A Concise Introduction to Logic</em> (13th ed.). Cengage Learning.</div>
+    <div class="ref-item">Ikenna, C. O. (2022). Fallacious reasoning in Nigerian political discourse: A critical analysis. <em>Journal of Language and Communication Studies</em>, 8(1), 44&ndash;62.</div>
+    <div class="ref-item">Tindale, C. W. (2018). <em>Fallacies and Argument Appraisal</em> (2nd ed.). Cambridge University Press.</div>
+    <div class="ref-item">Walton, D. (2020). <em>Informal Logic: A Pragmatic Approach</em> (3rd ed.). Cambridge University Press.</div>
+  </div>
+</div>
+
+<a class="next-lecture" href="lecture-5-3.html">
+  <div>
+    <div class="next-label">Next Lecture &middot; Module 5</div>
+    <div class="next-title">Lecture 5.3 &mdash; Critical Thinking and Analytical Reasoning</div>
+    <div class="next-desc">Elements of critical thinking &middot; Evaluating evidence &middot; Fact vs opinion vs inference &middot; Academic application</div>
+  </div>
+  <span class="next-arrow">&rarr;</span>
+</a>
+<div class="lecture-nav">
+  <a class="lnav-btn" href="lecture-5-1.html">&#8592; Lecture 5.1</a>
+  <a class="lnav-index" href="index.html">Course Index</a>
+  <a class="lnav-btn" href="lecture-5-3.html">Lecture 5.3 &rarr;</a>
+</div>
+
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>Communication in English &middot; Lecture 5.2 &nbsp;&middot;&nbsp; Dr. Maurice Udom &nbsp;&middot;&nbsp; <a href="index.html">Course Index</a> &nbsp;&middot;&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>&copy; 2026 Maurice Udom. All rights reserved.</footer>
+</body>
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture 5.1: Introduction to Logic and Arguments — Lecture Series 5: Communication in English</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1a1208;--parchment:#faf6ef;--cream:#f3ede2;--gold:#FFB800;--gold-dk:#b8860b;--muted:#6b5f4e;--rule:#d6cbb8;--mod:#1F3864;--mod-lt:#e8edf5;--white:#ffffff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--parchment);color:var(--ink);font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.8}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+    .topbar{background:var(--ink);color:var(--gold);text-align:center;padding:10px 24px;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase}
+    .topbar a{color:var(--gold);text-decoration:none}.topbar a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:100;background:var(--mod);border-bottom:3px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:60px;box-shadow:0 2px 16px rgba(26,18,8,.2)}
+    .nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--white);text-decoration:none}
+    .nav-brand span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{color:rgba(255,255,255,.72);text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-links .nav-index{background:var(--gold);color:var(--mod)!important;padding:6px 16px;border-radius:2px;font-size:.75rem;font-weight:700}
+    .nav-links .nav-index:hover{background:#ffc933}
+    .lecture-header{background:var(--mod);color:var(--white);padding:72px 48px 60px;text-align:center;position:relative;overflow:hidden}
+    .lecture-header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+    .lec-module-tag{font-size:1rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:24px}
+    .lec-course-title{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;color:var(--white);line-height:1.06;margin-bottom:22px}
+    .lec-sub-title{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.8vw,1.6rem);font-weight:700;color:var(--white);margin-bottom:32px}
+    .lec-rule{width:72px;height:3px;background:var(--gold);margin:0 auto 30px}
+    .lecture-meta{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+    .meta-chip{font-size:.8rem;color:rgba(255,255,255,.6)}
+    .meta-chip strong{color:var(--white)}
+    .content-wrap{max-width:820px;margin:0 auto;padding:56px 48px 80px;position:relative;z-index:1}
+    .overview-block{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin-bottom:48px}
+    .overview-header{background:var(--mod);padding:14px 24px;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px}
+    .overview-header-icon{font-size:1.1rem}
+    .overview-header-title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .overview-body{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0}
+    .overview-col{padding:18px 20px;border-right:1px solid var(--rule)}
+    .overview-col:last-child{border-right:none}
+    .overview-col-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:10px}
+    .overview-objectives{list-style:none;display:grid;gap:7px}
+    .overview-objectives li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:14px;position:relative}
+    .overview-objectives li::before{content:'checkmark';content:'✓';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.78rem}
+    .overview-topics{list-style:none;display:grid;gap:6px;counter-reset:tc}
+    .overview-topics li{font-size:.86rem;color:#2a2016;line-height:1.5;padding-left:22px;position:relative;counter-increment:tc}
+    .overview-topics li::before{content:counter(tc)'.';position:absolute;left:0;color:var(--mod);font-weight:700;font-size:.82rem}
+    .overview-prereq{font-size:.86rem;color:#2a2016;line-height:1.6}
+    .prereq-link{display:inline-block;margin-top:10px;font-size:.78rem;color:var(--mod);text-decoration:none;font-weight:600;border-bottom:1px solid rgba(31,56,100,.3)}
+    .section-block{margin-bottom:52px}
+    .section-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .section-num{background:var(--mod);color:var(--white);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+    .section-title{font-family:'Playfair Display',serif;font-size:1.22rem;font-weight:700;color:var(--mod)}
+    .section-rule{flex:1;height:1px;background:var(--rule)}
+    p{margin-bottom:18px;color:#2a2016}p:last-child{margin-bottom:0}
+    .cite{color:var(--mod);font-style:italic;font-size:.9em}
+    h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--mod);margin:28px 0 14px}
+    .key-concept{background:var(--mod-lt);border-left:4px solid var(--mod);border-radius:0 4px 4px 0;padding:20px 24px;margin:28px 0}
+    .key-concept-label{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mod);font-weight:700;margin-bottom:12px}
+    .key-concept dl{display:grid;gap:14px}
+    .key-concept dt{font-weight:700;color:var(--mod);font-family:'Playfair Display',serif;font-size:.95rem;margin-bottom:3px}
+    .key-concept dd{color:#2a3a5c;font-size:.91rem;line-height:1.7;margin-left:0;padding-left:14px;border-left:2px solid rgba(31,56,100,.2)}
+    .golden-rule{background:#fef8e7;border:1px solid #e8d090;border-left:4px solid var(--gold-dk);border-radius:0 4px 4px 0;padding:18px 24px;margin:24px 0;display:flex;gap:14px;align-items:flex-start}
+    .golden-rule-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+    .golden-rule-text{font-family:'Playfair Display',serif;font-size:1rem;color:#7a5c00;line-height:1.6}
+    .golden-rule-text strong{color:var(--gold-dk)}
+    .arg-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden;margin:20px 0}
+    .arg-card-head{padding:12px 20px;font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--white)}
+    .arg-valid .arg-card-head{background:#1a5c2a}
+    .arg-invalid .arg-card-head{background:#8b1a1a}
+    .arg-neutral .arg-card-head{background:var(--mod)}
+    .arg-card-body{padding:18px 22px;font-size:.92rem;color:#2a2016;line-height:1.75}
+    .premise{padding:7px 12px;background:var(--cream);border-left:3px solid var(--rule);margin:5px 0;font-style:italic;border-radius:0 3px 3px 0}
+    .conclusion{padding:7px 12px;background:#fef8e7;border-left:3px solid var(--gold-dk);margin:5px 0 12px;font-style:italic;border-radius:0 3px 3px 0;font-weight:600}
+    .verdict{font-size:.88rem;background:var(--cream);border:1px solid var(--rule);padding:12px 16px;border-radius:3px;margin-top:12px;line-height:1.7}
+    .verdict strong{color:var(--mod)}
+    .compare-table{width:100%;border-collapse:collapse;margin:22px 0;border:1px solid var(--rule)}
+    .compare-table th{background:var(--mod);color:var(--white);padding:11px 16px;font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;text-align:left}
+    .compare-table td{padding:11px 16px;border-bottom:1px solid var(--rule);font-size:.9rem;vertical-align:top;line-height:1.65}
+    .compare-table tr:last-child td{border-bottom:none}
+    .compare-table tr:nth-child(even) td{background:#faf6ef}
+    .lbl{font-weight:700;color:var(--mod)}
+    .di-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+    .di-card{background:var(--white);border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+    .di-head{padding:13px 18px;font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--white)}
+    .di-ded{background:var(--mod)}.di-ind{background:#2a6640}
+    .di-body{padding:16px 18px;font-size:.91rem;color:#2a2016;line-height:1.7}
+    .di-body .ex{background:var(--cream);border-left:3px solid var(--rule);padding:8px 12px;margin-top:10px;font-style:italic;font-size:.88rem;border-radius:0 3px 3px 0;line-height:1.65}
+    .validity-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+    .vg-card{border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--white)}
+    .vg-head{padding:12px 18px;font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;color:var(--white)}
+    .vg-sound{background:#1a5c2a}.vg-unsound{background:#7a4a00}.vg-invalid{background:#8b1a1a}.vg-summary{background:var(--mod)}
+    .vg-body{padding:14px 16px;font-size:.88rem;color:#2a2016;line-height:1.65}
+    .vg-body em{display:block;margin-top:10px;padding:9px 12px;background:var(--cream);border-left:3px solid var(--rule);border-radius:0 3px 3px 0;font-size:.86rem;line-height:1.6}
+    .activity-box{background:var(--ink);color:var(--parchment);border-radius:4px;overflow:hidden;margin:32px 0}
+    .activity-header{padding:14px 24px;background:rgba(255,184,0,.18);border-bottom:1px solid rgba(255,184,0,.25);display:flex;align-items:center;gap:10px}
+    .activity-label{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+    .activity-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white)}
+    .activity-body{padding:24px}
+    .activity-instruction{font-size:.9rem;color:#c0b8ac;margin-bottom:18px;line-height:1.65}
+    .activity-list{list-style:none;display:grid;gap:10px}
+    .activity-item{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:3px;padding:12px 14px}
+    .a-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+    .a-text{font-size:.9rem;color:rgba(255,255,255,.82);line-height:1.65}
+    .conclusion-box{background:var(--cream);border:1px solid var(--rule);border-top:3px solid var(--gold-dk);padding:28px 32px;margin-top:8px}
+    .conclusion-box p{font-size:1rem;line-height:1.8}
+    .conclusion-box strong{color:var(--mod)}
+    .exam-section{background:var(--mod);color:var(--white);border-radius:4px;overflow:hidden;margin:56px 0 0}
+    .exam-header{padding:20px 28px;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .exam-header h2{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:4px}
+    .exam-header p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0}
+    .exam-total{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:2px;white-space:nowrap}
+    .exam-body{padding:28px;display:grid;gap:18px}
+    .exam-q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:3px;padding:18px 22px}
+    .exam-q-top{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+    .q-num{background:var(--gold);color:var(--mod);font-family:'Playfair Display',serif;font-size:.78rem;font-weight:900;padding:2px 9px;border-radius:2px;flex-shrink:0;margin-top:2px}
+    .q-type{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(255,184,0,.35);padding:2px 8px;border-radius:2px;flex-shrink:0;margin-top:3px}
+    .q-text{font-size:.95rem;color:var(--white);line-height:1.65}
+    .q-marks{font-size:.74rem;color:rgba(255,255,255,.38);margin-top:8px;text-align:right;font-style:italic}
+    .q-options{margin-top:10px;display:grid;gap:6px}
+    .q-option{font-size:.89rem;color:rgba(255,255,255,.72);padding-left:4px}
+    .references-section{margin-top:56px}
+    .ref-heading{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+    .ref-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--mod)}
+    .ref-rule{flex:1;height:1px;background:var(--rule)}
+    .ref-list{display:grid;gap:12px}
+    .ref-item{padding:14px 18px;background:var(--white);border:1px solid var(--rule);border-left:3px solid var(--mod);font-size:.86rem;line-height:1.7;color:#2a2016}
+    .next-lecture{background:var(--mod);color:var(--white);border-radius:4px;padding:24px 28px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:20px;text-decoration:none;border-top:3px solid var(--gold);transition:background .2s,transform .2s}
+    .next-lecture:hover{background:#2a4a80;transform:translateX(4px)}
+    .next-label{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .next-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700}
+    .next-desc{font-size:.82rem;color:rgba(255,255,255,.52);margin-top:4px}
+    .next-arrow{font-size:1.6rem;color:var(--gold);flex-shrink:0}
+    .lecture-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--rule);margin-top:48px}
+    .lnav-btn{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-size:.82rem;transition:color .2s}
+    .lnav-btn:hover{color:var(--gold-dk)}
+    .lnav-btn.disabled{opacity:.35;pointer-events:none}
+    .lnav-index{background:var(--mod);color:var(--white)!important;padding:8px 20px;border-radius:2px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:background .2s}
+    .lnav-index:hover{background:#2a4a80}
+    footer{background:#100e08;color:#6b6358;text-align:center;padding:28px 48px;font-size:.78rem;letter-spacing:.05em}
+    footer a{color:var(--gold);text-decoration:none}
+    @media(max-width:768px){nav{padding:0 20px}.nav-links li:not(:last-child){display:none}.lecture-header{padding:48px 20px 40px}.content-wrap{padding:36px 20px 56px}.overview-body,.di-grid,.validity-grid{grid-template-columns:1fr}.overview-col{border-right:none;border-bottom:1px solid var(--rule)}.overview-col:last-child{border-bottom:none}.next-lecture{flex-direction:column;align-items:flex-start}.exam-body{padding:16px}}
+  </style>
+</head>
+<body>
+<div class="topbar"><a href="https://mauriceudom.org/lectures.html">All Lecture Series</a> &nbsp;·&nbsp; <a href="index.html">Communication in English</a></div>
+<nav>
+  <a href="https://mauriceudom.org" class="nav-brand">Maurice <span>Udom</span></a>
+  <ul class="nav-links">
+    <li><a href="https://mauriceudom.org/lectures.html">All Series</a></li>
+    <li><a href="index.html">Course Index</a></li>
+    <li><a href="index.html" class="nav-index">Back to Index</a></li>
+  </ul>
+</nav>
+
+<div class="lecture-header">
+  <span class="lec-module-tag">Module 5 &nbsp;·&nbsp; Lecture 1</span>
+  <h1 class="lec-course-title">Lecture Series 5: Communication in English</h1>
+  <h2 class="lec-sub-title">Introduction to Logic and Arguments</h2>
+  <div class="lec-rule"></div>
+  <div class="lecture-meta">
+    <span class="meta-chip"><strong>Duration:</strong>&nbsp;30 Minutes</span>
+    <span class="meta-chip"><strong>Module:</strong>&nbsp;Logical Reasoning</span>
+    <span class="meta-chip"><strong>Level:</strong>&nbsp;Tertiary</span>
+    <span class="meta-chip"><strong>Status:</strong>&nbsp;Live</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+<div class="overview-block">
+  <div class="overview-header"><span class="overview-header-icon">📋</span><span class="overview-header-title">Lecture Overview</span></div>
+  <div class="overview-body">
+    <div class="overview-col">
+      <div class="overview-col-label">Learning Objectives</div>
+      <ul class="overview-objectives">
+        <li>Define logic and explain its role in academic communication</li>
+        <li>Distinguish formal from informal logic</li>
+        <li>Identify the components of an argument</li>
+        <li>Distinguish deductive from inductive reasoning with examples</li>
+        <li>Evaluate arguments as valid/invalid and sound/unsound</li>
+      </ul>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Topics Covered</div>
+      <ol class="overview-topics">
+        <li>What Is Logic?</li>
+        <li>Formal vs. Informal Logic</li>
+        <li>What Is an Argument?</li>
+        <li>Claims, Premises, and Conclusions</li>
+        <li>Deductive vs. Inductive Reasoning</li>
+        <li>Valid and Invalid Arguments</li>
+        <li>Sound and Unsound Arguments</li>
+        <li>Practical Activity</li>
+      </ol>
+    </div>
+    <div class="overview-col">
+      <div class="overview-col-label">Prerequisite</div>
+      <p class="overview-prereq">Module 4 (Writing Activities) should be completed first. The analytical writing skills from Module 4 directly support logical reasoning work in this module.</p>
+      <a class="prereq-link" href="lecture-4-4.html">← Lecture 4.4 — CV and Application Writing</a>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION I -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section I</span><h2 class="section-title">What Is Logic?</h2><div class="section-rule"></div></div>
+
+  <p>Logic is the systematic study of the principles of correct reasoning. It provides the rules and tools that allow us to distinguish good arguments from bad ones — to determine whether a conclusion genuinely follows from the evidence and reasons offered in support of it <span class="cite">(Hurley &amp; Watson, 2018, p. 3)</span>. Logic is not simply about being right; it is about <em>reasoning correctly</em> — a different and more demanding standard.</p>
+
+  <p>In academic communication, logical reasoning is indispensable. Every essay, every report, every presentation, and every debate ultimately rests on a set of claims supported by reasons. The ability to construct, evaluate, and communicate those chains of reasoning is what separates competent academic thinkers from those who merely assert opinions <span class="cite">(Bassham et al., 2020, p. 1)</span>.</p>
+
+  <p>Consider a simple example of why logic matters in everyday communication:</p>
+
+  <div class="arg-card arg-neutral">
+    <div class="arg-card-head">🔍 Why Logic Matters — Everyday Example</div>
+    <div class="arg-card-body">
+      <p>A student tells her lecturer: <em>"I deserve a higher grade because I worked very hard."</em></p>
+      <p style="margin-top:12px">This contains a <strong>claim</strong> (I deserve a higher grade) and a <strong>reason</strong> (I worked very hard). But is this a good argument? Logic asks: does working hard <em>guarantee</em> a higher grade? No — effort and achievement are correlated but not identical. The reason offered does not logically support the conclusion.</p>
+      <p style="margin-top:10px">A stronger argument: <em>"I deserve a higher grade because questions 3, 5, and 7 were answered correctly and demonstrate mastery of the core concepts, yet they were marked below what the marking scheme indicates."</em> This provides specific, verifiable evidence that directly supports the claim.</p>
+      <div class="verdict"><strong>The lesson:</strong> Logic teaches us to ask — does the reason actually <em>support</em> the conclusion, or merely accompany it?</div>
+    </div>
+  </div>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Key Concept</div>
+    <dl>
+      <dt>Logic</dt>
+      <dd>The systematic study of the principles and rules of correct reasoning. Logic provides the standards by which we evaluate whether conclusions follow from the reasons and evidence offered in their support <span class="cite">(Hurley &amp; Watson, 2018, p. 3)</span>.</dd>
+      <dt>Why Logic Matters in Academic Writing</dt>
+      <dd>Every academic essay is ultimately a logical argument — it makes a claim (the thesis) and supports it with reasons (body paragraphs). A student who understands logic constructs stronger arguments, identifies weaknesses in their own reasoning, evaluates the arguments of others critically, and avoids the thinking errors (fallacies) that weaken academic work <span class="cite">(Bassham et al., 2020, p. 5)</span>.</dd>
+    </dl>
+  </div>
+</div>
+
+<!-- SECTION II -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section II</span><h2 class="section-title">Formal Logic vs. Informal Logic</h2><div class="section-rule"></div></div>
+
+  <p>Logic is broadly divided into two branches. Understanding which branch applies to a given situation is essential for analysing arguments correctly <span class="cite">(Groarke &amp; Tindale, 2019, p. 10)</span>.</p>
+
+  <div class="di-grid">
+    <div class="di-card">
+      <div class="di-head di-ded">Formal Logic</div>
+      <div class="di-body">
+        <p><strong>Definition:</strong> Formal logic studies the <em>structure</em> or <em>form</em> of arguments using symbolic notation and mathematical rules. It asks: regardless of what the argument is about, does the conclusion follow necessarily from the structure of the reasoning?</p>
+        <p style="margin-top:10px"><strong>Focus:</strong> The form of the argument, not its content. An argument can be formally valid even if its premises are false — what matters is whether the logical structure is correct.</p>
+        <p style="margin-top:10px"><strong>Used in:</strong> Mathematics, philosophy, computer science, and formal proof systems.</p>
+        <div class="ex">Symbolic example: If P then Q. P is true. Therefore, Q is true. (Modus Ponens — a valid formal structure)</div>
+      </div>
+    </div>
+    <div class="di-card">
+      <div class="di-head di-ind">Informal Logic</div>
+      <div class="di-body">
+        <p><strong>Definition:</strong> Informal logic evaluates arguments as they appear in everyday language — in speeches, essays, debates, and conversations. It focuses on the <em>content, context, and quality</em> of reasoning, not just its abstract structure <span class="cite">(Groarke &amp; Tindale, 2019, p. 12)</span>.</p>
+        <p style="margin-top:10px"><strong>Focus:</strong> Whether the reasons given actually support the conclusion in a meaningful, relevant, and sufficient way.</p>
+        <p style="margin-top:10px"><strong>Used in:</strong> Academic writing, debate, law, journalism, everyday communication.</p>
+        <div class="ex">Example: "The government should invest in education because educated citizens are more productive, earn higher incomes, and contribute more to economic growth." — evaluated by the relevance and quality of its reasons.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">📌</span>
+    <p class="golden-rule-text"><strong>For This Course:</strong> This module focuses primarily on <strong>informal logic</strong> — the reasoning used in academic writing and everyday discourse. This is directly relevant to Communication in English and to your development as an academic writer and critical thinker <span class="cite">(Groarke &amp; Tindale, 2019, p. 14)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION III -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section III</span><h2 class="section-title">What Is an Argument?</h2><div class="section-rule"></div></div>
+
+  <p>In logic, <strong>argument</strong> does not mean a quarrel or dispute — it has a precise technical meaning. An argument is a set of statements in which one statement (the <strong>conclusion</strong>) is claimed to follow from, or be supported by, one or more other statements (the <strong>premises</strong>) <span class="cite">(Hurley &amp; Watson, 2018, p. 14)</span>.</p>
+
+  <p>Not everything that looks like reasoning is an argument. A description, an expression of emotion, a list of facts, or a question — none of these are arguments. An argument requires two things: a <strong>claim</strong> being made (conclusion) and <strong>reasons</strong> offered to support it (premises).</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">The Three Components of Every Argument</div>
+    <dl>
+      <dt>Claim / Conclusion</dt>
+      <dd>The statement the argument is trying to prove. In academic writing, the thesis statement is the main conclusion of the entire essay. Signal words for conclusions: <em>therefore, thus, hence, it follows that, consequently, so, this shows that, we can conclude that.</em></dd>
+      <dt>Premises</dt>
+      <dd>The statements offered as evidence or reasons for accepting the conclusion. In academic essays, body paragraphs contain the premises. Signal words for premises: <em>because, since, given that, for, as, the reason is, in view of the fact that, evidence shows that.</em></dd>
+      <dt>Inference</dt>
+      <dd>The logical connection between the premises and conclusion — the reasoning step that claims the premises lead to the conclusion. Evaluating the strength of this inference is the central task of logical analysis <span class="cite">(Hurley &amp; Watson, 2018, p. 16)</span>.</dd>
+    </dl>
+  </div>
+
+  <h3>Identifying Arguments — Worked Examples</h3>
+
+  <div class="arg-card arg-valid">
+    <div class="arg-card-head">Example 1 — A Clear Argument</div>
+    <div class="arg-card-body">
+      <p><em>"Students who read regularly perform significantly better in examinations. Adaeze reads for at least one hour every day. Therefore, Adaeze is likely to perform well in her examinations."</em></p>
+      <div class="premise"><strong>Premise 1:</strong> Students who read regularly perform significantly better in examinations.</div>
+      <div class="premise"><strong>Premise 2:</strong> Adaeze reads for at least one hour every day.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> Therefore, Adaeze is likely to perform well in her examinations.</div>
+      <div class="verdict"><strong>Analysis:</strong> This is a clear argument — two premises support a conclusion. The word <em>therefore</em> signals the conclusion. The inference is reasonable, though not guaranteed, since examination performance depends on multiple factors.</div>
+    </div>
+  </div>
+
+  <div class="arg-card arg-invalid">
+    <div class="arg-card-head">Example 2 — Not an Argument (Description Only)</div>
+    <div class="arg-card-body">
+      <p><em>"The university library opens at 8am and closes at 10pm. It has a collection of over 50,000 books and provides free internet access to students."</em></p>
+      <div class="verdict"><strong>Analysis:</strong> This is <strong>not an argument</strong> — it is a description. There is no conclusion being drawn, no claim being made, and no inference from one statement to another. Logic applies only to arguments, not to descriptions, questions, or simple statements of fact.</div>
+    </div>
+  </div>
+
+  <div class="arg-card arg-neutral">
+    <div class="arg-card-head">Example 3 — An Academic Argument</div>
+    <div class="arg-card-body">
+      <p><em>"The government should make university education free. Research shows that countries with free tertiary education have higher social mobility, stronger economies, and more innovative workforces. Nigeria's current tuition fees place university out of reach for millions of qualified students from low-income backgrounds. Free education would therefore expand opportunity and strengthen national development."</em></p>
+      <div class="premise"><strong>Premise 1:</strong> Countries with free tertiary education have higher social mobility, stronger economies, and more innovative workforces.</div>
+      <div class="premise"><strong>Premise 2:</strong> Nigeria's tuition fees currently exclude millions of qualified low-income students.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> The government should make university education free.</div>
+      <div class="verdict"><strong>Analysis:</strong> A well-structured academic argument. Notice how this mirrors the essay structure from Module 4 — thesis (conclusion) supported by body paragraph evidence (premises). This is precisely why Module 5 follows Module 4.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION IV -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section IV</span><h2 class="section-title">Deductive vs. Inductive Reasoning</h2><div class="section-rule"></div></div>
+
+  <p>All arguments fall into one of two broad categories depending on the type of reasoning they use: <strong>deductive</strong> or <strong>inductive</strong>. The difference lies in what the premises claim to do for the conclusion <span class="cite">(Copi et al., 2019, p. 28)</span>.</p>
+
+  <div class="di-grid">
+    <div class="di-card">
+      <div class="di-head di-ded">Deductive Reasoning</div>
+      <div class="di-body">
+        <p><strong>Definition:</strong> In a deductive argument, the premises are claimed to <em>guarantee</em> the conclusion. If the premises are true and the argument is valid, the conclusion <em>must</em> be true — it cannot possibly be false. Deductive arguments move from <strong>general principles to specific conclusions</strong> <span class="cite">(Copi et al., 2019, p. 29)</span>.</p>
+        <div class="ex"><strong>Classic Example (Syllogism):</strong><br>Premise 1 (General): All human beings are mortal.<br>Premise 2 (Specific): Socrates is a human being.<br>Conclusion: Therefore, Socrates is mortal.<br><br>If both premises are true, the conclusion cannot possibly be false.</div>
+        <div class="ex" style="margin-top:10px"><strong>Nigerian Example:</strong><br>P1: All students at University of Uyo must pay the acceptance fee before registration.<br>P2: Emeka is a student at University of Uyo.<br>Conclusion: Therefore, Emeka must pay his acceptance fee before registration.</div>
+      </div>
+    </div>
+    <div class="di-card">
+      <div class="di-head di-ind">Inductive Reasoning</div>
+      <div class="di-body">
+        <p><strong>Definition:</strong> In an inductive argument, the premises are claimed to make the conclusion <em>probable</em> or <em>likely</em> — but not certain. Even if all premises are true, the conclusion might still be false. Inductive arguments move from <strong>specific observations to general conclusions</strong> <span class="cite">(Copi et al., 2019, p. 31)</span>.</p>
+        <div class="ex"><strong>Example:</strong><br>P1: The first 100 students surveyed prefer morning lectures.<br>P2: The survey included all six faculties.<br>Conclusion: Therefore, most students at this university probably prefer morning lectures.<br><br>The conclusion is likely but not certain — other students may disagree.</div>
+        <div class="ex" style="margin-top:10px"><strong>Nigerian Example:</strong><br>P1: It has rained heavily every March for the past ten years in Calabar.<br>Conclusion: It will probably rain heavily in Calabar this March.</div>
+      </div>
+    </div>
+  </div>
+
+  <table class="compare-table">
+    <thead><tr><th>Feature</th><th>Deductive Reasoning</th><th>Inductive Reasoning</th></tr></thead>
+    <tbody>
+      <tr><td><span class="lbl">Claim</span></td><td>Conclusion is <em>guaranteed</em> by premises</td><td>Conclusion is <em>probable</em> given premises</td></tr>
+      <tr><td><span class="lbl">Direction</span></td><td>General → Specific</td><td>Specific → General</td></tr>
+      <tr><td><span class="lbl">Evaluation</span></td><td>Valid or Invalid</td><td>Strong or Weak</td></tr>
+      <tr><td><span class="lbl">If premises true…</span></td><td>Conclusion <em>must</em> be true</td><td>Conclusion is <em>likely</em> to be true</td></tr>
+      <tr><td><span class="lbl">Common use</span></td><td>Mathematics, law, philosophy</td><td>Science, research, everyday reasoning</td></tr>
+    </tbody>
+  </table>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">📌</span>
+    <p class="golden-rule-text"><strong>Academic Writing Note:</strong> Most arguments in academic essays are <strong>inductive</strong> — they use evidence to support probable conclusions. The strength of an academic argument therefore depends on the quality and quantity of evidence, not just its presence <span class="cite">(Copi et al., 2019, p. 34)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION V: VALID AND INVALID — DETAILED -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section V</span><h2 class="section-title">Valid and Invalid Arguments — Full Analysis</h2><div class="section-rule"></div></div>
+
+  <p>Validity and invalidity apply specifically to <strong>deductive arguments</strong>. They concern the <em>logical relationship</em> between the premises and the conclusion — not whether the premises are actually true or false. This is perhaps the most important and most frequently misunderstood distinction in introductory logic <span class="cite">(Hurley &amp; Watson, 2018, p. 44)</span>.</p>
+
+  <div class="key-concept">
+    <div class="key-concept-label">Validity and Invalidity — Definitions</div>
+    <dl>
+      <dt>Valid Argument</dt>
+      <dd>A deductive argument is <strong>valid</strong> if and only if it is <em>impossible</em> for all the premises to be true and the conclusion to be false at the same time. If the premises were true, the conclusion would have to be true. Validity is about logical structure — it does not require the premises to actually be true <span class="cite">(Hurley &amp; Watson, 2018, p. 44)</span>.</dd>
+      <dt>Invalid Argument</dt>
+      <dd>A deductive argument is <strong>invalid</strong> if it is <em>possible</em> for all the premises to be true and yet the conclusion to be false. The reasoning has a structural flaw — the conclusion does not follow logically from the premises, even if the premises happen to be true <span class="cite">(Hurley &amp; Watson, 2018, p. 46)</span>.</dd>
+    </dl>
+  </div>
+
+  <h3>Valid Arguments — Three Fully Analysed Examples</h3>
+
+  <div class="arg-card arg-valid">
+    <div class="arg-card-head">✅ Valid Argument 1 — Classic Categorical Syllogism</div>
+    <div class="arg-card-body">
+      <div class="premise"><strong>Premise 1:</strong> All mammals are warm-blooded animals.</div>
+      <div class="premise"><strong>Premise 2:</strong> All whales are mammals.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> Therefore, all whales are warm-blooded animals.</div>
+      <div class="verdict"><strong>Why It Is Valid:</strong> If both premises are true, it is absolutely impossible for the conclusion to be false. The logical structure is: All A are B. All C are A. Therefore, All C are B. This is airtight — the conclusion is contained within the premises. Notice also that both premises are actually true, making this not only valid but <em>sound</em> (explained in Section VI).<br><br><strong>Validity Test:</strong> Ask — is there any possible world in which both premises could be true and yet the conclusion false? No. Therefore, the argument is valid.</div>
+    </div>
+  </div>
+
+  <div class="arg-card arg-valid">
+    <div class="arg-card-head">✅ Valid Argument 2 — Valid Despite Completely False Premises</div>
+    <div class="arg-card-body">
+      <p style="font-size:.9rem;color:var(--muted);font-style:italic">This example is crucial — it demonstrates that validity is purely about structure, not truth.</p>
+      <div class="premise"><strong>Premise 1:</strong> All lecturers in Nigerian universities are paid in gold coins.</div>
+      <div class="premise"><strong>Premise 2:</strong> Dr. Udom is a lecturer in a Nigerian university.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> Therefore, Dr. Udom is paid in gold coins.</div>
+      <div class="verdict"><strong>Why It Is Valid (But Not Sound):</strong> This argument is <strong>logically valid</strong> — if we assumed both premises were true, the conclusion would necessarily follow. The structure is perfect: All A are B. Dr. Udom is A. Therefore, Dr. Udom is B.<br><br>However, Premise 1 is obviously false — lecturers are not paid in gold coins. This means the argument is valid but <strong>unsound</strong>. <em>This is the key insight: validity tells us only about logical structure. It says nothing about whether the premises reflect reality.</em> A valid argument can still produce a false conclusion if built on false premises — which is why we need soundness.</div>
+    </div>
+  </div>
+
+  <div class="arg-card arg-valid">
+    <div class="arg-card-head">✅ Valid Argument 3 — Nigerian Academic Context</div>
+    <div class="arg-card-body">
+      <div class="premise"><strong>Premise 1:</strong> Every student who fails to sit the final examination will receive an F grade.</div>
+      <div class="premise"><strong>Premise 2:</strong> Chisom did not sit the final examination.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> Therefore, Chisom will receive an F grade.</div>
+      <div class="verdict"><strong>Why It Is Valid:</strong> If both premises are true, the conclusion must follow — there is no possible scenario in which both premises are true and Chisom does not receive an F. Structure: All who do X receive Y. Chisom did X. Therefore, Chisom receives Y. This is valid. Whether it is <em>actually</em> true depends on whether the premises are true in the real world — which is a question of soundness.</div>
+    </div>
+  </div>
+
+  <h3>Invalid Arguments — Three Fully Analysed Examples</h3>
+
+  <div class="arg-card arg-invalid">
+    <div class="arg-card-head">❌ Invalid Argument 1 — Affirming the Consequent</div>
+    <div class="arg-card-body">
+      <div class="premise"><strong>Premise 1:</strong> If it is raining, then the ground is wet.</div>
+      <div class="premise"><strong>Premise 2:</strong> The ground is wet.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> Therefore, it is raining.</div>
+      <div class="verdict"><strong>Why It Is Invalid:</strong> Even if both premises are true, the conclusion does not necessarily follow. The ground could be wet for many other reasons — someone washed a car, a pipe burst, dew formed, or a water truck passed by. This is the formal fallacy called <em>Affirming the Consequent</em>.<br><br><strong>The structural flaw:</strong> Just because the <em>consequence</em> of rain (wet ground) is present does not mean the <em>cause</em> (rain) must have occurred. There is a possible world in which both premises are true (it is not raining, the ground is wet from a burst pipe) and yet the conclusion is false. Therefore, the argument is <strong>invalid</strong>.<br><br><strong>Nigerian Example of the Same Flaw:</strong> <em>"If a student cheats in an exam, they will be expelled. Tunde was expelled. Therefore, Tunde cheated in an exam."</em> — Invalid. Tunde could have been expelled for many other reasons.</div>
+    </div>
+  </div>
+
+  <div class="arg-card arg-invalid">
+    <div class="arg-card-head">❌ Invalid Argument 2 — Undistributed Middle Term</div>
+    <div class="arg-card-body">
+      <div class="premise"><strong>Premise 1:</strong> All professors are intelligent people.</div>
+      <div class="premise"><strong>Premise 2:</strong> Aisha is an intelligent person.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> Therefore, Aisha is a professor.</div>
+      <div class="verdict"><strong>Why It Is Invalid:</strong> The premises do not guarantee the conclusion. Even if all professors are intelligent and Aisha is intelligent, Aisha could be a doctor, an engineer, an artist, a student — anyone intelligent. Intelligence is a quality shared by far more people than just professors.<br><br><strong>The structural flaw:</strong> This commits the error of the <em>undistributed middle term</em>. The term "intelligent person" appears in both premises but does not establish a necessary connection between "professors" and "Aisha." The structure All A are B, X is B, therefore X is A — is always invalid. Compare with the valid form: All A are B, X is A, therefore X is B.<br><br><strong>Nigerian Example:</strong> <em>"All ASUU officials are passionate about education. Professor Adeyemi is passionate about education. Therefore, Professor Adeyemi is an ASUU official."</em> — Invalid. Many passionate educators are not ASUU officials.</div>
+    </div>
+  </div>
+
+  <div class="arg-card arg-invalid">
+    <div class="arg-card-head">❌ Invalid Argument 3 — Conclusion Exceeds What Premises Support</div>
+    <div class="arg-card-body">
+      <div class="premise"><strong>Premise 1:</strong> Students who borrow library books are dedicated learners.</div>
+      <div class="premise"><strong>Premise 2:</strong> Tunde borrowed a library book last week.</div>
+      <div class="conclusion"><strong>Conclusion:</strong> Therefore, Tunde will pass his examinations.</div>
+      <div class="verdict"><strong>Why It Is Invalid:</strong> Even if both premises are accepted as entirely true, the conclusion does not follow. The premises establish only that Tunde may be a dedicated learner — they say nothing about examination performance. Passing examinations depends on many additional factors: what was studied, examination technique, health conditions, the difficulty of the paper, and much more.<br><br><strong>The structural flaw:</strong> The conclusion leaps far beyond what the premises warrant. This is one of the most common errors in academic argumentation — when a writer presents two pieces of evidence and then draws a conclusion that requires many more unstated assumptions to be true. The argument is <strong>invalid</strong> because there are countless possible worlds in which both premises are true and Tunde still fails his examinations.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION VI: SOUND AND UNSOUND -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VI</span><h2 class="section-title">Sound and Unsound Arguments</h2><div class="section-rule"></div></div>
+
+  <p>Validity tells us about structure. But a valid argument can still be built on false premises — which means the conclusion, though logically derived, may be wrong. To evaluate whether an argument truly establishes its conclusion, we need the concept of <strong>soundness</strong> <span class="cite">(Copi et al., 2019, p. 42)</span>.</p>
+
+  <div class="validity-grid">
+    <div class="vg-card">
+      <div class="vg-head vg-sound">✅ Sound Argument</div>
+      <div class="vg-body">
+        <p>An argument is <strong>sound</strong> if and only if it satisfies <em>both</em> conditions simultaneously:</p>
+        <p style="margin-top:8px">1. It is <strong>logically valid</strong> (conclusion follows necessarily from premises)<br>2. All premises are <strong>actually true</strong> in the real world</p>
+        <p style="margin-top:8px">A sound argument is the gold standard. If an argument is sound, its conclusion <em>must</em> be true — there is no escape.</p>
+        <em><strong>Example:</strong> P1: All human beings require oxygen to survive. P2: You are a human being. C: Therefore, you require oxygen to survive. — Valid structure ✓ + True premises ✓ = <strong>Sound</strong>. The conclusion must be true.</em>
+      </div>
+    </div>
+    <div class="vg-card">
+      <div class="vg-head vg-unsound">⚠️ Unsound — Valid but False Premises</div>
+      <div class="vg-body">
+        <p>An argument is <strong>unsound</strong> if it is valid in structure but has one or more <strong>false premises</strong>. Despite the valid logic, the conclusion cannot be trusted.</p>
+        <p style="margin-top:8px">This is extremely common in propaganda, advertising, and flawed academic writing — the logic appears watertight, but the premises misrepresent reality.</p>
+        <em><strong>Example:</strong> P1: All university students in Nigeria are lazy. P2: Ngozi is a university student. C: Therefore, Ngozi is lazy. — Valid structure ✓ + Premise 1 is false ✗ = <strong>Unsound</strong>. The conclusion may well be false despite valid logic.</em>
+      </div>
+    </div>
+    <div class="vg-card">
+      <div class="vg-head vg-invalid">❌ Unsound — Invalid Structure</div>
+      <div class="vg-body">
+        <p>An invalid argument <strong>cannot be sound</strong>, regardless of whether its premises are true. If the logical structure fails, no amount of true premises can rescue it.</p>
+        <p style="margin-top:8px">Soundness requires validity as a necessary first condition. An invalid argument fails before we even examine the truth of its premises.</p>
+        <em><strong>Example:</strong> P1: Good students study regularly. P2: Fatima studies regularly. C: Therefore, Fatima is a good student. — Invalid structure (other qualities define "good student") = <strong>Cannot be sound</strong>, regardless of whether the premises are true.</em>
+      </div>
+    </div>
+    <div class="vg-card">
+      <div class="vg-head vg-summary">📋 The Four Combinations</div>
+      <div class="vg-body">
+        <p><strong>Valid + True premises</strong> = Sound ✅ (conclusion must be true)</p>
+        <p style="margin-top:6px"><strong>Valid + False premises</strong> = Unsound ❌ (conclusion unreliable)</p>
+        <p style="margin-top:6px"><strong>Invalid + True premises</strong> = Unsound ❌ (structure fails)</p>
+        <p style="margin-top:6px"><strong>Invalid + False premises</strong> = Unsound ❌ (fails on both counts)</p>
+        <em>Only ONE combination is sound: Valid structure AND true premises. This is the standard every academic argument must aspire to <span class="cite">(Hurley &amp; Watson, 2018, p. 50)</span>.</em>
+      </div>
+    </div>
+  </div>
+
+  <div class="golden-rule">
+    <span class="golden-rule-icon">📌</span>
+    <p class="golden-rule-text"><strong>The Argument Evaluation Checklist:</strong> (1) What is the conclusion? (2) What are the premises? (3) Is the argument deductive or inductive? (4) If deductive — is it valid? Does the conclusion necessarily follow? (5) Are the premises actually true? (6) If valid and all premises are true — the argument is sound. If any condition fails — identify exactly where and why <span class="cite">(Bassham et al., 2020, p. 28)</span>.</p>
+  </div>
+</div>
+
+<!-- SECTION VII: ACTIVITY -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Section VII</span><h2 class="section-title">Practical Activity — Argument Analysis</h2><div class="section-rule"></div></div>
+  <p>Apply all concepts from this lecture to the following exercises. For each argument, identify the premises and conclusion, state whether it is deductive or inductive, and evaluate it as valid/invalid and sound/unsound with written justification.</p>
+
+  <div class="activity-box">
+    <div class="activity-header">
+      <span style="font-size:1.1rem">🔍</span>
+      <div><div class="activity-label">Practical Activity — Section VII</div><div class="activity-title">Argument Analysis Exercises</div></div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-instruction">For each argument: (a) identify premises and conclusion, (b) state deductive or inductive, (c) evaluate valid or invalid, (d) evaluate sound or unsound, and (e) write a paragraph of justification.</p>
+      <ul class="activity-list">
+        <li class="activity-item"><span class="a-num">1</span><span class="a-text"><em>"All final-year students must submit a project. Blessing is a final-year student. Therefore, Blessing must submit a project."</em> — Is this valid? Is it sound? What would make it unsound?</span></li>
+        <li class="activity-item"><span class="a-num">2</span><span class="a-text"><em>"Every student I have spoken to this week prefers online lectures. Therefore, all students in this university prefer online lectures."</em> — Is this deductive or inductive? What are its limitations?</span></li>
+        <li class="activity-item"><span class="a-num">3</span><span class="a-text"><em>"Corrupt politicians always get re-elected in Nigeria. Senator Danladi was re-elected. Therefore, Senator Danladi is corrupt."</em> — Identify the structural flaw. Which invalid argument pattern does this resemble?</span></li>
+        <li class="activity-item"><span class="a-num">4</span><span class="a-text"><em>"Research by the National Bureau of Statistics (2023) shows that graduates earn 60% more than non-graduates over their lifetimes. University education is therefore a worthwhile financial investment."</em> — Is this deductive or inductive? Evaluate the quality of the inference.</span></li>
+        <li class="activity-item"><span class="a-num">5</span><span class="a-text">Write your own <strong>valid and sound</strong> deductive argument on any topic relevant to Nigerian university life. Then write a second argument that is <strong>valid but unsound</strong>. Label each component and explain why each meets its description.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="section-block">
+  <div class="section-heading"><span class="section-num">Conclusion</span><h2 class="section-title">Key Takeaway</h2><div class="section-rule"></div></div>
+  <div class="conclusion-box">
+    <p>Logic is the foundation of all rigorous academic thought. Every time you write an essay, construct a debate argument, or evaluate a claim made by a politician, an advertiser, or a fellow student, you are engaged in logical reasoning. This lecture has provided the tools to do that consciously and correctly <span class="cite">(Bassham et al., 2020, p. 30)</span>.</p>
+    <br>
+    <p>The three central insights of this lecture are: First, an <strong>argument</strong> is a structured set of statements in which premises support a conclusion. Second, deductive arguments either <strong>guarantee</strong> their conclusions (valid) or fail to do so (invalid). Third, a <strong>sound</strong> argument is both valid in structure and built on true premises — the standard every academic argument must meet. Lecture 5.2 extends this by examining the errors in reasoning — <strong>logical fallacies</strong> — that produce invalid and unsound arguments in everyday academic life <span class="cite">(Hurley &amp; Watson, 2018, p. 52)</span>.</p>
+  </div>
+</div>
+
+<!-- EXAM -->
+<div class="exam-section">
+  <div class="exam-header">
+    <div><h2>Examination Questions</h2><p>Lecture 5.1 — Introduction to Logic and Arguments</p></div>
+    <span class="exam-total">10 Questions · 25 Marks</span>
+  </div>
+  <div class="exam-body">
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">1</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following best defines logic?</p></div><div class="q-options"><div class="q-option">A. The study of grammatical rules of language</div><div class="q-option">B. The systematic study of the principles of correct reasoning</div><div class="q-option">C. The ability to memorise large amounts of information</div><div class="q-option">D. The study of mathematical equations</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">2</span><span class="q-type">Write Out</span><p class="q-text">Define an argument in the logical sense. Clearly distinguish it from a simple statement of fact, and identify the three components every argument must contain.</p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">3</span><span class="q-type">Multiple Choice</span><p class="q-text">Which of the following is a premise indicator word in an argument?</p></div><div class="q-options"><div class="q-option">A. Therefore</div><div class="q-option">B. Hence</div><div class="q-option">C. Because</div><div class="q-option">D. It follows that</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">4</span><span class="q-type">Distinguish</span><p class="q-text">Distinguish between deductive and inductive reasoning. Explain what each type claims about the relationship between premises and conclusion, and give one original example of each drawn from Nigerian university life.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">5</span><span class="q-type">Multiple Choice</span><p class="q-text">A deductive argument is valid when:</p></div><div class="q-options"><div class="q-option">A. All of its premises are true</div><div class="q-option">B. It is impossible for the premises to be true and the conclusion false simultaneously</div><div class="q-option">C. The conclusion agrees with the writer's personal opinion</div><div class="q-option">D. The argument uses many examples and statistics</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">6</span><span class="q-type">Evaluate</span><p class="q-text">Evaluate this argument. State whether it is valid or invalid and explain exactly why: <em>"All corrupt officials accept bribes. The Minister accepted a gift from a contractor. Therefore, the Minister is a corrupt official."</em></p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">7</span><span class="q-type">Multiple Choice</span><p class="q-text">An argument that is logically valid but contains at least one false premise is described as:</p></div><div class="q-options"><div class="q-option">A. Sound</div><div class="q-option">B. Strong</div><div class="q-option">C. Unsound</div><div class="q-option">D. Inductive</div></div><p class="q-marks">[1 mark]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">8</span><span class="q-type">Construct</span><p class="q-text">Write one original argument that is both <strong>valid and sound</strong>. Then write a second argument using the same topic that is <strong>valid but unsound</strong>. Label each component and explain why one is sound and the other is not.</p></div><p class="q-marks">[4 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">9</span><span class="q-type">Identify and Analyse</span><p class="q-text">Read this passage and: (a) state whether it contains an argument or is merely a description, and (b) if it is an argument, extract the premises and conclusion and evaluate the logical quality: <em>"Nigeria has a population of over 220 million people. The country is located in West Africa and shares borders with Benin, Niger, Chad, and Cameroon. Its capital city is Abuja, while Lagos is the largest commercial city."</em></p></div><p class="q-marks">[3 marks]</p></div>
+
+    <div class="exam-q"><div class="exam-q-top"><span class="q-num">10</span><span class="q-type">Short Essay</span><p class="q-text">Explain why understanding the difference between a valid argument and a sound argument matters for academic writing. Describe how an essay with a logically valid structure can still fail to establish its conclusion, and what a writer must do to ensure their essay arguments are sound.</p></div><p class="q-marks">[4 marks]</p></div>
+  </div>
+</div>
+
+<!-- REFERENCES -->
+<div class="references-section">
+  <div class="ref-heading"><h2 class="ref-title">References</h2><div class="ref-rule"></div></div>
+  <div class="ref-list">
+    <div class="ref-item">Bassham, G., Irwin, W., Nardone, H., &amp; Wallace, J. (2020). <em>Critical Thinking: A Student's Introduction</em> (6th ed.). McGraw-Hill.</div>
+    <div class="ref-item">Copi, I. M., Cohen, C., &amp; McMahon, K. (2019). <em>Introduction to Logic</em> (15th ed.). Routledge.</div>
+    <div class="ref-item">Fisher, A. (2018). <em>The Logic of Real Arguments</em> (3rd ed.). Cambridge University Press.</div>
+    <div class="ref-item">Govier, T. (2020). <em>A Practical Study of Argument</em> (8th ed.). Cengage Learning.</div>
+    <div class="ref-item">Groarke, L., &amp; Tindale, C. (2019). <em>Good Reasoning Matters!</em> (6th ed.). Oxford University Press.</div>
+    <div class="ref-item">Hurley, P. J., &amp; Watson, L. (2018). <em>A Concise Introduction to Logic</em> (13th ed.). Cengage Learning.</div>
+    <div class="ref-item">Johnson, R. H., &amp; Blair, J. A. (2019). Informal logic and the study of argumentation. <em>Studies in Logic, Grammar and Rhetoric</em>, 16(29), 7–23.</div>
+    <div class="ref-item">Nwosu, C. E. (2021). Logical reasoning competence among undergraduate students in Nigerian universities. <em>African Journal of Educational Research</em>, 9(2), 44–61.</div>
+    <div class="ref-item">Okafor, B. U. (2022). Teaching critical reasoning in Nigerian tertiary institutions. <em>Journal of Philosophy of Education in Africa</em>, 5(1), 18–35.</div>
+    <div class="ref-item">Walton, D. (2020). <em>Informal Logic: A Pragmatic Approach</em> (3rd ed.). Cambridge University Press.</div>
+  </div>
+</div>
+
+<a class="next-lecture" href="lecture-5-2.html">
+  <div>
+    <div class="next-label">Next Lecture · Module 5</div>
+    <div class="next-title">Lecture 5.2 — Fallacies and Faulty Reasoning</div>
+    <div class="next-desc">10 major fallacies explained in full detail · Formal vs informal fallacies · Identification in academic writing</div>
+  </div>
+  <span class="next-arrow">→</span>
+</a>
+<div class="lecture-nav">
+  <a class="lnav-btn disabled" href="#">← Lecture 4.4</a>
+  <a class="lnav-index" href="index.html">Course Index</a>
+  <a class="lnav-btn" href="lecture-5-2.html">Lecture 5.2 →</a>
+</div>
+
+</div>
+
+<!-- LS5 SOCIAL MEDIA BAR -->
+<style>
+.ls5-social-bar{max-width:900px;margin:2rem auto 0;padding:0 1.5rem}
+.ls5-social-bar__inner{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ls5-social-bar__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;color:#1A1A1A;margin-bottom:.3rem}
+.ls5-social-bar__sub{font-size:.88rem;color:#7A7A7A;margin-bottom:1.25rem}
+.ls5-social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+.ls5-sbtn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.1rem;border-radius:2px;font-family:'JetBrains Mono','Courier New',monospace;font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+.ls5-sbtn:hover{opacity:.88;transform:translateY(-2px)}
+.ls5-sbtn--facebook{background:#1877F2}
+.ls5-sbtn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.ls5-sbtn--x{background:#000}
+.ls5-sbtn--linkedin{background:#0A66C2}
+.ls5-sbtn--youtube{background:#FF0000}
+.ls5-sbtn--tiktok{background:#010101}
+.ls5-sbtn--telegram{background:#26A5E4}
+.ls5-sbtn--whatsapp{background:#25D366;color:#000}
+.ls5-sbtn--fiverr{background:#1DBF73}
+.ls5-sbtn--patreon{background:#FF424D}
+.ls5-affiliates{max-width:900px;margin:2rem auto;padding:0 1.5rem}
+.ls5-affiliates__heading{font-family:'Playfair Display',Georgia,serif;font-size:1.3rem;font-weight:700;color:#1A1A1A;margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid #0A3D91}
+.ls5-affiliates__sub{font-size:.9rem;color:#7A7A7A;margin-bottom:1.5rem}
+.ls5-affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.ls5-acard{background:#fff;border:1px solid #D6CFC4;border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;text-decoration:none;color:inherit;transition:box-shadow .2s,border-color .2s}
+.ls5-acard:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:#1565C0}
+.ls5-acard__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+.ls5-acard__icon--patreon{background:#FF424D;color:#fff}
+.ls5-acard__icon--amazon{background:#FF9900;color:#111}
+.ls5-acard__icon--skill{background:#00B89C;color:#fff}
+.ls5-acard__icon--grammar{background:#15C39A;color:#fff}
+.ls5-acard__name{font-family:'Playfair Display',Georgia,serif;font-size:.97rem;font-weight:700;color:#1A1A1A;display:block;margin-bottom:.15rem}
+.ls5-acard__badge{font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:#E8F0FE;color:#0A3D91;padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+.ls5-acard__desc{font-size:.83rem;color:#7A7A7A;line-height:1.5}
+@media(max-width:600px){.ls5-affiliates__grid{grid-template-columns:1fr}.ls5-social-bar__links{gap:.5rem}}
+</style>
+
+<div class="ls5-social-bar">
+  <div class="ls5-social-bar__inner">
+    <p class="ls5-social-bar__heading">Follow Us &amp; Stay Connected</p>
+    <p class="ls5-social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and study resources</p>
+    <div class="ls5-social-bar__links">
+      <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--facebook">f &nbsp;Facebook</a>
+      <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--instagram">&#9685; Instagram</a>
+      <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--x">&#120143; X / Twitter</a>
+      <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--linkedin">in LinkedIn</a>
+      <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--youtube">&#9654; YouTube</a>
+      <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--tiktok">&#9835; TikTok</a>
+      <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--telegram">&#10148; Telegram</a>
+      <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--whatsapp">&#128172; WhatsApp</a>
+      <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--fiverr">&#9650; Fiverr</a>
+      <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-sbtn ls5-sbtn--patreon">P Patreon</a>
+    </div>
+  </div>
+</div>
+
+<section class="ls5-affiliates">
+  <h2 class="ls5-affiliates__heading">Our Affiliates &amp; Community</h2>
+  <p class="ls5-affiliates__sub">Support the series and enhance your studies through our trusted partners</p>
+  <div class="ls5-affiliates__grid">
+    <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--patreon">P</div>
+      <div>
+        <span class="ls5-acard__name">Patreon &#8212; Support Us <span class="ls5-acard__badge">Community</span></span>
+        <span class="ls5-acard__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+      </div>
+    </a>
+    <a href="https://www.amazon.com/s?k=communication+in+english+textbook&tag=ls6-20" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--amazon">A</div>
+      <div>
+        <span class="ls5-acard__name">Amazon &#8212; Textbooks <span class="ls5-acard__badge">Books</span></span>
+        <span class="ls5-acard__desc">Recommended Communication in English textbooks and study guides, delivered to your door.</span>
+      </div>
+    </a>
+    <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--skill">S</div>
+      <div>
+        <span class="ls5-acard__name">Skillshare &#8212; Online Courses <span class="ls5-acard__badge">Learning</span></span>
+        <span class="ls5-acard__desc">Online courses in English, communication skills, and academic writing to complement your studies.</span>
+      </div>
+    </a>
+    <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="ls5-acard">
+      <div class="ls5-acard__icon ls5-acard__icon--grammar">G</div>
+      <div>
+        <span class="ls5-acard__name">Grammarly Premium <span class="ls5-acard__badge">Writing</span></span>
+        <span class="ls5-acard__desc">Write clearer, error-free essays and assignments. Essential for tertiary-level academic writing.</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+<footer>Lecture Series 5: Communication in English · Lecture 5.1 &nbsp;·&nbsp; Dr. Maurice Udom &nbsp;·&nbsp; <a href="index.html">Course Index</a> &nbsp;·&nbsp; <a href="https://mauriceudom.org">mauriceudom.org</a><br><br>© 2026 Maurice Udom. All rights reserved.</footer>
+</body>
+</html>
