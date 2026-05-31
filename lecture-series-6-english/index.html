@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lecture Series 6: Organisational Communication — A comprehensive ten-chapter lecture blog series for tertiary institution students. Covers channels, theories, barriers, verbal and non-verbal communication, networks, and strategies for improvement.">
+    <meta name="keywords" content="Lecture Series 6, Organisational Communication, lecture series, tertiary institutions, business communication, workplace communication, communication theories, communication barriers, Nigeria">
+    <meta name="author" content="Lecture Series 6: Organisational Communication">
+    <title>Lecture Series 6: Organisational Communication — Lecture Blog Series</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --clr-deep: #0B2545;
+            --clr-bg: #FDFAF6;
+            --clr-surface: #FFFFFF;
+            --clr-ink: #1A1A1A;
+            --clr-ink-light: #4A4A4A;
+            --clr-ink-muted: #7A7A7A;
+            --clr-accent: #0A3D91;
+            --clr-accent-soft: #1565C0;
+            --clr-border: #D6CFC4;
+            --clr-highlight: #E8F0FE;
+            --clr-aside-bg: #F0F4FA;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Source Serif 4', Georgia, serif;
+            --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-body); font-size: 1.075rem; line-height: 1.82; color: var(--clr-ink); background-color: var(--clr-bg); -webkit-font-smoothing: antialiased; }
+
+        /* ── HEADER ── */
+        .site-header { background: var(--clr-deep); padding: 1.25rem 0; border-bottom: 4px solid var(--clr-accent-soft); }
+        .site-header__inner { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem; }
+        .site-header__brand { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #FDFAF6; }
+        .site-header__nav { font-family: var(--font-body); font-size: .85rem; color: #8BB4E0; }
+
+        /* ── HERO ── */
+        .hero { background: var(--clr-deep); padding: 5rem 1.5rem 5.5rem; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 420px; height: 420px; background: rgba(255,255,255,.04); border-radius: 50%; }
+        .hero__badge { display: inline-block; font-family: var(--font-mono); font-size: .68rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: #90CAF9; border: 1px solid rgba(144,202,249,.25); padding: .4rem 1.25rem; border-radius: 2px; margin-bottom: 2rem; }
+        .hero__title { font-family: var(--font-display); font-size: clamp(2.2rem,5.5vw,3.6rem); font-weight: 900; color: #FFF; line-height: 1.15; max-width: 750px; margin: 0 auto 1.5rem; letter-spacing: -.01em; }
+        .hero__subtitle { font-family: var(--font-body); font-size: 1.15rem; font-weight: 300; color: #BBDEFB; max-width: 600px; margin: 0 auto 1rem; line-height: 1.7; }
+        .hero__meta { margin-top: 2.5rem; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+        .hero__meta-item { text-align: center; }
+        .hero__meta-number { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: #FFF; display: block; line-height: 1; }
+        .hero__meta-label { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; color: #90CAF9; margin-top: .3rem; display: block; }
+
+        /* ── ABOUT ── */
+        .about { max-width: 900px; margin: 0 auto; padding: 3.5rem 1.5rem 1rem; }
+        .about__card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 2px; padding: 2.5rem 3rem; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+        .about__heading { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--clr-ink); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--clr-accent); }
+        .about p { color: var(--clr-ink-light); margin-bottom: 1rem; }
+        .about p:last-child { margin-bottom: 0; }
+
+        /* ── AD PLACEHOLDER ── */
+        .ad-placeholder { background: var(--clr-aside-bg); border: 2px dashed var(--clr-border); border-radius: 2px; padding: 1.5rem; margin: 2rem auto; max-width: 900px; text-align: center; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--clr-ink-muted); }
+
+        /* ── TOPICS LIST ── */
+        .topics { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+        .topics__heading { font-family: var(--font-display); font-size: 1.65rem; font-weight: 700; color: var(--clr-ink); text-align: center; margin-bottom: .5rem; }
+        .topics__subheading { font-family: var(--font-body); font-size: 1rem; color: var(--clr-ink-muted); text-align: center; margin-bottom: 2.5rem; }
+
+        /* ── TOPIC CARD ── */
+        .topic-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 2px; margin-bottom: 1rem; transition: box-shadow .25s ease, border-color .25s ease; overflow: hidden; }
+        .topic-card:hover { box-shadow: 0 4px 20px rgba(11,37,69,.1); border-color: var(--clr-accent-soft); }
+        .topic-card__link { display: flex; align-items: stretch; text-decoration: none; color: inherit; }
+        .topic-card__number { background: var(--clr-deep); color: #FFF; font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; min-width: 70px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .topic-card__content { padding: 1.25rem 1.75rem; flex: 1; }
+        .topic-card__title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--clr-ink); margin-bottom: .3rem; line-height: 1.35; }
+        .topic-card__desc { font-family: var(--font-body); font-size: .92rem; color: var(--clr-ink-light); line-height: 1.6; margin-bottom: .5rem; }
+        .topic-card__meta { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+        .topic-card__tag { font-family: var(--font-mono); font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; padding: .2rem .6rem; border-radius: 2px; }
+        .topic-card__tag--available { background: #E8F5E9; color: #2E7D32; }
+        .topic-card__tag--time { background: var(--clr-highlight); color: var(--clr-accent); }
+        .topic-card__tag--qs { background: #F3E5F5; color: #6A1B9A; }
+
+        /* ── INFO BAR ── */
+        .info-bar { background: var(--clr-aside-bg); border: 1px solid #B3D1F5; border-left: 4px solid var(--clr-accent-soft); border-radius: 0 2px 2px 0; padding: 1.5rem 2rem; max-width: 900px; margin: 0 auto 2rem; }
+        .info-bar__label { font-family: var(--font-mono); font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--clr-accent); margin-bottom: .4rem; }
+        .info-bar p { font-size: .95rem; color: var(--clr-ink-light); margin-bottom: 0; }
+
+        /* ── SOCIAL BAR ── */
+        .social-bar { max-width: 900px; margin: 0 auto 2rem; padding: 0 1.5rem; }
+        .social-bar__inner { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 2px; padding: 1.75rem 2rem; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+        .social-bar__heading { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--clr-ink); margin-bottom: .3rem; }
+        .social-bar__sub { font-family: var(--font-body); font-size: .88rem; color: var(--clr-ink-muted); margin-bottom: 1.25rem; }
+        .social-bar__links { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
+        .social-btn { display: inline-flex; align-items: center; gap: .45rem; padding: .55rem 1.1rem; border-radius: 2px; font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .06em; text-decoration: none; color: #fff; transition: opacity .2s, transform .15s; }
+        .social-btn:hover { opacity: .88; transform: translateY(-2px); }
+        .social-btn--facebook { background: #1877F2; }
+        .social-btn--instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+        .social-btn--x { background: #000; }
+        .social-btn--linkedin { background: #0A66C2; }
+        .social-btn--youtube { background: #FF0000; }
+        .social-btn--tiktok { background: #010101; }
+        .social-btn--telegram { background: #26A5E4; }
+        .social-btn--whatsapp { background: #25D366; color: #000; }
+        .social-btn--fiverr { background: #1DBF73; }
+        .social-btn--patreon { background: #FF424D; }
+
+        /* ── AFFILIATES ── */
+        .affiliates { max-width: 900px; margin: 0 auto 2.5rem; padding: 0 1.5rem; }
+        .affiliates__heading { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--clr-ink); margin-bottom: .4rem; padding-bottom: .5rem; border-bottom: 2px solid var(--clr-accent); }
+        .affiliates__subheading { font-family: var(--font-body); font-size: .95rem; color: var(--clr-ink-muted); margin-bottom: 1.75rem; }
+        .affiliates__grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1rem; }
+        .affiliate-card { background: var(--clr-surface); border: 1px solid var(--clr-border); border-radius: 2px; padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: box-shadow .2s, border-color .2s; text-decoration: none; color: inherit; }
+        .affiliate-card:hover { box-shadow: 0 4px 16px rgba(11,37,69,.1); border-color: var(--clr-accent-soft); }
+        .affiliate-card__icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; font-weight: 700; }
+        .affiliate-card__icon--patreon { background: #FF424D; color: #fff; }
+        .affiliate-card__icon--amazon  { background: #FF9900; color: #111; }
+        .affiliate-card__icon--skill   { background: #00B89C; color: #fff; }
+        .affiliate-card__icon--grammar { background: #15C39A; color: #fff; }
+        .affiliate-card__name { font-family: var(--font-display); font-size: .97rem; font-weight: 700; color: var(--clr-ink); display: block; margin-bottom: .15rem; }
+        .affiliate-card__badge { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; background: var(--clr-highlight); color: var(--clr-accent); padding: .15rem .5rem; border-radius: 2px; margin-left: .4rem; vertical-align: middle; }
+        .affiliate-card__desc { font-family: var(--font-body); font-size: .83rem; color: var(--clr-ink-muted); line-height: 1.5; }
+
+        /* ── FOOTER ── */
+        .site-footer { background: var(--clr-deep); color: #8BB4E0; text-align: center; padding: 2.5rem 1.5rem; font-size: .82rem; font-family: var(--font-body); }
+        .site-footer__copy { color: #BBDEFB; margin-top: .5rem; }
+        .site-footer a { color: #90CAF9; }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:600px) {
+            .hero { padding: 3.5rem 1.25rem 4rem; }
+            .hero__meta { gap: 1.5rem; }
+            .about__card { padding: 1.75rem 1.5rem; }
+            .topic-card__number { min-width: 50px; font-size: 1.2rem; }
+            .topic-card__content { padding: 1rem 1.25rem; }
+            .topic-card__title { font-size: 1.05rem; }
+            .affiliates__grid { grid-template-columns: 1fr; }
+            .social-bar__links { gap: .5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+    <div class="site-header__inner">
+        <div class="site-header__brand">Lecture Series 6: Organisational Communication</div>
+        <nav class="site-header__nav">Lecture Blog Series</nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero__badge">Lecture Series 6 &bull; Tertiary Institutions &bull; Lecture Blog Series</div>
+    <h1 class="hero__title">Organisational Communication</h1>
+    <p class="hero__subtitle">A comprehensive ten-chapter lecture series exploring how communication shapes organisational life — from foundational concepts to advanced strategies for workplace effectiveness.</p>
+    <div class="hero__meta">
+        <div class="hero__meta-item">
+            <span class="hero__meta-number">10</span>
+            <span class="hero__meta-label">Chapters</span>
+        </div>
+        <div class="hero__meta-item">
+            <span class="hero__meta-number">100</span>
+            <span class="hero__meta-label">Exam Questions</span>
+        </div>
+        <div class="hero__meta-item">
+            <span class="hero__meta-number">80+</span>
+            <span class="hero__meta-label">Key Concepts</span>
+        </div>
+        <div class="hero__meta-item">
+            <span class="hero__meta-number">12 hrs</span>
+            <span class="hero__meta-label">Total Study Time</span>
+        </div>
+    </div>
+</section>
+
+<!-- AD PLACEHOLDER -->
+<div class="ad-placeholder" style="padding:0 1.5rem;"><div style="background:var(--clr-aside-bg);border:2px dashed var(--clr-border);border-radius:2px;padding:1.5rem;">&#9634; AdSense Advertisement &#8212; Coming Soon</div></div>
+
+<!-- ABOUT -->
+<section class="about">
+    <div class="about__card">
+        <h2 class="about__heading">About Lecture Series 6: Organisational Communication</h2>
+        <p>This lecture blog series is designed for students in tertiary institutions studying Organisational Communication. Each chapter is presented as a self-contained lecture that can be read independently or followed sequentially as a complete course, covering every major topic from foundational communication theory to practical strategies for improving communication effectiveness in real Nigerian and global organisations.</p>
+        <p>Every chapter includes detailed concept explanations with key concept boxes, real-world Nigerian workplace examples, references to contemporary academic sources (2020 onwards), structured time allocations for reading and study, and examination practice questions with mark allocations to help students prepare thoroughly for their assessments.</p>
+        <p>The series adopts a <strong>mixed citation approach</strong> — key theories and models are cited with full Harvard-format academic references, while explanations and examples are presented in clear, accessible prose suitable for tertiary-level study and professional development.</p>
+    </div>
+</section>
+
+<!-- INFO BAR -->
+<div class="info-bar" style="margin-left:1.5rem;margin-right:1.5rem;max-width:900px;margin-top:1.5rem;">
+    <div class="info-bar__label">How to Use This Series</div>
+    <p>Click any chapter card below to open its dedicated lecture page. Each chapter takes approximately 65–80 minutes to study fully. Work through all ten chapters in sequence for a comprehensive understanding of Organisational Communication, or jump to any individual chapter for focused study on a specific topic.</p>
+</div>
+
+<!-- TOPICS -->
+<section class="topics">
+    <h2 class="topics__heading">Lecture Chapters</h2>
+    <p class="topics__subheading">Ten fully developed lecture chapters — all available now</p>
+
+    <!-- CHAPTER 1 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-1.html" class="topic-card__link">
+            <div class="topic-card__number">01</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Introduction to Organisational Communication</div>
+                <div class="topic-card__desc">Defining communication, the communication process model, importance of communication in organisations, the 7 Cs of effective communication, scope and dimensions, and the role of communication in organisational success and failure.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">70 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 2 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-2.html" class="topic-card__link">
+            <div class="topic-card__number">02</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Channels of Communication in Organisations</div>
+                <div class="topic-card__desc">Media richness theory, oral and written communication channels, digital and electronic channels, social media as an organisational channel (Facebook, Instagram, LinkedIn, YouTube, WhatsApp, TikTok, Telegram, X), channel selection criteria, and managing multi-channel communication.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">65 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 3 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-3.html" class="topic-card__link">
+            <div class="topic-card__number">03</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Theories of Organisational Communication</div>
+                <div class="topic-card__desc">Linear, interactive, and transactional models; classical, human relations, and human resources theories; systems theory; transparent communication theory; Communication Privacy Management (CPM) theory; and digital-age communication perspectives.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">75 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 4 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-4.html" class="topic-card__link">
+            <div class="topic-card__number">04</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Vertical Communication in Organisations</div>
+                <div class="topic-card__desc">Downward and upward communication — their functions, forms, barriers, and distortions; power distance and psychological safety; the mum effect and hierarchical filtering; and practical strategies for improving vertical information flow across hierarchical levels.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">70 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 5 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-5.html" class="topic-card__link">
+            <div class="topic-card__number">05</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Horizontal and Diagonal Communication</div>
+                <div class="topic-card__desc">Peer-to-peer and cross-level communication across departments — functions of horizontal communication, silo mentality and how it damages organisations, diagonal communication, matrix structures, cross-functional teams, and strategies for building a connected and collaborative organisation.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">70 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 6 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-6.html" class="topic-card__link">
+            <div class="topic-card__number">06</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Barriers to Effective Communication</div>
+                <div class="topic-card__desc">A systematic framework for diagnosing communication failure — semantic, psychological, physical, organisational, cultural, and technological barriers; why correct diagnosis matters; and targeted strategies for overcoming each barrier category in Nigerian and global organisational contexts.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">75 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 7 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-7.html" class="topic-card__link">
+            <div class="topic-card__number">07</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Verbal Communication in Organisations</div>
+                <div class="topic-card__desc">Oral and written communication — their functions, advantages, limitations, and forms; the serial transmission effect and how to prevent it; active listening as the most neglected verbal communication skill; and practical strategies for improving both oral and written communication at every level.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">70 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 8 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-8.html" class="topic-card__link">
+            <div class="topic-card__number">08</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Non-Verbal Communication in Organisations</div>
+                <div class="topic-card__desc">Kinesics, facial expressions and eye contact, proxemics and Hall's distance zones, paralanguage, appearance, chronemics, and the physical environment as communication — plus managing non-verbal communication in cross-cultural and digital/hybrid working contexts.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">70 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 9 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-9.html" class="topic-card__link">
+            <div class="topic-card__number">09</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Formal and Informal Communication Networks</div>
+                <div class="topic-card__desc">Communication network structures — chain, wheel, circle, all-channel, and Y; the grapevine — patterns, speed, accuracy, and why it matters; opinion leaders, gatekeepers, and boundary spanners; rumour and misinformation management; and integrating formal and informal networks as a strategic communication asset.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">70 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- CHAPTER 10 -->
+    <div class="topic-card">
+        <a href="lecture-series-6-chapter-10.html" class="topic-card__link">
+            <div class="topic-card__number">10</div>
+            <div class="topic-card__content">
+                <div class="topic-card__title">Improving Organisational Communication</div>
+                <div class="topic-card__desc">The communication audit — a seven-stage diagnostic process; leadership communication as the most powerful lever; building a genuine feedback culture; communication strategy and policy; communication training and capability development; measuring effectiveness at four levels; and the ten characteristics of a truly communicative organisation — a synthesis of the entire series.</div>
+                <div class="topic-card__meta">
+                    <span class="topic-card__tag topic-card__tag--available">Available</span>
+                    <span class="topic-card__tag topic-card__tag--time">80 mins</span>
+                    <span class="topic-card__tag topic-card__tag--qs">10 Questions</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</section>
+
+<!-- AD PLACEHOLDER -->
+<div class="ad-placeholder" style="padding:0 1.5rem;margin-bottom:2rem;"><div style="background:var(--clr-aside-bg);border:2px dashed var(--clr-border);border-radius:2px;padding:1.5rem;">&#9634; AdSense Advertisement &#8212; Coming Soon</div></div>
+
+<!-- SOCIAL MEDIA BAR -->
+<div class="social-bar">
+    <div class="social-bar__inner">
+        <p class="social-bar__heading">Follow Us &amp; Stay Connected</p>
+        <p class="social-bar__sub">Join our community across all platforms for updates, new lecture alerts, and more study resources</p>
+        <div class="social-bar__links">
+            <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--facebook">f &nbsp;Facebook</a>
+            <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--instagram">&#9685; Instagram</a>
+            <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--x">&#120143; X / Twitter</a>
+            <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--linkedin">in LinkedIn</a>
+            <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--youtube">&#9654; YouTube</a>
+            <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--tiktok">&#9835; TikTok</a>
+            <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--telegram">&#10148; Telegram</a>
+            <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--whatsapp">&#128172; WhatsApp</a>
+            <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--fiverr">&#9650; Fiverr</a>
+            <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="social-btn social-btn--patreon">P Patreon</a>
+        </div>
+    </div>
+</div>
+
+<!-- AFFILIATES -->
+<section class="affiliates">
+    <h2 class="affiliates__heading">Our Affiliates &amp; Community</h2>
+    <p class="affiliates__subheading">Support the series and enhance your studies through our trusted partners</p>
+    <div class="affiliates__grid">
+
+        <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--patreon">P</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Patreon &#8212; Support Us <span class="affiliate-card__badge">Community</span></span>
+                <span class="affiliate-card__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+            </div>
+        </a>
+
+        <a href="https://www.amazon.com/s?k=organisational+communication+textbook&tag=ls6-20" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--amazon">A</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Amazon &#8212; Textbooks <span class="affiliate-card__badge">Books</span></span>
+                <span class="affiliate-card__desc">Recommended organisational communication textbooks and study guides, delivered to your door.</span>
+            </div>
+        </a>
+
+        <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--skill">S</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Skillshare &#8212; Online Courses <span class="affiliate-card__badge">Learning</span></span>
+                <span class="affiliate-card__desc">Online courses in business communication, leadership, and writing skills to complement your studies.</span>
+            </div>
+        </a>
+
+        <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--grammar">G</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Grammarly Premium <span class="affiliate-card__badge">Writing</span></span>
+                <span class="affiliate-card__desc">Write clearer, error-free essays and exam answers. Essential for tertiary-level academic writing.</span>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <p>Lecture Series 6: Organisational Communication &middot; Lecture Blog Series &middot; Designed for Tertiary Institutions</p>
+    <p class="site-footer__copy">Support us on <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener">Patreon</a></p>
+    <p class="site-footer__copy">&copy; 2026. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

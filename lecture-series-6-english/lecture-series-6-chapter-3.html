@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lecture Series 6 Chapter 3: Theories of Organisational Communication — Linear, interactive and transactional models; classical, human relations and systems theories; contemporary perspectives including transparent communication and privacy management.">
+    <meta name="keywords" content="Lecture Series 6, theories of communication, linear model, transactional model, classical theory, human relations theory, systems theory, media richness, organisational communication">
+    <meta name="author" content="Lecture Series 6: Organisational Communication">
+    <title>Lecture Series 6 — Chapter 3: Theories of Organisational Communication</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --clr-deep:#0B2545;--clr-bg:#FDFAF6;--clr-surface:#FFFFFF;--clr-ink:#1A1A1A;
+            --clr-ink-light:#4A4A4A;--clr-ink-muted:#7A7A7A;--clr-accent:#0A3D91;
+            --clr-accent-soft:#1565C0;--clr-border:#D6CFC4;--clr-highlight:#E8F0FE;
+            --clr-aside-bg:#F0F4FA;
+            --font-display:'Playfair Display',Georgia,serif;
+            --font-body:'Source Serif 4',Georgia,serif;
+            --font-mono:'JetBrains Mono','Courier New',monospace;
+        }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:var(--font-body);font-size:1.075rem;line-height:1.82;color:var(--clr-ink);background-color:var(--clr-bg);-webkit-font-smoothing:antialiased}
+        .site-header{background:var(--clr-deep);padding:1.25rem 0;border-bottom:4px solid var(--clr-accent-soft)}
+        .site-header__inner{max-width:900px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+        .site-header__brand{font-family:var(--font-display);font-size:1.05rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#FDFAF6;text-decoration:none}
+        .site-header__nav{font-family:var(--font-body);font-size:.85rem;color:#8BB4E0;text-decoration:none}
+        .site-header__nav:hover{color:#BBDEFB}
+        .hero{background:var(--clr-deep);padding:4rem 1.5rem 4.5rem;text-align:center;position:relative;overflow:hidden}
+        .hero__badge{display:inline-block;font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#90CAF9;border:1px solid rgba(144,202,249,.25);padding:.4rem 1.25rem;border-radius:2px;margin-bottom:1.75rem}
+        .hero__chapter{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#BBDEFB;margin-bottom:.75rem;display:block}
+        .hero__title{font-family:var(--font-display);font-size:clamp(1.9rem,5vw,3.2rem);font-weight:900;color:#FFF;line-height:1.15;max-width:700px;margin:0 auto 1.25rem;letter-spacing:-.01em}
+        .hero__subtitle{font-family:var(--font-body);font-size:1.05rem;font-weight:300;color:#BBDEFB;max-width:580px;margin:0 auto 2rem;line-height:1.7}
+        .hero__meta{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-top:.5rem}
+        .hero__meta-item{text-align:center}
+        .hero__meta-number{font-family:var(--font-display);font-size:1.75rem;font-weight:800;color:#FFF;display:block;line-height:1}
+        .hero__meta-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#90CAF9;margin-top:.3rem;display:block}
+        .time-allocation{background:#061E40;padding:.85rem 1.5rem;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+        .time-allocation__item{display:flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.78rem;color:#BBDEFB}
+        .time-allocation__icon{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:700}
+        .time-allocation__icon--read{background:#1565C0;color:#FFF}
+        .time-allocation__icon--study{background:#2E7D32;color:#FFF}
+        .time-allocation__icon--practice{background:#E65100;color:#FFF}
+        .time-allocation__icon--total{background:#FFF;color:#061E40}
+        .article-container{max-width:820px;margin:0 auto;padding:2.5rem 2rem 3rem}
+        .article-body{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:clamp(1.75rem,4vw,3rem);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+        .toc{background:var(--clr-aside-bg);border-left:3px solid var(--clr-accent);padding:1.5rem 2rem;margin-bottom:2.5rem;border-radius:0 2px 2px 0}
+        .toc__heading{font-family:var(--font-display);font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--clr-accent);margin-bottom:.75rem}
+        .toc ol{list-style:none;counter-reset:toc-counter;padding:0}
+        .toc li{counter-increment:toc-counter;margin-bottom:.35rem}
+        .toc li::before{content:counter(toc-counter)".";font-family:var(--font-mono);font-size:.8rem;color:var(--clr-accent);margin-right:.5rem;font-weight:600}
+        .toc a{font-family:var(--font-body);font-size:.95rem;color:var(--clr-ink);text-decoration:none;border-bottom:1px dotted var(--clr-border)}
+        .toc a:hover{color:var(--clr-accent)}
+        .article-body h2{font-family:var(--font-display);font-size:1.55rem;font-weight:700;color:var(--clr-ink);margin:2.5rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid var(--clr-border);line-height:1.25}
+        .article-body h3{font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--clr-ink);margin:1.75rem 0 .75rem}
+        .article-body p{margin-bottom:1.1rem}
+        .article-body p:last-child{margin-bottom:0}
+        .lead-paragraph{font-size:1.15rem;font-weight:500;line-height:1.75;color:var(--clr-ink)}
+        .key-concept{background:var(--clr-aside-bg);border-left:4px solid var(--clr-accent);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0 2px 2px 0}
+        .key-concept__label{font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:.6rem}
+        .key-concept p{margin-bottom:.75rem}
+        .key-concept p:last-child{margin-bottom:0}
+        .example-box{background:#FFFBF0;border:1px solid #F0C84A;border-left:4px solid #E6A817;padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0 2px 2px 0}
+        .example-box__label{font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A5700;margin-bottom:.6rem}
+        .example-box p{margin-bottom:.75rem}
+        .example-box p:last-child{margin-bottom:0}
+        .exam-section{background:#F9F0FA;border:1px solid #C9A0DC;border-left:4px solid #7B2FA0;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 2px 2px 0}
+        .exam-section__label{font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#7B2FA0;margin-bottom:.6rem}
+        .exam-section__instruction{font-style:italic;color:var(--clr-ink-muted);margin-bottom:1rem}
+        .exam-section ol{padding-left:1.5rem}
+        .exam-section li{margin-bottom:.75rem;line-height:1.65}
+        .ad-placeholder{background:var(--clr-aside-bg);border:2px dashed var(--clr-border);border-radius:2px;padding:1.5rem;margin:2rem 0;text-align:center;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--clr-ink-muted)}
+        .references{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--clr-border)}
+        .references h2{border-bottom:none;font-size:1.3rem;margin-bottom:1.25rem}
+        .references ul{list-style:none;padding:0}
+        .references li{font-size:.92rem;color:var(--clr-ink-light);margin-bottom:.85rem;padding-left:2rem;text-indent:-2rem;line-height:1.65}
+        /* SOCIAL BAR */
+        .social-bar{max-width:900px;margin:0 auto 2rem;padding:0 1.5rem}
+        .social-bar__inner{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+        .social-bar__heading{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--clr-ink);margin-bottom:.3rem}
+        .social-bar__sub{font-family:var(--font-body);font-size:.88rem;color:var(--clr-ink-muted);margin-bottom:1.25rem}
+        .social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+        .social-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.1rem;border-radius:2px;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+        .social-btn:hover{opacity:.88;transform:translateY(-2px)}
+        .social-btn--facebook{background:#1877F2}
+        .social-btn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+        .social-btn--x{background:#000}
+        .social-btn--linkedin{background:#0A66C2}
+        .social-btn--youtube{background:#FF0000}
+        .social-btn--tiktok{background:#010101}
+        .social-btn--telegram{background:#26A5E4}
+        .social-btn--whatsapp{background:#25D366;color:#000}
+        .social-btn--fiverr{background:#1DBF73}
+        .social-btn--patreon{background:#FF424D}
+        /* AFFILIATES */
+        .affiliates{max-width:900px;margin:0 auto 2.5rem;padding:0 1.5rem}
+        .affiliates__heading{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--clr-ink);margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid var(--clr-accent)}
+        .affiliates__subheading{font-family:var(--font-body);font-size:.95rem;color:var(--clr-ink-muted);margin-bottom:1.75rem}
+        .affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+        .affiliate-card{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:box-shadow .2s,border-color .2s;text-decoration:none;color:inherit}
+        .affiliate-card:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:var(--clr-accent-soft)}
+        .affiliate-card__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+        .affiliate-card__icon--patreon{background:#FF424D;color:#fff}
+        .affiliate-card__icon--amazon{background:#FF9900;color:#111}
+        .affiliate-card__icon--skill{background:#00B89C;color:#fff}
+        .affiliate-card__icon--grammar{background:#15C39A;color:#fff}
+        .affiliate-card__name{font-family:var(--font-display);font-size:.97rem;font-weight:700;color:var(--clr-ink);display:block;margin-bottom:.15rem}
+        .affiliate-card__badge{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:var(--clr-highlight);color:var(--clr-accent);padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+        .affiliate-card__desc{font-family:var(--font-body);font-size:.83rem;color:var(--clr-ink-muted);line-height:1.5}
+        /* CHAPTER NAV */
+        .chapter-nav{max-width:900px;margin:0 auto 3rem;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+        .chapter-nav__btn{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:1.1rem 1.5rem;text-decoration:none;color:var(--clr-ink);font-family:var(--font-body);font-size:.92rem;transition:box-shadow .2s,border-color .2s;display:block}
+        .chapter-nav__btn:hover{border-color:var(--clr-accent-soft);box-shadow:0 2px 12px rgba(11,37,69,.08)}
+        .chapter-nav__label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--clr-ink-muted);display:block;margin-bottom:.2rem}
+        .chapter-nav__title{font-weight:600;color:var(--clr-accent)}
+        .chapter-nav__btn--next{text-align:right}
+        .site-footer{background:var(--clr-deep);color:#8BB4E0;text-align:center;padding:2.5rem 1.5rem;font-size:.82rem;font-family:var(--font-body)}
+        .site-footer__copy{color:#BBDEFB;margin-top:.5rem}
+        .site-footer a{color:#90CAF9}
+        @media(max-width:600px){
+            .hero{padding:3rem 1.25rem 3.5rem}.hero__meta{gap:1.5rem}
+            .article-container{padding:1.5rem 1rem 2rem}.time-allocation{gap:1rem}
+            .affiliates__grid{grid-template-columns:1fr}.chapter-nav{grid-template-columns:1fr}
+            .chapter-nav__btn--next{text-align:left}.social-bar__links{gap:.5rem}
+        }
+    </style>
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="index.html" class="site-header__brand">Lecture Series 6: Organisational Communication</a>
+        <a href="index.html" class="site-header__nav">&#8592; Series Home</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero__badge">Lecture Series 6 &bull; Chapter 3 &bull; Organisational Communication</div>
+    <span class="hero__chapter">Chapter Three</span>
+    <h1 class="hero__title">Theories of Organisational Communication</h1>
+    <p class="hero__subtitle">Linear, interactive and transactional models; classical, human relations and systems theories; contemporary perspectives on transparent communication, privacy management and digital-age communication.</p>
+    <div class="hero__meta">
+        <div class="hero__meta-item"><span class="hero__meta-number">75</span><span class="hero__meta-label">Minutes Study</span></div>
+        <div class="hero__meta-item"><span class="hero__meta-number">10</span><span class="hero__meta-label">Exam Questions</span></div>
+        <div class="hero__meta-item"><span class="hero__meta-number">10</span><span class="hero__meta-label">References</span></div>
+        <div class="hero__meta-item"><span class="hero__meta-number">8</span><span class="hero__meta-label">Key Sections</span></div>
+    </div>
+</section>
+
+<!-- TIME BAR -->
+<div class="time-allocation">
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--read">R</span><span>Reading: 25 mins</span></div>
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--study">S</span><span>Study &amp; Notes: 25 mins</span></div>
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--practice">P</span><span>Practice Questions: 25 mins</span></div>
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--total">T</span><span>Total: 75 mins</span></div>
+</div>
+
+<!-- TOP AD -->
+<div class="article-container" style="padding-bottom:0;">
+    <div class="ad-placeholder">&#9634; AdSense Advertisement &#8212; Coming Soon</div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-container">
+<article class="article-body">
+
+    <nav class="toc" aria-label="Table of Contents">
+        <div class="toc__heading">In This Chapter</div>
+        <ol>
+            <li><a href="#s1">Introduction</a></li>
+            <li><a href="#s2">Why Theories Matter for Organisational Communicators</a></li>
+            <li><a href="#s3">The Linear Model of Communication</a></li>
+            <li><a href="#s4">The Interactive Model of Communication</a></li>
+            <li><a href="#s5">The Transactional Model of Communication</a></li>
+            <li><a href="#s6">Classical Theories of Organisational Communication</a></li>
+            <li><a href="#s7">Human Relations and Human Resources Theories</a></li>
+            <li><a href="#s8">Contemporary Theoretical Perspectives</a></li>
+            <li><a href="#exam">Examination Practice Questions</a></li>
+            <li><a href="#references">References</a></li>
+        </ol>
+    </nav>
+
+    <!-- 1. INTRODUCTION -->
+    <h2 id="s1">1. Introduction</h2>
+    <p class="lead-paragraph">Theory is not the opposite of practice — it is the foundation of it. A communicator who understands why communication succeeds and fails, which forces shape the flow of messages in organisations, and how different theoretical frameworks explain the relationship between communication and organisational behaviour is a communicator who can diagnose problems accurately, design effective interventions, and make principled decisions about how to communicate in complex situations.</p>
+
+    <p>The study of organisational communication has generated a rich body of theory over the past century, moving from early mechanistic models that treated communication as simple message transmission to sophisticated contemporary frameworks that understand communication as the fundamental process through which organisations are created, sustained, and transformed. Each theoretical framework reflects the intellectual assumptions and social conditions of its time, and each captures something true about the communication process even as it leaves other things out.</p>
+
+    <p>This chapter surveys the major theories and models that inform the study and practice of organisational communication. It begins with the foundational communication process models — linear, interactive, and transactional — before examining the three main traditions of organisational communication theory: classical, human relations, and systems perspectives. It concludes with an overview of contemporary theoretical developments that address the particular communication challenges of modern organisations, including the digital and social media environments that increasingly define how organisations communicate internally and externally.</p>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement &#8212; Coming Soon</div>
+
+    <!-- 2. WHY THEORIES MATTER -->
+    <h2 id="s2">2. Why Theories Matter for Organisational Communicators</h2>
+    <p>Students sometimes approach theoretical content with impatience, asking why they should study abstract frameworks when what they really need is practical communication skills. The answer is that theory and practice are inseparable — every practical communication decision rests on theoretical assumptions, whether the decision-maker is aware of those assumptions or not.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — The Role of Theory in Communication Practice</div>
+        <p>A manager who sends all important messages by email, never considers the emotional impact of her communication, and is surprised when employees feel disrespected and uninformed is implicitly operating on a theoretical assumption: that communication is simply the transmission of information from sender to receiver, and that if the information has been sent it has been communicated. This is the linear model of communication — and it is wrong, or at least radically incomplete.</p>
+        <p>A manager who understands the transactional model of communication — who knows that meaning is co-created by sender and receiver, that communication is shaped by the emotional and relational context, and that non-verbal cues are often more powerful than verbal content — will make fundamentally different and more effective communication decisions. She will choose rich channels for emotionally significant messages, check for understanding rather than assuming it, and pay as much attention to how she communicates as to what she communicates.</p>
+        <p>Theory, in short, gives communicators a map. The map is not the territory — no theory perfectly captures the complexity of real communication — but a good map enables navigation that would otherwise be impossible. As Neuberger, Lemos, and Watkins (2023) observed, the most effective organisational communicators are those who draw on theoretical frameworks consciously and critically, using them as lenses that illuminate different aspects of complex communication situations rather than as rigid rules to be applied mechanically.</p>
+    </div>
+
+    <!-- 3. LINEAR MODEL -->
+    <h2 id="s3">3. The Linear Model of Communication</h2>
+    <p>The linear model is the earliest and most intuitive model of communication, and despite its limitations it remains deeply embedded in everyday assumptions about how communication works. It was most influentially articulated by Shannon and Weaver in their 1949 mathematical theory of communication, which was developed originally for engineering purposes but rapidly became the dominant framework in communication studies.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — The Linear (Transmission) Model</div>
+        <p>The <strong>linear model</strong> conceptualises communication as a one-directional process in which a sender encodes a message, transmits it through a channel, and a receiver decodes it. The process is analogous to sending a letter: the writer composes the message (encoding), puts it in an envelope and posts it (channel), and the reader opens it and reads it (decoding). Noise — anything that distorts or disrupts the message — can interfere at any stage of the process.</p>
+        <p>The model's core components are: <strong>Source (Sender)</strong> → <strong>Encoding</strong> → <strong>Message</strong> → <strong>Channel</strong> → <strong>Decoding</strong> → <strong>Receiver</strong>, with <strong>Noise</strong> potentially disrupting any stage. These elements were introduced in Chapter 1 and form the basis of all subsequent communication models.</p>
+    </div>
+
+    <h3>Strengths of the Linear Model</h3>
+    <p>The linear model has enduring value as a teaching tool because it identifies the key components of any communication act and provides a clear framework for diagnosing where a communication has gone wrong. If a message fails to achieve its purpose, the linear model prompts the analyst to ask: Was the sender's encoding clear? Was the channel appropriate? Did noise interfere? Was the receiver able to decode the message? These are useful diagnostic questions that often identify real problems.</p>
+
+    <h3>Limitations of the Linear Model</h3>
+    <p>However, the linear model fundamentally misrepresents how human communication works in several important ways. First, it treats communication as <strong>one-directional</strong> — the sender sends and the receiver receives, with no provision for feedback, response, or the receiver's active role in constructing meaning. Second, it treats meaning as <strong>fixed and transmittable</strong> — as if the meaning of a message exists in the sender's mind and can be transferred intact into the receiver's mind through the right encoding and channel. In reality, meaning is constructed by the receiver in interaction with the message, and the receiver's construction depends on their cultural background, prior knowledge, emotional state, and relationship with the sender — none of which the linear model addresses. Third, the model treats communication as a <strong>discrete event</strong> — a message is sent, a message is received — rather than as a continuous process embedded in an ongoing relationship and context.</p>
+
+    <div class="example-box">
+        <div class="example-box__label">Workplace Example — The Limits of the Linear Model</div>
+        <p>A factory manager instructs all team leaders via a written notice that overtime will be mandatory next weekend due to a production backlog. From a linear model perspective, the communication is complete: the message has been encoded (the written notice), transmitted through a channel (notice board), and is available for decoding by the receivers (team leaders). The manager assumes that because the message has been sent, it has been communicated.</p>
+        <p>In practice, one team leader is on sick leave and does not see the notice. A second sees it but interprets "mandatory" differently from the manager — he believes it means that volunteers are preferred but that refusing will not be penalised, because that is how the word has been used in this workplace before. A third understands the message correctly but has a family commitment that weekend and is now angry because she was given no opportunity to raise a concern or negotiate. A fourth team leader who was not informed in advance becomes aware of the situation through the grapevine, with added (incorrect) detail that several team leaders have already refused and are facing disciplinary action.</p>
+        <p>The linear model cannot explain or diagnose any of these failures, because it has no concept of feedback, receiver interpretation, relational context, or informal communication. The transactional model, examined in Section 5, provides a more adequate framework for understanding what has gone wrong.</p>
+    </div>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement &#8212; Coming Soon</div>
+
+    <!-- 4. INTERACTIVE MODEL -->
+    <h2 id="s4">4. The Interactive Model of Communication</h2>
+    <p>The interactive model was developed in the 1950s and 1960s to address the most obvious limitation of the linear model: its failure to account for feedback. By adding feedback as a formal element of the communication process, the interactive model acknowledged that communication is not simply sending but a cyclical process of sending and responding.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — The Interactive Model</div>
+        <p>The <strong>interactive model</strong> extends the linear model by adding two crucial elements: <strong>feedback</strong> and <strong>field of experience</strong>. Feedback is the receiver's response to the message, which is itself transmitted back to the sender through a channel, potentially triggering a further response. This creates a back-and-forth cycle — the beginning of what we recognise as conversation.</p>
+        <p>The concept of <strong>field of experience</strong> — introduced by Wilbur Schramm in the 1950s — captures the insight that senders and receivers do not communicate from neutral positions. Each party brings to the communication their own accumulated experience, cultural background, knowledge, values, attitudes, and emotional history. Effective communication occurs within the area of <em>shared</em> field of experience — the overlap between what the sender and receiver both understand and relate to. Where their fields of experience do not overlap — where the sender assumes knowledge or shares cultural references the receiver does not have — communication is likely to fail or be impoverished.</p>
+    </div>
+
+    <h3>Strengths and Limitations of the Interactive Model</h3>
+    <p>The interactive model represents a significant advance over the linear model because it acknowledges that communication is a two-way process and that the backgrounds of sender and receiver actively shape how messages are encoded and decoded. These insights are practically important: they explain why the same message can be received very differently by people from different cultural, educational, or organisational backgrounds, and they highlight the importance of checking for understanding rather than assuming that a message sent is a message understood.</p>
+    <p>However, the interactive model still conceptualises communication as a sequential process — sender sends, receiver responds, sender responds to the response — rather than recognising that in real human communication, both parties are simultaneously sending and receiving signals. A speaker adjusts her message in real time as she observes the listener's facial expressions, posture, and murmured responses; a listener is communicating non-verbal signals — interest, confusion, agreement, boredom — throughout the speaker's turn. The interactive model's turn-taking structure cannot capture this simultaneous, multidimensional reality, which the transactional model addresses.</p>
+
+    <!-- 5. TRANSACTIONAL MODEL -->
+    <h2 id="s5">5. The Transactional Model of Communication</h2>
+    <p>The transactional model is the most sophisticated and most accurate of the three foundational communication models, and it is the framework that best reflects how communication actually works in organisational settings. It was developed by Dean Barnlund and others in the 1970s and has become the dominant model in contemporary communication studies.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — The Transactional Model</div>
+        <p>The <strong>transactional model</strong> makes three fundamental shifts from the linear and interactive models:</p>
+        <p><strong>1. Simultaneous sending and receiving:</strong> In the transactional model, all parties in a communication are simultaneously senders and receivers. There is no sequential turn-taking — at every moment, each participant is both transmitting signals (through words, tone of voice, facial expression, posture, and gesture) and receiving and processing signals from the other(s). Communication is a continuous, dynamic, mutually constituted process, not a sequence of discrete message-sending events.</p>
+        <p><strong>2. Meaning is co-created:</strong> Meaning is not transmitted from sender to receiver; it is <em>negotiated</em> between them. The meaning of a message is not fixed in the sender's intention but emerges from the interaction between the sender's encoding, the receiver's decoding, and the relational, cultural, and situational context in which the communication takes place. Two people receiving the same message will construct different meanings; the same person receiving the same message in different contexts or emotional states may construct different meanings at different times.</p>
+        <p><strong>3. Communication is embedded in context:</strong> The transactional model recognises that communication never happens in a vacuum. Every communication act is shaped by three layers of context: the <em>physical environment</em> (where the communication takes place), the <em>psychological context</em> (the emotional states, relationship history, and cultural frameworks each party brings to the interaction), and the <em>social and organisational context</em> (the norms, power relationships, and cultural expectations of the institution in which the communication occurs).</p>
+    </div>
+
+    <div class="example-box">
+        <div class="example-box__label">Workplace Example — The Transactional Model in Action</div>
+        <p>A senior manager calls a junior employee into his office to discuss her performance. From the moment they are in the same room, both parties are communicating simultaneously. The manager leans back in his chair, a posture the employee reads as relaxed confidence but which could also signal authority and distance. She sits slightly forward, which the manager reads as attentiveness but which is actually anxiety — she is uncertain why she has been called in. The manager begins with what he intends as a warm, friendly opener — "So, how do you think things have been going?" — but the employee, interpreting the question through her anxiety and her awareness that this manager rarely asks open questions, reads it as a veiled warning that something is wrong. She answers defensively, which the manager interprets as evasiveness. Within two minutes, a conversation intended to be a supportive performance discussion has become tense and unproductive — not because of any failure of the linear communication process (the right words were used, the channel was appropriate, there was no physical noise) but because of the transactional dynamics: the simultaneous signals, the co-constructed meanings, and the powerful influence of psychological context on how every signal was interpreted.</p>
+    </div>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement &#8212; Coming Soon</div>
+
+    <!-- 6. CLASSICAL THEORIES -->
+    <h2 id="s6">6. Classical Theories of Organisational Communication</h2>
+    <p>Beyond models of the communication process itself, organisational communication scholars have developed broader theories that explain how communication functions within the particular context of formal organisations. The classical tradition — the earliest and most foundational body of organisational theory — approached organisations primarily as machines and communication primarily as the transmission of instructions.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Classical Organisational Theory and Communication</div>
+        <p>Classical organisational theory, associated with the work of Frederick Winslow Taylor (Scientific Management), Henri Fayol (Administrative Management), and Max Weber (Bureaucratic Theory), emerged in the late 19th and early 20th centuries. Its core assumptions about communication can be summarised in three propositions:</p>
+        <p><strong>1. Communication is primarily downward:</strong> In classical theory, organisations are hierarchical structures in which authority flows from top to bottom. Communication correspondingly flows primarily downward — from management to workers. The primary communicative function is the transmission of instructions, rules, and procedures. Upward communication — from workers to management — was largely absent from classical frameworks, because workers were not expected to contribute ideas or raise concerns; they were expected to follow instructions.</p>
+        <p><strong>2. Communication should be formal and rule-governed:</strong> Weber's bureaucratic model was explicitly built around formal, written communication — documented rules, procedures, and records that could be verified, appealed, and held accountable. Informal communication was viewed with suspicion as a potential source of inconsistency, bias, and deviation from established procedures.</p>
+        <p><strong>3. People are rational and respond primarily to economic incentives:</strong> Classical theory assumed that workers are motivated primarily by financial reward and that they respond to clear, specific instructions about what they must do to earn that reward. The rich, emotionally nuanced communication that motivates and engages human beings was largely invisible within this framework.</p>
+        <p>The classical tradition's legacy in modern organisations is substantial. Formal communication structures — organisational charts, reporting lines, written policies, meeting minutes, and official correspondence — all reflect classical assumptions about the importance of formalised, hierarchical communication. Oduaran and Okojie (2023) found that Nigerian public sector organisations retain strongly classical communication patterns, with heavily formalised, predominantly downward communication and relatively underdeveloped channels for upward and horizontal information flow.</p>
+    </div>
+
+    <h3>Critique of the Classical Tradition</h3>
+    <p>The principal limitation of classical organisational communication theory is its radical underestimation of the human dimension of communication. By treating workers as rational economic actors and communication as instruction transmission, classical theory produced organisations that were efficient at transmitting orders but chronically poor at listening, building engagement, managing conflict, sharing knowledge, and responding to the complex emotional and social needs of their members. The human relations tradition emerged specifically in response to these failures.</p>
+
+    <!-- 7. HUMAN RELATIONS AND HUMAN RESOURCES -->
+    <h2 id="s7">7. Human Relations and Human Resources Theories</h2>
+    <p>The human relations movement in organisational theory emerged from the famous Hawthorne Studies conducted at the Western Electric Company between 1924 and 1933. Led by Elton Mayo and his colleagues, the studies produced a surprising finding: workers' productivity was more strongly influenced by social relationships, group norms, and the experience of being paid attention to than by the physical conditions of work or the economic incentives that classical theory had emphasised.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Human Relations Theory and Communication</div>
+        <p>The <strong>human relations perspective</strong> transformed the understanding of organisational communication in several fundamental ways:</p>
+        <p><strong>1. Communication serves social as well as instrumental functions:</strong> The Hawthorne Studies demonstrated that workers communicated not only to coordinate tasks (instrumental communication) but to build relationships, share emotions, establish group norms, and create a sense of belonging (social communication). Both functions are important for organisational effectiveness, and an organisation that attends only to instrumental communication impoverishes its members and ultimately undermines its own performance.</p>
+        <p><strong>2. Informal communication is as important as formal communication:</strong> The Hawthorne researchers discovered that informal communication — the conversations, gossip, and shared understandings that develop among workers outside of official channels — powerfully shapes attitudes, norms, and behaviour. They found that informal group norms about productivity (how much output was "fair" per day) were enforced through social communication and were significantly more powerful determinants of actual output than the formal productivity incentives management had put in place.</p>
+        <p><strong>3. Listening is as important as telling:</strong> Mayo's research produced a therapeutic insight: simply being listened to — having a manager pay genuine attention to a worker's concerns and experiences — improved morale and productivity significantly. This finding established listening, rather than telling, as the foundational communication skill for organisational managers.</p>
+        <p><strong>4. Upward communication must be actively encouraged:</strong> The human relations tradition shifted attention to upward communication — the flow of information, ideas, concerns, and feedback from employees to management. Ruck and Welch (2022) extended this tradition with their research on "employee voice" — the importance of creating communication structures through which employees can genuinely contribute their perspectives, ideas, and concerns to organisational decision-making.</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Human Resources Theory: The Next Step</div>
+        <p>The <strong>human resources perspective</strong>, associated with scholars like Douglas McGregor (Theory X and Theory Y) and Rensis Likert, extended the human relations tradition by arguing that the goal of organisational communication should not merely be to make workers <em>feel</em> valued (as human relations theory risked implying) but to actually <em>use</em> the knowledge, creativity, and problem-solving capacity that all employees possess. The human resources perspective argues that most organisations systematically waste the intellectual and creative potential of their members by failing to create communication structures through which that potential can be expressed and deployed.</p>
+        <p>McGregor's Theory Y — which assumed that workers are naturally motivated, creative, and capable of self-direction when given the right conditions — had direct communication implications. A Theory Y manager creates genuinely participative communication processes, actively solicits employee input, communicates honestly about the organisation's challenges and direction, and trusts employees with the information they need to make good decisions. Yue, Men, and Ferguson (2021) confirmed this tradition's insights in finding that transparent, two-way organisational communication is one of the strongest predictors of employee engagement, identification, and voluntary effort.</p>
+    </div>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement &#8212; Coming Soon</div>
+
+    <!-- 8. CONTEMPORARY PERSPECTIVES -->
+    <h2 id="s8">8. Contemporary Theoretical Perspectives</h2>
+    <p>The late 20th and early 21st centuries have produced a proliferation of theoretical perspectives in organisational communication, reflecting the increasing complexity, diversity, and digital transformation of modern organisational life. Four frameworks deserve particular attention for students of organisational communication: Systems Theory, the Theory of Transparent Communication, Communication Privacy Management Theory, and the emerging body of research on digital and social media communication in organisations.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Systems Theory and Organisational Communication</div>
+        <p><strong>Systems Theory</strong>, applied to organisations by scholars including Katz and Kahn, conceptualises an organisation as an open system — a complex, interdependent whole whose components are in continuous interaction with each other and with the external environment. Communication, in systems theory, is not merely one function among many but the medium through which the system's components coordinate, adapt, and maintain themselves.</p>
+        <p>Several systems concepts have direct implications for organisational communication. <strong>Interdependence</strong> means that a communication failure in one part of the system (a department that fails to share information with another) creates effects that ripple through the entire system. <strong>Equifinality</strong> means that there are multiple possible communication pathways to any goal — no single communication structure is the "right" one for all organisations. <strong>Negative entropy</strong> refers to the organisation's need to continuously import information from its environment to avoid decline — external communication with customers, regulators, suppliers, and the public is therefore not a luxury but a survival necessity. <strong>Feedback loops</strong> — the mechanisms through which the system receives information about its own performance and adjusts accordingly — are central to organisational communication: organisations that lack effective feedback mechanisms cannot learn, adapt, or improve.</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — The Theory of Transparent Organisational Communication</div>
+        <p>One of the most significant contemporary developments in organisational communication theory is the increasing attention to <strong>transparency</strong> as both a communication practice and an organisational value. Men and Yue (2024) define organisational communication transparency as the degree to which an organisation's communication is characterised by openness (sharing relevant information proactively and completely), accountability (acknowledging responsibility for actions and decisions), and participation (creating genuine opportunities for stakeholders to engage with the organisation's communication processes).</p>
+        <p>Their research found that transparent communication by organisational leaders is one of the strongest predictors of employee trust, engagement, and organisational identification. Crucially, transparency is not the same as openness without judgment — there are legitimate reasons why some information cannot or should not be shared. Genuine transparency involves being honest about what can and cannot be shared, and explaining why, rather than either withholding information without explanation or sharing information indiscriminately.</p>
+        <p>The growing emphasis on transparency also reflects the changed communication environment created by social media. In an era when employees, customers, and journalists can publicly share their experiences of organisations in real time, organisations that attempt to control information through opacity are increasingly likely to find that the information emerges through less favourable channels — social media, whistleblowers, or investigative journalism — than it would have done through transparent official communication.</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Communication Privacy Management Theory</div>
+        <p><strong>Communication Privacy Management (CPM) Theory</strong>, developed by Sandra Petronio, addresses a tension that is central to all organisational communication: the tension between openness and privacy. CPM theory proposes that individuals and organisations manage private information through a system of implicit rules about what information can be shared with whom, when, and through what channels. These rules constitute "privacy boundaries" that regulate the flow of personal and sensitive information.</p>
+        <p>In organisational settings, CPM theory helps explain several important communication phenomena. Employees exercise privacy management in deciding what personal information to share with managers — about health conditions, family difficulties, financial problems, or political views — and what to withhold. Organisations face privacy management challenges in handling sensitive data about employees, customers, and stakeholders, and in deciding how to respond when private information is inadvertently or deliberately disclosed. Whistleblowing — the disclosure of information about organisational wrongdoing — represents a dramatic breach of organisational privacy boundaries that is simultaneously a critical mechanism of accountability and transparency.</p>
+        <p>CPM theory has become increasingly relevant in the age of digital communication, where the boundaries between personal and professional communication are increasingly blurred. Employees who communicate on social media — even from personal accounts — may find that their private communications are treated as organisational communication if they mention their employer. Neuberger, Lemos, and Watkins (2023) identified the management of digital privacy boundaries as one of the most significant emerging challenges in contemporary organisational communication.</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Digital Age Communication Theory</div>
+        <p>The digital transformation of organisational communication has stimulated a new body of theoretical work that addresses the distinctive characteristics of communication in digital environments. Several insights from this emerging literature are particularly important for students of organisational communication:</p>
+        <p><strong>Always-on communication culture:</strong> Digital communication tools have created an expectation of continuous availability that blurs the boundaries between work time and personal time. Welch (2022) found that always-on communication cultures create chronic information overload and boundary violations that damage employee wellbeing and paradoxically reduce the quality of communication by overwhelming employees' capacity to process and respond thoughtfully to the messages they receive.</p>
+        <p><strong>The collapse of context:</strong> Social media and digital communication collapse the contextual boundaries that previously separated different audiences and communication registers. A message shared on a professional platform reaches personal contacts; a personal post on a social network reaches professional contacts. This collapse of context creates new risks — what is appropriate in one context may be deeply inappropriate in another — and requires sophisticated contextual awareness from all organisational communicators.</p>
+        <p><strong>Algorithmic mediation:</strong> On social media platforms, the messages that audiences actually see are not determined by the sender but by algorithms that prioritise content based on engagement, relevance, and commercial factors. Organisations that communicate through social media must understand that they do not fully control whether, when, or how their messages reach their intended audiences.</p>
+        <p><strong>Communication as co-creation:</strong> Digital and social media have fundamentally changed the relationship between organisations and their audiences. Where organisations once broadcast messages to passive audiences, they now communicate in environments where audiences actively respond, share, reinterpret, parody, challenge, and transform organisational messages. Mbarushimana and Allida (2022) identified the management of this co-creative communication environment as one of the most significant challenges facing contemporary organisational communicators.</p>
+    </div>
+
+    <div class="example-box">
+        <div class="example-box__label">Workplace Example — Theories Applied: Diagnosing a Communication Failure</div>
+        <p>A Nigerian telecommunications company launches a new customer data protection policy and communicates it to employees through a company-wide email from the Chief Compliance Officer. The email is formal, detailed, and legally precise. Three months later, an audit reveals that a significant proportion of employees are not following the new procedures, and that several customers have complained about their data being handled incorrectly.</p>
+        <p>Each of the theoretical frameworks examined in this chapter offers a different diagnostic lens for understanding what went wrong:</p>
+        <p>The <strong>linear model</strong> would focus on whether the message was correctly encoded and transmitted — but the investigation reveals that the email was in fact received by all employees, so the linear model offers limited insight beyond identifying that a channel problem (an email easily deleted) may have contributed.</p>
+        <p><strong>Transactional model analysis</strong> reveals that employees from different departments and levels of seniority constructed very different meanings from the policy document — some interpreted "customer data" narrowly, others broadly; some understood the new procedures as adding to existing ones, others as replacing them. The co-constructed meanings diverged significantly from the sender's intention.</p>
+        <p><strong>Classical theory analysis</strong> would note that the policy was communicated formally and downward — consistent with classical communication norms — but would miss the fact that employees were given no opportunity to ask questions, raise concerns, or indicate whether they had understood and committed to the new procedures.</p>
+        <p><strong>Human relations analysis</strong> would highlight the absence of upward communication mechanisms: employees who were uncertain about the policy had no safe or clear channel through which to raise their uncertainty, and many simply muddled through with their existing practices rather than admit confusion to a superior.</p>
+        <p><strong>Systems theory analysis</strong> would note that the feedback loops were absent — there was no mechanism for the organisation to discover whether the policy communication had achieved its purpose until the audit, three months later. By that time, incorrect practices had become habitual.</p>
+        <p><strong>CPM theory analysis</strong> would observe that some employees may have been reluctant to admit that they did not fully understand the policy because they viewed their lack of understanding as private information that reflected poorly on their competence and that they did not wish to disclose to management.</p>
+        <p>The remediation requires insights from multiple theoretical frameworks simultaneously: richer, more participative communication of the policy (transactional model); genuinely accessible upward communication channels for questions and concerns (human relations); feedback mechanisms to verify understanding and compliance (systems theory); a psychologically safe communication culture in which uncertainty can be expressed without shame (human relations and CPM theory).</p>
+    </div>
+
+    <!-- EXAM QUESTIONS -->
+    <div class="exam-section" id="exam">
+        <div class="exam-section__label">Examination Practice Questions — Chapter 3</div>
+        <p class="exam-section__instruction">Attempt all ten questions. Allocate your time according to the marks available. Where a question asks you to "compare," "evaluate," or "apply," demonstrate your ability to use theoretical frameworks analytically, not merely to describe them.</p>
+        <ol>
+            <li><strong>(10 marks)</strong> Explain why theoretical frameworks are important for organisational communicators. Use a concrete example to demonstrate how different theoretical assumptions lead to different communication decisions and outcomes.</li>
+            <li><strong>(15 marks)</strong> Describe the linear model of communication, including all its key components. Identify three specific limitations of the linear model as a framework for understanding communication in organisations, and explain why each limitation matters in practice.</li>
+            <li><strong>(15 marks)</strong> Explain the interactive model of communication. What two elements does it add to the linear model, and how do these additions improve the model's explanatory power? Identify one remaining limitation that the interactive model shares with the linear model.</li>
+            <li><strong>(20 marks)</strong> Explain the transactional model of communication and its three fundamental differences from the linear model. Using an original workplace example of your own, demonstrate how the transactional model provides a more complete account of a communication event than the linear model would.</li>
+            <li><strong>(15 marks)</strong> Describe classical organisational communication theory. What assumptions does it make about the purpose and direction of organisational communication? Drawing on the work of Oduaran and Okojie (2023), explain how classical communication patterns manifest in Nigerian public sector organisations today.</li>
+            <li><strong>(20 marks)</strong> Compare and contrast the human relations and human resources perspectives on organisational communication. What insights did the Hawthorne Studies contribute? How does the work of Yue, Men, and Ferguson (2021) connect to and extend the human resources tradition?</li>
+            <li><strong>(15 marks)</strong> Explain Systems Theory as a framework for understanding organisational communication. Define the concepts of interdependence, feedback loops, and negative entropy, and explain the communication implications of each concept for a large organisation of your choice.</li>
+            <li><strong>(15 marks)</strong> Define transparent organisational communication as described by Men and Yue (2024). Explain the distinction between genuine transparency and either indiscriminate information sharing or managed opacity. Why has the rise of social media increased the organisational imperative for transparent communication?</li>
+            <li><strong>(15 marks)</strong> Explain Communication Privacy Management (CPM) Theory and discuss its relevance to organisational communication. Identify two specific situations in which CPM theory helps explain communication behaviours that other theories would struggle to account for.</li>
+            <li><strong>(20 marks)</strong> Using the telecommunications company case study from this chapter as a starting point, construct your own analysis of a communication failure in an organisation you are familiar with. Apply at least three of the theoretical frameworks discussed in this chapter and explain what each framework reveals that the others do not.</li>
+        </ol>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references" id="references">
+        <h2>References</h2>
+        <ul>
+            <li>Ishii, K., Lyons, M.M. and Carr, S.A. (2020) 'Revisiting media richness theory for today and future', <em>Human Behavior and Emerging Technologies,</em> 2(2), pp. 124–131.</li>
+            <li>Mbarushimana, N. and Allida, D. (2022) 'Communication barriers and organisational effectiveness: An empirical review', <em>International Journal of Applied Research in Management and Economics,</em> 5(1), pp. 18–32.</li>
+            <li>Men, L.R. and Yue, C.A. (2024) 'Creating a transparent organisational culture: The role of leadership communication', <em>Journal of Communication Management,</em> 28(1), pp. 42–59.</li>
+            <li>Mroz, J.E., Allen, J.A., Verhoeven, D.C. and Shuffler, M.L. (2023) 'Meeting design characteristics and attendee perceptions of staff and team meeting quality', <em>Group Dynamics: Theory, Research, and Practice,</em> 27(2), pp. 98–113.</li>
+            <li>Neuberger, L., Lemos, M. and Watkins, B. (2023) 'Organisational communication in the digital age: Challenges and opportunities', <em>Journal of Applied Communication Research,</em> 51(1), pp. 34–52.</li>
+            <li>Oduaran, C.A. and Okojie, O.M. (2023) 'Written communication and institutional memory in Nigerian public sector organisations', <em>African Journal of Business Management,</em> 17(3), pp. 65–78.</li>
+            <li>Ruck, K. and Welch, M. (2022) 'Exploring internal communication: Towards informed employee voice', <em>Corporate Communications: An International Journal,</em> 27(3), pp. 529–544.</li>
+            <li>Verčič, A.T. and Špoljarić, A. (2020) 'Managing internal communication: How the choice of channels affects internal communication satisfaction', <em>Public Relations Review,</em> 46(3), pp. 101–113.</li>
+            <li>Welch, M. (2022) 'Internal communication and information overload: A framework for managing employee engagement', <em>Employee Relations,</em> 44(5), pp. 1120–1138.</li>
+            <li>Yue, C.A., Men, L.R. and Ferguson, M.A. (2021) 'Examining the effects of internal communication and emotional culture on employees' organisational identification', <em>International Journal of Business Communication,</em> 58(2), pp. 169–195.</li>
+        </ul>
+    </div>
+
+</article>
+</div>
+
+<!-- SOCIAL MEDIA BAR -->
+<div class="social-bar">
+    <div class="social-bar__inner">
+        <p class="social-bar__heading">Follow Us &amp; Stay Connected</p>
+        <p class="social-bar__sub">Join our community across all platforms for updates, blogs, and more learning resources</p>
+        <div class="social-bar__links">
+            <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--facebook">f &nbsp;Facebook</a>
+            <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--instagram">&#9685; Instagram</a>
+            <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--x">&#120143; X / Twitter</a>
+            <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--linkedin">in LinkedIn</a>
+            <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--youtube">&#9654; YouTube</a>
+            <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--tiktok">&#9835; TikTok</a>
+            <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--telegram">&#10148; Telegram</a>
+            <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--whatsapp">&#128172; WhatsApp</a>
+            <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--fiverr">&#9650; Fiverr</a>
+            <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="social-btn social-btn--patreon">P Patreon</a>
+        </div>
+    </div>
+</div>
+
+<!-- AFFILIATES -->
+<section class="affiliates">
+    <h2 class="affiliates__heading">Our Affiliates &amp; Community</h2>
+    <p class="affiliates__subheading">Support the series and enhance your studies through our trusted partners</p>
+    <div class="affiliates__grid">
+        <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--patreon">P</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Patreon &#8212; Support Us <span class="affiliate-card__badge">Community</span></span>
+                <span class="affiliate-card__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/s?k=organisational+communication+textbook&tag=ls6-20" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--amazon">A</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Amazon &#8212; Textbooks <span class="affiliate-card__badge">Books</span></span>
+                <span class="affiliate-card__desc">Recommended organisational communication textbooks and study guides, delivered to your door.</span>
+            </div>
+        </a>
+        <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--skill">S</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Skillshare &#8212; Online Courses <span class="affiliate-card__badge">Learning</span></span>
+                <span class="affiliate-card__desc">Online courses in business communication, leadership, and writing skills to complement your studies.</span>
+            </div>
+        </a>
+        <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--grammar">G</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Grammarly Premium <span class="affiliate-card__badge">Writing</span></span>
+                <span class="affiliate-card__desc">Write clearer, error-free essays and assignments. Essential for exam answers and academic writing.</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- CHAPTER NAVIGATION -->
+<nav class="chapter-nav" aria-label="Chapter navigation">
+    <a href="lecture-series-6-chapter-2.html" class="chapter-nav__btn">
+        <span class="chapter-nav__label">&#8592; Previous Chapter</span>
+        <span class="chapter-nav__title">Chapter 2: Channels of Communication</span>
+    </a>
+    <a href="lecture-series-6-chapter-4.html" class="chapter-nav__btn chapter-nav__btn--next">
+        <span class="chapter-nav__label">Next Chapter &#8594;</span>
+        <span class="chapter-nav__title">Chapter 4: Vertical Communication</span>
+    </a>
+</nav>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+    <p>Lecture Series 6: Organisational Communication &middot; Chapter 3 &middot; Designed for Tertiary Institutions</p>
+    <p class="site-footer__copy">Support us on <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener">Patreon</a></p>
+    <p class="site-footer__copy">&copy; 2026. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

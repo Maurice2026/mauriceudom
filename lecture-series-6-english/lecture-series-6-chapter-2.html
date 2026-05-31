@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lecture Series 6 Chapter 2: Channels of Communication in Organisations — Media richness theory, oral and written channels, digital and social media channels, channel selection, and managing multi-channel communication.">
+    <meta name="keywords" content="Lecture Series 6, channels of communication, media richness theory, oral communication, written communication, digital communication, social media, channel selection, organisational communication">
+    <meta name="author" content="Lecture Series 6: Organisational Communication">
+    <title>Lecture Series 6 — Chapter 2: Channels of Communication in Organisations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --clr-deep:#0B2545;--clr-bg:#FDFAF6;--clr-surface:#FFFFFF;--clr-ink:#1A1A1A;
+            --clr-ink-light:#4A4A4A;--clr-ink-muted:#7A7A7A;--clr-accent:#0A3D91;
+            --clr-accent-soft:#1565C0;--clr-border:#D6CFC4;--clr-highlight:#E8F0FE;
+            --clr-aside-bg:#F0F4FA;
+            --font-display:'Playfair Display',Georgia,serif;
+            --font-body:'Source Serif 4',Georgia,serif;
+            --font-mono:'JetBrains Mono','Courier New',monospace;
+        }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:var(--font-body);font-size:1.075rem;line-height:1.82;color:var(--clr-ink);background-color:var(--clr-bg);-webkit-font-smoothing:antialiased}
+        .site-header{background:var(--clr-deep);padding:1.25rem 0;border-bottom:4px solid var(--clr-accent-soft)}
+        .site-header__inner{max-width:900px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+        .site-header__brand{font-family:var(--font-display);font-size:1.05rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#FDFAF6;text-decoration:none}
+        .site-header__nav{font-family:var(--font-body);font-size:.85rem;color:#8BB4E0;text-decoration:none}
+        .site-header__nav:hover{color:#BBDEFB}
+        .hero{background:var(--clr-deep);padding:4rem 1.5rem 4.5rem;text-align:center;position:relative;overflow:hidden}
+        .hero__badge{display:inline-block;font-family:var(--font-mono);font-size:.68rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#90CAF9;border:1px solid rgba(144,202,249,.25);padding:.4rem 1.25rem;border-radius:2px;margin-bottom:1.75rem}
+        .hero__chapter{font-family:var(--font-mono);font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#BBDEFB;margin-bottom:.75rem;display:block}
+        .hero__title{font-family:var(--font-display);font-size:clamp(1.9rem,5vw,3.2rem);font-weight:900;color:#FFF;line-height:1.15;max-width:700px;margin:0 auto 1.25rem;letter-spacing:-.01em}
+        .hero__subtitle{font-family:var(--font-body);font-size:1.05rem;font-weight:300;color:#BBDEFB;max-width:580px;margin:0 auto 2rem;line-height:1.7}
+        .hero__meta{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-top:.5rem}
+        .hero__meta-item{text-align:center}
+        .hero__meta-number{font-family:var(--font-display);font-size:1.75rem;font-weight:800;color:#FFF;display:block;line-height:1}
+        .hero__meta-label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#90CAF9;margin-top:.3rem;display:block}
+        .time-allocation{background:#061E40;padding:.85rem 1.5rem;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+        .time-allocation__item{display:flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.78rem;color:#BBDEFB}
+        .time-allocation__icon{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.6rem;font-weight:700}
+        .time-allocation__icon--read{background:#1565C0;color:#FFF}
+        .time-allocation__icon--study{background:#2E7D32;color:#FFF}
+        .time-allocation__icon--practice{background:#E65100;color:#FFF}
+        .time-allocation__icon--total{background:#FFF;color:#061E40}
+        .article-container{max-width:820px;margin:0 auto;padding:2.5rem 2rem 3rem}
+        .article-body{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:clamp(1.75rem,4vw,3rem);box-shadow:0 1px 3px rgba(0,0,0,.04)}
+        .toc{background:var(--clr-aside-bg);border-left:3px solid var(--clr-accent);padding:1.5rem 2rem;margin-bottom:2.5rem;border-radius:0 2px 2px 0}
+        .toc__heading{font-family:var(--font-display);font-size:.95rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--clr-accent);margin-bottom:.75rem}
+        .toc ol{list-style:none;counter-reset:toc-counter;padding:0}
+        .toc li{counter-increment:toc-counter;margin-bottom:.35rem}
+        .toc li::before{content:counter(toc-counter)".";font-family:var(--font-mono);font-size:.8rem;color:var(--clr-accent);margin-right:.5rem;font-weight:600}
+        .toc a{font-family:var(--font-body);font-size:.95rem;color:var(--clr-ink);text-decoration:none;border-bottom:1px dotted var(--clr-border)}
+        .toc a:hover{color:var(--clr-accent)}
+        .article-body h2{font-family:var(--font-display);font-size:1.55rem;font-weight:700;color:var(--clr-ink);margin:2.5rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid var(--clr-border);line-height:1.25}
+        .article-body h3{font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--clr-ink);margin:1.75rem 0 .75rem}
+        .article-body p{margin-bottom:1.1rem}
+        .article-body p:last-child{margin-bottom:0}
+        .lead-paragraph{font-size:1.15rem;font-weight:500;line-height:1.75;color:var(--clr-ink)}
+        .key-concept{background:var(--clr-aside-bg);border-left:4px solid var(--clr-accent);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0 2px 2px 0}
+        .key-concept__label{font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--clr-accent);margin-bottom:.6rem}
+        .key-concept p{margin-bottom:.75rem}
+        .key-concept p:last-child{margin-bottom:0}
+        .example-box{background:#FFFBF0;border:1px solid #F0C84A;border-left:4px solid #E6A817;padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0 2px 2px 0}
+        .example-box__label{font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8A5700;margin-bottom:.6rem}
+        .example-box p{margin-bottom:.75rem}
+        .example-box p:last-child{margin-bottom:0}
+        .exam-section{background:#F9F0FA;border:1px solid #C9A0DC;border-left:4px solid #7B2FA0;padding:1.5rem 2rem;margin:2rem 0;border-radius:0 2px 2px 0}
+        .exam-section__label{font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#7B2FA0;margin-bottom:.6rem}
+        .exam-section__instruction{font-style:italic;color:var(--clr-ink-muted);margin-bottom:1rem}
+        .exam-section ol{padding-left:1.5rem}
+        .exam-section li{margin-bottom:.75rem;line-height:1.65}
+        .ad-placeholder{background:var(--clr-aside-bg);border:2px dashed var(--clr-border);border-radius:2px;padding:1.5rem;margin:2rem 0;text-align:center;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--clr-ink-muted)}
+        .references{margin-top:3rem;padding-top:2rem;border-top:2px solid var(--clr-border)}
+        .references h2{border-bottom:none;font-size:1.3rem;margin-bottom:1.25rem}
+        .references ul{list-style:none;padding:0}
+        .references li{font-size:.92rem;color:var(--clr-ink-light);margin-bottom:.85rem;padding-left:2rem;text-indent:-2rem;line-height:1.65}
+        /* SOCIAL BAR */
+        .social-bar{max-width:900px;margin:0 auto 2rem;padding:0 1.5rem}
+        .social-bar__inner{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:1.75rem 2rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+        .social-bar__heading{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--clr-ink);margin-bottom:.3rem}
+        .social-bar__sub{font-family:var(--font-body);font-size:.88rem;color:var(--clr-ink-muted);margin-bottom:1.25rem}
+        .social-bar__links{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+        .social-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1.1rem;border-radius:2px;font-family:var(--font-mono);font-size:.72rem;font-weight:500;letter-spacing:.06em;text-decoration:none;color:#fff;transition:opacity .2s,transform .15s}
+        .social-btn:hover{opacity:.88;transform:translateY(-2px)}
+        .social-btn--facebook{background:#1877F2}
+        .social-btn--instagram{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+        .social-btn--x{background:#000}
+        .social-btn--linkedin{background:#0A66C2}
+        .social-btn--youtube{background:#FF0000}
+        .social-btn--tiktok{background:#010101}
+        .social-btn--telegram{background:#26A5E4}
+        .social-btn--whatsapp{background:#25D366;color:#000}
+        .social-btn--fiverr{background:#1DBF73}
+        .social-btn--patreon{background:#FF424D}
+        /* AFFILIATES */
+        .affiliates{max-width:900px;margin:0 auto 2.5rem;padding:0 1.5rem}
+        .affiliates__heading{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--clr-ink);margin-bottom:.4rem;padding-bottom:.5rem;border-bottom:2px solid var(--clr-accent)}
+        .affiliates__subheading{font-family:var(--font-body);font-size:.95rem;color:var(--clr-ink-muted);margin-bottom:1.75rem}
+        .affiliates__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+        .affiliate-card{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:1.25rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:box-shadow .2s,border-color .2s;text-decoration:none;color:inherit}
+        .affiliate-card:hover{box-shadow:0 4px 16px rgba(11,37,69,.1);border-color:var(--clr-accent-soft)}
+        .affiliate-card__icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;font-weight:700}
+        .affiliate-card__icon--patreon{background:#FF424D;color:#fff}
+        .affiliate-card__icon--amazon{background:#FF9900;color:#111}
+        .affiliate-card__icon--skill{background:#00B89C;color:#fff}
+        .affiliate-card__icon--grammar{background:#15C39A;color:#fff}
+        .affiliate-card__name{font-family:var(--font-display);font-size:.97rem;font-weight:700;color:var(--clr-ink);display:block;margin-bottom:.15rem}
+        .affiliate-card__badge{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;background:var(--clr-highlight);color:var(--clr-accent);padding:.15rem .5rem;border-radius:2px;margin-left:.4rem;vertical-align:middle}
+        .affiliate-card__desc{font-family:var(--font-body);font-size:.83rem;color:var(--clr-ink-muted);line-height:1.5}
+        /* CHAPTER NAV */
+        .chapter-nav{max-width:900px;margin:0 auto 3rem;padding:0 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+        .chapter-nav__btn{background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:2px;padding:1.1rem 1.5rem;text-decoration:none;color:var(--clr-ink);font-family:var(--font-body);font-size:.92rem;transition:box-shadow .2s,border-color .2s;display:block}
+        .chapter-nav__btn:hover{border-color:var(--clr-accent-soft);box-shadow:0 2px 12px rgba(11,37,69,.08)}
+        .chapter-nav__label{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--clr-ink-muted);display:block;margin-bottom:.2rem}
+        .chapter-nav__title{font-weight:600;color:var(--clr-accent)}
+        .chapter-nav__btn--next{text-align:right}
+        .site-footer{background:var(--clr-deep);color:#8BB4E0;text-align:center;padding:2.5rem 1.5rem;font-size:.82rem;font-family:var(--font-body)}
+        .site-footer__copy{color:#BBDEFB;margin-top:.5rem}
+        .site-footer a{color:#90CAF9}
+        @media(max-width:600px){
+            .hero{padding:3rem 1.25rem 3.5rem}.hero__meta{gap:1.5rem}
+            .article-container{padding:1.5rem 1rem 2rem}.time-allocation{gap:1rem}
+            .affiliates__grid{grid-template-columns:1fr}.chapter-nav{grid-template-columns:1fr}
+            .chapter-nav__btn--next{text-align:left}.social-bar__links{gap:.5rem}
+        }
+    </style>
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="index.html" class="site-header__brand">Lecture Series 6: Organisational Communication</a>
+        <a href="index.html" class="site-header__nav">← Series Home</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero__badge">Lecture Series 6 &bull; Chapter 2 &bull; Organisational Communication</div>
+    <span class="hero__chapter">Chapter Two</span>
+    <h1 class="hero__title">Channels of Communication in Organisations</h1>
+    <p class="hero__subtitle">Media richness theory, oral and written channels, digital and social media channels, channel selection criteria, and managing communication in a multi-channel environment.</p>
+    <div class="hero__meta">
+        <div class="hero__meta-item"><span class="hero__meta-number">65</span><span class="hero__meta-label">Minutes Study</span></div>
+        <div class="hero__meta-item"><span class="hero__meta-number">10</span><span class="hero__meta-label">Exam Questions</span></div>
+        <div class="hero__meta-item"><span class="hero__meta-number">10</span><span class="hero__meta-label">References</span></div>
+        <div class="hero__meta-item"><span class="hero__meta-number">8</span><span class="hero__meta-label">Key Sections</span></div>
+    </div>
+</section>
+
+<!-- TIME BAR -->
+<div class="time-allocation">
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--read">R</span><span>Reading: 20 mins</span></div>
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--study">S</span><span>Study &amp; Notes: 20 mins</span></div>
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--practice">P</span><span>Practice Questions: 25 mins</span></div>
+    <div class="time-allocation__item"><span class="time-allocation__icon time-allocation__icon--total">T</span><span>Total: 65 mins</span></div>
+</div>
+
+<!-- TOP AD -->
+<div class="article-container" style="padding-bottom:0;">
+    <div class="ad-placeholder">&#9634; AdSense Advertisement — Coming Soon</div>
+</div>
+
+<!-- ARTICLE -->
+<div class="article-container">
+<article class="article-body">
+
+    <nav class="toc" aria-label="Table of Contents">
+        <div class="toc__heading">In This Chapter</div>
+        <ol>
+            <li><a href="#s1">Introduction</a></li>
+            <li><a href="#s2">What is a Communication Channel?</a></li>
+            <li><a href="#s3">Media Richness Theory</a></li>
+            <li><a href="#s4">Oral Communication Channels</a></li>
+            <li><a href="#s5">Written Communication Channels</a></li>
+            <li><a href="#s6">Digital and Electronic Communication Channels</a></li>
+            <li><a href="#s7">Social Media as an Organisational Communication Channel</a></li>
+            <li><a href="#s8">Channel Selection and Managing Multi-Channel Communication</a></li>
+            <li><a href="#exam">Examination Practice Questions</a></li>
+            <li><a href="#references">References</a></li>
+        </ol>
+    </nav>
+
+    <!-- 1 -->
+    <h2 id="s1">1. Introduction</h2>
+    <p class="lead-paragraph">Every message must travel. From the moment a sender forms an idea to the moment a receiver understands it, the message must pass through a medium — a channel — that carries it across the space between two human minds. The choice of channel is not a trivial technical decision. It is one of the most consequential communication choices an organisational communicator can make, because the channel shapes not only whether the message arrives but how it is perceived, how much of it is retained, and how the receiver is likely to respond.</p>
+    <p>Modern organisations operate in an environment of extraordinary channel abundance. Employees and managers can choose from face-to-face conversation, telephone, video conference, email, instant messaging, enterprise intranets, newsletters, notice boards, memos, formal reports, WhatsApp groups, social media platforms, and many others — each with its own distinctive properties, strengths, and limitations. When well-managed, a diverse channel portfolio enables organisations to communicate different types of messages to different audiences in exactly the right way. When poorly managed, it produces confusion, duplication, information overload, and a sense among employees that they are drowning in communication without ever receiving the information they actually need.</p>
+    <p>This chapter provides a systematic framework for understanding communication channels — what they are, how they differ from each other, and how to select the right channel for each type of message. It draws centrally on Media Richness Theory, the most influential academic framework for channel selection, and extends it to address the digital and social media channels that have transformed organisational communication in the modern era.</p>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement — Coming Soon</div>
+
+    <!-- 2 -->
+    <h2 id="s2">2. What is a Communication Channel?</h2>
+    <p>The term "channel" in communication refers to the medium or pathway through which a message is transmitted from sender to receiver. The channel is distinct from the message itself — it is the vehicle, not the content. Just as a road carries traffic without being the traffic, a communication channel carries information without being the information.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Communication Channel Defined</div>
+        <p>A <strong>communication channel</strong> is the medium through which an encoded message travels from a sender to one or more receivers. Channels differ from each other along several important dimensions: their capacity to carry non-verbal cues, their speed of transmission, their ability to reach multiple receivers simultaneously, their permanence (whether they create a record), their interactivity (whether they support immediate two-way exchange), and their accessibility to different audiences.</p>
+        <p>Channel selection is a critical communication skill. Verčič and Špoljarić (2020) found that mismatches between the type of message being communicated and the channel through which it is transmitted are a major source of communication failure in organisations. A message that is appropriate in content can still fail if it is delivered through a channel that distorts its meaning, fails to reach its intended audience, or signals the wrong level of importance or formality.</p>
+    </div>
+
+    <h3>Why Channel Choice Matters</h3>
+    <p>The channel through which a message is delivered communicates something in itself, quite apart from the content of the message. Receiving a redundancy notice by text message, a salary increase by handwritten letter, or a major strategic announcement through the grapevine rather than through an official channel all communicate relational meaning — about how much the sender values the receiver, about the formality and seriousness of the organisation, and about whether its communication culture is trustworthy and respectful. Ruck and Welch (2022) found that employees consistently judge the credibility and importance of a message partly by the channel through which it is delivered — face-to-face communication from a line manager is trusted more than the same information delivered through a company-wide email.</p>
+
+    <!-- 3 -->
+    <h2 id="s3">3. Media Richness Theory</h2>
+    <p>The most widely cited framework for understanding and comparing communication channels is Media Richness Theory (MRT), originally proposed by Daft and Lengel in the 1980s and subsequently refined and extended by numerous researchers. MRT provides a systematic basis for matching messages to channels by classifying both messages (by their complexity and ambiguity) and channels (by their richness) and arguing that effective communication requires a match between the two.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Media Richness Theory</div>
+        <p><strong>Media Richness Theory</strong> proposes that communication channels differ in their capacity to convey information — their "richness" — and that effective communication requires matching the richness of the channel to the complexity and ambiguity of the message. A <strong>rich</strong> channel carries a large amount of information simultaneously, including non-verbal cues, and enables immediate feedback. A <strong>lean</strong> channel carries less information, excludes non-verbal cues, and typically does not support immediate feedback.</p>
+        <p>Ishii, Lyons, and Carr (2020) revisited Media Richness Theory in the context of modern digital communication and confirmed its continued relevance, while noting that the digital revolution has significantly expanded the range of channels available and introduced channels — such as video conferencing and emoji-enriched instant messaging — that sit at intermediate points on the richness spectrum.</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — The Four Dimensions of Channel Richness</div>
+        <p>Media Richness Theory identifies four dimensions that determine a channel's richness:</p>
+        <p><strong>1. Feedback immediacy:</strong> How quickly can the receiver respond to the message? Face-to-face conversation supports instant feedback; a posted letter may take days. Higher feedback immediacy enables misunderstandings to be corrected in real time.</p>
+        <p><strong>2. Multiple cue capacity:</strong> How many different types of signal can the channel carry simultaneously? Face-to-face interaction supports verbal language, vocal tone, facial expression, gestures, posture, and physical proximity all at once. A written memo carries only text.</p>
+        <p><strong>3. Language variety:</strong> Can the channel support a wide range of language — including figurative language, humour, irony, and emotionally nuanced expression — or is it limited to formal, literal communication?</p>
+        <p><strong>4. Personal focus:</strong> Can the message be tailored to the specific receiver, making it feel personal and direct? Or is it a mass communication aimed at a generic audience?</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — The Media Richness Spectrum</div>
+        <p>Channels can be arranged on a spectrum from richest to leanest:</p>
+        <p><strong>Richest:</strong> Face-to-face conversation → Video conference → Telephone → Voicemail → Personal email / handwritten letter → Formal written report or memo → Numerical data → <strong>Leanest:</strong> Notice board / mass broadcast announcement</p>
+        <p>The practical implication of MRT is straightforward: use <strong>rich channels for complex, ambiguous, sensitive, or emotionally significant messages</strong>, and <strong>lean channels for routine, clear, factual, or simple messages</strong>. A manager who delivers a performance warning in a brief email (lean channel, complex message) creates a dangerous mismatch. The same manager who uses a face-to-face conversation (rich channel) for the same message enables nuance, empathy, and immediate clarification.</p>
+    </div>
+
+    <div class="example-box">
+        <div class="example-box__label">Workplace Example — Applying Media Richness Theory</div>
+        <p>A managing director of a Nigerian manufacturing company needs to communicate two different messages on the same day. The first is a straightforward announcement that the company canteen will be closed for maintenance next Friday. The second is more difficult: the company will not be paying the annual Christmas bonus this year due to financial difficulties, and she wants employees to understand the reasons and feel that their contribution is still valued.</p>
+        <p>Applying Media Richness Theory, she correctly selects a <strong>lean channel</strong> for the first message — a brief notice on the company notice board and a group email. It is a simple, unambiguous, factual message requiring no emotional nuance and no individual tailoring.</p>
+        <p>For the second message, she selects a <strong>rich channel</strong> — an in-person all-staff meeting, at which she speaks directly to employees, explains the financial situation honestly, acknowledges the disappointment, answers questions openly, and personally thanks each department for their contribution. The emotional weight and complexity of the message demands the richest channel available. An email or notice board announcement would have conveyed the same facts but communicated coldness, disrespect, and a lack of accountability.</p>
+    </div>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement — Coming Soon</div>
+
+    <!-- 4 -->
+    <h2 id="s4">4. Oral Communication Channels</h2>
+    <p>Oral communication channels transmit messages through spoken words. They are among the richest channels available because they can carry tone of voice, pace, emphasis, and — when used face-to-face — the full complement of non-verbal cues. They also play a unique role in building the relationships and trust that sustain organisational culture.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Major Oral Communication Channels in Organisations</div>
+        <p><strong>1. Face-to-face conversation:</strong> The richest and most versatile channel available. It enables the full exchange of verbal and non-verbal information, supports immediate feedback, and is the most powerful channel for building relationships, managing conflict, delivering sensitive messages, and conveying complex or emotionally significant information. Its limitation is that it requires physical proximity (or video technology as a substitute) and does not create a permanent record.</p>
+        <p><strong>2. Formal meetings:</strong> Structured gatherings of two or more people for a defined purpose — information sharing, decision-making, problem-solving, or planning. Mroz, Allen, Verhoeven, and Shuffler (2023) found that meetings are among the most time-intensive forms of organisational communication but also among the most consistently mismanaged — characterised by unclear purposes, poor facilitation, absent action tracking, and participant disengagement. Well-managed meetings remain one of the most effective channels for collective decision-making and cross-functional alignment.</p>
+        <p><strong>3. Telephone calls:</strong> A rich channel for voice-based communication that enables real-time two-way exchange and conveys vocal cues (tone, pace, emphasis) but excludes visual non-verbal information. Most appropriate for urgent communications, quick clarifications, and situations where face-to-face contact is impractical.</p>
+        <p><strong>4. Video conferences:</strong> Combine the real-time interactivity of the telephone with partial visual information — facial expressions and upper-body posture — making them richer than audio-only channels. Ishii, Lyons, and Carr (2020) noted that video conferencing has become a critical channel in remote and hybrid working environments, though it cannot fully replicate in-person interaction because it eliminates spatial proximity and many subtle non-verbal cues.</p>
+        <p><strong>5. Presentations:</strong> One-to-many oral communications in which a speaker addresses an audience. Their strength is their ability to reach large audiences efficiently with a consistent message; their limitation is their relatively low interactivity.</p>
+    </div>
+
+    <!-- 5 -->
+    <h2 id="s5">5. Written Communication Channels</h2>
+    <p>Written communication channels transmit messages through text. They are generally leaner than oral channels — they cannot carry vocal cues or most non-verbal information — but they have critical advantages: they create a permanent record, they can reach unlimited numbers of people simultaneously, and they allow the sender time to compose, revise, and refine the message before transmission.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Major Written Communication Channels in Organisations</div>
+        <p><strong>1. Memoranda (memos):</strong> Short internal written communications used to convey official information, instructions, or announcements within an organisation. Memos are formal in tone, factual in content, and create a documented record. Oduaran and Okojie (2023) noted that formal memos remain a cornerstone of written communication practice in Nigerian public sector organisations, where formal documentation is legally and procedurally required.</p>
+        <p><strong>2. Formal reports:</strong> Comprehensive written documents that present information, analysis, findings, and recommendations to a defined audience. They range from short operational updates to lengthy strategic analyses and may be internal (for management or board) or external (for regulators, investors, or the public).</p>
+        <p><strong>3. Business letters:</strong> Formal written communications addressed to external parties — customers, suppliers, regulators, partners, or the public. Business letters carry the formal voice of the organisation and create legal records of commitments, complaints, and agreements.</p>
+        <p><strong>4. Policies and procedures:</strong> Formal written documents that establish the rules, standards, and processes governing organisational behaviour. They are among the most important forms of written communication because they define the framework within which all other organisational activity takes place.</p>
+        <p><strong>5. Newsletters and bulletins:</strong> Periodic written publications used to share news, updates, achievements, and information with internal or external audiences. Most effective for non-urgent, general-interest information where a consistent communication rhythm maintains a sense of connection and shared identity.</p>
+    </div>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement — Coming Soon</div>
+
+    <!-- 6 -->
+    <h2 id="s6">6. Digital and Electronic Communication Channels</h2>
+    <p>The digital revolution has transformed the channel landscape of organisational communication beyond recognition. Channels that did not exist thirty years ago — email, instant messaging, enterprise collaboration platforms, video conferencing tools, and digital intranets — now carry the majority of information in most modern organisations.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Major Digital Communication Channels</div>
+        <p><strong>1. Email:</strong> The dominant written communication channel in most modern organisations — fast, flexible, documentable, and capable of reaching large audiences instantly. Its principal limitations are its contribution to information overload and its inability to convey emotional nuance reliably. Welch (2022) found that information overload driven by excessive email is one of the most frequently reported communication problems across all types of organisation, with many employees spending more than two hours per day managing their inboxes.</p>
+        <p><strong>2. Instant messaging and enterprise chat (Teams, Slack):</strong> Real-time text-based communication tools that enable rapid, informal exchanges between individuals and groups. Their informality, speed, and searchability make them effective for quick clarifications, team coordination, and day-to-day operational communication. Their limitations include distraction, the blurring of work-life boundaries, and the risk of miscommunication when nuanced content is conveyed through lean text.</p>
+        <p><strong>3. Video conferencing (Zoom, Teams, Google Meet):</strong> Neuberger, Lemos, and Watkins (2023) found that organisations managing fully remote teams face particular challenges in replicating the relationship-building and cultural transmission functions of face-to-face interaction through video alone, and recommended deliberate strategies — regular informal video check-ins and periodic in-person gatherings — to compensate for the channel's limitations.</p>
+        <p><strong>4. Intranets and internal portals:</strong> Organisation-wide digital platforms that host documents, policies, news, and internal communication. A well-maintained intranet serves as the single authoritative source of organisational information. A poorly maintained one — with outdated content and poor navigation — becomes a barrier rather than an enabler of communication.</p>
+        <p><strong>5. Mobile messaging (WhatsApp, SMS):</strong> Widely used for quick, informal organisational communication, particularly where employees do not have regular access to computers. WhatsApp groups are extensively used in Nigerian organisations for team coordination and rapid information sharing. Their immediacy and accessibility are significant strengths; their limitations include the absence of formal documentation and the blurring of personal and professional communication spaces.</p>
+    </div>
+
+    <!-- 7 -->
+    <h2 id="s7">7. Social Media as an Organisational Communication Channel</h2>
+    <p>Social media platforms — designed originally for personal social networking — have emerged as significant organisational communication channels, used for external communication (reaching customers, building brand, engaging the public) and, increasingly, for internal communication (employee engagement, culture building, and knowledge sharing). Understanding how to use social media strategically is an increasingly important competence for modern organisational communicators.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Social Media Platforms and Their Organisational Communication Functions</div>
+        <p><strong>Facebook:</strong> The world's largest social network. Organisations use Facebook Pages to communicate with customers and the public — sharing news, promotions, events, and corporate social responsibility activities. Facebook Groups are also used for internal community building among employees, alumni, or stakeholder communities. Its strength is massive reach and the ability to combine text, images, video, and links in a single post. Its limitation for professional communication is the mixing of personal and professional contexts and algorithmic filtering that may prevent posts from reaching all intended recipients.</p>
+        <p><strong>Instagram:</strong> A visually oriented platform built around photographs and short videos. Organisations use Instagram primarily for brand building, product showcasing, and reaching younger audiences. Instagram Stories and Reels enable informal, engaging content that humanises the brand. Its limitation is its primarily visual orientation — it is poorly suited to detailed informational communication.</p>
+        <p><strong>X (formerly Twitter):</strong> A microblogging platform built around short posts (up to 280 characters) that enables rapid, public communication with wide audiences. Organisations use X for real-time updates, crisis communication, customer service, stakeholder engagement, and participating in public discourse. Its brevity and immediacy are strengths; its limitations include the character constraint, the speed at which posts are buried, and the risk of public misunderstanding or controversy.</p>
+        <p><strong>LinkedIn:</strong> The primary professional networking platform. Organisations use LinkedIn for employer branding, recruitment, professional thought leadership, industry networking, and B2B communication. Men and Yue (2024) found that leadership communication on LinkedIn — including transparent CEO posts about organisational values and strategy — is increasingly influential in shaping employer brand and employee pride. Its professional context makes it the most appropriate social media platform for formal corporate communication.</p>
+        <p><strong>YouTube:</strong> The world's largest video platform. Organisations use YouTube for training content, product demonstrations, corporate communications, brand storytelling, and public education. Video is the richest mass-broadcast channel available — it can convey vocal tone, facial expression, and visual information to unlimited audiences simultaneously. Its limitations include the significant investment required to produce high-quality content and the passive, one-way nature of the channel.</p>
+        <p><strong>TikTok:</strong> A short-form video platform with a predominantly young audience. Organisations targeting younger demographics use TikTok for brand awareness, product promotion, and behind-the-scenes content that humanises the organisation. Its algorithm gives unprecedented reach to engaging content. Its limitations include its entertainment-oriented culture, which can make serious organisational communication feel incongruous.</p>
+        <p><strong>Telegram:</strong> A messaging application known for its large group sizes, channel broadcast features, and strong privacy settings. Organisations use Telegram for community management, broadcast announcements to large groups, and internal team communication. Its ability to support groups of up to 200,000 members makes it particularly useful for organisations communicating with large distributed communities.</p>
+        <p><strong>WhatsApp:</strong> The world's most widely used messaging application, with particular dominance in African, Asian, and Latin American markets. WhatsApp Business enables organisations to communicate with customers through automated messages, quick replies, and product catalogues. Its near-universal adoption in the Nigerian context makes it one of the most accessible communication channels for reaching both employees and customers across different socioeconomic backgrounds.</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Four Principles for Using Social Media as an Organisational Channel</div>
+        <p><strong>1. Define the purpose for each platform:</strong> LinkedIn is for professional credibility; Instagram is for visual brand building; WhatsApp is for community engagement and rapid communication; YouTube is for video content and education. Using each platform for its intended purpose produces better results than pushing identical content across all channels.</p>
+        <p><strong>2. Maintain a consistent voice and brand identity:</strong> Even on informal platforms like TikTok or Instagram, the organisation's core values, tone, and identity should remain consistent. Audiences notice and distrust inconsistency between formal and informal platform behaviour.</p>
+        <p><strong>3. Engage rather than broadcast:</strong> Social media is an inherently interactive medium. Organisations that use it purely as a broadcast channel — posting content without engaging with responses, questions, or comments — miss its most distinctive advantage: the ability to build genuine two-way relationships with audiences at scale.</p>
+        <p><strong>4. Monitor and manage reputation proactively:</strong> Social media enables criticism and negative sentiment to spread rapidly and publicly. Organisations that monitor their social media presence proactively, respond to concerns quickly and respectfully, and address misinformation promptly are significantly better positioned to manage their reputation than those that treat social media as a one-directional broadcast medium.</p>
+    </div>
+
+    <div class="example-box">
+        <div class="example-box__label">Workplace Example — A Multi-Platform Social Media Strategy</div>
+        <p>A Nigerian university uses a deliberate multi-platform social media strategy tailored to each channel's strengths. On <strong>LinkedIn</strong>, the Vice-Chancellor posts regular updates about the university's research achievements, partnerships, and strategic direction, aimed at academic peers, potential faculty hires, and institutional funders. On <strong>Instagram</strong>, the university shares high-quality photographs of campus life, student events, and graduation ceremonies to build emotional connection with prospective students and alumni. On <strong>YouTube</strong>, the media unit publishes recorded public lectures, graduation speeches, and short documentary pieces about research impact. On <strong>WhatsApp</strong>, departmental administrators manage student communication groups for timetable updates and urgent notices. On <strong>Facebook</strong>, an alumni association group enables graduates to stay connected and share professional opportunities. On <strong>TikTok</strong>, the student union creates short, engaging videos about campus life that reach thousands of prospective students who have never heard of the institution. Each platform is used for the specific communication function it performs best.</p>
+    </div>
+
+    <div class="ad-placeholder">&#9634; AdSense Advertisement — Coming Soon</div>
+
+    <!-- 8 -->
+    <h2 id="s8">8. Channel Selection and Managing Multi-Channel Communication</h2>
+    <p>With so many channels available, the ability to select the right channel for each type of message is one of the most important communication skills an organisational communicator can develop. Poor channel selection — even when the message content is excellent — can undermine communication effectiveness, damage relationships, and create confusion.</p>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Six Criteria for Channel Selection</div>
+        <p><strong>1. Message complexity and ambiguity:</strong> Following Media Richness Theory, complex, sensitive, or ambiguous messages require rich channels. Simple, factual, unambiguous messages can be effectively transmitted through lean channels.</p>
+        <p><strong>2. Audience size and location:</strong> For large, geographically dispersed audiences, digital channels — email, intranet, social media — offer advantages of reach and simultaneity that oral channels cannot match. For small groups or individual conversations, oral channels are typically more effective.</p>
+        <p><strong>3. Need for a permanent record:</strong> When the communication creates a legal obligation, documents a decision, or establishes a policy, a written channel that creates a permanent record is essential.</p>
+        <p><strong>4. Urgency:</strong> When speed is critical, real-time channels — telephone, instant messaging, face-to-face — are preferable to asynchronous channels such as email, memo, or formal report.</p>
+        <p><strong>5. Relational significance:</strong> When the message has significant relational implications — a performance conversation, a major strategic announcement, a disciplinary matter — a rich, personal channel signals that the organisation values and respects the receiver. A lean channel in such situations often communicates the opposite.</p>
+        <p><strong>6. Receiver's channel preferences and accessibility:</strong> Effective channel selection takes account of the receiver's actual access to and comfort with different channels. In Nigerian organisational contexts, many employees have better access to mobile devices and WhatsApp than to desktop computers and corporate email systems, making mobile-first channel strategies particularly important for reaching frontline and field-based employees.</p>
+    </div>
+
+    <div class="key-concept">
+        <div class="key-concept__label">Key Concept — Managing Multi-Channel Communication</div>
+        <p>Most modern organisations communicate through many channels simultaneously, which creates both opportunities and challenges. The principal challenges include:</p>
+        <p><strong>Information overload:</strong> When the same information is pushed through multiple channels simultaneously — email, Teams, WhatsApp, intranet — employees receive the same message multiple times, contributing to inbox fatigue and reduced attention to all channels. Welch (2022) recommended that organisations establish clear <em>channel norms</em> — explicit agreements about which channel is used for which type of communication — to reduce redundancy and focus employee attention.</p>
+        <p><strong>Message inconsistency:</strong> When different channels carry slightly different versions of the same message, receivers become confused and may lose trust in the organisation's communications. All channels used to communicate the same message should be consistent in content, tone, and timing.</p>
+        <p><strong>Channel proliferation:</strong> The constant introduction of new digital communication tools — without retiring or rationalising existing ones — creates channel confusion and fragments attention. Effective organisations regularly audit their channel portfolio and ensure that each channel has a clear, distinct purpose and that employees are not expected to monitor more channels than is practically sustainable.</p>
+    </div>
+
+    <!-- EXAM QUESTIONS -->
+    <div class="exam-section" id="exam">
+        <div class="exam-section__label">Examination Practice Questions — Chapter 2</div>
+        <p class="exam-section__instruction">Attempt all ten questions. Allocate your time according to the marks available. Support your answers with definitions, theoretical frameworks, and workplace examples where appropriate.</p>
+        <ol>
+            <li><strong>(10 marks)</strong> Define the term "communication channel" and explain why the choice of channel is as important as the content of the message itself. Use one workplace example to illustrate your answer.</li>
+            <li><strong>(20 marks)</strong> Explain Media Richness Theory fully, including its four dimensions of channel richness and the concept of the media richness spectrum. Using two original workplace examples — one demonstrating effective channel selection and one demonstrating poor channel selection — illustrate the practical implications of the theory.</li>
+            <li><strong>(15 marks)</strong> Compare and contrast face-to-face conversation and email as communication channels. Discuss the relative richness of each, their respective advantages and limitations, and the types of message for which each is most appropriate.</li>
+            <li><strong>(15 marks)</strong> Discuss the role of written communication channels — including memos, formal reports, and business letters — in modern Nigerian organisations. Drawing on the work of Oduaran and Okojie (2023), explain why formal written channels remain important even in the age of digital communication.</li>
+            <li><strong>(20 marks)</strong> Critically evaluate social media platforms as organisational communication channels. Discuss at least four specific platforms, explain what communication functions each is best suited to, and identify the key risks organisations must manage when using social media for professional communication.</li>
+            <li><strong>(15 marks)</strong> Explain the concept of "information overload" as it relates to multi-channel organisational communication. Drawing on Welch (2022), discuss the causes of information overload and recommend three specific strategies organisations can use to manage it.</li>
+            <li><strong>(15 marks)</strong> A human resources manager needs to communicate five different messages on the same day: (i) a change to the tea-break schedule; (ii) a major redundancy announcement affecting 20% of staff; (iii) an update on the company's annual performance figures; (iv) a reminder about the leave application deadline; and (v) a personal performance feedback session with an individual employee. Using Media Richness Theory, recommend the most appropriate communication channel for each message and justify each recommendation.</li>
+            <li><strong>(10 marks)</strong> Discuss WhatsApp as a communication channel in the Nigerian organisational context. What are its particular strengths and limitations in this environment, and under what circumstances is it most appropriately used for professional communication?</li>
+            <li><strong>(15 marks)</strong> Explain the concept of "channel norms" in organisational communication. Why do communication scholars argue that organisations should establish clear, explicit norms about which channels are used for which types of message? What problems arise when channel norms are absent?</li>
+            <li><strong>(15 marks)</strong> Ishii, Lyons, and Carr (2020) revisited Media Richness Theory in the context of modern digital communication. What did they find? To what extent do you think Media Richness Theory remains a useful framework for channel selection in an era of video conferencing, instant messaging, and social media? Justify your answer.</li>
+        </ol>
+    </div>
+
+    <!-- REFERENCES -->
+    <div class="references" id="references">
+        <h2>References</h2>
+        <ul>
+            <li>Ishii, K., Lyons, M.M. and Carr, S.A. (2020) 'Revisiting media richness theory for today and future', <em>Human Behavior and Emerging Technologies,</em> 2(2), pp. 124–131.</li>
+            <li>Mbarushimana, N. and Allida, D. (2022) 'Communication barriers and organisational effectiveness: An empirical review', <em>International Journal of Applied Research in Management and Economics,</em> 5(1), pp. 18–32.</li>
+            <li>Men, L.R. and Yue, C.A. (2024) 'Creating a transparent organisational culture: The role of leadership communication', <em>Journal of Communication Management,</em> 28(1), pp. 42–59.</li>
+            <li>Mroz, J.E., Allen, J.A., Verhoeven, D.C. and Shuffler, M.L. (2023) 'Meeting design characteristics and attendee perceptions of staff and team meeting quality', <em>Group Dynamics: Theory, Research, and Practice,</em> 27(2), pp. 98–113.</li>
+            <li>Neuberger, L., Lemos, M. and Watkins, B. (2023) 'Organisational communication in the digital age: Challenges and opportunities', <em>Journal of Applied Communication Research,</em> 51(1), pp. 34–52.</li>
+            <li>Oduaran, C.A. and Okojie, O.M. (2023) 'Written communication and institutional memory in Nigerian public sector organisations', <em>African Journal of Business Management,</em> 17(3), pp. 65–78.</li>
+            <li>Ruck, K. and Welch, M. (2022) 'Exploring internal communication: Towards informed employee voice', <em>Corporate Communications: An International Journal,</em> 27(3), pp. 529–544.</li>
+            <li>Verčič, A.T. and Špoljarić, A. (2020) 'Managing internal communication: How the choice of channels affects internal communication satisfaction', <em>Public Relations Review,</em> 46(3), pp. 101–113.</li>
+            <li>Welch, M. (2022) 'Internal communication and information overload: A framework for managing employee engagement', <em>Employee Relations,</em> 44(5), pp. 1120–1138.</li>
+            <li>Yue, C.A., Men, L.R. and Ferguson, M.A. (2021) 'Examining the effects of internal communication and emotional culture on employees' organisational identification', <em>International Journal of Business Communication,</em> 58(2), pp. 169–195.</li>
+        </ul>
+    </div>
+
+</article>
+</div>
+
+<!-- SOCIAL MEDIA BAR -->
+<div class="social-bar">
+    <div class="social-bar__inner">
+        <p class="social-bar__heading">Follow Us &amp; Stay Connected</p>
+        <p class="social-bar__sub">Join our community across all platforms for updates, blogs, and more learning resources</p>
+        <div class="social-bar__links">
+            <a href="https://www.facebook.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--facebook">f &nbsp;Facebook</a>
+            <a href="https://www.instagram.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--instagram">&#9685; Instagram</a>
+            <a href="https://twitter.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--x">&#120143; X / Twitter</a>
+            <a href="https://www.linkedin.com/in/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--linkedin">in LinkedIn</a>
+            <a href="https://www.youtube.com/@mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--youtube">&#9654; YouTube</a>
+            <a href="https://www.tiktok.com/@mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--tiktok">&#9835; TikTok</a>
+            <a href="https://t.me/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--telegram">&#10148; Telegram</a>
+            <a href="https://wa.me/message/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--whatsapp">&#128172; WhatsApp</a>
+            <a href="https://www.fiverr.com/mauriceudom" target="_blank" rel="noopener" class="social-btn social-btn--fiverr">&#9650; Fiverr</a>
+            <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="social-btn social-btn--patreon">P Patreon</a>
+        </div>
+    </div>
+</div>
+
+<!-- AFFILIATES -->
+<section class="affiliates">
+    <h2 class="affiliates__heading">Our Affiliates &amp; Community</h2>
+    <p class="affiliates__subheading">Support the series and enhance your studies through our trusted partners</p>
+    <div class="affiliates__grid">
+        <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--patreon">P</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Patreon — Support Us <span class="affiliate-card__badge">Community</span></span>
+                <span class="affiliate-card__desc">We write blogs on child care, marriage, and literature. Support our work and join our community on Patreon.</span>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/s?k=organisational+communication+textbook&tag=ls6-20" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--amazon">A</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Amazon — Textbooks <span class="affiliate-card__badge">Books</span></span>
+                <span class="affiliate-card__desc">Recommended organisational communication textbooks and study guides, delivered to your door.</span>
+            </div>
+        </a>
+        <a href="https://www.skillshare.com/r/ls6" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--skill">S</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Skillshare — Online Courses <span class="affiliate-card__badge">Learning</span></span>
+                <span class="affiliate-card__desc">Online courses in business communication, leadership, and writing skills to complement your studies.</span>
+            </div>
+        </a>
+        <a href="https://www.grammarly.com" target="_blank" rel="noopener" class="affiliate-card">
+            <div class="affiliate-card__icon affiliate-card__icon--grammar">G</div>
+            <div class="affiliate-card__body">
+                <span class="affiliate-card__name">Grammarly Premium <span class="affiliate-card__badge">Writing</span></span>
+                <span class="affiliate-card__desc">Write clearer, error-free essays and assignments. Essential for exam answers and academic writing.</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- CHAPTER NAVIGATION -->
+<nav class="chapter-nav" aria-label="Chapter navigation">
+    <a href="lecture-series-6-chapter-1.html" class="chapter-nav__btn">
+        <span class="chapter-nav__label">&#8592; Previous Chapter</span>
+        <span class="chapter-nav__title">Chapter 1: Introduction to Organisational Communication</span>
+    </a>
+    <a href="lecture-series-6-chapter-3.html" class="chapter-nav__btn chapter-nav__btn--next">
+        <span class="chapter-nav__label">Next Chapter &#8594;</span>
+        <span class="chapter-nav__title">Chapter 3: Theories of Communication</span>
+    </a>
+</nav>
+
+<!-- SITE FOOTER -->
+<footer class="site-footer">
+    <p>Lecture Series 6: Organisational Communication &middot; Chapter 2 &middot; Designed for Tertiary Institutions</p>
+    <p class="site-footer__copy">Support us on <a href="https://www.patreon.com/c/mauriceudom/posts" target="_blank" rel="noopener">Patreon</a></p>
+    <p class="site-footer__copy">&copy; 2026. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
